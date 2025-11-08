@@ -1,0 +1,3 @@
+- Chỉ in payload (một dòng).
+- Tránh ký tự quá dài; ưu tiên biến thể ngắn.
+- Bao gồm hỗn hợp: UNION SELECT, time-based (SLEEP/benchmark), boolean tautology.

@@ -1,0 +1,6 @@
+PID: 40639
+Started: 2025-11-07 11:13:55.220409
+Input: /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/data/raw/seed_sqli.csv
+Output: /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/artifacts/red_gen/enriched_sqli_20251107_111345.jsonl
+Log: /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/logs/enrichment_sqli_20251107_111345.log
+Attack type: SQLi

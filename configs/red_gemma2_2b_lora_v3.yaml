@@ -1,0 +1,59 @@
+# Training Config for RED Team Model v3 (Cleaned Dataset)
+# Cleaned datasets: removed 78 illegal/irrational + 24 syntax errors = 1423 clean samples
+
+model_name: google/gemma-2-2b-it
+use_auth_token_env: HF_TOKEN
+
+# Cleaned datasets (no malformed payloads)
+train_path: data/processed/red_train_v2_clean.jsonl
+val_path: data/processed/red_val_v2_clean.jsonl
+test_path: data/processed/red_test_v2_clean.jsonl
+
+# Format: simple (payload + reasoning only)
+text_fields:
+  - payload
+  - reasoning
+
+# Quantization (QLoRA 4-bit)
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: float16
+
+# PEFT (LoRA - no DoRA for Gemma2)
+use_dora: false
+lora_r: 8
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Tokenization
+seq_length: 2048
+padding_side: left
+truncation: true
+
+# Training params (RTX 4060 8GB VRAM)
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+num_train_epochs: 2
+logging_steps: 10
+save_strategy: epoch
+eval_strategy: epoch
+fp16: true
+optim: paged_adamw_8bit
+max_grad_norm: 1.0
+# Improvements over v2:
+# - Removed 78 illegal/irrational samples (malformed payloads)
+# - Removed 24 additional syntax error samples
+# - Clean dataset: 1136 train, 146 val, 141 test
+# - Expected: Better payload quality, higher bypass rate

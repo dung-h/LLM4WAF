@@ -1,0 +1,41 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "dataset_path": "data/processed/blue_train.jsonl",
+  "val_dataset_path": "data/processed/blue_val.jsonl",
+  "text_field": "text",
+  "target_field": "label",
+  "max_seq_length": 2048,
+  "packing": true,
+  "peft": {
+    "use_lora": true,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "down_proj", "up_proj"]
+  },
+  "bnb": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16"
+  },
+  "training": {
+    "per_device_train_batch_size": 2,
+    "per_device_eval_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 2e-4,
+    "weight_decay": 0.0,
+    "num_train_epochs": 1,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.03,
+    "logging_steps": 10,
+    "eval_steps": 50,
+    "save_steps": 100,
+    "save_total_limit": 2,
+    "gradient_checkpointing": true,
+    "bf16": true,
+    "report_to": ["none"]
+  },
+  "output_dir": "experiments/blue_llama3_qlora_smoke",
+  "seed": 42
+}

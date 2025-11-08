@@ -1,0 +1,62 @@
+model_name: google/gemma-2-2b-it
+use_auth_token_env: HF_TOKEN
+
+# Quantization (QLoRA 4-bit)
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: float16
+
+# PEFT (DoRA)
+use_dora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Tokenization / sequence
+seq_length: 512
+padding_side: left
+truncation: true
+
+# Training params (8 GB friendly)
+per_device_train_batch_size: 4
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 4
+num_train_epochs: 3
+learning_rate: 0.0002
+weight_decay: 0.01
+warmup_ratio: 0.1
+lr_scheduler_type: cosine
+fp16: true
+bf16: false
+gradient_checkpointing: true
+optim: paged_adamw_8bit
+logging_steps: 10
+save_steps: 50
+eval_steps: 50
+save_total_limit: 3
+
+# Data (v4 dataset - NO CONSTRAINTS)
+train_path: data/processed/red_train_v4.jsonl
+eval_path: data/processed/red_val_v4.jsonl
+test_path: data/processed/red_test_v4.jsonl
+
+# Output
+output_dir: experiments/red_v4
+text_fields:
+  instruction: instruction
+  context: context
+  constraints: constraints
+  payload: payload
+  reasoning: reasoning
+
+output_dir: experiments/red_llm_8b_dora
+seed: 42

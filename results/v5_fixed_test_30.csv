@@ -1,0 +1,31 @@
+id,payload,status,response_size,blocked
+0,/,200,1523,False
+1,order by 16,200,1523,False
+2,) or (select @@version,200,1523,False
+3,ORDER BY 26#,200,1523,False
+4,1 or 1=1 --,403,146,True
+5,exec master..xp_cmdshell,403,146,True
+6,or 1=1 --,200,1523,False
+7,/*!50000*/waitfor command,403,146,True
+8,AND 1=1 AND (SELECT COUNT(*) FROM users) = 1,200,1523,False
+9,ORDER BY 17#,200,1523,False
+10,AND 1=1,200,1523,False
+11,and 1=1#,200,1523,False
+12,0x7761697468657220496e64657220426974656e74696e73205061726520426974656e74696e73,200,1523,False
+13,order by 10--,200,1523,False
+14,AND 1=1 AND '%'=',200,1523,False
+15,1 or sleep(__TIME__),403,146,True
+16,ORDER BY 29,200,1523,False
+17,) or 1=1--,200,1523,False
+18,%20OR%201=1,200,1523,False
+19,ORDER BY 20#,200,1523,False
+20,ORDER BY 10,200,1523,False
+21,or 1=1,200,1523,False
+22,or 'a'='a,200,1523,False
+23,or 1=1,200,1523,False
+24,AND 1=1 AND ('x'=x),403,146,True
+25,/xpath:test,200,1523,False
+26,or 1=1,200,1523,False
+27,ORDER BY 17--,200,1523,False
+28,or 1=1,200,1523,False
+29,ORDER BY 20,200,1523,False
