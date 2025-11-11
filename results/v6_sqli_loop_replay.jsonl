@@ -1,0 +1,72 @@
+{"id": 0, "payload": "1' or '1' = '1 or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 1, "payload": "1' or ' ( [' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 2, "payload": "1' union all select null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 3, "payload": "1 and 2853 = cast  (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )  || (*)  then 1 else 0 end  )  )  ::text|| (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )   as numeric ) --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 4, "payload": "1 and 4241 = convert (*) +char (*) +char (*) +char (*) +char (*) + (*)  then char (*)  else char (*)  end  )  )  +char (*) +char (*) +char (*) +char (*) +char (*)  )   ) --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 5, "payload": "1' union select version (*) ,version (*)  --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 6, "payload": "1' or '1#' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 7, "payload": "1' or '$#' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 8, "payload": "1' or '1' = 1 or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 9, "payload": "1' union all select null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 10, "payload": "1' union all select null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 11, "payload": "1' union select null,@@VERSION -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 12, "payload": "1  )  )   and 3824 = benchmark (*)  )   and   (  (   ( 6556 = 6556,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 13, "payload": "1' union select 1,banner from v$version where rownum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 14, "payload": "1' union select 1,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 15, "payload": "1 ' union select null,@@VERSION -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 16, "payload": "1' union all select null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 17, "payload": "1' union select 1,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 18, "payload": "1' or ' ( [' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 19, "payload": "1%' union all select null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 20, "payload": "1' or '1{' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 21, "payload": "1' union all select null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 22, "payload": "1 ' union select null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 23, "payload": "1%' union select null,@@VERSION -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 24, "payload": "1' or '@#' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 25, "payload": "1' or ' ( {' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 26, "payload": "1' union all select null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 27, "payload": "1' union select 1,banner from v$version where rownum = 1 --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 28, "payload": "1' or 1#', ' union select 1,version (*)  --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 29, "payload": "4045 = 4045 ' union all select null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 30, "payload": "1' or 1#'1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 31, "payload": "1' or ' ( 1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 32, "payload": "1' or ' ( {' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 33, "payload": "1' or ' ( ' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 34, "payload": "1 and 3824 = benchmark (*)  )  # igen,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 35, "payload": "1' union select version (*) ,version (*) ,version (*) ,version (*) ,version (*) ,version (*)  -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 36, "payload": "1' or ',;' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 37, "payload": "1' or '1#' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 38, "payload": "1' union select 1,banner from v$version where rownum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 39, "payload": "1' or '%1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 40, "payload": "1' union all select null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 41, "payload": "1 ' union all select null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 42, "payload": "1' or '%1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 43, "payload": "1' union select null,banner from v$version where' rownumnum = 1 --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 44, "payload": "1' or ' ) ' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 45, "payload": "1 ' union select null,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 46, "payload": "1' or '1{' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 47, "payload": "1' union select 1,version (*)  --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 48, "payload": "1' or 1#' = 1 or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 49, "payload": "1' or '1#' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 50, "payload": "-5199%' union all select 6455,6455,6455,6455,6455,6455,6455,6455,6455#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 51, "payload": "1%' union select null,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 52, "payload": "1' or '@ ) ' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 53, "payload": "1' or ' ( _' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 54, "payload": "1' union select null,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 55, "payload": "1' or 1#'@ ' union select version (*) ,version (*)  -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 56, "payload": "1 and 4241 = convert (*) +char (*) +char (*) +char (*) +char (*) + (*)  then char (*)  else char (*)  end  )  )  +char (*) +char (*) +char (*) +char (*) +char (*)  )   ) --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 57, "payload": "1' or ',1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 58, "payload": "1' or ' ( [' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 59, "payload": "1' or '1 ( ' = 1 or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 60, "payload": "1' union all select null,null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 61, "payload": "1' union select 1,version (*)  --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 62, "payload": "1' union all select null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 63, "payload": "1' union all select null,null,null,null,null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 64, "payload": "1' union select null,banner from v$version where' rownumnum = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 65, "payload": "1' or ' ( #' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 66, "payload": "1' or ' ( 1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 67, "payload": "1' union all select null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 68, "payload": "1 and 2853 = cast  (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )  || (*)  then 1 else 0 end  )  )  ::text|| (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )   as numeric ) --", "status": 403, "response_size": 146, "blocked": true}
+{"id": 69, "payload": "1' union all select null,null,null,null,null#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 70, "payload": "-3847%' union all select 2099,2099,2099,2099,2099,2099,2099,2099,2099#,1 -- 1", "status": 403, "response_size": 146, "blocked": true}
+{"id": 71, "payload": "1' or '1' or 1 = 1 -- 1", "status": 403, "response_size": 146, "blocked": true}

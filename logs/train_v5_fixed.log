@@ -1,44 +1,0 @@
-/home/kali/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py:786: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
-  warnings.warn(
-/home/kali/.local/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py:469: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.
-  warnings.warn(
-[DEBUG] Checking token path: /home/kali/.cache/huggingface/token
-[DEBUG] Path exists: True
-✅ Loaded HF_TOKEN from cache (len=37)
-Loading tokenizer…
-Loading 4-bit model… (this may take a while)
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  6.87s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.16s/it]
-Preparing k-bit training and applying DoRA adapters…
-Map:   0%|          | 0/348 [00:00<?, ? examples/s]Map: 100%|██████████| 348/348 [00:00<00:00, 4873.63 examples/s]
-Map:   0%|          | 0/51 [00:00<?, ? examples/s]Map: 100%|██████████| 51/51 [00:00<00:00, 5785.40 examples/s]
-/home/kali/.local/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
-
-Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
-  warnings.warn(message, FutureWarning)
-/home/kali/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:280: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
-  warnings.warn(
-/home/kali/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:318: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
-  warnings.warn(
-Initializing SFTTrainer…
-Map:   0%|          | 0/348 [00:00<?, ? examples/s]Map: 100%|██████████| 348/348 [00:00<00:00, 1167.72 examples/s]Map: 100%|██████████| 348/348 [00:00<00:00, 1139.12 examples/s]
-Map:   0%|          | 0/51 [00:00<?, ? examples/s]Map: 100%|██████████| 51/51 [00:00<00:00, 1609.70 examples/s]
-/home/kali/.local/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:408: UserWarning: You passed a tokenizer with `padding_side` not equal to `right` to the SFTTrainer. This might lead to some unexpected behaviour due to overflow issues when training a model in half-precision. You might consider adding `tokenizer.padding_side = 'right'` to your code.
-  warnings.warn(
-/home/kali/.local/lib/python3.10/site-packages/accelerate/accelerator.py:488: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
-  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
-Starting training… (ctrl+c to stop)
-  0%|          | 0/63 [00:00<?, ?it/s]It is strongly recommended to train Gemma2 models with the `eager` attention implementation instead of `sdpa`. Use `eager` with `AutoModelForCausalLM.from_pretrained('<path-to-checkpoint>', attn_implementation='eager')`.
-/home/kali/.local/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
-  return fn(*args, **kwargs)
-  2%|▏         | 1/63 [00:58<1:00:15, 58.32s/it]  3%|▎         | 2/63 [01:33<45:21, 44.61s/it]    5%|▍         | 3/63 [02:09<40:33, 40.57s/it]  6%|▋         | 4/63 [02:46<38:38, 39.30s/it]  8%|▊         | 5/63 [03:22<36:57, 38.23s/it] 10%|▉         | 6/63 [03:59<35:42, 37.59s/it] 11%|█         | 7/63 [04:35<34:37, 37.10s/it] 13%|█▎        | 8/63 [05:12<33:56, 37.02s/it] 14%|█▍        | 9/63 [05:48<33:13, 36.91s/it] 16%|█▌        | 10/63 [06:25<32:32, 36.84s/it]                                                16%|█▌        | 10/63 [06:25<32:32, 36.84s/it] 17%|█▋        | 11/63 [07:01<31:40, 36.56s/it] 19%|█▉        | 12/63 [07:36<30:46, 36.21s/it] 21%|██        | 13/63 [08:13<30:24, 36.49s/it] 22%|██▏       | 14/63 [08:50<29:45, 36.43s/it] 24%|██▍       | 15/63 [09:27<29:16, 36.60s/it] 25%|██▌       | 16/63 [10:03<28:37, 36.54s/it] 27%|██▋       | 17/63 [10:39<27:46, 36.22s/it] 29%|██▊       | 18/63 [11:16<27:20, 36.47s/it] 30%|███       | 19/63 [11:52<26:39, 36.35s/it] 32%|███▏      | 20/63 [12:27<25:46, 35.96s/it]                                                32%|███▏      | 20/63 [12:27<25:46, 35.96s/it] 33%|███▎      | 21/63 [13:04<25:23, 36.26s/it] 35%|███▍      | 22/63 [13:40<24:51, 36.38s/it] 37%|███▋      | 23/63 [14:16<24:12, 36.30s/it] 38%|███▊      | 24/63 [14:53<23:40, 36.43s/it] 40%|███▉      | 25/63 [15:27<22:33, 35.61s/it] 41%|████▏     | 26/63 [16:04<22:14, 36.07s/it] 43%|████▎     | 27/63 [16:40<21:34, 35.96s/it] 44%|████▍     | 28/63 [17:16<21:01, 36.05s/it] 46%|████▌     | 29/63 [17:54<20:41, 36.50s/it] 48%|████▊     | 30/63 [18:31<20:10, 36.68s/it]                                                48%|████▊     | 30/63 [18:31<20:10, 36.68s/it] 49%|████▉     | 31/63 [19:05<19:10, 35.95s/it] 51%|█████     | 32/63 [19:38<18:06, 35.04s/it] 52%|█████▏    | 33/63 [20:14<17:43, 35.46s/it] 54%|█████▍    | 34/63 [20:50<17:06, 35.40s/it] 56%|█████▌    | 35/63 [21:25<16:28, 35.30s/it] 57%|█████▋    | 36/63 [22:02<16:10, 35.95s/it] 59%|█████▊    | 37/63 [22:38<15:36, 36.02s/it] 60%|██████    | 38/63 [23:13<14:52, 35.71s/it] 62%|██████▏   | 39/63 [23:47<14:04, 35.19s/it] 63%|██████▎   | 40/63 [24:24<13:42, 35.75s/it]                                                63%|██████▎   | 40/63 [24:24<13:42, 35.75s/it] 65%|██████▌   | 41/63 [25:03<13:23, 36.51s/it] 67%|██████▋   | 42/63 [25:39<12:49, 36.63s/it] 68%|██████▊   | 43/63 [26:16<12:12, 36.62s/it] 70%|██████▉   | 44/63 [26:53<11:39, 36.82s/it] 71%|███████▏  | 45/63 [27:30<10:59, 36.62s/it] 73%|███████▎  | 46/63 [28:05<10:17, 36.31s/it] 75%|███████▍  | 47/63 [28:40<09:32, 35.78s/it] 76%|███████▌  | 48/63 [29:14<08:48, 35.26s/it] 78%|███████▊  | 49/63 [29:48<08:10, 35.03s/it] 79%|███████▉  | 50/63 [30:25<07:43, 35.67s/it]                                                79%|███████▉  | 50/63 [30:25<07:43, 35.67s/it]/home/kali/.local/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:929: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
-  return fn(*args, **kwargs)
- 81%|████████  | 51/63 [31:06<07:27, 37.29s/it] 83%|████████▎ | 52/63 [31:43<06:46, 36.94s/it] 84%|████████▍ | 53/63 [32:20<06:09, 36.97s/it] 86%|████████▌ | 54/63 [32:56<05:31, 36.81s/it] 87%|████████▋ | 55/63 [33:33<04:54, 36.76s/it] 89%|████████▉ | 56/63 [34:08<04:15, 36.48s/it] 90%|█████████ | 57/63 [34:46<03:40, 36.67s/it] 92%|█████████▏| 58/63 [35:21<03:01, 36.26s/it] 94%|█████████▎| 59/63 [35:57<02:24, 36.23s/it] 95%|█████████▌| 60/63 [36:34<01:49, 36.50s/it]                                                95%|█████████▌| 60/63 [36:34<01:49, 36.50s/it] 97%|█████████▋| 61/63 [37:10<01:12, 36.32s/it] 98%|█████████▊| 62/63 [37:46<00:36, 36.26s/it]100%|██████████| 63/63 [38:22<00:00, 36.18s/it]                                               100%|██████████| 63/63 [38:27<00:00, 36.18s/it]100%|██████████| 63/63 [38:27<00:00, 36.62s/it]
-{'loss': 2.5807, 'grad_norm': 1.4958351850509644, 'learning_rate': 0.0002, 'epoch': 0.46}
-{'loss': 1.7474, 'grad_norm': 1.040579080581665, 'learning_rate': 0.00018467241992282843, 'epoch': 0.92}
-{'loss': 1.3439, 'grad_norm': 1.0474793910980225, 'learning_rate': 0.00014338837391175582, 'epoch': 1.38}
-{'loss': 1.1792, 'grad_norm': 1.033970832824707, 'learning_rate': 8.880355238966923e-05, 'epoch': 1.84}
-{'loss': 1.0449, 'grad_norm': 1.0028300285339355, 'learning_rate': 3.7651019814126654e-05, 'epoch': 2.3}
-{'loss': 0.981, 'grad_norm': 1.1380298137664795, 'learning_rate': 5.611666969163243e-06, 'epoch': 2.76}
-{'train_runtime': 2307.2516, 'train_samples_per_second': 0.452, 'train_steps_per_second': 0.027, 'train_loss': 1.453382382317195, 'epoch': 2.9}
-Saving adapter…
-Done.

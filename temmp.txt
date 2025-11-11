@@ -1,0 +1,47 @@
+ Các lệnh đã sửa đổi để bạn tự chạy (với `nohup` bên trong WSL):
+
+  Bước 1: Khởi động WAF
+  Chạy lệnh này để đảm bảo WAF đang hoạt động. Lệnh này sẽ trả về ngay lập tức.
+
+   1 wsl -e bash -lc "cd /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/waf && nohup 
+     docker compose up -d > /dev/null 2>&1 &"
+  Sau khi chạy, bạn có thể kiểm tra trạng thái bằng docker ps trong WSL.
+
+  Bước 2: Tạo payload (SQLi và XSS) với CoT và lưu đầy đủ thông tin
+  Lệnh này sẽ chạy script v6_langchain_generate.py để tạo 100 payload (50 SQLi và 50
+  XSS), bao gồm cả reasoning, và lưu chúng vào các file kết quả. Lệnh này cũng sẽ trả về
+  ngay lập tức.
+
+   1 wsl -e bash -lc "cd /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber; source 
+     .venv/bin/activate; nohup python scripts/infer/v6_langchain_generate.py --limit 100 
+     --adapter-dir experiments/red_gemma2_v6_multi_clean/adapter > /dev/null 2>&1 &"
+  Bạn có thể kiểm tra xem nó đã hoàn thành chưa bằng cách xem các file trong thư mục
+  results/ hoặc kiểm tra các tiến trình đang chạy trong WSL.
+
+  Bước 3: Kiểm tra payload SQLi với WAF
+  Sau khi payload được tạo, chạy lệnh này để kiểm tra các payload SQLi. Lệnh này cũng sẽ
+  trả về ngay lập tức.
+
+   1 wsl -e bash -lc "cd /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber; source 
+     .venv/bin/activate; nohup python replay/harness.py results/v6_sqli_langchain.txt 
+     --output results/v6_sqli_langchain_replay.jsonl --base-url 
+     http://localhost:8080/vulnerabilities/sqli/ --param-name id --login > /dev/null 2>&1 
+     &"
+
+  Bước 4: Kiểm tra payload XSS với WAF
+  Và lệnh này để kiểm tra các payload XSS. Lệnh này cũng sẽ trả về ngay lập tức.
+
+   1 wsl -e bash -lc "cd /mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber; source 
+     .venv/bin/activate; nohup python replay/harness_xss.py results/v6_xss_langchain.txt 
+     --output results/v6_xss_langchain_replay.jsonl --base-url
+     http://localhost:8080/vulnerabilities/xss_r/ --param-name name --login > /dev/null
+     2>&1 &"
+
+  Sau khi tất cả các lệnh này hoàn thành, bạn có thể kiểm tra các file
+  results/v6_sqli_langchain_replay.jsonl và results/v6_xss_langchain_replay.jsonl (hoặc
+  các file .csv tương ứng) để xem tỷ lệ bypass. Và đừng quên kiểm tra
+  results/v6_multi_langchain_cot_full.jsonl để xem reasoning của mô hình.
+
+  Bạn có muốn tôi dừng các container WAF sau khi hoàn thành các bước kiểm tra không?
+
+ Using: 1 GEMINI.md file

@@ -1,0 +1,8 @@
+nohup: ignoring input
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:21<00:21, 21.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00,  9.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.38s/it]
+Saved:
+ - results/v6_multi_langchain.txt
+ - results/v6_sqli_langchain.txt
+ - results/v6_xss_langchain.txt
+ - results/v6_multi_langchain_cot_full.jsonl (includes reasoning)

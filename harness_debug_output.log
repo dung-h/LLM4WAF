@@ -1,0 +1,53 @@
+🎯 Testing 50 payloads against http://localhost:8080/vulnerabilities/sqli/
+📝 Parameter: id
+💾 Output: results/loop_c1_sqli_cot.jsonl
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/replay/harness.py", line 129, in <module>
+    main()
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/replay/harness.py", line 87, in main
+    r = client.get(login_url)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 1053, in get
+    return self.request(
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/.venv/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 111] Connection refused

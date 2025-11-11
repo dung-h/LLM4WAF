@@ -86,14 +86,18 @@ def format_example(example: Dict[str, Any], fields: Dict[str, str]) -> str:
             # Full format with all 5 fields
             ctx = example.get(fields["context"], "")
             cons = example.get(fields["constraints"], "")
-            
+
             ctx = ctx.strip() if ctx else ""
             cons = cons.strip() if cons else ""
-            
-            user = f"Instruction: {instr}\nContext: {ctx}\nConstraints: {cons}\n".strip()
+
+            atk = example.get("attack_type")
+            atk_line = f"Attack-Type: {atk}\n" if atk else ""
+            user = f"{atk_line}Instruction: {instr}\nContext: {ctx}\nConstraints: {cons}\n".strip()
         else:
             # v5_simple format - instruction only (no context/constraints)
-            user = f"Instruction: {instr}"
+            atk = example.get("attack_type")
+            atk_line = f"Attack-Type: {atk}\n" if atk else ""
+            user = f"{atk_line}Instruction: {instr}".strip()
         
         assistant = f"Payload: {payload}\nReasoning: {reasoning}".strip()
         return user + "\n\n" + assistant
@@ -126,6 +130,9 @@ def formatting_func(examples: Dict[str, List[str]], fields) -> List[str]:
     ref_field = fields_dict["payload"]
     for i in range(len(examples[ref_field])):
         ex = {k: examples[k][i] for k in examples}
+        # Inject attack_type if present to help the model disambiguate tasks
+        if "attack_type" in examples:
+            ex["attack_type"] = examples["attack_type"][i]
         out.append(format_example(ex, fields_dict))
     return out
 

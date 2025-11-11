@@ -1,9 +1,3 @@
-"""
-Replay harness (skeleton): sends payloads to the testbed app and records results.
-
-Intended to target: Nginx + ModSecurity (CRS PL2) + DVWA/demo app.
-Outputs parquet/csv under results/.
-"""
 from __future__ import annotations
 
 import asyncio
@@ -29,7 +23,7 @@ async def probe(client: httpx.AsyncClient, url: str, params: Dict[str, str]) -> 
     }
 
 
-async def main_async(base_url: str, payloads: List[str], param: str = "q", cookies: httpx.Cookies | None = None) -> pd.DataFrame:
+async def main_async(base_url: str, payloads: List[str], param: str = "name", cookies: httpx.Cookies | None = None) -> pd.DataFrame:
     out: List[Dict[str, Any]] = []
     async with httpx.AsyncClient(follow_redirects=True, cookies=cookies) as client:
         for i, p in enumerate(payloads):
@@ -40,32 +34,30 @@ async def main_async(base_url: str, payloads: List[str], param: str = "q", cooki
 
 def main() -> None:
     import argparse
-    
-    parser = argparse.ArgumentParser(description="WAF Replay Harness")
-    parser.add_argument("payloads_file", help="File containing payloads (one per line)")
-    parser.add_argument("--output", default="results/replay_results.jsonl", help="Output file")
-    parser.add_argument("--base-url", default="http://localhost:8080/vulnerabilities/sqli/", help="Target URL")
-    parser.add_argument("--param-name", default="id", help="Parameter name for injection")
+
+    parser = argparse.ArgumentParser(description="WAF Replay Harness (XSS)")
+    parser.add_argument("payloads_file", help="File containing XSS payloads (one per line)")
+    parser.add_argument("--output", default="results/replay_results_xss.jsonl", help="Output file")
+    parser.add_argument("--base-url", default="http://localhost:8080/vulnerabilities/xss_r/", help="Target URL")
+    parser.add_argument("--param-name", default="name", help="Parameter name for injection")
     parser.add_argument("--cookie-file", default=None, help="Cookie file (Netscape format)")
     parser.add_argument("--login", action="store_true", help="Login DVWA (admin/password)")
     parser.add_argument("--login-url", default=None, help="Login URL (defaults to <root>/login.php)")
     parser.add_argument("--username", default="admin")
     parser.add_argument("--password", default="password")
     args = parser.parse_args()
-    
-    # Read payloads
+
     with open(args.payloads_file, "r", encoding="utf-8") as f:
         payloads = [line.strip() for line in f if line.strip()]
-    
-    print(f"🎯 Testing {len(payloads)} payloads against {args.base_url}")
-    print(f"📝 Parameter: {args.param_name}")
-    print(f"💾 Output: {args.output}")
+
+    print(f"Testing {len(payloads)} XSS payloads against {args.base_url}")
+    print(f"Parameter: {args.param_name}")
+    print(f"Output: {args.output}")
     print()
-    
+
     # Prepare cookies
     cookies = httpx.Cookies()
     if args.cookie_file:
-        # Netscape cookie file simple loader
         try:
             with open(args.cookie_file, "r", encoding="utf-8", errors="ignore") as cf:
                 for line in cf:
@@ -90,37 +82,31 @@ def main() -> None:
             client.post(login_url, data=data)
             cookies = client.cookies
 
-    # Run tests
     df = asyncio.run(main_async(args.base_url, payloads, param=args.param_name, cookies=cookies))
-    
-    # Save results
+
     RESULTS.mkdir(parents=True, exist_ok=True)
-    
-    # Save as JSONL
-    output_path = Path(args.output)
-    with open(output_path, "w", encoding="utf-8") as f:
+    out_path = Path(args.output)
+    with open(out_path, "w", encoding="utf-8") as f:
         for _, row in df.iterrows():
             f.write(json.dumps(row.to_dict()) + "\n")
-    
-    # Also save CSV for easy viewing
-    csv_path = output_path.with_suffix(".csv")
+
+    csv_path = out_path.with_suffix(".csv")
     df.to_csv(csv_path, index=False)
-    
-    # Print summary
+
     total = len(df)
     passed = len(df[~df["blocked"]])
     blocked = len(df[df["blocked"]])
     bypass_rate = (passed / total * 100) if total > 0 else 0
-    
+
     print(f"\n{'='*70}")
-    print(f"📊 WAF REPLAY RESULTS")
+    print("WAF REPLAY RESULTS (XSS)")
     print(f"{'='*70}")
     print(f"Total payloads:  {total}")
-    print(f"✅ Passed WAF:   {passed} ({bypass_rate:.1f}%)")
-    print(f"🚫 Blocked:      {blocked} ({100-bypass_rate:.1f}%)")
+    print(f"Passed WAF:   {passed} ({bypass_rate:.1f}%)")
+    print(f"Blocked:      {blocked} ({100-bypass_rate:.1f}%)")
     print(f"{'='*70}")
-    print(f"\n💾 Results saved to:")
-    print(f"   - {output_path}")
+    print(f"\nResults saved to:")
+    print(f"   - {out_path}")
     print(f"   - {csv_path}")
 
 

