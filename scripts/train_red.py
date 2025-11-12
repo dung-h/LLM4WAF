@@ -62,62 +62,63 @@ def build_lora_config(cfg: Dict[str, Any]) -> LoraConfig:
     )
 
 
-def format_example(example: Dict[str, Any], fields: Dict[str, str]) -> str:
+def format_example(example: Dict[str, Any], fields: Dict[str, str], prompt_format_type: str = "default") -> str:
     """
-    Support 3 formats:
-    1. Full: instruction, context, constraints, payload, reasoning
-    2. v5_simple: instruction, payload, reasoning (no context/constraints)
-    3. Simple: payload, reasoning only
+    Formats a single example into a string based on the specified prompt_format_type.
     """
-    payload = example.get(fields["payload"], "")
-    reasoning = example.get(fields["reasoning"], "")
-    
-    # Safe strip (handle None)
-    payload = payload.strip() if payload else ""
-    reasoning = reasoning.strip() if reasoning else ""
-    
-    # Check if full format (has instruction field)
-    if "instruction" in fields and fields["instruction"] in example:
-        instr = example.get(fields["instruction"], "")
-        instr = instr.strip() if instr else ""
-        
-        # Check if we have context and constraints fields
-        if "context" in fields and "constraints" in fields:
-            # Full format with all 5 fields
-            ctx = example.get(fields["context"], "")
-            cons = example.get(fields["constraints"], "")
+    # Safely get and strip all relevant fields
+    payload = (example.get(fields["payload"]) or "").strip()
+    reasoning = (example.get(fields["reasoning"]) or "").strip()
 
-            ctx = ctx.strip() if ctx else ""
-            cons = cons.strip() if cons else ""
+    instr = (example.get(fields.get("instruction")) or "").strip() if "instruction" in fields else ""
+    ctx = (example.get(fields.get("context")) or "").strip() if "context" in fields else ""
+    cons = (example.get(fields.get("constraints")) or "").strip() if "constraints" in fields else ""
+    atk = (example.get("attack_type") or "").strip()
 
-            atk = example.get("attack_type")
-            atk_line = f"Attack-Type: {atk}\n" if atk else ""
-            user = f"{atk_line}Instruction: {instr}\nContext: {ctx}\nConstraints: {cons}\n".strip()
-        else:
-            # v5_simple format - instruction only (no context/constraints)
-            atk = example.get("attack_type")
-            atk_line = f"Attack-Type: {atk}\n" if atk else ""
-            user = f"{atk_line}Instruction: {instr}".strip()
+    # Construct user and assistant content based on available fields
+    user_content_parts = []
+    if atk:
+        user_content_parts.append(f"Attack-Type: {atk}")
+    if instr:
+        user_content_parts.append(f"Instruction: {instr}")
+    if ctx:
+        user_content_parts.append(f"Context: {ctx}")
+    if cons:
+        user_content_parts.append(f"Constraints: {cons}")
+    
+    user_message = "\n".join(user_content_parts)
+    assistant_message = f"Payload: {payload}\nReasoning: {reasoning}"
+
+    if prompt_format_type == "llama3_instruct":
+        system_message = "You are a helpful AI assistant specialized in WAF penetration testing. Your task is to generate SQL injection payloads and reasoning based on the provided instructions and WAF analysis."
         
-        assistant = f"Payload: {payload}\nReasoning: {reasoning}".strip()
-        return user + "\n\n" + assistant
+        return (
+            "<|begin_of_text|>"
+            "<|start_header_id|>system<|end_header_id|>\n"
+            f"{system_message}\n"
+            "<|start_header_id|>user<|end_header_id|>\n"
+            f"{user_message}\n"
+            "<|start_header_id|>assistant<|end_header_id|>\n"
+            f"{assistant_message}<|eot_id|>"
+        )
+    elif prompt_format_type == "v5_simple" or prompt_format_type == "default": # Existing formats
+        return user_message + "\n\n" + assistant_message
+    elif prompt_format_type == "simple": # Old "Simple" format
+        return assistant_message
     else:
-        # Simple format (v2 dataset)
-        return f"Payload: {payload}\nReasoning: {reasoning}".strip()
+        raise ValueError(f"Unknown prompt_format_type: {prompt_format_type}")
 
 
-def formatting_func(examples: Dict[str, List[str]], fields) -> List[str]:
+def formatting_func(examples: Dict[str, List[str]], fields, prompt_format_type: str) -> List[str]:
     """
-    fields can be:
-    - list: [payload, reasoning] → assume default mapping
-    - dict: {instruction, context, constraints, payload, reasoning}
+    Formats a batch of examples into a list of strings based on the specified prompt_format_type.
     """
     # If fields is a list, create default mapping
     if isinstance(fields, list):
         # Default: first field = payload, second field = reasoning
         fields_dict = {
             "instruction": "instruction",
-            "context": "context", 
+            "context": "context",
             "constraints": "constraints",
             "payload": fields[0] if len(fields) > 0 else "payload",
             "reasoning": fields[1] if len(fields) > 1 else "reasoning"
@@ -133,7 +134,7 @@ def formatting_func(examples: Dict[str, List[str]], fields) -> List[str]:
         # Inject attack_type if present to help the model disambiguate tasks
         if "attack_type" in examples:
             ex["attack_type"] = examples["attack_type"][i]
-        out.append(format_example(ex, fields_dict))
+        out.append(format_example(ex, fields_dict, prompt_format_type)) # Pass prompt_format_type
     return out
 
 
@@ -148,6 +149,7 @@ def main() -> None:
     model_name = cfg["model_name"]
     auth_env = cfg.get("use_auth_token_env", "HF_TOKEN")
     auth_token = os.environ.get(auth_env)
+    prompt_format_type = cfg.get("prompt_format_type", "default") # Read from config
 
     bnb_cfg = build_bnb_config(cfg)
 
@@ -187,7 +189,7 @@ def main() -> None:
     ds = load_dataset("json", data_files=data_files)
 
     def _fmt_func(batch):
-        return {"text": formatting_func(batch, text_fields)}
+        return {"text": formatting_func(batch, text_fields, prompt_format_type)} # Pass prompt_format_type
 
     # Fix: text_fields can be list or dict
     if isinstance(text_fields, dict):
