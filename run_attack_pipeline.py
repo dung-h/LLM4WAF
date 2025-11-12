@@ -1,4 +1,5 @@
 
+import os
 import subprocess
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ import re
 import asyncio
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-from peft import PeftModel
+from peft import PeftModel, PeftConfig, LoraConfig
 from langchain_core.prompts import PromptTemplate
 
 # --- Config ---
@@ -17,8 +18,9 @@ DVWA_SQLI_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli/"
 DVWA_XSS_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_r/"
 USERNAME = "admin"
 PASSWORD = "password"
-ADAPTER_DIR = "experiments/red_deepseek_7b_coder_lora_adapter/adapter"
-BASE_MODEL_NAME = "deepseek-ai/deepseek-coder-7b-instruct-v1.5" # Updated base model name
+ADAPTER_DIR = "experiments/red_phi3_mini_lora_adapter/adapter"
+BASE_MODEL_NAME = "microsoft/Phi-3-mini-4k-instruct"
+USE_ADAPTER = True # Set to True to load the fine-tuned adapter, False to use the base model directly
 
 # --- Tool Implementations ---
 
@@ -117,67 +119,96 @@ def run_generation(probe_results: dict, attack_history: list) -> str:
             elif attack.get("result") == "passed":
                 failed_attempts_prompt += f"\n- Payload: '{attack['payload']}' PASSED (no WAF block, no obvious SQL error, but no clear success)."
 
-
-    # Construct the user message content
-    user_message_content = (
-        "You are a WAF penetration testing expert. Your goal is to craft a SQL injection payload that bypasses the target WAF.\n\n"
-        "**Analysis of Target WAF:**\n"
-        "- A generic WAF is present.\n"
-        f"- Probing shows that the WAF **STRICTLY BLOCKS** payloads containing these SQL keywords: {blocked_keywords}.\n"
-        f"{failed_attempts_prompt}\n\n"
-        "**Your New Goal:**\n"
-        "Generate a single, effective SQL injection payload. This payload **MUST NOT** contain any of the following keywords: "
-        f"{blocked_keywords}. It must also be **fundamentally different** from any previously failed payloads.\n\n"
-        "**Chain of Thought Rules:**\n"
-        "1.  Think step-by-step inside a <thought> block about how to achieve this.\n"
-        "2.  **CRITICAL:** Review the `blocked_keywords` list. Your generated payload **ABSOLUTELY MUST NOT** use any of these.\n"
-        "3.  **CRITICAL:** If there are `Previous Failed Attempts`, analyze *why* each failed, specifically identifying if it contained a blocked keyword or if the technique itself was detected.\n"
-        "4.  Propose a new, distinct SQL injection technique that avoids all known blocked keywords and addresses the reasons for previous failures. Consider techniques like:\n"
-        "    *   Boolean-based blind (e.g., using `AND`, `&&`, `XOR`, `LIKE` with character-by-character extraction, if `AND` is not blocked).\n"
-        "    *   Time-based blind (e.g., `SLEEP()`, `BENCHMARK()`, if not blocked).\n"
-        "    *   Error-based (e.g., `EXTRACTVALUE()`, `UPDATEXML()`, if not blocked).\n"
-        "    *   Out-of-band (e.g., DNS exfiltration, if possible).\n"
-        "    *   Obfuscation techniques for allowed keywords (e.g., comments, string concatenation, URL encoding, hex encoding) if necessary, but prioritize avoiding blocked keywords entirely.\n"
-        "5.  After your thought process, write the final payload on a new line, prefixed with \"Payload:\". **The Payload line MUST ONLY contain the payload itself, with no additional text or reasoning.**\n"
-        "6.  **FINAL CHECK:** Before outputting, ensure the payload strictly avoids all blocked keywords and is syntactically valid for SQL injection.\n"
-    )
-
-    # Llama 3 Instruct chat template
-    prompt = (
-        "<|begin_of_text|>"
-        "<|start_header_id|>system<|end_header_id|>\n"
-        "You are a helpful AI assistant specialized in WAF penetration testing. Your task is to generate SQL injection payloads and reasoning based on the provided instructions and WAF analysis.\n"
-        "<|start_header_id|>user<|end_header_id|>\n"
-        f"{user_message_content.strip()}\n"
-        "<|start_header_id|>assistant<|end_header_id|>\n"
-    )
-    print(f"[Tool] Generation prompt:\n{prompt}")
-
     tok = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
     if tok.pad_token is None: tok.pad_token = tok.eos_token
     tok.padding_side = "left"
     bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=torch.float16)
     base = AutoModelForCausalLM.from_pretrained(BASE_MODEL_NAME, device_map='auto', quantization_config=bnb, torch_dtype=torch.float16)
-    model = PeftModel.from_pretrained(base, ADAPTER_DIR, torch_dtype=torch.float16, local_files_only=True)
+    
+    if USE_ADAPTER:
+        peft_config_dict = PeftConfig.from_json_file(os.path.join(ADAPTER_DIR, "adapter_config.json"))
+        peft_config = LoraConfig(**peft_config_dict)
+        model = PeftModel(base, peft_config)
+    else:
+        model = base # Use the base model directly
     model.eval()
 
-    inputs = tok(prompt, return_tensors='pt').to(model.device)
-    with torch.no_grad():
-        out = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.8, top_p=0.9, pad_token_id=tok.eos_token_id)
-    text = tok.decode(out[0], skip_special_tokens=True)
+    MAX_GENERATION_RETRIES = 3
+    for retry_count in range(MAX_GENERATION_RETRIES):
+        current_failed_attempts_prompt = failed_attempts_prompt
+        if retry_count > 0:
+            current_failed_attempts_prompt += f"\n\n**Feedback:** Your previous payload contained blocked keywords. Generate a new, fundamentally different payload that strictly avoids: {blocked_keywords}."
 
-    try:
-        # Extract only the assistant's response part
-        assistant_response_start = text.rfind("<|start_header_id|>assistant<|end_header_id|>")
-        if assistant_response_start != -1:
-            text = text[assistant_response_start + len("<|start_header_id|>assistant<|end_header_id|>"):].strip()
-        
-        payload = text.split("Payload:")[-1].strip().splitlines()[0].strip()
-        print(f"[Tool] Generation successful. New payload: {payload}")
-        return payload
-    except IndexError:
-        print("[Tool] ERROR: Generation failed to produce a payload.")
-        return ""
+        # Construct the user message content
+        user_message_content = (
+            "You are a WAF penetration testing expert. Your goal is to craft a SQL injection payload that bypasses the target WAF.\n\n"
+            "**Analysis of Target WAF:**\n"
+            "- A generic WAF is present.\n"
+            f"- Probing shows that the WAF **STRICTLY BLOCKS** payloads containing these SQL keywords: {blocked_keywords}.\n"
+            f"{current_failed_attempts_prompt}\n\n"
+            "**Your New Goal:**\n"
+            "Generate a single, effective SQL injection payload. This payload **MUST NOT** contain any of the following keywords: "
+            f"{blocked_keywords}. It must also be **fundamentally different** from any previously failed payloads.\n\n"
+            "Write the final payload on a new line, prefixed with \"Payload:\". **The Payload line MUST ONLY contain the payload itself, with no additional text or reasoning.**\n"
+            "**FINAL CHECK:** Before outputting, ensure the payload strictly avoids all blocked keywords and is syntactically valid for SQL injection.\n"
+        )
+
+        prompt = (
+            "<|begin_of_text|>"
+            "<|system|>\n"
+            "You are a helpful AI assistant specialized in WAF penetration testing. Your task is to generate SQL injection payloads and reasoning based on the provided instructions and WAF analysis.<|end|>\n"
+            "<|user|>\n"
+            f"{user_message_content.strip()}<|end|>\n"
+            "<|assistant|>\n"
+        )
+        print(f"[Tool] Generation prompt (Retry {retry_count + 1}/{MAX_GENERATION_RETRIES}):\n{prompt}")
+
+        inputs = tok(prompt, return_tensors='pt').to(model.device)
+        with torch.no_grad():
+            out = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.8, top_p=0.9, pad_token_id=tok.eos_token_id)
+        text = tok.decode(out[0], skip_special_tokens=True)
+
+        try:
+            # Extract only the assistant's response part for Phi-3
+            assistant_response_start = text.rfind("<|assistant|>")
+            if assistant_response_start != -1:
+                text = text[assistant_response_start + len("<|assistant|>"):].strip()
+            
+            # Check if the model echoed the prompt instructions, which might not include "Payload:"
+            if "Payload:" not in text and any(rule in text for rule in ["Think step-by-step", "CRITICAL: Review the `blocked_keywords`"]):
+                print("[Tool] WARNING: Model echoed prompt instructions instead of generating payload. Retrying.")
+                continue # Retry generation
+            
+            payload = text.split("Payload:")[-1].strip().splitlines()[0].strip()
+            if not payload: # If payload is empty after splitting
+                print("[Tool] ERROR: Generation failed to produce a valid payload (empty after parsing). Retrying.")
+                continue # Retry generation
+
+            # Post-generation check for blocked keywords
+            contains_blocked = False
+            for keyword in blocked_keywords:
+                if keyword.lower() in payload.lower():
+                    print(f"[Tool] WARNING: Generated payload '{payload}' contains blocked keyword '{keyword}'. Retrying.")
+                    contains_blocked = True
+                    break
+            
+            if contains_blocked:
+                # Add feedback to the prompt for the next retry
+                if "Feedback:" not in failed_attempts_prompt:
+                    failed_attempts_prompt += f"\n\n**Feedback:** Your previous payload contained blocked keywords. Generate a new, fundamentally different payload that strictly avoids: {blocked_keywords}."
+                else:
+                    # Update existing feedback
+                    failed_attempts_prompt = re.sub(r"\*\*Feedback:\*\*(.*?)\n\n", f"**Feedback:** Your previous payload contained blocked keywords. Generate a new, fundamentally different payload that strictly avoids: {blocked_keywords}.\n\n", failed_attempts_prompt, 1)
+                continue # Retry generation
+            
+            print(f"[Tool] Generation successful. New payload: {payload}")
+            return payload
+        except IndexError:
+            print("[Tool] ERROR: Generation failed to produce a payload. Retrying.")
+            continue # Retry generation
+    
+    print(f"[Tool] ERROR: Failed to generate a compliant payload after {MAX_GENERATION_RETRIES} retries.")
+    return ""
 
 async def run_testing(payload: str) -> dict:
     """
