@@ -3,7 +3,6 @@ kaggle.json
 
 # Data & results (large files)
 data/raw/
-data/processed/
 data/splits/
 experiments/
 waf/logs/
@@ -42,3 +41,6 @@ archive_*/
 AGENT_INSTRUCTION.md
 V6_MULTI_ATTACK_QUICKSTART.md
 FINAL_STATUS.txt
+
+# Exception for specific processed data file
+!data/processed/red_train_v6_multi_clean.jsonl

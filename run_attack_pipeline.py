@@ -1,4 +1,3 @@
-
 import os
 import subprocess
 import json
@@ -9,18 +8,30 @@ import asyncio
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel, PeftConfig, LoraConfig
+from peft import PeftModel, LoraConfig
 from langchain_core.prompts import PromptTemplate
+from rag.retrievers import TFIDFRetriever
+import yaml
 
 # --- Config ---
-DVWA_BASE_URL = "http://localhost:8080"
+DVWA_BASE_URL = "http://localhost:18081"
 DVWA_LOGIN_URL = f"{DVWA_BASE_URL}/login.php"
 DVWA_SQLI_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli/"
 DVWA_XSS_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_r/"
 USERNAME = "admin"
 PASSWORD = "password"
-ADAPTER_DIR = "experiments/red_phi3_mini_lora_adapter/adapter"
-BASE_MODEL_NAME = "microsoft/Phi-3-mini-4k-instruct"
-USE_ADAPTER = True # Set to True to load the fine-tuned adapter, False to use the base model directly
+
+# Load model configuration from red_llm_dora_8gb.yaml
+CONFIG_PATH = Path(__file__).resolve().parents[0] / "configs" / "red_llm_dora_8gb.yaml"
+with open(CONFIG_PATH, 'r') as f:
+    config = yaml.safe_load(f)
+
+BASE_MODEL_NAME = config.get("model_name", "microsoft/Phi-3-mini-4k-instruct")
+ADAPTER_PATH = config.get("adapter_path") # Get adapter path from config
+
+# --- RAG Setup ---
+RAG_INDEX_PATH = Path(__file__).resolve().parents[0] / "rag" / "indexes" / "payloads_tfidf.joblib"
+payload_retriever = TFIDFRetriever.load(str(RAG_INDEX_PATH))
 
 # --- Tool Implementations ---
 
@@ -103,35 +114,40 @@ async def run_probing() -> dict:
     print("[Tool] Probing completed successfully.")
     return probe_results
 
-def run_generation(probe_results: dict, attack_history: list) -> str:
+# --- Global Model and Tokenizer ---
+tokenizer = None
+model = None
+
+def load_llm_model():
+    global tokenizer, model, ADAPTER_PATH # Added ADAPTER_PATH to global
+    print(f"[Tool] Loading base model: {BASE_MODEL_NAME}...")
+    tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
+    if tokenizer.pad_token is None: tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "left"
+    bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=torch.float16)
+    model = AutoModelForCausalLM.from_pretrained(BASE_MODEL_NAME, device_map='auto', quantization_config=bnb, torch_dtype=torch.float16)
+    
+    if ADAPTER_PATH:
+        print(f"[Tool] Loading LoRA adapter from: {ADAPTER_PATH}...")
+        model = PeftModel.from_pretrained(model, ADAPTER_PATH)
+        print(f"[Tool] Merging base model with adapter...")
+        model = model.merge_and_unload() # Merge and unload to get a single model
+        print(f"[Tool] Fine-tuned model loaded successfully.")
+    else:
+        print(f"[Tool] Base model loaded successfully (no adapter).")
+
+    model.eval()
+
+def run_generation(probe_results: dict, attack_history: list, dbms_type: str) -> str:
     print("[Tool] Running Generation...")
     
     blocked_keywords = probe_results.get("blocked_sqli_keywords", [])
+    failed_attempts_prompt = "" # Initialize here
     
-    failed_attempts_prompt = ""
-    if attack_history:
-        failed_attempts_prompt += "\n\n**Previous Failed Attempts:**"
-        for attack in attack_history:
-            if attack.get("result") == "blocked":
-                failed_attempts_prompt += f"\n- Payload: '{attack['payload']}' was BLOCKED by WAF."
-            elif attack.get("result") == "sql_error_bypass":
-                failed_attempts_prompt += f"\n- Payload: '{attack['payload']}' caused a SQL ERROR (WAF bypassed, but payload failed at DB level)."
-            elif attack.get("result") == "passed":
-                failed_attempts_prompt += f"\n- Payload: '{attack['payload']}' PASSED (no WAF block, no obvious SQL error, but no clear success)."
+    global tokenizer, model
+    if tokenizer is None or model is None:
+        load_llm_model()
 
-    tok = AutoTokenizer.from_pretrained(BASE_MODEL_NAME)
-    if tok.pad_token is None: tok.pad_token = tok.eos_token
-    tok.padding_side = "left"
-    bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_use_double_quant=True, bnb_4bit_compute_dtype=torch.float16)
-    base = AutoModelForCausalLM.from_pretrained(BASE_MODEL_NAME, device_map='auto', quantization_config=bnb, torch_dtype=torch.float16)
-    
-    if USE_ADAPTER:
-        peft_config_dict = PeftConfig.from_json_file(os.path.join(ADAPTER_DIR, "adapter_config.json"))
-        peft_config = LoraConfig(**peft_config_dict)
-        model = PeftModel(base, peft_config)
-    else:
-        model = base # Use the base model directly
-    model.eval()
 
     MAX_GENERATION_RETRIES = 3
     for retry_count in range(MAX_GENERATION_RETRIES):
@@ -139,48 +155,64 @@ def run_generation(probe_results: dict, attack_history: list) -> str:
         if retry_count > 0:
             current_failed_attempts_prompt += f"\n\n**Feedback:** Your previous payload contained blocked keywords. Generate a new, fundamentally different payload that strictly avoids: {blocked_keywords}."
 
-        # Construct the user message content
+        # RAG: Retrieve relevant payloads based on blocked keywords
+        # query_text = f"SQLi bypass for {dbms_type} WAF blocking {', '.join(blocked_keywords)}"
+        # retrieved_payloads = payload_retriever.query(query_text, top_k=5) # Retrieve more to allow for filtering
+        
+        # # Filter retrieved payloads to only include those matching the target DBMS or generic payloads
+        # filtered_retrieved_payloads = [
+        #     p for p in retrieved_payloads 
+        #     if p['meta'].get('dbms') in [dbms_type, "Generic"] and not any(kw in p['meta'].get('payload', '').lower() for kw in blocked_keywords)
+        # ]
+        
+        # Temporarily disable RAG to evaluate fine-tuned model's raw performance
+        rag_context = ""
+        # if filtered_retrieved_payloads:
+        #     rag_context = "\n\n**Here are some SQLi bypass techniques/payloads that have been effective in similar situations (adapt these examples to the current WAF and strictly avoid the blocked keywords):**\n"
+        #     for i, item in enumerate(filtered_retrieved_payloads[:3]): # Take top 3 compliant payloads
+        #         rag_context += f"- Payload: `{item['meta']['payload']}` (Source: {item['meta'].get('source', 'N/A')})\n"
+        #         if item['meta'].get('reason'):
+        #             rag_context += f"  Reasoning: {item['meta']['reason']}\n"
+        #     rag_context += "\nRemember to modify these examples or create new ones to fit the current WAF's blocked keywords and ensure the payload is fundamentally different from previous attempts."
+        
+        print(f"[DEBUG] RAG Context being passed to LLM:\n---\n{rag_context if rag_context else 'No relevant RAG examples found.'}\n---")
+
+        # Simplified prompt construction
         user_message_content = (
-            "You are a WAF penetration testing expert. Your goal is to craft a SQL injection payload that bypasses the target WAF.\n\n"
-            "**Analysis of Target WAF:**\n"
-            "- A generic WAF is present.\n"
-            f"- Probing shows that the WAF **STRICTLY BLOCKS** payloads containing these SQL keywords: {blocked_keywords}.\n"
-            f"{current_failed_attempts_prompt}\n\n"
-            "**Your New Goal:**\n"
-            "Generate a single, effective SQL injection payload. This payload **MUST NOT** contain any of the following keywords: "
-            f"{blocked_keywords}. It must also be **fundamentally different** from any previously failed payloads.\n\n"
-            "Write the final payload on a new line, prefixed with \"Payload:\". **The Payload line MUST ONLY contain the payload itself, with no additional text or reasoning.**\n"
-            "**FINAL CHECK:** Before outputting, ensure the payload strictly avoids all blocked keywords and is syntactically valid for SQL injection.\n"
+            f"Generate a single, effective MySQL SQL injection payload.\n"
+            f"The payload MUST NOT contain any of the following keywords: {blocked_keywords}.\n"
+            "Output only the payload itself, with no other text or explanation."
         )
 
         prompt = (
-            "<|begin_of_text|>"
             "<|system|>\n"
-            "You are a helpful AI assistant specialized in WAF penetration testing. Your task is to generate SQL injection payloads and reasoning based on the provided instructions and WAF analysis.<|end|>\n"
+            "You are a helpful AI assistant.<|end|>\n"
             "<|user|>\n"
             f"{user_message_content.strip()}<|end|>\n"
             "<|assistant|>\n"
+            "Payload: "
         )
         print(f"[Tool] Generation prompt (Retry {retry_count + 1}/{MAX_GENERATION_RETRIES}):\n{prompt}")
 
-        inputs = tok(prompt, return_tensors='pt').to(model.device)
+        inputs = tokenizer(prompt, return_tensors='pt').to(model.device)
         with torch.no_grad():
-            out = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.8, top_p=0.9, pad_token_id=tok.eos_token_id)
-        text = tok.decode(out[0], skip_special_tokens=True)
+            out = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.7, top_p=0.9, pad_token_id=tokenizer.eos_token_id)
+        text = tokenizer.decode(out[0], skip_special_tokens=True)
 
         try:
-            # Extract only the assistant's response part for Phi-3
-            assistant_response_start = text.rfind("<|assistant|>")
+            # Extract only the assistant's response part
+            assistant_response_start = text.rfind("Payload: ")
             if assistant_response_start != -1:
-                text = text[assistant_response_start + len("<|assistant|>"):].strip()
-            
-            # Check if the model echoed the prompt instructions, which might not include "Payload:"
-            if "Payload:" not in text and any(rule in text for rule in ["Think step-by-step", "CRITICAL: Review the `blocked_keywords`"]):
-                print("[Tool] WARNING: Model echoed prompt instructions instead of generating payload. Retrying.")
-                continue # Retry generation
-            
-            payload = text.split("Payload:")[-1].strip().splitlines()[0].strip()
-            if not payload: # If payload is empty after splitting
+                payload = text[assistant_response_start + len("Payload: "):].strip().splitlines()[0].strip()
+            else:
+                # Fallback if "Payload: " is not found
+                assistant_response_start = text.rfind("<|assistant|>")
+                if assistant_response_start != -1:
+                    payload = text[assistant_response_start + len("<|assistant|>"):].strip().splitlines()[0].strip()
+                else:
+                    payload = "" # Could not parse
+
+            if not payload: # If payload is empty after parsing
                 print("[Tool] ERROR: Generation failed to produce a valid payload (empty after parsing). Retrying.")
                 continue # Retry generation
 
@@ -261,7 +293,7 @@ async def run_testing(payload: str) -> dict:
             r"DB_ERROR",
             r"SQL Error",
             r"Fatal error: Uncaught PDOException",
-            r"\[SQLSTATE",
+            r"\{SQLSTATE",
         ]
         
         response_text = r.text.lower() # Convert to lower for case-insensitive search
@@ -319,7 +351,7 @@ def decide_next_step(state: dict) -> str:
 
 class Orchestrator:
     def __init__(self, target_url: str):
-        self.state = {"target_url": target_url, "waf_info": None, "probe_results": None, "attack_history": []}
+        self.state = {"target_url": target_url, "waf_info": None, "probe_results": None, "dbms_type": "MySQL", "attack_history": []}
         self.tools = {
             "run_wafw00f": self.tool_run_wafw00f,
             "run_probing": self.tool_run_probing,
@@ -330,7 +362,7 @@ class Orchestrator:
     def tool_run_wafw00f(self): self.state["waf_info"] = run_wafw00f(self.state["target_url"])
     def tool_run_probing(self): self.state["probe_results"] = asyncio.run(run_probing())
     def tool_run_generation(self):
-        new_payload = run_generation(self.state["probe_results"], self.state["attack_history"])
+        new_payload = run_generation(self.state["probe_results"], self.state["attack_history"], self.state["dbms_type"])
         self.state["attack_history"].append({"payload": new_payload, "result": "not_tested"})
     def tool_run_testing(self):
         for i, attack in enumerate(self.state["attack_history"]):
