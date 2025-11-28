@@ -1,0 +1,8 @@
+{"payload": "{ASPSCRIPT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01976118300080998}
+{"payload": "{ASPSCRIPT}.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017131271997641306}
+{"payload": "{ASPSCRIPT};", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012349810000159778}
+{"payload": "{ASPSCRIPT};.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011850593997223768}
+{"payload": "{ASPSCRIPT}%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038063289975980297}
+{"payload": "{ASPSCRIPT}%00.{EXT}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004976853000698611}
+{"payload": "{ASPSCRIPT}::data%00.", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004322027998568956}
+{"payload": "{ASPSCRIPT}::data%00.{EXT}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036359530058689415}

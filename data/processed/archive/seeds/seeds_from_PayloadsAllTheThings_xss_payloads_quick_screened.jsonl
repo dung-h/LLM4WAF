@@ -1,0 +1,39 @@
+{"payload": "javascript:alert(1)//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009359527000924572}
+{"payload": "<svg/onload=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0053228049946483225}
+{"payload": "<img onload=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004407986009027809}
+{"payload": "<img src=x onerror=prompt(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0040196940099122}
+{"payload": "<a href=\"javascript:alert(1)\" onmouseover=alert(1)>INJECTX HOVER</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005153043995960616}
+{"payload": "onmouseover=\"document.cookie=true;\">//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004247742996085435}
+{"payload": "alert(1)>//INJECTX", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.016480967999086715}
+{"payload": "<h1>INJECTX</h1>", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01645984800416045}
+{"payload": "<img src=x onload=prompt(1) onerror=alert(1) onmouseover=prompt(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006034849007846788}
+{"payload": "<svg><script>/<@/>alert(1)</script>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005220317994826473}
+{"payload": "<svg/onload=alert(/INJECTX/)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004216208006255329}
+{"payload": "<iframe/onload=alert(/INJECTX/)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004377941993880086}
+{"payload": "<svg/onload=alert`INJECTX`>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005018304000259377}
+{"payload": "<svg/onload=alert(/INJECTX/)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0046096500009298325}
+{"payload": "<svg/onload=alert(`INJECTX`)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004276216990547255}
+{"payload": "}alert(/INJECTX/);{//", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01137066600495018}
+{"payload": "<h1/onclick=alert(1)>a//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003923659009160474}
+{"payload": "<svg/onload=alert(/INJECTX/)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00410843500867486}
+{"payload": "<p/onclick=alert(/INJECTX/)>a", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0058451340009924024}
+{"payload": "<svg/onload=alert`INJECTX`>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005274317998555489}
+{"payload": "<svg/onload=alert(/INJECTX/)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004442247998667881}
+{"payload": "<svg/onload=alert(`INJECTX`)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005516111996257678}
+{"payload": "<video><source onerror=\"javascript:alert(1)\">//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005047015001764521}
+{"payload": "<video onerror=\"javascript:alert(1)\"><source>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00460463399940636}
+{"payload": "<audio onerror=\"javascript:alert(1)\"><source>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004479327995795757}
+{"payload": "<input autofocus onfocus=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004501230010646395}
+{"payload": "<select autofocus onfocus=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003716796010849066}
+{"payload": "<textarea autofocus onfocus=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035621489951154217}
+{"payload": "<keygen autofocus onfocus=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036472890060395002}
+{"payload": "<button form=test onformchange=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003539167999406345}
+{"payload": "<form><button formaction=\"javascript:alert(1)\">//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037814140086993575}
+{"payload": "<svg onload=(alert)(1) >//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003471680000075139}
+{"payload": "<script>$=1,alert($)</script>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003870506989187561}
+{"payload": "<!--<img src=\"--><img src=x onerror=alert(1)//\">//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036007879971293733}
+{"payload": "<img/src='x'onerror=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036143030010862276}
+{"payload": "<marguee/onstart=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039064759912434965}
+{"payload": "<script>alert(1)//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037375310057541355}
+{"payload": "<script>alert(1)<!--INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003765876012039371}
+{"payload": "<marquee loop=1 width=0 onfinish=alert(1)>//INJECTX", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004082654006197117}

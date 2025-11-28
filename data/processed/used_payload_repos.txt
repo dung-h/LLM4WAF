@@ -1,0 +1,7 @@
+https://github.com/payloadbox/sql-injection-payload-list.git
+https://github.com/payloadbox/xss-payload-list.git
+https://github.com/humblelad/Awesome-XSS-Payloads.git
+https://github.com/swisskyrepo/PayloadsAllTheThings
+https://github.com/fuzzdb-project/fuzzdb
+https://github.com/danielmiessler/SecLists
+https://github.com/1N3/IntruderPayloads

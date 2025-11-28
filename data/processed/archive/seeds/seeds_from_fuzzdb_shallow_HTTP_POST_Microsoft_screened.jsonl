@@ -1,0 +1,2 @@
+{"payload": "# Interesting Microsoft IIS files which require being scanned for with the HTTP POST verb", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01904508601000998}
+{"payload": "/msadc/msadcs.dll/VbBusObj.VbBusObjCls.GetMachineName", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016049504993134178}

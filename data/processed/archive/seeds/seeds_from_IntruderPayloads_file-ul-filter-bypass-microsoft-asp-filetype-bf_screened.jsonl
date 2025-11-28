@@ -1,0 +1,9 @@
+{"payload": "# {ASPSCRIPT}gets regex replaced with the shell or other file you are trying to upload, {EXT} should be brute-forced with payloads from discovery/filename-bruteforce/file-extensions/, since some file upload types may be allowed that are not listed.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018364807998295873}
+{"payload": "{ASPSCRIPT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014438261001487263}
+{"payload": "{ASPSCRIPT}.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014475269999820739}
+{"payload": "{ASPSCRIPT};", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014066663003177382}
+{"payload": "{ASPSCRIPT};.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014094982005190104}
+{"payload": "{ASPSCRIPT}%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006430585999623872}
+{"payload": "{ASPSCRIPT}%00.{EXT}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005334397996193729}
+{"payload": "{ASPSCRIPT}::data%00.", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004742522010928951}
+{"payload": "{ASPSCRIPT}::data%00.{EXT}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007108482008334249}

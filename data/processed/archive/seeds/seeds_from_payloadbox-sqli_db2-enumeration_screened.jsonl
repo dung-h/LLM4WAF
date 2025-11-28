@@ -1,0 +1,12 @@
+{"payload": "select versionnumber, version_timestamp from sysibm.sysversions;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008385360997635871}
+{"payload": "select user from sysibm.sysdummy1;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005019051997805946}
+{"payload": "select session_user from sysibm.sysdummy1;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01708543898712378}
+{"payload": "select system_user from sysibm.sysdummy1;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01504893800301943}
+{"payload": "select current server from sysibm.sysdummy1;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005822819002787583}
+{"payload": "select name from sysibm.systables;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004790361010236666}
+{"payload": "select grantee from syscat.dbauth;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005442135996418074}
+{"payload": "select * from syscat.tabauth;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015778810004121624}
+{"payload": "select * from syscat.dbauth where grantee = current user;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00570197899651248}
+{"payload": "select * from syscat.tabauth where grantee = current user;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004618678009137511}
+{"payload": "select name, tbname, coltype from sysibm.syscolumns;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003694705999805592}
+{"payload": "SELECT schemaname FROM syscat.schemata;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042297729960409924}

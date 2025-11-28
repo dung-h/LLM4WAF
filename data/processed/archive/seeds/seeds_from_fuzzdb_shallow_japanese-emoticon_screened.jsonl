@@ -1,0 +1,11 @@
+{"payload": "ヽ༼ຈل͜ຈ༽ﾉ ヽ༼ຈل͜ຈ༽ﾉ", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006210064995684661}
+{"payload": "(｡◕ ∀ ◕｡)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0132669349986827}
+{"payload": "｀ｨ(´∀｀∩", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014080457003728952}
+{"payload": "__ﾛ(,_,*)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013796061000903137}
+{"payload": "・(￣∀￣)・:*:", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015822359004232567}
+{"payload": "ﾟ･✿ヾ╲(｡◕‿◕｡)╱✿･ﾟ", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013759975998254959}
+{"payload": ",。・:*:・゜’( ☻ ω ☻ )。・:*:・゜’", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012737486002151854}
+{"payload": "(╯°□°）╯︵ ┻━┻)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012432514995452948}
+{"payload": "(ﾉಥ益ಥ）ﾉ﻿ ┻━┻", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003873081994242966}
+{"payload": "┬─┬ノ( º _ ºノ)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013540841995563824}
+{"payload": "( ͡° ͜ʖ ͡°)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01642225999967195}

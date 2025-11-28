@@ -1,0 +1,69 @@
+{"payload": "php://input", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009071292006410658}
+{"payload": "C:\\boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00709680600266438}
+{"payload": "C:\\WINDOWS\\win.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01860273898637388}
+{"payload": "C:\\WINDOWS\\php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00518872300744988}
+{"payload": "C:\\WINDOWS\\System32\\Config\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006191630003741011}
+{"payload": "C:\\WINNT\\php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006409006993635558}
+{"payload": "C:\\xampp\\phpMyAdmin\\config.inc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01592240500031039}
+{"payload": "C:\\xampp\\phpMyAdmin\\phpinfo.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017882389991427772}
+{"payload": "C:\\xampp\\phpmyadmin\\config.inc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01690532900101971}
+{"payload": "C:\\xampp\\phpmyadmin\\phpinfo.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016045010997913778}
+{"payload": "C:\\xampp\\phpmyadmin\\config.inc.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00469351900392212}
+{"payload": "C:\\xampp\\phpMyAdmin\\config.inc.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00533482400351204}
+{"payload": "C:\\xampp\\apache\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052104140049777925}
+{"payload": "C:\\xampp\\FileZillaFTP\\FileZilla Server.xml", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005253146999166347}
+{"payload": "C:\\xampp\\MercuryMail\\mercury.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006580735003808513}
+{"payload": "C:\\mysql\\bin\\my.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006957923993468285}
+{"payload": "C:\\xampp\\php\\php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006786755999200977}
+{"payload": "C:\\xampp\\phpMyAdmin\\config.inc.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068458949972409755}
+{"payload": "C:\\xampp\\tomcat\\conf\\tomcat-users.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015399958996567875}
+{"payload": "C:\\xampp\\tomcat\\conf\\web.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015569912997307256}
+{"payload": "C:\\xampp\\sendmail\\sendmail.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006700156998704188}
+{"payload": "C:\\xampp\\webalizer\\webalizer.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007010631001321599}
+{"payload": "C:\\xampp\\webdav\\webdav.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017895355995278805}
+{"payload": "C:\\xampp\\apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005584938000538386}
+{"payload": "C:\\xampp\\apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005264879000606015}
+{"payload": "C:\\xampp\\FileZillaFTP\\Logs", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017357668999466114}
+{"payload": "C:\\xampp\\FileZillaFTP\\Logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006135767005616799}
+{"payload": "C:\\xampp\\FileZillaFTP\\Logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005203549997531809}
+{"payload": "C:\\xampp\\MercuryMail\\LOGS\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004885499001829885}
+{"payload": "C:\\xampp\\MercuryMail\\LOGS\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007071701998938806}
+{"payload": "C:\\xampp\\mysql\\data\\mysql.err", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005720611996366642}
+{"payload": "C:\\xampp\\sendmail\\sendmail.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058408039913047105}
+{"payload": "C:\\apache\\log\\error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01742844600812532}
+{"payload": "C:\\apache\\log\\access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014475418007350527}
+{"payload": "C:\\apache\\log\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01417315800790675}
+{"payload": "C:\\apache\\log\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01440389099298045}
+{"payload": "C:\\apache2\\log\\error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02006388000154402}
+{"payload": "C:\\apache2\\log\\access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019017846992937848}
+{"payload": "C:\\apache2\\log\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01448593100940343}
+{"payload": "C:\\apache2\\log\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016994791993056424}
+{"payload": "C:\\log\\error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.029096056998241693}
+{"payload": "C:\\log\\access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01821627300523687}
+{"payload": "C:\\log\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01609335398825351}
+{"payload": "C:\\log\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016376366998883896}
+{"payload": "C:\\apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007038598996587098}
+{"payload": "C:\\apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007226980000268668}
+{"payload": "C:\\apache\\logs\\error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007708385004661977}
+{"payload": "C:\\apache\\logs\\access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007203923989436589}
+{"payload": "C:\\apache2\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0077272530033951625}
+{"payload": "C:\\apache2\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006545005002408288}
+{"payload": "C:\\apache2\\logs\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01838600100018084}
+{"payload": "C:\\apache2\\logs\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015120380994630978}
+{"payload": "C:\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059834839921677485}
+{"payload": "C:\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00842287199338898}
+{"payload": "C:\\logs\\error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056513440067647025}
+{"payload": "C:\\logs\\access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062587739957962185}
+{"payload": "C:\\log\\httpd\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015620869991835207}
+{"payload": "C:\\log\\httpd\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015665301005356014}
+{"payload": "C:\\logs\\httpd\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01558082300471142}
+{"payload": "C:\\logs\\httpd\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01691633199516218}
+{"payload": "C:\\opt\\xampp\\logs\\access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007467843999620527}
+{"payload": "C:\\opt\\xampp\\logs\\error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006961746999877505}
+{"payload": "C:\\opt\\xampp\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006475961999967694}
+{"payload": "C:\\opt\\xampp\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006790357991121709}
+{"payload": "C:\\Program Files\\Apache Group\\Apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006177709001349285}
+{"payload": "C:\\Program Files\\Apache Group\\Apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005859244003659114}
+{"payload": "C:\\Program Files\\Apache Group\\Apache\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006589780998183414}
+{"payload": "C:\\Program Files\\Apache Group\\Apache2\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00525587699667085}
+{"payload": "C:\\Program Files\\xampp\\apache\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004665950997150503}

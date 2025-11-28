@@ -1,0 +1,29 @@
+{"payload": "[", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.02089399000396952}
+{"payload": "\"{\\\"payload\\\":\\\"<script>alert(1)</script>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007745141003397293}
+{"payload": "\"{\\\"user\\\":\\\"<img src=x onerror=alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005211875992245041}
+{"payload": "\"{\\\"data\\\":\\\"<svg onload=alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004336856000008993}
+{"payload": "\"{\\\"info\\\":\\\"<iframe src=javascript:alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005288493994157761}
+{"payload": "\"{\\\"test\\\":\\\"<object data=javascript:alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005431008001323789}
+{"payload": "\"{\\\"input\\\":\\\"<a href=javascript:alert(1)>Click</a>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0053325070039136335}
+{"payload": "\"{\\\"xss\\\":\\\"<video><source onerror=alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007409871992422268}
+{"payload": "\"{\\\"alert\\\":\\\"<marquee onstart=alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006460985008743592}
+{"payload": "\"{\\\"hacker\\\":\\\"<details ontoggle=alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006566240001120605}
+{"payload": "\"{\\\"exploit\\\":\\\"<img src=1 onerror='alert(document.domain)'>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0052196820033714175}
+{"payload": "\"{\\\"attack\\\":\\\"<link rel=stylesheet href=javascript:alert(1)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0061700469959760085}
+{"payload": "\"{\\\"vuln\\\":\\\"<style>@import'javascript:alert(1)';</style>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006955346005270258}
+{"payload": "\"{\\\"event\\\":\\\"<img src=x:alert(1) onerror=eval(src)>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005666265991749242}
+{"payload": "\"{\\\"payload\\\":\\\"<img src=\\\"#\\\" onerror=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005461130000185221}
+{"payload": "\"{\\\"vector\\\":\\\"<svg><script>alert('XSS')</script></svg>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007498520993976854}
+{"payload": "\"{\\\"danger\\\":\\\"<img src=x onerror='this.src=\"https://evil.com/xss\"'>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005235132994130254}
+{"payload": "\"{\\\"exploit\\\":\\\"<img src=1 href=1 onerror=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004800499998964369}
+{"payload": "\"{\\\"alert\\\":\\\"<a href=javascript:alert('XSS')>Click me</a>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005372620988055132}
+{"payload": "\"{\\\"attack\\\":\\\"<iframe src=javascript:alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005404616997111589}
+{"payload": "\"{\\\"trigger\\\":\\\"<img src onerror=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006093984004110098}
+{"payload": "\"{\\\"bypass\\\":\\\"<svg onload=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006738320007571019}
+{"payload": "\"{\\\"vulnerability\\\":\\\"<object data=javascript:alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005412170008639805}
+{"payload": "\"{\\\"malicious\\\":\\\"<video><source onerror=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006017737003276125}
+{"payload": "\"{\\\"xss_test\\\":\\\"<a href='javascript:alert(\\\"XSS\\\")'>Click here</a>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006742386991390958}
+{"payload": "\"{\\\"exploit_test\\\":\\\"<details ontoggle=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004864889997406863}
+{"payload": "\"{\\\"script_test\\\":\\\"<marquee onstart=alert('XSS')>\\\"}\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005870773005881347}
+{"payload": "\"{\\\"payload_300\\\":\\\"<img src=1 onerror='alert(document.domain)'>\\\"}\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005840095007442869}
+{"payload": "]", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015281929998309352}

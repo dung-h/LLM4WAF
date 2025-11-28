@@ -1,0 +1,97 @@
+{"payload": "&lt;/font&gt;&lt;font face=\"Arial\" size=2&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01870376399892848}
+{"payload": "A syntax error has occurred", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01473190399701707}
+{"payload": "Active Server Pages error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015605053995386697}
+{"payload": "ADODB.Field error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013476609005010687}
+{"payload": "An illegal character has been found in the statement", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012365143003989942}
+{"payload": "An unexpected token \"END-OF-STATEMENT\" was found", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011278081001364626}
+{"payload": "ASP.NET is configured to show verbose error messages", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012913230995764025}
+{"payload": "ASP.NET_SessionId", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012118621991248801}
+{"payload": "Can't connect to local", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012789974993211217}
+{"payload": "CLI Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01258443399274256}
+{"payload": "Custom Error Message", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014512230991385877}
+{"payload": "data source=", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01250824700400699}
+{"payload": "database error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010421454004244879}
+{"payload": "DB2 Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0104437560075894}
+{"payload": "DB2 Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011897742995643057}
+{"payload": "DB2 ODBC", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01051671699678991}
+{"payload": "detected an internal error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010891738013015129}
+{"payload": "detected an internal error [IBM][CLI Driver][DB2/6000]", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013145251999958418}
+{"payload": "Died at", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014276233006967232}
+{"payload": "Disallowed Parent Path", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01287543898797594}
+{"payload": "error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011480621993541718}
+{"payload": "Error converting data type varchar to numeric", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013452615006826818}
+{"payload": "Error Diagnostic Information", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013523597997846082}
+{"payload": "Error Message : Error loading required libraries.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013164743999368511}
+{"payload": "Error Report", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012763166989316233}
+{"payload": "Fatal error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013526773007470183}
+{"payload": "include_path", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012326989002758637}
+{"payload": "Incorrect syntax near", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012623789007193409}
+{"payload": "Index of", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011756635009078309}
+{"payload": "Internal Server Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0105132769967895}
+{"payload": "Invalid Path Character", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01044087800255511}
+{"payload": "Invalid procedure call or argument", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010540299001149833}
+{"payload": "invalid query", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01525263900111895}
+{"payload": "Invision Power Board Database Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013620658006402664}
+{"payload": "is not allowed to access", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011759690009057522}
+{"payload": "JDBC Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010068849005619995}
+{"payload": "JDBC Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010860824011615478}
+{"payload": "JDBC MySQL", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010030930003267713}
+{"payload": "JDBC Oracle", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010267756995745003}
+{"payload": "JDBC SQL", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01006989399320446}
+{"payload": "line", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010603870992781594}
+{"payload": "Microsoft OLE DB Provider for ODBC Drivers", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009951297994120978}
+{"payload": "Microsoft VBScript compilation error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013224112000898458}
+{"payload": "Microsoft VBScript error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014010653991135769}
+{"payload": "missing expression", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014726870998856612}
+{"payload": "mix of collations", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01361378500587307}
+{"payload": "MySQL Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014440778992138803}
+{"payload": "mysql error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012563764001242816}
+{"payload": "MySQL Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014188778994139284}
+{"payload": "mySQL error with query", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01299986700178124}
+{"payload": "MySQL ODBC", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011156576001667418}
+{"payload": "ODBC DB2", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010821264004334807}
+{"payload": "ODBC Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010162106991629116}
+{"payload": "ODBC Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009759975990164094}
+{"payload": "ODBC Microsoft Access", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010134419004316442}
+{"payload": "ODBC Oracle", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012916344989207573}
+{"payload": "ODBC SQL", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015842053995584138}
+{"payload": "ODBC SQL Server", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012957851999090053}
+{"payload": "OLE/DB provider returned message", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012362822992145084}
+{"payload": "on line", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011491140990983695}
+{"payload": "on MySQL result index", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011557596997590736}
+{"payload": "ORA-0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010926646005827934}
+{"payload": "ORA-1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013761948997853324}
+{"payload": "Oracle DB2", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013048955996055156}
+{"payload": "Oracle Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011050728004192933}
+{"payload": "Oracle Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010035379993496463}
+{"payload": "Oracle ODBC", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.00991140099358745}
+{"payload": "Parent Directory", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009851155991782434}
+{"payload": "Permission denied: 'GetObject'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010663594992365688}
+{"payload": "PHP Error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010850285005290061}
+{"payload": "PHP Parse error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017371314999763854}
+{"payload": "PHP Warning", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012686108995694667}
+{"payload": "PostgreSQL query failed: ERROR: parser: parse error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0102327070053434}
+{"payload": "server at", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009817451995331794}
+{"payload": "server object error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010304444993380457}
+{"payload": "SQL command not properly ended", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010901532994466834}
+{"payload": "SQL Server Driver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011116776004200801}
+{"payload": "SQL Server Driver][SQL Server", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012535670000943355}
+{"payload": "SQLException", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014235895010642707}
+{"payload": "supplied argument is not a valid MySQL result resource", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014132205003988929}
+{"payload": "Supplied argument is not a valid PostgreSQL result", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012796481998520903}
+{"payload": "Syntax error in query expression", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010141038001165725}
+{"payload": "The error occurred in", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013659522999660112}
+{"payload": "The script whose uid is", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015163058997131884}
+{"payload": "Type mismatch", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01732237299438566}
+{"payload": "Unable to jump to row", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013960672004031949}
+{"payload": "Unclosed quotation mark before the character string", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014920479996362701}
+{"payload": "unexpected end of SQL command", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014038875990081578}
+{"payload": "unexpected error", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01218687099753879}
+{"payload": "Unterminated string constant", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010131814997293986}
+{"payload": "Warning: Cannot modify header information - headers already sent", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011202551002497785}
+{"payload": "Warning: mysql_query", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013270531999296509}
+{"payload": "Warning: mysql_query()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004719971999293193}
+{"payload": "Warning: pg_connect", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012524869001936167}
+{"payload": "Warning: pg_connect(): Unable to connect to PostgreSQL server: FATAL", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004139349999604747}
+{"payload": "Warning: Supplied argument is not a valid File-Handle resource in", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010979491999023594}
+{"payload": "You have an error in your SQL syntax near", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011697851005010307}

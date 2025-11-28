@@ -1,0 +1,19 @@
+{"payload": "select version();", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00816265599860344}
+{"payload": "select current_database();", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004226688004564494}
+{"payload": "select current_user;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015481326001463458}
+{"payload": "select session_user;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015184636999038048}
+{"payload": "select current_setting('log_connections');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006335547994240187}
+{"payload": "select current_setting('log_statement');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006902378998347558}
+{"payload": "select current_setting('port');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007126661002985202}
+{"payload": "select current_setting('password_encryption');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066478799999458715}
+{"payload": "select current_setting('krb_server_keyfile');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006725472994730808}
+{"payload": "select current_setting('virtual_host');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006706557993311435}
+{"payload": "select current_setting('port');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005600403004791588}
+{"payload": "select current_setting('config_file');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055217820045072585}
+{"payload": "select current_setting('hba_file');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006985867992625572}
+{"payload": "select current_setting('data_directory');", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005744459995185025}
+{"payload": "select * from pg_shadow;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017093260990804993}
+{"payload": "select * from pg_group;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016721394000342116}
+{"payload": "create table myfile (input TEXT);", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01751962299749721}
+{"payload": "copy myfile from '/etc/passwd';", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007665388999157585}
+{"payload": "select * from myfile;copy myfile to /tmp/test;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006816465000156313}

@@ -1,0 +1,13 @@
+{"payload": "XSS", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015356571006122977}
+{"payload": "INJECTX", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01407534499594476}
+{"payload": "1111111", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01289814300253056}
+{"payload": "XXXXXXX", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012196992000099272}
+{"payload": "alert(", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.011841699000797234}
+{"payload": "prompt(", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01326989800145384}
+{"payload": "onload=", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012236488008056767}
+{"payload": "onerror=", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012427746987668797}
+{"payload": "onmouseover=", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012905544994282536}
+{"payload": "location.href=", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012921477988129482}
+{"payload": "document.cookie(", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005193139993934892}
+{"payload": "crowdshield", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012523108991445042}
+{"payload": "<script", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004136376999667846}

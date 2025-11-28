@@ -1,5 +1,51 @@
-model_name: "deepseek-ai/deepseek-llm-7b-base"
-adapter_path: "experiments/deepseek_7b_base_adapter/adapter"
+# Model and tokenizer configuration
+model_name: "microsoft/Phi-3-mini-4k-instruct"
+tokenizer_name: "microsoft/Phi-3-mini-4k-instruct"
+adapter_path: null # No adapter for SFT
+
+# Dataset configuration
+train_file: "data/processed/sft_train.jsonl"
+text_fields: ["text"]
+prompt_format_type: "phi3_instruct"
+
+# Training configuration
+output_dir: "experiments/sft_phi3_mini_lora_adapter"
+num_train_epochs: 1
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-4
+logging_steps: 10
+save_steps: 50
+save_total_limit: 2
+
+# LoRA configuration
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules:
+  - "qkv_proj"
+  - "o_proj"
+  - "gate_up_proj"
+  - "down_proj"
+
+# Quantization configuration
+use_4bit_quantization: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_compute_dtype: "bfloat16"
+
+# Other configurations
+max_seq_length: 512
+gradient_checkpointing: true
+use_flash_attention_2: true
+trust_remote_code: true
+use_fast_tokenizer: true
+disable_tqdm: false
+seed: 42
+report_to: "none"
+optim: "paged_adamw_8bit"
+
+train_path: "processed/advanced_sqli_finetune_data.jsonl"
 # Add other model-specific configurations if necessary
 # For example, if you want to override some default generation parameters
 # generation_config:

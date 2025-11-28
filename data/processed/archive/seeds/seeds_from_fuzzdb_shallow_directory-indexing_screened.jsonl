@@ -1,0 +1,7 @@
+{"payload": ";dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022436054001445882}
+{"payload": "`dir`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.021293304998835083}
+{"payload": "|dir|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01669827000296209}
+{"payload": "|dir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014973632001783699}
+{"payload": "/%3f.jsp", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014419438994082157}
+{"payload": "?M=D", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015492858001380228}
+{"payload": "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014360997003677767}

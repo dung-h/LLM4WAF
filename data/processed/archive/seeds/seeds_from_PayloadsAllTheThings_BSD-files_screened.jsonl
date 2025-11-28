@@ -1,0 +1,13 @@
+{"payload": "/usr/pkg/etc/httpd/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009236792000592686}
+{"payload": "/usr/local/etc/apache22/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003984226001193747}
+{"payload": "/usr/local/etc/apache2/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029218619893072173}
+{"payload": "/var/www/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003005662001669407}
+{"payload": "/var/www/logs/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033991499949479476}
+{"payload": "/var/www/logs/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004271682002581656}
+{"payload": "/etc/apache2/httpd2.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004157254996243864}
+{"payload": "/var/apache2/logs/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004474898989428766}
+{"payload": "/var/apache2/logs/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004761486008646898}
+{"payload": "/var/log/httpd-error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016115973005071282}
+{"payload": "/var/log/httpd-access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015442179996171035}
+{"payload": "/var/log/httpd/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004789275000803173}
+{"payload": "/var/log/httpd/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005765904003055766}

@@ -1,0 +1,8 @@
+{"payload": "'; if not(substring((select @@version),25,1) <> 0) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005966771001112647}
+{"payload": "'; if not(substring((select @@version),25,1) <> 5) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036206290023983456}
+{"payload": "'; if not(substring((select @@version),25,1) <> 8) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004148891996010207}
+{"payload": "'; if not(substring((select @@version),24,1) <> 1) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004483013995923102}
+{"payload": "'; if not(select system_user) <> 'sa' waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004514193002250977}
+{"payload": "'; if is_srvrolemember('sysadmin') > 0 waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037849340005777776}
+{"payload": "'; if not((select serverproperty('isintegratedsecurityonly')) <> 1) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003938572997867595}
+{"payload": "'; if not((select serverproperty('isintegratedsecurityonly')) <> 0) waitfor delay '0:0:2' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004554346000077203}

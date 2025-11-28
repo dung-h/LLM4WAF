@@ -1,0 +1,11 @@
+{"payload": "'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022054394001315814}
+{"payload": "\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016354001993022393}
+{"payload": "''", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015622054001141805}
+{"payload": "\"\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01802035300352145}
+{"payload": "'\"'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015001695996033959}
+{"payload": "\"''''\"'\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01395926000259351}
+{"payload": "\"'\"'\"''''\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012565386001369916}
+{"payload": "<foo val=“bar” />", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017426958002033643}
+{"payload": "<foo val=“bar” />", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01538622999942163}
+{"payload": "<foo val=”bar“ />", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014524837002682034}
+{"payload": "<foo val=`bar' />", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01377808400138747}

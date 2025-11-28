@@ -1,0 +1,320 @@
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009594916002242826}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005974016996333376}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044859199988422915}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005239867998170666}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006017181003699079}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004131115005293395}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003368315999978222}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004763241995533463}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005066051999165211}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005023609999625478}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005229028000030667}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005328649000148289}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004972882998117711}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00538422600220656}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005670791004376952}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004283499998564366}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039987779964576475}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00413642599596642}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003773753996938467}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035020040013478138}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002861397006199695}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003051727995625697}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037365919997682795}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003288585998234339}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032845890018506907}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00303039800201077}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003933052001229953}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007530757000495214}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005011858003854286}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00510336799925426}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00638814500416629}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005060320007032715}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004547860000457149}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005244367006525863}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004672111004765611}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005200591003813315}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005809841000882443}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004261891001078766}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004674055002396926}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006217071997525636}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00398261899681529}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006809411002905108}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006176981005410198}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004269942997780163}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004427849002240691}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004281996996724047}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005190492003748659}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005107041004521307}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004951531998813152}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004319059000408743}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006890860000567045}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005144572998688091}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005703137998352759}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053806750001967885}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049113280038000084}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006608752999454737}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004776803994900547}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004389304005599115}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058004720049211755}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039604649937245995}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032234109967248514}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032207399999606423}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004415430004883092}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004043400003865827}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034409270010655746}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003183733999321703}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031146949986577965}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035130769974784926}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003116988002147991}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031779889977769926}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00343477899878053}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005409088997112121}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036997279967181385}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030178129964042455}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036159779992885888}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040236570057459176}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033347859935020097}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032301929968525656}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034079160031978972}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003195206998498179}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00392039700091118}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004597120001562871}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004099489997315686}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034819590000552125}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005072034997283481}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004375717995571904}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004423400001542177}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004429370004800148}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042831829996430315}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003979578003054485}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037707070005126297}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003973661005147733}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005100178997963667}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040954650030471385}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004002385998319369}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030904070008546114}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004099140001926571}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036992599998484366}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003363240997714456}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033770290028769523}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003836475996649824}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044583159979083575}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032052160022431053}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003189374001522083}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031897660010145046}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003236656993976794}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037468119990080595}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036013959979754873}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032257809943985194}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031792159934411757}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005607982995570637}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044280750007601455}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037571509965346195}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004017657003714703}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006219130998943001}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047728450008435175}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004719574004411697}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006332249999104533}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043881219971808605}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004686387001129333}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004445242004294414}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005781138999736868}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004607752001902554}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068373050016816705}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055673520037089474}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004575432998535689}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005506301997229457}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004410624998854473}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004708803004177753}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005990297999233007}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004243503004545346}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004882446999545209}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455589600460371}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004859011998632923}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056113269965862855}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00620841899944935}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005518842001038138}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004317740000260528}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004366043998743407}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005542984006751794}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004663780993723776}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004138627999054734}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038821240013930947}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004789407998032402}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035744979977607727}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003854670998407528}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038224590025492944}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004264162002073135}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00411467399680987}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00496732000465272}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005044992001785431}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035743999978876673}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032831350035849027}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003777552003157325}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004907355003524572}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004592681994836312}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004002676003437955}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004437492003489751}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005536122000194155}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00487826900643995}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003567956999177113}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034751779967336915}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006237776004127227}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007033535002847202}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005269519999274053}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068456669978331774}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006492861000879202}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006353579999995418}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003517707998980768}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004121190999285318}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057654400006867945}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004328914998041}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005159082997124642}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004277266998542473}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00460290699993493}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003582452998671215}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003423248002945911}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003218621000996791}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035883759992429987}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006144525999843609}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004912545999104623}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004186271005892195}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006600699998671189}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005792165000457317}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052601810020860285}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048318799963453785}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004976374002580997}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005661884002620354}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005918397000641562}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004723142003058456}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004332112999691162}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006611363998672459}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00503333500091685}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006326337999780662}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005507761001354083}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005525265994947404}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004345999994256999}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058886429978883825}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004987600004824344}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004734191003080923}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006730520006385632}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00432014100078959}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003985642993939109}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006650185001490172}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005698925997421611}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004323936998844147}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065557609996176325}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005033855006331578}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039629660022910684}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005402021000918467}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00459134099946823}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00422531200456433}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004567728996335063}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006125529995188117}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004722559002402704}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004801971001143102}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055223590024979785}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043173509984626435}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035330079990671948}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032401030039181933}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00602489599987166}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004175020003458485}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004209316000924446}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005489240000315476}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004398347999085672}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004004278998763766}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003846539999358356}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004789831997186411}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038872099976288155}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036345860062283464}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004225496995786671}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006532988998515066}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004085756998392753}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003482592001091689}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004434968002897222}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004555649997200817}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037335870001697913}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046905349954613484}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0061863289956818335}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004221184004563838}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003591986998799257}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036150279993307777}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005454411999380682}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036358590004965663}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003976604995841626}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003548529995896388}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005194163997657597}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004288383999664802}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036191159961163066}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037186069966992363}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006839474001026247}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005265282998152543}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004930290000629611}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006791045998397749}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004886734997853637}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004626613001164515}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005880770993826445}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044556069988175295}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003972149999754038}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004429251006513368}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00466205200063996}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003632141997513827}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035598309987108223}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004615541001840029}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004239243004121818}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033274119996349327}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003165649002767168}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031682840053690597}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003546454005117994}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033219910037587397}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032464660034747794}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028656879949267022}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036913750009262003}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003732403005415108}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036228829994797707}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003620773000875488}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028175310071674176}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033243150028283708}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002980922996357549}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032613640069030225}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039059279952198267}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003697938002005685}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034314129952690564}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038342409970937297}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004352092000772245}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035298339935252443}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005637952002871316}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455915900238324}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037911870022071525}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004093684001418296}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004865488997893408}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003974111001298297}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038135319991852157}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031809029969736002}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003983561000495683}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004032103999634273}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034747149984468706}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041245620013796724}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042440239994903095}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036147360005998053}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003445269998337608}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004187774000456557}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004909290000796318}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004230672006087843}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037898900045547634}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036386430001584813}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003470087998721283}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003105101000983268}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003161620996252168}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029965260036988184}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028434420019038953}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028749280027113855}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029555029977927916}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0026869730063481256}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029629060009028763}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028032490008627065}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028813399985665455}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003037380003661383}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029425320026348345}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032499070002813824}

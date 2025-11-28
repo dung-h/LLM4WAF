@@ -1,0 +1,218 @@
+{"payload": "#Character check", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014631170997745357}
+{"payload": "!@$%^&*()_+=-[]{`}~\\|;':\"?/>.<,#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011948273997404613}
+{"payload": "#,<.>/?\":';|\\~}`{][-=+_)(*&^%$@!", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011840518011013046}
+{"payload": "~", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012881572009064257}
+{"payload": "!", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014123975997790694}
+{"payload": "@", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012668518000282347}
+{"payload": "#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02375171000312548}
+{"payload": "$", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013205338997067884}
+{"payload": "%", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0117370979860425}
+{"payload": "^", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012043195994920097}
+{"payload": "&", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0139603720017476}
+{"payload": "*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017926412998349406}
+{"payload": "(", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01619406501413323}
+{"payload": ")", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017259132000617683}
+{"payload": "_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01705686100467574}
+{"payload": "_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01628327599610202}
+{"payload": "+", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016206416999921203}
+{"payload": "=", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01656648999778554}
+{"payload": "{", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015408204009872861}
+{"payload": "}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014741783001227304}
+{"payload": "[", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014383675006683916}
+{"payload": "|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015261181004461832}
+{"payload": "\\", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015172540995990857}
+{"payload": "`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015463400006410666}
+{"payload": ",", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015779246998135932}
+{"payload": ".", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014440113998716697}
+{"payload": "/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015568691000225954}
+{"payload": "?", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015454123000381514}
+{"payload": ";", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017602289997739717}
+{"payload": ":", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01595804099633824}
+{"payload": "# Important SQLi checks", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015786770993145183}
+{"payload": "'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015435105000506155}
+{"payload": "''", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014275335997808725}
+{"payload": "\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014400599000509828}
+{"payload": "\"\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014701199004775845}
+{"payload": "<", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012721977007458918}
+{"payload": ">", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016022658994188532}
+{"payload": "#Logic checks", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011012851988198236}
+{"payload": "-1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01601470899186097}
+{"payload": "0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01737349000177346}
+{"payload": "1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01630785400629975}
+{"payload": "null", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016322601004503667}
+{"payload": "true", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016180348000489175}
+{"payload": "false", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014923662005458027}
+{"payload": "%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00503758700506296}
+{"payload": "%01", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014779354998609051}
+{"payload": "%70", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015228680000291206}
+{"payload": "%20", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01471757200488355}
+{"payload": "%00%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005391032012994401}
+{"payload": "NaN", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01524319700547494}
+{"payload": "#SQL polyglots", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01597687699540984}
+{"payload": "SLEEP(30) /*‘ or SLEEP(30) or ‘“ or SLEEP(30) or “*/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005918191993259825}
+{"payload": "SELECT 1,2,IF(SUBSTR(@@version,1,1)<5,BENCHMARK(15000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(15000000,SHA1(0xDE7EC71F1)),SLEEP(30)))OR'|\"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(15000000,SHA1(0xDE7EC71F1)),​SLEEP(30)))OR\"*/ FROM some_table WHERE ex = ample", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006727921994752251}
+{"payload": "#XSS polyglots", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01555089199973736}
+{"payload": "javascript://'/</title></style></textarea></script>--><p\" onclick=alert()//>*/alert()/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006326736009214073}
+{"payload": "javascript://'//\" --></textarea></style></script></title><b onclick= alert()//>*/alert()/*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0060459749947767705}
+{"payload": "';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//--></SCRIPT>\">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059522239898797125}
+{"payload": "#SQLi", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016396012986660935}
+{"payload": "'\"#||+>;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016224292005063035}
+{"payload": "'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057792820007307455}
+{"payload": "';", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015513702994212508}
+{"payload": "\"--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005857210999238305}
+{"payload": "\";", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015044650004711002}
+{"payload": "or 9=9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015433883992955089}
+{"payload": "or 9=9--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014497267999104224}
+{"payload": "or 9=9;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01705271399987396}
+{"payload": "or 9=9--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012561995012219995}
+{"payload": "or 9=9;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015427405000082217}
+{"payload": "' or 9=9--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006423118989914656}
+{"payload": "' or 9=9;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00505149298987817}
+{"payload": "\" or 9=9--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005153564998181537}
+{"payload": "\" or 9=9;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057774299930315465}
+{"payload": "' or '9'='9", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005620857002213597}
+{"payload": "' or '9'='9'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006225239994819276}
+{"payload": "' or '9'='9'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007334057008847594}
+{"payload": "' or '9'='9';", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006408016008208506}
+{"payload": "\" or \"9\"=\"9", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007789290000800975}
+{"payload": "\" or \"9\"=\"9\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006516520006698556}
+{"payload": "\" or \"9\"=\"9\"--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005444088994408958}
+{"payload": "\" or \"9\"=\"9\";", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042969579953933135}
+{"payload": ") or ('9'='9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01644253099220805}
+{"payload": ")) or ('9'='9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016817920011817478}
+{"payload": ") or (\"9\"=\"9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013820285996189341}
+{"payload": ")) or (\"9\"=\"9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015532394012552686}
+{"payload": "' or 9=9 or ''='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006132505004643463}
+{"payload": "\" or 9=9 or \"\"=\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005125641997437924}
+{"payload": "union all select @@version--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004076604993315414}
+{"payload": "(select @@fuzzstring)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005000730991014279}
+{"payload": "select @@fuzzstring", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01312829200469423}
+{"payload": "#blind SQLi", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017452978994697332}
+{"payload": "sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005211349998717196}
+{"payload": "1 or sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004748805004055612}
+{"payload": "\" or sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045202610053820536}
+{"payload": "' or sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004057557001942769}
+{"payload": "\" or sleep(10)=\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003809943998930976}
+{"payload": "' or sleep(10)='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003318537012091838}
+{"payload": "1) or sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004121461999602616}
+{"payload": "\") or sleep(10)=\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006077901009120978}
+{"payload": "') or sleep(10)='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048890570033108816}
+{"payload": "1)) or sleep(10)#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005285789011395536}
+{"payload": "\")) or sleep(10)=\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005050567997386679}
+{"payload": "')) or sleep(10)='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004385227002785541}
+{"payload": ";waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004058209000504576}
+{"payload": ");waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004015397993498482}
+{"payload": "';waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040492870029993355}
+{"payload": "\";waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035672869998961687}
+{"payload": "');waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033564969926374033}
+{"payload": "\");waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003776276993448846}
+{"payload": "));waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004374338997877203}
+{"payload": "'));waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005393679995904677}
+{"payload": "\"));waitfor delay '0:0:10'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004798052003025077}
+{"payload": "benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005932261003181338}
+{"payload": "1 or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004760374999023043}
+{"payload": "\" or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004505699995206669}
+{"payload": "' or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005489199989824556}
+{"payload": "1) or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004148763007833622}
+{"payload": "\") or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003754473989829421}
+{"payload": "') or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037716410006396472}
+{"payload": "1)) or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043144810042576864}
+{"payload": "\")) or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003728769996087067}
+{"payload": "')) or benchmark(10000000,MD5(1))#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003717391999089159}
+{"payload": "pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032075740018626675}
+{"payload": "1 or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003516219003358856}
+{"payload": "\" or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003662718998384662}
+{"payload": "' or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005594693007878959}
+{"payload": "1) or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004459511997993104}
+{"payload": "\") or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00532528999610804}
+{"payload": "') or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00461177401302848}
+{"payload": "1)) or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004250568003044464}
+{"payload": "\")) or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004452989000128582}
+{"payload": "')) or pg_sleep(10)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003990158002125099}
+{"payload": "#XSS", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014361784007633105}
+{"payload": "x'\"><SVg/oNLoad=prompt(4)>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005089073994895443}
+{"payload": "x”><SVg/oNLoad=prompt(4)>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004494973996770568}
+{"payload": "<meta http-equiv=\"refresh\" content=\"0;javascript:alert(1)\"/>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004821979004191235}
+{"payload": "#LFI", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01533258700510487}
+{"payload": "../../../../../../../../../../../../../../../etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065052530117100105}
+{"payload": "../../../../../../../../../../../../../../../etc/passwd%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005298842996126041}
+{"payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005766834001406096}
+{"payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005216746998485178}
+{"payload": "..//..//..//..//..//..//..//..//..//..//..//..//..//..//..//etc//passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004631820993381552}
+{"payload": "..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/..\\/etc\\/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004620000006980263}
+{"payload": "\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../\\../etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005311768996762112}
+{"payload": "Li4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZA==", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014889729005517438}
+{"payload": "../../../../../../../../../../../../../../../windows/win.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005681588998413645}
+{"payload": "../../../../../../../../../../../../../../../windows/win.ini%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004874092002864927}
+{"payload": "../../../../../../../../../../../../../../../boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005597057999693789}
+{"payload": "../../../../../../../../../../../../../../../boot.ini%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005186943002627231}
+{"payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004698552002082579}
+{"payload": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005455599995912053}
+{"payload": "..//..//..//..//..//..//..//..//..//..//..//..//..//..//..//windows//win.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005493753997143358}
+{"payload": "Li4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vd2luZG93cy93aW4uaW5p", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013467805008986033}
+{"payload": "#CRLF", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013341532001504675}
+{"payload": "%0d%0aEvilHeader:%20ThisShouldntExist%0d%0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014622443006373942}
+{"payload": "%0d%0aContent-Type: text/html%0d%0aHTTP/1.1 200 OK%0d%0aContent-Type: text/html%0d%0a%0d%0a%3Chtml%3EEvil content%3C/html%3E", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005998760010697879}
+{"payload": "%0d%0aDATA%0d%0afoo%0d%0a%2e%0d%0aMAIL+FROM:+pentest@coalfire.com%0d%0aRCPT+TO:+pentest@coalfire.com%0d%0aDATA%0d%0aFrom:+pentest@coalfire.com%0d%0aTo:+pentest@coalfire.com%0d%0aSubject:+test%0d%0afoo%0d%0a%2e%0d%0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014078616994083859}
+{"payload": "#XML", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011486707007861696}
+{"payload": "<![CDATA[<test></test>]]>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004501592004089616}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file:///etc/passwd\">]><foo>&xxe;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004151560002355836}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file://c:/boot.ini\">]><foo>&xxe;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038859479973325506}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file://c:/windows/win.ini\">]><foo>&xxe;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005630603001918644}
+{"payload": "count(/child::node())", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02149123599519953}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><foo><![CDATA[' or 1=1 or ''=']]></foof>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006336742007988505}
+{"payload": "<foo><![CDATA[' or 1=1 or ''=']]></foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006318460000329651}
+{"payload": "&foo;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019941627004300244}
+{"payload": "%foo;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0183694250008557}
+{"payload": "*/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015127705002669245}
+{"payload": "#SSI", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017993841000134125}
+{"payload": "<pre><!--#exec cmd=\"ls\" --></pre>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004462366006919183}
+{"payload": "<pre><!--#exec cmd=\"dir\" --></pre>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00504222500603646}
+{"payload": "<!--#echo var=\"DOCUMENT_URI\" -->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006081525003537536}
+{"payload": "<!--#echo var=\"DOCUMENT_NAME\" -->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004664919004426338}
+{"payload": "#Unicode < > \"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013295491997268982}
+{"payload": "%u003c", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01382454599661287}
+{"payload": "%u003e", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011147826997330412}
+{"payload": "%u0022", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011871109003550373}
+{"payload": "\\u0022", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01225288599380292}
+{"payload": "\\u003c", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011923105994355865}
+{"payload": "\\u003e", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01151372199819889}
+{"payload": "#JSON", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01687779900385067}
+{"payload": "eval(\"while(1);\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006275200998061337}
+{"payload": "{\"\\x00\":0}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015294313998310827}
+{"payload": "{\"1\":0}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013078335992759094}
+{"payload": "[]", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011140260001411662}
+{"payload": "{}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012614755993126892}
+{"payload": "#Format strings", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017854295001598075}
+{"payload": "%p%p%p%p", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01363579899771139}
+{"payload": "%x%x%x%x", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012280882991035469}
+{"payload": "%d%d%d%d", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011616827003308572}
+{"payload": "%s%s%s%s", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012732832008623518}
+{"payload": "%n%n%n%n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018681164001463912}
+{"payload": "#Command injection", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01589594199322164}
+{"payload": ";echo fuzzstring", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006522160008898936}
+{"payload": "&& echo fuzzstring", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006359088001772761}
+{"payload": "& echo fuzzstring", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006078817998059094}
+{"payload": "`echo fuzzstring", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006174142996314913}
+{"payload": "#open redirect", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015843098997720517}
+{"payload": "///eff.org", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01374457700876519}
+{"payload": "//eff.org", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01259740199020598}
+{"payload": "/\\eff.org", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0108623069972964}
+{"payload": "https://eff.org", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014944883994758129}
+{"payload": "#Dangerous chars", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015311208000639454}
+{"payload": "œ∑´®†¥¨ˆøπ“‘", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013214577993494458}
+{"payload": "⅛⅜⅝⅞", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010777041999972425}
+{"payload": "ЁЂЃЄЅІЇЈ", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012379426989355125}
+{"payload": "⁰⁴⁵₀₁₂", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010723276995122433}
+{"payload": "田中さんにあげて下さい", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01158932299586013}
+{"payload": "사회과학원 어학연구소", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014458118006587029}
+{"payload": "(ﾉಥ益ಥ）ﾉ﻿ ┻━┻", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006787395992432721}
+{"payload": "❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014499140990665182}
+{"payload": "0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01237468900217209}
+{"payload": "ما, يذكر االإطلاق عل إيو", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01298954599769786}
+{"payload": "test‪", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010919287000433542}
+{"payload": "‫test‫", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010513907007407397}
+{"payload": "\u0000", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005404285999247804}
+{"payload": "test", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012293567007873207}
+{"payload": "I̗̘̦͝n͇͇͙v̮̫ok̲̫̙͈i̖͙̭̹̠̞n̡̻̮̣̺g̲͈͙̭͙̬͎ ̰t͔̦h̞̲e̢̤ ͍̬̲͖f̴̘͕̣è͖ẹ̥̩l͖͔͚i͓͚̦͠n͖͍̗͓̳̮g͍ ̨o͚̪͡f̘̣̬ ̖̘͖̟͙̮c҉͔̫͖͓͇͖ͅh̵̤̣͚͔á̗̼͕ͅo̼̣̥s̱͈̺̖̦̻͢.̛̖̞̠̫̰", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017877198988571763}
+{"payload": "˙ɐnbᴉlɐ ɐuƃɐɯ ǝɹolop", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014950565004255623}

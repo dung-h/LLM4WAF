@@ -1,0 +1,17 @@
+{"payload": "# you will need to customize/modify some of the values in the queries for best effect", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014976651989854872}
+{"payload": "'; exec master..xp_cmdshell 'ping 10.10.1.2'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004536369000561535}
+{"payload": "'create user name identified by 'pass123' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004068367998115718}
+{"payload": "'create user name identified by pass123 temporary tablespace temp default tablespace users;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004243454008246772}
+{"payload": "' ; drop table temp --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004507434990955517}
+{"payload": "'exec sp_addlogin 'name' , 'password' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038693319947924465}
+{"payload": "' exec sp_addsrvrolemember 'name' , 'sysadmin' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003598278999561444}
+{"payload": "' insert into mysql.user (user, host, password) values ('name', 'localhost', password('pass123')) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038038850034354255}
+{"payload": "' grant connect to name; grant resource to name; --", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010879388006287627}
+{"payload": "' insert into users(login, password, level) values( char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72) + char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72),char(0x64)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004051874988363124}
+{"payload": "' or 1=1 --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003540846999385394}
+{"payload": "' union (select @@version) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003582848992664367}
+{"payload": "' union (select NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036212929990142584}
+{"payload": "' union (select NULL, NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036814189952565357}
+{"payload": "' union (select NULL, NULL, NULL,  (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035077740030828863}
+{"payload": "' union (select NULL, NULL, NULL, NULL,  (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005594594011199661}
+{"payload": "' union (select NULL, NULL, NULL, NULL,  NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006034581005224027}

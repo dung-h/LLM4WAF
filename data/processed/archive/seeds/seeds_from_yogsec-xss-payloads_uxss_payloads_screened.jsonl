@@ -1,0 +1,300 @@
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009221554995747283}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004201741001452319}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037710629985667765}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036370690067997202}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00322762799623888}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004185518992017023}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036203380004735664}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004678869998315349}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004998593998607248}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005861462006578222}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005375108012231067}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006416210002498701}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005973730003461242}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006032723002135754}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0066044629929820076}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005117962005897425}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00496881699655205}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006119669007603079}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004861109991907142}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005458810002892278}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004385203996207565}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005028282001148909}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005563006998272613}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004516065993811935}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006190977990627289}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003638998998212628}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035459700011415407}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003413486003410071}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003147587995044887}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0040211890009231865}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003247286003897898}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032174880034290254}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031163230014499277}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003281774988863617}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004679812001995742}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003684611991047859}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041182389977620915}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003941208007745445}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038534039922524244}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004267336000339128}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032286039931932464}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030126399942673743}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034188659919891506}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032262640015687793}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028569790010806173}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030841190018691123}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030393850029213354}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003059473994653672}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028600199875654653}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028043639904353768}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003170156996930018}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003034897003090009}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003024517005542293}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028173619939479977}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0026492820034036413}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003139729000395164}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003166228998452425}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003297240997198969}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002938502002507448}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029621660069096833}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029128219903213903}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038618770049652085}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004789565995451994}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035905709955841303}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034115910093532875}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004318915991461836}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003983953007264063}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038246049953158945}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033264369994867593}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003686461001052521}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030403919954551384}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004440174991032109}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002854260994354263}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002984309001476504}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030167759978212416}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003077418004977517}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003293961999588646}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028458240121835843}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003481435007415712}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030041870049899444}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002898528997320682}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003071213999646716}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002884186993469484}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031642860121792182}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034147879923693836}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003340455994475633}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003246484004193917}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003195313998730853}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00439253899094183}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006239790003746748}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004488071994273923}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004029290008475073}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003890954001690261}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003273385009379126}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031625120027456433}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00332821199845057}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003342419004184194}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003542646998539567}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031410369992954656}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032732300023781136}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003287326995632611}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002953810995677486}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029503900004783645}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031114800076466054}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029945589922135696}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003598651004722342}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030386740108951926}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029439230129355565}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030359929951373488}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029409519920591265}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004595689009875059}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003432801997405477}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034904429921880364}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028310940106166527}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030948039930080995}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048141690058400854}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003550247012753971}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004682806989876553}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004601533990353346}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004472176005947404}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031215330091072246}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003813114992226474}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003889471001457423}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034575540048535913}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032650869979988784}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003504449996398762}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003330003994051367}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003255731993704103}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031030230020405725}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003119325003353879}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029426729888655245}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00409712600230705}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003892708002240397}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003285408005467616}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032329879904864356}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004198324997560121}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005357649002689868}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004068340000230819}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038326729991240427}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003902444994309917}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038783489872002974}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037302540004020557}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003674627994769253}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004924401000607759}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003906933998223394}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003276313000242226}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036877219972666353}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0059718849952332675}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005227464993367903}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004489423998165876}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00420279499667231}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00410368200391531}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003443912006332539}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003981437010224909}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038864759990246966}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003634209992014803}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036848099989583716}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004130821005674079}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004262923001078889}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004600683998432942}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004341391002526507}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004017986997496337}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033494810049887747}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033816149953054264}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030506670009344816}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004824599003768526}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036219650064595044}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035675309918588027}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003180116997100413}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003395969994016923}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034878220030805096}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033456420060247183}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003370861988514662}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037559829943347722}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00411835199338384}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004371036993688904}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008924512992962264}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0061604489892488346}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003605303994845599}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005503445994690992}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004086056986125186}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00373737899644766}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036203240015311167}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00520330599101726}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004409720990224741}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048782570083858445}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005495413992321119}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005151749006472528}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004677065997384489}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004927817004499957}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0052563700010068715}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045367889979388565}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005784993001725525}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006742516998201609}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006665309003437869}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006720600998960435}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005050228995969519}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005138744003488682}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00482655200175941}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004708752996521071}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038484349934151396}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00447079399600625}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00433412600250449}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004551887992420234}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004701808007666841}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0042254470026819035}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004382869999972172}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005072510000900365}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005514132004464045}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004916545003652573}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004166544007603079}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004203122996841557}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003965570998843759}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003865396007313393}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003914403001544997}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039767779962858185}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00390781500027515}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005408594006439671}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004608251998433843}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035895239998353645}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003385641990462318}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004904903995338827}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038444940000772476}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037674420018447563}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033510779903735965}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004297572013456374}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038780629984103143}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004338794999057427}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004455287999007851}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0042676480079535395}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003867236999212764}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036745670076925308}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036686899984488264}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003664433999801986}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034543129877420142}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036318549973657355}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003574536007363349}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003916702000424266}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003467553004156798}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035670960060087964}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003377315995749086}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044782530021620914}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005026337996241637}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032381289929617196}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032342240010621026}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0040334619989153}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005002863996196538}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005226481007412076}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004872349993092939}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006224793993169442}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00492180600122083}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004655925993574783}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004921685002045706}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004934900993248448}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004022818000521511}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003841958998236805}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004058635007822886}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003659840003820136}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036043019936187193}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038907429989194497}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034395639959257096}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034245270071551204}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003311578999273479}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003802573002758436}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004041553009301424}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004431581997778267}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004294218000723049}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034429020015522838}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032214060047408566}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003264247003244236}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033181909966515377}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003151511002215557}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028234909987077117}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002903323998907581}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002894475997891277}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028099949995521456}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003007734994753264}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029530790052376688}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028279580001253635}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00296670499665197}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029191039939178154}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00344790201052092}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003878047995385714}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031279459944926202}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028888709930470213}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028493050049291924}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003198135003913194}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003608765997341834}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031319480040110648}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002926825007307343}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031752569921081886}
+{"payload": "<object data=\"javascript:alert('UXSS')\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035733219992835075}
+{"payload": "<embed src=\"javascript:alert('UXSS')\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004870588003541343}
+{"payload": "<svg><script>alert('UXSS')</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003610984989791177}
+{"payload": "<svg onload=alert('UXSS')></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032848270057002082}
+{"payload": "<iframe src=\"data:text/html,<svg onload=alert('UXSS')>\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004770516999997199}
+{"payload": "<svg><a href=\"javascript:alert('UXSS')\">CLICK</a></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036669709952548146}
+{"payload": "<iframe src=\"javascript:alert('UXSS')\" onload=alert('UXSS')></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037580470088869333}
+{"payload": "<script>window.open('javascript:alert(\"UXSS\")')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041140730027109385}
+{"payload": "<img src=x onerror=\"window.open('javascript:alert(1)')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004050571005791426}

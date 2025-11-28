@@ -1,0 +1,300 @@
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008835346001433209}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004911186988465488}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045729620032943785}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004820980000658892}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004734911999548785}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037060260074213147}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005046377002145164}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004442024001036771}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005252333008684218}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005599333002464846}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005163316003745422}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004509449994657189}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004158050011028536}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004883904999587685}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004369784990558401}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048787950072437525}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004554533006739803}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004792117993929423}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003644279990112409}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032407750113634393}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035702290042536333}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038231639919104055}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033617459994275123}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030945629987400025}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030331339949043468}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003203583008144051}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004393602008349262}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033128119976026937}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033266289974562824}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030467710021184757}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003245343003072776}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032771799887996167}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003337273999932222}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029663759924005717}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029562520066974685}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003050554994842969}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035729630035348237}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031046009971760213}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003022454009624198}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003097448992775753}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003694136001286097}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005031359993154183}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004177394992439076}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003532920003635809}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041102820105152205}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004582345995004289}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004614966994267888}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003670199992484413}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037868149956921116}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031908180098980665}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003141262990538962}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003015250011230819}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032497409993084148}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003506641005515121}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034245330025441945}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004504555996390991}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005072097002994269}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0055063229956431314}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0059613979974528775}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006035068989149295}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006877972002257593}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005164073998457752}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004334918005042709}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004495291999774054}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00414583100064192}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004154360998654738}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003593112007365562}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038250969955697656}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00318728199636098}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035549899912439287}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028894479910377413}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005277813004795462}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006162831006804481}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045285710075404495}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00424972600012552}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004475059002288617}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004449364001629874}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038638980040559545}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003660671995021403}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003539199009537697}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005926512007135898}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004629824994481169}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005276148993289098}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00543973600724712}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004893888006336056}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005361607996746898}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0056125979899661615}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004663832994992845}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004054579010698944}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005178562001674436}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004050417992402799}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004001226989203133}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004230177000863478}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00509987999976147}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003918069007340819}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033358269865857437}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003918927992344834}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004125825988012366}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036114069953328}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034649559966055676}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004293830003007315}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005669049001880921}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00499925299664028}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006356596990372054}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005157481005880982}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0056198259990196675}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006466575010563247}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00432799500413239}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003957879001973197}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004761731004691683}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006704772997181863}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004511623992584646}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004634812008589506}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007051615000818856}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005491724994499236}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004141758006880991}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006761226002709009}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004608635004842654}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037866749917156994}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004706223990069702}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005287640989990905}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00390304799657315}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037564669910352677}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006381115003023297}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006125914995209314}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004664484004024416}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0069052530016051605}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004987495005480014}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006935340992640704}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006752790999598801}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005908908002311364}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007240709004690871}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004923425003653392}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004695203999290243}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005432649006252177}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006695258998661302}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005853301991010085}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006536443994264118}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005574973998591304}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005950719001702964}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0068060420016990975}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0056967189884744585}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006431842994061299}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005645190001814626}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005990745004964992}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005396741005824879}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004501429008087143}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00485377199947834}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006182088996865787}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005301447003148496}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004490071994950995}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005317346003721468}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00417041199398227}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038391060079447925}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003877046998240985}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044816430017817765}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005121572001371533}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00459450799098704}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005110682002850808}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004943474006722681}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005499944993061945}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004673068993724883}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006538210000144318}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0060169089992996305}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00607240799581632}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006032575998688117}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006717741998727433}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006444939004722983}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004713496993645094}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006546332995640114}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006525593998958357}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0049746379954740405}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004988775996025652}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00561217799258884}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004325260000769049}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004744627003674395}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005993810991640203}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004759636998642236}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004044109009555541}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004994176997570321}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005477567989146337}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00477003600099124}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.010952068987535313}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.019290157011710107}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005342096003005281}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005726721996325068}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005652484003803693}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005163212001207285}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005938382004387677}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00542257099004928}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005476974998600781}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005786470996099524}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005117866006912664}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005017963005229831}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004847774995141663}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0043133489962201566}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005786070003523491}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006291953002801165}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00503458600724116}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00445110299915541}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0043552370043471456}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004600979998940602}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005451233999338001}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004287410993129015}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00574626999150496}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00424634299997706}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039961879956535995}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003819267003564164}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004472262007766403}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004821426002308726}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004405626008519903}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045002709957771}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005628833998343907}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036016290105180815}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004160051990766078}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005995101004373282}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038934699987294152}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003949659003410488}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004259938999894075}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005715079998481087}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039055629895301536}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004294211001251824}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005549624998820946}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044988229929003865}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004364717999123968}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005547851993469521}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005413127000792883}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004559747001621872}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004392731003463268}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005246762011665851}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004267819007509388}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0051580839935922995}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006361277002724819}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003832902992144227}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004370338006992824}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004193225991912186}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00635917299950961}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045124500029487535}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045583900064229965}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006735987000865862}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004780105009558611}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00511359800293576}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005326817001332529}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005508404996362515}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006377995989168994}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00518420799926389}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004831468002521433}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0058060559967998415}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006088120004278608}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041714449907885864}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004711713991127908}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005737989005865529}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0045695939916186035}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004956791002769023}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006631408003158867}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004520144997513853}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004033914010506123}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006407402994227596}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004929271002765745}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005184152993024327}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005281010002363473}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005590314001892693}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004835772007936612}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005244229003437795}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006333673998597078}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004268256001523696}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006206210004165769}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004817066990653984}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004095668002264574}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004692230999353342}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007212821001303382}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004241258997353725}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004238162000547163}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00677644599636551}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004426504994626157}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004577560001052916}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005774826000561006}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003946893004467711}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004741594995721243}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0056577590003144}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00636176900297869}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005357565998565406}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006907489005243406}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004596055005094968}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004622232998372056}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005429176992038265}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004491431012866087}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004418609998538159}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005346555000869557}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0064435959939146414}
+{"payload": "<input type=\"text\" value=\"<script>alert('XSS')</script>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00420354500238318}
+{"payload": "<textarea><script>alert('XSS')</script></textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004891260003205389}
+{"payload": "<form><button formaction=\"javascript:alert('XSS')\">Click me</button></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005697861997759901}
+{"payload": "<form><input type=\"hidden\" name=\"xss\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004294219994335435}
+{"payload": "<input type=\"text\" onfocus=\"alert('XSS')\" value=\"Focus me\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003708162999828346}
+{"payload": "<input type=\"button\" value=\"Click me\" onclick=\"alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007122430994058959}
+{"payload": "<form action=\"https://example.com/post\" method=\"POST\"><input type=\"text\" value=\"<script>alert('XSS')</script>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0051234470010967925}
+{"payload": "<input type=\"text\" value='\"><script>alert(1)</script>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004670664988225326}
+{"payload": "<input type=\"text\" value='\"><img src=x onerror=alert(1)>'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0067523689940571785}
+{"payload": "<form><input name=\"xss\" value=\"<img src=x onerror=alert('XSS')>\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004674914991483092}

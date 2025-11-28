@@ -1,0 +1,13 @@
+{"payload": "' or '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006926948997715954}
+{"payload": "' or ''='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005110131998662837}
+{"payload": "x' or 1=1 or 'x'='y", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038495439948746935}
+{"payload": "/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013613885996164754}
+{"payload": "//", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014642197005741764}
+{"payload": "//*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015550038995570503}
+{"payload": "*/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015192304999800399}
+{"payload": "@*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015100647004146595}
+{"payload": "count(/child::node())", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01481644200248411}
+{"payload": "x' or name()='username' or 'x'='y", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014393999997992069}
+{"payload": "' and count(/*)=1 and '1'='1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014393259996722918}
+{"payload": "' and count(/@*)=1 and '1'='1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016022345000237692}
+{"payload": "' and count(/comment())=1 and '1'='1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015081713005201891}

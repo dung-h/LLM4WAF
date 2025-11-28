@@ -1,0 +1,3 @@
+{"payload": "%00index.html", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007080280003719963}
+{"payload": ";index.html", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01504065500193974}
+{"payload": "%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004954674004693516}

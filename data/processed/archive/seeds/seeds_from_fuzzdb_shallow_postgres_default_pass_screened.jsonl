@@ -1,0 +1,4 @@
+{"payload": "tiger", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016314268999849446}
+{"payload": "postgres", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013744736002990976}
+{"payload": "password", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016442766005638987}
+{"payload": "admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016340478003257886}

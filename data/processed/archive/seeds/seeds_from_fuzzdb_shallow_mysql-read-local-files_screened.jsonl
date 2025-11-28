@@ -1,0 +1,1 @@
+{"payload": "create table myfile (input TEXT); load data infile '<filepath>' into table myfile; select * from myfile;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007730908997473307}

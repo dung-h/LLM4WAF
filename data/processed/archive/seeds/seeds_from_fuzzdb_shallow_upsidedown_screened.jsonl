@@ -1,0 +1,2 @@
+{"payload": "˙ɐnbᴉlɐ ɐuƃɐɯ ǝɹolop ʇǝ ǝɹoqɐl ʇn ʇunpᴉpᴉɔuᴉ ɹodɯǝʇ poɯsnᴉǝ op pǝs 'ʇᴉlǝ ƃuᴉɔsᴉdᴉpɐ ɹnʇǝʇɔǝsuoɔ 'ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016218947996094357}
+{"payload": "00˙Ɩ$-", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012468959997931961}

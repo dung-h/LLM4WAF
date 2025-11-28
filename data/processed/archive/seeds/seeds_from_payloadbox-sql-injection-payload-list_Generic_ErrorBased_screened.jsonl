@@ -1,0 +1,154 @@
+{"payload": "OR 1=1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019923684987588786}
+{"payload": "OR 1=0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015513175007072277}
+{"payload": "OR x=x", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015781686000991613}
+{"payload": "OR x=y", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014925539988325909}
+{"payload": "OR 1=1#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015294062002794817}
+{"payload": "OR 1=0#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01577075000386685}
+{"payload": "OR x=x#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015381461998913437}
+{"payload": "OR x=y#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013520709006115794}
+{"payload": "OR 1=1--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014101376000326127}
+{"payload": "OR 1=0--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013376461996813305}
+{"payload": "OR x=x--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012280121009098366}
+{"payload": "OR x=y--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011916991992620751}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytW", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005980782007100061}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytY", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005606765000266023}
+{"payload": "HAVING 1=1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004903059001662768}
+{"payload": "HAVING 1=0", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054177879937924445}
+{"payload": "HAVING 1=1#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004837387998122722}
+{"payload": "HAVING 1=0#", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004215451001073234}
+{"payload": "HAVING 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049547590024303645}
+{"payload": "HAVING 1=0--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004842811991693452}
+{"payload": "AND 1=1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014552395005011931}
+{"payload": "AND 1=0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014225356004317291}
+{"payload": "AND 1=1--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016352870006812736}
+{"payload": "AND 1=0--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015258514002198353}
+{"payload": "AND 1=1#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014384812995558605}
+{"payload": "AND 1=0#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013618436001706868}
+{"payload": "AND 1=1 AND '%'='", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01328110801114235}
+{"payload": "AND 1=0 AND '%'='", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014832774002570659}
+{"payload": "AND 1083=1083 AND (1427=1427", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014973124998505227}
+{"payload": "AND 7506=9091 AND (5913=5913", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015139795999857597}
+{"payload": "AND 1083=1083 AND ('1427=1427", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013123785000061616}
+{"payload": "AND 7506=9091 AND ('5913=5913", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01586500099801924}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlZ", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014217311007087119}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlY", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015012410003691912}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlZ", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005327556995325722}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlY", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004513969004619867}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014047101998585276}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013340281002456322}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014522789002512582}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013562789012212306}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01619853900047019}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013883343010093085}
+{"payload": "WHERE 1=1 AND 1=1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01446547701198142}
+{"payload": "WHERE 1=1 AND 1=0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016044556003180332}
+{"payload": "WHERE 1=1 AND 1=1#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015254197001922876}
+{"payload": "WHERE 1=1 AND 1=0#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014810562002821825}
+{"payload": "WHERE 1=1 AND 1=1--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013778624008409679}
+{"payload": "WHERE 1=1 AND 1=0--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013731555998674594}
+{"payload": "ORDER BY 1--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016818296004203148}
+{"payload": "ORDER BY 2--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013818571998854168}
+{"payload": "ORDER BY 3--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01276839099591598}
+{"payload": "ORDER BY 4--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01531601398892235}
+{"payload": "ORDER BY 5--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012636878003831953}
+{"payload": "ORDER BY 6--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01184109499445185}
+{"payload": "ORDER BY 7--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011748978999094106}
+{"payload": "ORDER BY 8--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0139480799989542}
+{"payload": "ORDER BY 9--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015484470000956208}
+{"payload": "ORDER BY 10--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015384796992293559}
+{"payload": "ORDER BY 11--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012700478997430764}
+{"payload": "ORDER BY 12--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012524781996035017}
+{"payload": "ORDER BY 13--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01326591899851337}
+{"payload": "ORDER BY 14--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014945732007618062}
+{"payload": "ORDER BY 15--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014332152000861242}
+{"payload": "ORDER BY 16--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013759898996795528}
+{"payload": "ORDER BY 17--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015834092002478428}
+{"payload": "ORDER BY 18--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017372574991895817}
+{"payload": "ORDER BY 19--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015272371005266905}
+{"payload": "ORDER BY 20--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014810635999310762}
+{"payload": "ORDER BY 21--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015072050999151543}
+{"payload": "ORDER BY 22--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016226366991759278}
+{"payload": "ORDER BY 23--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01427444099681452}
+{"payload": "ORDER BY 24--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01384270800917875}
+{"payload": "ORDER BY 25--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01514977500482928}
+{"payload": "ORDER BY 26--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01576209800259676}
+{"payload": "ORDER BY 27--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01530569999886211}
+{"payload": "ORDER BY 28--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01457245199708268}
+{"payload": "ORDER BY 29--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014215627001249231}
+{"payload": "ORDER BY 30--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014863093994790688}
+{"payload": "ORDER BY 31337--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01371009300055448}
+{"payload": "ORDER BY 1#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01520231700851582}
+{"payload": "ORDER BY 2#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013525778995244764}
+{"payload": "ORDER BY 3#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012513228997704573}
+{"payload": "ORDER BY 4#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012809869003831409}
+{"payload": "ORDER BY 5#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014651195000624284}
+{"payload": "ORDER BY 6#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01581510699179489}
+{"payload": "ORDER BY 7#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014921103997039609}
+{"payload": "ORDER BY 8#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013361652003368363}
+{"payload": "ORDER BY 9#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013313410003320314}
+{"payload": "ORDER BY 10#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014815100992564112}
+{"payload": "ORDER BY 11#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014100935004535131}
+{"payload": "ORDER BY 12#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015684925005189143}
+{"payload": "ORDER BY 13#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015739715992822312}
+{"payload": "ORDER BY 14#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013837222999427468}
+{"payload": "ORDER BY 15#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012907187003293075}
+{"payload": "ORDER BY 16#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013841435997164808}
+{"payload": "ORDER BY 17#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013793973994324915}
+{"payload": "ORDER BY 18#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01414180500432849}
+{"payload": "ORDER BY 19#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014423636996070854}
+{"payload": "ORDER BY 20#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01375601599283982}
+{"payload": "ORDER BY 21#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016082948000985198}
+{"payload": "ORDER BY 22#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01588412899582181}
+{"payload": "ORDER BY 23#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015443459997186437}
+{"payload": "ORDER BY 24#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014847854006802663}
+{"payload": "ORDER BY 25#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014523438992910087}
+{"payload": "ORDER BY 26#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01517057498858776}
+{"payload": "ORDER BY 27#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015832880002562888}
+{"payload": "ORDER BY 28#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015596377998008393}
+{"payload": "ORDER BY 29#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014760712001589127}
+{"payload": "ORDER BY 30#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016099273998406716}
+{"payload": "ORDER BY 31337#", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015015735989436507}
+{"payload": "ORDER BY 1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015074180002557114}
+{"payload": "ORDER BY 2", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013115969006321393}
+{"payload": "ORDER BY 3", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015868398011662066}
+{"payload": "ORDER BY 4", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019021138999960385}
+{"payload": "ORDER BY 5", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01934713398804888}
+{"payload": "ORDER BY 6", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015514586004428566}
+{"payload": "ORDER BY 7", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01469192399235908}
+{"payload": "ORDER BY 8", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012786403996869922}
+{"payload": "ORDER BY 9", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012113992008380592}
+{"payload": "ORDER BY 10", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01240748999407515}
+{"payload": "ORDER BY 11", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012193528993520886}
+{"payload": "ORDER BY 12", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012444352003512904}
+{"payload": "ORDER BY 13", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011728141995263286}
+{"payload": "ORDER BY 14", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011794285994255915}
+{"payload": "ORDER BY 15", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012172622999059968}
+{"payload": "ORDER BY 16", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013548382994486019}
+{"payload": "ORDER BY 17", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01332386898866389}
+{"payload": "ORDER BY 18", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012606980002601631}
+{"payload": "ORDER BY 19", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013508827003533952}
+{"payload": "ORDER BY 20", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014884693999192677}
+{"payload": "ORDER BY 21", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014591309998650104}
+{"payload": "ORDER BY 22", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016075462001026608}
+{"payload": "ORDER BY 23", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014337387008708902}
+{"payload": "ORDER BY 24", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014191390000632964}
+{"payload": "ORDER BY 25", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015454813008545898}
+{"payload": "ORDER BY 26", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014337120010168292}
+{"payload": "ORDER BY 27", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014991158997872844}
+{"payload": "ORDER BY 28", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014694457000587136}
+{"payload": "ORDER BY 29", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015090300992596895}
+{"payload": "ORDER BY 30", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014343732997076586}
+{"payload": "ORDER BY 31337", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013789125005132519}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014509843997075222}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014133688993752003}
+{"payload": "IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006448251995607279}
+{"payload": "IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005295374998240732}
+{"payload": "%' AND 8310=8310 AND '%'='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004444434001925401}
+{"payload": "%' AND 8310=8311 AND '%'='", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006457012001192197}
+{"payload": "and (select substring(@@version,1,1))='X'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015285446002962999}
+{"payload": "and (select substring(@@version,1,1))='M'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01467941899318248}
+{"payload": "and (select substring(@@version,2,1))='i'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01580969599308446}
+{"payload": "and (select substring(@@version,2,1))='y'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015068196997162886}
+{"payload": "and (select substring(@@version,3,1))='c'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013991525003802963}
+{"payload": "and (select substring(@@version,3,1))='S'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01368702900072094}
+{"payload": "and (select substring(@@version,3,1))='X'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015564503992209211}

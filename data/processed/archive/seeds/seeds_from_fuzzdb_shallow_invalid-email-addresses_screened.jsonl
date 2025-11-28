@@ -1,0 +1,27 @@
+{"payload": "justastring", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017052705996320583}
+{"payload": "email@addrese.com;secondemail@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012611044003278948}
+{"payload": "@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014158532998408191}
+{"payload": "Jacco Van Tuijl <email@example.com>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01725054300186457}
+{"payload": "email.address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01387808100116672}
+{"payload": "email@address@example.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013678449002327397}
+{"payload": "#@%^%#$@#$@#.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011867951005115174}
+{"payload": ".email@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01111628299986478}
+{"payload": "うえあいお@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011614497001573909}
+{"payload": "email.@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01307717600138858}
+{"payload": "email..email@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01738919700437691}
+{"payload": "email@address..com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013111538995872252}
+{"payload": "email@address.com (Jacco van Tuijl)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012272576001123525}
+{"payload": "email@-address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011872030001541134}
+{"payload": "email@111.222.333.44444", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011242335000133608}
+{"payload": "Abc..123@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011189151999133173}
+{"payload": "“(),:;<>[\\]@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012402335996739566}
+{"payload": "jacco\"van\"tuijl@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015643099002772942}
+{"payload": "jacco\\ van\"someting\"tuijl\\example@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01955472899862798}
+{"payload": "“email”@address.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014793213005759753}
+{"payload": "sql\"or\"1\"=\"1\"or\"test@email.com", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005519186997844372}
+{"payload": "sql'or'1'='1'or'test@email.com", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047985370038077235}
+{"payload": "xss\"><script>alert(1)</script><\"test@address.com", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003959088993724436}
+{"payload": "a\"b(c)d,e:f;g<h>i[j\\k]l@example.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013796610001008958}
+{"payload": "this is\"not\\allowed@example.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014006827004777733}
+{"payload": "notallowed@example.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014915216001099907}
+{"payload": "notallowed@example.com", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016496560005180072}

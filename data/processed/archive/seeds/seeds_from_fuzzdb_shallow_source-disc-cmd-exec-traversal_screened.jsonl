@@ -1,0 +1,5 @@
+{"payload": "..%255c", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01608950900117634}
+{"payload": ".%5c../..%5c", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004980181998689659}
+{"payload": "/..%c0%9v../", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005787540998426266}
+{"payload": "/..%c0%af../", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004718735995993484}
+{"payload": "/..%255c..%255c", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004584870002872776}

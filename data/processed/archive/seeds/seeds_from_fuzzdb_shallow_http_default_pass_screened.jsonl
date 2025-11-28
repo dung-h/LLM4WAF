@@ -1,0 +1,14 @@
+{"payload": "admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01801681199867744}
+{"payload": "password", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012504012993304059}
+{"payload": "manager", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011999994007055648}
+{"payload": "letmein", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011367485989467241}
+{"payload": "cisco", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01743082600296475}
+{"payload": "default", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01431515500007663}
+{"payload": "root", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012166210988652892}
+{"payload": "apc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011988112004473805}
+{"payload": "pass", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011885783009347506}
+{"payload": "security", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012579012007336132}
+{"payload": "user", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010914171987678856}
+{"payload": "system", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010601546993711963}
+{"payload": "sys", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01024469498952385}
+{"payload": "none", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009844603002420627}

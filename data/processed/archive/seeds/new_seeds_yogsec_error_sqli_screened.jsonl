@@ -1,0 +1,320 @@
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007233620002807584}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004507253994233906}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004398933000629768}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004632756994396914}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042379930018796586}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043306520019541495}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005482000000483822}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006602602996281348}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004419270000653341}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005025847000069916}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005347128004359547}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004277154999726918}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004014963000372518}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004784750999533571}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004850368000916205}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005186877999221906}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005781219995697029}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006912346994795371}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005367079000279773}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005680624002707191}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058218640042468905}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010829325001395773}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005498901999089867}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005659098002070095}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052178140031173825}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006336694001220167}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005010654000216164}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048646279974491335}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005849813001987059}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004810099002497736}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005647150996082928}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045685119985137135}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004539687004580628}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004404885999974795}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00442697399557801}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004371855000499636}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004277599997294601}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005089570993732195}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005210314004216343}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004875546997936908}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037169450006331317}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038248820055741817}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004105435997189488}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004371194998384453}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004233189996739384}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00406697099970188}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043514059943845496}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005449745003716089}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005489312999998219}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004864345995883923}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004873491001490038}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004739373005577363}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005611050000879914}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005241374994511716}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004434973998286296}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006143751001218334}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005216787998506334}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004329167997639161}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004506622994085774}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042429219975019805}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004293860001780558}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00381770000240067}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00419382600375684}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005092216000775807}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037055030043120496}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040341179992537946}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046828639970044605}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004310667995014228}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004461509997781832}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005318916002579499}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005475573001604062}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005354988003091421}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004639278995455243}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004137898999033496}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00446650500089163}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004758189999847673}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004217512003378943}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004425043996889144}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004143569996813312}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004345610999735072}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004138399999646936}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004301015003875364}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004043164997710846}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004779982999025378}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005109694000566378}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004032069999084342}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004173528002866078}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004553712999040727}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045397279973258264}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004402094004035462}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004582674002449494}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004498057998716831}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045225329959066585}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004576938001264352}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046527449958375655}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004537783002888318}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004605273999914061}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037629119979101233}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00417481099430006}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005455119004182052}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005177384002308827}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004275551000318956}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005848159002198372}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00610382800368825}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006089422000513878}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004740659998788033}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005466900998726487}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005359927999961656}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005260477002593689}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006039963998773601}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004884314002993051}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006503381999209523}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005293014997732826}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00587864700355567}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004936708995955996}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005679548004991375}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005745810005464591}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005669833997671958}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008914944999560248}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006618830004299525}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005844933999469504}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005895389003853779}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005720651999581605}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00550691899843514}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005554410003242083}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005316149996360764}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005267554995953105}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006138525001006201}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004972119000740349}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004866709998168517}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006552551996719558}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005714550999982748}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0072909909940790385}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005585411003266927}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005583310005022213}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005705559000489302}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005313202003890183}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005396405998908449}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055951199974515475}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005743200003053062}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006615120000788011}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005528920999495313}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004611983000359032}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004447811996215023}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037380750000011176}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052375369996298105}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004549799996311776}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005307679995894432}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005440748995169997}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054684939968865365}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004848614000366069}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006779221999750007}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005484373003127985}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004506413002673071}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056684049995965324}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005183948997000698}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004798116999154445}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004354236996732652}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005729961994802579}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00561924499925226}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005007045998354442}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004880250002315734}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004761725998832844}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054527549946215}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046012940001674}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004296977000194602}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004431888002727646}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004423861995746847}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004484745993977413}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00426363500446314}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004198787995846942}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046148899928084575}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004179507996013854}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004024456000479404}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007117550005204976}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005005958999390714}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004890584998065606}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005078800997580402}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005020507000153884}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005035806003434118}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00422618899756344}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003916542998922523}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004564212998957373}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005068038997706026}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00516936500207521}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005978681001579389}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005027692001021933}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004170875996351242}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004176870999799576}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004228592995787039}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041356850051670335}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004000232998805586}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004170059997704811}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003945203003240749}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003742594002687838}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038496039996971376}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003953813000407536}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005260512996756006}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005206444999203086}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004386377004266251}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004368777998024598}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035781149999820627}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038044140019337647}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004474640001717489}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005188142997212708}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048783589954837225}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006287596996116918}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006287839998549316}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005612574001133908}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004436259994690772}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004165942998952232}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036501040012808517}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003497358993627131}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003560961995390244}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036000879990751855}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040610389987705275}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034547479954198934}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037034080014564097}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003928361998987384}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038762540061725304}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004110986003070138}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004232961997331586}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004576557999826036}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004013507998024579}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00438838500122074}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004224807002174202}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054047699959483}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00514835200010566}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003986388001067098}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005150267999852076}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004873922996921465}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004948838002746925}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004333007003879175}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004461524004000239}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00426539500040235}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041827770037343726}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004105095002159942}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004423742000653874}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005533589996048249}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004415531002450734}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035042570016230457}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004552956001134589}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004109568995772861}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038520910020451993}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040978660035762005}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004933626994898077}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003775768003833946}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004898523002339061}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037508879977394827}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004742038996482734}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004267027004971169}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004052584001328796}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005015828995965421}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004102168000827078}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004087611996510532}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004061762003402691}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004644733999157324}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004426193001563661}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004172699998889584}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004393776005599648}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004101231003005523}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00398704699910013}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038089810041128658}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00505361300020013}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005076353998447303}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004991301000700332}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004703013000835199}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005591020002611913}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004877291001321282}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005014274000131991}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045974589957040735}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00493024099705508}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004741126002045348}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047889099951134995}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004899751998891588}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005365921999327838}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005564445003983565}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005892055000003893}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005576411997026298}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005015917995478958}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005368402002204675}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004623549000825733}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004154309994191863}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004282048001186922}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004434892995050177}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004280997003661469}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004626854999514762}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006185342004755512}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004696038995462004}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038118269949336536}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003979421999247279}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004443671001354232}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006118049997894559}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004003089001344051}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003895075002219528}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003823472994554322}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035711780001292937}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035900500006391667}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003939707996323705}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004394625997520052}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037962070055073127}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003662287999759428}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035543289995985106}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034206010022899136}
+{"payload": "' OR '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032374009970226325}
+{"payload": "' AND '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032123280034284107}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034268729941686615}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003707004005264025}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035412599972914904}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003565334001905285}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038808780009276234}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041731670062290505}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003982010995969176}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038239900022745132}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004083209998498205}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00370950999786146}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004138422002142761}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004131376001168974}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00417702499544248}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036212999984854832}

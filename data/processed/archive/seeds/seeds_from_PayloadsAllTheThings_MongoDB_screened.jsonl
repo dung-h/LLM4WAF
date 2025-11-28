@@ -1,0 +1,20 @@
+{"payload": "true, $where: '1 == 1'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02035366400377825}
+{"payload": ", $where: '1 == 1'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013151027000276372}
+{"payload": "$where: '1 == 1'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014899829009664245}
+{"payload": "', $where: '1 == 1'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.03378624400647823}
+{"payload": "1, $where: '1 == 1'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02610874699894339}
+{"payload": "{ $ne: 1 }", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.021228256009635516}
+{"payload": "', $or: [ {}, { 'a':'a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016554351997911}
+{"payload": "' } ], $comment:'successful MongoDB injection'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018168448994401842}
+{"payload": "db.injection.insert({success:1});", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017566156995599158}
+{"payload": "db.injection.insert({success:1});return 1;db.stores.mapReduce(function() { { emit(1,1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006869610006106086}
+{"payload": "|| 1==1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012485076003940776}
+{"payload": "' && this.password.match(/.*/)//+%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004977988006430678}
+{"payload": "' && this.passwordzz.match(/.*/)//+%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005927663005422801}
+{"payload": "'%20%26%26%20this.password.match(/.*/)//+%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005554702001973055}
+{"payload": "'%20%26%26%20this.passwordzz.match(/.*/)//+%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006014858008711599}
+{"payload": "{$gt: ''}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014224240992916748}
+{"payload": "[$ne]=1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047221260028891265}
+{"payload": "';return 'a'=='a' && ''=='", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012406081004883163}
+{"payload": "\";return(true);var xyz='a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012932634010212496}
+{"payload": "0;return true", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018532440008129925}

@@ -1,0 +1,6 @@
+{"payload": "$HOME", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007571438000013586}
+{"payload": "$ENV{'HOME'}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01708783600042807}
+{"payload": "%d", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019871502998284996}
+{"payload": "%s", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016960200999164954}
+{"payload": "{0}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014268359998823144}
+{"payload": "%*.*s", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012945612994371913}

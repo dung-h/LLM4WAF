@@ -1,0 +1,8 @@
+{"payload": "/etc/apache2/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006079933998989873}
+{"payload": "/Library/WebServer/Documents/index.html", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005560381003306247}
+{"payload": "/private/var/log/appstore.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01408799500495661}
+{"payload": "/var/log/apache2/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005764236993854865}
+{"payload": "/var/log/apache2/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005000126999220811}
+{"payload": "/usr/local/nginx/conf/nginx.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010917678999248892}
+{"payload": "/var/log/nginx/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062900469929445535}
+{"payload": "/var/log/nginx/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006505159006337635}

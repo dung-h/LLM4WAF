@@ -1,0 +1,9 @@
+{"payload": "TRUE", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019000925996806473}
+{"payload": "true", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014650425997388083}
+{"payload": "1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014723726002557669}
+{"payload": "-1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01095914100005757}
+{"payload": "4294967295", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040181720032705925}
+{"payload": "0xFFFFFFFF", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011880239995662123}
+{"payload": "\\FFFFFFFF", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012614751998626161}
+{"payload": "\\FFFFFFFF\\", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01321518600161653}
+{"payload": "\\xFFFFFFFF", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015889366004557814}

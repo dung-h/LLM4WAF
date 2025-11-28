@@ -1,0 +1,15 @@
+{"payload": "Ω≈ç√∫˜µ≤≥÷", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018439302999468055}
+{"payload": "åß∂ƒ©˙∆˚¬…æ", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013611996997497045}
+{"payload": "œ∑´®†¥¨ˆøπ“‘", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016419917999883182}
+{"payload": "¡™£¢∞§¶•ªº–≠", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013441781004075892}
+{"payload": "¸˛Ç◊ı˜Â¯˘¿", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013367640000069514}
+{"payload": "ÅÍÎÏ˝ÓÔÒÚÆ☃", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014291601000877563}
+{"payload": "Œ„´‰ˇÁ¨ˆØ∏”’", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01731108399690129}
+{"payload": "`⁄€‹›ﬁﬂ‡°·‚—±", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013405410005361773}
+{"payload": "⅛⅜⅝⅞", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01406765900173923}
+{"payload": "ЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005911956999625545}
+{"payload": "٠١٢٣٤٥٦٧٨٩", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013986887999635655}
+{"payload": "⁰⁴⁵", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015318272002332378}
+{"payload": "₀₁₂", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01301345399406273}
+{"payload": "⁰⁴⁵₀₁₂", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01494288099638652}
+{"payload": "ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016827726998599246}

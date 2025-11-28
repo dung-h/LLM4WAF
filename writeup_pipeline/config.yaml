@@ -1,0 +1,146 @@
+# Pipeline Configuration
+
+# Crawler Settings
+crawlers:
+  ctftime:
+    enabled: true
+    limit: 200
+    rate_limit: 2.0 # seconds between requests
+    timeout: 10
+
+  github:
+    enabled: true
+    limit: 300
+    rate_limit: 1.0
+    timeout: 10
+    search_queries:
+      - "CTF writeup XSS extension:md"
+      - "web security writeup bypass extension:md"
+      - "hackthebox writeup XSS"
+      - "bug bounty writeup payload"
+      - "CTF web challenge writeup"
+
+  medium:
+    enabled: true
+    limit: 100
+    rate_limit: 3.0
+    timeout: 15
+    tags:
+      - bug-bounty
+      - web-security
+      - xss
+      - penetration-testing
+      - ctf-writeup
+
+  portswigger:
+    enabled: true
+    limit: 50
+    rate_limit: 2.0
+    timeout: 10
+    categories:
+      - xss
+      - sql-injection
+      - xxe
+      - csrf
+      - ssrf
+
+  exploitdb:
+    enabled: false # Use GitHub clone instead
+    repo_url: "https://github.com/offensive-security/exploitdb.git"
+    clone_depth: 1
+    filter_categories:
+      - webapps
+      - remote
+
+  payloads_all_the_things:
+    enabled: true
+    base_url: "https://raw.githubusercontent.com/swisskyrepo/PayloadsAllTheThings/master/"
+    files:
+      - "XSS Injection/README.md"
+      - "SQL Injection/README.md"
+      - "XXE Injection/README.md"
+      - "CSRF Injection/README.md"
+      - "Command Injection/README.md"
+
+# Extractor Settings
+extractors:
+  model: "google/gemma-2-2b-it"
+  device: "auto"
+  dtype: "float16"
+  batch_size: 10
+  chunk_size: 4000 # chars per chunk
+  max_new_tokens: 500
+  temperature: 0.7
+  prompt_version: "v2_strict" # See extractors/prompts.py
+
+# Validator Settings
+validators:
+  content:
+    min_length: 5
+    max_length: 1000
+    allowed_types:
+      - xss
+      - sqli
+    disallowed_patterns:
+      - "^https?://" # URLs
+      - "^function" # Code snippets
+      - "flag{" # CTF flags
+
+  format:
+    required_fields:
+      - payload
+      - attack_type
+      - bypass_technique
+    optional_fields:
+      - waf_bypassed
+      - context
+
+# WAF Testing Settings
+waf_testing:
+  enabled: true
+  waf_url: "http://localhost:8080"
+  endpoints:
+    xss: "/vulnerabilities/xss_r/"
+    sqli: "/vulnerabilities/sqli/"
+  workers: 40
+  timeout: 5
+  verify_ssl: false
+
+# Data Storage
+data:
+  raw_writeups: "writeup_pipeline/data/raw/writeups.jsonl"
+  extracted_payloads: "writeup_pipeline/data/extracted/payloads.jsonl"
+  validated_payloads: "writeup_pipeline/data/validated/payloads.jsonl"
+  waf_results: "writeup_pipeline/data/passed/waf_results.jsonl"
+  final_dataset: "writeup_pipeline/data/passed/final_dataset.jsonl"
+
+# Logging
+logging:
+  level: "INFO" # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "writeup_pipeline/pipeline.log"
+
+# Pipeline Execution
+pipeline:
+  stages:
+    - crawl
+    - extract
+    - validate
+    - waf_test
+    - merge
+
+  # Continue from last checkpoint
+  resume: true
+  checkpoint_file: "writeup_pipeline/checkpoint.json"
+
+# Metrics & Monitoring
+monitoring:
+  track_progress: true
+  save_stats: true
+  stats_file: "writeup_pipeline/stats.json"
+
+  expected_rates:
+    crawl_per_writeup: 2.0 # seconds
+    extract_per_writeup: 55.0 # seconds (Gemma 2 2B)
+    validate_pass_rate: 0.7 # 70%
+    waf_pass_rate: 0.1 # 10%

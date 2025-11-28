@@ -1,0 +1,24 @@
+{"payload": "#getURL,javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008596080006100237}
+{"payload": "#goto,javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00412035699991975}
+{"payload": "?javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034174449974671006}
+{"payload": "?alert(1)\",", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.013022245999309234}
+{"payload": "?getURL(javascript:alert(1))\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005341897995094769}
+{"payload": "?asfunction:getURL,javascript:alert(1)//\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0043971900013275445}
+{"payload": "?getURL,javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006961368999327533}
+{"payload": "?goto,javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007082873999024741}
+{"payload": "?clickTAG=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006945203000213951}
+{"payload": "?url=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006772109001758508}
+{"payload": "?clickTAG=javascript:alert(1)&TargetAS=\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009612134992494248}
+{"payload": "?TargetAS=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.011616240997682326}
+{"payload": "?skinName=asfunction:getURL,javascript:alert(1)//\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008063236004090868}
+{"payload": "?baseurl=asfunction:getURL,javascript:alert(1)//\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008523448996129446}
+{"payload": "?base=javascript:alert(0)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007167750998632982}
+{"payload": "?onend=javascript:alert(1)//\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004830735007999465}
+{"payload": "?userDefined=');function someFunction(a){}alert(1)//\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0060295019939076155}
+{"payload": "?URI=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004711743997177109}
+{"payload": "?callback=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005302357007167302}
+{"payload": "?getURLValue=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006805861004977487}
+{"payload": "?goto=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008976141005405225}
+{"payload": "?pg=javascript:alert(1)\",", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007477257007849403}
+{"payload": "?page=javascript:alert(1)\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006488594997790642}
+{"payload": "?playerready=alert(document.cookie)", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.008239732997026294}

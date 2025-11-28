@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import time
+import logging
 from dataclasses import dataclass
 
 import yaml
@@ -16,7 +17,25 @@ from transformers import (
 )
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from trl import SFTTrainer
-from transformers import TrainingArguments
+from transformers import TrainingArguments, TrainerCallback
+
+# --- Setup Logging ---
+# Ensure logs are written to the file and flushed, preventing cache issues.
+log_formatter = logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s")
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# File handler
+file_handler = logging.FileHandler("SFT.log", mode='w')
+file_handler.setFormatter(log_formatter)
+# Ensure the handler flushes messages immediately
+file_handler.flush = lambda: None # No-op to prevent library from closing it
+logger.addHandler(file_handler)
+
+# Console handler
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(log_formatter)
+logger.addHandler(console_handler)
 
 
 def require_env_token(var: str = "HF_TOKEN") -> None:
@@ -24,15 +43,15 @@ def require_env_token(var: str = "HF_TOKEN") -> None:
     if not os.environ.get(var):
         # Try to load from cache
         token_path = os.path.expanduser("~/.cache/huggingface/token")
-        print(f"[DEBUG] Checking token path: {token_path}")
-        print(f"[DEBUG] Path exists: {os.path.exists(token_path)}")
+        logger.debug(f"Checking token path: {token_path}")
+        logger.debug(f"Path exists: {os.path.exists(token_path)}")
         if os.path.exists(token_path):
             with open(token_path, 'r') as f:
                 token = f.read().strip()
                 os.environ[var] = token
-                print(f"✅ Loaded HF_TOKEN from cache (len={len(token)})")
+                logger.info(f"✅ Loaded HF_TOKEN from cache (len={len(token)})")
                 return
-        print(f"[DEBUG] Token not found, aborting")
+        logger.debug(f"Token not found, aborting")
         raise SystemExit(f"Environment variable {var} not set and no cached token found. Aborting for safety.")
 
 
@@ -62,82 +81,6 @@ def build_lora_config(cfg: Dict[str, Any]) -> LoraConfig:
     )
 
 
-def format_example(example: Dict[str, Any], fields: Dict[str, str], prompt_format_type: str = "default") -> str:
-    """
-    Formats a single example into a string based on the specified prompt_format_type.
-    """
-    # Safely get and strip all relevant fields
-    payload = (example.get(fields["payload"]) or "").strip()
-    reasoning = (example.get(fields["reasoning"]) or "").strip()
-
-    instr = (example.get(fields.get("instruction")) or "").strip() if "instruction" in fields else ""
-    ctx = (example.get(fields.get("context")) or "").strip() if "context" in fields else ""
-    cons = (example.get(fields.get("constraints")) or "").strip() if "constraints" in fields else ""
-    atk = (example.get("attack_type") or "").strip()
-
-    # Construct user and assistant content based on available fields
-    user_content_parts = []
-    if atk:
-        user_content_parts.append(f"Attack-Type: {atk}")
-    if instr:
-        user_content_parts.append(f"Instruction: {instr}")
-    if ctx:
-        user_content_parts.append(f"Context: {ctx}")
-    if cons:
-        user_content_parts.append(f"Constraints: {cons}")
-    
-    user_message = "\n".join(user_content_parts)
-    assistant_message = f"Payload: {payload}\nReasoning: {reasoning}"
-
-    if prompt_format_type == "llama3_instruct":
-        system_message = "You are a helpful AI assistant specialized in WAF penetration testing. Your task is to generate SQL injection payloads and reasoning based on the provided instructions and WAF analysis."
-        
-        return (
-            "<|begin_of_text|>"
-            "<|start_header_id|>system<|end_header_id|>\n"
-            f"{system_message}\n"
-            "<|start_header_id|>user<|end_header_id|>\n"
-            f"{user_message}\n"
-            "<|start_header_id|>assistant<|end_header_id|>\n"
-            f"{assistant_message}<|eot_id|>"
-        )
-    elif prompt_format_type == "v5_simple" or prompt_format_type == "default": # Existing formats
-        return user_message + "\n\n" + assistant_message
-    elif prompt_format_type == "simple": # Old "Simple" format
-        return assistant_message
-    else:
-        raise ValueError(f"Unknown prompt_format_type: {prompt_format_type}")
-
-
-def formatting_func(examples: Dict[str, List[str]], fields, prompt_format_type: str) -> List[str]:
-    """
-    Formats a batch of examples into a list of strings based on the specified prompt_format_type.
-    """
-    # If fields is a list, create default mapping
-    if isinstance(fields, list):
-        # Default: first field = payload, second field = reasoning
-        fields_dict = {
-            "instruction": "instruction",
-            "context": "context",
-            "constraints": "constraints",
-            "payload": fields[0] if len(fields) > 0 else "payload",
-            "reasoning": fields[1] if len(fields) > 1 else "reasoning"
-        }
-    else:
-        fields_dict = fields
-    
-    out = []
-    # Use payload field as length reference (all fields should have same length)
-    ref_field = fields_dict["payload"]
-    for i in range(len(examples[ref_field])):
-        ex = {k: examples[k][i] for k in examples}
-        # Inject attack_type if present to help the model disambiguate tasks
-        if "attack_type" in examples:
-            ex["attack_type"] = examples["attack_type"][i]
-        out.append(format_example(ex, fields_dict, prompt_format_type)) # Pass prompt_format_type
-    return out
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config")
@@ -149,20 +92,20 @@ def main() -> None:
     model_name = cfg["model_name"]
     auth_env = cfg.get("use_auth_token_env", "HF_TOKEN")
     auth_token = os.environ.get(auth_env)
-    prompt_format_type = cfg.get("prompt_format_type", "default") # Read from config
 
     bnb_cfg = build_bnb_config(cfg)
 
-    print("Loading tokenizer…")
-    tok = AutoTokenizer.from_pretrained(model_name, use_auth_token=auth_token)
+    logger.info("Loading tokenizer…")
+    tok = AutoTokenizer.from_pretrained(model_name, use_auth_token=auth_token, local_files_only=False)
     tok.padding_side = cfg.get("padding_side", "left")
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
 
-    print("Loading 4-bit model… (this may take a while)")
+    logger.info("Loading 4-bit model… (this may take a while)")
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         use_auth_token=auth_token,
+        local_files_only=False,
         device_map="auto",
         quantization_config=bnb_cfg,
         torch_dtype=torch.float16,
@@ -172,7 +115,7 @@ def main() -> None:
         model.gradient_checkpointing_enable()
         model.config.use_cache = False
 
-    print("Preparing k-bit training and applying DoRA adapters…")
+    logger.info("Preparing k-bit training and applying DoRA adapters…")
     model = prepare_model_for_kbit_training(model)
     lora_cfg = build_lora_config(cfg)
     model = get_peft_model(model, lora_cfg)
@@ -180,26 +123,12 @@ def main() -> None:
     # Load datasets
     train_path = cfg["train_path"]
     eval_path = cfg.get("eval_path")
-    text_fields = cfg["text_fields"]
 
     data_files = {"train": train_path}
     if eval_path and os.path.exists(eval_path):
         data_files["validation"] = eval_path
 
     ds = load_dataset("json", data_files=data_files)
-
-    def _fmt_func(batch):
-        return {"text": formatting_func(batch, text_fields, prompt_format_type)} # Pass prompt_format_type
-
-    # Fix: text_fields can be list or dict
-    if isinstance(text_fields, dict):
-        cols = list(text_fields.values())
-    else:
-        cols = text_fields if isinstance(text_fields, list) else [text_fields]
-    
-    ds_proc = {}
-    for split in ds:
-        ds_proc[split] = ds[split].map(_fmt_func, batched=True, remove_columns=[c for c in ds[split].column_names if c not in cols])
 
     out_dir = cfg.get("output_dir", f"experiments/red_{int(time.time())}")
 
@@ -227,23 +156,23 @@ def main() -> None:
     if "max_steps" in cfg and int(cfg["max_steps"]) > 0:
         targs.max_steps = int(cfg["max_steps"])  # type: ignore
 
-    print("Initializing SFTTrainer…")
+    logger.info("Initializing SFTTrainer…")
     trainer = SFTTrainer(
         model=model,
         tokenizer=tok,
         args=targs,
-        train_dataset=ds_proc.get("train"),
-        eval_dataset=ds_proc.get("validation"),
+        train_dataset=ds["train"],
+        eval_dataset=ds.get("validation"),
+        dataset_text_field="prompt",
         max_seq_length=int(cfg.get("seq_length", 2048)),
         packing=False,
-        dataset_text_field="text",
     )
 
-    print("Starting training… (ctrl+c to stop)")
+    logger.info("Starting training… (ctrl+c to stop)")
     trainer.train()
-    print("Saving adapter…")
-    trainer.model.save_pretrained(os.path.join(out_dir, "adapter"))
-    print("Done.")
+    logger.info("Saving model using trainer.save_model()…")
+    trainer.save_model(out_dir) # save to the output_dir directly
+    logger.info("Done saving model.")
 
 
 if __name__ == "__main__":

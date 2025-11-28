@@ -1,0 +1,212 @@
+{"payload": "C:/$recycle.bin/s-1-5-18/desktop.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019152680994011462}
+{"payload": "C:/apache2/log/access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015406035992782563}
+{"payload": "C:/apache2/log/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016005761004635133}
+{"payload": "C:/apache2/log/error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017929497989825904}
+{"payload": "C:/apache2/log/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015383429010398686}
+{"payload": "C:/apache2/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048770239955047145}
+{"payload": "C:/apache2/logs/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01773263400536962}
+{"payload": "C:/apache2/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005989565994241275}
+{"payload": "C:/apache2/logs/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01651796599617228}
+{"payload": "C:/apache/log/access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016016962996218354}
+{"payload": "C:/apache/log/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01526321200071834}
+{"payload": "C:/apache/log/error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018174915996496566}
+{"payload": "C:/apache/log/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016027601988753304}
+{"payload": "C:/apache/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005920203009736724}
+{"payload": "C:/apache/logs/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005065899997134693}
+{"payload": "C:\\apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006292107005720027}
+{"payload": "C:/apache/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005379713009460829}
+{"payload": "C:/apache/logs/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004834883991861716}
+{"payload": "C:\\apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006833460996858776}
+{"payload": "C:/apache/php/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005315078989951871}
+{"payload": "C:/boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004915668003377505}
+{"payload": "C:\\boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0070274449972203}
+{"payload": "C:/documents and settings/administrator/desktop/desktop.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014654942002380267}
+{"payload": "C:/documents and settings/administrator/ntuser.dat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016256572998827323}
+{"payload": "C:/documents and settings/administrator/ntuser.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01423637599509675}
+{"payload": "C:/home2/bin/stable/apache/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006204388992046006}
+{"payload": "C:/home/bin/stable/apache/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005479423998622224}
+{"payload": "C:/inetpub/logs/logfiles", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014758221004740335}
+{"payload": "C:/inetpub/wwwroot/global.asa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005057011003373191}
+{"payload": "C:/inetpub/wwwroot/index.asp", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01511027300148271}
+{"payload": "C:/inetpub/wwwroot/web.config", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006542777002323419}
+{"payload": "C:/log/access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017644604988163337}
+{"payload": "C:/log/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016118996994919144}
+{"payload": "C:/log/error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016914629988605157}
+{"payload": "C:/log/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01909725599398371}
+{"payload": "C:/log/httpd/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015401077005662955}
+{"payload": "C:/log/httpd/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014721369007020257}
+{"payload": "C:/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054105220042401925}
+{"payload": "C:/logs/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005658319991198368}
+{"payload": "C:/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009300486999563873}
+{"payload": "C:/logs/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007356236994382925}
+{"payload": "C:/logs/httpd/access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01913927000714466}
+{"payload": "C:/logs/httpd/error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015166045996011235}
+{"payload": "C:/MININT/SMSOSD/OSDLOGS/VARIABLES.DAT", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01706041100260336}
+{"payload": "C:/mysql/bin/my.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005936799003393389}
+{"payload": "C:/mysql/data/hostname.err", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019337225996423513}
+{"payload": "C:/mysql/data/mysql.err", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006315003003692254}
+{"payload": "C:/mysql/data/mysql.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00604427998769097}
+{"payload": "C:/mysql/my.cnf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048738289915490896}
+{"payload": "C:/mysql/my.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007799450002494268}
+{"payload": "C:\\nginx-1.7.4\\conf\\nginx.conf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015877826008363627}
+{"payload": "C:\\nginx-1.7.4\\nginx.conf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017182789990329184}
+{"payload": "C:/opt/xampp/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049440299917478114}
+{"payload": "C:/opt/xampp/logs/access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052563150093192235}
+{"payload": "C:/opt/xampp/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005570869994699024}
+{"payload": "C:/opt/xampp/logs/error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047533269971609116}
+{"payload": "C:/php4/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00466616298945155}
+{"payload": "C:/php4/sessions/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01596038400020916}
+{"payload": "C:/php5/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0064398989925393835}
+{"payload": "C:/php5/sessions/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01819833999616094}
+{"payload": "C:/php/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005738293009926565}
+{"payload": "C:/php/sessions/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01577708100376185}
+{"payload": "C:/program files/apache group/apache2/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005058865004684776}
+{"payload": "C:/program files/apachegroup/apache2/conf/httpd.conf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014815901988185942}
+{"payload": "C:/programfiles/apachegroup/apache2/conf/httpd.conf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016740363993449137}
+{"payload": "C:/program files/apache group/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00692269200226292}
+{"payload": "C:/program files/apachegroup/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005505392997292802}
+{"payload": "C:/programfiles/apachegroup/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00538389099529013}
+{"payload": "C:/program files/apache group/apache/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006353366989060305}
+{"payload": "C:/program files/apache group/apache/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005861629993887618}
+{"payload": "C:\\Program Files\\Apache Software Foundation\\Apache2.2\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0091649269888876}
+{"payload": "C:\\Program Files\\Apache Software Foundation\\Apache2.2\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006268012002692558}
+{"payload": "C:\\Program Files\\Apache Software Foundation\\Apache2.2\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005335927999112755}
+{"payload": "C:/program files/filezilla server/filezilla server.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015487885000766255}
+{"payload": "C:/program files/mysql/data/hostname.err", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014695709003717639}
+{"payload": "C:/program files/mysql/data/mysql-bin.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00702427800570149}
+{"payload": "C:/program files/mysql/data/mysql.err", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005668697995133698}
+{"payload": "C:/program files/mysql/data/mysql.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005384541000239551}
+{"payload": "C:/program files/mysql/my.cnf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005729255004553124}
+{"payload": "C:/program files/mysql/my.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004998089003493078}
+{"payload": "C:/program files/mysql/mysql server 5.0/data/hostname.err", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01565654699516017}
+{"payload": "C:/program files/mysql/mysql server 5.0/data/mysql-bin.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005977844994049519}
+{"payload": "C:/program files/mysql/mysql server 5.0/data/mysql.err", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006462552992161363}
+{"payload": "C:/program files/mysql/mysql server 5.0/data/mysql.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047622370038880035}
+{"payload": "C:/program files/mysql/mysql server 5.0/my.cnf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004485780009417795}
+{"payload": "C:/program files/mysql/mysql server 5.0/my.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058286090061301365}
+{"payload": "C:/program files/mysql/mysql server 5.1/my.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01564385498932097}
+{"payload": "C:/program files (x86)/apache group/apache2/conf/httpd.conf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01767794600164052}
+{"payload": "C:/program files (x86)/apache group/apache/conf/access.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01480540499323979}
+{"payload": "C:/program files (x86)/apache group/apache/conf/error.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014299410991952755}
+{"payload": "C:/program files (x86)/apache group/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005767673006630503}
+{"payload": "C:/program files (x86)/filezilla server/filezilla server.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01618502700875979}
+{"payload": "C:/program files (x86)/xampp/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007244541993713938}
+{"payload": "C:/program files/xampp/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007595556991873309}
+{"payload": "C:/programfiles/xampp/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006340156003716402}
+{"payload": "C:/program files/xampp/apache/conf/httpd.confetc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005105901000206359}
+{"payload": "C:/sysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014579695998691022}
+{"payload": "C:/sysprep/sysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014792727000894956}
+{"payload": "C:/sysprep/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015521157998591661}
+{"payload": "C:/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01571516299736686}
+{"payload": "C:/system32/inetsrv/metabase.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013233920995844528}
+{"payload": "C:/system volume information/wpsettings.dat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013775815008557402}
+{"payload": "C:/unattended.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012981420004507527}
+{"payload": "C:/unattended.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01575849599612411}
+{"payload": "C:/unattend.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013488267009961419}
+{"payload": "C:/unattend.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013559172002715059}
+{"payload": "C:/users/administrator/desktop/desktop.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014749473994015716}
+{"payload": "C:/users/administrator/ntuser.dat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01430794301268179}
+{"payload": "C:/users/administrator/ntuser.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015185883996309713}
+{"payload": "C:\\wamp\\apache2\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005508319998625666}
+{"payload": "C:\\wamp\\apache2\\logs\\access_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01604965000296943}
+{"payload": "C:\\wamp\\apache2\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005476723992615007}
+{"payload": "C:\\wamp\\apache2\\logs\\error_log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015159774004132487}
+{"payload": "C:\\wamp\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006691413000226021}
+{"payload": "C:\\wamp\\logs\\access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005114763000165112}
+{"payload": "C:\\wamp\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051795279869111255}
+{"payload": "C:\\wamp\\logs\\error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006675815995549783}
+{"payload": "C:/windows/csc/v2.0.6/pq", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014978257997427136}
+{"payload": "C:/windows/csc/v2.0.6/sm", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01808779400016647}
+{"payload": "C:/windows/debug/netsetup.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005116383996210061}
+{"payload": "C:/windows/explorer.exe", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01545695000095293}
+{"payload": "C:/windows/iis6.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017210065008839592}
+{"payload": "C:/windows/iis6.log (5,6 or 7)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01500877199578099}
+{"payload": "C:/windows/iis7.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015115146990865469}
+{"payload": "C:/windows/iis8.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01658299900009297}
+{"payload": "C:/windows/notepad.exe", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016689519994542934}
+{"payload": "C:/windows/panther/setupinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01847935099794995}
+{"payload": "C:/windows/panther/setupinfo.bak", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016326229000696912}
+{"payload": "C:/windows/panther/sysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014526390004903078}
+{"payload": "C:/windows/panther/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01718115698895417}
+{"payload": "C:/windows/panther/unattended.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017863335000583902}
+{"payload": "C:/windows/panther/unattended.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015622384002199396}
+{"payload": "C:/windows/panther/unattend/setupinfo", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017998707000515424}
+{"payload": "C:/windows/panther/unattend/setupinfo.bak", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01577627900405787}
+{"payload": "C:/windows/panther/unattend/sysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017337835000944324}
+{"payload": "C:/windows/panther/unattend/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016931552003370598}
+{"payload": "C:/windows/panther/unattend.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01632990401412826}
+{"payload": "C:/windows/panther/unattend/unattended.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015895830001682043}
+{"payload": "C:/windows/panther/unattend/unattended.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016421641994384117}
+{"payload": "C:/windows/panther/unattend/unattend.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015591994990245439}
+{"payload": "C:/windows/panther/unattend/unattend.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01494781399378553}
+{"payload": "C:/windows/panther/unattend.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0196027240017429}
+{"payload": "C:/windows/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007145960989873856}
+{"payload": "C:/windows/repair/sam", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.025240128001314588}
+{"payload": "C:/windows/repair/security", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01797785000235308}
+{"payload": "C:/windows/repair/software", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02127342599851545}
+{"payload": "C:/windows/repair/system", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01892377699550707}
+{"payload": "C:/windows/system32/config/appevent.evt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019834198988974094}
+{"payload": "C:/windows/system32/config/default.sav", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0073193139978684485}
+{"payload": "C:/windows/system32/config/regback/default", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016195663003600203}
+{"payload": "C:/windows/system32/config/regback/sam", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018909793012426235}
+{"payload": "C:/windows/system32/config/regback/security", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016318030990078114}
+{"payload": "C:/windows/system32/config/regback/software", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01553058398712892}
+{"payload": "C:/windows/system32/config/regback/system", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017068089000531472}
+{"payload": "C:/windows/system32/config/sam", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00567735500226263}
+{"payload": "C:/windows/system32/config/secevent.evt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017461045004893094}
+{"payload": "C:/windows/system32/config/security.sav", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017653949005762115}
+{"payload": "C:/windows/system32/config/software.sav", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006029524010955356}
+{"payload": "C:/windows/system32/config/system", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006018732005031779}
+{"payload": "C:/windows/system32/config/system.sa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004645963999792002}
+{"payload": "C:/windows/system32/config/system.sav", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043725309951696545}
+{"payload": "C:/windows/system32/drivers/etc/hosts", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006522409996250644}
+{"payload": "C:/windows/system32/eula.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013173314000596292}
+{"payload": "C:/windows/system32/inetsrv/config/applicationhost.config", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007025135011645034}
+{"payload": "C:/windows/system32/inetsrv/config/schema/aspnet_schema.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017414971996913664}
+{"payload": "C:/windows/system32/license.rtf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017212923004990444}
+{"payload": "C:/windows/system32/logfiles/httperr/httperr1.log", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015478512010304257}
+{"payload": "C:/windows/system32/sysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016818078001961112}
+{"payload": "C:/windows/system32/sysprepsysprep.inf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016470585003844462}
+{"payload": "C:/windows/system32/sysprep/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01745422299427446}
+{"payload": "C:/windows/system32/sysprepsysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01554957899497822}
+{"payload": "C:/windows/system32/sysprepunattended.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015084988001035526}
+{"payload": "C:/windows/system32/sysprepunattended.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015616251999745145}
+{"payload": "C:/windows/system32/sysprepunattend.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016436831996543333}
+{"payload": "C:/windows/system32/sysprepunattend.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015450933002284728}
+{"payload": "C:/windows/system32/sysprep.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016389940996305086}
+{"payload": "C:/windows/system32/unattended.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016550066997297108}
+{"payload": "C:/windows/system32/unattended.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015829979005502537}
+{"payload": "C:/windows/system32/unattend.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019761845003813505}
+{"payload": "C:/windows/system32/unattend.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017425771002308466}
+{"payload": "C:/windows/system.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015327419998357072}
+{"payload": "C:/windows/temp/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014383479006937705}
+{"payload": "C:/windows/windowsupdate.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00678001600317657}
+{"payload": "C:/windows/win.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015052005008328706}
+{"payload": "C:/winnt/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068412960099522024}
+{"payload": "C:/winnt/win.ini", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016593845997704193}
+{"payload": "C:/xampp/apache/bin/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043401730072218925}
+{"payload": "C:/xampp/apache/conf/httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050069019926013425}
+{"payload": "C:/xampp/apache/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049629999994067475}
+{"payload": "C:\\xampp\\apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004571851997752674}
+{"payload": "C:\\xampp\\apache\\logs\\access_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005665669988957234}
+{"payload": "C:/xampp/apache/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005816402001073584}
+{"payload": "C:\\xampp\\apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004724882994196378}
+{"payload": "C:\\xampp\\apache\\logs\\error_log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005658688998664729}
+{"payload": "C:/xampp/filezillaftp/filezilla server.xml", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004967228000168689}
+{"payload": "C:/xampp/filezillaftp/logs", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015503763992455788}
+{"payload": "C:/xampp/filezillaftp/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00701410899637267}
+{"payload": "C:/xampp/filezillaftp/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00740857700293418}
+{"payload": "C:/xampp/mercurymail/logs/access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008430026995483786}
+{"payload": "C:/xampp/mercurymail/logs/error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005854592003743164}
+{"payload": "C:/xampp/mercurymail/mercury.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0060620959993684664}
+{"payload": "C:/xampp/mysql/data/mysql.err", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053396749863168225}
+{"payload": "C:/xampp/phpmyadmin/config.inc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016735936995246448}
+{"payload": "C:/xampp/phpmyadmin/config.inc.php", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005937525987974368}
+{"payload": "C:/xampp/phpmyadmin/phpinfo.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01838116199360229}
+{"payload": "C:/xampp/php/php.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006252002000110224}
+{"payload": "C:/xampp/sendmail/sendmail.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006957598001463339}
+{"payload": "C:/xampp/sendmail/sendmail.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005295782000757754}
+{"payload": "C:/xampp/tomcat/conf/tomcat-users.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01711230000364594}
+{"payload": "C:/xampp/tomcat/conf/web.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01411884899425786}
+{"payload": "C:/xampp/webalizer/webalizer.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005238319994532503}
+{"payload": "C:/xampp/webdav/webdav.txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013928244996350259}

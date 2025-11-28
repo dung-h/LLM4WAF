@@ -1,0 +1,14 @@
+{"payload": "backup", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0196612629952142}
+{"payload": "bck", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015182063005340751}
+{"payload": "old", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01588285100297071}
+{"payload": "save", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011845419001474511}
+{"payload": "bak", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012564521006424911}
+{"payload": "sav", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012678551000135485}
+{"payload": "~", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013683533004950732}
+{"payload": "copy", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012811110995244235}
+{"payload": "orig", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012349101998552214}
+{"payload": "tmp", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012227974999404978}
+{"payload": "txt", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013606224005343392}
+{"payload": "back", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012131579998822417}
+{"payload": "swp", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011774143000366166}
+{"payload": "rej", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011570469003345352}

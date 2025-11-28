@@ -1,0 +1,8 @@
+{"payload": "Copy_(1)_of_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014257896997150965}
+{"payload": "Copy_(2)_of_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012359961998299696}
+{"payload": "Copy%20of%20", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011451026002760045}
+{"payload": "Copy_of_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010429535002913326}
+{"payload": "Copy_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010951958000077866}
+{"payload": "Copy%20", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011480162000225391}
+{"payload": "_", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011064514997997321}
+{"payload": "%20", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010605231997033115}

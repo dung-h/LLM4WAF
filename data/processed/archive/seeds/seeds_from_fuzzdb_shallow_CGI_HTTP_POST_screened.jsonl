@@ -1,0 +1,7 @@
+{"payload": "post-query", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019031053998332936}
+{"payload": "Config1.htm", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016224618004343938}
+{"payload": "My_eGallery/public/displayCategory.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014357592997839674}
+{"payload": "servlet/custMsg?guestName=<script>alert(document.cookie)(\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004560128996672574}
+{"payload": "servlet/CookieExample?cookiename=<script>alert(document.cookie)(\\", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004400983998493757}
+{"payload": "lastlines.cgi?process", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01209613999526482}
+{"payload": "Mem/dynaform/Login.htm?WINDWEB_URL=%2FMem%2Fdynaform%2FLogin.htm&ListIndexUser=0&sWebParam1=admin000", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014748282002983615}

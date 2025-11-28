@@ -1,0 +1,5 @@
+{"payload": "c99.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.022467465008958243}
+{"payload": "c99shell.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016335560998413712}
+{"payload": "r57.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014512914989609271}
+{"payload": "r58.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013501498993718997}
+{"payload": "dra.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01295947699691169}

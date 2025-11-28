@@ -1,0 +1,40 @@
+{"payload": "Copyright (c) 2010-2019, Adam Muntner", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015069686000060756}
+{"payload": "All rights reserved.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013284720000228845}
+{"payload": "Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015305667999200523}
+{"payload": "Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014301228999102022}
+{"payload": "Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01427540599979693}
+{"payload": "Neither the name of fuzzdb  nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013882251005270518}
+{"payload": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013140451002982445}
+{"payload": "Licensed under Creative Commons - By Attribution", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012818536997656338}
+{"payload": "see", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013699579001695383}
+{"payload": "http://creativecommons.org/licenses/by/3.0/legalcode", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012576503999298438}
+{"payload": "----", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012066146002325695}
+{"payload": "contains dictionaries from Skipfish", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012417539001035038}
+{"payload": "Copyright 2010 Michal Zalewski", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01265008699556347}
+{"payload": "Licensed under the Apache License, Version 2.0 (the \"License\");", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013179665002098773}
+{"payload": "you may not use this file except in compliance with the License.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01299807800387498}
+{"payload": "You may obtain a copy of the License at", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013257193997560535}
+{"payload": "http://www.apache.org/licenses/LICENSE-2.0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012846167002862785}
+{"payload": "Unless required by applicable law or agreed to in writing, software", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012957013001141604}
+{"payload": "distributed under the License is distributed on an \"AS IS\" BASIS,", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013275915996928234}
+{"payload": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013136663001205307}
+{"payload": "See the License for the specific language governing permissions and", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01510427500033984}
+{"payload": "limitations under the License.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013397613998677116}
+{"payload": "----", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012437734003469814}
+{"payload": "The MIT License (MIT)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013076347000605892}
+{"payload": "Copyright (c) 2015 Max Woolf", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013773794002190698}
+{"payload": "Permission is hereby granted, free of charge, to any person obtaining a copy", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013162372997612692}
+{"payload": "of this software and associated documentation files (the \"Software\"), to deal", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013175388005038258}
+{"payload": "in the Software without restriction, including without limitation the rights", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013181941001676023}
+{"payload": "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014328617995488457}
+{"payload": "copies of the Software, and to permit persons to whom the Software is", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014095692000410054}
+{"payload": "furnished to do so, subject to the following conditions:", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012852457999542821}
+{"payload": "The above copyright notice and this permission notice shall be included in all", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013384658996073995}
+{"payload": "copies or substantial portions of the Software.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013672289001988247}
+{"payload": "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012640506000025198}
+{"payload": "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013840268002240919}
+{"payload": "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012912092002807185}
+{"payload": "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014604288000555243}
+{"payload": "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012626253999769688}
+{"payload": "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012461700003768783}
+{"payload": "SOFTWARE.", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013886360000469722}

@@ -1,0 +1,12 @@
+{"payload": "; --", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01887668398558162}
+{"payload": "'; --", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01567838600021787}
+{"payload": "'); --", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016676718994858675}
+{"payload": "'; exec master..xp_cmdshell 'ping 10.10.1.2'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0070150329993339255}
+{"payload": "' grant connect to name; grant resource to name; --", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01493193999340292}
+{"payload": "' or 1=1 --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067165579966967925}
+{"payload": "' union (select @@version) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0061381739942589775}
+{"payload": "' union (select NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006447791995014995}
+{"payload": "' union (select NULL, NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005309239000780508}
+{"payload": "' union (select NULL, NULL, NULL,  (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004846616997383535}
+{"payload": "' union (select NULL, NULL, NULL, NULL,  (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00628477698774077}
+{"payload": "' union (select NULL, NULL, NULL, NULL,  NULL, (select @@version)) --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00521427599596791}

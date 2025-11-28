@@ -1,0 +1,10 @@
+{"payload": "/%3f.jsp", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01582611399499001}
+{"payload": "/?M=D", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013533518998883665}
+{"payload": "/?S=D", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012799939002434257}
+{"payload": "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012445847998606041}
+{"payload": "/cgi-bin/test-cgi?/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012607909993676003}
+{"payload": "/cgi-bin/test-cgi?*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013519803003873676}
+{"payload": "/%00/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004122623002331238}
+{"payload": "/%2e/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01300193699717056}
+{"payload": "/%2f/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012429075999534689}
+{"payload": "/%5c/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012177311997220386}

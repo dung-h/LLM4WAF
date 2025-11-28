@@ -1,0 +1,2 @@
+{"payload": "SLEEP(1) /*‘ or SLEEP(1) or ‘“ or SLEEP(1) or “*/", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008136542994179763}
+{"payload": "SELECT 1,2,IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1))/*'XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),SLEEP(1)))OR'|\"XOR(IF(SUBSTR(@@version,1,1)<5,BENCHMARK(2000000,SHA1(0xDE7EC71F1)),​SLEEP(1)))OR\"*/ FROM some_table WHERE ex = ample", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005432603997178376}

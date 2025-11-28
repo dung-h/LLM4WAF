@@ -1,0 +1,5 @@
+{"payload": "{PHPSCRIPT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.023705184998107143}
+{"payload": "{PHPSCRIPT}.phtml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01625527899886947}
+{"payload": "{PHPSCRIPT}.php.html", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017904574997373857}
+{"payload": "{PHPSCRIPT}.php.php.rar", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016933070997765753}
+{"payload": "{PHPSCRIPT}.php.rar", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017644727005972527}

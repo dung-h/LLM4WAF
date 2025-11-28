@@ -1,0 +1,3 @@
+{"payload": "postgres", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016708469003788196}
+{"payload": "scott", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01478049201250542}
+{"payload": "admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013162119998014532}

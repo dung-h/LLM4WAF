@@ -1,0 +1,68 @@
+{"payload": "<!--#exec cmd=\"/usr/bin/id\"-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006538709996675607}
+{"payload": "<!--#exec cmd=\"id\"-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0041685860051075}
+{"payload": "/index.html|id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014705396999488585}
+{"payload": ";id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01466617899859557}
+{"payload": ";id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014514757000142708}
+{"payload": ";netstat -a;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00475512100092601}
+{"payload": ";id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014604988005885389}
+{"payload": "|id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013899992001825012}
+{"payload": "|/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004578077998303343}
+{"payload": "|id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014238136995118111}
+{"payload": "|/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005415813000581693}
+{"payload": "||/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004569586999423336}
+{"payload": "|id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013659560005180538}
+{"payload": "||/usr/bin/id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004665264998038765}
+{"payload": ";id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014557775997673161}
+{"payload": ";|/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00490074999834178}
+{"payload": "\\n/bin/ls -al\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005216124998696614}
+{"payload": "\\n/usr/bin/id\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005020600998250302}
+{"payload": "\\nid\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014301364004495554}
+{"payload": "\\n/usr/bin/id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004443152996827848}
+{"payload": "\\nid;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014280783994763624}
+{"payload": "\\n/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004306568000174593}
+{"payload": "\\nid|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013143773998308461}
+{"payload": ";/usr/bin/id\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004595173995767254}
+{"payload": ";id\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014597334004065488}
+{"payload": "|usr/bin/id\\n", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004640854000172112}
+{"payload": "|nid\\n", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014492699003312737}
+{"payload": "`id`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014271025000198279}
+{"payload": "`/usr/bin/id`", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004453447996638715}
+{"payload": "a);id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013737294997554272}
+{"payload": "a;id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013289663002069574}
+{"payload": "a);id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01281378600106109}
+{"payload": "a;id;", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01260099600040121}
+{"payload": "a);id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013449650999973528}
+{"payload": "a;id|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0147802520004916}
+{"payload": "a)|id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013010155998927075}
+{"payload": "a|id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013658039999427274}
+{"payload": "a)|id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044020389977958985}
+{"payload": "a|id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013799244996334892}
+{"payload": "|/bin/ls -al", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004355878998467233}
+{"payload": "a);/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005086318000394385}
+{"payload": "a;/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005183669003599789}
+{"payload": "a);/usr/bin/id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005104361996927764}
+{"payload": "a;/usr/bin/id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00511618400196312}
+{"payload": "a);/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044777229995816015}
+{"payload": "a;/usr/bin/id|", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004369035996205639}
+{"payload": "a)|/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005607377999695018}
+{"payload": "a|/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007728665004833601}
+{"payload": "a)|/usr/bin/id;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0052436690020840615}
+{"payload": "a|/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004457470000488684}
+{"payload": ";system('cat%20/etc/passwd')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004816398999537341}
+{"payload": ";system('id')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0063842559975455515}
+{"payload": ";system('/usr/bin/id')", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005351675994461402}
+{"payload": "%0Acat%20/etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004446359998837579}
+{"payload": "%0A/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00571786799991969}
+{"payload": "%0Aid", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014596870001696516}
+{"payload": "%0A/usr/bin/id%0A", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004389388996060006}
+{"payload": "%0Aid%0A", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013877962999686133}
+{"payload": "& ping -i 30 127.0.0.1 &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004707578998932149}
+{"payload": "& ping -n 30 127.0.0.1 &", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005361349001759663}
+{"payload": "%0a ping -i 30 127.0.0.1 %0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014343791001010686}
+{"payload": "`ping 127.0.0.1`", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004925317996821832}
+{"payload": "| id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015686890001234133}
+{"payload": "& id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013897360004193615}
+{"payload": "; id", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01289786100096535}
+{"payload": "%0a id %0a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013396116002695635}
+{"payload": "`id`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01719900299940491}
+{"payload": "$;/usr/bin/id", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005603423000138719}

@@ -1,0 +1,49 @@
+# SFT Configuration for v13 - DeepSeek 7B Base Instruct
+model_name: "deepseek-ai/deepseek-llm-7b-base"
+use_auth_token_env: "HF_TOKEN"
+
+# Dataset paths
+train_path: "data/processed/v13_sft_data.jsonl"
+eval_path: null # No separate eval set for now
+
+# Output directory
+output_dir: "experiments/deepseek-7b-sft-diverse-v13"
+
+# Quantization
+load_in_4bit: True
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: True
+bnb_4bit_compute_dtype: "bfloat16"
+
+# LoRA / DoRA
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+use_dora: True
+target_modules:
+  - "q_proj"
+  - "k_proj"
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+
+# Training arguments
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+num_train_epochs: 2.0
+learning_rate: 2.0e-4
+weight_decay: 0.0
+warmup_ratio: 0.03
+lr_scheduler_type: "cosine"
+fp16: False
+bf16: True
+logging_steps: 10
+save_steps: 200
+eval_steps: 200
+save_total_limit: 2
+optim: "paged_adamw_8bit"
+seq_length: 2048
+gradient_checkpointing: True
+padding_side: "right"

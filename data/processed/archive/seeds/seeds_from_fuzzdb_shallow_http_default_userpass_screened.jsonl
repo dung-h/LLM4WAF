@@ -1,0 +1,7 @@
+{"payload": "# needs help", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013958469993667677}
+{"payload": "connect connect", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01348539000900928}
+{"payload": "sitecom sitecom", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012588445999426767}
+{"payload": "admin 1234", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01155312500486616}
+{"payload": "cisco cisco", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014158615987980738}
+{"payload": "cisco sanfran", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013799553998978809}
+{"payload": "private private", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01375962799647823}

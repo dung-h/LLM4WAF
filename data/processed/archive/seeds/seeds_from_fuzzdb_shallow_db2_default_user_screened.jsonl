@@ -1,0 +1,5 @@
+{"payload": "db2inst1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015626109001459554}
+{"payload": "dasusr1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010979347003740259}
+{"payload": "db2fenc1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010264010998071171}
+{"payload": "admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010033156999270432}
+{"payload": "db2admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01134400800219737}

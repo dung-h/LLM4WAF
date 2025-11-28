@@ -1,0 +1,10 @@
+{"payload": "uname -n -s", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006119393998233136}
+{"payload": "whoami", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014190527996106539}
+{"payload": "pwd", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015511785000853706}
+{"payload": "last", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01563919899490429}
+{"payload": "cat /etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005516065000847448}
+{"payload": "ls -la /tmp", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00702252599876374}
+{"payload": "ls -la /home", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005532638002478052}
+{"payload": "ping -i 30 127.0.0.1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006513579995953478}
+{"payload": "ping 127.0.0.1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006314129997917917}
+{"payload": "ping -n 30", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0045501369968405925}

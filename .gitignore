@@ -44,3 +44,6 @@ FINAL_STATUS.txt
 
 # Exception for specific processed data file
 !data/processed/red_train_v6_multi_clean.jsonl
+
+.gemini/
+gha-creds-*.json

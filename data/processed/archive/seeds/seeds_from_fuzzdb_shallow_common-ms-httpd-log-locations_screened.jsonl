@@ -1,0 +1,6 @@
+{"payload": "\\Program Files\\Apache Group\\Apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006314603000646457}
+{"payload": "\\Program Files\\Apache Group\\Apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0037170600044191815}
+{"payload": "\\Program Files\\Apache Group\\Apache\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003410072000406217}
+{"payload": "\\Program Files\\Apache Group\\Apache2\\conf\\httpd.conf", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00316657499934081}
+{"payload": "\\Program Files (x86)\\Apache Group\\Apache\\logs\\access.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00314703700132668}
+{"payload": "\\Program Files (x86)\\Apache Group\\Apache\\logs\\error.log", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0027898309999727644}

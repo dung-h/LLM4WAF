@@ -1,0 +1,33 @@
+{"payload": "# Useful for causing error messages that contain an absolute drivepath, such as if you don't know where the file uploader puts files", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02042902199900709}
+{"payload": "# regex replace {EXT} with allowed extension type", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015372199995908886}
+{"payload": "CON.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01771501400799025}
+{"payload": "PRN.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01700761800748296}
+{"payload": "AUX.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017832669997005723}
+{"payload": "CLOCK$.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01575989299453795}
+{"payload": "NUL.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013876240001991391}
+{"payload": "COM1.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012537649992736988}
+{"payload": "COM2.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011521878011990339}
+{"payload": "COM3.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011725103002390824}
+{"payload": "COM4.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014912999991793185}
+{"payload": "COM5.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015749183992738836}
+{"payload": "COM6.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01528915400558617}
+{"payload": "COM7.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014327782002510503}
+{"payload": "COM8.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01472153999202419}
+{"payload": "COM9.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015689566993387416}
+{"payload": "LPT1.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015152202002354898}
+{"payload": "LPT2.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014645472008851357}
+{"payload": "LPT3.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01446679099171888}
+{"payload": "LPT4.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014277656999183819}
+{"payload": "LPT5.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015065679996041581}
+{"payload": "LPT6.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01514632000180427}
+{"payload": "LPT7.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014532373999827541}
+{"payload": "LPT8.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0138035809941357}
+{"payload": "LPT9.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01614995401178021}
+{"payload": "*.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017348656998365186}
+{"payload": "\".{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016570456005865708}
+{"payload": "[.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015350551999290474}
+{"payload": "].{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01467719599895645}
+{"payload": ":.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013500686007319018}
+{"payload": "|.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014178137993440032}
+{"payload": "=.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01345633999153506}
+{"payload": ",.{EXT}", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0145344060001662}

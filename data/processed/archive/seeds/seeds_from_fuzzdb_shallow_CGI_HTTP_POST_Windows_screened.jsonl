@@ -1,0 +1,6 @@
+{"payload": "_vti_bin/shtml.dll/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008687430003192276}
+{"payload": "_vti_bin/shtml.exe/_vti_rpc?method=server+version%3a4%2e0%2e2%2e2611", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004477621005207766}
+{"payload": "_vti_bin/_vti_aut/author.dll?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=fals", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.04160645899537485}
+{"payload": "_vti_bin/_vti_aut/author.exe?method=list+documents%3a3%2e0%2e2%2e1706&service%5fname=&listHiddenDocs=true&listExplorerDocs=true&listRecurse=false&listFiles=true&listFolders=true&listLinkInfo=true&listIncludeParent=true&listDerivedT=false&listBorders=fals", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01585891799913952}
+{"payload": "admin/db.php", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018600944997160695}
+{"payload": "_vti_bin/shtml.dll/_vti_rpc", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006164448001072742}

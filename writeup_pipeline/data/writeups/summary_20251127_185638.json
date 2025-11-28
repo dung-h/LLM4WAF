@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-11-27T18:56:38.210014",
+  "data_file": "data\\writeups\\combined_20251127_185638.jsonl",
+  "total_writeups": 20,
+  "by_source": {
+    "ctftime": 20
+  },
+  "statistics": {
+    "avg_length": 4364.6,
+    "min_length": 1457,
+    "max_length": 10802,
+    "total_chars": 87292
+  }
+}
