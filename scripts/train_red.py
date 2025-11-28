@@ -96,7 +96,7 @@ def main() -> None:
     bnb_cfg = build_bnb_config(cfg)
 
     logger.info("Loading tokenizer…")
-    tok = AutoTokenizer.from_pretrained(model_name, use_auth_token=auth_token, local_files_only=False)
+    tok = AutoTokenizer.from_pretrained(model_name, token=auth_token, trust_remote_code=True)
     tok.padding_side = cfg.get("padding_side", "left")
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
@@ -104,10 +104,10 @@ def main() -> None:
     logger.info("Loading 4-bit model… (this may take a while)")
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        use_auth_token=auth_token,
-        local_files_only=False,
+        token=auth_token,
         device_map="auto",
         quantization_config=bnb_cfg,
+        trust_remote_code=True,
         torch_dtype=torch.float16,
     )
 
