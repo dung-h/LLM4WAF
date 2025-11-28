@@ -153,6 +153,8 @@ def main() -> None:
         logging_dir=f"{out_dir}/logs",
         logging_first_step=True,
         disable_tqdm=False,
+        log_level="info",
+        log_on_each_node=False,
     )
 
     # Optional max_steps override for smoke tests
