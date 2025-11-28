@@ -149,7 +149,10 @@ def main() -> None:
         eval_steps=int(cfg.get("eval_steps", 200)),
         save_total_limit=int(cfg.get("save_total_limit", 2)),
         optim=cfg.get("optim", "paged_adamw_8bit"),
-        report_to=[],
+        report_to=["tensorboard"],
+        logging_dir=f"{out_dir}/logs",
+        logging_first_step=True,
+        disable_tqdm=False,
     )
 
     # Optional max_steps override for smoke tests
