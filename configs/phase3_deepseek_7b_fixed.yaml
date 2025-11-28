@@ -6,8 +6,8 @@ adapter_name: "deepseek_7b_phase3_4x3090"
 prompt_format_type: "deepseek_instruct"
 
 # === DATA CONFIGURATION ===
-train_path: "data/processed/train_full_deepseek_cleaned.jsonl" # 11,589 samples
-eval_path: "data/splits/sft_experiment/test_200_deepseek.jsonl" # 200 samples
+train_path: "data/processed/train_full_qwen_cleaned.jsonl" # 11,589 samples (Qwen format compatible)
+eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl" # 200 samples
 text_fields: ["instruction", "payload"]
 
 # === LORA CONFIGURATION ===
