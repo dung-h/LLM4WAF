@@ -17,10 +17,10 @@ use_dora: false
 target_modules:
   ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
-# === TRAINING PARAMETERS (4x RTX 4080 Super 16GB) ===
-per_device_train_batch_size: 6 # 6 samples per GPU (optimized for 16GB VRAM)
-gradient_accumulation_steps: 7 # Total effective batch = 6 * 4 * 7 = 168
-per_device_eval_batch_size: 8
+# === TRAINING PARAMETERS (Single GPU optimization) ===
+per_device_train_batch_size: 4 # Use more VRAM ~14-15GB
+gradient_accumulation_steps: 8 # Total effective batch = 4 * 8 = 32
+per_device_eval_batch_size: 4
 num_train_epochs: 2
 learning_rate: 3e-6
 warmup_ratio: 0.05
@@ -28,16 +28,18 @@ weight_decay: 0.01
 
 # === QUANTIZATION ===
 load_in_4bit: true
+
+# === QUANTIZATION SETTINGS ===
 bnb_4bit_compute_dtype: "float16"
 bnb_4bit_quant_type: "nf4"
 bnb_4bit_use_double_quant: true
 
 # === MEMORY OPTIMIZATION ===
 gradient_checkpointing: true
-max_sequence_length: 2048
+max_sequence_length: 1024  # Reduced for memory efficiency
 
 # === OUTPUT ===
-output_dir: "experiments/llama_8b_4gpu_phase3"
+output_dir: "experiments/llama_8b_gpu0_optimized"
 logging_steps: 50
 eval_steps: 500
 save_steps: 1000
