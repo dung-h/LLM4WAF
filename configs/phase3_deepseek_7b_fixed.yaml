@@ -18,10 +18,10 @@ use_dora: false
 target_modules:
   ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
-# === TRAINING PARAMETERS (4x RTX 3090) ===
-per_device_train_batch_size: 14 # 14 samples per GPU (maximum utilization)
-gradient_accumulation_steps: 3 # Total effective batch = 14 * 4 * 3 = 168
-per_device_eval_batch_size: 16
+# === TRAINING PARAMETERS (4x RTX 4080 Super 16GB) ===
+per_device_train_batch_size: 8 # 8 samples per GPU (optimized for 16GB VRAM)
+gradient_accumulation_steps: 5 # Total effective batch = 8 * 4 * 5 = 160
+per_device_eval_batch_size: 10
 num_train_epochs: 2
 learning_rate: 4e-6 # Lower for code-specialized model
 warmup_ratio: 0.05
