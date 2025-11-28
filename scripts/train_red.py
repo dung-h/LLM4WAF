@@ -162,15 +162,29 @@ def main() -> None:
         targs.max_steps = int(cfg["max_steps"])  # type: ignore
 
     logger.info("Initializing SFTTrainer…")
+    
+    # Auto-detect format
+    train_cols = ds["train"].column_names
+    sft_kwargs = {}
+    if "messages" in train_cols:
+        logger.info("Dataset has 'messages' column. Using automatic chat template application.")
+        # Do NOT set dataset_text_field, SFTTrainer handles 'messages' by default if tokenizer has chat_template
+    elif "prompt" in train_cols:
+        logger.info("Dataset has 'prompt' column. Using 'prompt' as text field.")
+        sft_kwargs["dataset_text_field"] = "prompt"
+    else:
+        logger.warning(f"Unknown dataset format. Columns: {train_cols}. Assuming 'text' field or letting SFTTrainer decide.")
+        # sft_kwargs["dataset_text_field"] = "text" # Let defaults handle it
+
     trainer = SFTTrainer(
         model=model,
         tokenizer=tok,
         args=targs,
         train_dataset=ds["train"],
         eval_dataset=ds.get("validation"),
-        dataset_text_field="prompt",
         max_seq_length=int(cfg.get("seq_length", 2048)),
         packing=False,
+        **sft_kwargs
     )
 
     logger.info("Starting training… (ctrl+c to stop)")
