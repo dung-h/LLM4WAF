@@ -1,0 +1,68 @@
+# Phase 3: DeepSeek-Coder-7B Configuration for 4x RTX 3090 GPUs
+
+model_name: "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+model_type: "deepseek"
+base_model_revision: "main"
+
+# === 4x RTX 3090 GPU OPTIMIZATION ===
+training:
+  # Multi-GPU Configuration
+  num_gpus: 4
+  device_map: "auto"
+  torch_dtype: "float16"
+
+  # Optimized Batch Configuration
+  per_device_train_batch_size: 8 # 8 samples per GPU (aggressive utilization)
+  gradient_accumulation_steps: 5 # Total effective batch = 8 * 4 * 5 = 160
+  per_device_eval_batch_size: 10
+
+  # Memory Optimization
+  gradient_checkpointing: true
+  dataloader_pin_memory: true
+  group_by_length: true
+  max_sequence_length: 2048
+
+  # Training Schedule
+  num_epochs: 2
+  learning_rate: 4e-6 # Lower for code-specialized model
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+
+  # Performance
+  fp16: true
+  remove_unused_columns: false
+
+  # Logging
+  logging_steps: 50
+  save_steps: 500
+  eval_steps: 500
+  save_total_limit: 3
+  evaluation_strategy: "steps"
+
+# === LORA CONFIGURATION ===
+lora:
+  r: 64
+  lora_alpha: 128
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.1
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# === DATA ===
+data:
+  train_file: "data/processed/train_full_deepseek_cleaned.jsonl"
+  eval_file: "data/splits/sft_experiment/test_200_deepseek.jsonl"
+  max_samples: 11589
+
+# === OUTPUT ===
+output:
+  output_dir: "experiments/deepseek_7b_4gpu_phase3"
+  run_name: "deepseek_7b_4x3090_phase3"
+  project_name: "llm4waf_phase3"
