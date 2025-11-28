@@ -1,0 +1,53 @@
+# Configuration for Qwen2.5-3B local training on RTX 4060 Laptop (8GB VRAM)
+# Compatible with train_red.py format
+
+model_name: "Qwen/Qwen2.5-3B-Instruct"
+adapter_name: "qwen25_3b_local"
+prompt_format_type: "qwen_instruct"
+
+# === DATA CONFIGURATION ===
+train_path: "data/splits/sft_experiment/train_8k_qwen_local.jsonl" # 8,000 balanced samples
+eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl" # 200 samples
+text_fields: ["instruction", "payload"] # Fields to use for training
+# Distribution: XSS 47.9%, SQLi 33.9%, Other 18.2%
+
+# === LORA CONFIGURATION (MEMORY EFFICIENT) ===
+lora_r: 16 # Moderate rank for 3B model
+lora_alpha: 32 # 2x scaling
+lora_dropout: 0.05
+use_dora: false # DoRA disabled for compatibility
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+# === TRAINING PARAMETERS (RTX 4060 8GB OPTIMIZED) ===
+per_device_train_batch_size: 4 # Conservative for 8GB VRAM
+gradient_accumulation_steps: 8 # Effective batch = 4 * 8 = 32
+per_device_eval_batch_size: 2
+num_train_epochs: 3 # More epochs for smaller model
+learning_rate: 2e-4 # Higher LR for 3B model
+warmup_ratio: 0.05
+weight_decay: 0.01
+
+# === QUANTIZATION (4-BIT FOR MAX MEMORY SAVINGS) ===
+load_in_4bit: true
+bnb_4bit_compute_dtype: "float16"
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+
+# === MEMORY OPTIMIZATION ===
+gradient_checkpointing: true
+max_sequence_length: 1024 # Reduced for 8GB VRAM
+
+# === LOGGING & CHECKPOINTING ===
+output_dir: "experiments/qwen25_3b_local_phase3"
+logging_steps: 50
+eval_steps: 500
+save_steps: 1000
+save_total_limit: 2
+
+# === SYSTEM OPTIMIZATION ===
+use_auth_token_env: "HF_TOKEN"
+seed: 42
+# Expected training time: 3-4 hours on RTX 4060 Laptop (8K samples)
+# Expected memory usage: ~4.5GB VRAM
+# Expected quality: ~0.45-0.50 (good for 3B model)
