@@ -6,8 +6,8 @@ adapter_name: "qwen_7b_phase3_4x3090"
 prompt_format_type: "qwen_instruct"
 
 # === DATA CONFIGURATION ===
-train_path: "data/processed/train_full_qwen_cleaned.jsonl"  # 11,589 samples
-eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl"  # 200 samples
+train_path: "data/processed/train_full_qwen_cleaned.jsonl" # 11,589 samples
+eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl" # 200 samples
 text_fields: ["instruction", "payload"]
 
 # === LORA CONFIGURATION ===
@@ -15,12 +15,13 @@ lora_r: 32 # Large rank for 7B model
 lora_alpha: 128 # Scaled alpha
 lora_dropout: 0.1
 use_dora: false
-target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 # === TRAINING PARAMETERS (4x RTX 3090) ===
-per_device_train_batch_size: 10 # 10 samples per GPU (aggressive)
-gradient_accumulation_steps: 4 # Total effective batch = 10 * 4 * 4 = 160
-per_device_eval_batch_size: 12
+per_device_train_batch_size: 14 # 14 samples per GPU (maximum utilization)
+gradient_accumulation_steps: 3 # Total effective batch = 14 * 4 * 3 = 168
+per_device_eval_batch_size: 16
 num_train_epochs: 2
 learning_rate: 5e-6 # Lower LR for larger model
 warmup_ratio: 0.05
@@ -46,5 +47,4 @@ save_total_limit: 3
 # === SYSTEM ===
 use_auth_token_env: "HF_TOKEN"
 seed: 42
-
 # Expected: 6-8 hours, Quality >0.55, WAF Bypass >70%

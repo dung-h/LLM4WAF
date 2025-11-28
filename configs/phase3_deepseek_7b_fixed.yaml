@@ -1,31 +1,33 @@
 # Phase 3: DeepSeek-Coder-7B Training for 4x RTX 3090 GPUs
+# Compatible with train_red.py format
 
-model_name: "deepseek-ai/DeepSeek-Coder-7B-Instruct"
+model_name: "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
 adapter_name: "deepseek_7b_phase3_4x3090"
 prompt_format_type: "deepseek_instruct"
 
 # === DATA CONFIGURATION ===
-train_path: "data/processed/train_full_qwen_cleaned.jsonl"  # Using Qwen format
-eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl"
+train_path: "data/processed/train_full_deepseek_cleaned.jsonl" # 11,589 samples
+eval_path: "data/splits/sft_experiment/test_200_deepseek.jsonl" # 200 samples
 text_fields: ["instruction", "payload"]
 
 # === LORA CONFIGURATION ===
-lora_r: 32
-lora_alpha: 128
+lora_r: 32 # Large rank for 7B code model
+lora_alpha: 128 # Scaled alpha
 lora_dropout: 0.1
 use_dora: false
-target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
-# === TRAINING PARAMETERS ===
-per_device_train_batch_size: 8
-gradient_accumulation_steps: 5
-per_device_eval_batch_size: 10
+# === TRAINING PARAMETERS (4x RTX 3090) ===
+per_device_train_batch_size: 14 # 14 samples per GPU (maximum utilization)
+gradient_accumulation_steps: 3 # Total effective batch = 14 * 4 * 3 = 168
+per_device_eval_batch_size: 16
 num_train_epochs: 2
-learning_rate: 4e-6
+learning_rate: 4e-6 # Lower for code-specialized model
 warmup_ratio: 0.05
 weight_decay: 0.01
 
-# === QUANTIZATION ===
+# === QUANTIZATION (4-BIT) ===
 load_in_4bit: true
 bnb_4bit_compute_dtype: "float16"
 bnb_4bit_quant_type: "nf4"
@@ -35,7 +37,7 @@ bnb_4bit_use_double_quant: true
 gradient_checkpointing: true
 max_sequence_length: 2048
 
-# === OUTPUT ===
+# === OUTPUT & LOGGING ===
 output_dir: "experiments/deepseek_7b_4gpu_phase3"
 logging_steps: 50
 eval_steps: 500
@@ -45,3 +47,4 @@ save_total_limit: 3
 # === SYSTEM ===
 use_auth_token_env: "HF_TOKEN"
 seed: 42
+# Expected: 6-8 hours, Quality >0.55, WAF Bypass >70%

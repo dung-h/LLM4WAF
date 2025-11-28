@@ -14,12 +14,13 @@ lora_r: 32
 lora_alpha: 128
 lora_dropout: 0.1
 use_dora: false
-target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 # === TRAINING PARAMETERS ===
-per_device_train_batch_size: 6
-gradient_accumulation_steps: 6
-per_device_eval_batch_size: 8
+per_device_train_batch_size: 10 # 10 samples per GPU (aggressive for 8B)
+gradient_accumulation_steps: 4 # Total effective batch = 10 * 4 * 4 = 160
+per_device_eval_batch_size: 12
 num_train_epochs: 2
 learning_rate: 3e-6
 warmup_ratio: 0.05
