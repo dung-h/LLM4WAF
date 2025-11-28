@@ -1,6 +1,6 @@
 # Phase 3: Phi-3-Medium-14B Training for 4x RTX 3090 GPUs
 
-model_name: "microsoft/Phi-3-medium-14b-instruct"
+model_name: "microsoft/Phi-3-medium-4k-instruct"
 adapter_name: "phi3_14b_phase3_4x3090"
 prompt_format_type: "phi3_instruct"
 
@@ -18,9 +18,9 @@ target_modules:
   ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 # === TRAINING PARAMETERS (4x RTX 4080 Super 16GB) ===
-per_device_train_batch_size: 3 # 3 samples per GPU (conservative for 14B on 16GB)
-gradient_accumulation_steps: 13 # Total effective batch = 3 * 4 * 13 = 156
-per_device_eval_batch_size: 4
+per_device_train_batch_size: 3 # Optimized for 14B model ~15GB
+gradient_accumulation_steps: 11 # Effective batch = 3 * 11 = 33
+per_device_eval_batch_size: 3
 num_train_epochs: 2
 learning_rate: 2e-6
 warmup_ratio: 0.05
@@ -28,6 +28,12 @@ weight_decay: 0.01
 
 # === QUANTIZATION ===
 load_in_4bit: true
+
+# === OUTPUT ===
+output_dir: "experiments/phi3_14b_gpu3_optimized"
+seq_length: 1024
+logging_steps: 25
+save_steps: 500
 bnb_4bit_compute_dtype: "float16"
 bnb_4bit_quant_type: "nf4"
 bnb_4bit_use_double_quant: true

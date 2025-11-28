@@ -8,6 +8,18 @@ from dataclasses import dataclass
 import yaml
 from typing import Dict, Any, List
 
+# Parse args first to set GPU before importing torch
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", required=True, help="Path to YAML config")
+    parser.add_argument("--gpu", type=int, default=0, help="GPU ID to use (0-3)")
+    parser.add_argument("--log-suffix", type=str, default="", help="Log file suffix")
+    return parser.parse_args()
+
+args = parse_args()
+# Set GPU before importing torch
+os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
+
 from datasets import load_dataset
 import torch
 from transformers import (
@@ -25,12 +37,15 @@ log_formatter = logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s")
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-# File handler
-file_handler = logging.FileHandler("SFT.log", mode='w')
-file_handler.setFormatter(log_formatter)
-# Ensure the handler flushes messages immediately
-file_handler.flush = lambda: None # No-op to prevent library from closing it
-logger.addHandler(file_handler)
+# File handler with suffix support
+def setup_logging(suffix=""):
+    log_file = f"SFT{suffix}.log"
+    file_handler = logging.FileHandler(log_file, mode='w')
+    file_handler.setFormatter(log_formatter)
+    return file_handler
+
+# Will be setup in main with suffix
+file_handler = None
 
 # Console handler
 console_handler = logging.StreamHandler()
@@ -77,15 +92,17 @@ def build_lora_config(cfg: Dict[str, Any]) -> LoraConfig:
         lora_dropout=float(cfg.get("lora_dropout", 0.05)),
         bias="none",
         task_type="CAUSAL_LM",
-        use_dora=bool(cfg.get("use_dora", True)),
+        # use_dora=bool(cfg.get("use_dora", True)),  # Not supported in peft==0.6.0
     )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", required=True, help="Path to YAML config")
-    args = parser.parse_args()
-
+    # Setup logging with suffix
+    global file_handler
+    log_suffix = f"_gpu{args.gpu}{args.log_suffix}" if args.log_suffix else f"_gpu{args.gpu}"
+    file_handler = setup_logging(log_suffix)
+    logger.addHandler(file_handler)
+    
     require_env_token("HF_TOKEN")
 
     cfg = load_config(args.config)
@@ -95,6 +112,10 @@ def main() -> None:
 
     bnb_cfg = build_bnb_config(cfg)
 
+    # GPU is already set via CUDA_VISIBLE_DEVICES at import time
+    torch.cuda.set_device(0)  # Only visible GPU is now GPU 0
+    logger.info(f"🎯 Using GPU {args.gpu} (visible as GPU 0) for {model_name}")
+    
     logger.info("Loading tokenizer…")
     tok = AutoTokenizer.from_pretrained(model_name, token=auth_token, trust_remote_code=True)
     tok.padding_side = cfg.get("padding_side", "left")
@@ -105,7 +126,7 @@ def main() -> None:
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         token=auth_token,
-        device_map="auto",
+        device_map={"": 0},  # Use GPU 0 (which is the only visible GPU)
         quantization_config=bnb_cfg,
         trust_remote_code=True,
         torch_dtype=torch.float16,
@@ -155,12 +176,22 @@ def main() -> None:
         disable_tqdm=False,
         log_level="info",
         log_on_each_node=False,
+        # Force single GPU training
+        dataloader_pin_memory=False,
+        dataloader_num_workers=0,
+        # Disable DataParallel
+        local_rank=-1,
+        ddp_find_unused_parameters=False,
     )
 
     # Optional max_steps override for smoke tests
     if "max_steps" in cfg and int(cfg["max_steps"]) > 0:
         targs.max_steps = int(cfg["max_steps"])  # type: ignore
 
+    # Ensure model is not wrapped with DataParallel
+    if isinstance(model, torch.nn.DataParallel):
+        model = model.module
+    
     logger.info("Initializing SFTTrainer…")
     
     # Auto-detect format
@@ -178,13 +209,13 @@ def main() -> None:
 
     trainer = SFTTrainer(
         model=model,
-        tokenizer=tok,
+        # tokenizer=tok,  # Not supported in some trl versions
         args=targs,
         train_dataset=ds["train"],
         eval_dataset=ds.get("validation"),
-        max_seq_length=int(cfg.get("seq_length", 2048)),
+        max_seq_length=int(cfg.get("seq_length", 2048)),  # Use config value, default 2048
         packing=False,
-        **sft_kwargs
+        **sft_kwargs  # Auto-detected dataset_text_field or none for messages format
     )
 
     logger.info("Starting training… (ctrl+c to stop)")
