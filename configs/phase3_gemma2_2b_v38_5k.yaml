@@ -1,0 +1,45 @@
+model_name: "google/gemma-2-2b-it"
+use_auth_token_env: "HF_TOKEN"
+
+train_path: "data/processed/red_v40_subsample_5k_converted.jsonl" # Updated train_path
+# eval_path: ""
+# text_fields: ["instruction", "payload"] # Auto-handled - This line is not directly used by SFTTrainer for 'messages' format
+
+# === TRL SFTTrainer arguments ===
+# Specify text fields for SFTTrainer
+dataset_text_field: "instruction" # New: for TRL's SFTTrainer to know the prompt part
+response_template: "payload" # New: for TRL's SFTTrainer to know the response part
+
+# === LORA CONFIGURATION ===
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+use_dora: true 
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+# === TRAINING PARAMETERS ===
+per_device_train_batch_size: 1 # Changed from 2 to 1
+gradient_accumulation_steps: 32 # Changed from 16 to 32 (to maintain effective batch size of 32)
+per_device_eval_batch_size: 4
+num_train_epochs: 2 # Changed from 3 to 2
+learning_rate: 2e-5
+warmup_ratio: 0.03
+weight_decay: 0.01
+
+# === QUANTIZATION ===
+load_in_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: "float16"
+
+# === MEMORY OPTIMIZATION ===
+gradient_checkpointing: true
+max_length: 2048 # Renamed from max_sequence_length to max_length
+
+# === OUTPUT ===
+output_dir: "experiments/gemma2_2b_v40_subsample_5k" # Updated output directory
+logging_steps: 10
+save_steps: 500
+save_total_limit: 2
+seed: 42

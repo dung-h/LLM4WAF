@@ -47,3 +47,10 @@ FINAL_STATUS.txt
 
 .gemini/
 gha-creds-*.json
+state_snapshots.md
+scripts/archive_20251129
+scripts/archive
+scripts/archive_legacy
+data/archive_20251129
+data/archive
+data/archive_legacy

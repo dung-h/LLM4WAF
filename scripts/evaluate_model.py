@@ -1,161 +1,193 @@
 import argparse
 import os
-from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+import json
+import re
+import httpx 
 import torch
+import asyncio
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
+from tqdm import tqdm
+from datasets import load_dataset
+from collections import Counter
+from torch.utils.data import DataLoader
 
-def build_prompt_gemma(sample: dict) -> str:
-    instruction = sample.get("instruction", "")
-    context = sample.get("context", "")
-    constraints = sample.get("constraints", "")
-    user_parts = [p for p in [instruction, f"Context: {context}" if context else "", f"Constraints: {constraints}" if constraints else ""] if p]
-    user_block = "\n\n".join(user_parts)
-    return f"<start_of_turn>user\n{user_block}<end_of_turn>\n<start_of_turn>model\n"
+# --- WAF Test Configuration ---
+DVWA_BASE_URL = "http://localhost:8000"
+DVWA_SQLI_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli/"
+DVWA_SQLI_BLIND_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli_blind/"
+DVWA_XSS_REFLECTED_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_r/"
+DVWA_XSS_DOM_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_d/"
+USERNAME = "admin"
+PASSWORD = "password"
 
-def build_prompt_phi3(sample: dict) -> str:
-    instruction = sample.get("instruction", "")
-    context = sample.get("context", "")
-    constraints = sample.get("constraints", "")
-    user_parts = [p for p in [instruction, f"Context: {context}" if context else "", f"Constraints: {constraints}" if constraints else ""] if p]
-    user_block = "\n\n".join(user_parts)
-    return f"<|user|>\n{user_block}<|end|>\n<|assistant|>\n"
-
-def build_prompt_phi3(sample: dict) -> str:
-    instruction = sample.get("instruction", "")
-    context = sample.get("context", "")
-    constraints = sample.get("constraints", "")
-    user_parts = [p for p in [instruction, f"Context: {context}" if context else "", f"Constraints: {constraints}" if constraints else ""] if p]
-    user_block = "\n\n".join(user_parts)
-    return f"<|user|>\n{user_block}<|end|>\n<|assistant|>\n"
-
-def build_prompt_qwen(sample: dict) -> str:
-    """Build Qwen chat format prompt"""
-    instruction = sample.get("instruction", "")
-    context = sample.get("context", "")
-    constraints = sample.get("constraints", "")
-    user_parts = [p for p in [instruction, f"Context: {context}" if context else "", f"Constraints: {constraints}" if constraints else ""] if p]
-    user_block = "\n\n".join(user_parts)
-    return f"<|im_start|>user\n{user_block}<|im_end|>\n<|im_start|>assistant\n"
-
-def strip_assistant_from_prompt(raw_prompt: str, fmt: str) -> str:
-    """Return only user portion by removing assistant/answer section, then add assistant prefix."""
+# --- Prompt Utils ---
+def build_prompt(instruction, fmt):
     if fmt == "gemma":
-        if "<start_of_turn>model" in raw_prompt:
-            user_part = raw_prompt.split("<start_of_turn>model")[0].strip()
-            return user_part + "\n<start_of_turn>model\n"
+        return f"<start_of_turn>user\n{instruction}<end_of_turn>\n<start_of_turn>model\n"
     elif fmt == "phi3":
-        if "<|assistant|>" in raw_prompt:
-            user_part = raw_prompt.split("<|assistant|>")[0].strip()
-            return user_part + "\n<|assistant|>\n"
-    else:  # qwen
-        if "<|im_start|>assistant" in raw_prompt:
-            user_part = raw_prompt.split("<|im_start|>assistant")[0].strip()
-            return user_part + "\n<|im_start|>assistant\n"
-    return raw_prompt
+        return f"<|user|>\n{instruction}<|end|>\n<|assistant|>\n"
+    return instruction
 
-def main():
-    parser = argparse.ArgumentParser(description="Standard tool to evaluate RED models.")
-    parser.add_argument("--base_model", type=str, required=True)
-    parser.add_argument("--adapter", type=str, required=True)
-    parser.add_argument("--dataset", type=str, required=True)
-    parser.add_argument("--format", choices=["gemma", "phi3", "qwen"], required=True)
-    parser.add_argument("--merge", action="store_true", help="Merge adapter into base model (be careful with 4bit).")
-    parser.add_argument("--num_samples", type=int, default=10)
-    parser.add_argument("--max_new_tokens", type=int, default=128)
-    args = parser.parse_args()
-
-    hf_token = os.environ.get("HF_TOKEN")
-
-    print(f"Loading tokenizer: {args.base_model}")
-    tokenizer = AutoTokenizer.from_pretrained(args.base_model, token=hf_token)
-    
-    print(f"Loading base model: {args.base_model}")
-    bnb = BitsAndBytesConfig(
+# --- Model Utils ---
+def load_model(base_model_id, adapter_path):
+    print(f"Loading base model: {base_model_id}")
+    bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_quant_type="nf4",
         bnb_4bit_use_double_quant=True,
-        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_compute_dtype=torch.float16
     )
     model = AutoModelForCausalLM.from_pretrained(
-        args.base_model,
-        quantization_config=bnb,
+        base_model_id,
+        quantization_config=bnb_config,
         device_map="auto",
         torch_dtype=torch.float16,
-        token=hf_token,
+        token=os.environ.get("HF_TOKEN")
     )
+    print(f"Loading adapter: {adapter_path}")
+    model = PeftModel.from_pretrained(model, adapter_path)
+    tokenizer = AutoTokenizer.from_pretrained(base_model_id, token=os.environ.get("HF_TOKEN"))
+    tokenizer.padding_side = "left" # Important for generation
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    return model, tokenizer
 
-    print(f"Loading adapter: {args.adapter}")
-    model = PeftModel.from_pretrained(model, args.adapter)
-    
-    if args.merge:
-        print("Merging adapter...")
-        model = model.merge_and_unload()
-    
-    model.eval()
+# --- WAF Test Logic ---
+async def get_user_token(client, url):
+    try:
+        r = await client.get(url, timeout=5.0)
+        m = re.search(r"user_token'\s*value='([a-f0-9]{32})'", r.text, re.I)
+        return m.group(1) if m else None
+    except: return None
 
-    print(f"Loading dataset: {args.dataset}")
+async def login_dvwa(client):
+    print("[+] Logging into DVWA...")
+    try:
+        token = await get_user_token(client, f"{DVWA_BASE_URL}/login.php")
+        if not token: return False
+        data = {"username": USERNAME, "password": PASSWORD, "user_token": token, "Login": "Login"}
+        resp = await client.post(f"{DVWA_BASE_URL}/login.php", data=data, follow_redirects=True, timeout=10.0)
+        return "login.php" not in str(resp.url)
+    except: return False
+
+async def test_single_payload_waf(client, payload, attack_type):
+    target_url = ""
+    param_name = ""
+    params = {"Submit": "Submit"}
+    
+    if "SQLI" in attack_type.upper():
+        target_url = DVWA_SQLI_URL; param_name = "id"
+    elif "XSS" in attack_type.upper():
+        target_url = DVWA_XSS_REFLECTED_URL; param_name = "name"
+    elif "OS_INJECTION" in attack_type.upper():
+        target_url = f"{DVWA_BASE_URL}/vulnerabilities/exec/"; param_name = "ip"
+    else: return "unsupported"
+
+    try:
+        request_params = params.copy(); request_params[param_name] = payload
+        r = await client.get(target_url, params=request_params, timeout=10.0, follow_redirects=True)
+        if r.status_code == 403: return "blocked"
+        
+        resp = r.text.lower()
+        if "sqli" in attack_type.lower():
+            if "first name" in resp and "error" not in resp: return "passed"
+            if "error" in resp: return "sql_error_bypass"
+        elif "xss" in attack_type.lower():
+            if payload.lower() in resp: return "reflected_no_exec" # Simplified check for speed
+            
+        return "failed_waf_filter"
+    except: return "error"
+
+# --- Main Evaluation ---
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--base_model", type=str, required=True)
+    parser.add_argument("--adapter", type=str, required=True)
+    parser.add_argument("--dataset", type=str, required=True)
+    parser.add_argument("--format", choices=["gemma", "phi3"], required=True)
+    parser.add_argument("--num_samples", type=int, default=200)
+    parser.add_argument("--batch_size", type=int, default=8) # Batch size
+    parser.add_argument("--max_new_tokens", type=int, default=256)
+    parser.add_argument("--output_file", type=str, default="eval_results.jsonl")
+    args = parser.parse_args()
+
+    # Load Model
+    model, tokenizer = load_model(args.base_model, args.adapter)
+    
+    # Load Data
     ds = load_dataset("json", data_files=args.dataset, split="train")
+    ds = ds.select(range(min(args.num_samples, len(ds))))
     
-    num = min(args.num_samples, len(ds))
-    for i in range(num):
-        sample = ds[i]
-        
-        # Get reference payload for debugging
-        reference = sample.get("payload") or sample.get("answer") or None
-        
-        # Prefer provided prompt, but strip prefilled answer
-        if "prompt" in sample and sample["prompt"]:
-            raw_prompt = sample["prompt"]
-            prompt = strip_assistant_from_prompt(raw_prompt, args.format)
-            # Fallback if strip produces empty
-            if not prompt or not prompt.strip():
-                if args.format == "gemma":
-                    prompt = build_prompt_gemma(sample)
-                elif args.format == "phi3":
-                    prompt = build_prompt_phi3(sample)
-                else:  # qwen
-                    prompt = build_prompt_qwen(sample)
-        else:
-            if args.format == "gemma":
-                prompt = build_prompt_gemma(sample)
-            elif args.format == "phi3":
-                prompt = build_prompt_phi3(sample)
-            else:  # qwen
-                prompt = build_prompt_qwen(sample)
-
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    # Prepare prompts
+    prompts = [build_prompt(item["instruction"], args.format) for item in ds]
+    
+    # Generation Loop (Batched)
+    generated_payloads = []
+    print(f"Generating payloads with batch size {args.batch_size}...")
+    
+    for i in tqdm(range(0, len(prompts), args.batch_size)):
+        batch_prompts = prompts[i : i + args.batch_size]
+        inputs = tokenizer(batch_prompts, return_tensors="pt", padding=True, truncation=True).to(model.device)
         
         with torch.no_grad():
-            generated = model.generate(
+            outputs = model.generate(
                 **inputs,
                 max_new_tokens=args.max_new_tokens,
                 do_sample=True,
-                temperature=0.8
+                temperature=0.7,
+                pad_token_id=tokenizer.pad_token_id
             )
-            
-        raw = tokenizer.decode(generated[0][inputs["input_ids"].shape[1]:], skip_special_tokens=False)
         
-        # Cleanup based on format
-        if args.format == "gemma":
-            clean = raw.replace("<end_of_turn>", "").replace("<eos>", "")
-        elif args.format == "phi3":
-            clean = raw.replace("<|end|>", "").replace("<|assistant|>", "").replace(tokenizer.eos_token, "")
-        else:  # qwen
-            clean = raw.replace("<|im_end|>", "").replace("<|endoftext|>", "").replace(tokenizer.eos_token, "")
-            
-        print("\n" + "="*80)
-        print(f"SAMPLE {i}")
-        print(f"PROMPT:\n{prompt}")
-        gen_out = clean.strip()
-        print(f"GENERATED:\n{gen_out}")
+        # Decode batch
+        decoded = tokenizer.batch_decode(outputs, skip_special_tokens=False)
         
-        if not gen_out:
-            print("--- NOTE: generation empty. Reference payload (if available):")
-            if reference:
-                print(reference)
+        for j, raw_text in enumerate(decoded):
+            # Strip prompt
+            if args.format == "gemma":
+                payload = raw_text.split("<start_of_turn>model")[-1].replace("<end_of_turn>", "").replace("<eos>", "").strip()
+            elif args.format == "phi3":
+                payload = raw_text.split("<|assistant|>")[-1].replace("<|end|>", "").replace(tokenizer.eos_token, "").strip()
             else:
-                print("<no reference in dataset>")
+                payload = raw_text
+            generated_payloads.append(payload)
+
+    # WAF Testing Loop (Async)
+    print("Testing payloads against WAF...")
+    async def run_waf_tests():
+        results = []
+        waf_summary = Counter()
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            if not await login_dvwa(client):
+                print("Skipping WAF tests due to login failure.")
+                return [], waf_summary
+
+            for idx, payload in enumerate(tqdm(generated_payloads)):
+                attack_type = ds[idx].get("attack_type", "XSS")
+                status = await test_single_payload_waf(client, payload, attack_type)
+                
+                results.append({
+                    "instruction": ds[idx]["instruction"],
+                    "generated": payload,
+                    "status": status,
+                    "type": attack_type
+                })
+                waf_summary[status] += 1
+        return results, waf_summary
+
+    results, summary = asyncio.run(run_waf_tests())
+
+    # Save & Report
+    with open(args.output_file, 'w', encoding='utf-8') as f:
+        for r in results: f.write(json.dumps(r) + '\n')
+    
+    print("\n--- Summary ---")
+    total = len(generated_payloads)
+    for k, v in summary.most_common():
+        print(f"{k}: {v} ({v/total:.2%})")
+    
+    passed = summary["passed"] + summary["sql_error_bypass"]
+    print(f"Total Bypass: {passed/total:.2%}")
 
 if __name__ == "__main__":
     main()

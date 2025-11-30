@@ -1,0 +1,77 @@
+# Local Training Configuration: Qwen2.5-3B for RTX 4060 Laptop (8GB VRAM)
+
+model_name: "Qwen/Qwen2.5-3B-Instruct"
+model_type: "qwen2"
+base_model_revision: "main"
+
+# === RTX 4060 LAPTOP OPTIMIZATION (8GB VRAM) ===
+training:
+  # Single GPU Configuration
+  num_gpus: 1
+  device_map: "auto"
+  torch_dtype: "float16"
+
+  # Memory-Optimized Batch Configuration
+  per_device_train_batch_size: 8 # 8 samples (3B model efficient)
+  gradient_accumulation_steps: 4 # Effective batch = 8 * 4 = 32
+  per_device_eval_batch_size: 4
+
+  # Aggressive Memory Optimization
+  gradient_checkpointing: true
+  dataloader_pin_memory: false # Save memory on laptop
+  group_by_length: true
+  max_sequence_length: 1024 # Reduced for 8GB VRAM
+
+  # Training Schedule
+  num_epochs: 3 # More epochs for smaller model
+  learning_rate: 2e-5 # Higher LR for 3B model
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+
+  # Performance Optimization
+  fp16: true
+  bf16: false # RTX 4060 optimized for fp16
+  remove_unused_columns: false
+
+  # Logging & Checkpointing
+  logging_steps: 25
+  eval_steps: 250
+  save_steps: 500
+  save_total_limit: 2
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+
+# === LORA CONFIGURATION (MEMORY EFFICIENT) ===
+lora_r: 16 # Moderate rank for 3B model
+lora_alpha: 32 # 2x scaling
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+lora_dropout: 0.05
+use_dora: false # DoRA disabled for compatibility
+
+# === QUANTIZATION (4-BIT FOR MAX MEMORY SAVINGS) ===
+load_in_4bit: true
+bnb_4bit_compute_dtype: "float16"
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+
+# === DATA CONFIGURATION ===
+train_path: "data/splits/sft_experiment/train_8k_qwen_local.jsonl" # 8,000 balanced samples
+eval_path: "data/splits/sft_experiment/test_200_qwen.jsonl" # 200 samples
+text_fields: ["instruction", "payload"] # Fields to use for training
+# Note: Qwen2.5 uses same ChatML format as Qwen2
+# Distribution: XSS 47.9%, SQLi 33.9%, Other 18.2%
+
+# === OUTPUT CONFIGURATION ===
+output_dir: "experiments/qwen25_3b_local_phase3"
+logging_dir: "experiments/qwen25_3b_local_phase3/logs"
+run_name: "qwen25_3b_local_laptop"
+
+# === SYSTEM OPTIMIZATION ===
+use_auth_token_env: "HF_TOKEN"
+prompt_format_type: "qwen_instruct"
+seed: 42
+# Expected training time: 2-3 hours on RTX 4060 Laptop (3,870 samples)
+# Expected memory usage: ~4.5GB VRAM
+# Expected quality: ~0.45-0.50 (good for 3B model)
+# Prompt format: ChatML (<|im_start|>user...assistant...<|im_end|>)

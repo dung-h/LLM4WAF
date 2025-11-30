@@ -1,0 +1,40 @@
+model_name: "Qwen/Qwen2.5-3B-Instruct"
+# use_auth_token_env: "HF_TOKEN" # Public model
+
+train_path: "data/processed/red_v35_final.jsonl"
+# eval_path: ""
+text_fields: ["instruction", "payload"]
+
+# === LORA CONFIGURATION ===
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+use_dora: true 
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+# === TRAINING PARAMETERS ===
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 16
+per_device_eval_batch_size: 4
+num_train_epochs: 3
+learning_rate: 2e-5
+warmup_ratio: 0.03
+weight_decay: 0.01
+
+# === QUANTIZATION ===
+load_in_4bit: true
+bnb_4bit_compute_dtype: "float16"
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+
+# === MEMORY OPTIMIZATION ===
+gradient_checkpointing: true
+max_sequence_length: 2048
+
+# === OUTPUT ===
+output_dir: "experiments/qwen25_3b_v35_final"
+logging_steps: 10
+save_steps: 500
+save_total_limit: 2
+seed: 42
