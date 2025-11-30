@@ -1,3 +1,0 @@
-{"payload": "🇺🇸🇷🇺🇸 🇦🇫🇦🇲🇸", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0202821760030929}
-{"payload": "🇺🇸🇷🇺🇸🇦🇫🇦🇲", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019845048002025578}
-{"payload": "🇺🇸🇷🇺🇸🇦", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.020029554994835053}

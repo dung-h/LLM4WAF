@@ -1,5 +1,0 @@
-{"payload": "postgres postgres", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.020613893007976003}
-{"payload": "postgres password", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013115416004438885}
-{"payload": "postgres admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014563161006662995}
-{"payload": "admin admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016565976009587757}
-{"payload": "admin password", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012422651998349465}

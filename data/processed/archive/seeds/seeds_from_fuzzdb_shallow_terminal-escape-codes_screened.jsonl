@@ -1,3 +1,0 @@
-{"payload": "Roses are \u001b[0;31mred\u001b[0m, violets are \u001b[0;34mblue. Hope you enjoy terminal hue", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017174952998175286}
-{"payload": "But now...\u001b[20Cfor my greatest trick...\u001b[8m", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01556777299992973}
-{"payload": "The quic\b\b\b\b\b\bk brown fo\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007\u0007x... [Beeeep]", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013313809999090154}

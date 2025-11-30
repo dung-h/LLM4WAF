@@ -1,3 +1,0 @@
-{"payload": "/DWREasyAjax/dwr/index.html", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017631448994507082}
-{"payload": "/dwr/index.html", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.0134843880077824}
-{"payload": "/dwr/engine.js", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013443549003568478}

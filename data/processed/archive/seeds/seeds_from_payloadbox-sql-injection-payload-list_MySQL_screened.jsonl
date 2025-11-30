@@ -1,9 +1,0 @@
-{"payload": "1'1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018681002999073826}
-{"payload": "1 exec sp_ (or exec xp_)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015111410990357399}
-{"payload": "1 and 1=1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00631916600104887}
-{"payload": "1' and 1=(select count(*) from tablenames); --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00714305299334228}
-{"payload": "1 or 1=1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.007597596006235108}
-{"payload": "1' or '1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00616374600213021}
-{"payload": "1or1=1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017190042010042816}
-{"payload": "1'or'1'='1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0066161770082544535}
-{"payload": "fake@ema'or'il.nl'='il.nl", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0059733590023824945}

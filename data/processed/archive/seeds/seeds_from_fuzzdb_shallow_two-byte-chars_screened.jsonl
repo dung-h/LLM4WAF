@@ -1,9 +1,0 @@
-{"payload": "田中さんにあげて下さい", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017722363001666963}
-{"payload": "パーティーへ行かないか", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01545488500414649}
-{"payload": "和製漢語", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015676689996325877}
-{"payload": "部落格", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013009485002839938}
-{"payload": "사회과학원 어학연구소", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01348159099870827}
-{"payload": "찦차를 타고 온 펲시맨과 쑛다리 똠방각하", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014668035997601692}
-{"payload": "社會科學院語學研究所", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014544048994139303}
-{"payload": "울란바토르", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013677666000148747}
-{"payload": "𠜎𠜱𠝹𠱓𠱸𠲖𠳏", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014042125003470574}

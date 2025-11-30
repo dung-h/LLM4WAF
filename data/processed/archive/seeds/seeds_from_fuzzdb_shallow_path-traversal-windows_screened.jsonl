@@ -1,6 +1,0 @@
-{"payload": "C:/inetpub/wwwroot/global.asa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010893473998294212}
-{"payload": "C:\\inetpub\\wwwroot\\global.asa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0053296840051189065}
-{"payload": "C:/boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005069102000561543}
-{"payload": "C:\\boot.ini", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006721937003021594}
-{"payload": "D:\\inetpub\\wwwroot\\global.asa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00642186299955938}
-{"payload": "D:/inetpub/wwwroot/global.asa", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005241695995209739}

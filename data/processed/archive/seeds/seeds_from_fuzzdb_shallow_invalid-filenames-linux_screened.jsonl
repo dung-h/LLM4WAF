@@ -1,6 +1,0 @@
-{"payload": "/", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.021549921002588235}
-{"payload": "\\0", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017489290999947116}
-{"payload": "/dev/null", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005006894003599882}
-{"payload": "/dev/null/foo", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.00613528500252869}
-{"payload": ".", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014358191001520026}
-{"payload": "..", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0054233350019785576}

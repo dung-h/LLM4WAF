@@ -1,3 +1,0 @@
-{"payload": "INJECTX", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.019912629999453202}
-{"payload": "</INJECT>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016653389000566676}
-{"payload": "(INJECTX)", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.017339735000859946}

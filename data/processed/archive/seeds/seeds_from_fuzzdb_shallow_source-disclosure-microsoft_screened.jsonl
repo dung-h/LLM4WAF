@@ -1,3 +1,0 @@
-{"payload": "# microsoft-specific appends - try the generic list, too", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.02117204700334696}
-{"payload": "+.htr", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012375993996101897}
-{"payload": "::DATA$", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012368890005745925}

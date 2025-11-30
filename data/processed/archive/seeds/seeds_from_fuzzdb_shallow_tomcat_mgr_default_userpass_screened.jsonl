@@ -1,4 +1,0 @@
-{"payload": "j2deployer j2deployer", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013833730001351796}
-{"payload": "ovwebusr OvW*busr1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013660237993462943}
-{"payload": "cxsdk kdsxc", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012421356994309463}
-{"payload": "root owaspbwa", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012254247994860634}

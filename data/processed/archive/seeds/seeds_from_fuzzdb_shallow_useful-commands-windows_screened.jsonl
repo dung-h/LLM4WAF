@@ -1,3 +1,0 @@
-{"payload": "ver", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01688051400560653}
-{"payload": "chdir", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015091411994944792}
-{"payload": "echo %USERNAME%", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004899466999631841}

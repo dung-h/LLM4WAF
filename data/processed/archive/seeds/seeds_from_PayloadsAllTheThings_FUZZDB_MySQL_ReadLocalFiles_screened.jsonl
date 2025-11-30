@@ -1,3 +1,0 @@
-{"payload": "# mysql local file disclosure through sqli", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016160986997419968}
-{"payload": "# fuzz interesting absolute filepath/filename into <filepath>", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.016889247999642976}
-{"payload": "create table myfile (input TEXT); load data infile '<filepath>' into table myfile; select * from myfile;", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0065118469938170165}

@@ -1,5 +1,0 @@
-{"payload": "/jmx-console", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.018237147000036202}
-{"payload": "/web-console", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013604335006675683}
-{"payload": "/web-console/Invoker", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.011508897005114704}
-{"payload": "/invoker/JMXInvokerServlet", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010948548995656893}
-{"payload": "/WEB-INF/jboss-web.xml", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012425779001205228}

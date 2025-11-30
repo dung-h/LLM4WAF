@@ -1,4 +1,0 @@
-{"payload": "a", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01623635999567341}
-{"payload": "t", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.013107029008097015}
-{"payload": "c", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012673514997004531}
-{"payload": "g", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012521724987891503}

@@ -1,5 +1,0 @@
-{"payload": "<username>' OR 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.008396322999033146}
-{"payload": "'OR '' = '\tAllows authentication without a valid username.", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.0044237260008230805}
-{"payload": "<username>'--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.003967046010075137}
-{"payload": "' union select 1, '<user-fieldname>', '<pass-fieldname>' 1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005092915002023801}
-{"payload": "'OR 1=1--", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004156612994847819}

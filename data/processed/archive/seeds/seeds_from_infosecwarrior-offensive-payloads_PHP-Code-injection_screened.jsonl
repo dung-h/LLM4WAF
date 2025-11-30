@@ -1,8 +1,0 @@
-{"payload": "phpinfo();", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.010770845998195}
-{"payload": "system(\"id\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006569949007825926}
-{"payload": ";system(\"id\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004606154005159624}
-{"payload": "exec(\"id\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005274675990222022}
-{"payload": "shell_exec(\"id\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006111220005550422}
-{"payload": "`id`", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01765235999482684}
-{"payload": "passthru(\"id\")", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006462685996666551}
-{"payload": "readfile(/etc/passwd", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006620871994527988}

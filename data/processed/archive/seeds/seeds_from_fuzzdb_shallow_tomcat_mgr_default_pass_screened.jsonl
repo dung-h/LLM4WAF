@@ -1,5 +1,0 @@
-{"payload": "admin", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01848056800372433}
-{"payload": "manager", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010997944002156146}
-{"payload": "role1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01070839299063664}
-{"payload": "root", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.012056934006977826}
-{"payload": "tomcat", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.010846694000065327}

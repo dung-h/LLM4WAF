@@ -1,9 +1,0 @@
-{"payload": "1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015670863002014812}
-{"payload": "1 and user_name() = 'dbo'", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004853349004406482}
-{"payload": "\\'; desc users; --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005650500999763608}
-{"payload": "1\\'1", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.015207242999167647}
-{"payload": "1' and non_existant_table = '1", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.006054544996004552}
-{"payload": "' or username is not NULL or username = '", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004732859997602645}
-{"payload": "1 and ascii(lower(substring((select top 1 name from sysobjects where xtype='u'), 1, 1))) > 116", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.005529180998564698}
-{"payload": "1 union all select 1,2,3,4,5,6,name from sysobjects where xtype = 'u' --", "attack_type": "SQLI", "result": "blocked", "status_code": 403, "elapsed": 0.004913251003017649}
-{"payload": "1 uni/**/on select all from where", "attack_type": "SQLI", "result": "passed", "status_code": 200, "elapsed": 0.01503736699669389}
