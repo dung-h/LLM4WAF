@@ -1,0 +1,40 @@
+model_name: "google/gemma-2-2b-it"
+use_auth_token_env: "HF_TOKEN"
+
+# Path to the Phase 2 Reasoning dataset (pre-formatted with chat template)
+train_path: "data/processed/red_v40_phase2_reasoning_ready.jsonl"
+
+# === LORA CONFIGURATION ===
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+use_dora: true 
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+# === TRAINING PARAMETERS ===
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 32 # Effective batch size = 32
+per_device_eval_batch_size: 4
+num_train_epochs: 2
+learning_rate: 2e-5
+warmup_ratio: 0.03
+weight_decay: 0.01
+
+# === QUANTIZATION ===
+load_in_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: "float16"
+
+# === MEMORY OPTIMIZATION ===
+gradient_checkpointing: true
+max_length: 2048
+
+# === OUTPUT ===
+output_dir: "experiments/phase2_gemma2_2b_reasoning"
+logging_steps: 10
+save_steps: 500
+save_total_limit: 2
+seed: 42
+dataset_text_field: "text"
