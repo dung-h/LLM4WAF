@@ -55,4 +55,9 @@ data/archive_20251129
 data/archive
 data/archive_legacy
 SFT_gpu0.log
+*.log
+*.pid
+*.sh
 GEMINI.md
+*.md
+!README.md
