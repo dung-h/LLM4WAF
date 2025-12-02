@@ -1,0 +1,42 @@
+BLUE Phase 3 – WAF Tuning Summary
+=================================
+
+Total analyzed episodes: 119
+Total false_negative flagged: 37
+
+Vuln Effect Distribution:
+- unknown: 61 episodes
+- no-impact: 23 episodes
+- no-attack: 14 episodes
+- SQLI: 6 episodes
+- reflected XSS: 6 episodes
+- xss-reﬂected: 3 episodes
+- no-effe ct: 3 episodes
+- xss-injected: 2 episodes
+- no-attack-effect: 1 episodes
+
+Per-engine recommended rules:
+- modsecurity:
+    - 957000: 9 episodes
+    - 955900: 7 episodes
+    - 957101: 2 episodes
+    - 955800: 2 episodes
+    - 957202: 1 episodes
+    - 954800: 1 episodes
+    - 957201: 1 episodes
+    - 954700: 1 episodes
+    - 102700: 1 episodes
+    - 101020: 1 episodes
+    - 955600: 1 episodes
+    - 104000: 1 episodes
+
+Top Recommended Actions:
+- LLM_ERROR_OR_INVALID_JSON (61 episodes)
+- Disable verbose error message in production. (3 episodes)
+- Disable verbose error stack trace in production. (2 episodes)
+- Enable CRS Rule 977010 in the RESPONSE_HEADER phase or Raise PL >=2. (1 episodes)
+- Enable CRS_rule_958102_in_RESPONSE_BODY_phase_or_raise_PL_>=_2. (1 episodes)
+
+Notes:
+- The current LLM client is a stub, so recommendations are based on simple keyword matching.
+- For accurate results, connect 'blue/llm_client.py' to a real LLM (e.g., Gemma 2B running locally).

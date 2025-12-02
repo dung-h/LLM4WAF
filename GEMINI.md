@@ -1,378 +1,314 @@
 SYSTEM:
 Bạn là một agent lập trình chạy LOCAL trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
 
-Bối cảnh BLUE hiện tại:
+Bối cảnh:
 
-- Phase 1 BLUE (data chuẩn hoá + KB) đã hoàn thành:
-  - Schema: `docs/blue_phase1_schema.md`
-  - Episodes: `data/blue/blue_phase1_episodes.jsonl` (~423)
-  - CRS KB: `data/blue/blue_phase1_crs_kb.jsonl` (2 entry mẫu – nhỏ nhưng đủ để test flow)
-  - Golden set: `data/blue/blue_phase1_golden.jsonl` (~39)
-
-- Phase 2 BLUE (RAG + prompt + eval harness) đã hoàn thành:
-  - RAG:
+- RED:
+  - Gemma 2 2B Phase 3 RL là RED Agent (tấn công).
+- BLUE hiện tại:
+  - Phase 1: OK – dữ liệu đã chuẩn hoá:
+    - `data/blue/blue_phase1_episodes.jsonl` (~423 episodes)
+    - `data/blue/blue_phase1_crs_kb.jsonl` (KB CRS)
+    - `data/blue/blue_phase1_golden.jsonl` (~39 golden episodes)
+  - Phase 2: OK – RAG layer & prompt:
     - `blue/rag_config.yaml`
     - `blue/rag_index.py`
     - `blue/rag_retriever.py`
-  - BLUE LLM:
-    - `blue/prompts.py` (BLUE_PROMPT_TEMPLATE)
-    - `blue/llm_client.py` (hiện đang là stub)
-  - Evaluation harness:
+    - `blue/prompts.py`
     - `blue/runner_phase2_eval.py`
-    - `data/blue/blue_phase2_eval_raw.jsonl`
-    - `data/blue/blue_phase2_eval_summary.txt`
+  - Phase 3: **KHUNG có nhưng NÃO GIẢ**:
+    - `data/blue/blue_phase3_suggestions.jsonl` có 119 entries,
+      nhưng tất cả đều là stub:
+        - `recommended_rules: []`
+        - `recommended_actions: ["No specific actions recommended by stub LLM."]`
+    - `waf/blue_modsecurity_suggestions.conf` hầu như rỗng, không CRS hữu ích.
+    - Nguyên nhân: `blue/llm_client.py` chỉ là **stub**, không gọi LLM thật.
 
-MỤC TIÊU PHASE 3 BLUE:
+MỤC TIÊU TASK NÀY:
 
-1. Biến BLUE từ “demo RAG” thành **tuning assistant thực sự**:
-   - Chạy BLUE (RAG + LLM) trên:
-     - Tập các episode quan trọng, đặc biệt là `is_false_negative == true`.
-   - Sinh ra **khuyến nghị chi tiết**:
-     - `vuln_effect`, `is_false_negative`
-     - `recommended_rules` (rule_id + engine)
-     - `recommended_actions` (câu chữ + config gợi ý)
-2. Tổng hợp khuyến nghị:
-   - Per-engine (modsecurity, coraza, naxsi)
-   - Per-rule (rule nào được đề xuất nhiều nhất)
-   - Per-vuln_effect (SQL error, Ruby SyntaxError, XSS, …)
-3. Tạo **output cho engineer**:
-   - JSONL chi tiết: `data/blue/blue_phase3_suggestions.jsonl`
-   - Báo cáo human-readable: `data/blue/blue_phase3_report.txt`
-   - (Optional) file **overlay config** (ModSecurity/Coraza/NAXSI) dạng skeleton:
-     - `waf/blue_modsecurity_suggestions.conf`
-     - `waf/blue_coraza_suggestions.conf`
-     - `waf/blue_naxsi_suggestions.rules`
-4. Không tự động áp dụng rule vào WAF production/lab; chỉ **chuẩn bị** output. (Việc re-test với RED là bước sau).
+1. **Nâng cấp BLUE từ “dumb stub” thành thật sự dùng LLM:**
+   - Sửa `blue/llm_client.py`:
+     - Không còn trả stub cứng.
+     - Thay bằng gọi tới LLM thật (hoặc LLM nội bộ của repo, nếu có).
+   - Đảm bảo output là JSON đúng schema và có `recommended_rules` thực sự.
+
+2. **Re-run BLUE Phase 3 (trên tập đã chọn):**
+   - Chạy lại `runner_phase3_suggest.py` (hoặc version nâng cấp),
+     nhưng với LLM thật.
+   - Sinh lại:
+     - `data/blue/blue_phase3_suggestions.jsonl` (bản mới, có CRS rule thực sự).
+     - `data/blue/blue_phase3_report.txt` (bản mới).
+     - `waf/blue_modsecurity_suggestions.conf` & `waf/blue_coraza_suggestions.yaml` (overlay mới có rule thật).
+
+3. (OPTIONAL, nếu còn thời gian) **Re-run Phase 4 nhanh**:
+   - Re-eval RED trên profile base vs profile blue_v1 mới.
+   - Chỉ cần chạy nhẹ trên DVWA, log lại diff.
 
 RÀNG BUỘC:
 
-- KHÔNG sửa/xoá:
-  - `data/blue/blue_phase1_*.jsonl`
-  - `data/blue/blue_phase2_eval_*.jsonl/txt`
-- KHÔNG gọi HTTP ra internet (không `curl`/`wget`/API cloud).  
-  - Nếu `blue/llm_client.py` sử dụng LLM local (vd. vLLM, server nội bộ) thì được, nhưng không tự tạo code gọi API public bên ngoài.
-- Mọi script/command lớn phải log vào `mes.log`.
-- File tạm/debug → xoá hoặc move vào `archive/`.
+- KHÔNG đụng vào file Phase 1–2 gốc:
+  - `data/blue/blue_phase1_*`
+  - `data/blue/blue_phase2_*`
+- CÓ THỂ ghi đè **Phase 3**:
+  - `data/blue/blue_phase3_suggestions.jsonl`
+  - `data/blue/blue_phase3_report.txt`
+  - `waf/blue_modsecurity_suggestions.conf`
+  - `waf/blue_coraza_suggestions.yaml`
+- KHÔNG gọi HTTP ra Internet. Nếu gọi LLM:
+  - Phải dùng client/infra LLM đã có sẵn trong project hoặc môi trường (ví dụ: wrapper có sẵn, local endpoint), **không** tự thêm call API public ra ngoài.
+- Mọi script/command quan trọng phải log vào `mes.log`.
+- Script tạm/debug phải được xoá hoặc move `archive/`.
 
 ----------------------------------------------------
 PHẦN 0 – LOG & CLEANUP
 
-0.1. `mes.log`
-- Bất cứ khi nào bạn chạy:
-  - Script Python/Bash chính,
-  - Xây index,
-  - Chạy batch BLUE RAG,
-- PHẢI append một dòng vào `mes.log`:
+0.1. Ghi log `mes.log`
+
+Mỗi lệnh chính (chạy script, regenerate suggestions, generate overlay, re-eval) phải append:
 
 ```text
-[YYYY-MM-DD HH:MM:SS] CMD="<lệnh đã chạy>" STATUS=OK|FAIL OUTPUT="<file output chính hoặc N/A>"
+[YYYY-MM-DD HH:MM:SS] CMD="<lệnh đang chạy>" STATUS=OK|FAIL OUTPUT="<file output chính hoặc N/A>"
 ````
 
-0.2. File tạm
+0.2. Dọn rác
 
-* Script tạm (vd: `blue/tmp_debug_phase3.py`), notebook test:
+* File debug/temp (vd: `blue/tmp_*.py`, notebook tạm):
 
-  * Nếu cần giữ → move `archive/scripts/` hoặc `archive/notebooks/`.
+  * Nếu còn giá trị → move `archive/`.
   * Nếu không → xoá.
 
 ---
 
-PHẦN 1 – HOÀN THIỆN `blue/llm_client.py`
+PHẦN 1 – SỬA `blue/llm_client.py` (THAY STUB BẰNG LLM THẬT)
 
-1.1. Kiểm tra client LLM đã có trong repo
+1.1. Kiểm tra client LLM chung của repo
 
-* Tìm xem repo có module LLM chung nào:
+* Tìm xem trong repo đã có:
 
-  * Ví dụ: `llm/client.py`, `core/llm_client.py`, hoặc config sử dụng model RED (Gemma 2 2B/ Phi-3 mini).
-* Nếu có:
+  * Một client dùng cho RED hoặc pipeline khác (vd: `llm/client.py`, `core/llm_client.py`, `models/gemma_client.py`, …).
+* Mục tiêu: tái sử dụng hạ tầng LLM có sẵn (API key, endpoint).
 
-  * Tái sử dụng client đó trong `blue/llm_client.py`:
+1.2. Thay stub trong `blue/llm_client.py`
 
-    * Import và wrap lại thành hàm:
+* Mở `blue/llm_client.py`, xác định rõ:
+
+  * Hàm stub hiện tại (vd: `call_blue_llm(prompt: str) -> dict`).
+  * Nội dung stub kiểu:
+
+```python
+return {
+  "vuln_effect": "no-effect",
+  "is_false_negative": False,
+  "recommended_rules": [],
+  "recommended_actions": ["No specific actions recommended by stub LLM."],
+  "notes": "This is a stub response. Connect to a real LLM for actual analysis."
+}
+```
+
+* Thay bằng logic mới:
+
+  * Dùng client LLM có sẵn trong repo **hoặc** nếu không có:
+
+    * Viết TODO rõ ràng & interface sạch cho user nhét backend, nhưng **tạm thời** bạn vẫn có thể simulate một LLM “thông minh hơn stub” bằng cách:
+
+      * RAG → dùng `rag_retriever` để lấy CRS entry (vd rule 956100),
+      * Dùng heuristics đơn giản để tạo `recommended_rules`/`recommended_actions`.
+    * Tuy nhiên, nếu môi trường có LLM thật, ưu tiên dùng LLM thật.
+
+* API mới của `call_blue_llm`:
 
 ```python
 def call_blue_llm(prompt: str) -> dict:
     """
-    Gọi LLM (hoặc parse từ stub nếu chưa nối backend).
-    Trả về dict JSON đã parse theo format BLUE_PROMPT_TEMPLATE yêu cầu.
+    Nhận prompt (BLUE_PROMPT_TEMPLATE đã fill),
+    gọi LLM backend (hoặc local heuristic fallback),
+    parse JSON, trả về dict.
+
+    YÊU CẦU:
+      - Nếu LLM trả về JSON không hợp lệ:
+          + Log lỗi (mes.log hoặc file debug).
+          + Có thể retry 1 lần với prompt "JSON ONLY".
+      - Nếu vẫn fail:
+          + Trả về dict dạng:
+              {
+                "vuln_effect": "unknown",
+                "is_false_negative": False,
+                "recommended_rules": [],
+                "recommended_actions": ["LLM_ERROR_OR_INVALID_JSON"],
+                "notes": "..."
+              }
     """
 ```
 
-* Nếu LLM trả về text, parse JSON:
+1.3. Unit test nhỏ
 
-  * Xử lý lỗi parse, log gọn: ghi vào `mes.log` hoặc file debug nhỏ trong `archive/logs/`.
+* Tạo script/test nhỏ (có thể ngay trong `llm_client.py` hoặc file riêng) để:
 
-* Nếu repo CHƯA có client LLM khả dụng:
+  * Build 1 prompt đơn giản với fake EPISODE + KB_SNIPPETS.
+  * Gọi `call_blue_llm` và in ra kết quả.
+* Tối thiểu:
 
-  * Giữ `call_blue_llm` là stub nhưng:
-
-    * Thêm docstring rõ ràng mô tả chỗ này sẽ cần user điền logic gọi LLM thực tế.
-    * Có thể tạm đọc từ file mẫu (mock) để cho pipeline Phase 3 chạy khô (dry-run).
-
-**Lưu ý:** Phase 3 tập trung thiết kế pipeline + aggregation; việc kết nối thật tới LLM có thể do user thêm sau, miễn `call_blue_llm()` trả về dict đúng schema.
+  * Kết quả **không còn** là stub cũ.
+  * Có khả năng xuất hiện `recommended_rules` ≠ `[]` trong một số case.
 
 ---
 
-PHẦN 2 – BLUE RUNNER PHASE 3 (BATCH RECOMMENDATION)
+PHẦN 2 – TEST LẠI TRÊN GOLDEN SET (PHASE 2 HARNESS)
 
-2.1. Tạo script: `blue/runner_phase3_suggest.py`
+2.1. Chạy lại `blue/runner_phase2_eval.py` (hoặc chỉnh nhẹ)
 
-Chức năng:
+* Dùng **golden set**:
 
-1. Load:
+  * `data/blue/blue_phase1_golden.jsonl`
 
-   * `data/blue/blue_phase1_episodes.jsonl`
-   * `data/blue/blue_phase1_crs_kb.jsonl` (qua `CRSKnowledgeBase` trong `rag_index.py`)
+* Mục tiêu:
 
-2. Chọn tập episode mục tiêu:
+  * Gọi BLUE LLM mới cho từng golden episode.
+  * Ghi output vào:
 
-   * Ưu tiên:
+    * `data/blue/blue_phase2_eval_raw.jsonl` (có thể ghi đè bản cũ hoặc tạo file `_v2`).
 
-     * `blue_label.is_false_negative == true`
-   * Nếu số lượng quá lớn:
+* Nếu golden có field `expected_crs_rules`:
 
-     * Giới hạn (vd 200–300) hoặc chỉ lấy:
+  * Tính hit rate:
 
-       * severity == "high" hoặc "medium"
-   * Log thống kê:
+    * recommended_rules của BLUE có chứa rule_id expected hay không.
+  * Ghi Summary:
 
-     * Tổng episodes
-     * Số FN
-     * Số được chọn cho Phase 3.
+    * `data/blue/blue_phase2_eval_summary.txt` (hoặc `_v2`).
 
-3. Với mỗi episode được chọn:
+* Log command & output vào `mes.log`.
 
-   * Dùng `retrieve_for_episode(episode, kb, top_k)`:
+2.2. Kiểm tra nhanh kết quả
 
-     * `top_k` gợi ý: 3–5.
+* Lấy ngẫu nhiên 3–5 record trong `blue_phase2_eval_raw.jsonl`:
 
-   * Build prompt từ `BLUE_PROMPT_TEMPLATE` trong `blue/prompts.py`:
+  * Xem:
 
-     * `{EPISODE_JSON}`:
-
-       * Rút gọn: chỉ giữ:
-
-         * `waf_env`
-         * `app_context`
-         * `attack`
-         * `app_observation`
-         * `blue_label.vuln_effect` & `is_false_negative`
-     * `{KB_SNIPPETS}`:
-
-       * 2–5 entry từ KB, mỗi entry chỉ giữ:
-
-         * `rule_id`, `test_description`, `attack_type`, `variables`, `operator`, `example_payload`, `example_attack_context`.
-
-   * Gọi `call_blue_llm(prompt)`:
-
-     * Nếu LLM thực chưa được nối:
-
-       * Có thể trả mock hoặc skip với flag; nhưng vẫn ghi record rõ ràng.
-
-   * Nhận output dict, expected schema:
-
-```jsonc
-{
-  "vuln_effect": "...",
-  "is_false_negative": true,
-  "recommended_rules": [
-    {
-      "engine": "modsecurity",
-      "rule_id": "956100",
-      "reason": "..."
-    }
-  ],
-  "recommended_actions": [
-    "Enable rule 956100 ...",
-    "Disable verbose Ruby errors ..."
-  ],
-  "notes": "..."
-}
-```
-
-* Gộp thành 1 record:
-
-```jsonc
-{
-  "episode_id": "<có thể là hash index hoặc offset>",
-  "episode": { ...blue_episode rút gọn... },
-  "kb_hits": [ ...KB_SNIPPETS... ],
-  "blue_output": { ...LLM output như trên... }
-}
-```
-
-* Ghi vào:
-
-  * `data/blue/blue_phase3_suggestions.jsonl`
-
-2.2. Logging
-
-* Sau khi chạy xong:
-
-  * Ghi CMD/STATUS/OUTPUT vào `mes.log`.
-  * In ra số episode xử lý, số records trong `blue_phase3_suggestions.jsonl`.
+    * `recommended_rules` có ID thật không (vd: `"956100"`, `"942100"`, …).
+    * `recommended_actions` có nội dung liên quan tới rule/vuln không (không phải stub).
 
 ---
 
-PHẦN 3 – AGGREGATOR & REPORT
+PHẦN 3 – RE-RUN BLUE PHASE 3 (SUGGESTIONS + OVERLAY) VỚI LLM MỚI
 
-3.1. Tạo script: `blue/phase3_aggregate_report.py`
+3.1. Chạy lại `blue/runner_phase3_suggest.py`
 
-Chức năng:
+* Dùng BLUE LLM mới:
 
-1. Đọc `data/blue/blue_phase3_suggestions.jsonl`.
+  * Lúc này `call_blue_llm` không còn là stub.
+* Input:
 
-2. Tính thống kê:
+  * `data/blue/blue_phase1_episodes.jsonl`
+  * `data/blue/blue_phase1_crs_kb.jsonl`
+* Output (ghi ĐÈ hoặc tạo version mới – tuỳ bạn nhưng nên GHI ĐÈ cho đơn giản, nhớ log trong `mes.log`):
 
-   * Tổng số episode được BLUE phân tích.
-   * Với mỗi engine (modsecurity, coraza, naxsi,…):
+  * `data/blue/blue_phase3_suggestions.jsonl` – 119 entries với real output.
+* Kiểm tra nhanh:
 
-     * List các rule được recommend:
+  * 1–2 record phải có:
 
-       * rule_id
-       * số lần xuất hiện (đếm across episodes)
-   * Với mỗi `vuln_effect`:
+    * `blue_output.recommended_rules` không rỗng.
+    * `blue_output.recommended_actions` mang tính phòng thủ thực sự.
 
-     * Bao nhiêu case được recommend rule?
-     * Top rule cho loại đó.
+3.2. Chạy lại `blue/phase3_aggregate_report.py`
 
-3. Sinh báo cáo text:
+* Sinh lại:
 
-   * `data/blue/blue_phase3_report.txt`
-   * Gợi ý nội dung:
+  * `data/blue/blue_phase3_report.txt`
+* Xem có thống kê:
 
-BLUE Phase 3 – WAF Tuning Summary
-=================================
+  * Top `rule_id` được recommend.
+  * Theo `vuln_effect`.
 
-Total analyzed episodes: N
-Total with is_false_negative=true: M
+3.3. Chạy lại `blue/phase3_generate_waf_overlays.py`
 
-Per-engine recommended rules:
-- modsecurity:
-    - 956100 (Ruby SyntaxError): 7 episodes
-    - 942100 (SQLi detection): 4 episodes
-- coraza:
-    - ...
+* Sinh lại overlay:
 
-Per-vuln_effect:
-- error-disclosure:
-    - main rules: 956100 (Ruby), 950120 (PHP error), ...
-- sql-error:
-    - main rules: 942100, ...
-...
+  * `waf/blue_modsecurity_suggestions.conf`
+  * `waf/blue_coraza_suggestions.yaml`
 
-Notes:
-- Many Ruby error disclosure episodes map to CRS rule 956100 but environment likely has it disabled or PL < 2.
-- Suggested actions: enable RESPONSE_BODY inspection and raise PL for /admin/* endpoints.
-```
+* Đảm bảo:
 
-3.2. Logging
+  * File này **không rỗng**.
+  * Có ít nhất vài `SecRule`/rule block với `id:` riêng (tránh đụng CRS id range nếu có).
 
-* Log lệnh chạy & output file vào `mes.log`.
+* Log từng bước vào `mes.log`.
 
 ---
 
-PHẦN 4 – OUTPUT CONFIG SKELETON (OPTIONAL NHƯNG NÊN LÀM)
+PHẦN 4 – (OPTIONAL) MINI RE-EVAL RED–BLUE (PHASE 4 LITE)
 
-4.1. Tạo script: `blue/phase3_generate_waf_overlays.py`
+Nếu thời gian cho phép, chạy một vòng Phase 4 nhẹ để chủ nhân thấy BLUE mới khác gì:
 
-Chức năng:
+4.1. Dùng lại profile:
 
-1. Đọc `data/blue/blue_phase3_suggestions.jsonl`.
+* `waf/modsecurity_profile_base.conf`
+* `waf/modsecurity_profile_blue_v1.conf` (giờ đã include overlay mới)
 
-2. Lọc theo engine:
+4.2. Run RED eval nhẹ
 
-   * `engine == "modsecurity"`:
+* Chạy `scripts/run_red_eval_profile.py` (hoặc script tương đương đã dựng từ Phase 4) cho:
 
-     * Từ `recommended_rules` + `recommended_actions`, generate các đoạn `SecRule`/`SecAction` SKELETON.
-   * `engine == "coraza"`:
+  * profile `modsec_base` (DVWA, SQLI+XSS, ~30–50 request)
+  * profile `modsec_blue_v1` (DVWA, cùng số request)
+* Output:
 
-     * Sinh rule YAML tương đương (nếu action có hint).
-   * `engine == "naxsi"`:
+  * `eval/red_phase4_modsec_base_*`
+  * `eval/red_phase4_modsec_blue_v1_*`
 
-     * Sinh couple `MainRule`/`BasicRule` gợi ý.
+4.3. (Optional) FP check nhẹ
 
-3. Output:
+* Chạy `scripts/run_fp_check_profile.py`:
 
-* `waf/blue_modsecurity_suggestions.conf`
+  * profile base vs blue_v1
+  * vài chục request benign.
 
-  * chứa comment + skeleton:
+4.4. Joint mini report
 
-```apache
-# BLUE Phase 3 suggestion: Ruby SyntaxError disclosure
-# Episodes: 7, vuln_effect=error-disclosure
-SecRule RESPONSE_BODY "@pmFromFile ruby-errors.data" \
-    "id:9956100,phase:4,block,log,msg:'Ruby SyntaxError detected (BLUE suggestion)',severity:ERROR"
+* Nếu đã có script `redblue_phase4_joint_report.py`, chạy lại.
+* Nếu chưa, ít nhất:
 
-# ... các rule khác ...
-```
+  * In nhanh summary ra stdout:
 
-* `waf/blue_coraza_suggestions.yaml`
-* `waf/blue_naxsi_suggestions.rules`
-
-Lưu ý:
-
-* Không cần “đúng chuẩn” tuyệt đối; đây là file gợi ý để engineer đọc và chỉnh tay.
-* Nên comment rõ mỗi block:
-
-  * vuln_effect
-  * số episode liên quan
-  * rule CRS gốc tham chiếu (nếu có).
-
-4.2. Logging
-
-* Ghi CMD/STATUS/OUTPUT vào `mes.log`.
+    * Blocked% trước/sau
+    * Full Exec% trước/sau (nếu bạn có logic detect)
+    * FP rate trước/sau (nếu có fp_check)
 
 ---
 
-PHẦN 5 – CLEANUP & BÁO CÁO CUỐI
+PHẦN 5 – CLEANUP & BÁO CÁO
 
 5.1. Dọn dẹp
 
-* Xoá/move tất cả script debug tạm thời vào `archive/`.
-* Giữ lại các file chính:
+* Xoá/move mọi script/debug tạm.
+* Giữ lại:
 
-  * Code:
+  * BLUE:
 
-    * `blue/llm_client.py`
-    * `blue/runner_phase3_suggest.py`
-    * `blue/phase3_aggregate_report.py`
-    * `blue/phase3_generate_waf_overlays.py`
-    * (các file Phase 1–2 đã có)
+    * `blue/llm_client.py` (đã dùng LLM thật hoặc heuristic thông minh, KHÔNG còn stub vô nghĩa).
+    * `data/blue/blue_phase3_suggestions.jsonl` (bản mới).
+    * `data/blue/blue_phase3_report.txt` (bản mới).
+    * `waf/blue_modsecurity_suggestions.conf` (overlay mới, có rule).
+    * `waf/blue_coraza_suggestions.yaml`.
 
-  * Data:
+  * RED–BLUE:
 
-    * `data/blue/blue_phase1_*.jsonl`
-    * `data/blue/blue_phase2_eval_*.jsonl/txt`
-    * `data/blue/blue_phase3_suggestions.jsonl`
-    * `data/blue/blue_phase3_report.txt`
+    * Bất kỳ file eval/reports mới bạn tạo trong Phase 4 lite.
 
-  * WAF overlays:
+5.2. Báo cáo (stdout cho user)
 
-    * `waf/blue_modsecurity_suggestions.conf` (nếu được tạo)
-    * `waf/blue_coraza_suggestions.yaml` (nếu được tạo)
-    * `waf/blue_naxsi_suggestions.rules` (nếu được tạo)
+* In tóm tắt:
 
-5.2. Báo cáo (stdout)
+  * `blue/llm_client.py` hiện trạng: stub đã được thay bằng gì? (LLM thật / heuristic local).
+  * Số suggestions trong `blue_phase3_suggestions.jsonl` và ví dụ:
 
-* In cho user:
+    * 1 entry có recommended_rules ≠ [].
+  * Tóm tắt Quick diff (nếu chạy lại Phase 4 nhẹ):
 
-  * Đường dẫn & kích thước:
+    * Blocked% / FullExec% trước vs sau BLUE overlay mới.
 
-    * `data/blue/blue_phase3_suggestions.jsonl`
-    * `data/blue/blue_phase3_report.txt`
-    * các file `waf/blue_*_suggestions.*`
-  * Thống kê:
+Sau bước này:
 
-    * Số episode đã được BLUE xử lý.
-    * Top 3 rule_id được đề xuất nhiều nhất cho modsecurity.
-  * 1–2 ví dụ rút gọn:
-
-    * Một entry trong `blue_phase3_suggestions.jsonl`.
-    * Một đoạn trong `blue_modsecurity_suggestions.conf`.
-
-KẾT THÚC PHASE 3 BLUE:
-
-* KHÔNG tự ý apply config vào WAF hoặc chạy lại RED trong task này.
-* Dừng lại sau khi đã sinh đầy đủ suggestion + báo cáo.
-
+* BLUE Agent không còn là khung rỗng nữa mà thực sự sinh recommendation dựa trên LLM/RAG.
+* Có thể dùng vào các vòng đánh giá tiếp theo.

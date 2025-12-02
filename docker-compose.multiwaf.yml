@@ -1,3 +1,4 @@
+
 version: '3.8'
 
 networks:
@@ -39,9 +40,9 @@ services:
   # --- WAFs ---
 
   # 1. ModSecurity CRS WAF (Nginx based) - Baseline (PL1)
-  modsecurity-waf:
+  modsecurity-pl1-waf:
     image: owasp/modsecurity-crs:nginx
-    container_name: modsecurity-waf
+    container_name: modsecurity-pl1-waf
     ports:
       - "8000:8080"
     networks:
@@ -49,12 +50,11 @@ services:
     volumes:
       - ./dvwa-modsecurity-waf/modsec-custom.conf:/etc/modsecurity.d/modsec-custom.conf:ro
       - ./dvwa-modsecurity-waf/custom-rules:/etc/modsecurity.d/custom-rules:ro
-      - ./dvwa-modsecurity-waf/nginx/nginx.conf:/etc/nginx/templates/conf.d/default.conf.template:ro
+      - ./waf/modsecurity_profile_base.conf:/etc/nginx/templates/conf.d/default.conf.template:ro # Mount partial Nginx config
     environment:
       - MODSEC_RULE_ENGINE=On
       - MODSEC_AUDIT_ENGINE=On
       - MODSEC_AUDIT_LOG_PARTS=ABDEFHIJZ
-      - PARANOIA=1
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
@@ -62,18 +62,42 @@ services:
       retries: 3
       start_period: 30s
 
-  # 2. Coraza WAF CRS (Caddy based)
-  coraza-waf:
+  # 1.5. ModSecurity CRS WAF (Nginx based) - BLUE v1 (PL1 + Overlay)
+  modsecurity-blue-v1-waf:
+    image: owasp/modsecurity-crs:nginx
+    container_name: modsecurity-blue-v1-waf
+    ports:
+      - "8001:8080" # New port
+    networks:
+      - waf-network
+    volumes:
+      - ./dvwa-modsecurity-waf/modsec-custom.conf:/etc/modsecurity.d/modsec-custom.conf:ro
+      - ./dvwa-modsecurity-waf/custom-rules:/etc/modsecurity.d/custom-rules:ro
+      - ./waf/modsecurity_profile_blue_v1.conf:/etc/nginx/templates/conf.d/default.conf.template:ro # Mount partial Nginx config
+      - ./waf/blue_modsecurity_suggestions.conf:/etc/modsecurity.d/blue_modsecurity_suggestions.conf:ro # BLUE Overlay
+    environment:
+      - MODSEC_RULE_ENGINE=On
+      - MODSEC_AUDIT_ENGINE=On
+      - MODSEC_AUDIT_LOG_PARTS=ABDEFHIJZ
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # 2. Coraza WAF CRS (Caddy based) - Baseline (PL1)
+  coraza-pl1-waf:
     build: ./coraza
-    container_name: coraza-waf
+    container_name: coraza-pl1-waf
     ports:
       - "9005:80"
     networks:
       - waf-network
     volumes:
-      - ./coraza/Caddyfile:/etc/caddy/Caddyfile:ro
       - ./coraza/coraza.conf:/etc/coraza/coraza.conf:ro
       - ./coraza/coreruleset:/etc/coraza/coreruleset:ro
+      - ./waf/coraza_profile_base.yaml:/etc/caddy/Caddyfile:ro # Mount base Caddyfile
     environment:
       - PARANOIA=1
     depends_on:
@@ -91,7 +115,7 @@ services:
     volumes:
       - ./dvwa-modsecurity-waf/modsec-custom.conf:/etc/modsecurity.d/modsec-custom.conf:ro
       - ./dvwa-modsecurity-waf/custom-rules:/etc/modsecurity.d/custom-rules:ro
-      - ./dvwa-modsecurity-waf/nginx/nginx.conf:/etc/nginx/templates/conf.d/default.conf.template:ro
+      - ./waf/modsecurity_profile_base.conf:/etc/nginx/templates/conf.d/default.conf.template:ro # Mount partial Nginx config
     environment:
       - MODSEC_RULE_ENGINE=On
       - MODSEC_AUDIT_ENGINE=On

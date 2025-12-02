@@ -736,3 +736,2256 @@ Raw evaluation results saved to data/blue/blue_phase2_eval_raw.jsonl
 Total golden set cases: 39
 No golden set cases with 'expected_crs_rules' for rule hit evaluation.
 Evaluation summary saved to data/blue/blue_phase2_eval_summary.txt
+Loaded 423 blue_episodes from data/blue/blue_phase1_episodes.jsonl.
+Loaded 2 KB entries from data/blue/blue_phase1_crs_kb.jsonl.
+Selected 119 false negative episodes for Phase 3 processing.
+Processing episode 1/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 1. Vuln Effect: no-effect
+Processing episode 2/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 2. Vuln Effect: no-effect
+Processing episode 3/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 3. Vuln Effect: no-effect
+Processing episode 4/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 4. Vuln Effect: no-effect
+Processing episode 5/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 5. Vuln Effect: no-effect
+Processing episode 6/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 6. Vuln Effect: no-effect
+Processing episode 7/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 7. Vuln Effect: no-effect
+Processing episode 8/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 8. Vuln Effect: no-effect
+Processing episode 9/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 9. Vuln Effect: no-effect
+Processing episode 10/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 10. Vuln Effect: no-effect
+Processing episode 11/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 11. Vuln Effect: no-effect
+Processing episode 12/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 12. Vuln Effect: no-effect
+Processing episode 13/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 13. Vuln Effect: no-effect
+Processing episode 14/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 14. Vuln Effect: no-effect
+Processing episode 15/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 15. Vuln Effect: no-effect
+Processing episode 16/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 16. Vuln Effect: no-effect
+Processing episode 17/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 17. Vuln Effect: no-effect
+Processing episode 18/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 18. Vuln Effect: no-effect
+Processing episode 19/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 19. Vuln Effect: no-effect
+Processing episode 20/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 20. Vuln Effect: no-effect
+Processing episode 21/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 21. Vuln Effect: no-effect
+Processing episode 22/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 22. Vuln Effect: no-effect
+Processing episode 23/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 23. Vuln Effect: no-effect
+Processing episode 24/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 24. Vuln Effect: no-effect
+Processing episode 25/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 25. Vuln Effect: no-effect
+Processing episode 26/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 26. Vuln Effect: no-effect
+Processing episode 27/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 27. Vuln Effect: no-effect
+Processing episode 28/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 28. Vuln Effect: no-effect
+Processing episode 29/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 29. Vuln Effect: no-effect
+Processing episode 30/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 30. Vuln Effect: no-effect
+Processing episode 31/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 31. Vuln Effect: no-effect
+Processing episode 32/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 32. Vuln Effect: no-effect
+Processing episode 33/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 33. Vuln Effect: no-effect
+Processing episode 34/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 34. Vuln Effect: no-effect
+Processing episode 35/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 35. Vuln Effect: no-effect
+Processing episode 36/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 36. Vuln Effect: no-effect
+Processing episode 37/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 37. Vuln Effect: no-effect
+Processing episode 38/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 38. Vuln Effect: no-effect
+Processing episode 39/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 39. Vuln Effect: no-effect
+Processing episode 40/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 40. Vuln Effect: no-effect
+Processing episode 41/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 41. Vuln Effect: no-effect
+Processing episode 42/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 42. Vuln Effect: no-effect
+Processing episode 43/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 43. Vuln Effect: no-effect
+Processing episode 44/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 44. Vuln Effect: no-effect
+Processing episode 45/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 45. Vuln Effect: no-effect
+Processing episode 46/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 46. Vuln Effect: no-effect
+Processing episode 47/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 47. Vuln Effect: no-effect
+Processing episode 48/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 48. Vuln Effect: no-effect
+Processing episode 49/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 49. Vuln Effect: no-effect
+Processing episode 50/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 50. Vuln Effect: no-effect
+Processing episode 51/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 51. Vuln Effect: no-effect
+Processing episode 52/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 52. Vuln Effect: no-effect
+Processing episode 53/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 53. Vuln Effect: no-effect
+Processing episode 54/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 54. Vuln Effect: no-effect
+Processing episode 55/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 55. Vuln Effect: no-effect
+Processing episode 56/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 56. Vuln Effect: no-effect
+Processing episode 57/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 57. Vuln Effect: no-effect
+Processing episode 58/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 58. Vuln Effect: no-effect
+Processing episode 59/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 59. Vuln Effect: no-effect
+Processing episode 60/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 60. Vuln Effect: no-effect
+Processing episode 61/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 61. Vuln Effect: no-effect
+Processing episode 62/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 62. Vuln Effect: no-effect
+Processing episode 63/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 63. Vuln Effect: no-effect
+Processing episode 64/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 64. Vuln Effect: no-effect
+Processing episode 65/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 65. Vuln Effect: no-effect
+Processing episode 66/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 66. Vuln Effect: no-effect
+Processing episode 67/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 67. Vuln Effect: no-effect
+Processing episode 68/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 68. Vuln Effect: no-effect
+Processing episode 69/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 69. Vuln Effect: no-effect
+Processing episode 70/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 70. Vuln Effect: no-effect
+Processing episode 71/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 71. Vuln Effect: no-effect
+Processing episode 72/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 72. Vuln Effect: no-effect
+Processing episode 73/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 73. Vuln Effect: no-effect
+Processing episode 74/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 74. Vuln Effect: no-effect
+Processing episode 75/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 75. Vuln Effect: no-effect
+Processing episode 76/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 76. Vuln Effect: no-effect
+Processing episode 77/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 77. Vuln Effect: no-effect
+Processing episode 78/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 78. Vuln Effect: no-effect
+Processing episode 79/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 79. Vuln Effect: no-effect
+Processing episode 80/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 80. Vuln Effect: no-effect
+Processing episode 81/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 81. Vuln Effect: no-effect
+Processing episode 82/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 82. Vuln Effect: no-effect
+Processing episode 83/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 83. Vuln Effect: no-effect
+Processing episode 84/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 84. Vuln Effect: no-effect
+Processing episode 85/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 85. Vuln Effect: no-effect
+Processing episode 86/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 86. Vuln Effect: no-effect
+Processing episode 87/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 87. Vuln Effect: no-effect
+Processing episode 88/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 88. Vuln Effect: no-effect
+Processing episode 89/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 89. Vuln Effect: no-effect
+Processing episode 90/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 90. Vuln Effect: no-effect
+Processing episode 91/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 91. Vuln Effect: no-effect
+Processing episode 92/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 92. Vuln Effect: no-effect
+Processing episode 93/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 93. Vuln Effect: no-effect
+Processing episode 94/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 94. Vuln Effect: no-effect
+Processing episode 95/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 95. Vuln Effect: no-effect
+Processing episode 96/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 96. Vuln Effect: no-effect
+Processing episode 97/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 97. Vuln Effect: no-effect
+Processing episode 98/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 98. Vuln Effect: no-effect
+Processing episode 99/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 99. Vuln Effect: no-effect
+Processing episode 100/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 100. Vuln Effect: no-effect
+Processing episode 101/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 101. Vuln Effect: no-effect
+Processing episode 102/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 102. Vuln Effect: no-effect
+Processing episode 103/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 103. Vuln Effect: no-effect
+Processing episode 104/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 104. Vuln Effect: no-effect
+Processing episode 105/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 105. Vuln Effect: no-effect
+Processing episode 106/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 106. Vuln Effect: no-effect
+Processing episode 107/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 107. Vuln Effect: no-effect
+Processing episode 108/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 108. Vuln Effect: no-effect
+Processing episode 109/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 109. Vuln Effect: no-effect
+Processing episode 110/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 110. Vuln Effect: no-effect
+Processing episode 111/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 111. Vuln Effect: no-effect
+Processing episode 112/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 112. Vuln Effect: no-effect
+Processing episode 113/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 113. Vuln Effect: no-effect
+Processing episode 114/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 114. Vuln Effect: no-effect
+Processing episode 115/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 115. Vuln Effect: no-effect
+Processing episode 116/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 116. Vuln Effect: no-effect
+Processing episode 117/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 117. Vuln Effect: no-effect
+Processing episode 118/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 118. Vuln Effect: no-effect
+Processing episode 119/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 119. Vuln Effect: no-effect
+
+Saved 119 suggestions to data/blue/blue_phase3_suggestions.jsonl
+
+--- Phase 3 BLUE Suggestions Report ---
+Total episodes processed: 119
+
+--- Example Suggestion (first 1) ---
+{
+  "episode_id": "ep_0",
+  "original_episode_summary": {
+    "attack_type": "SQLI",
+    "payload": "%2527%2520or%25201==1&sV=zZ%2527%2520--",
+    "waf_engine": "modsecurity",
+    "app_name": "dvwa",
+    "vuln_effect": "no-effect"
+  },
+  "kb_hits": [],
+  "blue_recommendation": {
+    "vuln_effect": "no-effect",
+    "is_false_negative": false,
+    "recommended_rules": [],
+    "recommended_actions": [
+      "No specific actions recommended by stub LLM."
+    ],
+    "notes": "This is a stub response. Connect to a real LLM for actual analysis."
+  },
+  "full_prompt_sent": "\nYou are a WAF tuning assistant.\n\nYou receive:\n- A real attack episode from a web application protected by a WAF.\n- A set of CRS/NAXSI-like rule entries from a local knowledge base.\n\nYour job:\n1. Identify the type of vulnerability or effect (e.g., SQL error disclosure, Ruby SyntaxError, reflected XSS, no-effect).\n2. Decide whether this is a WAF false negative (the WAF should have blocked this).\n3. Propose which CRS rule IDs (or equivalent rules) should be enabled or tuned to mitigate this case.\n4. Suggest concrete configuration changes for the WAF (e.g., enable rule X, raise paranoia level, add custom rule on RESPONSE_BODY).\n5. Optionally suggest safer application-layer fixes (e.g., disable verbose error messages).\n\nAttack episode:\n{\n  \"app_context\": {\n    \"app_name\": \"dvwa\",\n    \"endpoint\": \"\",\n    \"http_method\": \"GET\",\n    \"injection_point\": \"query_param\",\n    \"tech_stack\": \"php_mysql\"\n  },\n  \"attack\": {\n    \"attack_type\": \"SQLI\",\n    \"technique\": \"UNKNOWN\",\n    \"payload\": \"%2527%2520or%25201==1&sV=zZ%2527%2520--\"\n  },\n  \"waf_observation\": {\n    \"blocked\": false,\n    \"http_status\": 200\n  },\n  \"app_observation\": {\n    \"http_status\": 200,\n    \"resp_body_snippet\": null,\n    \"error_class\": null\n  },\n  \"blue_label\": {\n    \"vuln_effect\": \"no-effect\",\n    \"is_false_negative\": true\n  }\n}\n\nRetrieved rule/test entries from the knowledge base:\n[]\n\nOutput MUST be a single JSON object with the following structure:\n\n{\n  \"vuln_effect\": \"<string>\",\n  \"is_false_negative\": <true|false>,\n  \"recommended_rules\": [\n    {\n      \"engine\": \"modsecurity\",\n      \"rule_id\": \"956100\",\n      \"reason\": \"Ruby SyntaxError in response body, mapped from CRS regression tests\"\n    }\n  ],\n  \"recommended_actions\": [\n    \"Enable CRS rule 956100 in RESPONSE_BODY phase or raise PL >= 2.\",\n    \"Disable verbose Ruby error stack traces in production.\"\n  ],\n  \"notes\": \"<short free-text explanation>\"\n}\n\nMake sure the JSON is valid and does not contain comments or trailing commas.\n"
+}
+
+Report saved to data/blue/blue_phase3_report.txt
+
+BLUE Phase 3 – WAF Tuning Summary
+=================================
+
+Total analyzed episodes: 119
+Total false_negative flagged: 0
+
+Vuln Effect Distribution:
+- no-effect: 119 episodes
+
+Per-engine recommended rules:
+- No specific rules recommended by current LLM stub.
+
+Top Recommended Actions:
+- No specific actions recommended by stub LLM. (119 episodes)
+
+Notes:
+- The current LLM client is a stub, so recommendations are based on simple keyword matching.
+- For accurate results, connect 'blue/llm_client.py' to a real LLM (e.g., Gemma 2B running locally).
+Loaded 423 blue_episodes from data/blue/blue_phase1_episodes.jsonl.
+Loaded 2 KB entries from data/blue/blue_phase1_crs_kb.jsonl.
+Selected 119 false negative episodes for Phase 3 processing.
+Processing episode 1/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 1. Vuln Effect: no-effect
+Processing episode 2/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 2. Vuln Effect: no-effect
+Processing episode 3/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 3. Vuln Effect: no-effect
+Processing episode 4/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 4. Vuln Effect: no-effect
+Processing episode 5/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 5. Vuln Effect: no-effect
+Processing episode 6/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 6. Vuln Effect: no-effect
+Processing episode 7/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 7. Vuln Effect: no-effect
+Processing episode 8/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 8. Vuln Effect: no-effect
+Processing episode 9/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 9. Vuln Effect: no-effect
+Processing episode 10/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 10. Vuln Effect: no-effect
+Processing episode 11/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 11. Vuln Effect: no-effect
+Processing episode 12/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 12. Vuln Effect: no-effect
+Processing episode 13/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 13. Vuln Effect: no-effect
+Processing episode 14/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 14. Vuln Effect: no-effect
+Processing episode 15/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 15. Vuln Effect: no-effect
+Processing episode 16/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 16. Vuln Effect: no-effect
+Processing episode 17/119 (vuln_effect: xss-reflected)...
+  Generated recommendation for episode 17. Vuln Effect: no-effect
+Processing episode 18/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 18. Vuln Effect: no-effect
+Processing episode 19/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 19. Vuln Effect: no-effect
+Processing episode 20/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 20. Vuln Effect: no-effect
+Processing episode 21/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 21. Vuln Effect: no-effect
+Processing episode 22/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 22. Vuln Effect: no-effect
+Processing episode 23/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 23. Vuln Effect: no-effect
+Processing episode 24/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 24. Vuln Effect: no-effect
+Processing episode 25/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 25. Vuln Effect: no-effect
+Processing episode 26/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 26. Vuln Effect: no-effect
+Processing episode 27/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 27. Vuln Effect: no-effect
+Processing episode 28/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 28. Vuln Effect: no-effect
+Processing episode 29/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 29. Vuln Effect: no-effect
+Processing episode 30/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 30. Vuln Effect: no-effect
+Processing episode 31/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 31. Vuln Effect: no-effect
+Processing episode 32/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 32. Vuln Effect: no-effect
+Processing episode 33/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 33. Vuln Effect: no-effect
+Processing episode 34/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 34. Vuln Effect: no-effect
+Processing episode 35/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 35. Vuln Effect: no-effect
+Processing episode 36/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 36. Vuln Effect: no-effect
+Processing episode 37/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 37. Vuln Effect: no-effect
+Processing episode 38/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 38. Vuln Effect: no-effect
+Processing episode 39/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 39. Vuln Effect: no-effect
+Processing episode 40/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 40. Vuln Effect: no-effect
+Processing episode 41/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 41. Vuln Effect: no-effect
+Processing episode 42/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 42. Vuln Effect: no-effect
+Processing episode 43/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 43. Vuln Effect: no-effect
+Processing episode 44/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 44. Vuln Effect: no-effect
+Processing episode 45/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 45. Vuln Effect: no-effect
+Processing episode 46/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 46. Vuln Effect: no-effect
+Processing episode 47/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 47. Vuln Effect: no-effect
+Processing episode 48/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 48. Vuln Effect: no-effect
+Processing episode 49/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 49. Vuln Effect: no-effect
+Processing episode 50/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 50. Vuln Effect: no-effect
+Processing episode 51/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 51. Vuln Effect: no-effect
+Processing episode 52/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 52. Vuln Effect: no-effect
+Processing episode 53/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 53. Vuln Effect: no-effect
+Processing episode 54/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 54. Vuln Effect: no-effect
+Processing episode 55/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 55. Vuln Effect: no-effect
+Processing episode 56/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 56. Vuln Effect: no-effect
+Processing episode 57/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 57. Vuln Effect: no-effect
+Processing episode 58/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 58. Vuln Effect: no-effect
+Processing episode 59/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 59. Vuln Effect: no-effect
+Processing episode 60/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 60. Vuln Effect: no-effect
+Processing episode 61/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 61. Vuln Effect: no-effect
+Processing episode 62/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 62. Vuln Effect: no-effect
+Processing episode 63/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 63. Vuln Effect: no-effect
+Processing episode 64/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 64. Vuln Effect: no-effect
+Processing episode 65/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 65. Vuln Effect: no-effect
+Processing episode 66/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 66. Vuln Effect: no-effect
+Processing episode 67/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 67. Vuln Effect: no-effect
+Processing episode 68/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 68. Vuln Effect: no-effect
+Processing episode 69/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 69. Vuln Effect: no-effect
+Processing episode 70/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 70. Vuln Effect: no-effect
+Processing episode 71/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 71. Vuln Effect: no-effect
+Processing episode 72/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 72. Vuln Effect: no-effect
+Processing episode 73/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 73. Vuln Effect: no-effect
+Processing episode 74/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 74. Vuln Effect: no-effect
+Processing episode 75/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 75. Vuln Effect: no-effect
+Processing episode 76/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 76. Vuln Effect: no-effect
+Processing episode 77/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 77. Vuln Effect: no-effect
+Processing episode 78/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 78. Vuln Effect: no-effect
+Processing episode 79/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 79. Vuln Effect: no-effect
+Processing episode 80/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 80. Vuln Effect: no-effect
+Processing episode 81/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 81. Vuln Effect: no-effect
+Processing episode 82/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 82. Vuln Effect: no-effect
+Processing episode 83/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 83. Vuln Effect: no-effect
+Processing episode 84/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 84. Vuln Effect: no-effect
+Processing episode 85/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 85. Vuln Effect: no-effect
+Processing episode 86/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 86. Vuln Effect: no-effect
+Processing episode 87/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 87. Vuln Effect: no-effect
+Processing episode 88/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 88. Vuln Effect: no-effect
+Processing episode 89/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 89. Vuln Effect: no-effect
+Processing episode 90/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 90. Vuln Effect: no-effect
+Processing episode 91/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 91. Vuln Effect: no-effect
+Processing episode 92/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 92. Vuln Effect: no-effect
+Processing episode 93/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 93. Vuln Effect: no-effect
+Processing episode 94/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 94. Vuln Effect: no-effect
+Processing episode 95/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 95. Vuln Effect: no-effect
+Processing episode 96/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 96. Vuln Effect: no-effect
+Processing episode 97/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 97. Vuln Effect: no-effect
+Processing episode 98/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 98. Vuln Effect: no-effect
+Processing episode 99/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 99. Vuln Effect: no-effect
+Processing episode 100/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 100. Vuln Effect: no-effect
+Processing episode 101/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 101. Vuln Effect: no-effect
+Processing episode 102/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 102. Vuln Effect: no-effect
+Processing episode 103/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 103. Vuln Effect: no-effect
+Processing episode 104/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 104. Vuln Effect: no-effect
+Processing episode 105/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 105. Vuln Effect: no-effect
+Processing episode 106/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 106. Vuln Effect: no-effect
+Processing episode 107/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 107. Vuln Effect: no-effect
+Processing episode 108/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 108. Vuln Effect: no-effect
+Processing episode 109/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 109. Vuln Effect: no-effect
+Processing episode 110/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 110. Vuln Effect: no-effect
+Processing episode 111/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 111. Vuln Effect: no-effect
+Processing episode 112/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 112. Vuln Effect: no-effect
+Processing episode 113/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 113. Vuln Effect: no-effect
+Processing episode 114/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 114. Vuln Effect: no-effect
+Processing episode 115/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 115. Vuln Effect: no-effect
+Processing episode 116/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 116. Vuln Effect: no-effect
+Processing episode 117/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 117. Vuln Effect: no-effect
+Processing episode 118/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 118. Vuln Effect: no-effect
+Processing episode 119/119 (vuln_effect: no-effect)...
+  Generated recommendation for episode 119. Vuln Effect: no-effect
+
+Saved 119 suggestions to data/blue/blue_phase3_suggestions.jsonl
+
+--- Phase 3 BLUE Suggestions Report ---
+Total episodes processed: 119
+
+--- Example Suggestion (first 1) ---
+{
+  "episode_id": "ep_0",
+  "original_episode_summary": {
+    "attack_type": "SQLI",
+    "payload": "%2527%2520or%25201==1&sV=zZ%2527%2520--",
+    "waf_engine": "modsecurity",
+    "app_name": "dvwa",
+    "vuln_effect": "no-effect"
+  },
+  "kb_hits": [],
+  "blue_recommendation": {
+    "vuln_effect": "no-effect",
+    "is_false_negative": false,
+    "recommended_rules": [],
+    "recommended_actions": [
+      "No specific actions recommended by stub LLM."
+    ],
+    "notes": "This is a stub response. Connect to a real LLM for actual analysis."
+  },
+  "full_prompt_sent": "\nYou are a WAF tuning assistant.\n\nYou receive:\n- A real attack episode from a web application protected by a WAF.\n- A set of CRS/NAXSI-like rule entries from a local knowledge base.\n\nYour job:\n1. Identify the type of vulnerability or effect (e.g., SQL error disclosure, Ruby SyntaxError, reflected XSS, no-effect).\n2. Decide whether this is a WAF false negative (the WAF should have blocked this).\n3. Propose which CRS rule IDs (or equivalent rules) should be enabled or tuned to mitigate this case.\n4. Suggest concrete configuration changes for the WAF (e.g., enable rule X, raise paranoia level, add custom rule on RESPONSE_BODY).\n5. Optionally suggest safer application-layer fixes (e.g., disable verbose error messages).\n\nAttack episode:\n{\n  \"app_context\": {\n    \"app_name\": \"dvwa\",\n    \"endpoint\": \"\",\n    \"http_method\": \"GET\",\n    \"injection_point\": \"query_param\",\n    \"tech_stack\": \"php_mysql\"\n  },\n  \"attack\": {\n    \"attack_type\": \"SQLI\",\n    \"technique\": \"UNKNOWN\",\n    \"payload\": \"%2527%2520or%25201==1&sV=zZ%2527%2520--\"\n  },\n  \"waf_observation\": {\n    \"blocked\": false,\n    \"http_status\": 200\n  },\n  \"app_observation\": {\n    \"http_status\": 200,\n    \"resp_body_snippet\": null,\n    \"error_class\": null\n  },\n  \"blue_label\": {\n    \"vuln_effect\": \"no-effect\",\n    \"is_false_negative\": true\n  }\n}\n\nRetrieved rule/test entries from the knowledge base:\n[]\n\nOutput MUST be a single JSON object with the following structure:\n\n{\n  \"vuln_effect\": \"<string>\",\n  \"is_false_negative\": <true|false>,\n  \"recommended_rules\": [\n    {\n      \"engine\": \"modsecurity\",\n      \"rule_id\": \"956100\",\n      \"reason\": \"Ruby SyntaxError in response body, mapped from CRS regression tests\"\n    }\n  ],\n  \"recommended_actions\": [\n    \"Enable CRS rule 956100 in RESPONSE_BODY phase or raise PL >= 2.\",\n    \"Disable verbose Ruby error stack traces in production.\"\n  ],\n  \"notes\": \"<short free-text explanation>\"\n}\n\nMake sure the JSON is valid and does not contain comments or trailing commas.\n"
+}
+Generated ModSecurity overlay config to waf/blue_modsecurity_suggestions.conf
+Generated Coraza overlay config (skeleton) to waf/blue_coraza_suggestions.yaml
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:14<00:14, 14.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.63s/it]
+'(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: cf123a71-01e5-4960-bf7f-6f712955701a)')' thrown while requesting HEAD https://huggingface.co/google/gemma-2-2b-it/resolve/main/generation_config.json
+Retrying in 1s [Retry 1/5].
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:24<13:40, 24.13s/it]  6%|▌         | 2/35 [00:46<12:44, 23.16s/it]  9%|▊         | 3/35 [00:53<08:20, 15.63s/it] 11%|█▏        | 4/35 [01:01<06:32, 12.65s/it] 14%|█▍        | 5/35 [01:22<07:48, 15.60s/it] 17%|█▋        | 6/35 [01:26<05:41, 11.78s/it] 20%|██        | 7/35 [01:47<06:52, 14.74s/it] 23%|██▎       | 8/35 [01:49<04:50, 10.78s/it] 26%|██▌       | 9/35 [02:11<06:09, 14.23s/it] 29%|██▊       | 10/35 [02:17<04:49, 11.58s/it] 31%|███▏      | 11/35 [02:38<05:49, 14.56s/it] 34%|███▍      | 12/35 [02:44<04:36, 12.02s/it] 37%|███▋      | 13/35 [03:06<05:32, 15.10s/it] 40%|████      | 14/35 [03:28<05:55, 16.95s/it] 43%|████▎     | 15/35 [03:48<06:01, 18.09s/it] 46%|████▌     | 16/35 [04:10<06:03, 19.11s/it] 49%|████▊     | 17/35 [04:24<05:16, 17.59s/it] 51%|█████▏    | 18/35 [04:29<03:57, 13.95s/it] 54%|█████▍    | 19/35 [04:35<03:03, 11.47s/it] 57%|█████▋    | 20/35 [04:42<02:30, 10.01s/it] 60%|██████    | 21/35 [04:56<02:37, 11.26s/it] 63%|██████▎   | 22/35 [05:02<02:08,  9.87s/it] 66%|██████▌   | 23/35 [05:17<02:16, 11.35s/it] 69%|██████▊   | 24/35 [05:39<02:40, 14.58s/it] 71%|███████▏  | 25/35 [05:48<02:07, 12.71s/it] 74%|███████▍  | 26/35 [06:08<02:15, 15.05s/it] 77%|███████▋  | 27/35 [06:27<02:08, 16.10s/it] 80%|████████  | 28/35 [06:34<01:33, 13.39s/it] 83%|████████▎ | 29/35 [06:52<01:28, 14.81s/it] 86%|████████▌ | 30/35 [06:58<01:00, 12.06s/it] 89%|████████▊ | 31/35 [07:03<00:40, 10.07s/it] 91%|█████████▏| 32/35 [07:08<00:25,  8.47s/it] 94%|█████████▍| 33/35 [07:16<00:17,  8.54s/it] 97%|█████████▋| 34/35 [07:34<00:11, 11.36s/it]100%|██████████| 35/35 [07:38<00:00,  9.15s/it]100%|██████████| 35/35 [07:38<00:00, 13.11s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:15<03:36, 15.46s/it] 13%|█▎        | 2/15 [00:22<02:15, 10.41s/it] 20%|██        | 3/15 [00:36<02:26, 12.24s/it] 27%|██▋       | 4/15 [00:45<01:58, 10.80s/it] 33%|███▎      | 5/15 [00:51<01:33,  9.30s/it] 40%|████      | 6/15 [01:07<01:43, 11.53s/it] 47%|████▋     | 7/15 [01:29<01:59, 14.94s/it] 53%|█████▎    | 8/15 [01:42<01:39, 14.26s/it] 60%|██████    | 9/15 [02:02<01:36, 16.10s/it] 67%|██████▋   | 10/15 [02:21<01:24, 16.84s/it] 73%|███████▎  | 11/15 [02:38<01:08, 17.05s/it] 80%|████████  | 12/15 [02:56<00:51, 17.31s/it] 87%|████████▋ | 13/15 [03:04<00:28, 14.42s/it] 93%|█████████▎| 14/15 [03:13<00:12, 12.92s/it]100%|██████████| 15/15 [03:22<00:00, 11.57s/it]100%|██████████| 15/15 [03:22<00:00, 13.49s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:11<06:15, 11.03s/it]  6%|▌         | 2/35 [00:33<09:41, 17.62s/it]  9%|▊         | 3/35 [00:39<06:32, 12.26s/it] 11%|█▏        | 4/35 [01:01<08:28, 16.42s/it] 14%|█▍        | 5/35 [01:17<08:03, 16.12s/it] 17%|█▋        | 6/35 [01:22<05:53, 12.19s/it] 20%|██        | 7/35 [01:42<06:59, 14.99s/it] 23%|██▎       | 8/35 [01:45<04:57, 11.00s/it] 26%|██▌       | 9/35 [02:00<05:23, 12.44s/it] 29%|██▊       | 10/35 [02:11<04:53, 11.75s/it] 31%|███▏      | 11/35 [02:32<05:55, 14.83s/it] 34%|███▍      | 12/35 [02:39<04:42, 12.29s/it] 37%|███▋      | 13/35 [03:03<05:49, 15.91s/it] 40%|████      | 14/35 [03:19<05:34, 15.92s/it] 43%|████▎     | 15/35 [03:41<05:54, 17.71s/it] 46%|████▌     | 16/35 [04:06<06:15, 19.78s/it] 49%|████▊     | 17/35 [04:20<05:28, 18.27s/it] 51%|█████▏    | 18/35 [04:26<04:04, 14.36s/it] 54%|█████▍    | 19/35 [04:29<02:57, 11.06s/it] 57%|█████▋    | 20/35 [04:34<02:19,  9.28s/it] 60%|██████    | 21/35 [04:51<02:42, 11.58s/it] 63%|██████▎   | 22/35 [04:57<02:07,  9.83s/it] 66%|██████▌   | 23/35 [05:02<01:40,  8.40s/it] 69%|██████▊   | 24/35 [05:22<02:10, 11.90s/it] 71%|███████▏  | 25/35 [05:42<02:24, 14.42s/it] 74%|███████▍  | 26/35 [06:03<02:27, 16.42s/it] 77%|███████▋  | 27/35 [06:19<02:08, 16.12s/it] 80%|████████  | 28/35 [06:24<01:30, 12.88s/it] 83%|████████▎ | 29/35 [06:45<01:31, 15.20s/it] 86%|████████▌ | 30/35 [06:50<01:01, 12.39s/it] 89%|████████▊ | 31/35 [06:54<00:38,  9.61s/it] 91%|█████████▏| 32/35 [06:59<00:25,  8.44s/it] 94%|█████████▍| 33/35 [07:03<00:13,  6.95s/it] 97%|█████████▋| 34/35 [07:23<00:10, 10.85s/it]100%|██████████| 35/35 [07:26<00:00,  8.68s/it]100%|██████████| 35/35 [07:26<00:00, 12.77s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:07<01:47,  7.67s/it] 13%|█▎        | 2/15 [00:16<01:45,  8.14s/it] 20%|██        | 3/15 [00:23<01:35,  7.95s/it] 27%|██▋       | 4/15 [00:46<02:31, 13.82s/it] 33%|███▎      | 5/15 [01:01<02:22, 14.27s/it] 40%|████      | 6/15 [01:08<01:46, 11.81s/it] 47%|████▋     | 7/15 [01:15<01:20, 10.07s/it] 53%|█████▎    | 8/15 [01:37<01:37, 13.90s/it] 60%|██████    | 9/15 [01:55<01:32, 15.37s/it] 67%|██████▋   | 10/15 [02:06<01:09, 13.99s/it] 73%|███████▎  | 11/15 [02:20<00:55, 13.79s/it] 80%|████████  | 12/15 [02:41<00:48, 16.01s/it] 87%|████████▋ | 13/15 [02:53<00:29, 14.88s/it] 93%|█████████▎| 14/15 [03:04<00:13, 13.70s/it]100%|██████████| 15/15 [03:27<00:00, 16.42s/it]100%|██████████| 15/15 [03:27<00:00, 13.82s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 2 (13.33%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 86.67%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 13
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:12<06:59, 12.32s/it]  6%|▌         | 2/35 [00:34<10:04, 18.31s/it]  9%|▊         | 3/35 [00:48<08:38, 16.20s/it] 11%|█▏        | 4/35 [00:54<06:12, 12.00s/it] 14%|█▍        | 5/35 [01:13<07:24, 14.81s/it] 17%|█▋        | 6/35 [01:16<05:07, 10.61s/it] 20%|██        | 7/35 [01:38<06:42, 14.38s/it] 23%|██▎       | 8/35 [01:40<04:45, 10.56s/it] 26%|██▌       | 9/35 [02:03<06:13, 14.36s/it] 29%|██▊       | 10/35 [02:09<04:56, 11.87s/it] 31%|███▏      | 11/35 [02:32<06:00, 15.03s/it] 34%|███▍      | 12/35 [02:38<04:42, 12.30s/it] 37%|███▋      | 13/35 [03:00<05:35, 15.27s/it] 40%|████      | 14/35 [03:21<06:00, 17.19s/it] 43%|████▎     | 15/35 [03:44<06:15, 18.76s/it] 46%|████▌     | 16/35 [03:48<04:31, 14.27s/it] 49%|████▊     | 17/35 [04:10<04:59, 16.66s/it] 51%|█████▏    | 18/35 [04:16<03:50, 13.57s/it] 54%|█████▍    | 19/35 [04:22<02:59, 11.19s/it] 57%|█████▋    | 20/35 [04:31<02:37, 10.49s/it] 60%|██████    | 21/35 [04:53<03:14, 13.89s/it] 63%|██████▎   | 22/35 [04:59<02:33, 11.79s/it] 66%|██████▌   | 23/35 [05:22<03:02, 15.17s/it] 69%|██████▊   | 24/35 [05:45<03:09, 17.27s/it] 71%|███████▏  | 25/35 [06:08<03:10, 19.01s/it] 74%|███████▍  | 26/35 [06:30<03:00, 20.02s/it] 77%|███████▋  | 27/35 [06:50<02:39, 19.99s/it] 80%|████████  | 28/35 [06:57<01:52, 16.14s/it] 83%|████████▎ | 29/35 [07:02<01:16, 12.73s/it] 86%|████████▌ | 30/35 [07:05<00:49,  9.97s/it] 89%|████████▊ | 31/35 [07:10<00:33,  8.30s/it] 91%|█████████▏| 32/35 [07:16<00:22,  7.59s/it] 94%|█████████▍| 33/35 [07:39<00:24, 12.23s/it] 97%|█████████▋| 34/35 [07:59<00:14, 14.62s/it]100%|██████████| 35/35 [08:01<00:00, 10.77s/it]100%|██████████| 35/35 [08:01<00:00, 13.75s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:19,  1.40s/it] 13%|█▎        | 2/15 [00:10<01:18,  6.02s/it] 20%|██        | 3/15 [00:16<01:13,  6.13s/it] 27%|██▋       | 4/15 [00:39<02:18, 12.61s/it] 33%|███▎      | 5/15 [01:01<02:39, 15.93s/it] 40%|████      | 6/15 [01:10<02:03, 13.76s/it] 47%|████▋     | 7/15 [01:28<01:59, 14.97s/it] 53%|█████▎    | 8/15 [01:49<01:58, 16.91s/it] 60%|██████    | 9/15 [01:56<01:22, 13.75s/it] 67%|██████▋   | 10/15 [02:13<01:13, 14.71s/it] 73%|███████▎  | 11/15 [02:21<00:51, 12.86s/it] 80%|████████  | 12/15 [02:37<00:41, 13.77s/it] 87%|████████▋ | 13/15 [02:55<00:30, 15.18s/it] 93%|█████████▎| 14/15 [03:05<00:13, 13.36s/it]100%|██████████| 15/15 [03:26<00:00, 15.83s/it]100%|██████████| 15/15 [03:26<00:00, 13.78s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 15
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:08<04:40,  8.25s/it]  6%|▌         | 2/35 [00:21<06:06, 11.10s/it]  9%|▊         | 3/35 [00:27<04:44,  8.89s/it] 11%|█▏        | 4/35 [00:49<07:18, 14.13s/it] 14%|█▍        | 5/35 [01:12<08:34, 17.14s/it] 17%|█▋        | 6/35 [01:22<07:05, 14.66s/it] 20%|██        | 7/35 [01:44<08:00, 17.14s/it] 23%|██▎       | 8/35 [01:46<05:36, 12.46s/it] 26%|██▌       | 9/35 [02:07<06:33, 15.14s/it] 29%|██▊       | 10/35 [02:13<05:05, 12.22s/it] 31%|███▏      | 11/35 [02:34<05:56, 14.83s/it] 34%|███▍      | 12/35 [02:40<04:44, 12.36s/it] 37%|███▋      | 13/35 [03:03<05:37, 15.35s/it] 40%|████      | 14/35 [03:25<06:08, 17.53s/it] 43%|████▎     | 15/35 [03:49<06:28, 19.45s/it] 46%|████▌     | 16/35 [04:12<06:27, 20.40s/it] 49%|████▊     | 17/35 [04:34<06:18, 21.00s/it] 51%|█████▏    | 18/35 [04:39<04:33, 16.09s/it] 54%|█████▍    | 19/35 [04:45<03:28, 13.05s/it] 57%|█████▋    | 20/35 [05:00<03:26, 13.79s/it] 60%|██████    | 21/35 [05:25<03:57, 16.94s/it] 63%|██████▎   | 22/35 [05:30<02:56, 13.61s/it] 66%|██████▌   | 23/35 [05:52<03:12, 16.03s/it] 69%|██████▊   | 24/35 [06:14<03:15, 17.75s/it] 71%|███████▏  | 25/35 [06:36<03:12, 19.21s/it] 74%|███████▍  | 26/35 [06:59<03:01, 20.14s/it] 77%|███████▋  | 27/35 [07:20<02:43, 20.47s/it] 80%|████████  | 28/35 [07:26<01:52, 16.09s/it] 83%|████████▎ | 29/35 [07:29<01:13, 12.27s/it] 86%|████████▌ | 30/35 [07:34<00:50, 10.01s/it] 89%|████████▊ | 31/35 [07:40<00:34,  8.66s/it] 91%|█████████▏| 32/35 [07:51<00:28,  9.50s/it] 94%|█████████▍| 33/35 [07:57<00:16,  8.46s/it] 97%|█████████▋| 34/35 [08:20<00:12, 12.69s/it]100%|██████████| 35/35 [08:23<00:00,  9.87s/it]100%|██████████| 35/35 [08:23<00:00, 14.38s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:03<00:48,  3.50s/it] 13%|█▎        | 2/15 [00:14<01:41,  7.79s/it] 20%|██        | 3/15 [00:24<01:48,  9.02s/it] 27%|██▋       | 4/15 [00:36<01:49,  9.94s/it] 33%|███▎      | 5/15 [00:44<01:33,  9.35s/it] 40%|████      | 6/15 [00:50<01:14,  8.29s/it] 47%|████▋     | 7/15 [01:07<01:29, 11.19s/it] 53%|█████▎    | 8/15 [01:15<01:11, 10.19s/it] 60%|██████    | 9/15 [01:22<00:54,  9.08s/it] 67%|██████▋   | 10/15 [01:30<00:44,  8.84s/it] 73%|███████▎  | 11/15 [01:53<00:52, 13.09s/it] 80%|████████  | 12/15 [02:02<00:35, 11.79s/it] 87%|████████▋ | 13/15 [02:24<00:29, 14.88s/it] 93%|█████████▎| 14/15 [02:34<00:13, 13.58s/it]100%|██████████| 15/15 [02:42<00:00, 11.80s/it]100%|██████████| 15/15 [02:42<00:00, 10.84s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 15
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:49<00:49, 49.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:50<00:00, 20.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:50<00:00, 25.23s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:24<14:07, 24.93s/it]  6%|▌         | 2/35 [00:47<12:51, 23.38s/it]  9%|▊         | 3/35 [00:54<08:30, 15.95s/it] 11%|█▏        | 4/35 [00:59<06:04, 11.75s/it] 14%|█▍        | 5/35 [01:23<08:07, 16.25s/it] 17%|█▋        | 6/35 [01:29<06:07, 12.68s/it] 20%|██        | 7/35 [01:54<07:45, 16.63s/it] 23%|██▎       | 8/35 [01:57<05:28, 12.18s/it] 26%|██▌       | 9/35 [02:20<06:46, 15.65s/it] 29%|██▊       | 10/35 [02:24<05:00, 12.01s/it] 31%|███▏      | 11/35 [02:46<06:02, 15.09s/it] 34%|███▍      | 12/35 [02:52<04:44, 12.36s/it] 37%|███▋      | 13/35 [03:15<05:46, 15.75s/it] 40%|████      | 14/35 [03:27<05:05, 14.55s/it] 43%|████▎     | 15/35 [03:51<05:46, 17.30s/it] 46%|████▌     | 16/35 [04:15<06:07, 19.32s/it] 49%|████▊     | 17/35 [04:38<06:08, 20.46s/it] 51%|█████▏    | 18/35 [04:47<04:47, 16.92s/it] 54%|█████▍    | 19/35 [04:54<03:44, 14.03s/it] 57%|█████▋    | 20/35 [05:01<02:57, 11.84s/it] 60%|██████    | 21/35 [05:24<03:31, 15.14s/it] 63%|██████▎   | 22/35 [05:32<02:51, 13.18s/it] 66%|██████▌   | 23/35 [05:55<03:13, 16.12s/it] 69%|██████▊   | 24/35 [06:01<02:23, 13.00s/it] 71%|███████▏  | 25/35 [06:25<02:42, 16.29s/it] 74%|███████▍  | 26/35 [06:48<02:44, 18.33s/it] 77%|███████▋  | 27/35 [07:12<02:40, 20.10s/it] 80%|████████  | 28/35 [07:19<01:52, 16.01s/it] 83%|████████▎ | 29/35 [07:43<01:50, 18.43s/it] 86%|████████▌ | 30/35 [07:49<01:13, 14.72s/it] 89%|████████▊ | 31/35 [07:52<00:45, 11.43s/it] 91%|█████████▏| 32/35 [07:58<00:28,  9.65s/it] 94%|█████████▍| 33/35 [08:21<00:27, 13.77s/it] 97%|█████████▋| 34/35 [08:45<00:16, 16.77s/it]100%|██████████| 35/35 [08:48<00:00, 12.55s/it]100%|██████████| 35/35 [08:48<00:00, 15.10s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:17<04:02, 17.36s/it] 13%|█▎        | 2/15 [00:26<02:42, 12.53s/it] 20%|██        | 3/15 [00:45<03:05, 15.49s/it] 27%|██▋       | 4/15 [00:56<02:32, 13.87s/it] 33%|███▎      | 5/15 [01:05<01:59, 11.99s/it] 40%|████      | 6/15 [01:14<01:40, 11.12s/it] 47%|████▋     | 7/15 [01:21<01:16,  9.53s/it] 53%|█████▎    | 8/15 [01:30<01:05,  9.36s/it] 60%|██████    | 9/15 [01:34<00:45,  7.62s/it] 67%|██████▋   | 10/15 [01:43<00:40,  8.15s/it] 73%|███████▎  | 11/15 [02:06<00:51, 12.85s/it] 80%|████████  | 12/15 [02:18<00:37, 12.34s/it] 87%|████████▋ | 13/15 [02:36<00:28, 14.09s/it] 93%|█████████▎| 14/15 [03:00<00:17, 17.05s/it]100%|██████████| 15/15 [03:08<00:00, 14.58s/it]100%|██████████| 15/15 [03:08<00:00, 12.59s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 2 (13.33%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 86.67%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 13
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:23<13:14, 23.37s/it]  6%|▌         | 2/35 [00:47<13:01, 23.68s/it]  9%|▊         | 3/35 [00:54<08:35, 16.10s/it] 11%|█▏        | 4/35 [01:17<09:49, 19.01s/it] 14%|█▍        | 5/35 [01:39<10:04, 20.15s/it] 17%|█▋        | 6/35 [01:46<07:31, 15.57s/it] 20%|██        | 7/35 [02:13<08:57, 19.18s/it] 23%|██▎       | 8/35 [02:15<06:15, 13.92s/it] 26%|██▌       | 9/35 [02:37<07:07, 16.43s/it] 29%|██▊       | 10/35 [03:01<07:49, 18.80s/it] 31%|███▏      | 11/35 [03:25<08:07, 20.31s/it] 34%|███▍      | 12/35 [03:33<06:17, 16.42s/it] 37%|███▋      | 13/35 [03:55<06:43, 18.32s/it] 40%|████      | 14/35 [04:17<06:42, 19.19s/it] 43%|████▎     | 15/35 [04:39<06:44, 20.24s/it] 46%|████▌     | 16/35 [04:45<05:01, 15.85s/it] 49%|████▊     | 17/35 [05:09<05:27, 18.22s/it] 51%|█████▏    | 18/35 [05:15<04:10, 14.75s/it] 54%|█████▍    | 19/35 [05:20<03:07, 11.72s/it] 57%|█████▋    | 20/35 [05:28<02:39, 10.62s/it] 60%|██████    | 21/35 [05:48<03:09, 13.55s/it] 63%|██████▎   | 22/35 [05:52<02:16, 10.48s/it] 66%|██████▌   | 23/35 [05:55<01:40,  8.41s/it] 69%|██████▊   | 24/35 [06:18<02:18, 12.61s/it] 71%|███████▏  | 25/35 [06:41<02:37, 15.77s/it] 74%|███████▍  | 26/35 [07:04<02:40, 17.85s/it] 77%|███████▋  | 27/35 [07:27<02:34, 19.37s/it] 80%|████████  | 28/35 [07:34<01:50, 15.84s/it] 83%|████████▎ | 29/35 [07:56<01:46, 17.78s/it] 86%|████████▌ | 30/35 [08:02<01:10, 14.15s/it] 89%|████████▊ | 31/35 [08:04<00:42, 10.54s/it] 91%|█████████▏| 32/35 [08:08<00:25,  8.49s/it] 94%|█████████▍| 33/35 [08:13<00:14,  7.38s/it] 97%|█████████▋| 34/35 [08:35<00:11, 11.91s/it]100%|██████████| 35/35 [08:39<00:00,  9.41s/it]100%|██████████| 35/35 [08:39<00:00, 14.84s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 1 (2.86%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 97.14%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 34
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:22<05:11, 22.22s/it] 13%|█▎        | 2/15 [00:35<03:43, 17.20s/it] 20%|██        | 3/15 [00:58<03:56, 19.70s/it] 27%|██▋       | 4/15 [01:04<02:37, 14.35s/it] 33%|███▎      | 5/15 [01:17<02:18, 13.80s/it] 40%|████      | 6/15 [01:23<01:40, 11.21s/it] 47%|████▋     | 7/15 [01:46<01:58, 14.84s/it] 53%|█████▎    | 8/15 [01:57<01:35, 13.71s/it] 60%|██████    | 9/15 [02:10<01:20, 13.42s/it] 67%|██████▋   | 10/15 [02:28<01:15, 15.02s/it] 73%|███████▎  | 11/15 [02:34<00:49, 12.34s/it] 80%|████████  | 12/15 [02:45<00:35, 11.88s/it] 87%|████████▋ | 13/15 [02:59<00:24, 12.32s/it] 93%|█████████▎| 14/15 [03:09<00:11, 11.77s/it]100%|██████████| 15/15 [03:24<00:00, 12.69s/it]100%|██████████| 15/15 [03:24<00:00, 13.63s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:22<12:33, 22.16s/it]  6%|▌         | 2/35 [00:45<12:25, 22.59s/it]  9%|▊         | 3/35 [00:50<07:53, 14.81s/it] 11%|█▏        | 4/35 [00:57<05:58, 11.56s/it] 14%|█▍        | 5/35 [01:11<06:22, 12.73s/it] 17%|█▋        | 6/35 [01:17<05:02, 10.44s/it] 20%|██        | 7/35 [01:41<06:50, 14.67s/it] 23%|██▎       | 8/35 [01:43<04:51, 10.81s/it] 26%|██▌       | 9/35 [02:05<06:08, 14.16s/it] 29%|██▊       | 10/35 [02:10<04:43, 11.33s/it] 31%|███▏      | 11/35 [02:33<05:58, 14.95s/it] 34%|███▍      | 12/35 [02:40<04:49, 12.59s/it] 37%|███▋      | 13/35 [03:04<05:54, 16.11s/it] 40%|████      | 14/35 [03:27<06:20, 18.13s/it] 43%|████▎     | 15/35 [03:50<06:27, 19.39s/it] 46%|████▌     | 16/35 [04:13<06:34, 20.74s/it] 49%|████▊     | 17/35 [04:36<06:21, 21.22s/it] 51%|█████▏    | 18/35 [04:42<04:45, 16.79s/it] 54%|█████▍    | 19/35 [04:47<03:31, 13.24s/it] 57%|█████▋    | 20/35 [04:57<03:01, 12.07s/it] 60%|██████    | 21/35 [05:19<03:34, 15.31s/it] 63%|██████▎   | 22/35 [05:25<02:41, 12.40s/it] 66%|██████▌   | 23/35 [05:29<01:57,  9.80s/it] 69%|██████▊   | 24/35 [05:51<02:29, 13.56s/it] 71%|███████▏  | 25/35 [06:14<02:42, 16.30s/it] 74%|███████▍  | 26/35 [06:36<02:43, 18.13s/it] 77%|███████▋  | 27/35 [07:00<02:37, 19.72s/it] 80%|████████  | 28/35 [07:07<01:51, 15.95s/it] 83%|████████▎ | 29/35 [07:30<01:49, 18.21s/it] 86%|████████▌ | 30/35 [07:36<01:12, 14.43s/it] 89%|████████▊ | 31/35 [07:42<00:47, 11.88s/it] 91%|█████████▏| 32/35 [07:45<00:28,  9.39s/it] 94%|█████████▍| 33/35 [08:08<00:26, 13.33s/it] 97%|█████████▋| 34/35 [08:28<00:15, 15.44s/it]100%|██████████| 35/35 [08:30<00:00, 11.32s/it]100%|██████████| 35/35 [08:30<00:00, 14.59s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:22<05:12, 22.31s/it] 13%|█▎        | 2/15 [00:43<04:45, 21.93s/it] 20%|██        | 3/15 [01:06<04:25, 22.09s/it] 27%|██▋       | 4/15 [01:28<04:03, 22.11s/it] 33%|███▎      | 5/15 [01:39<03:00, 18.04s/it] 40%|████      | 6/15 [01:47<02:11, 14.62s/it] 47%|████▋     | 7/15 [01:57<01:46, 13.35s/it] 53%|█████▎    | 8/15 [02:20<01:54, 16.41s/it] 60%|██████    | 9/15 [02:35<01:35, 15.95s/it] 67%|██████▋   | 10/15 [02:44<01:08, 13.66s/it] 73%|███████▎  | 11/15 [02:52<00:47, 11.91s/it] 80%|████████  | 12/15 [03:02<00:34, 11.45s/it] 87%|████████▋ | 13/15 [03:09<00:20, 10.00s/it] 93%|█████████▎| 14/15 [03:32<00:13, 13.84s/it]100%|██████████| 15/15 [03:38<00:00, 11.65s/it]100%|██████████| 15/15 [03:38<00:00, 14.58s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:17<09:39, 17.06s/it]  6%|▌         | 2/35 [00:39<11:07, 20.22s/it]  9%|▊         | 3/35 [00:44<06:59, 13.10s/it] 11%|█▏        | 4/35 [00:48<05:03,  9.79s/it] 14%|█▍        | 5/35 [01:11<07:15, 14.51s/it] 17%|█▋        | 6/35 [01:18<05:41, 11.79s/it] 20%|██        | 7/35 [01:40<07:08, 15.31s/it] 23%|██▎       | 8/35 [01:43<05:03, 11.24s/it] 26%|██▌       | 9/35 [02:05<06:21, 14.66s/it] 29%|██▊       | 10/35 [02:10<04:50, 11.63s/it] 31%|███▏      | 11/35 [02:32<05:54, 14.79s/it] 34%|███▍      | 12/35 [02:54<06:34, 17.16s/it] 37%|███▋      | 13/35 [03:17<06:54, 18.85s/it] 40%|████      | 14/35 [03:34<06:22, 18.23s/it] 43%|████▎     | 15/35 [03:56<06:28, 19.45s/it] 46%|████▌     | 16/35 [04:19<06:31, 20.61s/it] 49%|████▊     | 17/35 [04:42<06:21, 21.21s/it] 51%|█████▏    | 18/35 [04:46<04:32, 16.00s/it] 54%|█████▍    | 19/35 [04:50<03:17, 12.31s/it] 57%|█████▋    | 20/35 [04:56<02:37, 10.52s/it] 60%|██████    | 21/35 [05:19<03:17, 14.11s/it] 63%|██████▎   | 22/35 [05:41<03:34, 16.50s/it] 66%|██████▌   | 23/35 [05:46<02:38, 13.23s/it] 69%|██████▊   | 24/35 [06:09<02:56, 16.01s/it] 71%|███████▏  | 25/35 [06:31<03:00, 18.04s/it] 74%|███████▍  | 26/35 [06:48<02:39, 17.71s/it] 77%|███████▋  | 27/35 [07:11<02:34, 19.28s/it] 80%|████████  | 28/35 [07:18<01:49, 15.63s/it] 83%|████████▎ | 29/35 [07:41<01:45, 17.63s/it] 86%|████████▌ | 30/35 [07:44<01:07, 13.46s/it] 89%|████████▊ | 31/35 [07:48<00:41, 10.49s/it] 91%|█████████▏| 32/35 [07:52<00:25,  8.47s/it] 94%|█████████▍| 33/35 [08:07<00:21, 10.60s/it] 97%|█████████▋| 34/35 [08:28<00:13, 13.68s/it]100%|██████████| 35/35 [08:32<00:00, 10.64s/it]100%|██████████| 35/35 [08:32<00:00, 14.64s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:06<01:30,  6.48s/it] 13%|█▎        | 2/15 [00:17<02:02,  9.40s/it] 20%|██        | 3/15 [00:39<02:58, 14.85s/it] 27%|██▋       | 4/15 [01:01<03:16, 17.84s/it] 33%|███▎      | 5/15 [01:07<02:15, 13.60s/it] 40%|████      | 6/15 [01:16<01:47, 11.96s/it] 47%|████▋     | 7/15 [01:19<01:13,  9.15s/it] 53%|█████▎    | 8/15 [01:41<01:32, 13.26s/it] 60%|██████    | 9/15 [01:52<01:15, 12.51s/it] 67%|██████▋   | 10/15 [01:56<00:49,  9.86s/it] 73%|███████▎  | 11/15 [02:08<00:41, 10.44s/it] 80%|████████  | 12/15 [02:17<00:29,  9.89s/it] 87%|████████▋ | 13/15 [02:26<00:19,  9.65s/it] 93%|█████████▎| 14/15 [02:39<00:10, 10.77s/it]100%|██████████| 15/15 [02:46<00:00,  9.73s/it]100%|██████████| 15/15 [02:46<00:00, 11.13s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 2 (13.33%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 86.67%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 13
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+DVWA login and security set to low successful.
+
+--- Testing: SQLI ---
+Payload: 1' UNION SELECT database(), user(), version() -- -
+URL: http://localhost:8000http://localhost:8000/dvwa/vulnerabilities/sqli/?id=1%27%20UNION%20SELECT%20database%28%29%2C%20user%28%29%2C%20version%28%29%20--%20-&Submit=Submit
+HTTP Status: 403
+WAF Blocked (403)
+
+--- Testing: XSS ---
+Payload: <script>alert(1)</script>
+URL: http://localhost:8000http://localhost:8000/dvwa/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%281%29%3C/script%3E&Submit=Submit
+HTTP Status: 403
+WAF Blocked (403)
+Attempting to login to DVWA via WAF: http://localhost:8000/dvwa/login.php
+DVWA login and security set to low successful.
+
+--- Testing: SQLI ---
+Payload: 1' OR 1=1 -- -
+Full URL sent: http://localhost:8000/dvwa/vulnerabilities/sqli/?id=1%27%20OR%201%3D1%20--%20-&Submit=Submit
+HTTP Status: 403
+WAF Blocked (403)
+
+--- Testing: XSS ---
+Payload: <img src=x onerror=alert(1)>
+Full URL sent: http://localhost:8000/dvwa/vulnerabilities/xss_r/?name=%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E&Submit=Submit
+HTTP Status: 403
+WAF Blocked (403)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:46<00:46, 46.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 20.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.41s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:17<09:49, 17.34s/it]  6%|▌         | 2/35 [00:39<11:08, 20.26s/it]  9%|▊         | 3/35 [00:43<06:51, 12.85s/it] 11%|█▏        | 4/35 [00:48<05:00,  9.70s/it] 14%|█▍        | 5/35 [01:10<07:08, 14.27s/it] 17%|█▋        | 6/35 [01:33<08:13, 17.01s/it] 20%|██        | 7/35 [01:54<08:38, 18.51s/it] 23%|██▎       | 8/35 [01:57<06:00, 13.37s/it] 26%|██▌       | 9/35 [02:19<06:59, 16.15s/it] 29%|██▊       | 10/35 [02:22<05:05, 12.22s/it] 31%|███▏      | 11/35 [02:44<06:03, 15.16s/it] 34%|███▍      | 12/35 [02:50<04:44, 12.35s/it] 37%|███▋      | 13/35 [03:13<05:39, 15.43s/it] 40%|████      | 14/35 [03:25<05:05, 14.55s/it] 43%|████▎     | 15/35 [03:49<05:44, 17.22s/it] 46%|████▌     | 16/35 [03:56<04:30, 14.26s/it] 49%|████▊     | 17/35 [04:18<05:01, 16.73s/it] 51%|█████▏    | 18/35 [04:23<03:43, 13.16s/it] 54%|█████▍    | 19/35 [04:29<02:55, 10.97s/it] 57%|█████▋    | 20/35 [04:39<02:37, 10.50s/it] 60%|██████    | 21/35 [04:57<02:58, 12.78s/it] 63%|██████▎   | 22/35 [05:03<02:19, 10.73s/it] 66%|██████▌   | 23/35 [05:06<01:41,  8.45s/it] 69%|██████▊   | 24/35 [05:21<01:55, 10.50s/it] 71%|███████▏  | 25/35 [05:45<02:24, 14.50s/it] 74%|███████▍  | 26/35 [06:08<02:34, 17.15s/it] 77%|███████▋  | 27/35 [06:28<02:22, 17.84s/it] 80%|████████  | 28/35 [06:32<01:35, 13.66s/it] 83%|████████▎ | 29/35 [06:54<01:38, 16.43s/it] 86%|████████▌ | 30/35 [07:18<01:32, 18.44s/it] 89%|████████▊ | 31/35 [07:21<00:55, 13.99s/it] 91%|█████████▏| 32/35 [07:44<00:49, 16.65s/it] 94%|█████████▍| 33/35 [07:59<00:32, 16.22s/it] 97%|█████████▋| 34/35 [08:22<00:18, 18.30s/it]100%|██████████| 35/35 [08:25<00:00, 13.50s/it]100%|██████████| 35/35 [08:25<00:00, 14.43s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:10<02:32, 10.91s/it] 13%|█▎        | 2/15 [00:21<02:18, 10.64s/it] 20%|██        | 3/15 [00:37<02:35, 12.94s/it] 27%|██▋       | 4/15 [00:59<03:04, 16.79s/it] 33%|███▎      | 5/15 [01:08<02:18, 13.85s/it] 40%|████      | 6/15 [01:14<01:42, 11.37s/it] 47%|████▋     | 7/15 [01:32<01:46, 13.37s/it] 53%|█████▎    | 8/15 [01:54<01:53, 16.18s/it] 60%|██████    | 9/15 [02:05<01:27, 14.61s/it] 67%|██████▋   | 10/15 [02:11<00:59, 11.93s/it] 73%|███████▎  | 11/15 [02:17<00:40, 10.18s/it] 80%|████████  | 12/15 [02:39<00:41, 13.72s/it] 87%|████████▋ | 13/15 [02:56<00:29, 14.74s/it] 93%|█████████▎| 14/15 [03:03<00:12, 12.16s/it]100%|██████████| 15/15 [03:11<00:00, 10.93s/it]100%|██████████| 15/15 [03:11<00:00, 12.74s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:21<12:03, 21.28s/it]  6%|▌         | 2/35 [00:43<12:04, 21.96s/it]  9%|▊         | 3/35 [00:52<08:25, 15.78s/it] 11%|█▏        | 4/35 [00:58<06:12, 12.03s/it] 14%|█▍        | 5/35 [01:17<07:19, 14.64s/it] 17%|█▋        | 6/35 [01:25<05:53, 12.20s/it] 20%|██        | 7/35 [01:46<07:07, 15.28s/it] 23%|██▎       | 8/35 [01:49<05:01, 11.18s/it] 26%|██▌       | 9/35 [02:08<05:59, 13.81s/it] 29%|██▊       | 10/35 [02:14<04:41, 11.26s/it] 31%|███▏      | 11/35 [02:28<04:53, 12.23s/it] 34%|███▍      | 12/35 [02:32<03:44,  9.78s/it] 37%|███▋      | 13/35 [02:55<05:00, 13.67s/it] 40%|████      | 14/35 [03:11<05:00, 14.33s/it] 43%|████▎     | 15/35 [03:32<05:29, 16.49s/it] 46%|████▌     | 16/35 [03:55<05:47, 18.30s/it] 49%|████▊     | 17/35 [04:17<05:50, 19.49s/it] 51%|█████▏    | 18/35 [04:26<04:35, 16.23s/it] 54%|█████▍    | 19/35 [04:30<03:23, 12.71s/it] 57%|█████▋    | 20/35 [04:40<02:57, 11.85s/it] 60%|██████    | 21/35 [05:02<03:29, 14.94s/it] 63%|██████▎   | 22/35 [05:09<02:41, 12.44s/it] 66%|██████▌   | 23/35 [05:14<02:02, 10.18s/it] 69%|██████▊   | 24/35 [05:18<01:33,  8.50s/it] 71%|███████▏  | 25/35 [05:24<01:15,  7.57s/it] 74%|███████▍  | 26/35 [05:46<01:48, 12.00s/it] 77%|███████▋  | 27/35 [06:08<02:00, 15.07s/it] 80%|████████  | 28/35 [06:15<01:28, 12.69s/it] 83%|████████▎ | 29/35 [06:37<01:32, 15.41s/it] 86%|████████▌ | 30/35 [06:41<00:59, 11.81s/it] 89%|████████▊ | 31/35 [06:43<00:35,  8.99s/it] 91%|█████████▏| 32/35 [06:47<00:22,  7.37s/it] 94%|█████████▍| 33/35 [06:52<00:13,  6.85s/it] 97%|█████████▋| 34/35 [07:12<00:10, 10.60s/it]100%|██████████| 35/35 [07:34<00:00, 14.03s/it]100%|██████████| 35/35 [07:34<00:00, 12.98s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:22<05:09, 22.12s/it] 13%|█▎        | 2/15 [00:31<03:07, 14.40s/it] 20%|██        | 3/15 [00:41<02:29, 12.50s/it] 27%|██▋       | 4/15 [00:49<01:59, 10.83s/it] 33%|███▎      | 5/15 [01:10<02:23, 14.39s/it] 40%|████      | 6/15 [01:17<01:47, 11.92s/it] 47%|████▋     | 7/15 [01:31<01:41, 12.69s/it] 53%|█████▎    | 8/15 [01:41<01:22, 11.80s/it] 60%|██████    | 9/15 [01:52<01:08, 11.43s/it] 67%|██████▋   | 10/15 [02:05<00:59, 11.86s/it] 73%|███████▎  | 11/15 [02:11<00:40, 10.21s/it] 80%|████████  | 12/15 [02:18<00:27,  9.20s/it] 87%|████████▋ | 13/15 [02:26<00:17,  8.94s/it] 93%|█████████▎| 14/15 [02:39<00:10, 10.02s/it]100%|██████████| 15/15 [02:47<00:00,  9.41s/it]100%|██████████| 15/15 [02:47<00:00, 11.15s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:20<11:46, 20.78s/it]  6%|▌         | 2/35 [00:42<11:48, 21.48s/it]  9%|▊         | 3/35 [00:48<07:39, 14.35s/it] 11%|█▏        | 4/35 [00:52<05:11, 10.03s/it] 14%|█▍        | 5/35 [01:11<06:47, 13.59s/it] 17%|█▋        | 6/35 [01:18<05:21, 11.08s/it] 20%|██        | 7/35 [01:40<06:51, 14.70s/it] 23%|██▎       | 8/35 [01:42<04:51, 10.80s/it] 26%|██▌       | 9/35 [02:04<06:12, 14.32s/it] 29%|██▊       | 10/35 [02:10<04:52, 11.72s/it] 31%|███▏      | 11/35 [02:27<05:15, 13.14s/it] 34%|███▍      | 12/35 [02:33<04:16, 11.15s/it] 37%|███▋      | 13/35 [02:55<05:17, 14.44s/it] 40%|████      | 14/35 [03:08<04:52, 13.91s/it] 43%|████▎     | 15/35 [03:30<05:30, 16.53s/it] 46%|████▌     | 16/35 [03:53<05:46, 18.26s/it] 49%|████▊     | 17/35 [04:15<05:49, 19.41s/it] 51%|█████▏    | 18/35 [04:21<04:23, 15.51s/it] 54%|█████▍    | 19/35 [04:26<03:16, 12.27s/it] 57%|█████▋    | 20/35 [04:30<02:29,  9.95s/it] 60%|██████    | 21/35 [04:53<03:10, 13.64s/it] 63%|██████▎   | 22/35 [04:57<02:21, 10.91s/it] 66%|██████▌   | 23/35 [05:20<02:53, 14.44s/it] 69%|██████▊   | 24/35 [05:43<03:05, 16.89s/it] 71%|███████▏  | 25/35 [06:04<03:03, 18.38s/it] 74%|███████▍  | 26/35 [06:27<02:55, 19.54s/it] 77%|███████▋  | 27/35 [06:49<02:42, 20.33s/it] 80%|████████  | 28/35 [07:11<02:26, 20.90s/it] 83%|████████▎ | 29/35 [07:33<02:07, 21.31s/it] 86%|████████▌ | 30/35 [07:56<01:47, 21.59s/it] 89%|████████▊ | 31/35 [07:58<01:03, 15.85s/it] 91%|█████████▏| 32/35 [08:02<00:36, 12.20s/it] 94%|█████████▍| 33/35 [08:16<00:25, 12.79s/it] 97%|█████████▋| 34/35 [08:38<00:15, 15.53s/it]100%|██████████| 35/35 [08:40<00:00, 11.58s/it]100%|██████████| 35/35 [08:40<00:00, 14.88s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:06<01:28,  6.33s/it] 13%|█▎        | 2/15 [00:14<01:39,  7.68s/it] 20%|██        | 3/15 [00:25<01:50,  9.20s/it] 27%|██▋       | 4/15 [00:33<01:32,  8.44s/it] 33%|███▎      | 5/15 [00:47<01:45, 10.57s/it] 40%|████      | 6/15 [00:58<01:36, 10.70s/it] 47%|████▋     | 7/15 [01:06<01:19,  9.88s/it] 53%|█████▎    | 8/15 [01:18<01:13, 10.48s/it] 60%|██████    | 9/15 [01:40<01:24, 14.15s/it] 67%|██████▋   | 10/15 [01:48<01:00, 12.15s/it] 73%|███████▎  | 11/15 [01:59<00:47, 11.83s/it] 80%|████████  | 12/15 [02:07<00:31, 10.65s/it] 87%|████████▋ | 13/15 [02:18<00:21, 10.79s/it] 93%|█████████▎| 14/15 [02:24<00:09,  9.38s/it]100%|██████████| 15/15 [02:33<00:00,  9.14s/it]100%|██████████| 15/15 [02:33<00:00, 10.22s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 15
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:22<12:37, 22.29s/it]  6%|▌         | 2/35 [00:44<12:11, 22.17s/it]  9%|▊         | 3/35 [00:50<08:01, 15.03s/it] 11%|█▏        | 4/35 [01:12<09:09, 17.73s/it] 14%|█▍        | 5/35 [01:34<09:37, 19.24s/it] 17%|█▋        | 6/35 [01:40<07:06, 14.69s/it] 20%|██        | 7/35 [02:02<08:02, 17.22s/it] 23%|██▎       | 8/35 [02:05<05:36, 12.48s/it] 26%|██▌       | 9/35 [02:27<06:44, 15.55s/it] 29%|██▊       | 10/35 [02:33<05:14, 12.58s/it] 31%|███▏      | 11/35 [02:54<06:02, 15.12s/it] 34%|███▍      | 12/35 [03:02<05:00, 13.07s/it] 37%|███▋      | 13/35 [03:25<05:53, 16.06s/it] 40%|████      | 14/35 [03:48<06:19, 18.06s/it] 43%|████▎     | 15/35 [04:11<06:29, 19.48s/it] 46%|████▌     | 16/35 [04:32<06:17, 19.88s/it] 49%|████▊     | 17/35 [04:54<06:12, 20.70s/it] 51%|█████▏    | 18/35 [05:01<04:40, 16.51s/it] 54%|█████▍    | 19/35 [05:05<03:25, 12.83s/it] 57%|█████▋    | 20/35 [05:13<02:50, 11.39s/it] 60%|██████    | 21/35 [05:36<03:28, 14.90s/it] 63%|██████▎   | 22/35 [05:43<02:41, 12.44s/it] 66%|██████▌   | 23/35 [05:53<02:21, 11.83s/it] 69%|██████▊   | 24/35 [06:15<02:43, 14.85s/it] 71%|███████▏  | 25/35 [06:37<02:50, 17.02s/it] 74%|███████▍  | 26/35 [06:59<02:45, 18.43s/it] 77%|███████▋  | 27/35 [07:21<02:36, 19.54s/it] 80%|████████  | 28/35 [07:43<02:20, 20.12s/it] 83%|████████▎ | 29/35 [08:04<02:03, 20.51s/it] 86%|████████▌ | 30/35 [08:11<01:21, 16.38s/it] 89%|████████▊ | 31/35 [08:14<00:49, 12.44s/it] 91%|█████████▏| 32/35 [08:22<00:33, 11.20s/it] 94%|█████████▍| 33/35 [08:44<00:28, 14.44s/it] 97%|█████████▋| 34/35 [09:05<00:16, 16.16s/it]100%|██████████| 35/35 [09:07<00:00, 12.08s/it]100%|██████████| 35/35 [09:07<00:00, 15.65s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:05<01:15,  5.36s/it] 13%|█▎        | 2/15 [00:17<01:58,  9.10s/it] 20%|██        | 3/15 [00:23<01:36,  8.00s/it] 27%|██▋       | 4/15 [00:32<01:32,  8.40s/it] 33%|███▎      | 5/15 [00:43<01:33,  9.32s/it] 40%|████      | 6/15 [00:54<01:26,  9.65s/it] 47%|████▋     | 7/15 [01:02<01:15,  9.40s/it] 53%|█████▎    | 8/15 [01:14<01:10, 10.00s/it] 60%|██████    | 9/15 [01:36<01:22, 13.77s/it] 67%|██████▋   | 10/15 [01:42<00:56, 11.31s/it] 73%|███████▎  | 11/15 [01:50<00:41, 10.48s/it] 80%|████████  | 12/15 [02:01<00:31, 10.46s/it] 87%|████████▋ | 13/15 [02:22<00:27, 13.83s/it] 93%|█████████▎| 14/15 [02:32<00:12, 12.76s/it]100%|██████████| 15/15 [02:42<00:00, 11.66s/it]100%|██████████| 15/15 [02:42<00:00, 10.80s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:22<00:22, 22.69s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00,  9.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 11.85s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:22<12:50, 22.67s/it]  6%|▌         | 2/35 [00:44<12:16, 22.31s/it]  9%|▊         | 3/35 [00:50<07:50, 14.72s/it] 11%|█▏        | 4/35 [00:56<05:50, 11.30s/it] 14%|█▍        | 5/35 [01:15<07:05, 14.17s/it] 17%|█▋        | 6/35 [01:22<05:35, 11.57s/it] 20%|██        | 7/35 [01:44<07:04, 15.15s/it] 23%|██▎       | 8/35 [01:47<05:02, 11.19s/it] 26%|██▌       | 9/35 [02:06<05:51, 13.54s/it] 29%|██▊       | 10/35 [02:09<04:19, 10.39s/it] 31%|███▏      | 11/35 [02:31<05:34, 13.94s/it] 34%|███▍      | 12/35 [02:44<05:13, 13.62s/it] 37%|███▋      | 13/35 [03:07<05:59, 16.35s/it] 40%|████      | 14/35 [03:28<06:15, 17.89s/it] 43%|████▎     | 15/35 [03:50<06:25, 19.28s/it] 46%|████▌     | 16/35 [04:13<06:24, 20.22s/it] 49%|████▊     | 17/35 [04:19<04:45, 15.88s/it] 51%|█████▏    | 18/35 [04:41<05:02, 17.78s/it] 54%|█████▍    | 19/35 [04:45<03:36, 13.54s/it] 57%|█████▋    | 20/35 [04:57<03:18, 13.26s/it] 60%|██████    | 21/35 [05:19<03:43, 15.97s/it] 63%|██████▎   | 22/35 [05:25<02:45, 12.74s/it] 66%|██████▌   | 23/35 [05:28<01:58,  9.88s/it] 69%|██████▊   | 24/35 [05:48<02:23, 13.04s/it] 71%|███████▏  | 25/35 [06:10<02:38, 15.80s/it] 74%|███████▍  | 26/35 [06:31<02:34, 17.16s/it] 77%|███████▋  | 27/35 [06:53<02:29, 18.68s/it] 80%|████████  | 28/35 [07:00<01:46, 15.17s/it] 83%|████████▎ | 29/35 [07:05<01:11, 11.97s/it] 86%|████████▌ | 30/35 [07:08<00:47,  9.46s/it] 89%|████████▊ | 31/35 [07:15<00:35,  8.80s/it] 91%|█████████▏| 32/35 [07:38<00:38, 12.90s/it] 94%|█████████▍| 33/35 [07:58<00:30, 15.11s/it] 97%|█████████▋| 34/35 [08:21<00:17, 17.31s/it]100%|██████████| 35/35 [08:23<00:00, 12.84s/it]100%|██████████| 35/35 [08:23<00:00, 14.39s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:11<02:44, 11.77s/it] 13%|█▎        | 2/15 [00:20<02:12, 10.23s/it] 20%|██        | 3/15 [00:38<02:41, 13.45s/it] 27%|██▋       | 4/15 [00:55<02:44, 14.93s/it] 33%|███▎      | 5/15 [01:11<02:33, 15.40s/it] 40%|████      | 6/15 [01:19<01:56, 12.96s/it] 47%|████▋     | 7/15 [01:30<01:38, 12.25s/it] 53%|█████▎    | 8/15 [01:42<01:24, 12.09s/it] 60%|██████    | 9/15 [01:54<01:11, 11.97s/it] 67%|██████▋   | 10/15 [02:02<00:54, 10.99s/it] 73%|███████▎  | 11/15 [02:13<00:43, 10.81s/it] 80%|████████  | 12/15 [02:35<00:42, 14.19s/it] 87%|████████▋ | 13/15 [02:57<00:33, 16.64s/it] 93%|█████████▎| 14/15 [03:03<00:13, 13.52s/it]100%|██████████| 15/15 [03:12<00:00, 11.99s/it]100%|██████████| 15/15 [03:12<00:00, 12.82s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:10<05:56, 10.49s/it]  6%|▌         | 2/35 [00:32<09:27, 17.21s/it]  9%|▊         | 3/35 [00:38<06:29, 12.17s/it] 11%|█▏        | 4/35 [00:44<04:55,  9.52s/it] 14%|█▍        | 5/35 [00:59<05:48, 11.60s/it] 17%|█▋        | 6/35 [01:05<04:38,  9.59s/it] 20%|██        | 7/35 [01:27<06:27, 13.83s/it] 23%|██▎       | 8/35 [01:29<04:34, 10.17s/it] 26%|██▌       | 9/35 [01:52<06:02, 13.92s/it] 29%|██▊       | 10/35 [01:59<05:00, 12.03s/it] 31%|███▏      | 11/35 [02:22<06:05, 15.23s/it] 34%|███▍      | 12/35 [02:28<04:49, 12.60s/it] 37%|███▋      | 13/35 [02:50<05:39, 15.41s/it] 40%|████      | 14/35 [03:12<06:06, 17.43s/it] 43%|████▎     | 15/35 [03:35<06:19, 18.96s/it] 46%|████▌     | 16/35 [03:57<06:17, 19.85s/it] 49%|████▊     | 17/35 [04:20<06:12, 20.71s/it] 51%|█████▏    | 18/35 [04:27<04:43, 16.67s/it] 54%|█████▍    | 19/35 [04:30<03:22, 12.67s/it] 57%|█████▋    | 20/35 [04:39<02:54, 11.65s/it] 60%|██████    | 21/35 [05:01<03:23, 14.51s/it] 63%|██████▎   | 22/35 [05:10<02:50, 13.09s/it] 66%|██████▌   | 23/35 [05:26<02:45, 13.77s/it] 69%|██████▊   | 24/35 [05:41<02:36, 14.22s/it] 71%|███████▏  | 25/35 [06:03<02:44, 16.44s/it] 74%|███████▍  | 26/35 [06:24<02:42, 18.00s/it] 77%|███████▋  | 27/35 [06:44<02:28, 18.60s/it] 80%|████████  | 28/35 [06:50<01:43, 14.78s/it] 83%|████████▎ | 29/35 [06:59<01:17, 12.97s/it] 86%|████████▌ | 30/35 [07:05<00:53, 10.77s/it] 89%|████████▊ | 31/35 [07:19<00:47, 11.76s/it] 91%|█████████▏| 32/35 [07:25<00:30, 10.00s/it] 94%|█████████▍| 33/35 [07:48<00:27, 13.92s/it] 97%|█████████▋| 34/35 [08:07<00:15, 15.68s/it]100%|██████████| 35/35 [08:10<00:00, 11.88s/it]100%|██████████| 35/35 [08:10<00:00, 14.02s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:03<00:42,  3.07s/it] 13%|█▎        | 2/15 [00:17<02:03,  9.53s/it] 20%|██        | 3/15 [00:24<01:39,  8.32s/it] 27%|██▋       | 4/15 [00:35<01:47,  9.76s/it] 33%|███▎      | 5/15 [00:58<02:22, 14.24s/it] 40%|████      | 6/15 [01:19<02:30, 16.77s/it] 47%|████▋     | 7/15 [01:29<01:56, 14.54s/it] 53%|█████▎    | 8/15 [01:38<01:28, 12.70s/it] 60%|██████    | 9/15 [02:00<01:34, 15.71s/it] 67%|██████▋   | 10/15 [02:10<01:09, 13.93s/it] 73%|███████▎  | 11/15 [02:21<00:51, 12.99s/it] 80%|████████  | 12/15 [02:25<00:30, 10.31s/it] 87%|████████▋ | 13/15 [02:34<00:19,  9.86s/it] 93%|█████████▎| 14/15 [02:45<00:10, 10.19s/it]100%|██████████| 15/15 [02:52<00:00,  9.04s/it]100%|██████████| 15/15 [02:52<00:00, 11.47s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:21<12:12, 21.54s/it]  6%|▌         | 2/35 [00:43<11:55, 21.69s/it]  9%|▊         | 3/35 [00:49<07:54, 14.83s/it] 11%|█▏        | 4/35 [00:56<05:57, 11.52s/it] 14%|█▍        | 5/35 [01:17<07:27, 14.93s/it] 17%|█▋        | 6/35 [01:22<05:33, 11.50s/it] 20%|██        | 7/35 [01:45<07:06, 15.23s/it] 23%|██▎       | 8/35 [01:47<05:03, 11.24s/it] 26%|██▌       | 9/35 [02:10<06:28, 14.94s/it] 29%|██▊       | 10/35 [02:14<04:46, 11.44s/it] 31%|███▏      | 11/35 [02:37<05:57, 14.91s/it] 34%|███▍      | 12/35 [02:43<04:38, 12.12s/it] 37%|███▋      | 13/35 [03:05<05:36, 15.30s/it] 40%|████      | 14/35 [03:28<06:08, 17.54s/it] 43%|████▎     | 15/35 [03:50<06:17, 18.88s/it] 46%|████▌     | 16/35 [04:13<06:22, 20.11s/it] 49%|████▊     | 17/35 [04:35<06:14, 20.79s/it] 51%|█████▏    | 18/35 [04:40<04:32, 16.05s/it] 54%|█████▍    | 19/35 [04:46<03:26, 12.90s/it] 57%|█████▋    | 20/35 [05:04<03:36, 14.46s/it] 60%|██████    | 21/35 [05:24<03:47, 16.23s/it] 63%|██████▎   | 22/35 [05:27<02:37, 12.09s/it] 66%|██████▌   | 23/35 [05:34<02:06, 10.55s/it] 69%|██████▊   | 24/35 [05:55<02:32, 13.86s/it] 71%|███████▏  | 25/35 [06:17<02:42, 16.26s/it] 74%|███████▍  | 26/35 [06:39<02:40, 17.86s/it] 77%|███████▋  | 27/35 [06:58<02:26, 18.34s/it] 80%|████████  | 28/35 [07:05<01:45, 15.04s/it] 83%|████████▎ | 29/35 [07:27<01:42, 17.13s/it] 86%|████████▌ | 30/35 [07:31<01:05, 13.08s/it] 89%|████████▊ | 31/35 [07:45<00:52, 13.20s/it] 91%|█████████▏| 32/35 [08:06<00:46, 15.64s/it] 94%|█████████▍| 33/35 [08:28<00:35, 17.68s/it] 97%|█████████▋| 34/35 [08:50<00:18, 18.98s/it]100%|██████████| 35/35 [08:56<00:00, 14.98s/it]100%|██████████| 35/35 [08:56<00:00, 15.33s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 1 (2.86%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 97.14%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 34
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:08<01:52,  8.02s/it] 13%|█▎        | 2/15 [00:19<02:13, 10.25s/it] 20%|██        | 3/15 [00:28<01:51,  9.30s/it] 27%|██▋       | 4/15 [00:40<01:54, 10.40s/it] 33%|███▎      | 5/15 [00:46<01:30,  9.00s/it] 40%|████      | 6/15 [00:52<01:12,  8.00s/it] 47%|████▋     | 7/15 [00:58<00:59,  7.44s/it] 53%|█████▎    | 8/15 [01:07<00:53,  7.68s/it] 60%|██████    | 9/15 [01:08<00:34,  5.81s/it] 67%|██████▋   | 10/15 [01:16<00:32,  6.45s/it] 73%|███████▎  | 11/15 [01:38<00:44, 11.21s/it] 80%|████████  | 12/15 [01:45<00:29,  9.75s/it] 87%|████████▋ | 13/15 [01:56<00:20, 10.17s/it] 93%|█████████▎| 14/15 [02:06<00:10, 10.33s/it]100%|██████████| 15/15 [02:28<00:00, 13.67s/it]100%|██████████| 15/15 [02:28<00:00,  9.89s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:03<01:56,  3.41s/it]  6%|▌         | 2/35 [00:25<07:54, 14.38s/it]  9%|▊         | 3/35 [00:29<05:08,  9.65s/it] 11%|█▏        | 4/35 [00:51<07:29, 14.49s/it] 14%|█▍        | 5/35 [01:12<08:30, 17.02s/it] 17%|█▋        | 6/35 [01:18<06:19, 13.08s/it] 20%|██        | 7/35 [01:41<07:33, 16.21s/it] 23%|██▎       | 8/35 [01:43<05:20, 11.86s/it] 26%|██▌       | 9/35 [02:05<06:28, 14.94s/it] 29%|██▊       | 10/35 [02:08<04:45, 11.42s/it] 31%|███▏      | 11/35 [02:31<05:57, 14.88s/it] 34%|███▍      | 12/35 [02:51<06:16, 16.38s/it] 37%|███▋      | 13/35 [03:13<06:39, 18.14s/it] 40%|████      | 14/35 [03:36<06:49, 19.49s/it] 43%|████▎     | 15/35 [03:58<06:46, 20.34s/it] 46%|████▌     | 16/35 [04:20<06:34, 20.79s/it] 49%|████▊     | 17/35 [04:42<06:22, 21.25s/it] 51%|█████▏    | 18/35 [04:48<04:45, 16.77s/it] 54%|█████▍    | 19/35 [04:53<03:29, 13.07s/it] 57%|█████▋    | 20/35 [05:01<02:53, 11.60s/it] 60%|██████    | 21/35 [05:23<03:24, 14.61s/it] 63%|██████▎   | 22/35 [05:28<02:34, 11.89s/it] 66%|██████▌   | 23/35 [05:37<02:11, 10.98s/it] 69%|██████▊   | 24/35 [05:59<02:36, 14.22s/it] 71%|███████▏  | 25/35 [06:21<02:44, 16.49s/it] 74%|███████▍  | 26/35 [06:42<02:41, 17.95s/it] 77%|███████▋  | 27/35 [07:05<02:34, 19.37s/it] 80%|████████  | 28/35 [07:14<01:54, 16.29s/it] 83%|████████▎ | 29/35 [07:36<01:47, 17.99s/it] 86%|████████▌ | 30/35 [07:58<01:36, 19.30s/it] 89%|████████▊ | 31/35 [08:01<00:56, 14.24s/it] 91%|█████████▏| 32/35 [08:06<00:34, 11.57s/it] 94%|█████████▍| 33/35 [08:16<00:22, 11.21s/it] 97%|█████████▋| 34/35 [08:23<00:09,  9.92s/it]100%|██████████| 35/35 [08:29<00:00,  8.73s/it]100%|██████████| 35/35 [08:29<00:00, 14.56s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:22<05:12, 22.31s/it] 13%|█▎        | 2/15 [00:34<03:29, 16.12s/it] 20%|██        | 3/15 [00:45<02:47, 13.97s/it] 27%|██▋       | 4/15 [00:51<02:00, 11.00s/it] 33%|███▎      | 5/15 [01:03<01:50, 11.02s/it] 40%|████      | 6/15 [01:09<01:25,  9.48s/it] 47%|████▋     | 7/15 [01:20<01:19,  9.89s/it] 53%|█████▎    | 8/15 [01:31<01:12, 10.33s/it] 60%|██████    | 9/15 [01:42<01:02, 10.41s/it] 67%|██████▋   | 10/15 [01:53<00:52, 10.60s/it] 73%|███████▎  | 11/15 [02:15<00:57, 14.33s/it] 80%|████████  | 12/15 [02:26<00:39, 13.17s/it] 87%|████████▋ | 13/15 [02:36<00:24, 12.27s/it] 93%|█████████▎| 14/15 [02:45<00:11, 11.22s/it]100%|██████████| 15/15 [02:51<00:00,  9.68s/it]100%|██████████| 15/15 [02:51<00:00, 11.43s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:11<00:11, 11.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  5.25s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:12<00:00,  6.25s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:24<13:56, 24.59s/it]  6%|▌         | 2/35 [00:47<12:50, 23.36s/it]  9%|▊         | 3/35 [00:53<08:13, 15.42s/it] 11%|█▏        | 4/35 [00:58<05:52, 11.36s/it] 14%|█▍        | 5/35 [01:20<07:33, 15.13s/it] 17%|█▋        | 6/35 [01:27<06:04, 12.57s/it] 20%|██        | 7/35 [01:49<07:18, 15.66s/it] 23%|██▎       | 8/35 [01:52<05:10, 11.50s/it] 26%|██▌       | 9/35 [02:14<06:26, 14.87s/it] 29%|██▊       | 10/35 [02:19<04:58, 11.96s/it] 31%|███▏      | 11/35 [02:42<06:06, 15.27s/it] 34%|███▍      | 12/35 [02:50<04:55, 12.85s/it] 37%|███▋      | 13/35 [03:12<05:47, 15.78s/it] 40%|████      | 14/35 [03:32<05:58, 17.07s/it] 43%|████▎     | 15/35 [03:54<06:13, 18.65s/it] 46%|████▌     | 16/35 [04:17<06:17, 19.88s/it] 49%|████▊     | 17/35 [04:39<06:06, 20.35s/it] 51%|█████▏    | 18/35 [04:45<04:34, 16.16s/it] 54%|█████▍    | 19/35 [04:50<03:26, 12.94s/it] 57%|█████▋    | 20/35 [04:57<02:46, 11.10s/it] 60%|██████    | 21/35 [05:20<03:22, 14.49s/it] 63%|██████▎   | 22/35 [05:24<02:27, 11.36s/it] 66%|██████▌   | 23/35 [05:27<01:48,  9.01s/it] 69%|██████▊   | 24/35 [05:49<02:20, 12.78s/it] 71%|███████▏  | 25/35 [06:11<02:35, 15.52s/it] 74%|███████▍  | 26/35 [06:33<02:37, 17.46s/it] 77%|███████▋  | 27/35 [06:55<02:30, 18.79s/it] 80%|████████  | 28/35 [06:59<01:41, 14.55s/it] 83%|████████▎ | 29/35 [07:21<01:40, 16.80s/it] 86%|████████▌ | 30/35 [07:27<01:06, 13.39s/it] 89%|████████▊ | 31/35 [07:33<00:44, 11.19s/it] 91%|█████████▏| 32/35 [07:42<00:32, 10.73s/it] 94%|█████████▍| 33/35 [08:04<00:28, 14.12s/it] 97%|█████████▋| 34/35 [08:25<00:15, 15.98s/it]100%|██████████| 35/35 [08:28<00:00, 12.28s/it]100%|██████████| 35/35 [08:28<00:00, 14.54s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:19<04:29, 19.23s/it] 13%|█▎        | 2/15 [00:41<04:30, 20.84s/it] 20%|██        | 3/15 [00:50<03:04, 15.41s/it] 27%|██▋       | 4/15 [01:12<03:20, 18.20s/it] 33%|███▎      | 5/15 [01:34<03:14, 19.50s/it] 40%|████      | 6/15 [01:40<02:14, 14.95s/it] 47%|████▋     | 7/15 [01:50<01:45, 13.18s/it] 53%|█████▎    | 8/15 [01:58<01:20, 11.56s/it] 60%|██████    | 9/15 [02:04<01:00, 10.00s/it] 67%|██████▋   | 10/15 [02:11<00:45,  9.07s/it] 73%|███████▎  | 11/15 [02:32<00:51, 12.79s/it] 80%|████████  | 12/15 [02:41<00:34, 11.38s/it] 87%|████████▋ | 13/15 [02:58<00:26, 13.15s/it] 93%|█████████▎| 14/15 [03:09<00:12, 12.51s/it]100%|██████████| 15/15 [03:13<00:00, 10.06s/it]100%|██████████| 15/15 [03:13<00:00, 12.92s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:15<08:44, 15.42s/it]  6%|▌         | 2/35 [00:37<10:34, 19.23s/it]  9%|▊         | 3/35 [00:53<09:34, 17.96s/it] 11%|█▏        | 4/35 [01:02<07:19, 14.16s/it] 14%|█▍        | 5/35 [01:24<08:34, 17.15s/it] 17%|█▋        | 6/35 [01:31<06:33, 13.55s/it] 20%|██        | 7/35 [01:53<07:36, 16.31s/it] 23%|██▎       | 8/35 [01:55<05:19, 11.84s/it] 26%|██▌       | 9/35 [02:17<06:33, 15.13s/it] 29%|██▊       | 10/35 [02:25<05:20, 12.82s/it] 31%|███▏      | 11/35 [02:35<04:47, 11.99s/it] 34%|███▍      | 12/35 [02:41<03:56, 10.29s/it] 37%|███▋      | 13/35 [03:03<05:01, 13.69s/it] 40%|████      | 14/35 [03:15<04:39, 13.32s/it] 43%|████▎     | 15/35 [03:37<05:15, 15.76s/it] 46%|████▌     | 16/35 [03:59<05:35, 17.68s/it] 49%|████▊     | 17/35 [04:21<05:44, 19.14s/it] 51%|█████▏    | 18/35 [04:27<04:17, 15.16s/it] 54%|█████▍    | 19/35 [04:31<03:06, 11.63s/it] 57%|█████▋    | 20/35 [04:43<02:56, 11.77s/it] 60%|██████    | 21/35 [05:04<03:25, 14.70s/it] 63%|██████▎   | 22/35 [05:09<02:31, 11.66s/it] 66%|██████▌   | 23/35 [05:20<02:17, 11.42s/it] 69%|██████▊   | 24/35 [05:42<02:41, 14.65s/it] 71%|███████▏  | 25/35 [06:04<02:48, 16.88s/it] 74%|███████▍  | 26/35 [06:27<02:48, 18.70s/it] 77%|███████▋  | 27/35 [06:50<02:38, 19.86s/it] 80%|████████  | 28/35 [06:56<01:50, 15.82s/it] 83%|████████▎ | 29/35 [07:19<01:47, 17.87s/it] 86%|████████▌ | 30/35 [07:28<01:16, 15.29s/it] 89%|████████▊ | 31/35 [07:49<01:08, 17.06s/it] 91%|█████████▏| 32/35 [07:59<00:44, 14.91s/it] 94%|█████████▍| 33/35 [08:04<00:23, 11.98s/it] 97%|█████████▋| 34/35 [08:25<00:14, 14.71s/it]100%|██████████| 35/35 [08:28<00:00, 10.98s/it]100%|██████████| 35/35 [08:28<00:00, 14.52s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:21<05:03, 21.71s/it] 13%|█▎        | 2/15 [00:32<03:18, 15.23s/it] 20%|██        | 3/15 [00:42<02:34, 12.90s/it] 27%|██▋       | 4/15 [01:04<02:59, 16.33s/it] 33%|███▎      | 5/15 [01:13<02:17, 13.73s/it] 40%|████      | 6/15 [01:20<01:43, 11.50s/it] 47%|████▋     | 7/15 [01:35<01:42, 12.80s/it] 53%|█████▎    | 8/15 [01:55<01:43, 14.84s/it] 60%|██████    | 9/15 [02:12<01:34, 15.69s/it] 67%|██████▋   | 10/15 [02:21<01:07, 13.46s/it] 73%|███████▎  | 11/15 [02:43<01:04, 16.10s/it] 80%|████████  | 12/15 [02:53<00:43, 14.34s/it] 87%|████████▋ | 13/15 [03:06<00:27, 13.85s/it] 93%|█████████▎| 14/15 [03:17<00:12, 12.97s/it]100%|██████████| 15/15 [03:23<00:00, 11.09s/it]100%|██████████| 15/15 [03:23<00:00, 13.59s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:08<04:59,  8.81s/it]  6%|▌         | 2/35 [00:30<09:10, 16.67s/it]  9%|▊         | 3/35 [00:37<06:20, 11.89s/it] 11%|█▏        | 4/35 [00:58<08:01, 15.54s/it] 14%|█▍        | 5/35 [01:13<07:47, 15.59s/it] 17%|█▋        | 6/35 [01:20<06:01, 12.46s/it] 20%|██        | 7/35 [01:42<07:14, 15.54s/it] 23%|██▎       | 8/35 [01:44<05:07, 11.39s/it] 26%|██▌       | 9/35 [02:06<06:24, 14.77s/it] 29%|██▊       | 10/35 [02:10<04:43, 11.36s/it] 31%|███▏      | 11/35 [02:33<05:55, 14.81s/it] 34%|███▍      | 12/35 [02:40<04:46, 12.48s/it] 37%|███▋      | 13/35 [03:02<05:38, 15.41s/it] 40%|████      | 14/35 [03:24<06:02, 17.27s/it] 43%|████▎     | 15/35 [03:45<06:12, 18.64s/it] 46%|████▌     | 16/35 [04:07<06:10, 19.53s/it] 49%|████▊     | 17/35 [04:29<06:06, 20.39s/it] 51%|█████▏    | 18/35 [04:33<04:20, 15.32s/it] 54%|█████▍    | 19/35 [04:37<03:09, 11.83s/it] 57%|█████▋    | 20/35 [04:59<03:42, 14.85s/it] 60%|██████    | 21/35 [05:16<03:40, 15.73s/it] 63%|██████▎   | 22/35 [05:23<02:48, 12.98s/it] 66%|██████▌   | 23/35 [05:30<02:13, 11.10s/it] 69%|██████▊   | 24/35 [05:52<02:40, 14.56s/it] 71%|███████▏  | 25/35 [06:14<02:47, 16.72s/it] 74%|███████▍  | 26/35 [06:37<02:46, 18.47s/it] 77%|███████▋  | 27/35 [07:00<02:38, 19.86s/it] 80%|████████  | 28/35 [07:06<01:51, 15.90s/it] 83%|████████▎ | 29/35 [07:28<01:44, 17.48s/it] 86%|████████▌ | 30/35 [07:32<01:07, 13.52s/it] 89%|████████▊ | 31/35 [07:37<00:43, 10.91s/it] 91%|█████████▏| 32/35 [07:42<00:27,  9.28s/it] 94%|█████████▍| 33/35 [08:03<00:25, 12.79s/it] 97%|█████████▋| 34/35 [08:23<00:14, 14.79s/it]100%|██████████| 35/35 [08:25<00:00, 11.08s/it]100%|██████████| 35/35 [08:25<00:00, 14.44s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:18<04:13, 18.14s/it] 13%|█▎        | 2/15 [00:31<03:20, 15.39s/it] 20%|██        | 3/15 [00:42<02:42, 13.52s/it] 27%|██▋       | 4/15 [00:54<02:20, 12.73s/it] 33%|███▎      | 5/15 [01:02<01:52, 11.23s/it] 40%|████      | 6/15 [01:26<02:17, 15.29s/it] 47%|████▋     | 7/15 [01:36<01:50, 13.75s/it] 53%|█████▎    | 8/15 [01:46<01:27, 12.43s/it] 60%|██████    | 9/15 [02:03<01:22, 13.80s/it] 67%|██████▋   | 10/15 [02:11<01:01, 12.21s/it] 73%|███████▎  | 11/15 [02:23<00:48, 12.07s/it] 80%|████████  | 12/15 [02:30<00:31, 10.47s/it] 87%|████████▋ | 13/15 [02:53<00:28, 14.35s/it] 93%|█████████▎| 14/15 [03:07<00:14, 14.15s/it]100%|██████████| 15/15 [03:17<00:00, 12.91s/it]100%|██████████| 15/15 [03:17<00:00, 13.16s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:17<09:48, 17.32s/it]  6%|▌         | 2/35 [00:39<11:12, 20.39s/it]  9%|▊         | 3/35 [00:48<08:00, 15.00s/it] 11%|█▏        | 4/35 [00:52<05:36, 10.86s/it] 14%|█▍        | 5/35 [01:07<06:00, 12.01s/it] 17%|█▋        | 6/35 [01:15<05:12, 10.76s/it] 20%|██        | 7/35 [01:37<06:43, 14.43s/it] 23%|██▎       | 8/35 [01:39<04:46, 10.60s/it] 26%|██▌       | 9/35 [02:01<06:10, 14.23s/it] 29%|██▊       | 10/35 [02:11<05:20, 12.82s/it] 31%|███▏      | 11/35 [02:15<03:59,  9.96s/it] 34%|███▍      | 12/35 [02:21<03:25,  8.94s/it] 37%|███▋      | 13/35 [02:43<04:44, 12.92s/it] 40%|████      | 14/35 [03:04<05:19, 15.22s/it] 43%|████▎     | 15/35 [03:26<05:45, 17.28s/it] 46%|████▌     | 16/35 [03:46<05:46, 18.26s/it] 49%|████▊     | 17/35 [04:09<05:53, 19.64s/it] 51%|█████▏    | 18/35 [04:16<04:28, 15.81s/it] 54%|█████▍    | 19/35 [04:20<03:14, 12.14s/it] 57%|█████▋    | 20/35 [04:28<02:43, 10.87s/it] 60%|██████    | 21/35 [04:49<03:18, 14.15s/it] 63%|██████▎   | 22/35 [04:51<02:15, 10.39s/it] 66%|██████▌   | 23/35 [04:57<01:47,  8.97s/it] 69%|██████▊   | 24/35 [05:12<02:00, 10.93s/it] 71%|███████▏  | 25/35 [05:32<02:15, 13.53s/it] 74%|███████▍  | 26/35 [05:42<01:52, 12.49s/it] 77%|███████▋  | 27/35 [05:58<01:49, 13.72s/it] 80%|████████  | 28/35 [06:03<01:16, 10.92s/it] 83%|████████▎ | 29/35 [06:25<01:25, 14.19s/it] 86%|████████▌ | 30/35 [06:28<00:54, 10.96s/it] 89%|████████▊ | 31/35 [06:31<00:34,  8.68s/it] 91%|█████████▏| 32/35 [06:37<00:23,  7.72s/it] 94%|█████████▍| 33/35 [06:40<00:12,  6.46s/it] 97%|█████████▋| 34/35 [07:03<00:11, 11.19s/it]100%|██████████| 35/35 [07:25<00:00, 14.63s/it]100%|██████████| 35/35 [07:25<00:00, 12.74s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:08<01:59,  8.51s/it] 13%|█▎        | 2/15 [00:30<03:33, 16.45s/it] 20%|██        | 3/15 [00:36<02:22, 11.85s/it] 27%|██▋       | 4/15 [00:50<02:18, 12.57s/it] 33%|███▎      | 5/15 [01:12<02:40, 16.06s/it] 40%|████      | 6/15 [01:19<01:55, 12.81s/it] 47%|████▋     | 7/15 [01:27<01:30, 11.26s/it] 53%|█████▎    | 8/15 [01:38<01:18, 11.14s/it] 60%|██████    | 9/15 [01:46<01:01, 10.28s/it] 67%|██████▋   | 10/15 [01:57<00:51, 10.40s/it] 73%|███████▎  | 11/15 [02:08<00:42, 10.59s/it] 80%|████████  | 12/15 [02:21<00:34, 11.36s/it] 87%|████████▋ | 13/15 [02:31<00:22, 11.10s/it] 93%|█████████▎| 14/15 [02:38<00:09,  9.72s/it]100%|██████████| 15/15 [02:56<00:00, 12.13s/it]100%|██████████| 15/15 [02:56<00:00, 11.75s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:14<00:14, 14.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.60s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:21<12:23, 21.87s/it]  6%|▌         | 2/35 [00:44<12:07, 22.06s/it]  9%|▊         | 3/35 [00:50<07:58, 14.95s/it] 11%|█▏        | 4/35 [00:54<05:25, 10.50s/it] 14%|█▍        | 5/35 [01:07<05:42, 11.42s/it] 17%|█▋        | 6/35 [01:13<04:37,  9.59s/it] 20%|██        | 7/35 [01:36<06:29, 13.90s/it] 23%|██▎       | 8/35 [01:38<04:36, 10.23s/it] 26%|██▌       | 9/35 [01:59<05:52, 13.54s/it] 29%|██▊       | 10/35 [02:04<04:36, 11.06s/it] 31%|███▏      | 11/35 [02:25<05:36, 14.02s/it] 34%|███▍      | 12/35 [02:32<04:33, 11.91s/it] 37%|███▋      | 13/35 [02:53<05:25, 14.78s/it] 40%|████      | 14/35 [03:09<05:15, 15.02s/it] 43%|████▎     | 15/35 [03:28<05:24, 16.24s/it] 46%|████▌     | 16/35 [03:50<05:40, 17.91s/it] 49%|████▊     | 17/35 [04:12<05:45, 19.17s/it] 51%|█████▏    | 18/35 [04:17<04:13, 14.91s/it] 54%|█████▍    | 19/35 [04:21<03:08, 11.77s/it] 57%|█████▋    | 20/35 [04:27<02:28,  9.90s/it] 60%|██████    | 21/35 [04:46<02:55, 12.51s/it] 63%|██████▎   | 22/35 [04:54<02:27, 11.36s/it] 66%|██████▌   | 23/35 [04:58<01:47,  8.99s/it] 69%|██████▊   | 24/35 [05:18<02:17, 12.46s/it] 71%|███████▏  | 25/35 [05:40<02:31, 15.16s/it] 74%|███████▍  | 26/35 [06:02<02:35, 17.22s/it] 77%|███████▋  | 27/35 [06:24<02:28, 18.59s/it] 80%|████████  | 28/35 [06:31<01:46, 15.28s/it] 83%|████████▎ | 29/35 [06:51<01:40, 16.80s/it] 86%|████████▌ | 30/35 [06:58<01:08, 13.67s/it] 89%|████████▊ | 31/35 [07:19<01:03, 15.88s/it] 91%|█████████▏| 32/35 [07:25<00:38, 12.99s/it] 94%|█████████▍| 33/35 [07:45<00:30, 15.03s/it] 97%|█████████▋| 34/35 [08:05<00:16, 16.53s/it]100%|██████████| 35/35 [08:09<00:00, 12.86s/it]100%|██████████| 35/35 [08:09<00:00, 13.99s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:23,  1.64s/it] 13%|█▎        | 2/15 [00:09<01:12,  5.54s/it] 20%|██        | 3/15 [00:20<01:34,  7.91s/it] 27%|██▋       | 4/15 [00:28<01:27,  7.97s/it] 33%|███▎      | 5/15 [00:34<01:13,  7.31s/it] 40%|████      | 6/15 [00:43<01:10,  7.85s/it] 47%|████▋     | 7/15 [00:50<00:59,  7.39s/it] 53%|█████▎    | 8/15 [01:03<01:04,  9.25s/it] 60%|██████    | 9/15 [01:14<00:58,  9.72s/it] 67%|██████▋   | 10/15 [01:24<00:50, 10.04s/it] 73%|███████▎  | 11/15 [01:44<00:51, 12.83s/it] 80%|████████  | 12/15 [01:52<00:34, 11.51s/it] 87%|████████▋ | 13/15 [02:07<00:24, 12.40s/it] 93%|█████████▎| 14/15 [02:17<00:11, 11.96s/it]100%|██████████| 15/15 [02:40<00:00, 15.03s/it]100%|██████████| 15/15 [02:40<00:00, 10.67s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:15<08:48, 15.55s/it]  6%|▌         | 2/35 [00:36<10:21, 18.83s/it]  9%|▊         | 3/35 [00:43<07:02, 13.20s/it] 11%|█▏        | 4/35 [00:53<06:08, 11.88s/it] 14%|█▍        | 5/35 [01:13<07:29, 14.97s/it] 17%|█▋        | 6/35 [01:23<06:26, 13.34s/it] 20%|██        | 7/35 [01:45<07:28, 16.03s/it] 23%|██▎       | 8/35 [01:47<05:15, 11.70s/it] 26%|██▌       | 9/35 [02:09<06:25, 14.81s/it] 29%|██▊       | 10/35 [02:14<04:57, 11.89s/it] 31%|███▏      | 11/35 [02:28<05:01, 12.55s/it] 34%|███▍      | 12/35 [02:49<05:46, 15.05s/it] 37%|███▋      | 13/35 [03:11<06:14, 17.04s/it] 40%|████      | 14/35 [03:27<05:51, 16.74s/it] 43%|████▎     | 15/35 [03:50<06:13, 18.67s/it] 46%|████▌     | 16/35 [03:53<04:26, 14.02s/it] 49%|████▊     | 17/35 [04:15<04:57, 16.50s/it] 51%|█████▏    | 18/35 [04:21<03:48, 13.41s/it] 54%|█████▍    | 19/35 [04:27<02:56, 11.05s/it] 57%|█████▋    | 20/35 [04:36<02:36, 10.45s/it] 60%|██████    | 21/35 [04:57<03:11, 13.70s/it] 63%|██████▎   | 22/35 [05:06<02:36, 12.06s/it] 66%|██████▌   | 23/35 [05:09<01:53,  9.47s/it] 69%|██████▊   | 24/35 [05:31<02:25, 13.21s/it] 71%|███████▏  | 25/35 [05:52<02:36, 15.62s/it] 74%|███████▍  | 26/35 [06:14<02:37, 17.50s/it] 77%|███████▋  | 27/35 [06:35<02:28, 18.55s/it] 80%|████████  | 28/35 [06:42<01:45, 15.01s/it] 83%|████████▎ | 29/35 [07:03<01:40, 16.83s/it] 86%|████████▌ | 30/35 [07:07<01:05, 13.15s/it] 89%|████████▊ | 31/35 [07:11<00:40, 10.23s/it] 91%|█████████▏| 32/35 [07:17<00:27,  9.11s/it] 94%|█████████▍| 33/35 [07:39<00:25, 12.82s/it] 97%|█████████▋| 34/35 [08:00<00:15, 15.23s/it]100%|██████████| 35/35 [08:04<00:00, 12.01s/it]100%|██████████| 35/35 [08:04<00:00, 13.85s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:08<01:52,  8.01s/it] 13%|█▎        | 2/15 [00:18<02:06,  9.71s/it] 20%|██        | 3/15 [00:28<01:53,  9.43s/it] 27%|██▋       | 4/15 [00:49<02:35, 14.13s/it] 33%|███▎      | 5/15 [00:56<01:57, 11.79s/it] 40%|████      | 6/15 [01:03<01:28,  9.84s/it] 47%|████▋     | 7/15 [01:11<01:15,  9.45s/it] 53%|█████▎    | 8/15 [01:24<01:12, 10.40s/it] 60%|██████    | 9/15 [01:30<00:54,  9.02s/it] 67%|██████▋   | 10/15 [01:38<00:44,  8.81s/it] 73%|███████▎  | 11/15 [01:46<00:34,  8.71s/it] 80%|████████  | 12/15 [01:54<00:24,  8.28s/it] 87%|████████▋ | 13/15 [02:04<00:17,  8.93s/it] 93%|█████████▎| 14/15 [02:12<00:08,  8.58s/it]100%|██████████| 15/15 [02:18<00:00,  7.81s/it]100%|██████████| 15/15 [02:18<00:00,  9.23s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:21<12:26, 21.94s/it]  6%|▌         | 2/35 [00:43<12:00, 21.82s/it]  9%|▊         | 3/35 [00:49<07:51, 14.73s/it] 11%|█▏        | 4/35 [01:11<08:54, 17.24s/it] 14%|█▍        | 5/35 [01:26<08:14, 16.47s/it] 17%|█▋        | 6/35 [01:32<06:15, 12.96s/it] 20%|██        | 7/35 [01:54<07:24, 15.89s/it] 23%|██▎       | 8/35 [01:56<05:13, 11.60s/it] 26%|██▌       | 9/35 [02:17<06:15, 14.44s/it] 29%|██▊       | 10/35 [02:22<04:50, 11.63s/it] 31%|███▏      | 11/35 [02:44<05:51, 14.64s/it] 34%|███▍      | 12/35 [02:50<04:38, 12.12s/it] 37%|███▋      | 13/35 [03:11<05:28, 14.93s/it] 40%|████      | 14/35 [03:23<04:51, 13.89s/it] 43%|████▎     | 15/35 [03:45<05:26, 16.31s/it] 46%|████▌     | 16/35 [04:07<05:41, 17.98s/it] 49%|████▊     | 17/35 [04:28<05:41, 18.98s/it] 51%|█████▏    | 18/35 [04:33<04:11, 14.82s/it] 54%|█████▍    | 19/35 [04:36<03:02, 11.39s/it] 57%|█████▋    | 20/35 [04:58<03:36, 14.45s/it] 60%|██████    | 21/35 [05:18<03:44, 16.05s/it] 63%|██████▎   | 22/35 [05:22<02:42, 12.50s/it] 66%|██████▌   | 23/35 [05:30<02:14, 11.21s/it] 69%|██████▊   | 24/35 [05:47<02:20, 12.75s/it] 71%|███████▏  | 25/35 [06:02<02:14, 13.50s/it] 74%|███████▍  | 26/35 [06:24<02:24, 16.10s/it] 77%|███████▋  | 27/35 [06:43<02:15, 16.96s/it] 80%|████████  | 28/35 [06:57<01:53, 16.21s/it] 83%|████████▎ | 29/35 [07:14<01:38, 16.38s/it] 86%|████████▌ | 30/35 [07:19<01:04, 12.87s/it] 89%|████████▊ | 31/35 [07:22<00:40, 10.04s/it] 91%|█████████▏| 32/35 [07:29<00:26,  8.99s/it] 94%|█████████▍| 33/35 [07:51<00:26, 13.02s/it] 97%|█████████▋| 34/35 [08:11<00:14, 14.94s/it]100%|██████████| 35/35 [08:13<00:00, 11.19s/it]100%|██████████| 35/35 [08:13<00:00, 14.10s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:13<03:08, 13.47s/it] 13%|█▎        | 2/15 [00:19<01:56,  8.94s/it] 20%|██        | 3/15 [00:42<03:03, 15.33s/it] 27%|██▋       | 4/15 [01:05<03:23, 18.49s/it] 33%|███▎      | 5/15 [01:14<02:29, 14.92s/it] 40%|████      | 6/15 [01:25<02:02, 13.58s/it] 47%|████▋     | 7/15 [01:32<01:32, 11.59s/it] 53%|█████▎    | 8/15 [01:53<01:41, 14.51s/it] 60%|██████    | 9/15 [02:00<01:13, 12.19s/it] 67%|██████▋   | 10/15 [02:11<00:58, 11.78s/it] 73%|███████▎  | 11/15 [02:19<00:42, 10.60s/it] 80%|████████  | 12/15 [02:30<00:32, 10.67s/it] 87%|████████▋ | 13/15 [02:40<00:21, 10.66s/it] 93%|█████████▎| 14/15 [02:47<00:09,  9.46s/it]100%|██████████| 15/15 [02:56<00:00,  9.28s/it]100%|██████████| 15/15 [02:56<00:00, 11.75s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:19<10:51, 19.17s/it]  6%|▌         | 2/35 [00:41<11:31, 20.95s/it]  9%|▊         | 3/35 [00:47<07:39, 14.36s/it] 11%|█▏        | 4/35 [00:52<05:30, 10.67s/it] 14%|█▍        | 5/35 [01:10<06:31, 13.04s/it] 17%|█▋        | 6/35 [01:29<07:21, 15.23s/it] 20%|██        | 7/35 [01:51<08:11, 17.56s/it] 23%|██▎       | 8/35 [01:54<05:44, 12.76s/it] 26%|██▌       | 9/35 [02:00<04:33, 10.52s/it] 29%|██▊       | 10/35 [02:03<03:28,  8.36s/it] 31%|███▏      | 11/35 [02:25<04:56, 12.37s/it] 34%|███▍      | 12/35 [02:31<04:03, 10.60s/it] 37%|███▋      | 13/35 [02:53<05:07, 13.96s/it] 40%|████      | 14/35 [03:08<05:02, 14.43s/it] 43%|████▎     | 15/35 [03:30<05:35, 16.76s/it] 46%|████▌     | 16/35 [03:52<05:47, 18.30s/it] 49%|████▊     | 17/35 [03:58<04:21, 14.54s/it] 51%|█████▏    | 18/35 [04:20<04:42, 16.63s/it] 54%|█████▍    | 19/35 [04:24<03:27, 12.97s/it] 57%|█████▋    | 20/35 [04:34<03:01, 12.12s/it] 60%|██████    | 21/35 [04:56<03:31, 15.10s/it] 63%|██████▎   | 22/35 [05:02<02:39, 12.25s/it] 66%|██████▌   | 23/35 [05:24<03:03, 15.29s/it] 69%|██████▊   | 24/35 [05:45<03:05, 16.88s/it] 71%|███████▏  | 25/35 [06:07<03:05, 18.53s/it] 74%|███████▍  | 26/35 [06:30<02:57, 19.68s/it] 77%|███████▋  | 27/35 [06:51<02:42, 20.30s/it] 80%|████████  | 28/35 [06:56<01:48, 15.54s/it] 83%|████████▎ | 29/35 [07:18<01:44, 17.48s/it] 86%|████████▌ | 30/35 [07:22<01:08, 13.62s/it] 89%|████████▊ | 31/35 [07:25<00:40, 10.23s/it] 91%|█████████▏| 32/35 [07:30<00:26,  8.81s/it] 94%|█████████▍| 33/35 [07:52<00:25, 12.72s/it] 97%|█████████▋| 34/35 [08:14<00:15, 15.44s/it]100%|██████████| 35/35 [08:18<00:00, 11.95s/it]100%|██████████| 35/35 [08:18<00:00, 14.23s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+Login error: [Errno 111] Connection refused
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:06<01:30,  6.49s/it] 13%|█▎        | 2/15 [00:17<02:01,  9.34s/it] 20%|██        | 3/15 [00:26<01:46,  8.88s/it] 27%|██▋       | 4/15 [00:31<01:21,  7.43s/it] 33%|███▎      | 5/15 [00:41<01:25,  8.52s/it] 40%|████      | 6/15 [00:51<01:21,  9.04s/it] 47%|████▋     | 7/15 [01:01<01:15,  9.38s/it] 53%|█████▎    | 8/15 [01:12<01:08,  9.74s/it] 60%|██████    | 9/15 [01:23<01:01, 10.28s/it] 67%|██████▋   | 10/15 [01:32<00:48,  9.71s/it] 73%|███████▎  | 11/15 [01:40<00:36,  9.21s/it] 80%|████████  | 12/15 [01:53<00:30, 10.24s/it] 87%|████████▋ | 13/15 [01:59<00:18,  9.02s/it] 93%|█████████▎| 14/15 [02:07<00:08,  8.70s/it]100%|██████████| 15/15 [02:28<00:00, 12.48s/it]100%|██████████| 15/15 [02:28<00:00,  9.90s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 0
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+[ ]   C M D = \  
+ d o c k e r - c o m p o s e  
+ - f  
+ d o c k e r - c o m p o s e . m u l t i w a f . y m l  
+ u p  
+ - - b u i l d  
+ - - r e m o v e - o r p h a n s \   S T A T U S = F A I L   O U T P U T = \ M o d S e c u r i t y  
+ W A F  
+ c o n t a i n e r s  
+ f a i l e d  
+ t o  
+ s t a r t  
+ d u e  
+ t o  
+ R e a d - o n l y   f i l e   s y s t e m  
+ e r r o r  
+ o n  
+ / e t c / n g i n x / n g i n x . c o n f .  
+ I n v e s t i g a t i o n  
+ n e e d e d . \    
+ [ ]   C M D = \  
+ d o c k e r - c o m p o s e  
+ - f  
+ d o c k e r - c o m p o s e . m u l t i w a f . y m l  
+ d o w n  
+ - v \   S T A T U S = O K   O U T P U T = \ R e m o v e d  
+ a l l  
+ c o n t a i n e r s  
+ a n d  
+ v o l u m e s . \    
+ [ ]   C M D = \  
+ d o c k e r - c o m p o s e  
+ - f  
+ d o c k e r - c o m p o s e . m u l t i w a f . y m l  
+ u p  
+ - - b u i l d  
+ - - r e m o v e - o r p h a n s \   S T A T U S = I N _ P R O G R E S S   O U T P U T = \ S t a r t i n g  
+ m u l t i - W A F  
+ e n v i r o n m e n t  
+ a f t e r  
+ c o n f i g  
+ f i x . \    
+ [ ]   C M D = \  
+ d o c k e r - c o m p o s e  
+ - f  
+ d o c k e r - c o m p o s e . m u l t i w a f . y m l  
+ u p  
+ - - b u i l d  
+ - - r e m o v e - o r p h a n s \   S T A T U S = O K   O U T P U T = \ M u l t i - W A F  
+ e n v i r o n m e n t  
+ s t a r t e d  
+ s u c c e s s f u l l y . \    
+ `torch_dtype` is deprecated! Use `dtype` instead!
+Loading model: google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:49<00:49, 49.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:51<00:00, 21.74s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:51<00:00, 25.95s/it]
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:17<10:00, 17.65s/it]  6%|▌         | 2/35 [00:38<10:40, 19.41s/it]  9%|▊         | 3/35 [00:45<07:19, 13.73s/it] 11%|█▏        | 4/35 [00:51<05:33, 10.76s/it] 14%|█▍        | 5/35 [01:12<07:15, 14.51s/it] 17%|█▋        | 6/35 [01:18<05:39, 11.71s/it] 20%|██        | 7/35 [01:40<06:56, 14.88s/it] 23%|██▎       | 8/35 [01:42<04:52, 10.84s/it] 26%|██▌       | 9/35 [02:02<05:59, 13.82s/it] 29%|██▊       | 10/35 [02:06<04:25, 10.60s/it] 31%|███▏      | 11/35 [02:27<05:32, 13.84s/it] 34%|███▍      | 12/35 [02:34<04:28, 11.66s/it] 37%|███▋      | 13/35 [02:54<05:16, 14.37s/it] 40%|████      | 14/35 [03:12<05:20, 15.26s/it] 43%|████▎     | 15/35 [03:33<05:40, 17.03s/it] 46%|████▌     | 16/35 [03:54<05:47, 18.29s/it] 49%|████▊     | 17/35 [04:03<04:36, 15.38s/it] 51%|█████▏    | 18/35 [04:15<04:05, 14.46s/it] 54%|█████▍    | 19/35 [04:19<03:03, 11.46s/it] 57%|█████▋    | 20/35 [04:25<02:24,  9.65s/it] 60%|██████    | 21/35 [04:44<02:55, 12.51s/it] 63%|██████▎   | 22/35 [04:49<02:15, 10.40s/it] 66%|██████▌   | 23/35 [05:09<02:36, 13.07s/it] 69%|██████▊   | 24/35 [05:29<02:49, 15.37s/it] 71%|███████▏  | 25/35 [05:50<02:50, 17.01s/it] 74%|███████▍  | 26/35 [06:11<02:42, 18.09s/it] 77%|███████▋  | 27/35 [06:32<02:31, 18.92s/it] 80%|████████  | 28/35 [06:38<01:46, 15.25s/it] 83%|████████▎ | 29/35 [07:00<01:42, 17.10s/it] 86%|████████▌ | 30/35 [07:03<01:04, 12.95s/it] 89%|████████▊ | 31/35 [07:06<00:40, 10.08s/it] 91%|█████████▏| 32/35 [07:10<00:24,  8.09s/it] 94%|█████████▍| 33/35 [07:15<00:14,  7.27s/it] 97%|█████████▋| 34/35 [07:36<00:11, 11.19s/it]100%|██████████| 35/35 [07:38<00:00,  8.54s/it]100%|██████████| 35/35 [07:38<00:00, 13.10s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 2 (5.71%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 94.29%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 33
+
+
+--- Testing Profile: modsecurity_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:07<01:50,  7.88s/it] 13%|█▎        | 2/15 [00:20<02:18, 10.66s/it] 20%|██        | 3/15 [00:38<02:46, 13.84s/it] 27%|██▋       | 4/15 [00:46<02:06, 11.50s/it] 33%|███▎      | 5/15 [01:06<02:28, 14.86s/it] 40%|████      | 6/15 [01:19<02:05, 13.98s/it] 47%|████▋     | 7/15 [01:25<01:31, 11.47s/it] 53%|█████▎    | 8/15 [01:33<01:13, 10.54s/it] 60%|██████    | 9/15 [01:45<01:05, 10.84s/it] 67%|██████▋   | 10/15 [01:56<00:53, 10.78s/it] 73%|███████▎  | 11/15 [02:04<00:40, 10.08s/it] 80%|████████  | 12/15 [02:12<00:28,  9.42s/it] 87%|████████▋ | 13/15 [02:18<00:16,  8.50s/it] 93%|█████████▎| 14/15 [02:25<00:07,  7.91s/it]100%|██████████| 15/15 [02:36<00:00,  8.78s/it]100%|██████████| 15/15 [02:36<00:00, 10.42s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 15
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:20<11:53, 20.98s/it]  6%|▌         | 2/35 [00:42<11:39, 21.20s/it]  9%|▊         | 3/35 [00:48<07:33, 14.17s/it] 11%|█▏        | 4/35 [01:09<08:49, 17.08s/it] 14%|█▍        | 5/35 [01:30<09:16, 18.56s/it] 17%|█▋        | 6/35 [01:35<06:44, 13.96s/it] 20%|██        | 7/35 [01:57<07:44, 16.60s/it] 23%|██▎       | 8/35 [02:00<05:26, 12.11s/it] 26%|██▌       | 9/35 [02:21<06:30, 15.03s/it] 29%|██▊       | 10/35 [02:25<04:44, 11.39s/it] 31%|███▏      | 11/35 [02:46<05:46, 14.45s/it] 34%|███▍      | 12/35 [02:52<04:30, 11.75s/it] 37%|███▋      | 13/35 [03:14<05:26, 14.85s/it] 40%|████      | 14/35 [03:36<05:59, 17.13s/it] 43%|████▎     | 15/35 [03:56<06:02, 18.15s/it] 46%|████▌     | 16/35 [04:18<06:01, 19.04s/it] 49%|████▊     | 17/35 [04:28<04:55, 16.44s/it] 51%|█████▏    | 18/35 [04:35<03:50, 13.56s/it] 54%|█████▍    | 19/35 [04:39<02:54, 10.89s/it] 57%|█████▋    | 20/35 [04:45<02:18,  9.24s/it] 60%|██████    | 21/35 [05:07<03:01, 12.99s/it] 63%|██████▎   | 22/35 [05:11<02:15, 10.40s/it] 66%|██████▌   | 23/35 [05:34<02:49, 14.10s/it] 69%|██████▊   | 24/35 [05:48<02:35, 14.14s/it] 71%|███████▏  | 25/35 [06:03<02:23, 14.33s/it] 74%|███████▍  | 26/35 [06:25<02:30, 16.70s/it] 77%|███████▋  | 27/35 [06:47<02:25, 18.25s/it] 80%|████████  | 28/35 [07:00<01:57, 16.80s/it] 83%|████████▎ | 29/35 [07:11<01:30, 15.05s/it] 86%|████████▌ | 30/35 [07:15<00:57, 11.56s/it] 89%|████████▊ | 31/35 [07:17<00:35,  8.88s/it] 91%|█████████▏| 32/35 [07:25<00:25,  8.55s/it] 94%|█████████▍| 33/35 [07:47<00:25, 12.69s/it] 97%|█████████▋| 34/35 [08:09<00:15, 15.34s/it]100%|██████████| 35/35 [08:32<00:00, 17.58s/it]100%|██████████| 35/35 [08:32<00:00, 14.63s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl1_blue_v1 -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:08<01:58,  8.46s/it] 13%|█▎        | 2/15 [00:17<01:51,  8.57s/it] 20%|██        | 3/15 [00:28<01:58,  9.85s/it] 27%|██▋       | 4/15 [00:39<01:52, 10.20s/it] 33%|███▎      | 5/15 [00:45<01:28,  8.89s/it] 40%|████      | 6/15 [00:56<01:26,  9.65s/it] 47%|████▋     | 7/15 [01:06<01:16,  9.60s/it] 53%|█████▎    | 8/15 [01:20<01:18, 11.19s/it] 60%|██████    | 9/15 [01:27<00:58,  9.78s/it] 67%|██████▋   | 10/15 [01:34<00:44,  8.87s/it] 73%|███████▎  | 11/15 [01:45<00:38,  9.61s/it] 80%|████████  | 12/15 [01:56<00:29,  9.93s/it] 87%|████████▋ | 13/15 [02:18<00:26, 13.48s/it] 93%|█████████▎| 14/15 [02:39<00:15, 15.95s/it]100%|██████████| 15/15 [02:47<00:00, 13.52s/it]100%|██████████| 15/15 [02:47<00:00, 11.18s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl1_blue_v1_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:21<12:06, 21.36s/it]  6%|▌         | 2/35 [00:42<11:45, 21.38s/it]  9%|▊         | 3/35 [00:47<07:15, 13.60s/it] 11%|█▏        | 4/35 [01:08<08:35, 16.63s/it] 14%|█▍        | 5/35 [01:29<09:02, 18.08s/it] 17%|█▋        | 6/35 [01:34<06:39, 13.76s/it] 20%|██        | 7/35 [01:56<07:39, 16.40s/it] 23%|██▎       | 8/35 [01:58<05:23, 11.97s/it] 26%|██▌       | 9/35 [02:19<06:25, 14.84s/it] 29%|██▊       | 10/35 [02:23<04:44, 11.38s/it] 31%|███▏      | 11/35 [02:45<05:49, 14.56s/it] 34%|███▍      | 12/35 [02:51<04:33, 11.88s/it] 37%|███▋      | 13/35 [03:12<05:25, 14.80s/it] 40%|████      | 14/35 [03:33<05:48, 16.59s/it] 43%|████▎     | 15/35 [03:55<06:06, 18.34s/it] 46%|████▌     | 16/35 [04:14<05:53, 18.59s/it] 49%|████▊     | 17/35 [04:36<05:50, 19.47s/it] 51%|█████▏    | 18/35 [04:42<04:21, 15.41s/it] 54%|█████▍    | 19/35 [04:46<03:14, 12.15s/it] 57%|█████▋    | 20/35 [04:56<02:53, 11.54s/it] 60%|██████    | 21/35 [05:18<03:24, 14.59s/it] 63%|██████▎   | 22/35 [05:25<02:38, 12.21s/it] 66%|██████▌   | 23/35 [05:30<02:02, 10.24s/it] 69%|██████▊   | 24/35 [05:52<02:29, 13.62s/it] 71%|███████▏  | 25/35 [06:08<02:22, 14.27s/it] 74%|███████▍  | 26/35 [06:30<02:28, 16.53s/it] 77%|███████▋  | 27/35 [06:52<02:25, 18.18s/it] 80%|████████  | 28/35 [06:57<01:40, 14.37s/it] 83%|████████▎ | 29/35 [07:03<01:10, 11.79s/it] 86%|████████▌ | 30/35 [07:11<00:52, 10.56s/it] 89%|████████▊ | 31/35 [07:16<00:36,  9.17s/it] 91%|█████████▏| 32/35 [07:21<00:23,  7.87s/it] 94%|█████████▍| 33/35 [07:42<00:23, 11.85s/it] 97%|█████████▋| 34/35 [08:00<00:13, 13.58s/it]100%|██████████| 35/35 [08:02<00:00, 10.03s/it]100%|██████████| 35/35 [08:02<00:00, 13.78s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 1 (2.86%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 97.14%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 34
+
+
+--- Testing Profile: coraza_pl1_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:02<00:29,  2.08s/it] 13%|█▎        | 2/15 [00:12<01:30,  6.98s/it] 20%|██        | 3/15 [00:19<01:21,  6.79s/it] 27%|██▋       | 4/15 [00:40<02:19, 12.67s/it] 33%|███▎      | 5/15 [00:50<01:57, 11.76s/it] 40%|████      | 6/15 [00:58<01:31, 10.19s/it] 47%|████▋     | 7/15 [01:08<01:21, 10.22s/it] 53%|█████▎    | 8/15 [01:30<01:38, 14.04s/it] 60%|██████    | 9/15 [01:37<01:11, 11.95s/it] 67%|██████▋   | 10/15 [01:45<00:53, 10.62s/it] 73%|███████▎  | 11/15 [01:54<00:40, 10.24s/it] 80%|████████  | 12/15 [02:02<00:28,  9.51s/it] 87%|████████▋ | 13/15 [02:11<00:18,  9.31s/it] 93%|█████████▎| 14/15 [02:25<00:10, 10.79s/it]100%|██████████| 15/15 [02:31<00:00,  9.34s/it]100%|██████████| 15/15 [02:31<00:00, 10.12s/it]
+  Saved detailed logs to eval/red_phase4_coraza_pl1_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 15
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (SQLI) ---
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:04<02:24,  4.26s/it]  6%|▌         | 2/35 [00:25<07:57, 14.47s/it]  9%|▊         | 3/35 [00:47<09:32, 17.88s/it] 11%|█▏        | 4/35 [00:56<07:20, 14.22s/it] 14%|█▍        | 5/35 [01:14<07:44, 15.47s/it] 17%|█▋        | 6/35 [01:20<06:02, 12.50s/it] 20%|██        | 7/35 [01:43<07:19, 15.69s/it] 23%|██▎       | 8/35 [01:45<05:09, 11.46s/it] 26%|██▌       | 9/35 [02:06<06:19, 14.59s/it] 29%|██▊       | 10/35 [02:11<04:49, 11.60s/it] 31%|███▏      | 11/35 [02:33<05:49, 14.56s/it] 34%|███▍      | 12/35 [02:38<04:29, 11.72s/it] 37%|███▋      | 13/35 [02:59<05:20, 14.58s/it] 40%|████      | 14/35 [03:21<05:53, 16.82s/it] 43%|████▎     | 15/35 [03:43<06:05, 18.27s/it] 46%|████▌     | 16/35 [04:04<06:05, 19.22s/it] 49%|████▊     | 17/35 [04:26<06:03, 20.17s/it] 51%|█████▏    | 18/35 [04:48<05:50, 20.61s/it] 54%|█████▍    | 19/35 [04:53<04:16, 16.03s/it] 57%|█████▋    | 20/35 [04:59<03:15, 13.02s/it] 60%|██████    | 21/35 [05:22<03:40, 15.76s/it] 63%|██████▎   | 22/35 [05:43<03:48, 17.59s/it] 66%|██████▌   | 23/35 [05:47<02:40, 13.37s/it] 69%|██████▊   | 24/35 [06:09<02:55, 15.92s/it] 71%|███████▏  | 25/35 [06:31<02:58, 17.80s/it] 74%|███████▍  | 26/35 [06:53<02:51, 19.00s/it] 77%|███████▋  | 27/35 [07:15<02:38, 19.87s/it] 80%|████████  | 28/35 [07:21<01:51, 15.91s/it] 83%|████████▎ | 29/35 [07:43<01:46, 17.75s/it] 86%|████████▌ | 30/35 [07:49<01:10, 14.12s/it] 89%|████████▊ | 31/35 [08:08<01:02, 15.67s/it] 91%|█████████▏| 32/35 [08:30<00:52, 17.37s/it] 94%|█████████▍| 33/35 [08:35<00:27, 13.85s/it] 97%|█████████▋| 34/35 [08:55<00:15, 15.55s/it]100%|██████████| 35/35 [09:02<00:00, 12.89s/it]100%|██████████| 35/35 [09:02<00:00, 15.49s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_SQLI.jsonl
+
+  Total requests: 35
+  Blocked: 0 (0.00%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 100.00%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 35
+
+
+--- Testing Profile: modsecurity_pl4_base -> App: dvwa (XSS) ---
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:03<00:45,  3.28s/it] 13%|█▎        | 2/15 [00:25<03:04, 14.16s/it] 20%|██        | 3/15 [00:35<02:31, 12.66s/it] 27%|██▋       | 4/15 [00:42<01:52, 10.19s/it] 33%|███▎      | 5/15 [01:04<02:25, 14.59s/it] 40%|████      | 6/15 [01:13<01:52, 12.53s/it] 47%|████▋     | 7/15 [01:24<01:36, 12.08s/it] 53%|█████▎    | 8/15 [01:32<01:15, 10.80s/it] 60%|██████    | 9/15 [01:45<01:08, 11.34s/it] 67%|██████▋   | 10/15 [02:02<01:05, 13.14s/it] 73%|███████▎  | 11/15 [02:10<00:46, 11.57s/it] 80%|████████  | 12/15 [02:16<00:30, 10.10s/it] 87%|████████▋ | 13/15 [02:38<00:27, 13.56s/it] 93%|█████████▎| 14/15 [03:00<00:16, 16.03s/it]100%|██████████| 15/15 [03:06<00:00, 13.09s/it]100%|██████████| 15/15 [03:06<00:00, 12.43s/it]
+  Saved detailed logs to eval/red_phase4_modsecurity_pl4_base_dvwa_XSS.jsonl
+
+  Total requests: 15
+  Blocked: 1 (6.67%)
+  Full Exec: 0 (0.00%)
+  Total WAF Bypass (not blocked): 93.33%
+  ------------------------------------
+  Passed: 0
+  SQL Error Bypass: 0
+  Reflected: 0
+  Failed Filter: 14
+
+
+Overall summary saved to eval/red_phase4_overall_summary.json
+[ ]   C M D = \  
+ p y t h o n  
+ s c r i p t s / r u n _ r e d _ e v a l _ p r o f i l e . p y  
+ - - c o n f i g  
+ c o n f i g s / e v a l _ p h a s e 3 _ m u l t i w a f _ g e m m a 2 . y a m l  
+ - - n u m _ s a m p l e s  
+ 5 0 \   S T A T U S = O K   O U T P U T = \ e v a l / r e d _ p h a s e 4 _ o v e r a l l _ s u m m a r y . j s o n \    
+ `torch_dtype` is deprecated! Use `dtype` instead!
+--- Testing BLUE LLM Client ---
+
+Attempting to call BLUE LLM with example SQLI prompt...
+Loading BLUE LLM: google/gemma-2-2b-it with adapter experiments/phase3_gemma2_2b_rl
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  7.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.48s/it]
+Error parsing LLM response as JSON: Invalid control character at: line 3 column 18 (char 20)
+Raw LLM response:
+{
+
+  "url": "http://www.example.com/vulnerable_page.php?id=1",
+  
+  "_black_box_to_full_bypass": true,
+  
+
+  
+"vulnt_effect":"sql-injection",
+"is\_false\_negative":true,
+"recommended\_rules":[
+  {"engine":"modsecurity_plus", "rule_version":"10.5", "id":3547, "reason":"SQLI"}
+],
+"config_changes": [
+
+  {
+
+    "old_config": "waf_config: PARSE_RESPONSE_BODY",
+     "new_config":"waf_response: PARS_RESPONSE",
+   },
+   {
+     
+     “old_regex”: “<img src=x onerror=alert(1)>”,
+     
+
+     “new_regex_adv_obf”: “img src=\x0a<img onerror=\x22alert(5)&#x000a>x\x0ap\x20\x50\xa5\x80\xac\x93\x65\xa0\xb1\x79\x40\xf5\xe3\xa3\xf4\x3a\x14\xa4\xf2\x\xa6\xa7\x\\03\xb2\xa2\xe1\xa8\xa9\xa1\xf6\x%0a\xa\x
+  ]
+}
+,
+
+  
+
+"notes":"Currently, the attack is blocked by the Waf, but the CRS rule may help prevent this in the future. The attack is a SQL injection attempt, but it is blocked before reaching the underlying vulnerability. "
+}
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 2 column 3 (char 5)
+Raw LLM response:
+{ 
+  “vuln\_effect”: “xss-script-url”,
+  ”is\_false\_negative”: true,
+  „recommended\_rules":[
+    {"engine": „modsecurity_plus“, "rule\_id": „966700“ , "reason": „Generic XSS attempt, mapped to XSS_URL by OWASP CRS“}
+   ] ,
+  
+  ,
+   "recommended\_actions": [],
+   “notes”: “Previously blocked by OWASSEC CRS 945946, but the attack has a higher chance of bypassing the filter.”
+}
+BLUE LLM loaded successfully.
+
+BLUE LLM Response (SQLI example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Invalid control character at: line 3 column 18 (char 20). Raw response: {\n\n  \"url\": \"http://www.example.com/vulnerable_page.php?id=1\",\n  \n  \"_black_box_to_full_bypass\": true,\n  \n\n  \n\"vulnt_effect\":\"sql-injection\",\n\"is\\_false\\_negative\":true,\n\"recommended\\_rules\":[\n  {\"eng..."
+}
+
+Attempting to call BLUE LLM with example XSS prompt...
+
+BLUE LLM Response (XSS example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Expecting property name enclosed in double quotes: line 2 column 3 (char 5). Raw response: { \n  \u201cvuln\\_effect\u201d: \u201cxss-script-url\u201d,\n  \u201dis\\_false\\_negative\u201d: true,\n  \u201erecommended\\_rules\":[\n    {\"engine\": \u201emodsecurity_plus\u201c, \"rule\\_id\": \u201e966700\u201c , \"reason\": \u201eGeneric XSS attempt, mapped to XSS_U..."
+}
+`torch_dtype` is deprecated! Use `dtype` instead!
+--- Testing BLUE LLM Client ---
+
+Attempting to call BLUE LLM with example SQLI prompt...
+Loading BLUE LLM: google/gemma-2-2b-it with adapter experiments/phase3_gemma2_2b_rl
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.75s/it]
+Error parsing LLM response as JSON: Invalid \escape: line 1 column 10 (char 9)
+Raw LLM response:
+{ 
+  “vuln\_effect”: “sql-injection”,
+  „is\_false\_negative”: true,
+  ‟recommended\_rules”: [
+  {"engine": “modsecurity”, “rule\_id”: “944000”, “reason”: “SQLI: Invalid query attempt”}
+ ],
+ "recommended\_actions": [],
+ "notes": "The attack attempts to execute an SQL query via a UNION ALL query. While the Waf blocked this attempt, the vulnerability itself remains a risk. CRS rule ID 943900 can help mitigate this, but it's not a foolproof solution."
+}
+Error parsing LLM response as JSON: Invalid \escape: line 1 column 10 (char 9)
+Raw LLM response:
+{ 
+  “vuln\_effect”: “xss-script-url”,
+  ”is\_false\_negative”: true,
+  „recommended\_rules": [],
+  ‟recommended\_actions": [], 
+   „notes": "The attack payload is a generic XSS attempt that may generate an error, but is not classified as a full XSS vulnerability. No specific CRS rule directly blocks this type of attack."
+}
+BLUE LLM loaded successfully.
+
+BLUE LLM Response (SQLI example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Invalid \\escape: line 1 column 10 (char 9). Raw response: { \n  \u201cvuln\\_effect\u201d: \u201csql-injection\u201d,\n  \u201eis\\_false\\_negative\u201d: true,\n  \u201frecommended\\_rules\u201d: [\n  {\"engine\": \u201cmodsecurity\u201d, \u201crule\\_id\u201d: \u201c944000\u201d, \u201creason\u201d: \u201cSQLI: Invalid query attempt\u201d}\n ],\n \"recommen..."
+}
+
+Attempting to call BLUE LLM with example XSS prompt...
+
+BLUE LLM Response (XSS example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Invalid \\escape: line 1 column 10 (char 9). Raw response: { \n  \u201cvuln\\_effect\u201d: \u201cxss-script-url\u201d,\n  \u201dis\\_false\\_negative\u201d: true,\n  \u201erecommended\\_rules\": [],\n  \u201frecommended\\_actions\": [], \n   \u201enotes\": \"The attack payload is a generic XSS attempt that may gener..."
+}
+`torch_dtype` is deprecated! Use `dtype` instead!
+--- Testing BLUE LLM Client ---
+
+Attempting to call BLUE LLM with example SQLI prompt...
+Loading BLUE LLM (Base): google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.25s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.57s/it]
+Error parsing LLM response as JSON: Invalid \escape: line 1 column 10 (char 9)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “sql-invoked”,
+  ”is\_false\_negative”: true,
+  
+  „recommended\_rules":[
+    {"engine": “modsecurity”,
+     “rule\_id”: “957101”,
+      “reason”: “SQL Injection Detected”
+    },
+    
+    ],
+   
+  ,
+   “recommended\_actions”: [
+     "Enable ModSecurity rule 104001 in RESPONSE\_BODY phase, or raise PARANOIA level to 2",
+     
+   ],
+ 
+   "notes":"The attack utilizes a SQL injection technique. The WAF did not block the attack due to a lack of appropriate rules.  The CRS rule set is not sufficient to address this attack.  A rule that specifically detects SQL injection attempts is needed.  Additionally, disabling verbose error stacks in production can help prevent the disclosure of sensitive information. "
+}
+```
+Error parsing LLM response as JSON: Invalid \escape: line 1 column 10 (char 9)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {"engine": \"modsecurity\", 
+   \"rule\_id\": \"955101\", 	
+   "reason\": \"Reflected XSS detected, mapped to CRS regression test\"" 
+ }
+  ] ,
+  \
+  "\"recommended\_actions\": [ 
+    \"Enable CRS Rule 945111 in RESPONSE\_BODY phase, or raise PARANOIA level to 2.\",
+   
+    
+  ],\
+  \\
+   \"notes\": \"The WAF did not block the attack because it is not configured to detect reflected XSS. The rule 
+ \"944102\" is a CRS rule that should be used to detect this type of attack. The CRS rule \"934121\" is used to 
+ detect reflected attacks. The application should be configured to disable verbose Ruby 
+ error stack trace in production. This will help to reduce the amount of information 
+ that is being sent to the user. The attack is reflected because the payload is 
+ injected into the response body. The WAF is configured to block attacks that are 
+ reflected in the response. The payload is injected into a response that is not 
+ expected. The response body is not sanitized. The attacker is able to inject 
+ their own JavaScript code into the application. The JavaScript code is 
+
+  \"
+}
+```
+BLUE LLM loaded successfully.
+
+BLUE LLM Response (SQLI example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Invalid \\escape: line 1 column 10 (char 9). Raw response: ```json\n{ \n  \u201cvuln\\_effect\u201d: \u201csql-invoked\u201d,\n  \u201dis\\_false\\_negative\u201d: true,\n  \n  \u201erecommended\\_rules\":[\n    {\"engine\": \u201cmodsecurity\u201d,\n     \u201crule\\_id\u201d: \u201c957101\u201d,\n      \u201creason\u201d: \u201cSQL Injection Detected\u201d..."
+}
+
+Attempting to call BLUE LLM with example XSS prompt...
+
+BLUE LLM Response (XSS example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Invalid \\escape: line 1 column 10 (char 9). Raw response: ```json\n{ \n  \u201cvuln\\_effect\u201d: \u201cxss-injected\u201d,\n  \u201dis\\_false\\_negative\u201d: true,\n  \n  \\\"recommended\\_rules\\\": [\n  {\"engine\": \\\"modsecurity\\\", \n   \\\"rule\\_id\\\": \\\"955101\\\", \t\n   \"reason\\\": \\\"Reflected XSS d..."
+}
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/blue/llm_client.py", line 147
+    if __name__ == "__main__":
+SyntaxError: expected 'except' or 'finally' block
+`torch_dtype` is deprecated! Use `dtype` instead!
+--- Testing BLUE LLM Client ---
+
+Attempting to call BLUE LLM with example SQLI prompt...
+Loading BLUE LLM (Base): google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:13<00:13, 13.82s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.40s/it]
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 66 (char 65)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “sql-invoked”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {"engine": \"modsecurity\",
+  \“rule\_id\": \"957000\",
+   \"reason\": \"SQL Injection Detected in response_body\"
+  }]
+,
+"recommended\_actions":
+[“Enable CRS Rule 977010 in the RESPONSE_PHASE or raise paranoia_level to 2. “],
+"notes":"The attack uses a SQL injection payload to execute a query. The WAF is configured to block SQL injection attacks, but it failed to block this specific attack. The attack is a reflected SQL injection, where the attacker injects a malicious SQL query into the query string. The rule 
+976011 is a CRS rule that detects SQL injection in the response body. The CRS rule is configured in the Response Phase. The configuration of the rule is based on the CRS regression test. The vulnerability is a SQL Injection vulnerability. The application should be configured to prevent SQL injection vulnerabilities. The attacker in this case is able to execute the query. This is a potential security risk. The recommended action is to enable the CRS rule in the appropriate phase. The action is based upon the CRS test.  The application should also be configured with a higher paranoia level to prevent this type of attack. “]
+}
+```
+BLUE LLM loaded successfully.
+
+BLUE LLM Response (SQLI example):
+{
+  "vuln_effect": "unknown",
+  "is_false_negative": false,
+  "recommended_rules": [],
+  "recommended_actions": [
+    "LLM_ERROR_OR_INVALID_JSON"
+  ],
+  "notes": "Error parsing LLM response: Expecting property name enclosed in double quotes: line 1 column 66 (char 65). Raw response: ```json\n{ \n  \u201cvuln\\_effect\u201d: \u201csql-invoked\u201d,\n  \u201dis\\_false\\_negative\u201d: true,\n  \n  \\\"recommended\\_rules\\\": [\n  {\"engine\": \\\"modsecurity\\\",\n  \\\u201crule\\_id\\\": \\\"957000\\\",\n   \\\"reason\\\": \\\"SQL Injection Detec..."
+}
+
+Attempting to call BLUE LLM with example XSS prompt...
+
+BLUE LLM Response (XSS example):
+{
+  "vuln_effect": "xss-reflection",
+  "is_false_negative": true,
+  "recommended_rules": [
+    {
+      "engine": "modsecurity",
+      "rule_id": "957101",
+      "reason": "Reflected XSS detected in response_body"
+    }
+  ],
+  "notes": "The attack utilizes a generic XSS payload. The WAF is configured to block this type of attack. CRS rule ID 947121 should be added to the Waf to block the attack.",
+  "recommended_actions": []
+}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loaded 39 golden set episodes.
+Loaded 2 KB entries.
+Loading BLUE LLM (Base): google/gemma-2-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.13s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.56s/it]
+Error parsing LLM response as JSON: Expecting ':' delimiter: line 1 column 89 (char 88)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “SQLI”,
+  ”is\_false\_negative”: true, 
+   "recommended\_rules": [],
+  
+  ""recommended\_actions": [], 
+ 
+ "notes": "The WAF blocked the attack, but the rule set is not sufficient to mitigate the attack. The attack uses a SQL injection technique to exploit a vulnerability in the application. The rule set does not cover this specific SQL injection attack."
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 67 (char 66)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    \"engine\": \"modsecurity\",
+    “rule\_id”: \"955101\",
+  	\"reason\": \"Reflected XSS in response header, mapped to CRS regression test\"
+  }]
+  ,
+   \"recommended_action\": [ 
+    
+    \
+    ],
+    
+
+  \"notes\": \"The attack uses a payload that triggers a reflected XSS attack. The WAF is configured to block this type of attack, but it is not configured to handle the specific payload. The CRS rule should be configured to detect and block this specific payload.\n"
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  'recommended\_actions': [
+   
+  ] ,
+  ‘notes’: “The provided payload does not trigger any known vulnerabilities. The WAF successfully blocked the request. No CRS or NAXSI-related rules are recommended for this case.”
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 67 (char 66)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    “engine”: “modsecurity”,
+    \"rule\_id\": \"955900\",
+    
+    "\"reason\": \"Reflected XSS in response header, mapped to CRS regression test\""
+  }]
+,
+ 
+ "recommended\_actions": \[
+  \“Enable CRS Rule 965999 in RESPONSE\_BODY phase\",
+  "\"Disable verbose response body in production\""
+\],
+"notes":"The attack uses a payload that triggers a reflected XSS attack. The WAF did not block the attack, so it is a false negative. CRS rule ID 995950 should be used to block this attack.  The application should be configured to disable verbose response messages for production environments."
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  'recommended\_actions': [
+  {
+    “engine”: “modsecurity”,
+    ”rule_ids”: [],
+    
+    'reason': "No specific rule needed, as the payload is not malicious and does nothing to trigger a vulnerability"
+   }
+ ],
+  ‘notes’: “The payload is a simple SQL query that is not harmful. It does not attempt to exploit any vulnerabilities in the application. The WAF is not configured to block this type of query.”
+}
+``` 
+
+**Explanation:**
+
+* **Vulnerability Effect:**  The attack episode is a harmless SQL query. It's not a SQL injection attempt, and it doesn't cause any harm.
+* **False Negative:** The Waf is not a false negative. The attack is harmless.
+ 
+*  **Recommended Actions:** 
+    * **No specific rules:**  Since the attack is not an exploit, there is no need to enable specific rules. 
+ 
+
+Let me know if you have any other attack episodes you'd like me to analyze.
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  'recommended\_actions': [
+  {
+    “engine”: “modsecurity”,
+    ”rule_ids”: [],
+    
+    'reason': "No specific rule needed for this attack, as it does not trigger any vulnerability"
+   }
+ ],
+  ‘notes’: “The payload does not appear to be a malicious request. It is a simple JavaScript alert that does not attempt to exploit any vulnerabilities. The WAF successfully blocked the request.”
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  'recommended\_actions': [
+   'Disable verbose error stack trace in production.'
+  ] ,
+  ‘notes’: 'The payload does not trigger any known vulnerability. The WAF is correctly configured and does block the attack. No CRS rule is needed.'
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ,
+  'recommended\_actions': [
+  ]
+,
+ "notes": "The attack payload does not trigger any known vulnerabilities. The WAF is not configured to block this specific type of attack. The attack is likely a harmless string manipulation. "
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 92 (char 91)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is_true_negative”: false, 
+   "recommended\_rules": [],
+  
+  'recommended\_actions': [
+  {
+    “engine”: “modsecurity”,
+    ”rule_name”: “disable_verbose_error_stack_traces”
+  }]
+  ,
+  ‘notes’: “The provided payload does not trigger any vulnerability. It is a standard SQL query that is not malicious. The WAF is correctly blocking the request.”
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 67 (char 66)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    \"engine\": \"modsecurity\",
+    “rule\_id”: \"957000\",
+   \"reason\": \"Reflected XSS in response header, mapped to CRS regression test\"
+  }]
+  ,
+   
+  "\"recommended\_actions\": [ 
+    \ \"Enable CRS Rule 977010 in the RESPONSE_HEADER phase or Raise PL >=2.\",
+   \ \"Disable verbose error message in production.\"
+   ],
+   "notes":"The attack uses a payload to inject JavaScript code that triggers an XSS attack. The WAF is configured to block this type of attack, but the attack is successful because the payload is injected into the response header. This can be mitigated by enabling CRS rule ID 997020 in response headers and disabling verbose error logs in production. "
+}
+```
+Error parsing LLM response as JSON: Expecting ':' delimiter: line 1 column 95 (char 94)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ""recommended\_actions": [], 
+ 
+ "notes": "The provided payload does not trigger any known vulnerabilities or errors. The payload is a JavaScript code snippet that does not execute any malicious code. The WAF successfully blocked the request."
+}
+``` 
+
+
+**Explanation:**
+
+* **Vulnerability Effect:** The payload does *not* represent a known vulnerability. It's a JavaScript snippet that, while potentially malicious in a different context, does not directly cause a security breach.
+* **False Negative:** The Waf did not block the request. 
+*  **Recommendations:**  Since the payload does no harm, there are no specific rules or actions to implement. 
+
+**Additional Notes:**
+
+It's important to remember that a Waf's primary function is to prevent malicious attacks.  A false negative occurs when the Waf fails to block a request that should have been blocked.  This can happen for a variety of reasons, including:
+
+*  The WAF is not properly configured.
+  * The WAB is not up-to-date with the latest rules and signatures.
+   * The attack is using a technique that the WAB does not yet have a rule for.
+ 
+
+Let me know if you have any other attack episodes or questions.
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 227 (char 226)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “reflected\_XSS”,
+  ”is\_false\_negative”: false,
+  
+  „recommended\_rules":[
+    
+    {"engine": „modsecurity“ ,
+     “rule\_id”: „957101“ , 
+     "reason”: "Reflected XSS, mapped to CRS regression test"
+   }
+    ],
+   
+  ,
+   "recommended\_actions":[ 
+    “Enable CRS Rule 977110 in the RESPONSE_HEADER phase or Raise PL >=2.”,
+     
+   ],
+ 
+   “notes”: “The payload contains Base64 encoded data, which is a common technique for injecting malicious JavaScript. The WAF blocked the request, but the attack could be mitigated by implementing a CRS rule that specifically targets this type of attack.”
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 59 (char 58)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “SQLI”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    \"engine\": \"modsecurity\",
+    “rule\_id”: \"955900\",
+  	\"reason\": \"SQL injection in query parameter, mapped to CRS regression test\"
+  }] ,
+  \
+   \"recommended\_actions\": [ 
+    \
+    "\"Enable CRS Rule 945999 in RESPONSE\_BODY phase\",
+   \"Disable verbose SQL error stack trace in production.\""
+  ] ,
+   
+  "\"notes\": \"The attack uses a SQL injection technique to exploit a vulnerability in the query parameter. The WAF did not block this attack, as it was not configured to detect SQL injection. The CRS rule is designed to detect and block SQL injection attacks. The recommended actions are to enable the CRS rule and disable verbose SQL errors in production. This will help to prevent future attacks.\"" 
+}
+```
+Error parsing LLM response as JSON: Unterminated string starting at: line 1 column 94 (char 93)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-effeect”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ",
+  \"recommended\_actions\": [
+  \
+    \"Disable verbose error message in production. \\\"
+  ]
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 64 (char 63)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    \"engine\": \"modsecurity\",
+    “rule\_id”: \"955810\",
+  	\"reason\": \"SQL injection in query parameter, mapped to CRS regression test\"
+  }] ,
+  \
+  "\"recommended\_actions\": [ 
+    \
+     \"Enable CRS Rule 945850 in the RESPONSE_HEADER phase or increase PL to 2.\",
+  ] ,
+   
+   \"notes\": \"The attack payload does not appear to be a SQL injection attempt. However, the Waf should have detected a potential SQL injection based on the attack payload. The payload is a long string of characters that could be interpreted as a SQL query. The CRS rule should be configured to detect SQL injection attempts. The attack payload is not a SQL error, but it could be a potential attack. The WAF is configured to block SQL injection attacks, but the rule is not configured to handle this specific attack.  \"
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ,
+  ",
+  \"recommended\_actions\": [
+  \
+    \"Disable verbose error message in production.\",
+   
+  ]
+,
+"notes":"The payload does not trigger any known vulnerabilities. The attack is likely a false positive as the payload does nothing to exploit the application. The application is not vulnerable to SQL injection or other common attacks. The payload is a valid URL encoded string that does not attempt to execute any code. The WAF is not configured to block this type of attack. The app is not sending any data to the database. The response body does not include any SQL code. ",
+}
+```
+Error parsing LLM response as JSON: Expecting ':' delimiter: line 1 column 99 (char 98)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “reflected XSS”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ""recommended\_actions": [], 
+ 
+ "notes": "The attack payload uses a JavaScript image tag with a malicious URL. The WAF did not block this because it is not a standard image tag. The payload is a reflected XSS attack, as it is using the image tag to inject JavaScript into the page. The attack is reflected because the Waf is not configured to block this type of attack."
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 67 (char 66)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    \"engine\": \"modsecurity\",
+    “rule\_id”: \"957000\",
+  	\"reason\": \"Reflected XSS detected in response payload, mapped to CRS regression test\"
+  }]
+,
+ \"recommended\_actions\": [ 
+   \"Enable CRS Rule 977010 in the RESPONSE_HEADER phase or increase PL to 2.\",
+   “Disable verbose error message in production.”
+  ]
+, 
+ \"notes\": \"The attack utilizes a payload that triggers a reflected XSS attack. The WAF is configured to block the payload, but it is not specifically designed to detect and block reflected XSS attacks. The CRS rule is designed to identify and block such attacks. Additionally, disabling verbose error stack trace can help to prevent the disclosure of sensitive information in the event of a security breach. \"}"
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 93 (char 92)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-impact”,
+  ”is\_false\_negative”: false, 
+   "recommended\_rules": [],
+  
+  ,
+  'recommended\_actions': [
+  ]
+,
+ "notes": "The payload does not appear to contain any malicious code. The attack is likely not a successful attack, as the Waf did not block the request. The payload does contain a URL encoded string, but it does not look like it is intended to be a URL. "
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 202 (char 201)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “xss-injected”,
+  ”is\_false\_negative”: true,
+  
+  „recommended\_rules":[
+    {"engine": “modsecurity”,
+     “rule\_id”: “101020”,
+    “reason”: “Reflected XSS in response header”
+    },
+    
+    ],
+   
+  ,
+   "recommended\_actions":[ 
+    ”Enable CRS rules 103105, 110401 in RESPONSE\_BODY phase”,
+   “Disable verbose error message in production.”
+  ]
+}
+```
+Error parsing LLM response as JSON: Expecting property name enclosed in double quotes: line 1 column 71 (char 70)
+Raw LLM response:
+```json
+{ 
+  “vuln\_effect”: “no-attack-effect”,
+  ”is\_false\_negative”: true,
+  
+  \"recommended\_rules\": [
+  {
+    “engine”: “modsecurity”,
+    \"rule\_id\": “957000”,
+	“reason”: “SQL injection attempt detected, mapped to CRS regression test”
+  }] ,
+  
+
+  \"notes\": \"The attack payload attempts to execute a SQL query. The WAF is not configured to block SQL injection attempts. The CRS rule should be configured to detect SQL injection attacks. The rule ID is based on the CRS regression testing.  \"
+}
+```
+BLUE LLM loaded successfully.
+
+Raw evaluation results saved to data/blue/blue_phase2_eval_raw.jsonl
+
+--- BLUE Phase 2 Evaluation Summary ---
+Total golden set cases: 39
+No golden set cases with 'expected_crs_rules' for rule hit evaluation.
+Evaluation summary saved to data/blue/blue_phase2_eval_summary.txt
+Generated ModSecurity overlay config to waf/blue_modsecurity_suggestions.conf
+Generated Coraza overlay config (skeleton) to waf/blue_coraza_suggestions.yaml

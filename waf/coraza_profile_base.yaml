@@ -1,0 +1,27 @@
+
+{
+    order coraza_waf first
+}
+
+:80 {
+    log {
+        output stdout
+        format json
+    }
+
+    coraza_waf {
+        directives "Include /etc/coraza/coraza.conf"
+    }
+
+    handle_path /dvwa/* {
+        reverse_proxy dvwa-app:80
+    }
+
+    handle_path /juice/* {
+        reverse_proxy juice-shop-app:3000
+    }
+
+    handle {
+        respond "Not Found. Try /dvwa or /juice" 404
+    }
+}
