@@ -1,0 +1,23 @@
+
+sources:
+  - name: "crs_kb"
+    type: "jsonl"
+    path: "data/blue/blue_phase1_crs_kb.jsonl"
+    fields:
+      - "rule_id"
+      - "test_description"
+      - "attack_type"
+      - "variables"
+      - "operator"
+      - "example_payload"
+      - "example_attack_context"
+      - "example_detection"
+
+  - name: "episodes"
+    type: "jsonl"
+    path: "data/blue/blue_phase1_episodes.jsonl"
+    fields:
+      - "attack.attack_type"
+      - "attack.technique"
+      - "app_observation.resp_body_snippet"
+      - "blue_label.vuln_effect"

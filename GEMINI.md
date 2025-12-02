@@ -1,363 +1,378 @@
 SYSTEM:
-Bạn là một agent lập trình chạy LOCAL bên trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
+Bạn là một agent lập trình chạy LOCAL trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
 
-Bối cảnh:
-- Phase 1: SFT sinh payload trên ModSecurity + DVWA đã hoàn thành.
-- Phase 2: SFT reasoning/history đã hoàn thành.
-- Phase 3: RL (REINFORCE) trên ModSecurity + DVWA đã hoàn thành, với kết quả:
-  - Blocked giảm mạnh
-  - Full Execution tăng lên ~30% với Gemma 2 2B.
+Bối cảnh BLUE hiện tại:
 
-Step 1 vừa rồi:
-- Đã chạy **multi-app eval** (DVWA, bWAPP, Juice Shop, DVNA, …) với **ModSecurity**.
-- Kết quả cho thấy:
-  - Khả năng WAF evasion cao (Blocked thấp).
-  - Nhưng detection “Passed” trên nhiều app hiện đại còn hạn chế (do detection logic & ngữ cảnh app).
+- Phase 1 BLUE (data chuẩn hoá + KB) đã hoàn thành:
+  - Schema: `docs/blue_phase1_schema.md`
+  - Episodes: `data/blue/blue_phase1_episodes.jsonl` (~423)
+  - CRS KB: `data/blue/blue_phase1_crs_kb.jsonl` (2 entry mẫu – nhỏ nhưng đủ để test flow)
+  - Golden set: `data/blue/blue_phase1_golden.jsonl` (~39)
 
-MỤC TIÊU STEP 2 (MULTI-WAF):
+- Phase 2 BLUE (RAG + prompt + eval harness) đã hoàn thành:
+  - RAG:
+    - `blue/rag_config.yaml`
+    - `blue/rag_index.py`
+    - `blue/rag_retriever.py`
+  - BLUE LLM:
+    - `blue/prompts.py` (BLUE_PROMPT_TEMPLATE)
+    - `blue/llm_client.py` (hiện đang là stub)
+  - Evaluation harness:
+    - `blue/runner_phase2_eval.py`
+    - `data/blue/blue_phase2_eval_raw.jsonl`
+    - `data/blue/blue_phase2_eval_summary.txt`
 
-1. Giữ 1–2 ứng dụng target (ưu tiên:
-   - **DVWA** (baseline classic)
-   - **Juice Shop** hoặc **bWAPP** (app hiện đại hơn)
-   ).
-2. Đặt chúng lần lượt sau **nhiều WAF khác nhau**:
-   - Baseline: **ModSecurity + OWASP CRS** (đã có).
-   - Thêm:
-     - **Coraza WAF + CRS** (ví dụ image `coreruleset/coraza-crs-docker` hoặc `jptosso/coraza-waf`). :contentReference[oaicite:0]{index=0}  
-     - **NAXSI WAF** (nginx + naxsi module, ví dụ image `dmgnx/nginx-naxsi` hoặc `ucalgary/nginx-naxsi`). :contentReference[oaicite:1]{index=1}  
-   - OPTIONAL (nếu set up được gọn):
-     - **SafeLine Community WAF** (deploy bằng Docker theo docs). :contentReference[oaicite:2]{index=2}  
-     - **IronBee** (nếu tìm được image/docker-compose dùng được). :contentReference[oaicite:3]{index=3}  
-3. Dùng **Gemma 2 2B Phase 3 RL** làm policy model, giữ nguyên prompt format RL/SFT Phase 2.
-4. Đánh giá & so sánh:
-   - Mỗi WAF × mỗi app:
-     - % Blocked
-     - % Failed Filter / Reflected
-     - % Passed / Full Execution (nếu detection logic cho phép)
-   - Xem model generalize được tới WAF engine khác hay chỉ overfit ModSecurity.
+MỤC TIÊU PHASE 3 BLUE:
 
-RÀNG BUỘC CHUNG:
+1. Biến BLUE từ “demo RAG” thành **tuning assistant thực sự**:
+   - Chạy BLUE (RAG + LLM) trên:
+     - Tập các episode quan trọng, đặc biệt là `is_false_negative == true`.
+   - Sinh ra **khuyến nghị chi tiết**:
+     - `vuln_effect`, `is_false_negative`
+     - `recommended_rules` (rule_id + engine)
+     - `recommended_actions` (câu chữ + config gợi ý)
+2. Tổng hợp khuyến nghị:
+   - Per-engine (modsecurity, coraza, naxsi)
+   - Per-rule (rule nào được đề xuất nhiều nhất)
+   - Per-vuln_effect (SQL error, Ruby SyntaxError, XSS, …)
+3. Tạo **output cho engineer**:
+   - JSONL chi tiết: `data/blue/blue_phase3_suggestions.jsonl`
+   - Báo cáo human-readable: `data/blue/blue_phase3_report.txt`
+   - (Optional) file **overlay config** (ModSecurity/Coraza/NAXSI) dạng skeleton:
+     - `waf/blue_modsecurity_suggestions.conf`
+     - `waf/blue_coraza_suggestions.conf`
+     - `waf/blue_naxsi_suggestions.rules`
+4. Không tự động áp dụng rule vào WAF production/lab; chỉ **chuẩn bị** output. (Việc re-test với RED là bước sau).
 
-- **TUYỆT ĐỐI KHÔNG** sửa/xóa các file dataset gốc (`data/processed/red_v40_*.jsonl`).
-- **TUYỆT ĐỐI KHÔNG** gửi HTTP ra Internet. Chỉ được gọi tới:
-  - DVWA / Juice Shop / bWAPP / các app trong lab
-  - Các container WAF local (ModSecurity, Coraza, NAXSI, …)
-- **Log mọi lệnh/script lớn vào `mes.log`**.
-- **Giữ codespace sạch**:
-  - Script tạm, file debug → xóa hoặc move vào `archive/`.
-- **TÔN TRỌNG prompt format của Gemma 2 2B** đã dùng trong Phase 2/3:
-  - Chat-template/roles, prefix, constraint “OUTPUT ONLY PAYLOAD” phải giữ nguyên.
+RÀNG BUỘC:
+
+- KHÔNG sửa/xoá:
+  - `data/blue/blue_phase1_*.jsonl`
+  - `data/blue/blue_phase2_eval_*.jsonl/txt`
+- KHÔNG gọi HTTP ra internet (không `curl`/`wget`/API cloud).  
+  - Nếu `blue/llm_client.py` sử dụng LLM local (vd. vLLM, server nội bộ) thì được, nhưng không tự tạo code gọi API public bên ngoài.
+- Mọi script/command lớn phải log vào `mes.log`.
+- File tạm/debug → xoá hoặc move vào `archive/`.
 
 ----------------------------------------------------
 PHẦN 0 – LOG & CLEANUP
 
 0.1. `mes.log`
-- Mỗi khi chạy:
-  - Docker compose/up/down
-  - Script eval
-  - Smoke test RL
-- PHẢI append 1 dòng vào `mes.log` với format:
-  ```text
-  [YYYY-MM-DD HH:MM:SS] CMD="<lệnh bạn chạy>" STATUS=OK|FAIL OUTPUT="<file chính hoặc N/A>"
+- Bất cứ khi nào bạn chạy:
+  - Script Python/Bash chính,
+  - Xây index,
+  - Chạy batch BLUE RAG,
+- PHẢI append một dòng vào `mes.log`:
 
-0.2. Dọn rác
+```text
+[YYYY-MM-DD HH:MM:SS] CMD="<lệnh đã chạy>" STATUS=OK|FAIL OUTPUT="<file output chính hoặc N/A>"
+````
 
-* Script tạm (vd. test_*.py) & file debug:
+0.2. File tạm
 
-  * Nếu còn giá trị: move vào `archive/scripts/` hoặc `archive/logs/`.
-  * Nếu không: xóa.
-* Không được để file `.tmp`, `.bak`, script rời tung toé.
+* Script tạm (vd: `blue/tmp_debug_phase3.py`), notebook test:
 
----
-
-PHẦN 1 – XÁC ĐỊNH MODEL GEMMA 2 2B PHASE 3 RL
-
-1.1. Tìm checkpoint Phase 3
-
-* Tìm trong repo:
-
-  * Thư mục checkpoint RL: ví dụ `checkpoints/gemma2_phase3_rl/` hoặc tương tự.
-  * File config train RL: `configs/train_gemma2_phase3_rl.yaml` (nếu có).
-  * File log RL: `logs/gemma2_phase3_rl.log` (nếu có).
-* Xác định:
-
-  * Model base: `gemma-2-2b`.
-  * Đường dẫn checkpoint Phase 3 RL (model dùng để inference).
-* Ghi thông tin:
-
-  * In ra stdout (ngắn gọn).
-  * Ghi 1 dòng vào `mes.log` mô tả checkpoint được dùng.
-
-1.2. Xác nhận prompt format RL
-
-* Tìm module/function build prompt cho Gemma trong Phase 2/3:
-
-  * Ví dụ: `llm/prompts.py`, `llm/gemma_prompt_builder.py`, hoặc trong RL env.
-* Xác nhận:
-
-  * Dùng role nào (`system`, `user`, `assistant`).
-  * Cấu trúc nội dung:
-
-    * Có `waf_type`, `attack_type`, `payload_history`, `target_technique` hay không.
-  * Ràng buộc: “Output ONLY the final payload string. No explanation, no code fences.”
-* Phần tiếp theo (multi-WAF) phải dùng đúng format này; chỉ được thêm context (WAF type, app name, base_url) bên trong `content` một cách mượt, không phá layout.
+  * Nếu cần giữ → move `archive/scripts/` hoặc `archive/notebooks/`.
+  * Nếu không → xoá.
 
 ---
 
-PHẦN 2 – CHUẨN BỊ MULTI-WAF (Coraza, NAXSI, baseline ModSecurity)
+PHẦN 1 – HOÀN THIỆN `blue/llm_client.py`
 
-Mục tiêu: với ít nhất **1 app baseline (DVWA)** + ưu tiên thêm **1 app modern (Juice Shop hoặc bWAPP)**, dựng các WAF:
+1.1. Kiểm tra client LLM đã có trong repo
 
-* `modsecurity_crs` (đang có sẵn – baseline).
-* `coraza_crs` (Coraza + CRS).
-* `naxsi_nginx` (nginx + NAXSI).
-* OPTIONAL: `safeline_ce`, `ironbee`.
+* Tìm xem repo có module LLM chung nào:
 
-2.1. Kiểm tra WAF ModSecurity baseline
+  * Ví dụ: `llm/client.py`, `core/llm_client.py`, hoặc config sử dụng model RED (Gemma 2 2B/ Phi-3 mini).
+* Nếu có:
 
-* Xác định:
+  * Tái sử dụng client đó trong `blue/llm_client.py`:
 
-  * WAF container/compose hiện tại cho ModSecurity + CRS.
-  * Cách nó proxy tới DVWA (và các app khác, nếu có).
-* Note:
+    * Import và wrap lại thành hàm:
 
-  * Không sửa rule set (CRS) nếu không cần.
-  * Giữ profile ModSecurity giống như khi train RL Phase 3 để làm baseline chuẩn.
+```python
+def call_blue_llm(prompt: str) -> dict:
+    """
+    Gọi LLM (hoặc parse từ stub nếu chưa nối backend).
+    Trả về dict JSON đã parse theo format BLUE_PROMPT_TEMPLATE yêu cầu.
+    """
+```
 
-2.2. Thêm Coraza WAF + CRS
+* Nếu LLM trả về text, parse JSON:
 
-* Tham khảo image:
+  * Xử lý lỗi parse, log gọn: ghi vào `mes.log` hoặc file debug nhỏ trong `archive/logs/`.
 
-  * `coreruleset/coraza-crs-docker` (Caddy + Coraza + CRS). ([Webdock][1])
-  * Hoặc `jptosso/coraza-waf`. ([galaxyz.net][2])
+* Nếu repo CHƯA có client LLM khả dụng:
 
-* Tạo thêm service trong docker-compose WAF (hoặc file compose mới), ví dụ:
+  * Giữ `call_blue_llm` là stub nhưng:
 
-  * Service `coraza-dvwa`:
+    * Thêm docstring rõ ràng mô tả chỗ này sẽ cần user điền logic gọi LLM thực tế.
+    * Có thể tạm đọc từ file mẫu (mock) để cho pipeline Phase 3 chạy khô (dry-run).
 
-    * Image: `coreruleset/coraza-crs-docker` (hoặc tương đương).
-    * Proxy upstream tới DVWA (host: dvwa, port 80).
-    * Expose port host, ví dụ: `9001`.
-  * Service `coraza-juice` (nếu test Juice Shop):
-
-    * Proxy tới Juice Shop (`juice-shop:3000`), host port `9002`.
-
-* Đảm bảo:
-
-  * Có cấu hình route hoặc env để Coraza forward request tới đúng app.
-  * CRS được bật (theo default image).
-
-2.3. Thêm NAXSI (nginx + NAXSI module)
-
-* Tham khảo image:
-
-  * `dmgnx/nginx-naxsi` hoặc `ucalgary/nginx-naxsi`. ([haltdos.com][3])
-* Tạo service, ví dụ:
-
-  * `naxsi-dvwa`:
-
-    * Image: `dmgnx/nginx-naxsi`.
-    * Proxy_pass tới DVWA container.
-    * Expose port host: `9101`.
-  * `naxsi-juice` (nếu cần):
-
-    * Proxy tới Juice Shop container.
-    * Expose port host: `9102`.
-* Dùng rule default của image trước; không cần tuning phức tạp lúc này.
-
-2.4. OPTIONAL – SafeLine & IronBee (nếu làm được gọn)
-
-* SafeLine Community:
-
-  * Theo docs, deploy bằng Docker, lưu data vào `/data/safeline`. ([GitHub][4])
-  * Nếu setup không quá nặng:
-
-    * Tạo 1 instance SafeLine ở trước DVWA.
-    * Expose port `9201`.
-* IronBee:
-
-  * Nếu tìm được docker-compose/testbed sẵn (repo hoặc image) thì thêm một WAF profile `ironbee` tương tự.
-  * Nếu việc này quá phức tạp trong một task ngắn → GHI RÕ trong `mes.log` là đã bỏ qua IronBee.
-
-2.5. Script khởi chạy / dừng multi-WAF
-
-* Tạo script shell, ví dụ: `scripts/start_multiwaf_targets.sh`
-
-  * Start/ensure running:
-
-    * DVWA (và 1 app khác nếu có).
-    * WAF containers: modsec (nếu tách), coraza, naxsi, (safeline?).
-  * Ghi log CMD + STATUS vào `mes.log`.
-* Tương tự, nếu cần, tạo `scripts/stop_multiwaf_targets.sh`.
+**Lưu ý:** Phase 3 tập trung thiết kế pipeline + aggregation; việc kết nối thật tới LLM có thể do user thêm sau, miễn `call_blue_llm()` trả về dict đúng schema.
 
 ---
 
-PHẦN 3 – EVAL SCRIPT CHO MULTI-WAF
+PHẦN 2 – BLUE RUNNER PHASE 3 (BATCH RECOMMENDATION)
 
-Mục tiêu: tạo script (hoặc mở rộng script hiện có) để:
+2.1. Tạo script: `blue/runner_phase3_suggest.py`
 
-* Dùng **Gemma 2 2B Phase 3 RL**.
-* Đánh giá theo ma trận:
+Chức năng:
 
-  * WAF: `modsecurity_crs`, `coraza_crs`, `naxsi_nginx` (+ optional `safeline`, `ironbee`).
-  * App: ít nhất `dvwa`, và 1 app modern (vd: `juice_shop`).
-* Log chi tiết và summary cho từng (WAF, app).
+1. Load:
 
-3.1. Config multi-WAF
+   * `data/blue/blue_phase1_episodes.jsonl`
+   * `data/blue/blue_phase1_crs_kb.jsonl` (qua `CRSKnowledgeBase` trong `rag_index.py`)
 
-* Tạo file config, ví dụ: `configs/eval_phase3_multiwaf_gemma2.yaml`
+2. Chọn tập episode mục tiêu:
 
-* Cấu trúc gợi ý:
+   * Ưu tiên:
 
-  ```yaml
-  model:
-    name: "gemma2_2b_phase3_rl"
-    checkpoint: "checkpoints/gemma2_phase3_rl/..."  # path thật
+     * `blue_label.is_false_negative == true`
+   * Nếu số lượng quá lớn:
 
-  targets:
-    - waf: "modsecurity_crs"
-      waf_base_url: "http://localhost:8080"         # nếu có reverse proxy chung
-      app: "dvwa"
-      app_base_url: "http://localhost:8080/dvwa"    # hoặc http://localhost:PORT nếu direct
-      attack_types: ["SQLI", "XSS"]
-    - waf: "coraza_crs"
-      waf_base_url: "http://localhost:9001"
-      app: "dvwa"
-      app_base_url: "http://localhost:9001"
-      attack_types: ["SQLI", "XSS"]
-    - waf: "naxsi_nginx"
-      waf_base_url: "http://localhost:9101"
-      app: "dvwa"
-      app_base_url: "http://localhost:9101"
-      attack_types: ["SQLI", "XSS"]
-    - waf: "coraza_crs"
-      app: "juice_shop"
-      app_base_url: "http://localhost:9002"
-      attack_types: ["XSS"]
-    - waf: "naxsi_nginx"
-      app: "juice_shop"
-      app_base_url: "http://localhost:9102"
-      attack_types: ["XSS"]
-  ```
+     * Giới hạn (vd 200–300) hoặc chỉ lấy:
 
-* Điều chỉnh port/path theo cách bạn thực sự proxy.
+       * severity == "high" hoặc "medium"
+   * Log thống kê:
 
-3.2. Script `run_multiwaf_eval_phase3.py`
+     * Tổng episodes
+     * Số FN
+     * Số được chọn cho Phase 3.
 
-* Tạo file: `scripts/run_multiwaf_eval_phase3.py`
+3. Với mỗi episode được chọn:
 
-* Yêu cầu:
+   * Dùng `retrieve_for_episode(episode, kb, top_k)`:
 
-  * Load config multi-WAF.
+     * `top_k` gợi ý: 3–5.
 
-  * Load Gemma 2 2B Phase 3 RL từ checkpoint.
+   * Build prompt từ `BLUE_PROMPT_TEMPLATE` trong `blue/prompts.py`:
 
-  * Với mỗi entry trong `targets`:
+     * `{EPISODE_JSON}`:
 
-    * Chuẩn bị một tập lượng mẫu (vd: 30–50 request) cho mỗi `attack_type`.
-    * Cho mỗi sample:
+       * Rút gọn: chỉ giữ:
 
-      * Build state/prompt giống Phase 3:
+         * `waf_env`
+         * `app_context`
+         * `attack`
+         * `app_observation`
+         * `blue_label.vuln_effect` & `is_false_negative`
+     * `{KB_SNIPPETS}`:
 
-        * Gồm: `waf_type` (tên WAF hiện tại), `attack_type`, `payload_history`, (optional `target_technique`).
-      * Gọi model → payload.
-      * Gửi request qua WAF `waf_base_url` / `app_base_url` (tuỳ pipeline đang dùng).
-      * Phân loại outcome:
+       * 2–5 entry từ KB, mỗi entry chỉ giữ:
 
-        * `blocked`
-        * `failed_filter`
-        * `reflected_no_exec`
-        * `passed`
-        * `sql_error_bypass`
-        * Có thể reuse logic đã dùng trong Phase 3 / Step 1.
-      * Ghi log 1 dòng JSONL:
+         * `rule_id`, `test_description`, `attack_type`, `variables`, `operator`, `example_payload`, `example_attack_context`.
 
-        * File: `eval/phase3_multiwaf_{waf}_{app}.jsonl`
+   * Gọi `call_blue_llm(prompt)`:
 
-  * Sau khi xong từng (waf, app):
+     * Nếu LLM thực chưa được nối:
 
-    * Tính metric:
+       * Có thể trả mock hoặc skip với flag; nhưng vẫn ghi record rõ ràng.
 
-      * `Blocked %`
-      * `Failed Filter %`
-      * `Reflected %`
-      * `Passed %`
-      * `SQL error bypass %`
-      * `Total Bypass %` (không Blocked)
-      * `Full Exec %` (Passed + sql_error_bypass)
-    * Ghi summary vào:
+   * Nhận output dict, expected schema:
 
-      * `eval/phase3_multiwaf_{waf}_{app}_summary.txt`
+```jsonc
+{
+  "vuln_effect": "...",
+  "is_false_negative": true,
+  "recommended_rules": [
+    {
+      "engine": "modsecurity",
+      "rule_id": "956100",
+      "reason": "..."
+    }
+  ],
+  "recommended_actions": [
+    "Enable rule 956100 ...",
+    "Disable verbose Ruby errors ..."
+  ],
+  "notes": "..."
+}
+```
 
-* Khi chạy script:
+* Gộp thành 1 record:
 
-  * Ví dụ command:
+```jsonc
+{
+  "episode_id": "<có thể là hash index hoặc offset>",
+  "episode": { ...blue_episode rút gọn... },
+  "kb_hits": [ ...KB_SNIPPETS... ],
+  "blue_output": { ...LLM output như trên... }
+}
+```
 
-    ```bash
-    python scripts/run_multiwaf_eval_phase3.py --config configs/eval_phase3_multiwaf_gemma2.yaml
-    ```
-  * Ghi log vào `mes.log` với CMD + STATUS + OUTPUT (file summary tổng hợp).
+* Ghi vào:
 
-3.3. Tổng hợp kết quả
+  * `data/blue/blue_phase3_suggestions.jsonl`
 
-* Sau khi chạy xong cho tất cả (waf, app):
+2.2. Logging
 
-  * Tạo file tổng hợp:
+* Sau khi chạy xong:
 
-    * `eval/phase3_multiwaf_gemma2_overall_comparison.txt`
-
-  * Trong đó:
-
-    * Bảng dạng:
-
-      | WAF             | App        | Blocked% | TotalBypass% | FullExec% |
-      | --------------- | ---------- | -------- | ------------ | --------- |
-      | modsecurity_crs | dvwa       | ...      | ...          | ...       |
-      | coraza_crs      | dvwa       | ...      | ...          | ...       |
-      | naxsi_nginx     | dvwa       | ...      | ...          | ...       |
-      | coraza_crs      | juice_shop | ...      | ...          | ...       |
-      | naxsi_nginx     | juice_shop | ...      | ...          | ...       |
-
-  * Ghi tên file này vào `mes.log`.
+  * Ghi CMD/STATUS/OUTPUT vào `mes.log`.
+  * In ra số episode xử lý, số records trong `blue_phase3_suggestions.jsonl`.
 
 ---
 
-PHẦN 4 – DỌN DẸP & BÁO CÁO
+PHẦN 3 – AGGREGATOR & REPORT
 
-4.1. Dọn dẹp
+3.1. Tạo script: `blue/phase3_aggregate_report.py`
 
-* Mọi script/test tạm:
+Chức năng:
 
-  * Nếu không phải script chính (`run_multiwaf_eval_phase3.py`, `start_multiwaf_targets.sh`, v.v.) → move vào `archive/` hoặc xóa.
-* Chỉ giữ lại:
+1. Đọc `data/blue/blue_phase3_suggestions.jsonl`.
 
-  * `scripts/start_multiwaf_targets.sh` (hoặc compose tương đương).
-  * `scripts/run_multiwaf_eval_phase3.py`
-  * `configs/eval_phase3_multiwaf_gemma2.yaml`
-  * Các file eval:
+2. Tính thống kê:
 
-    * `eval/phase3_multiwaf_*.jsonl`
-    * `eval/phase3_multiwaf_*_summary.txt`
-    * `eval/phase3_multiwaf_gemma2_overall_comparison.txt`
+   * Tổng số episode được BLUE phân tích.
+   * Với mỗi engine (modsecurity, coraza, naxsi,…):
 
-4.2. Báo cáo cuối (stdout)
+     * List các rule được recommend:
 
-* In ngắn gọn cho user:
+       * rule_id
+       * số lần xuất hiện (đếm across episodes)
+   * Với mỗi `vuln_effect`:
 
-  * Danh sách WAF đã test (modsecurity, coraza, naxsi, optional safeline/ironbee).
-  * App nào được test (dvwa, juice_shop, …).
-  * Vị trí file tổng hợp: `eval/phase3_multiwaf_gemma2_overall_comparison.txt`.
-  * Ít nhất 3 con số đáng chú ý:
+     * Bao nhiêu case được recommend rule?
+     * Top rule cho loại đó.
 
-    * So sánh FullExec% giữa ModSecurity vs Coraza vs NAXSI trên DVWA.
-* Đảm bảo `mes.log` đã có:
+3. Sinh báo cáo text:
 
-  * Log start WAF/app containers.
-  * Log run_multiwaf_eval_phase3.
-  * STATUS từng bước.
+   * `data/blue/blue_phase3_report.txt`
+   * Gợi ý nội dung:
 
-SAU KHI HOÀN THÀNH:
+BLUE Phase 3 – WAF Tuning Summary
+=================================
 
-* Không tự ý bắt đầu RL training mới.
-* Dừng lại ở việc hoàn tất eval + log.
+Total analyzed episodes: N
+Total with is_false_negative=true: M
+
+Per-engine recommended rules:
+- modsecurity:
+    - 956100 (Ruby SyntaxError): 7 episodes
+    - 942100 (SQLi detection): 4 episodes
+- coraza:
+    - ...
+
+Per-vuln_effect:
+- error-disclosure:
+    - main rules: 956100 (Ruby), 950120 (PHP error), ...
+- sql-error:
+    - main rules: 942100, ...
+...
+
+Notes:
+- Many Ruby error disclosure episodes map to CRS rule 956100 but environment likely has it disabled or PL < 2.
+- Suggested actions: enable RESPONSE_BODY inspection and raise PL for /admin/* endpoints.
+```
+
+3.2. Logging
+
+* Log lệnh chạy & output file vào `mes.log`.
+
+---
+
+PHẦN 4 – OUTPUT CONFIG SKELETON (OPTIONAL NHƯNG NÊN LÀM)
+
+4.1. Tạo script: `blue/phase3_generate_waf_overlays.py`
+
+Chức năng:
+
+1. Đọc `data/blue/blue_phase3_suggestions.jsonl`.
+
+2. Lọc theo engine:
+
+   * `engine == "modsecurity"`:
+
+     * Từ `recommended_rules` + `recommended_actions`, generate các đoạn `SecRule`/`SecAction` SKELETON.
+   * `engine == "coraza"`:
+
+     * Sinh rule YAML tương đương (nếu action có hint).
+   * `engine == "naxsi"`:
+
+     * Sinh couple `MainRule`/`BasicRule` gợi ý.
+
+3. Output:
+
+* `waf/blue_modsecurity_suggestions.conf`
+
+  * chứa comment + skeleton:
+
+```apache
+# BLUE Phase 3 suggestion: Ruby SyntaxError disclosure
+# Episodes: 7, vuln_effect=error-disclosure
+SecRule RESPONSE_BODY "@pmFromFile ruby-errors.data" \
+    "id:9956100,phase:4,block,log,msg:'Ruby SyntaxError detected (BLUE suggestion)',severity:ERROR"
+
+# ... các rule khác ...
+```
+
+* `waf/blue_coraza_suggestions.yaml`
+* `waf/blue_naxsi_suggestions.rules`
+
+Lưu ý:
+
+* Không cần “đúng chuẩn” tuyệt đối; đây là file gợi ý để engineer đọc và chỉnh tay.
+* Nên comment rõ mỗi block:
+
+  * vuln_effect
+  * số episode liên quan
+  * rule CRS gốc tham chiếu (nếu có).
+
+4.2. Logging
+
+* Ghi CMD/STATUS/OUTPUT vào `mes.log`.
+
+---
+
+PHẦN 5 – CLEANUP & BÁO CÁO CUỐI
+
+5.1. Dọn dẹp
+
+* Xoá/move tất cả script debug tạm thời vào `archive/`.
+* Giữ lại các file chính:
+
+  * Code:
+
+    * `blue/llm_client.py`
+    * `blue/runner_phase3_suggest.py`
+    * `blue/phase3_aggregate_report.py`
+    * `blue/phase3_generate_waf_overlays.py`
+    * (các file Phase 1–2 đã có)
+
+  * Data:
+
+    * `data/blue/blue_phase1_*.jsonl`
+    * `data/blue/blue_phase2_eval_*.jsonl/txt`
+    * `data/blue/blue_phase3_suggestions.jsonl`
+    * `data/blue/blue_phase3_report.txt`
+
+  * WAF overlays:
+
+    * `waf/blue_modsecurity_suggestions.conf` (nếu được tạo)
+    * `waf/blue_coraza_suggestions.yaml` (nếu được tạo)
+    * `waf/blue_naxsi_suggestions.rules` (nếu được tạo)
+
+5.2. Báo cáo (stdout)
+
+* In cho user:
+
+  * Đường dẫn & kích thước:
+
+    * `data/blue/blue_phase3_suggestions.jsonl`
+    * `data/blue/blue_phase3_report.txt`
+    * các file `waf/blue_*_suggestions.*`
+  * Thống kê:
+
+    * Số episode đã được BLUE xử lý.
+    * Top 3 rule_id được đề xuất nhiều nhất cho modsecurity.
+  * 1–2 ví dụ rút gọn:
+
+    * Một entry trong `blue_phase3_suggestions.jsonl`.
+    * Một đoạn trong `blue_modsecurity_suggestions.conf`.
+
+KẾT THÚC PHASE 3 BLUE:
+
+* KHÔNG tự ý apply config vào WAF hoặc chạy lại RED trong task này.
+* Dừng lại sau khi đã sinh đầy đủ suggestion + báo cáo.
 

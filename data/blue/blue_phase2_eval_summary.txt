@@ -1,0 +1,3 @@
+--- BLUE Phase 2 Evaluation Summary ---
+Total golden set cases: 39
+No golden set cases with 'expected_crs_rules' for rule hit evaluation.

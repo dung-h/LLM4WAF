@@ -271,3 +271,468 @@ coraza_crs           dvwa       XSS        12.5%      87.5%      0.0%
 coraza_crs           juice_shop XSS        0.0%       100.0%     0.0%      
 modsecurity_pl4      dvwa       SQLI       0.0%       100.0%     0.0%      
 modsecurity_pl4      dvwa       XSS        0.0%       100.0%     0.0%      
+[ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 8 : 2 6 ]   I N F O :   S t a r t i n g   P h a s e   1   B L U E   -   D a t a   P r e p  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 8 : 3 6 ]   I N F O :   S u r v e y i n g   R E D   l o g   f i l e s   f o r   B L U E   e p i s o d e   g e n e r a t i o n .  
+ w s l   :   l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ * . j s o n l ' :   N o   s u c h   f i l e   o r    
+ d i r e c t o r y  
+ A t   l i n e : 1   c h a r : 1  
+ +   w s l   l s   - 1   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e * . j s o n l   d a t a / a r c h i v e _ 2 0 2 5 1 1   . . .  
+ +   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~  
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( l s :   c a n n o t   a c c e . . . l e   o r   d i r e c t o r y : S t r i n g )   [ ] ,   R e m o t e E x    
+       c e p t i o n  
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r  
+    
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ g e m m a . j s o n l  
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ p h i 3 . j s o n l  
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ g e m m a _ r l . j s o n l  
+ r l / t r a j e c t o r i e s _ p h a s e 3 _ s m o k e . j s o n l  
+ w s l   :   l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ d v w a _ S Q L I . j s o n l ' :   N o    
+ s u c h   f i l e   o r   d i r e c t o r y  
+ A t   l i n e : 1   c h a r : 1  
+ +   w s l   l s   - 1   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e * . j s o n l   d a t a / a r c h i v e _ 2 0 2 5 1 1   . . .  
+ +   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~  
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( l s :   c a n n o t   a c c e . . . l e   o r   d i r e c t o r y : S t r i n g )   [ ] ,   R e m o t e E x    
+       c e p t i o n  
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r  
+    
+ l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ d v w a _ X S S . j s o n l ' :   N o   s u c h    
+ f i l e   o r   d i r e c t o r y  
+ l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ j u i c e _ s h o p _ X S S . j s o n l ' :   N o    
+ s u c h   f i l e   o r   d i r e c t o r y  
+ l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ g e m m a 2 _ o v e r a l l _ c o m p a r i s o n . t x t ' :   N o    
+ s u c h   f i l e   o r   d i r e c t o r y  
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ g e m m a . j s o n l  
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ p h i 3 . j s o n l  
+ d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ g e m m a _ r l . j s o n l  
+ r l / t r a j e c t o r i e s _ p h a s e 3 _ s m o k e . j s o n l  
+ w s l   :   l s :   c a n n o t   a c c e s s   ' d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ * . j s o n l ' :   N o   s u c h   f i l e   o r    
+ d i r e c t o r y  
+ A t   l i n e : 1   c h a r : 1  
+ +   w s l   l s   - 1   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ m u l t i w a f _ * . j s o n l   2 > & 1   |   t   . . .  
+ +   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~  
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( l s :   c a n n o t   a c c e . . . l e   o r   d i r e c t o r y : S t r i n g )   [ ] ,   R e m o t e E x    
+       c e p t i o n  
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r  
+    
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 2 ]   I N F O :   T h e   f o l l o w i n g   R E D   l o g   f i l e s   w i l l   b e   u s e d   f o r   B L U E   e p i s o d e   c o n v e r s i o n :  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 2 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ g e m m a . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 2 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 2 _ p h i 3 . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / e v a l _ p h a s e 3 _ g e m m a _ r l . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   r l / t r a j e c t o r i e s _ p h a s e 3 _ s m o k e . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ d v w a _ S Q L I . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ d v w a _ X S S . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ c o r a z a _ c r s _ j u i c e _ s h o p _ X S S . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ m o d s e c u r i t y _ c r s _ d v w a _ S Q L I . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ m o d s e c u r i t y _ c r s _ d v w a _ X S S . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ m o d s e c u r i t y _ p l 4 _ d v w a _ S Q L I . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]       -   d a t a / a r c h i v e _ 2 0 2 5 1 1 2 9 / p h a s e 3 _ m u l t i w a f _ m o d s e c u r i t y _ p l 4 _ d v w a _ X S S . j s o n l  
+ [ 1 2 / 0 2 / 2 0 2 5   0 9 : 0 9 : 4 3 ]   I N F O :   T h e s e   f i l e s   c o n t a i n   p a y l o a d ,   W A F   s t a t u s ,   a t t a c k   t y p e ,   a n d   s o m e t i m e s   a p p / W A F   d e t a i l s ,   s u i t a b l e   f o r   B L U E   e p i s o d e   c o n v e r s i o n .  
+ Processing data/archive_20251129/eval_phase2_gemma.jsonl...
+Traceback (most recent call last):
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/scripts/blue_build_phase1_episodes.py", line 272, in <module>
+    main()
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/scripts/blue_build_phase1_episodes.py", line 228, in main
+    for line in tqdm(f, desc=f"Converting {os.path.basename(filepath)}"):
+NameError: name 'tqdm' is not defined
+Processing data/archive_20251129/eval_phase2_gemma.jsonl...
+Converting eval_phase2_gemma.jsonl: 0it [00:00, ?it/s]Converting eval_phase2_gemma.jsonl: 100it [00:00, 17413.14it/s]
+Processing data/archive_20251129/eval_phase2_phi3.jsonl...
+Converting eval_phase2_phi3.jsonl: 0it [00:00, ?it/s]Converting eval_phase2_phi3.jsonl: 100it [00:00, 33028.62it/s]
+Processing data/archive_20251129/eval_phase3_gemma_rl.jsonl...
+Converting eval_phase3_gemma_rl.jsonl: 0it [00:00, ?it/s]Converting eval_phase3_gemma_rl.jsonl: 100it [00:00, 17642.40it/s]
+Processing rl/trajectories_phase3_smoke.jsonl...
+Converting trajectories_phase3_smoke.jsonl: 0it [00:00, ?it/s]Converting trajectories_phase3_smoke.jsonl: 25it [00:00, 15945.50it/s]
+Processing data/archive_20251129/phase3_multiwaf_coraza_crs_dvwa_SQLI.jsonl...
+Converting phase3_multiwaf_coraza_crs_dvwa_SQLI.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_coraza_crs_dvwa_SQLI.jsonl: 22it [00:00, 7592.75it/s]
+Processing data/archive_20251129/phase3_multiwaf_coraza_crs_dvwa_XSS.jsonl...
+Converting phase3_multiwaf_coraza_crs_dvwa_XSS.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_coraza_crs_dvwa_XSS.jsonl: 8it [00:00, 6949.97it/s]
+Processing data/archive_20251129/phase3_multiwaf_coraza_crs_juice_shop_XSS.jsonl...
+Converting phase3_multiwaf_coraza_crs_juice_shop_XSS.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_coraza_crs_juice_shop_XSS.jsonl: 8it [00:00, 6808.94it/s]
+Processing data/archive_20251129/phase3_multiwaf_modsecurity_crs_dvwa_SQLI.jsonl...
+Converting phase3_multiwaf_modsecurity_crs_dvwa_SQLI.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_modsecurity_crs_dvwa_SQLI.jsonl: 22it [00:00, 17728.09it/s]
+Processing data/archive_20251129/phase3_multiwaf_modsecurity_crs_dvwa_XSS.jsonl...
+Converting phase3_multiwaf_modsecurity_crs_dvwa_XSS.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_modsecurity_crs_dvwa_XSS.jsonl: 8it [00:00, 7250.31it/s]
+Processing data/archive_20251129/phase3_multiwaf_modsecurity_pl4_dvwa_SQLI.jsonl...
+Converting phase3_multiwaf_modsecurity_pl4_dvwa_SQLI.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_modsecurity_pl4_dvwa_SQLI.jsonl: 22it [00:00, 17024.85it/s]
+Processing data/archive_20251129/phase3_multiwaf_modsecurity_pl4_dvwa_XSS.jsonl...
+Converting phase3_multiwaf_modsecurity_pl4_dvwa_XSS.jsonl: 0it [00:00, ?it/s]Converting phase3_multiwaf_modsecurity_pl4_dvwa_XSS.jsonl: 8it [00:00, 7131.65it/s]
+
+--- BLUE Phase 1 Episodes Report ---
+Total blue_episodes generated: 423
+
+Vuln Effect Distribution:
+- no-effect: 411
+- xss-reflected: 8
+- blocked_by_waf: 4
+
+False Negative Distribution:
+- False: 304
+- True: 119
+
+--- Example Blue Episode (first 1) ---
+{
+  "waf_env": {
+    "engine": "modsecurity",
+    "profile": "owasp_crs",
+    "crs_version": "3.3.5",
+    "paranoia_level": 1,
+    "anomaly_threshold": 5,
+    "extra_config": {}
+  },
+  "app_context": {
+    "app_name": "dvwa",
+    "endpoint": "",
+    "http_method": "GET",
+    "injection_point": "query_param",
+    "tech_stack": "php_mysql"
+  },
+  "attack": {
+    "attack_type": "UNKNOWN",
+    "technique": "UNKNOWN",
+    "payload": "ADMiN%2527%252509--<pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>",
+    "red_model": "phi3_mini_phase3_rl",
+    "phase": "phase2_sft",
+    "timestamp": "2025-12-02T09:11:38.058995Z"
+  },
+  "waf_observation": {
+    "blocked": false,
+    "http_status": 200,
+    "anomaly_score": null,
+    "matched_rules": [],
+    "raw_waf_log": null
+  },
+  "app_observation": {
+    "http_status": 200,
+    "resp_body_snippet": null,
+    "error_class": null,
+    "stack_trace_lang": null
+  },
+  "blue_label": {
+    "vuln_effect": "no-effect",
+    "is_false_negative": false,
+    "expected_crs_rules": [],
+    "severity": "low"
+  }
+}
+[ 1 2 / 0 2 / 2 0 2 5   0 9 : 1 2 : 0 0 ]   I N F O :   N o   O W A S P   C R S   l o c a l   s o u r c e   d i r e c t o r y   f o u n d .   B L U E   P h a s e   1   K B   f o r   C R S   w i l l   b e   g e n e r a t e d   a s   a   s k e l e t o n   o r   w i t h   m a n u a l l y   b u i l t   s a m p l e   e n t r i e s .  
+ Generated 2 CRS KB entries to data/blue/blue_phase1_crs_kb.jsonl
+
+--- Example CRS KB Entry (first 1) ---
+{
+  "source": "crs_manual_sample",
+  "rule_id": "956100",
+  "test_description": "Detects Ruby error messages in response body.",
+  "attack_type": [
+    "info-leak",
+    "error-disclosure"
+  ],
+  "variables": [
+    "RESPONSE_BODY"
+  ],
+  "operator": "@rx (?i:\b(?:fatal|parse|syntax)\\s+(?:error|exception)|(?:in\\s+%s\\s+at\\s+line|on\\s+line)\\s+\\d+)",
+  "message": "Remote Code Execution: Ruby error message detected.",
+  "tags": [
+    "attack-rce",
+    "language-ruby"
+  ],
+  "paranoia_level": 1,
+  "severity": "CRITICAL",
+  "example_detection": {
+    "resp_body_snippet": "SyntaxError (/path/to/your/app/controllers/reflects_controller.rb:10: ...)",
+    "error_class": "Ruby::SyntaxError",
+    "stack_trace_lang": "ruby"
+  }
+}
+Loaded 423 blue_episodes.
+Warning: No episodes found for effect 'sql-executed'. Skipping.
+Warning: No episodes found for effect 'xss-executed'. Skipping.
+Warning: No episodes found for effect 'sql-error-disclosure'. Skipping.
+Warning: No episodes found for effect 'time-based-injection-potential'. Skipping.
+
+--- BLUE Golden Set Report ---
+Total golden_set episodes generated: 27
+Traceback (most recent call last):
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/scripts/blue_build_golden_set.py", line 101, in <module>
+    main()
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/scripts/blue_build_golden_set.py", line 91, in main
+    vuln_effect_counts = Counter(e["blue_label"]["vuln_effect"] for e in golden_set)
+NameError: name 'Counter' is not defined. Did you mean: 'count'?
+Loaded 423 blue_episodes.
+Warning: No episodes found for effect 'sql-executed'. Skipping.
+Warning: No episodes found for effect 'xss-executed'. Skipping.
+Warning: No episodes found for effect 'sql-error-disclosure'. Skipping.
+Warning: No episodes found for effect 'time-based-injection-potential'. Skipping.
+
+--- BLUE Golden Set Report ---
+Total golden_set episodes generated: 39
+
+Golden Set Vuln Effect Distribution:
+- no-effect: 27
+- xss-reflected: 8
+- blocked_by_waf: 4
+
+--- Example Golden Set Episode (first 1) ---
+{
+  "waf_env": {
+    "engine": "modsecurity",
+    "profile": "owasp_crs",
+    "crs_version": "3.3.5",
+    "paranoia_level": 1,
+    "anomaly_threshold": 5,
+    "extra_config": {}
+  },
+  "app_context": {
+    "app_name": "dvwa",
+    "endpoint": "",
+    "http_method": "GET",
+    "injection_point": "query_param",
+    "tech_stack": "php_mysql"
+  },
+  "attack": {
+    "attack_type": "SQLI",
+    "technique": "UNKNOWN",
+    "payload": "%2527%2520SELECT%2520version%2528%2529%2520--&A=C991&S=9E16&R=4691&D=1958",
+    "red_model": "gemma2_2b_phase3_rl",
+    "phase": "rl_smoke_test",
+    "timestamp": "2025-12-02T09:11:38.167134Z"
+  },
+  "waf_observation": {
+    "blocked": true,
+    "http_status": 403,
+    "anomaly_score": null,
+    "matched_rules": [],
+    "raw_waf_log": null
+  },
+  "app_observation": {
+    "http_status": 200,
+    "resp_body_snippet": null,
+    "error_class": null,
+    "stack_trace_lang": null
+  },
+  "blue_label": {
+    "vuln_effect": "blocked_by_waf",
+    "is_false_negative": false,
+    "expected_crs_rules": [],
+    "severity": "none"
+  },
+  "blue_recommendation": {
+    "summary": "Attack successfully blocked by WAF. No action required.",
+    "example_actions": []
+  }
+}
+Loaded 39 golden set episodes.
+Loaded 2 KB entries.
+Traceback (most recent call last):
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/blue/runner_phase2_eval.py", line 143, in <module>
+    main()
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/blue/runner_phase2_eval.py", line 84, in main
+    retrieved_kb_entries = retrieve_for_episode(episode, kb, top_k=2)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/blue/rag_retriever.py", line 36, in retrieve_for_episode
+    return kb.query(query_text, top_k=top_k)
+  File "/mnt/c/Users/HAD/Desktop/AI_in_cyber/LLM_in_Cyber/blue/rag_index.py", line 57, in query
+    scores = defaultdict(int)
+NameError: name 'defaultdict' is not defined
+Loaded 39 golden set episodes.
+Loaded 2 KB entries.
+
+--- STUB LLM CALL ---
+Prompt length: 2009 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2013 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1994 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2190 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1990 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3116 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1983 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3189 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2086 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3164 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2978 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3084 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1978 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3050 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2220 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2191 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2774 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2197 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2083 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3034 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2019 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2918 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2132 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2879 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2214 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2117 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2191 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2060 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1973 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2101 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2014 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1974 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 3055 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2019 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2194 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1985 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2087 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 2066 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+--- STUB LLM CALL ---
+Prompt length: 1983 characters.
+Simulating LLM response...
+--- END STUB LLM CALL ---
+
+Raw evaluation results saved to data/blue/blue_phase2_eval_raw.jsonl
+
+--- BLUE Phase 2 Evaluation Summary ---
+Total golden set cases: 39
+No golden set cases with 'expected_crs_rules' for rule hit evaluation.
+Evaluation summary saved to data/blue/blue_phase2_eval_summary.txt

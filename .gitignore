@@ -56,5 +56,7 @@ data/archive
 data/archive_legacy
 SFT_gpu0.log
 !README.md
-.md
-.log
+ coraza
+*.log
+*.md
+
