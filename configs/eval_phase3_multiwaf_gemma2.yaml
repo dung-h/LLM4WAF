@@ -1,0 +1,63 @@
+
+model:
+  name: "google/gemma-2-2b-it"
+  adapter: "experiments/phase3_gemma2_2b_rl"
+
+targets:
+  # --- ModSecurity (Baseline PL1) ---
+  - waf: "modsecurity_crs"
+    waf_base_url: "http://localhost:8000"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/sqli/?id={payload}&Submit=Submit"
+    attack_type: "SQLI"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+  
+  - waf: "modsecurity_crs"
+    waf_base_url: "http://localhost:8000"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/xss_r/?name={payload}&Submit=Submit"
+    attack_type: "XSS"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+
+  # --- Coraza (Go WAF) ---
+  - waf: "coraza_crs"
+    waf_base_url: "http://localhost:9005"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/sqli/?id={payload}&Submit=Submit"
+    attack_type: "SQLI"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+
+  - waf: "coraza_crs"
+    waf_base_url: "http://localhost:9005"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/xss_r/?name={payload}&Submit=Submit"
+    attack_type: "XSS"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+
+  - waf: "coraza_crs"
+    waf_base_url: "http://localhost:9005"
+    app: "juice_shop"
+    target_url: "/juice/rest/products/search?q={payload}"
+    attack_type: "XSS"
+    login_needed: false
+
+  # --- ModSecurity (Paranoia 4) ---
+  - waf: "modsecurity_pl4"
+    waf_base_url: "http://localhost:9008"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/sqli/?id={payload}&Submit=Submit"
+    attack_type: "SQLI"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+
+  - waf: "modsecurity_pl4"
+    waf_base_url: "http://localhost:9008"
+    app: "dvwa"
+    target_url: "/dvwa/vulnerabilities/xss_r/?name={payload}&Submit=Submit"
+    attack_type: "XSS"
+    login_needed: true
+    login_url: "/dvwa/login.php"

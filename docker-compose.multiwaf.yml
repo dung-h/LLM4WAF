@@ -1,0 +1,107 @@
+version: '3.8'
+
+networks:
+  waf-network:
+    external: true
+
+services:
+  # --- Application Backends ---
+  dvwa-app:
+    image: vulnerables/web-dvwa
+    container_name: dvwa-app
+    restart: always
+    environment:
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=p@ssw0rd
+      - MYSQL_DATABASE=dvwa
+      - DVWA_SETUP_PASSWORD=password
+      - DVWA_DEFAULT_SECURITY_LEVEL=low
+    networks:
+      - waf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/setup.php"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  juice-shop-app:
+    image: bkimminich/juice-shop
+    container_name: juice-shop-app
+    restart: always
+    networks:
+      - waf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- WAFs ---
+
+  # 1. ModSecurity CRS WAF (Nginx based) - Baseline (PL1)
+  modsecurity-waf:
+    image: owasp/modsecurity-crs:nginx
+    container_name: modsecurity-waf
+    ports:
+      - "8000:8080"
+    networks:
+      - waf-network
+    volumes:
+      - ./dvwa-modsecurity-waf/modsec-custom.conf:/etc/modsecurity.d/modsec-custom.conf:ro
+      - ./dvwa-modsecurity-waf/custom-rules:/etc/modsecurity.d/custom-rules:ro
+      - ./dvwa-modsecurity-waf/nginx/nginx.conf:/etc/nginx/templates/conf.d/default.conf.template:ro
+    environment:
+      - MODSEC_RULE_ENGINE=On
+      - MODSEC_AUDIT_ENGINE=On
+      - MODSEC_AUDIT_LOG_PARTS=ABDEFHIJZ
+      - PARANOIA=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # 2. Coraza WAF CRS (Caddy based)
+  coraza-waf:
+    build: ./coraza
+    container_name: coraza-waf
+    ports:
+      - "9005:80"
+    networks:
+      - waf-network
+    volumes:
+      - ./coraza/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./coraza/coraza.conf:/etc/coraza/coraza.conf:ro
+      - ./coraza/coreruleset:/etc/coraza/coreruleset:ro
+    environment:
+      - PARANOIA=1
+    depends_on:
+      - dvwa-app
+      - juice-shop-app
+
+  # 3. ModSecurity CRS WAF (Paranoia Level 4 - EXTREME)
+  modsecurity-pl4:
+    image: owasp/modsecurity-crs:nginx
+    container_name: modsecurity-pl4
+    ports:
+      - "9008:8080"
+    networks:
+      - waf-network
+    volumes:
+      - ./dvwa-modsecurity-waf/modsec-custom.conf:/etc/modsecurity.d/modsec-custom.conf:ro
+      - ./dvwa-modsecurity-waf/custom-rules:/etc/modsecurity.d/custom-rules:ro
+      - ./dvwa-modsecurity-waf/nginx/nginx.conf:/etc/nginx/templates/conf.d/default.conf.template:ro
+    environment:
+      - MODSEC_RULE_ENGINE=On
+      - MODSEC_AUDIT_ENGINE=On
+      - MODSEC_AUDIT_LOG_PARTS=ABDEFHIJZ
+      - PARANOIA=4 # Strict Mode
+      - ANOMALY_INBOUND=5
+      - ANOMALY_OUTBOUND=4
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s

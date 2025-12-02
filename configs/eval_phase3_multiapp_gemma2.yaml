@@ -1,0 +1,49 @@
+
+model:
+  name: "google/gemma-2-2b-it"
+  adapter: "experiments/phase3_gemma2_2b_rl"
+
+waf:
+  type: "modsecurity_crs_3_3_pl1"
+  base_url: "http://localhost:8000"
+
+targets:
+  - name: "dvwa"
+    app_type: "php_classic"
+    login_needed: true
+    login_url: "/dvwa/login.php"
+    username: "admin"
+    password: "password"
+    security_level: "low"
+    attack_types: ["SQLI", "XSS"]
+    target_urls:
+      SQLI: "/dvwa/vulnerabilities/sqli/?id={payload}&Submit=Submit"
+      XSS: "/dvwa/vulnerabilities/xss_r/?name={payload}&Submit=Submit"
+
+  - name: "bwapp"
+    app_type: "php_classic"
+    login_needed: true
+    login_url: "/bwapp/login.php"
+    username: "bee"
+    password: "bug"
+    security_level: "0" # 0=low, 1=medium, 2=high
+    attack_types: ["XSS", "SQLI"]
+    target_urls:
+      # Note: bWAPP needs specific endpoints. Assuming login sets cookie successfully.
+      XSS: "/bwapp/htmli_get.php?firstname={payload}&lastname=test&form=submit"
+      SQLI: "/bwapp/sqli_1.php?title={payload}&action=search"
+
+  - name: "juice_shop"
+    app_type: "node_modern"
+    login_needed: false
+    attack_types: ["XSS", "SQLI"]
+    target_urls:
+      XSS: "/juice/rest/products/search?q={payload}"
+      SQLI: "/juice/rest/products/search?q={payload}"
+
+  - name: "dvna"
+    app_type: "node_modern"
+    login_needed: false # Try to find public endpoint or skip complex login for now
+    attack_types: ["XSS"] # Focus on XSS for node app
+    target_urls:
+      XSS: "/dvna/search?q={payload}" # Guessing a search endpoint exposed

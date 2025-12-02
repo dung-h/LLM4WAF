@@ -1,0 +1,42 @@
+version: '3.8'
+
+networks:
+  waf-network:
+    external: true
+
+services:
+  bwapp-app:
+    image: raesene/bwapp
+    container_name: bwapp-app
+    restart: always
+    networks:
+      - waf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/login.php"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  juice-shop-app:
+    image: bkimminich/juice-shop
+    container_name: juice-shop-app
+    restart: always
+    networks:
+      - waf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  dvna-app:
+    image: appsecco/dvna:sqlite
+    container_name: dvna-app
+    restart: always
+    networks:
+      - waf-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9090/login"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

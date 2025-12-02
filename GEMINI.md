@@ -1,343 +1,363 @@
-
 SYSTEM:
-Bạn là một agent lập trình đang chạy LOCAL bên trong repo **LLM4WAF**.
+Bạn là một agent lập trình chạy LOCAL bên trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
 
-Hiện tại đã có **2 mô hình đã được SFT cho Phase 2**:
-- Gemma 2 2B (gọi tắt: `gemma2_2b_phase2`)
-- Phi-3 Mini (gọi tắt: `phi3_mini_phase2`)
+Bối cảnh:
+- Phase 1: SFT sinh payload trên ModSecurity + DVWA đã hoàn thành.
+- Phase 2: SFT reasoning/history đã hoàn thành.
+- Phase 3: RL (REINFORCE) trên ModSecurity + DVWA đã hoàn thành, với kết quả:
+  - Blocked giảm mạnh
+  - Full Execution tăng lên ~30% với Gemma 2 2B.
 
-Nhiệm vụ chính của bạn bây giờ:
+Step 1 vừa rồi:
+- Đã chạy **multi-app eval** (DVWA, bWAPP, Juice Shop, DVNA, …) với **ModSecurity**.
+- Kết quả cho thấy:
+  - Khả năng WAF evasion cao (Blocked thấp).
+  - Nhưng detection “Passed” trên nhiều app hiện đại còn hạn chế (do detection logic & ngữ cảnh app).
 
-1. Xác định chính xác checkpoint / cấu hình của **2 model Phase 2** này (Gemma 2 2B và Phi-3 Mini).
-2. Chạy **testing / evaluation** attack pipeline cho từng model (hoặc ít nhất cho model Phase 2 mới nhất), với DVWA + WAF.
-3. Chuẩn bị nền tảng cho **Phase 3 – RL**:
-   - Định nghĩa environment WAFEnv.
-   - Cơ chế log trajectory (state → action → reward) ra file.
-   - Tái sử dụng representation Phase 2 (waf_type, attack_type, payload_history, prompt Phase 2).
-4. Tuân thủ các nguyên tắc sạch sẽ:
-   - Tôn trọng format prompt của từng model.
-   - Xóa hoặc archive các file tạm/debug mà bạn sinh ra.
-   - Ghi log đầy đủ vào `mes.log` cho mọi lệnh/script quan trọng.
-   - Chỉ trả về cho user các file quan trọng và summary cuối cùng.
+MỤC TIÊU STEP 2 (MULTI-WAF):
 
-Bạn PHẢI:
-- Tuân thủ quy tắc trong `gemini.md` (nếu tồn tại).
-- Không sửa/xóa file dữ liệu gốc.
-- Không gửi HTTP ra ngoài internet. **Chỉ tương tác với DVWA/WAF trong testbed nội bộ nếu pipeline đã hỗ trợ.**
+1. Giữ 1–2 ứng dụng target (ưu tiên:
+   - **DVWA** (baseline classic)
+   - **Juice Shop** hoặc **bWAPP** (app hiện đại hơn)
+   ).
+2. Đặt chúng lần lượt sau **nhiều WAF khác nhau**:
+   - Baseline: **ModSecurity + OWASP CRS** (đã có).
+   - Thêm:
+     - **Coraza WAF + CRS** (ví dụ image `coreruleset/coraza-crs-docker` hoặc `jptosso/coraza-waf`). :contentReference[oaicite:0]{index=0}  
+     - **NAXSI WAF** (nginx + naxsi module, ví dụ image `dmgnx/nginx-naxsi` hoặc `ucalgary/nginx-naxsi`). :contentReference[oaicite:1]{index=1}  
+   - OPTIONAL (nếu set up được gọn):
+     - **SafeLine Community WAF** (deploy bằng Docker theo docs). :contentReference[oaicite:2]{index=2}  
+     - **IronBee** (nếu tìm được image/docker-compose dùng được). :contentReference[oaicite:3]{index=3}  
+3. Dùng **Gemma 2 2B Phase 3 RL** làm policy model, giữ nguyên prompt format RL/SFT Phase 2.
+4. Đánh giá & so sánh:
+   - Mỗi WAF × mỗi app:
+     - % Blocked
+     - % Failed Filter / Reflected
+     - % Passed / Full Execution (nếu detection logic cho phép)
+   - Xem model generalize được tới WAF engine khác hay chỉ overfit ModSecurity.
 
-Bạn ĐƯỢC:
-- Tạo script mới, folder mới (vd: `eval/`, `rl/`, `archive/`).
-- Chạy các script nội bộ (train/eval/attack) miễn là ghi log vào `mes.log` và không phá cấu trúc repo.
+RÀNG BUỘC CHUNG:
 
----------------------------------------------------
-PHẦN 0 – NGUYÊN TẮC BẮT BUỘC
+- **TUYỆT ĐỐI KHÔNG** sửa/xóa các file dataset gốc (`data/processed/red_v40_*.jsonl`).
+- **TUYỆT ĐỐI KHÔNG** gửi HTTP ra Internet. Chỉ được gọi tới:
+  - DVWA / Juice Shop / bWAPP / các app trong lab
+  - Các container WAF local (ModSecurity, Coraza, NAXSI, …)
+- **Log mọi lệnh/script lớn vào `mes.log`**.
+- **Giữ codespace sạch**:
+  - Script tạm, file debug → xóa hoặc move vào `archive/`.
+- **TÔN TRỌNG prompt format của Gemma 2 2B** đã dùng trong Phase 2/3:
+  - Chat-template/roles, prefix, constraint “OUTPUT ONLY PAYLOAD” phải giữ nguyên.
 
-1. **Không sửa / xóa dataset gốc**:
-   - Giữ nguyên:
-     - `data/processed/red_v40_balanced_final_v13.jsonl`
-     - `data/processed/red_v40_passed_waf_only.jsonl`
-     - Bất kỳ file `red_v*_*.jsonl` khác trừ khi được yêu cầu rõ ràng.
-   - Khi cần dataset mới → luôn tạo file mới (vd: `data/processed/red_v40_phase2_reasoning.jsonl` đã tồn tại sau Phase 2).
+----------------------------------------------------
+PHẦN 0 – LOG & CLEANUP
 
-2. **Ghi log vào `mes.log`**:
-   - Với MỌI lệnh/script quan trọng (train, eval, run pipeline, RL smoke test), bạn phải append một dòng vào `mes.log` tại repo root, chứa:
-     - Thời gian
-     - Lệnh (CMD)
-     - STATUS (OK/FAIL)
-     - File output chính (nếu có)
-   - Ví dụ format:
-     ```text
-     [YYYY-MM-DD HH:MM:SS] CMD="python scripts/run_attack_pipeline.py --config configs/phi3_phase2_eval.yaml" STATUS=OK OUTPUT="eval/phi3_phase2_eval_summary.txt"
-     ```
+0.1. `mes.log`
+- Mỗi khi chạy:
+  - Docker compose/up/down
+  - Script eval
+  - Smoke test RL
+- PHẢI append 1 dòng vào `mes.log` với format:
+  ```text
+  [YYYY-MM-DD HH:MM:SS] CMD="<lệnh bạn chạy>" STATUS=OK|FAIL OUTPUT="<file chính hoặc N/A>"
 
-3. **Dọn rác (temp/debug)**:
-   - Script tạm, file debug, output test:
-     - Nếu còn giá trị tham khảo → move vào `archive/` (vd: `archive/scripts/`, `archive/logs/`).
-     - Nếu vô nghĩa → xóa.
-   - Không để `.tmp`, `.bak`, file debug lang thang trong `scripts/`, root, v.v.
+0.2. Dọn rác
 
-4. **Chú ý prompt format của từng model**:
-   - Tìm trong code/config xem:
-     - Gemma 2 2B đang dùng format prompt nào (system/user/assistant, instruct, chat-template).
-     - Phi-3 Mini đang dùng format prompt nào.
-   - Không phá vỡ format prompt mà model đã được SFT (ví dụ: đừng thêm text mới trước/sau payload nếu trước giờ training yêu cầu “output ONLY payload”).
-   - Nếu phải thêm logic Phase 2 (payload_history, waf_type, v.v.), hãy:
-     - Build prompt **bên trong phần `content`** nhưng vẫn giữ style (chat, role, prefix) đúng với mỗi model.
+* Script tạm (vd. test_*.py) & file debug:
 
----------------------------------------------------
-PHẦN 1 – XÁC ĐỊNH 2 MODEL PHASE 2 (GEMMA 2 2B & PHI-3 MINI)
+  * Nếu còn giá trị: move vào `archive/scripts/` hoặc `archive/logs/`.
+  * Nếu không: xóa.
+* Không được để file `.tmp`, `.bak`, script rời tung toé.
 
-### Bước 1.1 – Tìm checkpoint/cấu hình 2 model
+---
 
-- Tìm trong repo:
-  - Thư mục chứa checkpoint/model (vd: `checkpoints/`, `models/`, `outputs/`…).
-  - Các config file SFT (vd: `configs/gemma2_phase2.yaml`, `configs/phi3_phase2.yaml` hoặc tương đương).
-  - Các log train Phase 2 (vd: `logs/phi3_phase2.log`, `train_phase2_gemma2.log`, …).
+PHẦN 1 – XÁC ĐỊNH MODEL GEMMA 2 2B PHASE 3 RL
 
-- Mục tiêu:
-  - Xác định rõ:
-    - Tên model base: `gemma-2-2b` và `phi-3-mini`.
-    - Đường dẫn checkpoint Phase 2 của mỗi model.
-  - Ghi thông tin này vào `mes.log` và in ngắn gọn ra stdout.
+1.1. Tìm checkpoint Phase 3
 
-- Nếu có nhiều checkpoint cho cùng 1 model:
-  - Ưu tiên checkpoint:
-    - Được đánh dấu “phase2”, “final”, “best”.
-    - Hoặc mới nhất theo timestamp.
+* Tìm trong repo:
 
-### Bước 1.2 – Kiểm tra prompt builder hiện tại
+  * Thư mục checkpoint RL: ví dụ `checkpoints/gemma2_phase3_rl/` hoặc tương tự.
+  * File config train RL: `configs/train_gemma2_phase3_rl.yaml` (nếu có).
+  * File log RL: `logs/gemma2_phase3_rl.log` (nếu có).
+* Xác định:
 
-- Tìm nơi build prompt cho LLM:
-  - Ví dụ: `llm/prompt_builder.py`, `utils/prompts.py`, hoặc ngay trong attack pipeline.
-- Đọc logic prompt cho:
-  - Gemma 2 2B
-  - Phi-3 Mini
+  * Model base: `gemma-2-2b`.
+  * Đường dẫn checkpoint Phase 3 RL (model dùng để inference).
+* Ghi thông tin:
 
-- Mục tiêu:
-  - Hiểu rõ:
-    - Có dùng chat-template không (role: system/user/assistant).
-    - Có yêu cầu “output ONLY payload” không.
-    - Có phần prefix/suffix đặc thù nào cho mỗi model.
+  * In ra stdout (ngắn gọn).
+  * Ghi 1 dòng vào `mes.log` mô tả checkpoint được dùng.
 
-Nếu Phase 2 đã có prompt history-aware, hãy đảm bảo testing dùng lại logic tương thích.
+1.2. Xác nhận prompt format RL
 
----------------------------------------------------
-PHẦN 2 – EVALUATION PHASE 2 CHO 2 MODEL
+* Tìm module/function build prompt cho Gemma trong Phase 2/3:
 
-Mục tiêu: chạy attack pipeline trên DVWA/WAF để đánh giá:
-- Gemma 2 2B Phase 2
-- Phi-3 Mini Phase 2
+  * Ví dụ: `llm/prompts.py`, `llm/gemma_prompt_builder.py`, hoặc trong RL env.
+* Xác nhận:
 
-và so sánh metric (blocked, bypass, full execution, etc.) giống Phase 1.
+  * Dùng role nào (`system`, `user`, `assistant`).
+  * Cấu trúc nội dung:
 
-### Bước 2.1 – Tìm / chỉnh `run_attack_pipeline`
+    * Có `waf_type`, `attack_type`, `payload_history`, `target_technique` hay không.
+  * Ràng buộc: “Output ONLY the final payload string. No explanation, no code fences.”
+* Phần tiếp theo (multi-WAF) phải dùng đúng format này; chỉ được thêm context (WAF type, app name, base_url) bên trong `content` một cách mượt, không phá layout.
 
-- Tìm script:
-  - `scripts/run_attack_pipeline.py` hoặc tương đương (`eval_attack.py`, `run_eval_phase2.py`, ...).
-- Đảm bảo script:
-  - Có thể nhận cấu hình model (vd: flag `--model`, `--config`, hoặc thông qua file config).
-  - Có thể chọn model Gemma / Phi dựa trên tham số hoặc config.
+---
 
-Nếu chưa có config riêng cho Phase 2 eval:
-- Tạo 2 config:
-  - `configs/eval_phase2_gemma2.yaml`
-  - `configs/eval_phase2_phi3.yaml`
-Hoặc nào phù hợp với phong cách repo.
+PHẦN 2 – CHUẨN BỊ MULTI-WAF (Coraza, NAXSI, baseline ModSecurity)
 
-Mỗi config cần chỉ ra:
-- Tên/checkpoint model (gemma2_2b_phase2 / phi3_mini_phase2).
-- Batch size, số mẫu test (ví dụ 200–500).
-- Đường dẫn output eval.
+Mục tiêu: với ít nhất **1 app baseline (DVWA)** + ưu tiên thêm **1 app modern (Juice Shop hoặc bWAPP)**, dựng các WAF:
 
-### Bước 2.2 – Chỉnh prompt cho Phase 2 nếu cần
+* `modsecurity_crs` (đang có sẵn – baseline).
+* `coraza_crs` (Coraza + CRS).
+* `naxsi_nginx` (nginx + NAXSI).
+* OPTIONAL: `safeline_ce`, `ironbee`.
 
-Nếu Phase 2 training đã dùng **prompt có history** (waf_type, attack_type, payload_history, target_technique) thì:
+2.1. Kiểm tra WAF ModSecurity baseline
 
-- Đảm bảo `run_attack_pipeline`:
-  - Build prompt đúng format đó cho mỗi lần gọi LLM.
-  - Đặc biệt:
-    - Nhúng danh sách payload_history (các payload đã bị block trước đó).
-    - Nhúng attack_type, injection_point, waf_type.
-    - Nhắc rõ: “Output ONLY the final payload string. No explanation, no code fences.”
+* Xác định:
 
-- Với mỗi model (Gemma 2 2B, Phi-3 Mini):
-  - Nếu prompt format khác nhau (ví dụ: Gemma yêu cầu chat-template khác), hãy code branch:
-    - `build_prompt_for_gemma2_phase2(...)`
-    - `build_prompt_for_phi3_phase2(...)`
-  - Nhưng phần core text (context + history) nên giống nhau.
+  * WAF container/compose hiện tại cho ModSecurity + CRS.
+  * Cách nó proxy tới DVWA (và các app khác, nếu có).
+* Note:
 
-### Bước 2.3 – Chạy eval cho từng model
+  * Không sửa rule set (CRS) nếu không cần.
+  * Giữ profile ModSecurity giống như khi train RL Phase 3 để làm baseline chuẩn.
 
-Cho từng model:
+2.2. Thêm Coraza WAF + CRS
 
-1. Chuẩn bị command, ví dụ:
-   - Gemma 2 2B:
-     ```bash
-     python scripts/run_attack_pipeline.py --config configs/eval_phase2_gemma2.yaml
-     ```
-   - Phi-3 Mini:
-     ```bash
-     python scripts/run_attack_pipeline.py --config configs/eval_phase2_phi3.yaml
-     ```
+* Tham khảo image:
 
-2. Khi chạy, luôn:
-   - Ghi 1 dòng vào `mes.log` theo format:
-     - CMD, STATUS, OUTPUT file.
-   - Output eval nên gồm:
-     - JSONL chi tiết (vd: `eval/phase2_gemma2_eval.jsonl`, `eval/phase2_phi3_eval.jsonl`)
-     - Summary text (vd: `eval/phase2_gemma2_summary.txt`, `eval/phase2_phi3_summary.txt`)
-       - Trong đó có:
-         - blocked %
-         - failed_waf_filter %
-         - reflected_no_exec %
-         - passed %
-         - sql_error_bypass %
-         - Total bypass rate
-         - Full execution rate
+  * `coreruleset/coraza-crs-docker` (Caddy + Coraza + CRS). ([Webdock][1])
+  * Hoặc `jptosso/coraza-waf`. ([galaxyz.net][2])
 
-3. Sau khi chạy xong cả 2:
-   - So sánh kết quả (như bảng bạn đã có ở Phase 1).
-   - Ghi comparison ngắn gọn vào:
-     - `eval/phase2_models_comparison.txt`
-     - và thêm 1 dòng log vào `mes.log` tóm tắt: model nào tốt hơn, trên metric nào.
+* Tạo thêm service trong docker-compose WAF (hoặc file compose mới), ví dụ:
 
----------------------------------------------------
-PHẦN 3 – CHUẨN BỊ PHASE 3 RL (SMOKE LEVEL)
+  * Service `coraza-dvwa`:
 
-Mục tiêu Phase 3 bước đầu: **chưa cần train RL full**, nhưng phải:
+    * Image: `coreruleset/coraza-crs-docker` (hoặc tương đương).
+    * Proxy upstream tới DVWA (host: dvwa, port 80).
+    * Expose port host, ví dụ: `9001`.
+  * Service `coraza-juice` (nếu test Juice Shop):
 
-1. Định nghĩa một môi trường WAFEnv với API rõ ràng.
-2. Chạy được vài episode test (smoke test) với model Phase 2 (ưu tiên model tốt hơn, ví dụ Phi-3 Mini).
-3. Log trajectory (state → action → reward) ra file JSONL.
+    * Proxy tới Juice Shop (`juice-shop:3000`), host port `9002`.
 
-### Bước 3.1 – Định nghĩa `WAFEnv`
+* Đảm bảo:
 
-- Tạo file mới: `rl/waf_env.py`.
-- Định nghĩa class:
+  * Có cấu hình route hoặc env để Coraza forward request tới đúng app.
+  * CRS được bật (theo default image).
 
-  ```python
-  class WAFEnv:
-      def __init__(self, base_url, waf_type, attack_type, injection_point="query_param", max_steps=5):
-          """
-          base_url: URL DVWA/WAF testbed
-          waf_type: vd "modsecurity_crs_3_3_pl1"
-          attack_type: "SQLI" hoặc "XSS"
-          injection_point: mặc định "query_param"
-          max_steps: số bước tấn công tối đa/episode
-          """
-          ...
+2.3. Thêm NAXSI (nginx + NAXSI module)
 
-      def reset(self):
-          """
-          Reset trạng thái episode.
-          Trả về state ban đầu: có thể là dict hoặc text,
-          nhưng phải encode được:
-          - waf_type
-          - attack_type
-          - injection_point
-          - payload_history (ban đầu rỗng)
-          """
-          ...
+* Tham khảo image:
 
-      def step(self, payload: str):
-          """
-          Thực hiện 1 bước:
-          - Gửi payload tới DVWA/WAF ở injection_point tương ứng.
-          - Đọc response: status_code, body_snippet, headers.
-          - Xác định outcome:
-              - blocked?
-              - failed_waf_filter?
-              - reflected_no_exec?
-              - passed?
-              - sql_error_bypass?
-          - Tính reward (ví dụ):
-              - +1.0 nếu full execution (passed hoặc sql_error_bypass)
-              - 0.0 nếu reflected_no_exec
-              - -0.1 nếu blocked
-          - Append payload + outcome vào payload_history.
-          - done = True nếu:
-              - reached max_steps
-              - hoặc có full execution
-          - Trả về: next_state, reward, done, info (info có thể chứa raw response meta)
-          """
-          ...
+  * `dmgnx/nginx-naxsi` hoặc `ucalgary/nginx-naxsi`. ([haltdos.com][3])
+* Tạo service, ví dụ:
 
-* State representation nên tương thích Phase 2:
+  * `naxsi-dvwa`:
 
-  * `waf_type`
-  * `attack_type`
-  * `injection_point`
-  * `payload_history` (list `{payload, blocked}`)
+    * Image: `dmgnx/nginx-naxsi`.
+    * Proxy_pass tới DVWA container.
+    * Expose port host: `9101`.
+  * `naxsi-juice` (nếu cần):
 
-### Bước 3.2 – Script chạy smoke test RL (chưa train)
+    * Proxy tới Juice Shop container.
+    * Expose port host: `9102`.
+* Dùng rule default của image trước; không cần tuning phức tạp lúc này.
 
-* Tạo file: `rl/run_phase3_smoke_test.py`.
+2.4. OPTIONAL – SafeLine & IronBee (nếu làm được gọn)
 
-* Logic:
+* SafeLine Community:
 
-  ```python
-  # Pseudo:
-  # 1. Load model Phase 2 tốt nhất (ưu tiên Phi 3 Mini nếu đang outperform).
-  # 2. Tạo WAFEnv với base_url DVWA & cấu hình WAF hiện có.
-  # 3. Cho chạy vài episode (vd: 3–5), mỗi episode max 5 step:
-  #    - state = env.reset()
-  #    - while not done:
-  #        - Build prompt giống Phase 2 từ state (waf_type, attack_type, payload_history, target_technique nếu có).
-  #        - Gọi model → payload
-  #        - next_state, reward, done, info = env.step(payload)
-  #        - Log (state, payload, reward, info) vào JSONL.
+  * Theo docs, deploy bằng Docker, lưu data vào `/data/safeline`. ([GitHub][4])
+  * Nếu setup không quá nặng:
+
+    * Tạo 1 instance SafeLine ở trước DVWA.
+    * Expose port `9201`.
+* IronBee:
+
+  * Nếu tìm được docker-compose/testbed sẵn (repo hoặc image) thì thêm một WAF profile `ironbee` tương tự.
+  * Nếu việc này quá phức tạp trong một task ngắn → GHI RÕ trong `mes.log` là đã bỏ qua IronBee.
+
+2.5. Script khởi chạy / dừng multi-WAF
+
+* Tạo script shell, ví dụ: `scripts/start_multiwaf_targets.sh`
+
+  * Start/ensure running:
+
+    * DVWA (và 1 app khác nếu có).
+    * WAF containers: modsec (nếu tách), coraza, naxsi, (safeline?).
+  * Ghi log CMD + STATUS vào `mes.log`.
+* Tương tự, nếu cần, tạo `scripts/stop_multiwaf_targets.sh`.
+
+---
+
+PHẦN 3 – EVAL SCRIPT CHO MULTI-WAF
+
+Mục tiêu: tạo script (hoặc mở rộng script hiện có) để:
+
+* Dùng **Gemma 2 2B Phase 3 RL**.
+* Đánh giá theo ma trận:
+
+  * WAF: `modsecurity_crs`, `coraza_crs`, `naxsi_nginx` (+ optional `safeline`, `ironbee`).
+  * App: ít nhất `dvwa`, và 1 app modern (vd: `juice_shop`).
+* Log chi tiết và summary cho từng (WAF, app).
+
+3.1. Config multi-WAF
+
+* Tạo file config, ví dụ: `configs/eval_phase3_multiwaf_gemma2.yaml`
+
+* Cấu trúc gợi ý:
+
+  ```yaml
+  model:
+    name: "gemma2_2b_phase3_rl"
+    checkpoint: "checkpoints/gemma2_phase3_rl/..."  # path thật
+
+  targets:
+    - waf: "modsecurity_crs"
+      waf_base_url: "http://localhost:8080"         # nếu có reverse proxy chung
+      app: "dvwa"
+      app_base_url: "http://localhost:8080/dvwa"    # hoặc http://localhost:PORT nếu direct
+      attack_types: ["SQLI", "XSS"]
+    - waf: "coraza_crs"
+      waf_base_url: "http://localhost:9001"
+      app: "dvwa"
+      app_base_url: "http://localhost:9001"
+      attack_types: ["SQLI", "XSS"]
+    - waf: "naxsi_nginx"
+      waf_base_url: "http://localhost:9101"
+      app: "dvwa"
+      app_base_url: "http://localhost:9101"
+      attack_types: ["SQLI", "XSS"]
+    - waf: "coraza_crs"
+      app: "juice_shop"
+      app_base_url: "http://localhost:9002"
+      attack_types: ["XSS"]
+    - waf: "naxsi_nginx"
+      app: "juice_shop"
+      app_base_url: "http://localhost:9102"
+      attack_types: ["XSS"]
   ```
 
-* Trajectory log:
+* Điều chỉnh port/path theo cách bạn thực sự proxy.
 
-  * Ghi vào file, ví dụ:
+3.2. Script `run_multiwaf_eval_phase3.py`
 
-    * `rl/trajectories_phase3_smoke.jsonl`
-  * Mỗi dòng:
+* Tạo file: `scripts/run_multiwaf_eval_phase3.py`
 
-    ```jsonc
-    {
-      "waf_type": "...",
-      "attack_type": "...",
-      "injection_point": "query_param",
-      "payload_history_before": [...],
-      "action_payload": "...",
-      "reward": 0.0,
-      "outcome": "blocked" | "passed" | "reflected_no_exec" | "sql_error_bypass",
-      "response_meta": {
-        "status_code": 403,
-        "body_len": 1234
-      }
-    }
+* Yêu cầu:
+
+  * Load config multi-WAF.
+
+  * Load Gemma 2 2B Phase 3 RL từ checkpoint.
+
+  * Với mỗi entry trong `targets`:
+
+    * Chuẩn bị một tập lượng mẫu (vd: 30–50 request) cho mỗi `attack_type`.
+    * Cho mỗi sample:
+
+      * Build state/prompt giống Phase 3:
+
+        * Gồm: `waf_type` (tên WAF hiện tại), `attack_type`, `payload_history`, (optional `target_technique`).
+      * Gọi model → payload.
+      * Gửi request qua WAF `waf_base_url` / `app_base_url` (tuỳ pipeline đang dùng).
+      * Phân loại outcome:
+
+        * `blocked`
+        * `failed_filter`
+        * `reflected_no_exec`
+        * `passed`
+        * `sql_error_bypass`
+        * Có thể reuse logic đã dùng trong Phase 3 / Step 1.
+      * Ghi log 1 dòng JSONL:
+
+        * File: `eval/phase3_multiwaf_{waf}_{app}.jsonl`
+
+  * Sau khi xong từng (waf, app):
+
+    * Tính metric:
+
+      * `Blocked %`
+      * `Failed Filter %`
+      * `Reflected %`
+      * `Passed %`
+      * `SQL error bypass %`
+      * `Total Bypass %` (không Blocked)
+      * `Full Exec %` (Passed + sql_error_bypass)
+    * Ghi summary vào:
+
+      * `eval/phase3_multiwaf_{waf}_{app}_summary.txt`
+
+* Khi chạy script:
+
+  * Ví dụ command:
+
+    ```bash
+    python scripts/run_multiwaf_eval_phase3.py --config configs/eval_phase3_multiwaf_gemma2.yaml
     ```
+  * Ghi log vào `mes.log` với CMD + STATUS + OUTPUT (file summary tổng hợp).
 
-* Khi chạy `run_phase3_smoke_test.py`:
+3.3. Tổng hợp kết quả
 
-  * Ghi log CMD + STATUS vào `mes.log`.
-  * Nếu DVWA/WAF không running → log lỗi vào `mes.log`, dừng an toàn, không crash lung tung.
+* Sau khi chạy xong cho tất cả (waf, app):
+
+  * Tạo file tổng hợp:
+
+    * `eval/phase3_multiwaf_gemma2_overall_comparison.txt`
+
+  * Trong đó:
+
+    * Bảng dạng:
+
+      | WAF             | App        | Blocked% | TotalBypass% | FullExec% |
+      | --------------- | ---------- | -------- | ------------ | --------- |
+      | modsecurity_crs | dvwa       | ...      | ...          | ...       |
+      | coraza_crs      | dvwa       | ...      | ...          | ...       |
+      | naxsi_nginx     | dvwa       | ...      | ...          | ...       |
+      | coraza_crs      | juice_shop | ...      | ...          | ...       |
+      | naxsi_nginx     | juice_shop | ...      | ...          | ...       |
+
+  * Ghi tên file này vào `mes.log`.
 
 ---
 
 PHẦN 4 – DỌN DẸP & BÁO CÁO
 
-Khi hoàn thành các bước trên:
+4.1. Dọn dẹp
 
-1. Dọn dẹp:
+* Mọi script/test tạm:
 
-   * Mọi file script tạm, debug:
+  * Nếu không phải script chính (`run_multiwaf_eval_phase3.py`, `start_multiwaf_targets.sh`, v.v.) → move vào `archive/` hoặc xóa.
+* Chỉ giữ lại:
 
-     * Move vào `archive/` nếu còn hữu ích.
-     * Hoặc xóa nếu không cần.
-   * Không để temporary script hoặc file debug nằm ở root/sources.
+  * `scripts/start_multiwaf_targets.sh` (hoặc compose tương đương).
+  * `scripts/run_multiwaf_eval_phase3.py`
+  * `configs/eval_phase3_multiwaf_gemma2.yaml`
+  * Các file eval:
 
-2. Đảm bảo các file QUAN TRỌNG tồn tại và rõ ràng:
+    * `eval/phase3_multiwaf_*.jsonl`
+    * `eval/phase3_multiwaf_*_summary.txt`
+    * `eval/phase3_multiwaf_gemma2_overall_comparison.txt`
 
-   * Eval:
+4.2. Báo cáo cuối (stdout)
 
-     * `eval/phase2_gemma2_eval.jsonl` (nếu có)
-     * `eval/phase2_phi3_eval.jsonl` (nếu có)
-     * `eval/phase2_gemma2_summary.txt`
-     * `eval/phase2_phi3_summary.txt`
-     * `eval/phase2_models_comparison.txt`
-   * RL chuẩn bị:
+* In ngắn gọn cho user:
 
-     * `rl/waf_env.py`
-     * `rl/run_phase3_smoke_test.py`
-     * `rl/trajectories_phase3_smoke.jsonl` (nếu smoke test chạy được)
+  * Danh sách WAF đã test (modsecurity, coraza, naxsi, optional safeline/ironbee).
+  * App nào được test (dvwa, juice_shop, …).
+  * Vị trí file tổng hợp: `eval/phase3_multiwaf_gemma2_overall_comparison.txt`.
+  * Ít nhất 3 con số đáng chú ý:
 
-3. Báo cáo cho user (qua stdout):
+    * So sánh FullExec% giữa ModSecurity vs Coraza vs NAXSI trên DVWA.
+* Đảm bảo `mes.log` đã có:
 
-   * Model nào Phase 2 đang có kết quả tốt hơn (Gemma 2 2B vs Phi-3 Mini) dựa trên eval.
-   * Vị trí các file eval & trajectory quan trọng.
-   * Xác nhận:
+  * Log start WAF/app containers.
+  * Log run_multiwaf_eval_phase3.
+  * STATUS từng bước.
 
-     * Đã ghi log đầy đủ trong `mes.log`.
-     * Đã dọn các file tạm (hoặc move vào `archive/`).
+SAU KHI HOÀN THÀNH:
 
-CHỈ TRẢ VỀ:
-
-* Tên và đường dẫn các file quan trọng.
-* Tóm tắt các metric chính (bảng Gemma vs Phi).
-* Không dump toàn bộ JSONL/log dài trong output.
-
+* Không tự ý bắt đầu RL training mới.
+* Dừng lại ở việc hoàn tất eval + log.
 

@@ -1,0 +1,33 @@
+# NAXSI Core Rules
+##################################
+## INTERNAL RULES
+##################################
+# 1: Internal: Unknown error
+# 2: Internal: Empty headers
+# 1000: Internal: Odd hex encoding
+# 1001: Internal: Odd hex encoding
+# 1002: Internal: Unknown/Unexpected content-type
+# 1007: Internal: Unexpected content-type
+# 1010: Internal: Unclosed boundary
+# 1011: Internal: Unclosed boundary
+# 1013: Internal: Too many arguments
+# 1015: Internal: Malformed POST data
+##################################
+
+BasicRule wl:0 "mz:$HEADERS_VAR:cookie" "s:$SQL:4" id:1000;
+BasicRule wl:0 "mz:$HEADERS_VAR:cookie" "s:$SQL:4" id:1001;
+BasicRule wl:0 "mz:$HEADERS_VAR:cookie" "s:$SQL:4" id:1002;
+
+# SQL Injection
+BasicRule "rx:select|union|update|delete|insert|table|from|ascii|hex|unhex|drop" "msg:sql keywords" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$SQL:4" id:1000;
+BasicRule "rx:1=1|1=0" "msg:sql tautologies" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$SQL:4" id:1001;
+BasicRule "rx:\'|\"|;" "msg:sql special chars" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$SQL:4" id:1002;
+
+# XSS
+BasicRule "rx:<script" "msg:xss tag" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$XSS:8" id:1300;
+BasicRule "rx:javascript:" "msg:xss keyword" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$XSS:8" id:1301;
+BasicRule "rx:on\w+" "msg:xss event handler" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$XSS:8" id:1302;
+
+# RFI / Traversal
+BasicRule "rx:\.\./" "msg:directory traversal" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$TRAVERSAL:4" id:1200;
+BasicRule "rx:/etc/passwd" "msg:system file access" "mz:BODY|URL|ARGS|$HEADERS_VAR:Cookie" "s:$TRAVERSAL:4" id:1201;
