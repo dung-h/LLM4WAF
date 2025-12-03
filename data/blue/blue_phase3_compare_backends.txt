@@ -1,0 +1,22 @@
+---
+BLUE Phase 3 Backend Comparison
+=====================================
+
+--- Gemma 2 Results (File: data/blue/blue_phase3_suggestions.jsonl) ---
+  Total episodes processed: 119
+  JSON Valid Responses: 21/119 (17.65%)
+  Total Recommended Rules (from valid JSONs): 20
+  Top Vulnerability Effects Identified: [('no-attack', 6), ('SQLI', 5), ('reflected XSS', 4)]
+
+
+--- Phi-3 Mini Results (File: data/blue/blue_phase3_suggestions_phi3.jsonl) ---
+  Total episodes processed: 119
+  JSON Valid Responses: 0/119 (0.00%)
+  Total Recommended Rules (from valid JSONs): 0
+  Top Vulnerability Effects Identified: N/A
+
+
+---
+Overall Comparison
+  Gemma2 JSON Validity: 17.65% vs Phi-3 Mini: 0.00%
+  Gemma2 Recommended Rules: 20 vs Phi-3 Mini: 0

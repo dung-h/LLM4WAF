@@ -1,0 +1,24 @@
+--- RED Phase 1 Enrichment Summary (Optimized) ---
+Date: 2025-12-02 22:15:00
+
+Original Dataset: data/processed/red_v40_passed_waf_only.jsonl (High Quality - Bypass Only)
+Enriched Dataset: data/processed/red_phase1_enriched_v2.jsonl
+
+## Tổng quan thay đổi số lượng mẫu:
+- Tổng số mẫu ban đầu: 20530
+- Tổng số mẫu sau làm giàu: 50000 (+29470 mẫu mới)
+
+## So sánh phân phối Attack Type:
+| Attack Type    | Original Count (Tỷ lệ) | Enriched Count (Tỷ lệ) | Thay đổi Tỷ lệ |
+| :------------- | :--------------------- | :--------------------- | :------------- |
+| SQLI           | 14751 (71.85%)         | 27238 (54.48%)         | -17.37%        |
+| XSS            | 5579 (27.17%)          | 17633 (35.27%)         | **+8.10%**     |
+| OS_INJECTION   | 200 (0.97%)            | 5129 (10.26%)          | **+9.29%**     |
+
+## Điểm nổi bật về Technique:
+- **OS_INJECTION bùng nổ:** Từ chỗ gần như không có, giờ đây các kỹ thuật OS Command (ping, cat, id, ls, whoami) đã chiếm 5/10 vị trí trong Top 10 techniques phổ biến nhất. Điều này đảm bảo model sẽ học được cú pháp OS Injection một cách bài bản.
+- **XSS cân bằng lại:** Tỷ lệ XSS tăng lên đáng kể, giúp cân bằng với SQLI vốn chiếm quá nhiều trong tập gốc.
+- **Giảm sự phụ thuộc vào Encode:** Các kỹ thuật Double/Triple URL Encode giảm tỷ lệ áp đảo, nhường chỗ cho các biến thể cấu trúc khác.
+
+## Kết luận:
+Dataset `red_phase1_enriched_v2.jsonl` hiện tại là phiên bản tối ưu nhất cho Phase 1 SFT. Nó kết hợp được chất lượng của các payload "Passed WAF" với sự đa dạng số lượng lớn từ quy trình enrichment, đặc biệt là lấp đầy lỗ hổng OS Injection và XSS.

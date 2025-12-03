@@ -1,0 +1,16 @@
+BLUE Phase 3 – WAF Tuning Summary (Backend: PHI3_MINI)
+=================================
+
+Total analyzed episodes: 119
+Episodes with successful JSON parsing: 49
+Episodes where LLM returned parsing error: 70
+False negatives (after valid JSON): 0
+
+Vuln Effect Distribution (from valid JSON):
+- None: 49 episodes
+
+Per-engine recommended rules (from valid JSON):
+- No specific rules recommended.
+
+Top Recommended Actions (from valid JSON):
+- No specific actions recommended.

@@ -1,0 +1,13 @@
+--- RED RAG Mini Evaluation Summary ---
+
+BASELINE Mode:
+  Total Payloads: 9
+  Passed WAF: 3 (33.33%)
+  Blocked by WAF: 6
+  Errors: 0
+
+RAG Mode:
+  Total Payloads: 9
+  Passed WAF: 6 (66.67%)
+  Blocked by WAF: 3
+  Errors: 0

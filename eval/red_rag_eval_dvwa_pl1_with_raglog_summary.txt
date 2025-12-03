@@ -1,0 +1,7 @@
+--- RED RAG Extended Evaluation Summary (DVWA PL1, with RAG logs) ---
+
+RAG_V2 Mode:
+  Total Payloads: 100
+  Passed WAF: 46 (46.00%)
+  Blocked by WAF: 54
+  Errors: 0

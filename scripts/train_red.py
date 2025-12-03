@@ -134,7 +134,10 @@ def main() -> None:
 
     # Pre-process dataset to create a single 'text' column
     def format_example(example):
-        if hasattr(tok, "chat_template") and tok.chat_template:
+        if "messages" in example:
+            # Handle chat format directly
+            text = tok.apply_chat_template(example["messages"], tokenize=False)
+        elif hasattr(tok, "chat_template") and tok.chat_template and "instruction" in example:
             messages = [
                 {"role": "user", "content": example["instruction"]},
                 {"role": "assistant", "content": example["payload"]},
@@ -142,12 +145,14 @@ def main() -> None:
             # Apply chat template but don't tokenize yet
             text = tok.apply_chat_template(messages, tokenize=False)
         else:
-            text = f"User: {example['instruction']}\nAssistant: {example['payload']}{tok.eos_token}"
+            # Fallback for simple instruction/payload without chat template
+            text = f"User: {example.get('instruction', '')}\nAssistant: {example.get('payload', '')}{tok.eos_token}"
         return {"text": text}
 
     logger.info(" formatting dataset to 'text' column...")
     # We map the formatting function to the dataset
-    if "instruction" in ds["train"].column_names and "payload" in ds["train"].column_names:
+    # Support both 'messages' and 'instruction'/'payload' formats
+    if "messages" in ds["train"].column_names or ("instruction" in ds["train"].column_names and "payload" in ds["train"].column_names):
         ds = ds.map(format_example)
     
     # SFTConfig setup

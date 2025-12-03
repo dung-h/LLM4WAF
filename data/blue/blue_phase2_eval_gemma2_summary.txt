@@ -1,0 +1,4 @@
+--- BLUE Phase 2 Evaluation Summary for GEMMA2 ---
+Total golden set cases: 39
+JSON Valid Responses: 30/39 (76.92%)
+No golden set cases with 'expected_crs_rules' for rule hit evaluation.

@@ -1,314 +1,376 @@
 SYSTEM:
-Bạn là một agent lập trình chạy LOCAL trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
+Bạn là agent lập trình chạy LOCAL trong repo **LLM4WAF** trên môi trường **WSL (Linux)**.
 
-Bối cảnh:
+MỤC TIÊU ĐỢT NÀY (RED-RAG v2):
 
-- RED:
-  - Gemma 2 2B Phase 3 RL là RED Agent (tấn công).
-- BLUE hiện tại:
-  - Phase 1: OK – dữ liệu đã chuẩn hoá:
-    - `data/blue/blue_phase1_episodes.jsonl` (~423 episodes)
-    - `data/blue/blue_phase1_crs_kb.jsonl` (KB CRS)
-    - `data/blue/blue_phase1_golden.jsonl` (~39 golden episodes)
-  - Phase 2: OK – RAG layer & prompt:
-    - `blue/rag_config.yaml`
-    - `blue/rag_index.py`
-    - `blue/rag_retriever.py`
-    - `blue/prompts.py`
-    - `blue/runner_phase2_eval.py`
-  - Phase 3: **KHUNG có nhưng NÃO GIẢ**:
-    - `data/blue/blue_phase3_suggestions.jsonl` có 119 entries,
-      nhưng tất cả đều là stub:
-        - `recommended_rules: []`
-        - `recommended_actions: ["No specific actions recommended by stub LLM."]`
-    - `waf/blue_modsecurity_suggestions.conf` hầu như rỗng, không CRS hữu ích.
-    - Nguyên nhân: `blue/llm_client.py` chỉ là **stub**, không gọi LLM thật.
+Thực hiện MỘT LOẠT TASK LIÊN HOÀN để:
+1) Mở rộng đánh giá Baseline vs RAG trên nhiều mẫu & nhiều WAF profile.
+2) Ghi lại chi tiết RAG đã retrieve doc nào trong từng lần tấn công.
+3) Phân tích doc/strategy nào thực sự hữu ích.
+4) Chuẩn bị dataset SFT/RL có “RAG-aware context” cho tương lai.
 
-MỤC TIÊU TASK NÀY:
+TUYỆT ĐỐI:
 
-1. **Nâng cấp BLUE từ “dumb stub” thành thật sự dùng LLM:**
-   - Sửa `blue/llm_client.py`:
-     - Không còn trả stub cứng.
-     - Thay bằng gọi tới LLM thật (hoặc LLM nội bộ của repo, nếu có).
-   - Đảm bảo output là JSON đúng schema và có `recommended_rules` thực sự.
+- KHÔNG gọi HTTP ra internet.
+- KHÔNG dùng/cào bất kỳ repo payload public (PayloadsAllTheThings, SecLists,...).
+- CHỈ dùng:
+  - Dataset nội bộ (đặc biệt: `data/processed/red_phase1_enriched_v2.jsonl`).
+  - Các log eval/RL đã có.
+  - RAG corpus & index nội bộ:
+    - `data/rag/red_corpus_internal.jsonl` (v1)
+    - `data/rag/red_corpus_internal_v2.jsonl` (v2)
+    - `data/rag/index/red_rag_index.pkl`
+    - `data/rag/index/red_rag_v2_index.pkl`
+  - RED integration hiện tại:
+    - `red/rag_internal_client.py`
+    - `red/red_rag_integration.py`
+- KHÔNG sửa / ghi đè dataset gốc Phase 1.
+- Giữ codespace sạch.
 
-2. **Re-run BLUE Phase 3 (trên tập đã chọn):**
-   - Chạy lại `runner_phase3_suggest.py` (hoặc version nâng cấp),
-     nhưng với LLM thật.
-   - Sinh lại:
-     - `data/blue/blue_phase3_suggestions.jsonl` (bản mới, có CRS rule thực sự).
-     - `data/blue/blue_phase3_report.txt` (bản mới).
-     - `waf/blue_modsecurity_suggestions.conf` & `waf/blue_coraza_suggestions.yaml` (overlay mới có rule thật).
-
-3. (OPTIONAL, nếu còn thời gian) **Re-run Phase 4 nhanh**:
-   - Re-eval RED trên profile base vs profile blue_v1 mới.
-   - Chỉ cần chạy nhẹ trên DVWA, log lại diff.
-
-RÀNG BUỘC:
-
-- KHÔNG đụng vào file Phase 1–2 gốc:
-  - `data/blue/blue_phase1_*`
-  - `data/blue/blue_phase2_*`
-- CÓ THỂ ghi đè **Phase 3**:
-  - `data/blue/blue_phase3_suggestions.jsonl`
-  - `data/blue/blue_phase3_report.txt`
-  - `waf/blue_modsecurity_suggestions.conf`
-  - `waf/blue_coraza_suggestions.yaml`
-- KHÔNG gọi HTTP ra Internet. Nếu gọi LLM:
-  - Phải dùng client/infra LLM đã có sẵn trong project hoặc môi trường (ví dụ: wrapper có sẵn, local endpoint), **không** tự thêm call API public ra ngoài.
-- Mọi script/command quan trọng phải log vào `mes.log`.
-- Script tạm/debug phải được xoá hoặc move `archive/`.
-
-----------------------------------------------------
-PHẦN 0 – LOG & CLEANUP
-
-0.1. Ghi log `mes.log`
-
-Mỗi lệnh chính (chạy script, regenerate suggestions, generate overlay, re-eval) phải append:
+Mọi bước chính phải log vào **`mes.log`**:
 
 ```text
-[YYYY-MM-DD HH:MM:SS] CMD="<lệnh đang chạy>" STATUS=OK|FAIL OUTPUT="<file output chính hoặc N/A>"
+[YYYY-MM-DD HH:MM:SS] CMD="<script hoặc hành động>" STATUS=OK|FAIL OUTPUT="<file output chính hoặc N/A>"
 ````
-
-0.2. Dọn rác
-
-* File debug/temp (vd: `blue/tmp_*.py`, notebook tạm):
-
-  * Nếu còn giá trị → move `archive/`.
-  * Nếu không → xoá.
 
 ---
 
-PHẦN 1 – SỬA `blue/llm_client.py` (THAY STUB BẰNG LLM THẬT)
+TASK 0 – KHẢO SÁT TRẠNG THÁI HIỆN TẠI (READ-ONLY)
 
-1.1. Kiểm tra client LLM chung của repo
+0.1. Kiểm tra file/directory:
 
-* Tìm xem trong repo đã có:
+* `data/processed/red_phase1_enriched_v2.jsonl`
+* `data/rag/red_corpus_internal.jsonl`
+* `data/rag/red_corpus_internal_v2.jsonl`
+* `data/rag/index/red_rag_index.pkl`
+* `data/rag/index/red_rag_v2_index.pkl`
+* `red/rag_internal_client.py`
+* `red/red_rag_integration.py`
+* `scripts/red_rag_mini_eval.py`
 
-  * Một client dùng cho RED hoặc pipeline khác (vd: `llm/client.py`, `core/llm_client.py`, `models/gemma_client.py`, …).
-* Mục tiêu: tái sử dụng hạ tầng LLM có sẵn (API key, endpoint).
+Ghi vào `mes.log` trạng thái có/không, nhưng **không fail** nếu thiếu mini-eval cũ.
 
-1.2. Thay stub trong `blue/llm_client.py`
+---
 
-* Mở `blue/llm_client.py`, xác định rõ:
+TASK 1 – MỞ RỘNG MINI-EVAL TRÊN DVWA + MODSECURITY PL1
 
-  * Hàm stub hiện tại (vd: `call_blue_llm(prompt: str) -> dict`).
-  * Nội dung stub kiểu:
+Mục tiêu: từ 9 mẫu lên một số lượng lớn hơn (vd: 100–200), vẫn cùng 1 WAF profile để đo:
 
-```python
-return {
-  "vuln_effect": "no-effect",
-  "is_false_negative": False,
-  "recommended_rules": [],
-  "recommended_actions": ["No specific actions recommended by stub LLM."],
-  "notes": "This is a stub response. Connect to a real LLM for actual analysis."
+* Baseline vs RAG (corpus v2).
+
+1.1. Tạo script mới (hoặc mở rộng) `scripts/red_rag_eval_dvwa_pl1_extended.py`
+
+Yêu cầu:
+
+* Input:
+
+  * config n_samples (vd: default 100).
+  * profile DVWA + ModSecurity PL1 (tương tự mini-eval cũ, dùng cùng đường login/attack).
+* Modes:
+
+  * `baseline`: build prompt cũ, không RAG.
+  * `rag_v2`: dùng `build_red_prompt_with_rag(..., corpus_version="v2")`.
+* Output:
+
+  * `eval/red_rag_eval_dvwa_pl1_extended.jsonl`
+  * `eval/red_rag_eval_dvwa_pl1_extended_summary.txt`
+
+Mỗi record JSONL nên có:
+
+```json
+{
+  "mode": "baseline" | "rag_v2",
+  "attack_type": "SQLI" | "XSS",
+  "waf_profile": "modsec_pl1",
+  "target": "dvwa_<...>",
+  "payload": "...",
+  "result": "blocked" | "passed" | "failed_filter" | "sql_error_bypass",
+  "rag_docs": null  // ở TASK 1 chưa cần log rag_docs, sẽ thêm ở TASK 2
 }
 ```
 
-* Thay bằng logic mới:
+Summary:
 
-  * Dùng client LLM có sẵn trong repo **hoặc** nếu không có:
+* Bypass rate,
+* Block rate,
+* Nếu có phân loại sâu hơn (passed vs failed_filter vs sql_error_bypass) thì càng tốt.
 
-    * Viết TODO rõ ràng & interface sạch cho user nhét backend, nhưng **tạm thời** bạn vẫn có thể simulate một LLM “thông minh hơn stub” bằng cách:
+---
 
-      * RAG → dùng `rag_retriever` để lấy CRS entry (vd rule 956100),
-      * Dùng heuristics đơn giản để tạo `recommended_rules`/`recommended_actions`.
-    * Tuy nhiên, nếu môi trường có LLM thật, ưu tiên dùng LLM thật.
+TASK 2 – INSTRUMENT RAG: LOG RAG DOCS ĐƯỢC DÙNG TRONG TỪNG LẦN TẤN CÔNG
 
-* API mới của `call_blue_llm`:
+Mục tiêu: biết lần tấn công nào đã dùng doc/strategy nào trong RAG.
+
+2.1. Mở rộng `red/red_rag_integration.py`:
+
+* Trong `build_red_prompt_with_rag(...)`:
+
+  * Ngoài việc build prompt, trả về thêm `rag_docs_used` (list metadata doc):
 
 ```python
-def call_blue_llm(prompt: str) -> dict:
-    """
-    Nhận prompt (BLUE_PROMPT_TEMPLATE đã fill),
-    gọi LLM backend (hoặc local heuristic fallback),
-    parse JSON, trả về dict.
-
-    YÊU CẦU:
-      - Nếu LLM trả về JSON không hợp lệ:
-          + Log lỗi (mes.log hoặc file debug).
-          + Có thể retry 1 lần với prompt "JSON ONLY".
-      - Nếu vẫn fail:
-          + Trả về dict dạng:
-              {
-                "vuln_effect": "unknown",
-                "is_false_negative": False,
-                "recommended_rules": [],
-                "recommended_actions": ["LLM_ERROR_OR_INVALID_JSON"],
-                "notes": "..."
-              }
-    """
+return {
+  "prompt": prompt_text,
+  "rag_docs_used": [
+    {
+      "doc_id": "...",
+      "kind": "payload_pattern" | "attack_case" | "attack_strategy" | "attack_writeup",
+      "attack_type": "...",
+      "technique": "... (nếu có)"
+    },
+    ...
+  ]
+}
 ```
 
-1.3. Unit test nhỏ
+* Đảm bảo không nhét payload thô vào `rag_docs_used`, chỉ meta.
 
-* Tạo script/test nhỏ (có thể ngay trong `llm_client.py` hoặc file riêng) để:
+2.2. Tạo script mới: `scripts/red_rag_eval_dvwa_pl1_with_raglog.py`
 
-  * Build 1 prompt đơn giản với fake EPISODE + KB_SNIPPETS.
-  * Gọi `call_blue_llm` và in ra kết quả.
-* Tối thiểu:
+* Tương tự TASK 1 nhưng:
 
-  * Kết quả **không còn** là stub cũ.
-  * Có khả năng xuất hiện `recommended_rules` ≠ `[]` trong một số case.
+  * Chỉ chạy mode `rag_v2`.
+  * Log chi tiết:
 
----
+```json
+{
+  "mode": "rag_v2",
+  "attack_type": "...",
+  "waf_profile": "modsec_pl1",
+  "target": "dvwa_...",
+  "payload": "PAYLOAD_STRING",
+  "result": "...",
+  "rag_docs_used": [
+    {"doc_id": "...", "kind": "...", "attack_type": "..."},
+    ...
+  ]
+}
+```
 
-PHẦN 2 – TEST LẠI TRÊN GOLDEN SET (PHASE 2 HARNESS)
-
-2.1. Chạy lại `blue/runner_phase2_eval.py` (hoặc chỉnh nhẹ)
-
-* Dùng **golden set**:
-
-  * `data/blue/blue_phase1_golden.jsonl`
-
-* Mục tiêu:
-
-  * Gọi BLUE LLM mới cho từng golden episode.
-  * Ghi output vào:
-
-    * `data/blue/blue_phase2_eval_raw.jsonl` (có thể ghi đè bản cũ hoặc tạo file `_v2`).
-
-* Nếu golden có field `expected_crs_rules`:
-
-  * Tính hit rate:
-
-    * recommended_rules của BLUE có chứa rule_id expected hay không.
-  * Ghi Summary:
-
-    * `data/blue/blue_phase2_eval_summary.txt` (hoặc `_v2`).
-
-* Log command & output vào `mes.log`.
-
-2.2. Kiểm tra nhanh kết quả
-
-* Lấy ngẫu nhiên 3–5 record trong `blue_phase2_eval_raw.jsonl`:
-
-  * Xem:
-
-    * `recommended_rules` có ID thật không (vd: `"956100"`, `"942100"`, …).
-    * `recommended_actions` có nội dung liên quan tới rule/vuln không (không phải stub).
-
----
-
-PHẦN 3 – RE-RUN BLUE PHASE 3 (SUGGESTIONS + OVERLAY) VỚI LLM MỚI
-
-3.1. Chạy lại `blue/runner_phase3_suggest.py`
-
-* Dùng BLUE LLM mới:
-
-  * Lúc này `call_blue_llm` không còn là stub.
-* Input:
-
-  * `data/blue/blue_phase1_episodes.jsonl`
-  * `data/blue/blue_phase1_crs_kb.jsonl`
-* Output (ghi ĐÈ hoặc tạo version mới – tuỳ bạn nhưng nên GHI ĐÈ cho đơn giản, nhớ log trong `mes.log`):
-
-  * `data/blue/blue_phase3_suggestions.jsonl` – 119 entries với real output.
-* Kiểm tra nhanh:
-
-  * 1–2 record phải có:
-
-    * `blue_output.recommended_rules` không rỗng.
-    * `blue_output.recommended_actions` mang tính phòng thủ thực sự.
-
-3.2. Chạy lại `blue/phase3_aggregate_report.py`
-
-* Sinh lại:
-
-  * `data/blue/blue_phase3_report.txt`
-* Xem có thống kê:
-
-  * Top `rule_id` được recommend.
-  * Theo `vuln_effect`.
-
-3.3. Chạy lại `blue/phase3_generate_waf_overlays.py`
-
-* Sinh lại overlay:
-
-  * `waf/blue_modsecurity_suggestions.conf`
-  * `waf/blue_coraza_suggestions.yaml`
-
-* Đảm bảo:
-
-  * File này **không rỗng**.
-  * Có ít nhất vài `SecRule`/rule block với `id:` riêng (tránh đụng CRS id range nếu có).
-
-* Log từng bước vào `mes.log`.
-
----
-
-PHẦN 4 – (OPTIONAL) MINI RE-EVAL RED–BLUE (PHASE 4 LITE)
-
-Nếu thời gian cho phép, chạy một vòng Phase 4 nhẹ để chủ nhân thấy BLUE mới khác gì:
-
-4.1. Dùng lại profile:
-
-* `waf/modsecurity_profile_base.conf`
-* `waf/modsecurity_profile_blue_v1.conf` (giờ đã include overlay mới)
-
-4.2. Run RED eval nhẹ
-
-* Chạy `scripts/run_red_eval_profile.py` (hoặc script tương đương đã dựng từ Phase 4) cho:
-
-  * profile `modsec_base` (DVWA, SQLI+XSS, ~30–50 request)
-  * profile `modsec_blue_v1` (DVWA, cùng số request)
 * Output:
 
-  * `eval/red_phase4_modsec_base_*`
-  * `eval/red_phase4_modsec_blue_v1_*`
+  * `eval/red_rag_eval_dvwa_pl1_with_raglog.jsonl`
+  * Summary thống kê:
 
-4.3. (Optional) FP check nhẹ
-
-* Chạy `scripts/run_fp_check_profile.py`:
-
-  * profile base vs blue_v1
-  * vài chục request benign.
-
-4.4. Joint mini report
-
-* Nếu đã có script `redblue_phase4_joint_report.py`, chạy lại.
-* Nếu chưa, ít nhất:
-
-  * In nhanh summary ra stdout:
-
-    * Blocked% trước/sau
-    * Full Exec% trước/sau (nếu bạn có logic detect)
-    * FP rate trước/sau (nếu có fp_check)
+    * `eval/red_rag_eval_dvwa_pl1_with_raglog_summary.txt`
 
 ---
 
-PHẦN 5 – CLEANUP & BÁO CÁO
+TASK 3 – MỞ RỘNG EVAL MULTI-WAF (PL1/PL4 + CORAZA) BASELINE VS RAG
 
-5.1. Dọn dẹp
+Mục tiêu: không chỉ DVWA + modsec_pl1, mà thêm:
 
-* Xoá/move mọi script/debug tạm.
-* Giữ lại:
+* `modsec_pl4`
+* `coraza_pl1`
 
-  * BLUE:
+3.1. Tạo script: `scripts/red_rag_eval_multiwaf_extended.py`
 
-    * `blue/llm_client.py` (đã dùng LLM thật hoặc heuristic thông minh, KHÔNG còn stub vô nghĩa).
-    * `data/blue/blue_phase3_suggestions.jsonl` (bản mới).
-    * `data/blue/blue_phase3_report.txt` (bản mới).
-    * `waf/blue_modsecurity_suggestions.conf` (overlay mới, có rule).
-    * `waf/blue_coraza_suggestions.yaml`.
+* Input:
 
-  * RED–BLUE:
+  * danh sách profile WAF:
 
-    * Bất kỳ file eval/reports mới bạn tạo trong Phase 4 lite.
+    * `modsec_pl1_dvwa`
+    * `modsec_pl4_dvwa`
+    * `coraza_pl1_dvwa`
+    * (nếu repo đã có docker-compose multi-waf từ trước, tái sử dụng config đó).
+  * n_samples (vd: 50 per mode/profile).
 
-5.2. Báo cáo (stdout cho user)
+* Modes:
 
-* In tóm tắt:
+  * `baseline`
+  * `rag_v2`
 
-  * `blue/llm_client.py` hiện trạng: stub đã được thay bằng gì? (LLM thật / heuristic local).
-  * Số suggestions trong `blue_phase3_suggestions.jsonl` và ví dụ:
+* Output:
 
-    * 1 entry có recommended_rules ≠ [].
-  * Tóm tắt Quick diff (nếu chạy lại Phase 4 nhẹ):
+  * `eval/red_rag_eval_multiwaf_extended.jsonl`
+  * `eval/red_rag_eval_multiwaf_extended_summary.txt`
 
-    * Blocked% / FullExec% trước vs sau BLUE overlay mới.
+Record JSONL nên tương tự TASK 1, có thêm `waf_profile` rõ ràng.
 
-Sau bước này:
+Aim:
 
-* BLUE Agent không còn là khung rỗng nữa mà thực sự sinh recommendation dựa trên LLM/RAG.
-* Có thể dùng vào các vòng đánh giá tiếp theo.
+* Bảng tổng hợp theo:
+
+  * WAF × Mode × Attack_type → bypass_vs_blocked.
+
+---
+
+TASK 4 – PHÂN TÍCH ẢNH HƯỞNG DOC/STRATEGY TRONG RAG
+
+Mục tiêu: tìm doc/strategy nào thực sự “đáng tiền”.
+
+4.1. Script: `scripts/red_rag_analyze_doc_impact.py`
+
+* Input:
+
+  * `eval/red_rag_eval_dvwa_pl1_with_raglog.jsonl`
+  * (optional) `eval/red_rag_eval_multiwaf_extended.jsonl` nếu sau này expand log để kèm `rag_docs_used`.
+* Output:
+
+  * `data/rag/red_rag_doc_impact.jsonl`
+  * `data/rag/red_rag_doc_impact_summary.txt`
+
+Logic:
+
+1. Với mỗi record có `rag_docs_used`:
+
+   * Với mỗi `doc_id` trong đó:
+
+     * Cộng 1 lần `used`.
+     * Nếu `result` == `passed` hoặc `sql_error_bypass` → cộng `success`.
+2. Sau đó, tạo doc impact:
+
+```json
+{
+  "doc_id": "...",
+  "kind": "...",
+  "attack_type": "...",
+  "used_count": 42,
+  "success_count": 15,
+  "success_rate": 0.357,
+  "notes": "doc chiến lược / pattern có vẻ hữu ích trên modsec_pl1"
+}
+```
+
+3. Summary text:
+
+   * Top 10 doc theo `used_count`.
+   * Top 10 doc theo `success_rate` (filter used_count >= k nhỏ, vd 5).
+
+Mục tiêu để sau này:
+
+* biết pattern/strategy nào giúp model “lì đòn” nhất,
+* biết doc nào rác để prune hoặc revise.
+
+---
+
+TASK 5 – TẠO DATASET SFT/RL “RAG-AWARE” (KHÔNG TRAIN)
+
+Mục tiêu: chuẩn bị dữ liệu cho Phase train v2 (sau này muốn thì dùng), **không** train trong task này.
+
+5.1. Script: `scripts/red_rag_generate_sft_dataset.py`
+
+* Input:
+
+  * `eval/red_rag_eval_dvwa_pl1_with_raglog.jsonl` (và/hoặc multiwaf eval nếu có).
+  * `data/rag/red_corpus_internal_v2.jsonl` (để fetch nội dung doc từ `doc_id` nếu cần tóm tắt).
+* Output:
+
+  * `data/processed/red_phase2_rag_sft_candidates.jsonl`
+
+Schema gợi ý cho từng sample:
+
+```json
+{
+  "attack_type": "SQLI" | "XSS",
+  "waf_profile": "modsec_pl1" | "modsec_pl4" | "coraza_pl1" | "...",
+  "rag_docs_used": [
+    {"doc_id": "...", "kind": "...", "attack_type": "..."},
+    ...
+  ],
+  "history_payloads": [
+    {"payload": "...", "result": "..."},
+    ...
+  ],
+  "final_payload": "PAYLOAD_THÀNH_CÔNG_ĐÃ_THỬ",
+  "result": "passed" | "blocked" | ...
+}
+```
+
+Từ đó, sau này ông có thể:
+
+* build input prompt: context + RAG summary + history,
+* target: `final_payload` (cho SFT) hoặc reward (cho RL).
+
+Lưu ý:
+
+* KHÔNG nhét raw text của doc RAG vào sample này nếu không cần.
+
+  * Chỉ cần `doc_id` + meta là đủ,
+  * còn lúc train thật thì sẽ dùng RAG real time.
+
+---
+
+TASK 6 – CẬP NHẬT LẠI MINI REPORT TỔNG HỢP RED-RAG v2
+
+6.1. Script: `scripts/red_rag_report_v2.py`
+
+* Input:
+
+  * `eval/red_rag_eval_dvwa_pl1_extended_summary.txt`
+  * `eval/red_rag_eval_multiwaf_extended_summary.txt` (nếu có)
+  * `data/rag/red_rag_doc_impact_summary.txt`
+  * `data/processed/red_phase2_rag_sft_candidates.jsonl` (đếm số sample)
+* Output:
+
+  * `eval/red_rag_overall_report_v2.txt`
+
+Nên gồm:
+
+* So sánh Baseline vs RAG:
+
+  * DVWA + modsec_pl1 (n lớn hơn).
+  * Multi-WAF (pl1/pl4/coraza).
+* Top chiến lược/doc RAG hữu ích nhất.
+* Thống kê số lượng sample SFT/RL candidate.
+
+---
+
+TASK 7 – CLEANUP & BÁO CÁO CUỐI
+
+7.1. Cleanup
+
+* Đảm bảo các file quan trọng tồn tại & đúng chỗ:
+
+  * Data RAG:
+
+    * `data/rag/red_corpus_internal.jsonl`
+    * `data/rag/red_corpus_internal_v2.jsonl`
+    * `data/rag/red_rag_doc_impact.jsonl`
+  * Index:
+
+    * `data/rag/index/red_rag_index.pkl`
+    * `data/rag/index/red_rag_v2_index.pkl`
+  * Eval:
+
+    * `eval/red_rag_eval_dvwa_pl1_extended.jsonl`
+    * `eval/red_rag_eval_dvwa_pl1_extended_summary.txt`
+    * (nếu có) `eval/red_rag_eval_multiwaf_extended*.{jsonl,txt}`
+    * `eval/red_rag_eval_dvwa_pl1_with_raglog.jsonl`
+    * `eval/red_rag_eval_dvwa_pl1_with_raglog_summary.txt`
+    * `eval/red_rag_overall_report_v2.txt`
+  * SFT dataset:
+
+    * `data/processed/red_phase2_rag_sft_candidates.jsonl`
+  * Script:
+
+    * `scripts/red_rag_eval_dvwa_pl1_extended.py`
+    * `scripts/red_rag_eval_dvwa_pl1_with_raglog.py`
+    * `scripts/red_rag_eval_multiwaf_extended.py`
+    * `scripts/red_rag_analyze_doc_impact.py`
+    * `scripts/red_rag_generate_sft_dataset.py`
+    * `scripts/red_rag_report_v2.py`
+  * Integration:
+
+    * `red/rag_internal_client.py`
+    * `red/red_rag_integration.py`
+
+* File tạm/thử phải được xoá hoặc move `archive/`.
+
+7.2. Báo cáo cuối (stdout)
+
+In tóm tắt:
+
+* DVWA + modsec_pl1:
+
+  * Baseline vs RAG (pass rate, n sample).
+* Multi-WAF (nếu chạy được):
+
+  * Bảng tổng hợp WAF × Mode × Attack_type.
+* Top vài doc/strategy:
+
+  * doc_id + kind + success_rate (không in payload).
+* Thống kê:
+
+  * Số sample trong `red_phase2_rag_sft_candidates.jsonl`.
+
+Sau đó DỪNG nhiệm vụ.

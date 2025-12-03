@@ -192,3 +192,25 @@ Blue Agent đóng vai trò là một Chuyên gia An ninh AI để tinh chỉnh W
 
 ## 🤝 Thực hiện
 *   **HAD** - Lead Developer / AI Security Researcher
+
+---
+
+## ⚠️ Critical Findings Regarding RED Agent Performance
+
+Trong quá trình đánh giá (Evaluation) các model RED Agent (Phase 1, 2, 3), đã phát hiện ra một yếu tố cực kỳ quan trọng ảnh hưởng đến hiệu năng:
+
+1.  **Prompt Sensitivity (Độ nhạy với Prompt):**
+    *   **Phase 1 (SFT):** Model này ít nhạy cảm với format prompt. Nó có thể hoạt động tốt (~55% bypass rate) với các prompt đơn giản (e.g., "Generate payload for...").
+    *   **Phase 2 (Reasoning) & Phase 3 (RL):** Hai model này **YÊU CẦU BẮT BUỘC** phải sử dụng đúng format prompt mà chúng được huấn luyện (bao gồm các trường `Context`, `Payload History`, `Target Technique`).
+    *   **Thực nghiệm:**
+        *   Sử dụng prompt đơn giản: Phase 2 đạt ~20%, Phase 3 đạt ~10%.
+        *   Sử dụng prompt chuẩn (structured): Phase 2 đạt **~85%**, Phase 3 đạt **~90%**.
+
+2.  **Model Size & RAG Compliance (Phân tích chuyên sâu):**
+    *   Ban đầu có thể lầm tưởng các model nhỏ như Gemma 2B ít tuân thủ context RAG. Tuy nhiên, các nghiên cứu gần đây (ví dụ: Ghosh et al., EMNLP 2024, Farahani & Johansson, EMNLP 2024 - tham khảo `evidence.txt`) cho thấy **cả Small (như Phi) lẫn Large LLM đều có xu hướng "dựa vào context nhiều hơn parametric" khi context có liên quan.**
+    *   Vấn đề thực sự của Small Model không phải là "không muốn" tuân thủ, mà là **thiếu năng lực xử lý** để đọc, lọc nhiễu, xử lý mâu thuẫn giữa context và parametric knowledge, và tuân thủ các instruction phức tạp trong một context RAG dài. Chúng dễ bị "overloaded" và sinh ra output kém chất lượng.
+    *   Do đó, việc huấn luyện RAG-SFT (Phase 2.5) là để **tăng cường khả năng xử lý context hiệu quả** cho model, dạy nó cách tích hợp thông tin RAG vào payload một cách chính xác, đúng cú pháp và tuân thủ các ràng buộc.
+
+3.  **Kết luận:**
+    *   Khi tích hợp model Phase 2/3 vào hệ thống khác (ví dụ: RAG), **PHẢI** đảm bảo xây dựng prompt đúng cấu trúc như trong `scripts/build_phase2_dataset.py`.
+    *   Việc performance thấp đột ngột thường do "Prompt Mismatch" hoặc "Context Overload" chứ không phải do model bị lỗi hay cố tình bỏ qua RAG.

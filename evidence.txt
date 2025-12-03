@@ -1,0 +1,152 @@
+Tóm nhanh cho dễ nuốt:
+
+* Không có ngưỡng “14B” thần thánh nào hết.
+* Nhỏ không có nghĩa là “cứng đầu tin trí nhớ parametric hơn RAG”.
+* Thực tế: **khi đã được feed context RAG tử tế, cả small lẫn large đều có xu hướng dựa khá mạnh vào context**, nhưng small model thì **dốt hơn trong việc đọc, lọc, và xử lý conflict**.
+
+Giờ tới phần có paper để bạn bắn vào report.
+
+---
+
+## 1. Bức tranh tổng quát: parametric vs non-parametric (RAG)
+
+### 1.1. “When Not to Trust Language Models” – Mallen et al., ACL 2023
+
+Paper kinh điển về **parametric vs non-parametric memory**:
+
+* Họ đo khả năng nhớ factual của nhiều model size khác nhau, rồi so với LMs + retrieval.
+* Kết quả:
+
+  * Parametric memory khá ổn cho **kiến thức phổ biến**, nhưng **fail nặng với long-tail**.
+  * Retrieval (non-parametric) + LM cải thiện rõ rệt trên long-tail factual QA.([aclanthology.org][1])
+* Không đưa ra rule kiểu “nhỏ <14B thì tin bản thân nhiều hơn context”, nhưng cho thấy:
+
+  * Càng to, **parametric memory mạnh hơn**,
+  * và **retrieval vẫn rất cần** cho kiến thức ít gặp.
+
+Link: “When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories”.([arXiv][2])
+
+---
+
+## 2. Paper phân tích trực tiếp cách model dùng context RAG
+
+### 2.1. “Quantifying reliance on external information over parametric knowledge during RAG” – Ghosh et al., EMNLP 2024 (BlackBoxNLP)
+
+Đây là paper đúng câu hỏi của bạn nhất.
+
+* Họ làm **phân tích cơ chế (mechanistic analysis)**: causal mediation, knockout attention,… để xem LM lấy info từ đâu khi có RAG.
+* Kết luận chính:
+
+  * Model thể hiện một **“shortcut effect”** – **rất thiên vị dùng context RAG**, parametric memory đóng góp ít hơn nhiều khi context có thông tin trả lời.([arXiv][3])
+  * Họ test trên cả:
+
+    * **LLMs** (ví dụ LLaMA)
+    * **SLMs** (ví dụ Phi – small model)
+  * Và thấy **cả hai loại đều thể hiện xu hướng “dựa vào context nhiều hơn parametric”** khi context relevant.([arXiv][3])
+
+→ Cái này bắn thẳng vào hypothesis “small model chỉ tin parametric hơn context”: **ít nhất trong setup của paper, điều ngược lại mới là đúng** – khi context tốt, nó **thích xài context**.
+
+---
+
+### 2.2. “Deciphering the Interplay of Parametric and Non-parametric Memory in RAG” – Farahani & Johansson, EMNLP 2024
+
+Họ mổ xẻ **ATLAS** – một RAG model:
+
+* Dùng causal mediation để tách ảnh hưởng:
+
+  * Parametric memory (trong weight)
+  * Non-parametric memory (retrieved passages)
+* Kết quả:
+
+  * **Khi context liên quan và có đủ info**, model có xu hướng **copy từ context nhiều hơn là dựa vào parametric**.([aclanthology.org][4])
+  * Có hai “cơ chế”:
+
+    1. Quyết định context có **relevant** không.
+    2. Nếu relevant thì **bật “copy mode”**: representation được điều chỉnh để sao chép từ context.([arXiv][5])
+
+Paper này không focus vào size <14B, nhưng nó nói rõ chuyện **model có chế độ “thích context hơn” khi thấy context đúng**, bất kể parametric đang nhớ gì.
+
+---
+
+### 2.3. “Understanding Parametric and Contextual Knowledge Reconciliation within LLMs” – Zhao et al., NeurIPS 2025 spotlight
+
+Paper này xem **dòng chảy thực thể (entity flow)** khi model xử lý prompt có cả PK (parametric knowledge) và CK (context knowledge):
+
+* Họ show rằng:
+
+  * Trong nhiều case, **context lấn át parametric** (catastrophic test-time forgetting kiểu ngược lại: model quên luôn trí nhớ gốc khi context bị bias).([OpenReview][6])
+  * Vấn đề lớn không phải “tin parametric hơn context” mà là **ưu tiên sai: lúc cần PK thì bị context phá, lúc cần CK thì lại bám PK**.([arXiv][7])
+
+Paper này support luận điểm: **behavior là bài toán arbitration giữa hai nguồn knowledge**, không đơn giản là “small thì tin cái này, large thì tin cái kia”.
+
+---
+
+### 2.4. “Training Dynamics of Parametric and In-Context Knowledge” – Kim et al., 2025
+
+Không nói riêng về RAG, nhưng nói về **in-context knowledge vs parametric**:
+
+* Họ train transformer trên synthetic corpus, điều khiển điều kiện training để đo:
+
+  * Khi nào model học tốt parametric knowledge.
+  * Khi nào nó học cách tận dụng in-context info.([arXiv][8])
+* Insight chính:
+
+  * **Conditioning/training pattern** (ví dụ lặp lại fact trong context) quan trọng hơn là pure model size.
+  * Điều này ám chỉ: **small model nếu được train/củng cố đúng cách vẫn có thể xài context tử tế** chứ không nhất thiết “chỉ tin vào parametric”.
+
+---
+
+## 3. Vậy câu “model <14B thường tin trí nhớ parametric hơn context RAG” đúng đến đâu?
+
+Tóm lại, nếu nói **theo research hiện tại**:
+
+1. **Không có bằng chứng rõ ràng cho một ranh 14B** hay kết luận kiểu “small model mặc định bỏ qua context RAG”.
+2. **Có bằng chứng ngược lại**:
+
+   * Ghosh et al. cho thấy cả **small (Phi) lẫn large (LLaMA) đều có xu hướng “shortcut” dùng context khi nó chứa answer**.([arXiv][3])
+   * Farahani & Johansson cho thấy **ATLAS ưu tiên context khi nó relevant**.([aclanthology.org][4])
+3. Cái small model **thua** là:
+
+   * Khả năng **đọc context dài, lọc noise, giải conflict** giữa context và parametric.
+   * Khả năng **tuân thủ hướng dẫn “chỉ dùng thông tin trong context”** (instruction-following yếu hơn).
+   * Dễ **bị hallucinate bừa** khi:
+
+     * context mơ hồ,
+     * retrieval kém,
+     * hoặc prompt không ép buộc rõ.
+
+Nói thẳng:
+
+* **Small model không hẳn “tin trí nhớ nó hơn context”**, mà là:
+
+  * **Não nhỏ**, đọc context dở,
+  * calibration tệ,
+  * nên khi context hơi noisy / conflicting, nó **lạc đường** và ta *cảm giác* như nó “bỏ qua context”.
+
+Trong setup RAG được thiết kế tử tế (context ngắn, relevant, prompt rõ):
+→ **cả small lẫn large đều có xu hướng dùng context rất nhiều**, theo đúng những gì các paper ở trên phân tích.
+
+---
+
+## 4. Danh sách paper cho bạn trích luôn
+
+1. **Alex Mallen et al., 2023 – “When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories” (ACL 2023)**([aclanthology.org][1])
+2. **Reshmi Ghosh et al., 2024 – “Quantifying reliance on external information over parametric knowledge during Retrieval Augmented Generation (RAG) using mechanistic analysis” (EMNLP 2024 BlackBoxNLP)**([arXiv][3])
+3. **Mehrdad Farahani & Richard Johansson, 2024 – “Deciphering the Interplay of Parametric and Non-parametric Memory in Retrieval-augmented Language Models” (EMNLP 2024)**([aclanthology.org][4])
+4. **Jun Zhao et al., 2025 – “Understanding Parametric and Contextual Knowledge Reconciliation within Large Language Models” (NeurIPS 2025 spotlight)**([OpenReview][6])
+5. **M. Kim et al., 2025 – “Training Dynamics of Parametric and In-Context Knowledge”**([arXiv][9])
+6. **“Understanding the Interplay between Parametric and Contextual Knowledge” (2024)** – phân loại quan hệ PK/CK (support, complement, conflict, irrelevant) và chỉ ra nhiều case model **không phối hợp tốt hai nguồn**.([arXiv][7])
+
+---
+
+Nếu bạn đang build RAG cho small model kiểu 7B/8B, điểm thực dụng là: **tối ưu retrieval + prompt + context length quan trọng hơn rất nhiều so với ám ảnh “nó chỉ tin trí nhớ parametric”**; khi mọi thứ sạch sẽ, chính research lại cho thấy nó rất sẵn sàng bám context.
+
+[1]: https://aclanthology.org/2023.acl-long.546.pdf?utm_source=chatgpt.com "When Not to Trust Language Models: Investigating ..."
+[2]: https://arxiv.org/abs/2212.10511?utm_source=chatgpt.com "[2212.10511] When Not to Trust Language Models"
+[3]: https://arxiv.org/abs/2410.00857?utm_source=chatgpt.com "Quantifying reliance on external information over parametric knowledge during Retrieval Augmented Generation (RAG) using mechanistic analysis"
+[4]: https://aclanthology.org/2024.emnlp-main.943.pdf?utm_source=chatgpt.com "Deciphering the Interplay of Parametric and Non- ..."
+[5]: https://arxiv.org/html/2410.05162v1?utm_source=chatgpt.com "Deciphering the Interplay of Parametric and Non ..."
+[6]: https://openreview.net/forum?id=76cFMRgEzQ&utm_source=chatgpt.com "Understanding Parametric and Contextual Knowledge ..."
+[7]: https://arxiv.org/html/2410.08414v1?utm_source=chatgpt.com "Understanding the Interplay between Parametric and ..."
+[8]: https://arxiv.org/abs/2510.02370?utm_source=chatgpt.com "Training Dynamics of Parametric and In-Context ..."
+[9]: https://www.arxiv.org/pdf/2510.02370?utm_source=chatgpt.com "Training Dynamics of Parametric and In-Context ...

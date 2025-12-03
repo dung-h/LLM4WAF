@@ -1,0 +1,64 @@
+--- RED Phase 1 Gap Analysis ---
+Date: 2025-12-02 22:00:00
+Input Dataset: data/processed/red_v40_balanced_final_v13.jsonl
+Total Samples: 39155
+
+## 1. Phân tích phân phối hiện tại:
+
+### 1.1. Phân loại Attack Type:
+- XSS: ~52%
+- SQLI: ~47.5%
+- OS_INJECTION: ~0.5% (200 mẫu)
+=> **Lỗ hổng:** OS_INJECTION bị underrepresented nghiêm trọng.
+
+### 1.2. Phân loại Technique:
+- **Chiếm ưu thế quá nhiều (> 500 mẫu):**
+    - XSS - XSS Keyword (heuristic): 6961
+    - SQLI - SQLI Keyword (heuristic): 2197
+    - SQLI - Double URL Encode: 1796
+    - SQLI - Triple URL Encode: 1726
+    - XSS - Double URL Encode: 94
+    - XSS - Triple URL Encode: 83
+=> **Lỗ hổng:** Dataset đang bị dominate bởi các technique "heuristic" và "URL encode" đơn giản, có thể khiến model học được cách bypass dễ dàng nhưng không đa dạng.
+
+- **Minority Techniques (<= 20 mẫu):**
+    - Script báo cáo "None found." Điều này có thể do ngưỡng quá cao hoặc các technique khác chưa được phân loại chi tiết. Cần kiểm tra lại các technique có số lượng từ 21-500.
+
+## 2. Mục tiêu làm giàu (Enrichment Goals):
+
+### 2.1. Mục tiêu số lượng:
+- Tổng số mẫu hiện tại: 39155.
+- Mục tiêu: Tăng lên khoảng **45.000 - 50.000 mẫu** để bổ sung các vùng thiếu.
+- Không ghi đè dataset cũ, tạo `data/processed/red_phase1_enriched_v2.jsonl`.
+
+### 2.2. Hướng làm giàu theo Attack Type & Technique:
+
+#### Đối với SQLI:
+- **Tăng cường các biến thể:**
+    - **Boolean-based SQLi:** ' OR 1=1#, ' AND 1=0#, ' OR EXISTS(...)
+    - **Time-based Blind SQLi:** ' AND SLEEP(5)#, ' IF(condition, SLEEP(5), 0)#
+    - **Error-based SQLi:** UPDATE_XML, EXTRACTVALUE (như trong vài payload của RED Agent).
+    - **Stacked Queries:** `'; DROP TABLE users;--` (nếu môi trường hỗ trợ).
+    - **Comment Variations:** `/*!UNION SELECT*/`, `union/*foo*/select`, `union(select)`.
+    - **Character Encoding Mix:** UTF-7, UTF-16, Hexadecimal (0x...).
+    - **GeometryCollection Attacks:** Các biến thể mới của loại này.
+
+#### Đối với XSS:
+- **Tăng cường các biến thể:**
+    - **Event-based XSS:** `onerror`, `onload`, `onmouseover`, `onfocus` (trên các tag khác nhau: `<img>`, `<svg>`, `<body>`, `<iframe>`).
+    - **DOM-based XSS:** Các payload tương tác với DOM.
+    - **Attribute-based XSS:** `<img src="x" onerror="alert(1)">`, `<input onfocus="alert(1)" autofocus>`.
+    - **HTML Entity Encoding:** &#x3C;, &lt;.
+    - **JavaScript Encoding:** `\x3c`, `\u003c`.
+    - **Mixed Encoding:** Kết hợp URL encode, HTML entity, JS escape.
+    - **Pseudo-protocols:** `javascript:alert(1)`, `data:text/html,...`.
+    - **Obfuscation:** Chèn null bytes, whitespace, tab, newlines, case variations.
+
+#### Đối với OS_INJECTION:
+- **Cần bổ sung mạnh:** Hiện chỉ có 200 mẫu. Cần sinh thêm hàng nghìn mẫu.
+    - **Basic Commands:** `& ls -la`, `; cat /etc/passwd`, `| id`.
+    - **Obfuscation:** Base64 encode, hex encode, escape characters (`\x26`, `\x3b`).
+    - **Context Switching:** Pipe output, redirect input/output.
+    - **Command Chaining:** `cmd1 && cmd2`, `cmd1 || cmd2`.
+
+---
