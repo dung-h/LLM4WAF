@@ -15,8 +15,20 @@ Nén và upload các file sau lên server:
 1.  `data/processed/red_phase1_enriched_v2.jsonl` (Phase 1 SFT - **Bản Enriched**)
 2.  `data/processed/red_v40_phase2_reasoning.jsonl` (Phase 2 Reasoning cũ)
 3.  Codebase: Toàn bộ thư mục `scripts/` (đặc biệt `scripts/train_red.py`), `rl/`, `configs/`.
+4.  Files tiện ích: `docker-compose.multiwaf.yml`, `setup_full_env.sh`, `requirements.txt`.
 
-## 3. Script Training Tự Động (One-Click)
+## 3. Setup Môi Trường Tự Động (QUAN TRỌNG)
+
+Sau khi upload code lên server, chạy file này để cài đặt tất cả (Docker, Python, WAF Targets):
+
+```bash
+chmod +x setup_full_env.sh
+./setup_full_env.sh
+```
+
+*Script này sẽ tự động cài Docker, NVIDIA Container Toolkit (nếu cần), dựng môi trường Python, và khởi động các container WAF (ModSecurity, Coraza) để sẵn sàng cho việc test.*
+
+## 4. Script Training Tự Động (One-Click)
 
 Tạo file `run_remote_optimized.sh` trên server:
 
@@ -115,7 +127,7 @@ echo "🎉 DONE! Adapters saved in $OUTPUT_ROOT"
 tar -czvf adapters_optimized_$(date +%Y%m%d).tar.gz $OUTPUT_ROOT
 ```
 
-## 4. Lời khuyên vận hành
+## 5. Lời khuyên vận hành
 
-*   **Flash Attention:** Trên server, nhớ cài `pip install flash-attn --no-build-isolation` để tăng tốc độ train gấp 2-3 lần cho model Qwen/Llama.
-*   **Monitoring:** Mở thêm một terminal chạy `watch -n 1 nvidia-smi` để theo dõi VRAM. Nếu thấy gần full (23xxx MiB), hãy stop và giảm `BATCH_SIZE` xuống 1 ngay lập tức.
+*   **Flash Attention:** Script `setup_full_env.sh` sẽ tự động cài `flash-attn`. Đây là yếu tố sống còn để train 14B nhanh chóng.
+*   **Monitoring:** Mở thêm một terminal chạy `watch -n 1 nvidia-smi` để theo dõi VRAM. Nếu thấy gần full (23xxx MiB), hãy stop và giảm `BATCH_SIZE` xuống 1 ngay lập tức trong script chạy.
