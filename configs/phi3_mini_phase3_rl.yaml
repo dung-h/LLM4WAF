@@ -1,0 +1,14 @@
+# Model
+base_model: "microsoft/Phi-3-mini-4k-instruct"
+adapter_path: "experiments/remote_adapters/experiments_remote_optimized/phase2_reasoning_phi3"
+model_type: "phi3"
+
+# Training
+output_dir: "experiments/phi3_mini_phase3_rl"
+epochs: 50
+batch_size: 1
+lr: 1e-6
+max_new_tokens: 64
+max_context_length: 512
+
+use_auth_token_env: "HF_TOKEN"

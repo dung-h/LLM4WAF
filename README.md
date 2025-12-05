@@ -195,6 +195,22 @@ Blue Agent đóng vai trò là một Chuyên gia An ninh AI để tinh chỉnh W
 
 ---
 
+## 🐛 Known Issues / Troubleshooting
+
+### 1. CUDA Out of Memory (OOM) on 8GB GPUs for Gemma 2B Training
+
+*   **Vấn đề:** Khi fine-tune Gemma 2 2B (kể cả với QLoRA 4-bit), GPU 8GB (ví dụ RTX 3050, 3060, 4060) thường gặp lỗi `CUDA Out of Memory` (`torch.OutOfMemoryError`). Điều này xảy ra ngay cả khi `per_device_train_batch_size` đã giảm xuống 1 và `gradient_accumulation_steps` đã tăng.
+*   **Nguyên nhân:** Model Gemma 2 2B, dù là 2 tỷ tham số, nhưng có kiến trúc phức tạp và `max_seq_length` lớn (đặc biệt cần cho RAG context) đòi hỏi lượng VRAM đáng kể. Cấu hình mặc định (ví dụ `max_seq_length=1024`) quá lớn đối với 8GB VRAM.
+*   **Giải pháp được đề xuất:**
+    *   **Tốt nhất:** Sử dụng GPU có VRAM từ **16GB trở lên** (ví dụ: RTX 3090/4090, A10G, A5000/6000).
+    *   **Tạm thời (nếu chỉ có 8GB VRAM):**
+        *   Giảm `max_seq_length` trong file config (`configs/red_phase2_rag_sft.yaml`) xuống **512 hoặc thậm chí 256**. Tuy nhiên, điều này sẽ làm giảm đáng kể lượng RAG context mà model có thể xử lý, ảnh hưởng đến hiệu quả của RAG.
+        *   Đảm bảo `per_device_train_batch_size` là `1` và `gradient_accumulation_steps` được tăng lên để giữ `effective_batch_size` hợp lý.
+        *   Thử tắt `bnb_4bit_use_double_quant` trong `BitsAndBytesConfig` (mặc dù script `train_red.py` đã đọc từ config file, cần thêm tùy chọn này vào config file nếu muốn điều chỉnh).
+*   **Liên quan đến RAG:** RAG-SFT rất cần `max_seq_length` đủ lớn để chứa RAG context. Việc giảm `max_seq_length` xuống quá thấp sẽ làm giảm hiệu quả của việc fine-tune RAG-SFT.
+
+---
+
 ## ⚠️ Critical Findings Regarding RED Agent Performance
 
 Trong quá trình đánh giá (Evaluation) các model RED Agent (Phase 1, 2, 3), đã phát hiện ra một yếu tố cực kỳ quan trọng ảnh hưởng đến hiệu năng:

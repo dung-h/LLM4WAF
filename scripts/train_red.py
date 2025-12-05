@@ -27,7 +27,7 @@ from transformers import (
     AutoModelForCausalLM,
     BitsAndBytesConfig,
 )
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, PeftModel # Keep PeftModel import for compatibility, though not directly used in this version for initial loading
 from trl import SFTTrainer, SFTConfig
 from transformers import TrainingArguments, TrainerCallback
 
@@ -120,8 +120,15 @@ def main() -> None:
 
     logger.info("Preparing k-bit training and applying DoRA adapters…")
     model = prepare_model_for_kbit_training(model)
-    lora_cfg = build_lora_config(cfg)
-    model = get_peft_model(model, lora_cfg)
+    
+    # CHECK FOR EXISTING ADAPTER TO RESUME/CONTINUE TRAINING
+    if "adapter_path" in cfg and cfg["adapter_path"] and os.path.exists(cfg["adapter_path"]):
+        logger.info(f"🔄 Resuming training from existing adapter: {cfg['adapter_path']}")
+        model = PeftModel.from_pretrained(model, cfg["adapter_path"], is_trainable=True)
+    else:
+        logger.info("🆕 Creating new LoRA adapter...")
+        lora_cfg = build_lora_config(cfg)
+        model = get_peft_model(model, lora_cfg)
 
     # Load datasets
     train_path = cfg["train_path"]
@@ -178,11 +185,13 @@ def main() -> None:
         logging_first_step=True,
         disable_tqdm=False,
         log_level="info",
-        dataloader_pin_memory=False,
-        dataloader_num_workers=0,
+        dataloader_pin_memory=bool(cfg.get("dataloader_pin_memory", True)),
+        dataloader_num_workers=int(cfg.get("dataloader_num_workers", 4)),
+        dataloader_prefetch_factor=int(cfg.get("dataloader_prefetch_factor", 2)),
         ddp_find_unused_parameters=False,
         max_length=int(cfg.get("max_length", 2048)), # Use max_length as per SFTConfig API
         packing=False,
+        group_by_length=bool(cfg.get("group_by_length", True)),
         dataset_text_field="text", # Use the 'text' column we just created
     )
 

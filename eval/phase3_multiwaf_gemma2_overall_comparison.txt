@@ -1,8 +1,0 @@
-WAF                  App        Attack     Blocked    Bypass     FullExec  
-modsecurity_crs      dvwa       SQLI       0.0%       100.0%     0.0%      
-modsecurity_crs      dvwa       XSS        0.0%       100.0%     0.0%      
-coraza_crs           dvwa       SQLI       0.0%       100.0%     0.0%      
-coraza_crs           dvwa       XSS        12.5%      87.5%      0.0%      
-coraza_crs           juice_shop XSS        0.0%       100.0%     0.0%      
-modsecurity_pl4      dvwa       SQLI       0.0%       100.0%     0.0%      
-modsecurity_pl4      dvwa       XSS        0.0%       100.0%     0.0%      

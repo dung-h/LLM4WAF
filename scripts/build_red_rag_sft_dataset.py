@@ -13,7 +13,7 @@ from red.rag_internal_client import get_client
 INPUT_DATASET = "data/processed/red_phase1_enriched_v2.jsonl"
 OUTPUT_DATASET = "data/processed/red_phase2_rag_sft_train.jsonl"
 CORPUS_VERSION = "v2"
-SAMPLES_TO_GENERATE = 10000 
+SAMPLES_TO_GENERATE = 4000 
 
 def build_rag_aware_prompt(attack_type, technique, rag_docs):
     waf_type = "ModSecurity + OWASP CRS 3.3 (PL1)"
