@@ -87,4 +87,16 @@ An Agent might be asked to perform tasks such as:
 
 ---
 
+## 5. External Resources (Adapters)
+
+Use these Google Drive links with `gdown` to download the Phase 2 adapters for remote training setup:
+
+*   **Phi-3 Mini Phase 2 Adapter (`phi3_phase2_adapter.tar.gz`):**
+    *   Link: `https://drive.google.com/file/d/1PBQxNdZyZixf2QgIH9QBkze6SKhaL_x9/view?usp=sharing`
+    *   Command: `gdown 1PBQxNdZyZixf2QgIH9QBkze6SKhaL_x9 -O phi3_phase2_adapter.tar.gz`
+
+*   **Qwen 7B Phase 2 Adapter (`qwen_phase2_adapter.tar.gz`):**
+    *   Link: `https://drive.google.com/file/d/1CW5Q6Sr4BD5S1L14XpoorI_2BGHl6pRG/view?usp=sharing`
+    *   Command: `gdown 1CW5Q6Sr4BD5S1L14XpoorI_2BGHl6pRG -O qwen_phase2_adapter.tar.gz`
+
 This `GEMINI-FAKE.md` file contains the comprehensive context for future tasks related to the LLM4WAF project.
