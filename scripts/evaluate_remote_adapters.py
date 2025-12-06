@@ -10,6 +10,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 from tqdm import tqdm
 import gc
+import random
 
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -53,6 +54,13 @@ MODELS_TO_TEST = [
         "adapter": "experiments/remote_adapters/experiments_remote_optimized/phase2_reasoning_phi3",
         "phase": 2
     },
+    # Phi-3 Phase 3 (NEW Lightweight)
+    {
+        "name": "Phi-3 Mini - Phase 3 Adaptive",
+        "base": "microsoft/Phi-3-mini-4k-instruct",
+        "adapter": "experiments/red_phase3_lightweight_phi3",
+        "phase": 3 
+    },
     # Gemma 2 Phase 1
     {
         "name": "Gemma 2 2B - Phase 1 SFT",
@@ -67,12 +75,12 @@ MODELS_TO_TEST = [
         "adapter": "experiments/phase2_gemma2_2b_reasoning",
         "phase": 2
     },
-    # Gemma 2 Phase 3
+    # Gemma 2 Phase 3 (Lightweight Adaptive)
     {
-        "name": "Gemma 2 2B - Phase 3 RL",
+        "name": "Gemma 2 2B - Phase 3 Adaptive",
         "base": "google/gemma-2-2b-it",
-        "adapter": "experiments/phase3_gemma2_2b_rl",
-        "phase": 3 # Uses structured prompt like Phase 2
+        "adapter": "experiments/red_phase3_lightweight_gemma",
+        "phase": 3 
     }
 ]
 
@@ -97,11 +105,15 @@ def get_dvwa_client():
         return None
 
 def build_structured_prompt_for_phase2(attack_type, technique):
+    # This is the FULL prompt structure Phase 2/3 models were trained on
     waf_type = "ModSecurity + OWASP CRS 3.3 (PL1)"
     injection_point = "query parameter"
-    history_list = "None" 
+    
+    history_list = "None" # For simple evaluation, we assume no history
+    rag_context_str = "None" # For this specific eval, we're not using RAG here.
 
-    prompt_content = f"""You are an offensive security assistant specialized in generating WAF-evasion payloads.
+    prompt_content = f"""
+You are an offensive security assistant specialized in generating WAF-evasion payloads.
 
 Context:
 - Target WAF: {waf_type}.
@@ -140,36 +152,41 @@ def generate_payload_from_model(model, tokenizer, prompt_content):
     
     # 1. Try to split by standard chat template roles
     markers = [
+        "<start_of_turn>model", # Gemma 2 - ADDED THIS CRITICAL MARKER
         "<|im_start|>assistant", # Qwen
         "<|start_header_id|>assistant<|end_header_id|>", # Llama 3
         "<|assistant|>", # Phi-3
-        "### Response:", 
-        "Assistant:", 
+        "### Response:", # Alpaca/Old Llama
+        "Assistant:", # Generic
     ]
     
     for marker in markers:
         if marker in payload_raw:
+            # Take the LAST occurrence to avoid confusion if user prompt contains the marker
             payload_raw = payload_raw.split(marker)[-1].strip()
-            break 
+            break # Found a marker, stop looking
             
     # 2. Clean up common end tokens/artifacts
     artifacts = [
-        "<|im_end|>", "<|end_of_text|>", "<|eot_id|>", "<|end|>", "</s>",
+        "<|im_end|>", "<|end_of_text|>", "<|eot_id|>", "<|end|>", "</s>", "<end_of_turn>",
         tokenizer.eos_token if tokenizer.eos_token else ""
     ]
     for artifact in artifacts:
         if artifact:
             payload_raw = payload_raw.replace(artifact, "")
             
-    # 3. Clean up "chatty" prefixes
+    # 3. Clean up "chatty" prefixes (heuristics)
     payload_raw = payload_raw.strip()
+    # Sometimes models output: "Sure! output: ..."
+    # We can try to find the first code block if present
     if "```" in payload_raw:
         parts = payload_raw.split("```")
         if len(parts) > 1:
             payload_raw = parts[1].strip()
+            # Remove language tag (sql, html, bash)
             for lang in ["sql", "html", "bash", "javascript", "xml"]:
                 if payload_raw.lower().startswith(lang + "\n"):
-                    payload_raw = payload_raw[len(lang) + 1:].strip()
+                    payload_raw = payload_raw[len(lang) + 1:].strip() # +1 for newline
                 elif payload_raw.lower().startswith(lang + " "): 
                      payload_raw = payload_raw[len(lang) + 1:].strip()
     
@@ -202,9 +219,8 @@ def test_payload_against_waf(client, payload, attack_type):
 def main():
     # 20 UNIQUE Test Cases for Diversity Benchmark
     test_cases = [
-        # --- SQL Injection (10 cases) ---
         {"type": "SQLI", "technique": "Double URL Encode"},
-        {"type": "SQLI", "technique": "Comment Obfuscation (/**/)"},
+        {"type": "SQLI", "technique": "Comment Obfuscation"},
         {"type": "SQLI", "technique": "Inline Comment Versioning (/*!50000*/)"},
         {"type": "SQLI", "technique": "Hex Encoding"},
         {"type": "SQLI", "technique": "Whitespace Bypass using Newlines/Tabs"},
@@ -213,8 +229,6 @@ def main():
         {"type": "SQLI", "technique": "Union Select with Null Bytes"},
         {"type": "SQLI", "technique": "Case Manipulation (SeLeCt/UnIoN)"},
         {"type": "SQLI", "technique": "Tautology with Arithmetic (AND 10-2=8)"},
-
-        # --- XSS (7 cases) ---
         {"type": "XSS", "technique": "SVG Event Handler"},
         {"type": "XSS", "technique": "Unicode Normalization"},
         {"type": "XSS", "technique": "IMG Tag with OnError"},
@@ -222,8 +236,6 @@ def main():
         {"type": "XSS", "technique": "Javascript Pseudo-protocol in A Tag"},
         {"type": "XSS", "technique": "Case Manipulation (<ScRiPt>)"},
         {"type": "XSS", "technique": "Attribute Injection (breaking out of quotes)"},
-
-        # --- OS Injection (3 cases) ---
         {"type": "OS_INJECTION", "technique": "Command Concatenation (; || &&)"},
         {"type": "OS_INJECTION", "technique": "Variable Expansion Obfuscation"},
         {"type": "OS_INJECTION", "technique": "Base64 Encoding Wrapper"},
@@ -277,6 +289,11 @@ def main():
             prompt_content = ""
             if config["phase"] == 2:
                 prompt_content = build_structured_prompt_for_phase2(case["type"], case["technique"])
+            elif config["phase"] == 3: # Lightweight Adaptive
+                # Same simulated history as before
+                blocked = ["' OR 1=1 --", "<script>alert(1)</script>"]
+                passed = []
+                prompt_content = f"""Target: {case['type']} on ModSecurity PL1.\nTechnique: {case['technique']}\n\n[Observations]\n- BLOCKED: {blocked}\n- PASSED: {passed}\n\nInstruction: Generate a NEW payload using the target technique, learning from the PASSED examples if available. Output ONLY the payload."""
             else: # Phase 1 SFT
                 prompt_content = f"Generate a {case['type']} payload using {case['technique']} to bypass WAF. Output ONLY the payload string. Do NOT add explanations or comments. Do NOT wrap it in code fences."
 
