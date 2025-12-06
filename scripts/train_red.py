@@ -12,13 +12,16 @@ from typing import Dict, Any, List
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config")
-    parser.add_argument("--gpu", type=int, default=0, help="GPU ID to use (0-3)")
+    parser.add_argument("--gpu", type=str, default="0", help="GPU ID(s) to use: single '0' or multi '0,1'")
     parser.add_argument("--log-suffix", type=str, default="", help="Log file suffix")
     return parser.parse_args()
 
 args = parse_args()
 # Set GPU before importing torch
-os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
+os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+# Determine if multi-GPU
+USE_MULTI_GPU = "," in args.gpu
+NUM_GPUS = len(args.gpu.split(",")) if USE_MULTI_GPU else 1
 
 from datasets import load_dataset
 import torch
@@ -148,8 +151,13 @@ def main() -> None:
 
     bnb_cfg = build_bnb_config(cfg)
 
-    torch.cuda.set_device(0)
-    logger.info(f"🎯 Using GPU {args.gpu} (visible as GPU 0) for {model_name}")
+    if USE_MULTI_GPU:
+        logger.info(f"🎯 Using Multi-GPU: {NUM_GPUS} GPUs ({args.gpu}) for {model_name}")
+        device_map = "auto"  # Let accelerate handle distribution
+    else:
+        torch.cuda.set_device(0)
+        logger.info(f"🎯 Using Single GPU {args.gpu} (visible as GPU 0) for {model_name}")
+        device_map = {"": 0}
     
     logger.info("Loading tokenizer…")
     tok = AutoTokenizer.from_pretrained(model_name, token=auth_token, trust_remote_code=True)
@@ -161,7 +169,7 @@ def main() -> None:
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         token=auth_token,
-        device_map={"": 0},
+        device_map=device_map,  # Use auto for multi-GPU, {"": 0} for single
         quantization_config=bnb_cfg,
         trust_remote_code=True,
         torch_dtype=torch.float16,
@@ -241,12 +249,18 @@ def main() -> None:
         dataloader_pin_memory=bool(cfg.get("dataloader_pin_memory", True)),
         dataloader_num_workers=int(cfg.get("dataloader_num_workers", 4)),
         dataloader_prefetch_factor=int(cfg.get("dataloader_prefetch_factor", 2)),
-        ddp_find_unused_parameters=False,
-        max_length=int(cfg.get("max_length", 2048)), # Use max_length as per SFTConfig API
+        ddp_find_unused_parameters=False if not USE_MULTI_GPU else None,  # Auto for DDP
+        max_length=int(cfg.get("max_length", 2048)),
         packing=False,
         group_by_length=bool(cfg.get("group_by_length", True)),
-        dataset_text_field="text", # Use the 'text' column we just created
+        dataset_text_field="text",
     )
+    
+    # Multi-GPU specific settings
+    if USE_MULTI_GPU:
+        logger.info(f"⚡ Enabling DataParallel training on {NUM_GPUS} GPUs")
+        sft_config.ddp_backend = "nccl"  # Best for multi-GPU
+        sft_config.local_rank = int(os.environ.get("LOCAL_RANK", -1))  # For torchrun
 
     if "max_steps" in cfg and int(cfg["max_steps"]) > 0:
         sft_config.max_steps = int(cfg["max_steps"])
@@ -263,8 +277,9 @@ def main() -> None:
 
     logger.info("Starting training… (ctrl+c to stop)")
     logger.info(f"📊 Training config: {len(ds['train'])} samples × {sft_config.num_train_epochs} epochs")
-    logger.info(f"📊 Effective batch size: {sft_config.per_device_train_batch_size * sft_config.gradient_accumulation_steps}")
-    logger.info(f"📊 Total steps: ~{len(ds['train']) // (sft_config.per_device_train_batch_size * sft_config.gradient_accumulation_steps) * sft_config.num_train_epochs}")
+    effective_batch = sft_config.per_device_train_batch_size * sft_config.gradient_accumulation_steps * NUM_GPUS
+    logger.info(f"📊 Effective batch size: {effective_batch} (per_device={sft_config.per_device_train_batch_size} × grad_accum={sft_config.gradient_accumulation_steps} × {NUM_GPUS} GPUs)")
+    logger.info(f"📊 Total steps: ~{len(ds['train']) // effective_batch * sft_config.num_train_epochs}")
     
     for handler in logger.handlers:
         handler.flush()

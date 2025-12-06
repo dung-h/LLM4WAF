@@ -14,19 +14,34 @@ This document is for the Agent operating on the **Remote GPU Server** to execute
 
 ## 3. Execution Tasks (Training Phase 3 Lightweight - 20k Enhanced Dataset)
 
-Execute these commands sequentially (recommended for 16GB VRAM) or in parallel if using A100 80GB+.
+**IMPORTANT:** Choose based on your server GPU setup:
 
-**Task A: Train Gemma 2 2B (Phase 3 Lightweight)**
+### Option A: Single GPU (16GB VRAM)
 ```bash
-nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_gemma.yaml --gpu 0 > logs/train_gemma_p3_light.log 2>&1 &
-# Monitor: tail -f logs/train_gemma_p3_light.log
-# Check loss logs: tail -f SFT_gemma-2-2b_*.log
+# Gemma 2B (recommended for 16GB)
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_gemma.yaml --gpu 0 > logs/train_gemma.log 2>&1 &
+
+# Phi-3 Mini
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_phi3.yaml --gpu 0 > logs/train_phi3.log 2>&1 &
 ```
 
-**Task B: Train Phi-3 Mini (Phase 3 Lightweight)**
+### Option B: Multi-GPU (2x GPU recommended)
+**Faster training with data parallelism:**
 ```bash
-nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_phi3.yaml --gpu 0 > logs/train_phi3_p3_light.log 2>&1 &
-# Monitor: tail -f SFT_Phi-3-mini-4k_*.log
+# Gemma 2B on 2 GPUs (2x speed)
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_gemma.yaml --gpu 0,1 > logs/train_gemma_multi.log 2>&1 &
+
+# Phi-3 Mini on 2 GPUs
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_phi3.yaml --gpu 0,1 > logs/train_phi3_multi.log 2>&1 &
+```
+
+**Monitor Training:**
+```bash
+# Check loss progression
+tail -f SFT_gemma-2-2b_*.log
+
+# Check GPU usage
+watch -n 1 nvidia-smi
 ```
 
 ## 4. Post-Training
