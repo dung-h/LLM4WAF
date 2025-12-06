@@ -30,16 +30,67 @@ from transformers import (
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, PeftModel # Keep PeftModel import for compatibility, though not directly used in this version for initial loading
 from trl import SFTTrainer, SFTConfig
 from transformers import TrainingArguments, TrainerCallback
+import sys
+
+# Custom callback to log training metrics with flush
+class DetailedLoggingCallback(TrainerCallback):
+    """Log detailed training metrics and force flush to file"""
+    
+    def on_log(self, args, state, control, logs=None, **kwargs):
+        """Called when logging happens"""
+        if logs is not None:
+            # Format loss info
+            step = state.global_step
+            epoch = logs.get('epoch', 0)
+            loss = logs.get('loss', None)
+            lr = logs.get('learning_rate', None)
+            
+            log_msg = f"Step {step}"
+            if epoch:
+                log_msg += f" | Epoch {epoch:.2f}"
+            if loss is not None:
+                log_msg += f" | Loss: {loss:.4f}"
+            if lr is not None:
+                log_msg += f" | LR: {lr:.2e}"
+            
+            # Log with INFO level so it appears in file
+            logger.info(log_msg)
+            
+            # Force flush all handlers
+            for handler in logger.handlers:
+                handler.flush()
+            sys.stdout.flush()
+    
+    def on_epoch_end(self, args, state, control, **kwargs):
+        """Log epoch completion"""
+        logger.info(f"✅ Epoch {state.epoch:.0f} completed | Global step: {state.global_step}")
+        for handler in logger.handlers:
+            handler.flush()
+    
+    def on_save(self, args, state, control, **kwargs):
+        """Log checkpoint saves"""
+        logger.info(f"💾 Checkpoint saved at step {state.global_step}")
+        for handler in logger.handlers:
+            handler.flush()
+
 
 # --- Setup Logging ---
 log_formatter = logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s")
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-def setup_logging(suffix=""):
-    log_file = f"SFT{suffix}.log"
-    file_handler = logging.FileHandler(log_file, mode='w')
+def setup_logging(model_name="", suffix=""):
+    """Create unique log file with timestamp and model name"""
+    from datetime import datetime
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # Extract short model name (e.g., gemma-2-2b, phi-3-mini)
+    model_short = model_name.split('/')[-1].replace('-it', '').replace('-instruct', '') if model_name else "model"
+    log_file = f"SFT_{model_short}_{timestamp}{suffix}.log"
+    # Force unbuffered mode for real-time logging
+    file_handler = logging.FileHandler(log_file, mode='w', encoding='utf-8')
+    file_handler.setLevel(logging.INFO)  # Set to INFO to capture training metrics
     file_handler.setFormatter(log_formatter)
+    logger.info(f"📝 Logging to: {log_file}")
     return file_handler
 
 file_handler = None
@@ -82,14 +133,16 @@ def build_lora_config(cfg: Dict[str, Any]) -> LoraConfig:
 
 def main() -> None:
     global file_handler
-    log_suffix = f"_gpu{args.gpu}{args.log_suffix}" if args.log_suffix else f"_gpu{args.gpu}"
-    file_handler = setup_logging(log_suffix)
-    logger.addHandler(file_handler)
     
     require_env_token("HF_TOKEN")
 
     cfg = load_config(args.config)
     model_name = cfg["model_name"]
+    
+    # Setup logging with model name and timestamp
+    log_suffix = f"_gpu{args.gpu}{args.log_suffix}" if args.log_suffix else f"_gpu{args.gpu}"
+    file_handler = setup_logging(model_name, log_suffix)
+    logger.addHandler(file_handler)
     auth_env = cfg.get("use_auth_token_env", "HF_TOKEN")
     auth_token = os.environ.get(auth_env)
 
@@ -205,12 +258,22 @@ def main() -> None:
         args=sft_config,
         train_dataset=ds["train"],
         eval_dataset=ds.get("validation"),
+        callbacks=[DetailedLoggingCallback()],  # Add custom logging callback
     )
 
     logger.info("Starting training… (ctrl+c to stop)")
+    logger.info(f"📊 Training config: {len(ds['train'])} samples × {sft_config.num_train_epochs} epochs")
+    logger.info(f"📊 Effective batch size: {sft_config.per_device_train_batch_size * sft_config.gradient_accumulation_steps}")
+    logger.info(f"📊 Total steps: ~{len(ds['train']) // (sft_config.per_device_train_batch_size * sft_config.gradient_accumulation_steps) * sft_config.num_train_epochs}")
+    
+    for handler in logger.handlers:
+        handler.flush()
+    
     trainer.train()
+    
     logger.info("Saving model…")
     trainer.save_model(out_dir)
+    logger.info(f"✅ Training complete! Model saved to {out_dir}")
     logger.info("Done.")
 
 if __name__ == "__main__":

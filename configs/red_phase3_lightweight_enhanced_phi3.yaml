@@ -1,0 +1,40 @@
+# Phase 3 Lightweight Enhanced - Phi-3 Mini
+# Enhanced dataset: 20k samples with system prompt and better mapping
+
+model_name: "microsoft/Phi-3-mini-4k-instruct"
+train_path: "data/processed/red_phase3_lightweight.jsonl"
+output_dir: "experiments/red_phase3_lightweight_enhanced_phi3"
+
+# Training parameters
+num_train_epochs: 3
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 2.0e-4
+max_length: 1536
+weight_decay: 0.01
+optim: "paged_adamw_8bit"
+
+# Quantization (for 8GB VRAM)
+load_in_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: "float16"
+
+# LoRA configuration
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+# Logging and checkpointing
+logging_steps: 10
+save_steps: 500
+save_total_limit: 3
+gradient_checkpointing: true
+use_auth_token_env: "HF_TOKEN"
+group_by_length: true # Group similar lengths for efficiency
+
+# Warmup
+warmup_ratio: 0.03 # 3% of training as warmup
+lr_scheduler_type: "cosine"

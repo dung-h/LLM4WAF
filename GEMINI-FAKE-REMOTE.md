@@ -8,34 +8,32 @@ This document is for the Agent operating on the **Remote GPU Server** to execute
 3.  **Set Token:** `export HF_TOKEN=hf_...` (Get from user)
 
 ## 2. Data & Model Preparation
-*   **Dataset:** Ensure `data/processed/red_phase3_adaptive_sft.jsonl` exists.
-    *   If not found, regenerate it: `python scripts/build_phase3_adaptive_dataset.py`
-*   **Adapters:** Phase 3 is trained from **Base Model**, so you do NOT need to download Phase 2 adapters for this specific training task.
+*   **Dataset:** Ensure `data/processed/red_phase3_lightweight.jsonl` exists (20k samples).
+    *   If not found, regenerate it: `python scripts/build_phase3_lightweight.py`
+*   **Adapters:** Phase 3 Lightweight is trained from **Base Model** directly, no need for Phase 1/2 adapters.
 
-## 3. Execution Tasks (Training Phase 3 Adaptive)
+## 3. Execution Tasks (Training Phase 3 Lightweight - 20k Enhanced Dataset)
 
-Execute these commands sequentially (recommended to avoid OOM) or in parallel if using A100 80GB+.
+Execute these commands sequentially (recommended for 16GB VRAM) or in parallel if using A100 80GB+.
 
-**Task A: Train Gemma 2 2B (Phase 3)**
+**Task A: Train Gemma 2 2B (Phase 3 Lightweight)**
 ```bash
-nohup python scripts/train_red.py --config configs/red_phase3_adaptive_gemma.yaml > logs/train_gemma_p3.log 2>&1 &
-# Monitor: tail -f logs/train_gemma_p3.log
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_gemma.yaml --gpu 0 > logs/train_gemma_p3_light.log 2>&1 &
+# Monitor: tail -f logs/train_gemma_p3_light.log
+# Check loss logs: tail -f SFT_gemma-2-2b_*.log
 ```
 
-**Task B: Train Phi-3 Mini (Phase 3)**
+**Task B: Train Phi-3 Mini (Phase 3 Lightweight)**
 ```bash
-nohup python scripts/train_red.py --config configs/red_phase3_adaptive_phi3.yaml > logs/train_phi3_p3.log 2>&1 &
-```
-
-**Task C: Train Qwen 7B (Phase 3)**
-```bash
-nohup python scripts/train_red.py --config configs/red_phase3_adaptive_qwen.yaml > logs/train_qwen_p3.log 2>&1 &
+nohup python scripts/train_red.py --config configs/red_phase3_lightweight_enhanced_phi3.yaml --gpu 0 > logs/train_phi3_p3_light.log 2>&1 &
+# Monitor: tail -f SFT_Phi-3-mini-4k_*.log
 ```
 
 ## 4. Post-Training
-1.  **Verify Output:** Check `experiments/red_phase3_adaptive_*` directories.
-2.  **Pack & Download:**
+1.  **Verify Output:** Check `experiments/red_phase3_lightweight_enhanced_*` directories.
+2.  **Check Logs:** Review `SFT_*.log` files for final loss values.
+3.  **Pack & Download:**
     ```bash
-    tar -czvf adapters_phase3.tar.gz experiments/red_phase3_adaptive_*
+    tar -czvf adapters_phase3_lightweight.tar.gz experiments/red_phase3_lightweight_enhanced_* SFT_*.log
     ```
-3.  **Upload:** Upload `adapters_phase3.tar.gz` to Google Drive or Transfer.sh and provide the link to the Local Agent.
+4.  **Upload:** Upload to Google Drive or Transfer.sh and provide link.
