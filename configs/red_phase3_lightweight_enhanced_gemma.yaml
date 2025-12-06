@@ -37,6 +37,12 @@ group_by_length: true # Group similar lengths for efficiency
 # Warmup
 warmup_ratio: 0.03 # 3% of training as warmup
 lr_scheduler_type: "cosine"
+
+# Dataloader optimization for speed
+dataloader_num_workers: 8
+dataloader_pin_memory: true
+dataloader_prefetch_factor: 2
+
 # Evaluation (optional)
 # eval_path: "data/processed/red_phase3_eval.jsonl"
 # evaluation_strategy: "steps"

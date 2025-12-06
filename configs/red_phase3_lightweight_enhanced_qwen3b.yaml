@@ -37,3 +37,8 @@ group_by_length: true
 # Warmup
 warmup_ratio: 0.03
 lr_scheduler_type: "cosine"
+
+# Dataloader optimization for speed
+dataloader_num_workers: 8
+dataloader_pin_memory: true
+dataloader_prefetch_factor: 2

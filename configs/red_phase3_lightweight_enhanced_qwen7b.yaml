@@ -39,5 +39,6 @@ warmup_ratio: 0.03
 lr_scheduler_type: "cosine"
 
 # Memory optimization for 7B
-dataloader_num_workers: 4
+dataloader_num_workers: 8  # Increased for better GPU utilization
 dataloader_pin_memory: true
+dataloader_prefetch_factor: 2
