@@ -1,9 +1,9 @@
-# Phase 3 Lightweight Enhanced Training Config
-# Enhanced dataset: 20k samples with system prompt and better mapping
+# Phase 2 Adaptive Training with Replay Buffer
+# Enhanced dataset: 22k samples (20k observations + 2k Phase 1 replay)
 
 model_name: "google/gemma-2-2b-it"
-train_path: "data/processed/red_phase3_lightweight.jsonl"
-output_dir: "experiments/red_phase3_lightweight_enhanced_gemma"
+train_path: "data/processed/phase2_with_replay_22k.jsonl"
+output_dir: "experiments/red_phase2_adaptive_enhanced_gemma"
 
 # Training parameters
 num_train_epochs: 3
@@ -42,7 +42,6 @@ lr_scheduler_type: "cosine"
 dataloader_num_workers: 8
 dataloader_pin_memory: true
 dataloader_prefetch_factor: 2
-
 # Evaluation (optional)
 # eval_path: "data/processed/red_phase3_eval.jsonl"
 # evaluation_strategy: "steps"

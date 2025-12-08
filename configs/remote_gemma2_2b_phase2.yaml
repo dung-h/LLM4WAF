@@ -1,0 +1,40 @@
+# Gemma 2 2B Phase 2 - RTX 4090 Optimized
+# Adaptive learning with observations + Phase 1 replay buffer
+# Continues from Phase 1 adapter
+
+model_name: "google/gemma-2-2b-it"
+train_path: "data/processed/phase2_with_replay_22k.jsonl"
+output_dir: "experiments/remote_gemma2_2b_phase2"
+
+# Continue from Phase 1 adapter (continual learning)
+adapter_path: "experiments/remote_gemma2_2b_phase1"
+is_trainable: true # Update existing adapter weights
+
+# Training - RTX 4090 (24GB VRAM)
+num_train_epochs: 2
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+max_seq_length: 1536 # Longer for observations
+
+# 4-bit quantization
+load_in_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: "float16"
+
+# LoRA settings (same as Phase 1)
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+# Training optimization
+gradient_checkpointing: true
+fp16: true
+logging_steps: 50
+save_steps: 500
+save_total_limit: 3
+warmup_ratio: 0.03
+
+use_auth_token_env: "HF_TOKEN"

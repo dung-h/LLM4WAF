@@ -154,10 +154,18 @@ def main():
     max_new_tokens = cfg.get("max_new_tokens", 64)
     max_context_length = cfg.get("max_context_length", 512)
     output_dir = cfg.get("output_dir", "experiments/rl_output")
+    waf_url = cfg.get("waf_url", None)  # Get WAF URL from config
 
     model, tokenizer = load_model_for_training(cfg)
     optimizer = AdamW(model.parameters(), lr=lr)
-    env = WAFEnv(max_steps=5) 
+    
+    # Initialize WAFEnv with custom URL if provided
+    if waf_url:
+        logger.info(f"Using WAF URL: {waf_url}")
+        env = WAFEnv(max_steps=5, waf_base_url=waf_url)
+    else:
+        logger.info("Using default WAF URL (localhost)")
+        env = WAFEnv(max_steps=5) 
     
     baseline_reward = 0.0
     alpha = 0.1 
@@ -213,6 +221,9 @@ def main():
             
             loss = loss / batch_size 
             loss.backward()
+            
+            # CRITICAL: Clear cache after backward to prevent OOM
+            torch.cuda.empty_cache()
             
             batch_loss += loss.item()
             batch_rewards.append(episode_reward)

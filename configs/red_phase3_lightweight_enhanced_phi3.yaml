@@ -1,9 +1,9 @@
-# Phase 3 Lightweight Enhanced - Phi-3 Mini
-# Enhanced dataset: 20k samples with system prompt and better mapping
+# Phase 2 Adaptive Training with Replay Buffer - Phi-3 Mini
+# Enhanced dataset: 22k samples (20k observations + 2k Phase 1 replay)
 
 model_name: "microsoft/Phi-3-mini-4k-instruct"
-train_path: "data/processed/red_phase3_lightweight.jsonl"
-output_dir: "experiments/red_phase3_lightweight_enhanced_phi3"
+train_path: "data/processed/phase2_with_replay_22k.jsonl"
+output_dir: "experiments/red_phase2_adaptive_enhanced_phi3"
 
 # Training parameters
 num_train_epochs: 3
@@ -36,7 +36,7 @@ use_auth_token_env: "HF_TOKEN"
 group_by_length: true # Group similar lengths for efficiency
 
 # Warmup
-warmup_ratio: 0.03  # 3% of training as warmup
+warmup_ratio: 0.03 # 3% of training as warmup
 lr_scheduler_type: "cosine"
 
 # Dataloader optimization for speed

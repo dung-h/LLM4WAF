@@ -38,7 +38,8 @@ echo "📚 Installing Python dependencies..."
 pip install --upgrade pip
 
 # Install Torch with CUDA support explicitly first
-# Change cu121 to cu118 if your server driver is older
+# RTX 4090 uses CUDA 12.1 or higher
+echo "⚡ Installing PyTorch with CUDA 12.1..."
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # Install core dependencies from requirements

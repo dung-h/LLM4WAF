@@ -1,6 +1,6 @@
 model_name: "microsoft/Phi-3-mini-4k-instruct"
-train_path: "data/processed/red_phase3_lightweight.jsonl"
-output_dir: "experiments/red_phase3_lightweight_phi3"
+train_path: "data/processed/phase2_with_replay_22k.jsonl"
+output_dir: "experiments/red_phase2_adaptive_phi3"
 num_train_epochs: 2
 per_device_train_batch_size: 1
 gradient_accumulation_steps: 16
@@ -13,7 +13,8 @@ bnb_4bit_compute_dtype: "float16"
 lora_r: 16
 lora_alpha: 32
 lora_dropout: 0.05
-target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 logging_steps: 10
 save_steps: 100
 save_total_limit: 2

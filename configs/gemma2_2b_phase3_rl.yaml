@@ -1,0 +1,21 @@
+# Gemma 2 2B RL Training from Phase 3 Lightweight Enhanced Adapter
+# Continue training on existing adapter without adding new one
+# Uses train_rl_reinforce.py script with localhost DVWA
+
+# Model
+base_model: "google/gemma-2-2b-it"
+adapter_path: "experiments/red_phase3_lightweight_enhanced_gemma" # Continue from this adapter
+model_type: "gemma"
+
+# Training
+output_dir: "experiments/gemma2_2b_phase3_rl"
+epochs: 150 # Increased for better convergence
+batch_size: 1
+lr: 1e-6
+max_new_tokens: 64
+max_context_length: 384 # Reduced from 512 to prevent OOM during RL training
+
+# WAF Configuration
+waf_url: "http://modsec.llmshield.click" # Remote WAF with authentication
+
+use_auth_token_env: "HF_TOKEN"

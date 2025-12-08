@@ -1,0 +1,20 @@
+# Qwen 2.5 3B RL Training from Phase 3 Enhanced Adapter
+# 200 epochs
+
+# Model
+base_model: "Qwen/Qwen2.5-3B-Instruct"
+adapter_path: "experiments/red_phase3_lightweight_enhanced_qwen3b/checkpoint-314"
+model_type: "qwen"
+
+# Training
+output_dir: "experiments/qwen_3b_phase4_rl_200"
+epochs: 150 # Reduced from 200 for consistency
+batch_size: 1
+lr: 1e-6
+max_new_tokens: 64
+max_context_length: 384
+
+# WAF Configuration
+waf_url: "http://modsec.llmshield.click"
+
+use_auth_token_env: "HF_TOKEN"

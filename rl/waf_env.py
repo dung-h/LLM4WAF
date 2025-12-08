@@ -1,16 +1,30 @@
 import httpx
 import re
 import random
+import os
 
 # Configuration
-DVWA_BASE_URL = "http://localhost:8000"
+DVWA_BASE_URL = os.environ.get("WAF_BASE_URL", "http://localhost:8000/modsec_dvwa")
 DVWA_SQLI_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli/"
 DVWA_XSS_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_r/"
-USERNAME = "admin"
-PASSWORD = "password"
+USERNAME = os.environ.get("DVWA_USERNAME", "admin")
+PASSWORD = os.environ.get("DVWA_PASSWORD", "password")
 
 class WAFEnv:
-    def __init__(self, max_steps=5):
+    def __init__(self, max_steps=5, waf_base_url=None):
+        """
+        Initialize WAF environment
+        
+        Args:
+            max_steps: Maximum attempts per episode
+            waf_base_url: Override WAF URL (e.g., "http://modsec.llmshield.click")
+        """
+        if waf_base_url:
+            global DVWA_BASE_URL, DVWA_SQLI_URL, DVWA_XSS_URL
+            DVWA_BASE_URL = waf_base_url
+            DVWA_SQLI_URL = f"{DVWA_BASE_URL}/vulnerabilities/sqli/"
+            DVWA_XSS_URL = f"{DVWA_BASE_URL}/vulnerabilities/xss_r/"
+        
         self.client = httpx.Client(timeout=10.0, follow_redirects=True)
         self.max_steps = max_steps
         self.current_step = 0

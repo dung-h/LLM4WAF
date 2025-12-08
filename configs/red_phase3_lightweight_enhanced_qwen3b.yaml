@@ -1,9 +1,9 @@
-# Phase 3 Lightweight Enhanced - Qwen 2.5 3B
-# Enhanced dataset: 20k samples with system prompt and better mapping
+# Phase 2 Adaptive Training with Replay Buffer - Qwen 2.5 3B
+# Enhanced dataset: 22k samples (20k observations + 2k Phase 1 replay)
 
 model_name: "Qwen/Qwen2.5-3B-Instruct"
-train_path: "data/processed/red_phase3_lightweight.jsonl"
-output_dir: "experiments/red_phase3_lightweight_enhanced_qwen3b"
+train_path: "data/processed/phase2_with_replay_22k.jsonl"
+output_dir: "experiments/red_phase2_adaptive_qwen3b"
 
 # Training parameters
 num_train_epochs: 3
@@ -24,7 +24,8 @@ bnb_4bit_compute_dtype: "float16"
 lora_r: 16
 lora_alpha: 32
 lora_dropout: 0.05
-target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+target_modules:
+  ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 # Logging and checkpointing
 logging_steps: 10
