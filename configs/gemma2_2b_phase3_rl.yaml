@@ -1,10 +1,10 @@
-# Gemma 2 2B RL Training from Phase 3 Lightweight Enhanced Adapter
-# Continue training on existing adapter without adding new one
-# Uses train_rl_reinforce.py script with localhost DVWA
+# Gemma 2 2B RL Training from Phase 2 Remote Adapter
+# Continue training on Phase 2 adapter from remote training
+# Uses train_rl_reinforce.py script with remote DVWA
 
 # Model
 base_model: "google/gemma-2-2b-it"
-adapter_path: "experiments/red_phase3_lightweight_enhanced_gemma" # Continue from this adapter
+adapter_path: "experiments/remote_gemma2_2b_phase2" # Phase 2 remote adapter
 model_type: "gemma"
 
 # Training
