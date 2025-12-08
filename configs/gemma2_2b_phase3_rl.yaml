@@ -1,19 +1,20 @@
-# Gemma 2 2B RL Training from Phase 2 Remote Adapter
-# Continue training on Phase 2 adapter from remote training
-# Uses train_rl_reinforce.py script with remote DVWA
+# Gemma 2 2B Phase 3 RL Training (REINFORCE)
+# Continue from Phase 2 adapter with live WAF interaction
+# Uses train_rl_reinforce.py script
 
 # Model
 base_model: "google/gemma-2-2b-it"
-adapter_path: "experiments/remote_gemma2_2b_phase2" # Phase 2 remote adapter
+adapter_path: "experiments/remote_gemma2_2b_phase2" # Load Phase 2 adapter
 model_type: "gemma"
 
 # Training
 output_dir: "experiments/gemma2_2b_phase3_rl"
-epochs: 150 # Increased for better convergence
+epochs: 150
 batch_size: 1
 lr: 1e-6
 max_new_tokens: 64
-max_context_length: 384 # Reduced from 512 to prevent OOM during RL training
+max_context_length: 1024 # Match Phase 2 SFT context length
+gradient_checkpointing: true # Enable to save VRAM
 
 # WAF Configuration
 waf_url: "http://modsec.llmshield.click" # Remote WAF with authentication

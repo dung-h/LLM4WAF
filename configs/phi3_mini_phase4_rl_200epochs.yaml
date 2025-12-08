@@ -1,18 +1,20 @@
-# Phi-3 Mini RL Training from Phase 3 Enhanced Adapter
-# 200 epochs with DynamicCache fix
+# Phi-3 Mini Phase 3 RL Training (REINFORCE)
+# Continue from Phase 2 adapter with live WAF interaction
+# DynamicCache fix applied in train_rl_reinforce.py
 
 # Model
 base_model: "microsoft/Phi-3-mini-4k-instruct"
-adapter_path: "experiments/red_phase3_lightweight_enhanced_phi3/checkpoint-314"
+adapter_path: "experiments/remote_phi3_mini_phase2" # Load Phase 2 adapter
 model_type: "phi3"
 
 # Training
-output_dir: "experiments/phi3_mini_phase4_rl_200"
-epochs: 150 # Reduced from 200 for consistency
+output_dir: "experiments/phi3_mini_phase3_rl"
+epochs: 150
 batch_size: 1
 lr: 1e-6
 max_new_tokens: 64
-max_context_length: 384
+max_context_length: 1024 # Match Phase 2 SFT context length
+gradient_checkpointing: true # Enable to save VRAM
 
 # WAF Configuration
 waf_url: "http://modsec.llmshield.click"

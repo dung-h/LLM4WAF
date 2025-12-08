@@ -1,18 +1,19 @@
-# Qwen 2.5 3B RL Training from Phase 3 Enhanced Adapter
-# 200 epochs
+# Qwen 2.5 7B Phase 3 RL Training (REINFORCE)
+# Continue from Phase 2 adapter with live WAF interaction
 
 # Model
-base_model: "Qwen/Qwen2.5-3B-Instruct"
-adapter_path: "experiments/red_phase3_lightweight_enhanced_qwen3b/checkpoint-314"
+base_model: "Qwen/Qwen2.5-7B-Instruct"
+adapter_path: "experiments/remote_qwen_7b_phase2" # Load Phase 2 adapter
 model_type: "qwen"
 
 # Training
-output_dir: "experiments/qwen_3b_phase4_rl_200"
-epochs: 150 # Reduced from 200 for consistency
+output_dir: "experiments/qwen_7b_phase3_rl"
+epochs: 150
 batch_size: 1
 lr: 1e-6
 max_new_tokens: 64
-max_context_length: 384
+max_context_length: 1024 # Match Phase 2 SFT context length
+gradient_checkpointing: true # Enable to save VRAM
 
 # WAF Configuration
 waf_url: "http://modsec.llmshield.click"

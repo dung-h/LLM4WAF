@@ -121,9 +121,10 @@ def compute_log_probs(model, tokenizer, prompt_text, response_text, device, max_
     prompt_ids = tokenizer(full_prompt_formatted, return_tensors="pt", truncation=True, max_length=max_context_length).input_ids.to(device)
     prompt_len = prompt_ids.shape[1]
 
-    # Forward pass to get logits
-    outputs = model(full_text_ids)
-    logits = outputs.logits
+    # Forward pass to get logits with mixed precision to save VRAM
+    with torch.amp.autocast(device_type='cuda', dtype=torch.float16):
+        outputs = model(full_text_ids)
+        logits = outputs.logits
 
     shift_logits = logits[..., :-1, :].contiguous()
     shift_labels = full_text_ids[..., 1:].contiguous()
@@ -137,6 +138,10 @@ def compute_log_probs(model, tokenizer, prompt_text, response_text, device, max_
     
     log_probs = -response_loss
     sequence_log_prob = log_probs.sum()
+    
+    # Clear intermediate tensors to free VRAM
+    del outputs, logits, shift_logits, shift_labels, full_text_ids, prompt_ids
+    torch.cuda.empty_cache()
     
     return sequence_log_prob
 
@@ -223,6 +228,17 @@ def main():
             loss.backward()
             
             # CRITICAL: Clear cache after backward to prevent OOM
+            torch.cuda.empty_cache()
+            
+            batch_loss += loss.item()
+            batch_rewards.append(episode_reward)
+            
+            logger.info(f"  Ep {i+1}: Reward={episode_reward:.2f}")
+
+        optimizer.step()
+        
+        # CRITICAL: Clear cache after optimizer step
+        torch.cuda.empty_cache()
             torch.cuda.empty_cache()
             
             batch_loss += loss.item()
