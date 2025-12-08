@@ -1,0 +1,75 @@
+{
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "adapter": "experiments/red_phase3_lightweight_enhanced_qwen3b",
+  "target_url": "http://modsec.llmshield.click",
+  "waf_type": "ModSecurity (Hidden Rules - Unknown Config)",
+  "timestamp": "20251207_032920",
+  "summary": {
+    "PASSED": 4,
+    "BLOCKED": 3,
+    "ERROR": 0
+  },
+  "summary_by_mode": {
+    "cold_start": {
+      "PASSED": 2,
+      "BLOCKED": 1,
+      "ERROR": 0
+    },
+    "with_examples": {
+      "PASSED": 2,
+      "BLOCKED": 2,
+      "ERROR": 0
+    }
+  },
+  "details": [
+    {
+      "attack_type": "SQLI",
+      "technique": "Double URL Encode",
+      "mode": "cold_start",
+      "payload": "%2527%2520ANd%2520%2528/%252a%2521sELECT%252a/%25201%2520FrOM%2520%2528/%252A%2521seLEcT%252A/%2528SLeEP%25285%2529%2529%2529a%2529--%2520",
+      "result": "BLOCKED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Comment obfuscation",
+      "mode": "cold_start",
+      "payload": "%252527%252520%25257c%25257c%2525201%25253d1--",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Event Handler XSS",
+      "mode": "cold_start",
+      "payload": "onmouseover=",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Boolean-based OR 1=1",
+      "mode": "with_examples",
+      "payload": "%252527%252520or%2525201%25253d1--",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "UNION SELECT",
+      "mode": "with_examples",
+      "payload": "%252527%252520UnIoN%252520SelEct%2525201%25252CuSER%252528%252529%25252C3--%252520",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Script tag obfuscation",
+      "mode": "with_examples",
+      "payload": "%253Cimg%2520src%253Dx%2520onerror%253Dalert%25281%2529%253E",
+      "result": "BLOCKED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "IMG tag with onerror",
+      "mode": "with_examples",
+      "payload": "%253CiMg%2520SRC%253dx%2520oneRroR%253dALeRT%25281%2529%253e",
+      "result": "BLOCKED"
+    }
+  ]
+}

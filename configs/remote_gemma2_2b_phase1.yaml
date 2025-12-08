@@ -1,4 +1,4 @@
-# Gemma 2 2B Phase 1 - RTX 4090 Optimized
+# Gemma 2 2B Phase 1 - 16GB VRAM Optimized
 # Basic SFT training without observations
 # Uses balanced 10k subset with 509 diverse techniques
 
@@ -6,10 +6,10 @@ model_name: "google/gemma-2-2b-it"
 train_path: "data/processed/phase1_balanced_10k.jsonl"
 output_dir: "experiments/remote_gemma2_2b_phase1"
 
-# Training - RTX 4090 (24GB VRAM)
+# Training - 16GB VRAM
 num_train_epochs: 3
-per_device_train_batch_size: 2 # Can handle 2 on 4090
-gradient_accumulation_steps: 8 # Effective batch = 16
+per_device_train_batch_size: 1 # Conservative for 16GB
+gradient_accumulation_steps: 16 # Effective batch = 16
 learning_rate: 2.0e-4
 max_seq_length: 1024 # Increased from 512 to avoid truncation
 weight_decay: 0.01

@@ -1,4 +1,4 @@
-# Phi-3 Mini Phase 1 - RTX 4090 with DynamicCache Fix
+# Phi-3 Mini Phase 1 - 16GB VRAM with DynamicCache Fix
 # Basic SFT training without observations
 # Uses balanced 10k subset with 509 diverse techniques
 
@@ -6,10 +6,10 @@ model_name: "microsoft/Phi-3-mini-4k-instruct"
 train_path: "data/processed/phase1_balanced_10k.jsonl"
 output_dir: "experiments/remote_phi3_mini_phase1"
 
-# Training - RTX 4090
+# Training - 16GB VRAM
 num_train_epochs: 3
-per_device_train_batch_size: 2
-gradient_accumulation_steps: 8
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
 learning_rate: 2.0e-4
 max_seq_length: 1024
 weight_decay: 0.01

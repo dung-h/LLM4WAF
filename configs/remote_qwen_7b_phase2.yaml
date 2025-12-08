@@ -1,4 +1,4 @@
-# Qwen 2.5 7B Phase 2 - RTX 4090
+# Qwen 2.5 7B Phase 2 - 16GB VRAM
 # Adaptive learning with observations + Phase 1 replay buffer
 # Continues from Phase 1 adapter
 
@@ -10,10 +10,10 @@ output_dir: "experiments/remote_qwen_7b_phase2"
 adapter_path: "experiments/remote_qwen_7b_phase1"
 is_trainable: true
 
-# Training - RTX 4090 (reduce batch for 7B)
+# Training - 16GB VRAM (7B needs batch_size=1)
 num_train_epochs: 2
-per_device_train_batch_size: 1 # Smaller batch for 7B
-gradient_accumulation_steps: 16 # Keep effective batch = 16
+per_device_train_batch_size: 1 # Required for 7B on 16GB
+gradient_accumulation_steps: 16 # Effective batch = 16
 learning_rate: 2.0e-4
 max_seq_length: 1536 # Longer for observations
 

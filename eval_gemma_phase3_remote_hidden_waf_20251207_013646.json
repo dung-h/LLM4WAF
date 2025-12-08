@@ -1,0 +1,75 @@
+{
+  "model": "google/gemma-2-2b-it",
+  "adapter": "experiments/red_phase3_lightweight_enhanced_gemma",
+  "target_url": "http://modsec.llmshield.click",
+  "waf_type": "ModSecurity (Hidden Rules - Unknown Config)",
+  "timestamp": "20251207_013646",
+  "summary": {
+    "PASSED": 4,
+    "BLOCKED": 3,
+    "ERROR": 0
+  },
+  "summary_by_mode": {
+    "cold_start": {
+      "PASSED": 2,
+      "BLOCKED": 1,
+      "ERROR": 0
+    },
+    "with_examples": {
+      "PASSED": 2,
+      "BLOCKED": 2,
+      "ERROR": 0
+    }
+  },
+  "details": [
+    {
+      "attack_type": "SQLI",
+      "technique": "Double URL Encode",
+      "mode": "cold_start",
+      "payload": "31E80807D40F5E813186666A73131B6E54896D0843C9B7911D26F2176B969D95F49D416238D7559991E968E7D5873C0D64F2D79A8F4786630455095B14899B%25252C672037A58E77E7417",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Comment obfuscation",
+      "mode": "cold_start",
+      "payload": "１%２５２５２０ｏｒ%２５２５２０１%２５２５３ｄ１",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Event Handler XSS",
+      "mode": "cold_start",
+      "payload": "%253cAUDIO%2520ONKEYDOWN%253d%2527sTRING.FROMcHARcODE%252897%252c108%252c101%252c114%252c116%2529%25281%2529%2527%253e%253c%252fAUDIO%253e",
+      "result": "BLOCKED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Boolean-based OR 1=1",
+      "mode": "with_examples",
+      "payload": "%252527%252520OR%2525201%25253D1--",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "UNION SELECT",
+      "mode": "with_examples",
+      "payload": "%252527%252520oR%2525201%25253d1--",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Script tag obfuscation",
+      "mode": "with_examples",
+      "payload": "%253Cimg%2520src%253Dx%2520onerror%253Dalert%25281%2529%253E",
+      "result": "BLOCKED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "IMG tag with onerror",
+      "mode": "with_examples",
+      "payload": "%253Cimg%2520src%253Dx%2520onerror%253Dalert%25281%2529%253E",
+      "result": "BLOCKED"
+    }
+  ]
+}

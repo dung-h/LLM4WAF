@@ -1,0 +1,82 @@
+{
+  "Gemma_2_2B_Phase1_SFT": {
+    "phase": 1,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Gemma_2_2B_Phase2_Reasoning": {
+    "phase": 2,
+    "total": 20,
+    "passed": 10,
+    "blocked": 10,
+    "errors": 0,
+    "bypass_rate": 50.0
+  },
+  "Gemma_2_2B_Phase3_Lightweight": {
+    "phase": 3,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Gemma_2_2B_Phase3_Enhanced": {
+    "phase": 3,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Gemma_2_2B_Phase4_RL": {
+    "phase": 4,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Phi3_Mini_Phase1_SFT": {
+    "phase": 1,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Phi3_Mini_Phase2_Reasoning": {
+    "phase": 2,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Phi3_Mini_Phase3_Lightweight": {
+    "phase": 3,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Phi3_Mini_Phase3_Enhanced": {
+    "phase": 3,
+    "total": 20,
+    "passed": 20,
+    "blocked": 0,
+    "errors": 0,
+    "bypass_rate": 100.0
+  },
+  "Qwen_3B_Phase3_Enhanced": {
+    "phase": 3,
+    "total": 20,
+    "passed": 18,
+    "blocked": 2,
+    "errors": 0,
+    "bypass_rate": 90.0
+  }
+}

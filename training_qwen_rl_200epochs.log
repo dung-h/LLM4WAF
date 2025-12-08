@@ -1,0 +1,12 @@
+2025-12-08 08:40:22,207 - INFO - Loading model: Qwen/Qwen2.5-3B-Instruct
+`torch_dtype` is deprecated! Use `dtype` instead!
+2025-12-08 08:41:02,715 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.06s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.35s/it]
+2025-12-08 08:41:20,324 - INFO - Loading adapter: experiments/red_phase3_lightweight_enhanced_qwen3b/checkpoint-314
+trainable params: 29,933,568 || all params: 3,115,872,256 || trainable%: 0.9607
+[!] Login error: [Errno 111] Connection refused
+[!] Warning: WAFEnv failed to login to DVWA on init.
+2025-12-08 08:41:26,229 - INFO - 
+Starting REINFORCE Training (200 epochs, Batch 1, Total Episodes: 200)...
+2025-12-08 08:41:26,230 - INFO - 
+=== Epoch 1/200 ===

@@ -17,8 +17,7 @@ venv*/
 # Model checkpoints & artifacts
 *.pt
 *.bin
-*.safetensors
-*checkpoint*
+
 *.parquet
 *.arrow
 
@@ -57,6 +56,3 @@ data/archive_legacy
 SFT_gpu0.log
 !README.md
  coraza
-*.log
-*.md
-

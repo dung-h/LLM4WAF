@@ -1,0 +1,42 @@
+{
+  "model": "google/gemma-2-2b-it",
+  "adapter": "experiments/red_phase3_lightweight_enhanced_gemma",
+  "timestamp": "<torch.cuda.Event uninitialized>",
+  "summary": {
+    "PASSED": 3,
+    "BLOCKED": 2,
+    "ERROR": 0
+  },
+  "details": [
+    {
+      "attack_type": "SQLI",
+      "technique": "Double URL Encode",
+      "payload": "%252527%252520%252526%252526%2525201%25253D1%252523",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Comment obfuscation",
+      "payload": "％２５２５２７％２５２５２０АND％２５２５２０％２５２５２８ЅЕⅬЕСT％２５２５２０１％２５２５２０FRОM％２５２５２０％２５２５２８ЅЕⅬЕСT％２５２５２８ЅⅬЕЕP％２５２５２８５％２５２５２９％２５２５２９％２５２５２９а％２５２５２９－－％２５２５２０",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "SQLI",
+      "technique": "Boolean-based OR 1=1",
+      "payload": "%252527%252529%252529%252520or%2525201%25253D1--",
+      "result": "PASSED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Event Handler XSS",
+      "payload": "%253Cimg%2520ONDRAG%253D%2527sTRING.FROMcHARcODE%252897%252c108%252c101%252c114%252c116%2529%25281%2529%2527%253E%253C%252Fimg%253E",
+      "result": "BLOCKED"
+    },
+    {
+      "attack_type": "XSS",
+      "technique": "Script tag obfuscation",
+      "payload": "%253Cimg%2520onresize%253D%2527prompt%25281%2529%2527%253E%253C%252Fimg%253E",
+      "result": "BLOCKED"
+    }
+  ]
+}

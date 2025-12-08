@@ -36,7 +36,8 @@ AVAILABLE_MODELS = {
         "phases": {
             "Phase 1 SFT": "experiments/gemma2_2b_v40_subsample_5k",
             "Phase 2 Reasoning": "experiments/phase2_gemma2_2b_reasoning",
-            "Phase 3 RL": "experiments/phase3_gemma2_2b_rl"
+            "Phase 3 Enhanced": "experiments/red_phase3_lightweight_enhanced_gemma/checkpoint-314",
+            "Phase 3 RL (NEW)": "experiments/gemma2_2b_phase3_rl/checkpoint-50"
         }
     }
 }

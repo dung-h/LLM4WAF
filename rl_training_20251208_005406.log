@@ -1,0 +1,133 @@
+2025-12-08 00:54:06,955 - INFO - Loading model: microsoft/Phi-3-mini-4k-instruct
+2025-12-08 00:54:35,292 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-08 00:55:00,264 - INFO - Loading adapter: experiments/red_phase3_lightweight_enhanced_phi3/checkpoint-314
+2025-12-08 00:55:06,224 - INFO - 
+Starting REINFORCE Training (200 epochs, Batch 1, Total Episodes: 200)...
+2025-12-08 00:55:06,225 - INFO - 
+=== Epoch 1/200 ===
+2025-12-08 00:57:47,081 - INFO -   Ep 1: Reward=-0.94
+2025-12-08 00:57:47,646 - INFO - Epoch 1: Avg Reward = -0.9400 | Baseline = -0.0940 | Loss = -233.6009
+2025-12-08 00:57:47,646 - INFO - 
+=== Epoch 2/200 ===
+2025-12-08 01:14:28,000 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 01:14:28,022 - INFO - Epoch 2: Avg Reward = -0.5500 | Baseline = -0.1396 | Loss = -132.0352
+2025-12-08 01:14:28,023 - INFO - 
+=== Epoch 3/200 ===
+2025-12-08 01:16:23,991 - INFO -   Ep 1: Reward=-0.94
+2025-12-08 01:16:24,015 - INFO - Epoch 3: Avg Reward = -0.9400 | Baseline = -0.2196 | Loss = -154.9490
+2025-12-08 01:16:24,016 - INFO - 
+=== Epoch 4/200 ===
+2025-12-08 01:18:50,371 - INFO -   Ep 1: Reward=-0.94
+2025-12-08 01:18:50,396 - INFO - Epoch 4: Avg Reward = -0.9400 | Baseline = -0.2917 | Loss = -61.0500
+2025-12-08 01:18:50,397 - INFO - 
+=== Epoch 5/200 ===
+2025-12-08 01:21:54,596 - INFO -   Ep 1: Reward=-1.33
+2025-12-08 01:21:54,624 - INFO - Epoch 5: Avg Reward = -1.3300 | Baseline = -0.3955 | Loss = -108.7469
+2025-12-08 01:21:56,677 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-5
+2025-12-08 01:21:56,678 - INFO - 
+=== Epoch 6/200 ===
+2025-12-08 01:28:12,148 - INFO -   Ep 1: Reward=-1.33
+2025-12-08 01:28:12,162 - INFO - Epoch 6: Avg Reward = -1.3300 | Baseline = -0.4890 | Loss = -149.1733
+2025-12-08 01:28:12,162 - INFO - 
+=== Epoch 7/200 ===
+2025-12-08 01:44:05,700 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 01:44:05,720 - INFO - Epoch 7: Avg Reward = -0.5500 | Baseline = -0.4951 | Loss = -9.0310
+2025-12-08 01:44:05,721 - INFO - 
+=== Epoch 8/200 ===
+2025-12-08 01:54:31,578 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 01:54:31,609 - INFO - Epoch 8: Avg Reward = -0.5500 | Baseline = -0.5006 | Loss = -14.4589
+2025-12-08 01:54:31,609 - INFO - 
+=== Epoch 9/200 ===
+2025-12-08 02:09:08,790 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:09:08,810 - INFO - Epoch 9: Avg Reward = -0.5500 | Baseline = -0.5055 | Loss = -5.3158
+2025-12-08 02:09:08,811 - INFO - 
+=== Epoch 10/200 ===
+2025-12-08 02:13:17,829 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:13:17,856 - INFO - Epoch 10: Avg Reward = -0.5500 | Baseline = -0.5100 | Loss = -3.4413
+2025-12-08 02:13:19,484 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-10
+2025-12-08 02:13:19,485 - INFO - 
+=== Epoch 11/200 ===
+2025-12-08 02:23:09,209 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:23:09,229 - INFO - Epoch 11: Avg Reward = -0.5500 | Baseline = -0.5140 | Loss = -6.2464
+2025-12-08 02:23:09,230 - INFO - 
+=== Epoch 12/200 ===
+2025-12-08 02:30:28,753 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:30:28,765 - INFO - Epoch 12: Avg Reward = -0.5500 | Baseline = -0.5176 | Loss = -8.0329
+2025-12-08 02:30:28,765 - INFO - 
+=== Epoch 13/200 ===
+2025-12-08 02:39:45,961 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:39:45,974 - INFO - Epoch 13: Avg Reward = -0.5500 | Baseline = -0.5208 | Loss = -2.3155
+2025-12-08 02:39:45,975 - INFO - 
+=== Epoch 14/200 ===
+2025-12-08 02:46:54,845 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:46:54,862 - INFO - Epoch 14: Avg Reward = -0.5500 | Baseline = -0.5237 | Loss = -3.3033
+2025-12-08 02:46:54,862 - INFO - 
+=== Epoch 15/200 ===
+2025-12-08 02:53:23,894 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:53:23,912 - INFO - Epoch 15: Avg Reward = -0.5500 | Baseline = -0.5264 | Loss = -7.3361
+2025-12-08 02:53:25,534 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-15
+2025-12-08 02:53:25,535 - INFO - 
+=== Epoch 16/200 ===
+2025-12-08 02:58:01,987 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 02:58:02,005 - INFO - Epoch 16: Avg Reward = -0.5500 | Baseline = -0.5287 | Loss = -2.7585
+2025-12-08 02:58:02,006 - INFO - 
+=== Epoch 17/200 ===
+2025-12-08 03:15:13,129 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:15:13,144 - INFO - Epoch 17: Avg Reward = -0.5500 | Baseline = -0.5308 | Loss = -2.8571
+2025-12-08 03:15:13,144 - INFO - 
+=== Epoch 18/200 ===
+2025-12-08 03:24:37,172 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:24:37,192 - INFO - Epoch 18: Avg Reward = -0.5500 | Baseline = -0.5328 | Loss = -1.8561
+2025-12-08 03:24:37,192 - INFO - 
+=== Epoch 19/200 ===
+2025-12-08 03:30:55,647 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:30:55,675 - INFO - Epoch 19: Avg Reward = -0.5500 | Baseline = -0.5345 | Loss = -2.0052
+2025-12-08 03:30:55,676 - INFO - 
+=== Epoch 20/200 ===
+2025-12-08 03:41:15,057 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:41:15,068 - INFO - Epoch 20: Avg Reward = -0.5500 | Baseline = -0.5360 | Loss = -1.9286
+2025-12-08 03:41:16,759 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-20
+2025-12-08 03:41:16,760 - INFO - 
+=== Epoch 21/200 ===
+2025-12-08 03:49:35,038 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:49:35,046 - INFO - Epoch 21: Avg Reward = -0.5500 | Baseline = -0.5374 | Loss = -2.0069
+2025-12-08 03:49:35,046 - INFO - 
+=== Epoch 22/200 ===
+2025-12-08 03:57:05,243 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 03:57:05,258 - INFO - Epoch 22: Avg Reward = -0.5500 | Baseline = -0.5387 | Loss = -2.1408
+2025-12-08 03:57:05,259 - INFO - 
+=== Epoch 23/200 ===
+2025-12-08 04:05:11,017 - INFO -   Ep 1: Reward=-0.94
+2025-12-08 04:05:11,035 - INFO - Epoch 23: Avg Reward = -0.9400 | Baseline = -0.5788 | Loss = -44.8752
+2025-12-08 04:05:11,035 - INFO - 
+=== Epoch 24/200 ===
+2025-12-08 04:12:43,347 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:12:43,358 - INFO - Epoch 24: Avg Reward = -0.5500 | Baseline = -0.5759 | Loss = 3.4850
+2025-12-08 04:12:43,358 - INFO - 
+=== Epoch 25/200 ===
+2025-12-08 04:15:53,426 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:15:53,437 - INFO - Epoch 25: Avg Reward = -0.5500 | Baseline = -0.5733 | Loss = 4.3664
+2025-12-08 04:15:54,995 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-25
+2025-12-08 04:15:54,996 - INFO - 
+=== Epoch 26/200 ===
+2025-12-08 04:22:31,740 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:22:31,756 - INFO - Epoch 26: Avg Reward = -0.5500 | Baseline = -0.5710 | Loss = 1.8034
+2025-12-08 04:22:31,756 - INFO - 
+=== Epoch 27/200 ===
+2025-12-08 04:24:01,311 - INFO -   Ep 1: Reward=-1.33
+2025-12-08 04:24:01,321 - INFO - Epoch 27: Avg Reward = -1.3300 | Baseline = -0.6469 | Loss = -15.5898
+2025-12-08 04:24:01,322 - INFO - 
+=== Epoch 28/200 ===
+2025-12-08 04:30:42,713 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:30:42,730 - INFO - Epoch 28: Avg Reward = -0.5500 | Baseline = -0.6372 | Loss = 10.0299
+2025-12-08 04:30:42,730 - INFO - 
+=== Epoch 29/200 ===
+2025-12-08 04:39:42,668 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:39:42,684 - INFO - Epoch 29: Avg Reward = -0.5500 | Baseline = -0.6285 | Loss = 13.9298
+2025-12-08 04:39:42,684 - INFO - 
+=== Epoch 30/200 ===
+2025-12-08 04:48:03,530 - INFO -   Ep 1: Reward=-0.55
+2025-12-08 04:48:03,547 - INFO - Epoch 30: Avg Reward = -0.5500 | Baseline = -0.6206 | Loss = 10.4943
+2025-12-08 04:48:05,053 - INFO - Saved checkpoint to experiments/phi3_mini_phase4_rl_200epochs/checkpoint-30
+2025-12-08 04:48:05,053 - INFO - 
+=== Epoch 31/200 ===

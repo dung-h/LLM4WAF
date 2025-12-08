@@ -1,4 +1,4 @@
-# Training Strategy & Setup for RTX 4090
+# Training Strategy & Setup for 16GB VRAM GPU
 
 ## ⚡ Quick Reference
 
@@ -143,7 +143,7 @@ Phase 3 (RL from Phase 2 adapter)
 
 ---
 
-## 🔧 Training Configs for RTX 4090 (24GB VRAM)
+## 🔧 Training Configs for 16GB VRAM
 
 ### Gemma 2 2B - Phase 1
 
@@ -154,8 +154,8 @@ train_path: "data/processed/phase1_balanced_10k.jsonl" # 509 techniques
 output_dir: "experiments/remote_gemma2_2b_phase1"
 
 num_train_epochs: 3
-per_device_train_batch_size: 2 # RTX 4090 can handle 2
-gradient_accumulation_steps: 8 # Effective batch = 16
+per_device_train_batch_size: 1 # Conservative for 16GB
+gradient_accumulation_steps: 16 # Effective batch = 16
 learning_rate: 2.0e-4
 max_seq_length: 1024 # Increased from 512
 
@@ -199,8 +199,8 @@ train_path: "data/processed/phase1_balanced_10k.jsonl" # 509 techniques
 output_dir: "experiments/remote_phi3_mini_phase1"
 
 num_train_epochs: 3
-per_device_train_batch_size: 2
-gradient_accumulation_steps: 8
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
 learning_rate: 2.0e-4
 max_seq_length: 1024
 
@@ -245,7 +245,7 @@ gradient_accumulation_steps: 16 # Keep effective batch = 16
 learning_rate: 2.0e-4
 max_seq_length: 1024
 
-# 4-bit essential for 7B on 24GB
+# 4-bit essential for 7B on 16GB
 load_in_4bit: true
 bnb_4bit_quant_type: "nf4"
 bnb_4bit_use_double_quant: true
@@ -666,5 +666,5 @@ After remote setup:
 ✅ Continual vs mixed: **Continual with 20% replay buffer**
 ✅ Max token: **Train 1024-1536, infer 128 is fine**
 ✅ Phi-3 cache: **Fix included above**
-✅ RTX 4090 configs: **batch_size=2 for 2B, =1 for 7B**
+✅ 16GB VRAM configs: **batch_size=1 for all models**
 ✅ Dataset check: **Need to create Phase 1 10k subset**
