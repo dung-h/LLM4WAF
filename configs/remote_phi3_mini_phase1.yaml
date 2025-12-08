@@ -35,7 +35,7 @@ bf16: false
 warmup_ratio: 0.03
 lr_scheduler_type: "cosine"
 
-# Data Loading
+# Data Loading (Optimize for remote server)
 dataloader_num_workers: 8
 dataloader_prefetch_factor: 4
 dataloader_pin_memory: true

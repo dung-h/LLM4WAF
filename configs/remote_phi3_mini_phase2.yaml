@@ -32,6 +32,12 @@ lora_target_modules: ["qkv_proj", "o_proj"]
 # Training optimization
 gradient_checkpointing: true
 fp16: true
+
+# Data Loading
+dataloader_num_workers: 8
+dataloader_prefetch_factor: 4
+dataloader_pin_memory: true
+
 logging_steps: 50
 save_steps: 500
 save_total_limit: 3

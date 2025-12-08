@@ -41,6 +41,11 @@ dataloader_prefetch_factor: 4
 dataloader_pin_memory: true
 group_by_length: true
 
+# Data Loading (Optimize for remote server)
+dataloader_num_workers: 8
+dataloader_prefetch_factor: 4
+dataloader_pin_memory: true
+
 # Logging & Checkpoints
 logging_steps: 10
 save_steps: 500
