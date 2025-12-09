@@ -19,7 +19,7 @@ import statistics
 # Paths
 PHASE1_BALANCED = "data/processed/phase1_balanced_10k.jsonl"
 PHASE2_OBSERVATIONS = "data/processed/phase2_observations_20k.jsonl"
-PHASE2_FINAL = "data/processed/phase2_with_replay_22k.jsonl"
+PHASE2_FINAL = "data/processed/phase2_with_replay_24k.jsonl"
 OUTPUT_DIR = "reports/dataset_analysis"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "phase2_analysis.json")
 

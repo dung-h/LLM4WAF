@@ -1,0 +1,46 @@
+# Qwen 2.5 3B Phase 2 - 16GB VRAM
+# Adaptive learning with observations + Phase 1 replay buffer
+# Continues from Phase 1 adapter
+
+model_name: "Qwen/Qwen2.5-3B-Instruct"
+train_path: "data/processed/phase2_with_replay_24k.jsonl"
+output_dir: "experiments/remote_qwen_3b_phase2"
+
+# Continue from Phase 1 adapter (continual learning)
+adapter_path: "experiments/remote_qwen_3b_phase1"
+is_trainable: true
+
+# Training - 16GB VRAM (3B can use larger batch)
+num_train_epochs: 2
+per_device_train_batch_size: 2 # 3B allows batch_size=2
+gradient_accumulation_steps: 8 # Effective batch = 16
+learning_rate: 2.0e-4
+max_seq_length: 1536 # Longer for observations
+
+# 4-bit quantization
+load_in_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_use_double_quant: true
+bnb_4bit_compute_dtype: "float16"
+
+# LoRA settings
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+# Training optimization
+gradient_checkpointing: true
+fp16: true
+
+# Data Loading
+dataloader_num_workers: 8
+dataloader_prefetch_factor: 4
+dataloader_pin_memory: true
+
+logging_steps: 50
+save_steps: 500
+save_total_limit: 2 # Save disk space for 7B
+warmup_ratio: 0.03
+
+use_auth_token_env: "HF_TOKEN"

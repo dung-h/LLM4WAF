@@ -30,7 +30,7 @@ except ImportError:
 
 # Paths
 PHASE1_BALANCED = "data/processed/phase1_balanced_10k.jsonl"
-PHASE2_FINAL = "data/processed/phase2_with_replay_22k.jsonl"
+PHASE2_FINAL = "data/processed/phase2_with_replay_24k.jsonl"
 OUTPUT_DIR = "reports/dataset_analysis"
 FIGURES_DIR = os.path.join(OUTPUT_DIR, "figures")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "synthetic_quality_analysis.json")
