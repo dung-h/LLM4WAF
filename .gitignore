@@ -54,5 +54,13 @@ data/archive_20251129
 data/archive
 data/archive_legacy
 SFT_gpu0.log
+
+# Training & evaluation logs
+logs/
+*.log
+*.html
+
+# Exceptions
 !README.md
- coraza
+!login_page.html
+coraza

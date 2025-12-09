@@ -1,7 +1,0 @@
-2025-12-08 08:40:22,207 - INFO - Loading model: Qwen/Qwen2.5-3B-Instruct
-2025-12-08 08:41:02,715 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-2025-12-08 08:41:20,324 - INFO - Loading adapter: experiments/red_phase3_lightweight_enhanced_qwen3b/checkpoint-314
-2025-12-08 08:41:26,229 - INFO - 
-Starting REINFORCE Training (200 epochs, Batch 1, Total Episodes: 200)...
-2025-12-08 08:41:26,230 - INFO - 
-=== Epoch 1/200 ===
