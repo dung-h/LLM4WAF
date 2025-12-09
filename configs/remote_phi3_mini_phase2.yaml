@@ -1,39 +1,34 @@
-# Phi-3 Mini Phase 2 - 16GB VRAM with DynamicCache Fix
-# Adaptive learning with observations + Phase 1 replay buffer
-# Continues from Phase 1 adapter
 
 model_name: "microsoft/Phi-3-mini-4k-instruct"
 train_path: "data/processed/phase2_with_replay_22k.jsonl"
 output_dir: "experiments/remote_phi3_mini_phase2"
 
-# Continue from Phase 1 adapter (continual learning)
-adapter_path: "experiments/remote_phi3_mini_phase1"
+# LẦN RESUME: dùng chính adapter ở checkpoint phase2, không dùng phase1 nữa
+adapter_path: "experiments/remote_phi3_mini_phase2/checkpoint-500"
 is_trainable: true
 
-# Training - 16GB VRAM
-num_train_epochs: 2
+# NÓI CHO SCRIPT BIẾT PHẢI RESUME TRAINER TỪ CHECKPOINT NÀY
+resume_from_checkpoint: "experiments/remote_phi3_mini_phase2/checkpoint-500"
+
+num_train_epochs: 2        # GIỮ NGUYÊN 2 EPOCH
 per_device_train_batch_size: 1
 gradient_accumulation_steps: 16
 learning_rate: 2.0e-4
-max_seq_length: 1536 # Longer for observations
+max_seq_length: 1536
 
-# 4-bit quantization
 load_in_4bit: true
 bnb_4bit_quant_type: "nf4"
 bnb_4bit_use_double_quant: true
 bnb_4bit_compute_dtype: "float16"
 
-# LoRA settings
 lora_r: 16
 lora_alpha: 32
 lora_dropout: 0.05
-lora_target_modules: ["qkv_proj", "o_proj"]
+target_modules: ["qkv_proj", "o_proj"]
 
-# Training optimization
 gradient_checkpointing: true
 fp16: true
 
-# Data Loading
 dataloader_num_workers: 8
 dataloader_prefetch_factor: 4
 dataloader_pin_memory: true
@@ -43,5 +38,4 @@ save_steps: 500
 save_total_limit: 3
 warmup_ratio: 0.03
 
-# Note: Phi-3 DynamicCache fix is in train_red.py
 use_auth_token_env: "HF_TOKEN"

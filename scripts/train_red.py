@@ -100,7 +100,64 @@ file_handler = None
 console_handler = logging.StreamHandler()
 console_handler.setFormatter(log_formatter)
 logger.addHandler(console_handler)
+# def require_env_token(var: str = "HF_TOKEN") -> None:
+#     """
+#     Đảm bảo biến môi trường `var` (mặc định: HF_TOKEN) đã được set.
+#     Thứ tự ưu tiên:
+#       1. Env var (os.environ[var])
+#       2. File cache Hugging Face: ~/.cache/huggingface/token
+#       3. Kaggle Secrets: label trùng với `var` (ví dụ: HF_TOKEN)
+#     Nếu không tìm được thì SystemExit.
+#     """
+#     # 1. Nếu đã có trong env thì thôi
+#     if os.environ.get(var):
+#         logger.info(f"✅ Found {var} in environment")
+#         return
 
+#     # 2. Thử đọc từ cache của HF
+#     token_path = os.path.expanduser("~/.cache/huggingface/token")
+#     if os.path.exists(token_path):
+#         try:
+#             with open(token_path, "r", encoding="utf-8") as f:
+#                 token = f.read().strip()
+#             if token:
+#                 os.environ[var] = token
+#                 logger.info(f"✅ Loaded {var} from Hugging Face cache at {token_path}")
+#                 return
+#         except Exception as e:
+#             logger.warning(f"⚠️ Failed to read HF cache token at {token_path}: {e}")
+
+#     # 3. Thử lấy từ Kaggle Secrets (nếu đang chạy trong Kaggle)
+#     try:
+#         from kaggle_secrets import UserSecretsClient
+#         client = UserSecretsClient()
+
+#         # Mặc định: dùng chính tên biến var làm label secret, ví dụ: HF_TOKEN
+#         secret_label = var
+#         token = client.get_secret(secret_label)
+
+#         if token:
+#             os.environ[var] = token
+#             logger.info(f"✅ Loaded {var} from Kaggle Secrets (label='{secret_label}')")
+#             return
+#         else:
+#             logger.warning(f"⚠️ Kaggle Secret '{secret_label}' is empty")
+#     except ImportError:
+#         # Không phải môi trường Kaggle
+#         logger.debug("kaggle_secrets not available (probably not running on Kaggle).")
+#     except Exception as e:
+#         # Có kaggle_secrets nhưng lỗi khác (không có secret, config sai, v.v.)
+#         logger.warning(f"⚠️ Failed to load {var} from Kaggle Secrets: {e}")
+
+#     # 4. Bó tay, báo lỗi rõ ràng
+#     raise SystemExit(
+#         f"{var} is not set.\n"
+#         f"Checked:\n"
+#         f"  - Environment variable {var}\n"
+#         f"  - Hugging Face cache at {token_path}\n"
+#         f"  - Kaggle Secret with label '{var}'\n"
+#         f"Please set one of these before running."
+#     )
 def require_env_token(var: str = "HF_TOKEN") -> None:
     if not os.environ.get(var):
         token_path = os.path.expanduser("~/.cache/huggingface/token")
@@ -111,6 +168,7 @@ def require_env_token(var: str = "HF_TOKEN") -> None:
                 logger.info(f"✅ Loaded HF_TOKEN from cache")
                 return
         raise SystemExit(f"Environment variable {var} not set and no cached token found.")
+
 
 def load_config(path: str) -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
@@ -283,9 +341,16 @@ def main() -> None:
     
     for handler in logger.handlers:
         handler.flush()
-    
-    trainer.train()
-    
+    # === ĐOẠN THÊM VÀO ĐỂ RESUME ===
+    resume_ckpt = cfg.get("resume_from_checkpoint", None)
+    if resume_ckpt:
+        logger.info(f"🔁 Resuming training from checkpoint: {resume_ckpt}")
+        trainer.train(resume_from_checkpoint=resume_ckpt)
+    else:
+        logger.info("🚀 Starting training from scratch / fresh run (no checkpoint resume)")
+        trainer.train()
+    # === HẾT PHẦN THÊM ===
+
     logger.info("Saving model…")
     trainer.save_model(out_dir)
     logger.info(f"✅ Training complete! Model saved to {out_dir}")
