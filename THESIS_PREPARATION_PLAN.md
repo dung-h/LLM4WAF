@@ -12,6 +12,7 @@
 **Reason:** Old Phase 2 datasets with reasoning format lacked PASSED payloads, superseded by Phase 3 lightweight (now called Phase 2 with replay).
 
 **Files to archive:**
+
 ```bash
 mkdir data/processed/archive_old_phase2
 mv data/processed/red_v40_phase2_reasoning.jsonl data/processed/archive_old_phase2/
@@ -25,6 +26,7 @@ mv data/processed/phase2_rag_old.jsonl data/processed/archive_old_phase2/
 ### 1.2 Archive Legacy Configs
 
 **Files to archive:**
+
 ```bash
 mkdir configs/archive_legacy
 mv configs/red_*.yaml configs/archive_legacy/
@@ -54,6 +56,7 @@ Document all archived files with reasons.
 **Script to create:** `scripts/report/analyze_phase1_creation_process.py`
 
 **Analysis points:**
+
 1. **Source:** LLM API (Gemini/Deepseek) → Payload generation
 2. **Prompt template reconstruction:**
    - Analyze existing Phase 1 samples
@@ -73,6 +76,7 @@ Document all archived files with reasons.
 **Script to create:** `scripts/report/analyze_phase2_creation_process.py`
 
 **Analysis points:**
+
 1. **Source:** Phase 1 model inference + Phase 1 replay buffer
 2. **Format evolution:**
    - Phase 1: Simple technique-based prompts
@@ -90,13 +94,16 @@ Document all archived files with reasons.
 **Script to create:** `scripts/report/analyze_technique_distribution.py`
 
 **Outputs:**
+
 1. **Phase 1 technique distribution:**
+
    - Count per technique
    - Percentage distribution
    - Top 20 most common techniques
    - Long-tail analysis
 
 2. **Phase 2 technique distribution:**
+
    - Comparison with Phase 1
    - New techniques introduced: 517 - 509 = 8 new
    - Technique evolution/refinement
@@ -114,17 +121,20 @@ Document all archived files with reasons.
 **Critical concerns for LLM-generated data:**
 
 1. **Diversity Metrics:**
+
    - Unique payload ratio
    - N-gram diversity (2-gram, 3-gram)
    - Character-level entropy
    - Technique coverage completeness
 
 2. **Validity Metrics:**
+
    - Syntax correctness (SQL/JavaScript validation)
    - WAF bypass effectiveness
    - Injection point compatibility
 
 3. **Bias Detection:**
+
    - Over-representation of certain techniques
    - Prompt leakage (common LLM artifacts)
    - Hallucination detection (invalid SQL syntax, etc.)
@@ -140,6 +150,7 @@ Document all archived files with reasons.
 **Purpose:** Demonstrate how Phase 1 dataset was created (for thesis documentation).
 
 **Features:**
+
 - Support Gemini API and Deepseek API
 - Configurable prompts (reconstructed from dataset analysis)
 - DVWA + ModSecurity validation
@@ -147,6 +158,7 @@ Document all archived files with reasons.
 - Quality filtering (only PASSED payloads)
 
 **Prompt reconstruction strategy:**
+
 ```python
 # Inferred from Phase 1 dataset structure
 SYSTEM_PROMPT = """You are an expert penetration tester specializing in WAF bypass techniques.
@@ -176,12 +188,14 @@ Attack Type: {attack_type}
 ### X.1 Synthetic Data Generation Pipeline
 
 #### X.1.1 Phase 1: Foundation Dataset Creation
+
 - LLM-based payload generation (Gemini/Deepseek API)
 - Prompt engineering strategy
 - Quality validation via DVWA + ModSecurity
 - Dataset statistics and characteristics
 
 #### X.1.2 Phase 2: Adaptive Dataset Construction
+
 - Model-driven inference from Phase 1 adapter
 - Structured prompt format design
 - Replay buffer integration (20% rate)
@@ -190,18 +204,21 @@ Attack Type: {attack_type}
 ### X.2 Dataset Quality Analysis
 
 #### X.2.1 Technique Distribution
+
 - 509 unique techniques in Phase 1
 - 517 unique techniques in Phase 2
 - Distribution analysis and long-tail handling
 - Coverage completeness validation
 
 #### X.2.2 Synthetic Data Quality Assurance
+
 - Diversity metrics (n-gram, entropy)
 - Validity metrics (syntax, effectiveness)
 - Bias detection and mitigation
 - Comparison with expert-curated datasets
 
 #### X.2.3 Stratified Sampling Strategy
+
 - Problem: Simple head sampling only captured 3/509 techniques
 - Solution: Proportional stratified sampling
 - Validation: All 509 techniques represented
@@ -209,23 +226,28 @@ Attack Type: {attack_type}
 ### X.3 Dataset Artifacts
 
 #### Table X.1: Dataset Statistics
-| Phase | Samples | Techniques | Attack Types | Avg Length | Size (MB) |
-|-------|---------|------------|--------------|------------|-----------|
-| Phase 1 (Full) | 39,155 | 509 | SQLI, XSS | ~200 chars | 17.74 |
-| Phase 1 (Balanced) | 10,000 | 509 | SQLI, XSS | ~200 chars | 4.51 |
-| Phase 2 (Observations) | 20,000 | 517 | SQLI, XSS | ~300 chars | 20.91 |
-| Phase 2 (Final) | 22,000 | 517 | SQLI, XSS | ~290 chars | 22.71 |
+
+| Phase                  | Samples | Techniques | Attack Types | Avg Length | Size (MB) |
+| ---------------------- | ------- | ---------- | ------------ | ---------- | --------- |
+| Phase 1 (Full)         | 39,155  | 509        | SQLI, XSS    | ~200 chars | 17.74     |
+| Phase 1 (Balanced)     | 10,000  | 509        | SQLI, XSS    | ~200 chars | 4.51      |
+| Phase 2 (Observations) | 20,000  | 517        | SQLI, XSS    | ~300 chars | 20.91     |
+| Phase 2 (Final)        | 22,000  | 517        | SQLI, XSS    | ~290 chars | 22.71     |
 
 #### Table X.2: Top 20 Techniques (Phase 1)
+
 [Generated from analyze_technique_distribution.py]
 
 #### Figure X.1: Technique Distribution
+
 [Bar chart showing distribution across techniques]
 
 #### Figure X.2: Payload Length Distribution
+
 [Histogram showing length characteristics]
 
 #### Figure X.3: Attack Type Breakdown
+
 [Pie chart: SQLI vs XSS ratio]
 
 ### X.4 Ethical Considerations
@@ -307,17 +329,20 @@ LLM4WAF-Final/
 **Current scripts to refactor for submission:**
 
 1. **`train_red.py` → `scripts/training/train_sft.py`**
+
    - Remove temporary fixes
    - Clean up comments
    - Add comprehensive docstrings
    - Remove debug prints
 
 2. **`train_rl_reinforce.py` → `scripts/training/train_rl.py`**
+
    - Clean VRAM optimization code
    - Document memory management strategy
    - Remove experimental code paths
 
 3. **Dataset creation scripts:**
+
    - Keep as-is, already clean
    - Add detailed docstrings
 
@@ -329,21 +354,25 @@ LLM4WAF-Final/
 **NEW documentation files:**
 
 1. **`METHODOLOGY.md`**
+
    - Dataset creation methodology
    - Training pipeline description
    - Evaluation protocol
 
 2. **`REPRODUCTION.md`**
+
    - Step-by-step reproduction instructions
    - Hardware requirements
    - Expected results
 
 3. **`data/README.md`**
+
    - Dataset documentation
    - Field descriptions
    - Statistics summary
 
 4. **`configs/README.md`**
+
    - Config file structure
    - Hyperparameter choices
    - Usage examples
@@ -362,11 +391,13 @@ LLM4WAF-Final/
 **Purpose:** Analyze Phase 1 dataset creation characteristics
 
 **Outputs:**
+
 - `reports/dataset_analysis/phase1_creation_summary.txt`
 - `reports/dataset_analysis/phase1_statistics.json`
 - Prompt template reconstruction
 
 **Key metrics:**
+
 - Total samples, techniques, attack types
 - Payload length statistics (mean, median, P95, P99)
 - Character distribution
@@ -377,11 +408,13 @@ LLM4WAF-Final/
 **Purpose:** Analyze Phase 2 dataset construction
 
 **Outputs:**
+
 - `reports/dataset_analysis/phase2_creation_summary.txt`
 - `reports/dataset_analysis/phase2_statistics.json`
 - Comparison with Phase 1
 
 **Key metrics:**
+
 - Replay buffer composition (20k + 2k)
 - New techniques introduced (8 new)
 - Payload complexity evolution
@@ -392,12 +425,14 @@ LLM4WAF-Final/
 **Purpose:** Comprehensive technique distribution analysis
 
 **Outputs:**
+
 - `reports/dataset_analysis/technique_distribution.csv`
 - `reports/dataset_analysis/figures/technique_dist_phase1.png`
 - `reports/dataset_analysis/figures/technique_dist_phase2.png`
 - `reports/dataset_analysis/figures/technique_comparison.png`
 
 **Visualizations:**
+
 - Bar charts (top 20 techniques)
 - Full distribution histograms
 - Phase 1 vs Phase 2 comparison
@@ -408,17 +443,21 @@ LLM4WAF-Final/
 **Purpose:** Synthetic data quality assessment
 
 **Outputs:**
+
 - `reports/dataset_analysis/quality_metrics.json`
 - `reports/dataset_analysis/quality_report.txt`
 
 **Metrics:**
+
 1. **Diversity:**
+
    - Unique payload ratio
    - 2-gram diversity score
    - 3-gram diversity score
    - Shannon entropy
 
 2. **Validity:**
+
    - SQL syntax validation (for SQLI)
    - JavaScript syntax validation (for XSS)
    - Encoding correctness
@@ -433,12 +472,14 @@ LLM4WAF-Final/
 **Purpose:** Demonstrate dataset generation process (for thesis documentation)
 
 **Features:**
+
 - **API Support:** Gemini, Deepseek
 - **Configurable prompts** (inferred from dataset analysis)
 - **WAF validation** (optional DVWA + ModSecurity testing)
 - **Output format:** Matches Phase 1 dataset structure
 
 **Usage:**
+
 ```bash
 python scripts/dataset_creation/reconstruct_generation.py \
   --api gemini \
@@ -505,18 +546,21 @@ python scripts/dataset_creation/reconstruct_generation.py \
 ## 📌 IMMEDIATE NEXT STEPS
 
 ### Step 1: Archive Old Phase 2 Data (TODAY)
+
 ```bash
 mkdir data/processed/archive_old_phase2
 # Move 6 old phase2 files
 ```
 
 ### Step 2: Archive Legacy Configs (TODAY)
+
 ```bash
 mkdir configs/archive_legacy
 # Move 25 legacy configs
 ```
 
 ### Step 3: Create Analysis Scripts Skeleton (THIS WEEK)
+
 ```bash
 mkdir scripts/analysis
 mkdir reports/dataset_analysis
@@ -525,6 +569,7 @@ mkdir reports/dataset_analysis/figures
 ```
 
 ### Step 4: Implement First Analysis Script (THIS WEEK)
+
 ```bash
 # Start with analyze_technique_distribution.py
 # Easiest to implement, provides immediate value
@@ -535,18 +580,22 @@ mkdir reports/dataset_analysis/figures
 ## 🔍 KEY QUESTIONS TO RESOLVE
 
 1. **Prompt Reconstruction:**
+
    - Do you have original prompts used for Phase 1 generation?
    - If not, can we infer from dataset structure?
 
 2. **API Keys:**
+
    - Gemini API key available?
    - Deepseek API key available?
 
 3. **WAF Validation:**
+
    - Should `reconstruct_generation.py` validate against DVWA?
    - Or just demonstrate generation without validation?
 
 4. **Visualization Style:**
+
    - Preferred chart library: matplotlib, seaborn, plotly?
    - Color scheme for thesis consistency?
 
@@ -559,6 +608,7 @@ mkdir reports/dataset_analysis/figures
 ## 📊 SUCCESS METRICS
 
 **Repository Quality:**
+
 - [ ] All legacy files archived with documentation
 - [ ] Only production-ready code in main directories
 - [ ] Clean commit history (squash temp commits)
@@ -566,6 +616,7 @@ mkdir reports/dataset_analysis/figures
 - [ ] Reproduction instructions verified
 
 **Thesis Quality:**
+
 - [ ] Dataset creation process fully documented
 - [ ] Technique distribution analyzed with visualizations
 - [ ] Synthetic data quality assessed with metrics
@@ -573,6 +624,7 @@ mkdir reports/dataset_analysis/figures
 - [ ] Methodology clearly explained
 
 **Reproducibility:**
+
 - [ ] Someone can recreate Phase 1 dataset using `reconstruct_generation.py`
 - [ ] Someone can retrain models using provided configs
 - [ ] Someone can regenerate all analysis reports

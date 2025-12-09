@@ -1,0 +1,99 @@
+{
+  "phase1_full": {
+    "dataset_name": "Phase 1 Full (39k)",
+    "total_samples": 39155,
+    "unique_techniques": 509,
+    "attack_type_distribution": {
+      "SQLI": 18583,
+      "XSS": 20372,
+      "OS_INJECTION": 200
+    },
+    "payload_length_stats": {
+      "mean": 106.34445153875623,
+      "median": 78,
+      "min": 4,
+      "max": 3077,
+      "p25": 46.0,
+      "p75": 134.0,
+      "p95": 234.0,
+      "p99": 603.76
+    },
+    "top_20_techniques": {
+      "XSS Keyword (heuristic)": 6961,
+      "SQLI Keyword (heuristic)": 2197,
+      "Double URL Encode": 1890,
+      "Triple URL Encode": 1809,
+      "XSS - Unclassified (manual refine)": 424,
+      "SQLI - Unclassified (manual refine)": 356,
+      "Triple URL Encode XSS (heuristic)": 168,
+      "SQLI - Path Traversal / File Inclusion (Manual Refine)": 158,
+      "Double URL Encode XSS (manual refine)": 80,
+      "XSS Reflected (Generated)": 66,
+      "Triple URL Encode_adv_obf": 60,
+      "Double URL Encode_adv_obf": 60,
+      "obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf": 60,
+      "Triple URL_adv_obf": 59,
+      "obf_double_url_encode+obf_case_random_adv_obf": 58,
+      "obf_double_url_encode+obf_whitespace_url+obf_case_random_adv_obf": 58,
+      "obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf": 57,
+      "obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf": 57,
+      "obf_whitespace_url+obf_double_url_encode_adv_obf": 56,
+      "obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf": 56
+    },
+    "technique_coverage": {
+      "total_unique": 509,
+      "total_occurrences": 39155
+    }
+  },
+  "phase1_balanced": {
+    "dataset_name": "Phase 1 Balanced (10k)",
+    "total_samples": 10000,
+    "unique_techniques": 509,
+    "attack_type_distribution": {
+      "SQLI": 4752,
+      "XSS": 5200,
+      "OS_INJECTION": 48
+    },
+    "payload_length_stats": {
+      "mean": 105.4046,
+      "median": 76.0,
+      "min": 4,
+      "max": 1965,
+      "p25": 46.0,
+      "p75": 134.0,
+      "p95": 232.0,
+      "p99": 578.0
+    },
+    "top_20_techniques": {
+      "XSS Keyword (heuristic)": 1957,
+      "SQLI Keyword (heuristic)": 640,
+      "Double URL Encode": 539,
+      "Triple URL Encode": 503,
+      "XSS - Unclassified (manual refine)": 118,
+      "SQLI - Unclassified (manual refine)": 98,
+      "Triple URL Encode XSS (heuristic)": 47,
+      "SQLI - Path Traversal / File Inclusion (Manual Refine)": 45,
+      "Double URL Encode XSS (manual refine)": 20,
+      "XSS Reflected (Generated)": 16,
+      "Triple URL_adv_obf": 15,
+      "Double URL Encode_adv_obf": 15,
+      "Triple URL Encode_adv_obf": 15,
+      "obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf": 15,
+      "obf_whitespace_url+obf_double_url_encode_adv_obf": 14,
+      "obf_double_url_encode+obf_case_random_adv_obf": 14,
+      "obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf": 14,
+      "obf_case_random+obf_double_url_encode_adv_obf": 14,
+      "obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf": 14,
+      "obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf": 14
+    },
+    "technique_coverage": {
+      "total_unique": 509,
+      "total_occurrences": 10000
+    }
+  },
+  "comparison": {
+    "technique_coverage_full": 509,
+    "technique_coverage_balanced": 509,
+    "coverage_maintained": true
+  }
+}

@@ -34,15 +34,64 @@ def load_dataset(filepath: str) -> List[Dict]:
                 continue
     return data
 
+def extract_technique_from_prompt(item: Dict) -> str:
+    """Extract technique from user message if not in top-level field."""
+    if 'technique' in item:
+        return item['technique']
+    
+    # Extract from user message (Phase 2 observations format)
+    if 'messages' in item:
+        for msg in item['messages']:
+            if msg.get('role') == 'user':
+                content = msg.get('content', '')
+                # Look for "Technique: XXX" pattern
+                for line in content.split('\n'):
+                    if line.startswith('Technique:'):
+                        return line.replace('Technique:', '').strip()
+    
+    return 'Unknown'
+
+def infer_attack_type(technique: str, item: Dict) -> str:
+    """Infer attack_type from technique name if not present."""
+    # Check if attack_type already exists
+    if 'attack_type' in item:
+        return item['attack_type']
+    
+    # Check user message for "Target: SQLI/XSS/..." pattern
+    if 'messages' in item:
+        for msg in item['messages']:
+            if msg.get('role') == 'user':
+                content = msg.get('content', '')
+                for line in content.split('\n'):
+                    if line.startswith('Target:'):
+                        target = line.upper()
+                        if 'SQLI' in target or 'SQL' in target:
+                            return 'SQLI'
+                        elif 'XSS' in target:
+                            return 'XSS'
+                        elif 'OS_INJECTION' in target:
+                            return 'OS_INJECTION'
+    
+    # Fallback: infer from technique name
+    technique_upper = technique.upper()
+    if 'SQLI' in technique_upper or 'SQL' in technique_upper:
+        return 'SQLI'
+    elif 'XSS' in technique_upper:
+        return 'XSS'
+    elif 'OS_INJECTION' in technique_upper or 'COMMAND' in technique_upper:
+        return 'OS_INJECTION'
+    else:
+        return 'Unknown'
+
 def analyze_dataset(data: List[Dict], name: str) -> Dict:
     """Analyze dataset characteristics."""
     print(f"\nAnalyzing {name}...")
     
     total_samples = len(data)
     
-    # Extract fields
-    techniques = [item.get('technique', 'Unknown') for item in data]
-    attack_types = [item.get('attack_type', 'Unknown') for item in data]
+    # Extract fields with technique/attack_type inference
+    techniques = [extract_technique_from_prompt(item) for item in data]
+    attack_types = [infer_attack_type(extract_technique_from_prompt(item), item) for item in data]
     
     # Extract payloads
     payloads = []
@@ -141,7 +190,7 @@ def main():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     
-    print(f"\n✅ Analysis saved to: {OUTPUT_FILE}")
+    print(f"\n[SUCCESS] Analysis saved to: {OUTPUT_FILE}")
     
     # Print summary
     print("\n" + "="*80)

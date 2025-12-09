@@ -124,7 +124,7 @@ def main():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     
-    print(f"\n✅ Analysis saved to: {OUTPUT_FILE}")
+    print(f"\n[SUCCESS] Analysis saved to: {OUTPUT_FILE}")
     
     # Print summary
     print("\n" + "="*80)

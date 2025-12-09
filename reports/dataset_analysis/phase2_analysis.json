@@ -1,0 +1,138 @@
+{
+  "phase1_balanced": {
+    "dataset_name": "Phase 1 Balanced (10k)",
+    "total_samples": 10000,
+    "unique_techniques": 509,
+    "attack_type_distribution": {
+      "SQLI": 4752,
+      "XSS": 5200,
+      "OS_INJECTION": 48
+    },
+    "payload_length_stats": {
+      "mean": 105.4046,
+      "median": 76.0,
+      "min": 4,
+      "max": 1965,
+      "p95": 232.0,
+      "p99": 578.0
+    },
+    "top_20_techniques": {
+      "XSS Keyword (heuristic)": 1957,
+      "SQLI Keyword (heuristic)": 640,
+      "Double URL Encode": 539,
+      "Triple URL Encode": 503,
+      "XSS - Unclassified (manual refine)": 118,
+      "SQLI - Unclassified (manual refine)": 98,
+      "Triple URL Encode XSS (heuristic)": 47,
+      "SQLI - Path Traversal / File Inclusion (Manual Refine)": 45,
+      "Double URL Encode XSS (manual refine)": 20,
+      "XSS Reflected (Generated)": 16,
+      "Triple URL_adv_obf": 15,
+      "Double URL Encode_adv_obf": 15,
+      "Triple URL Encode_adv_obf": 15,
+      "obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf": 15,
+      "obf_whitespace_url+obf_double_url_encode_adv_obf": 14,
+      "obf_double_url_encode+obf_case_random_adv_obf": 14,
+      "obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf": 14,
+      "obf_case_random+obf_double_url_encode_adv_obf": 14,
+      "obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf": 14,
+      "obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf": 14
+    }
+  },
+  "phase2_observations": {
+    "dataset_name": "Phase 2 Observations (20k)",
+    "total_samples": 20000,
+    "unique_techniques": 521,
+    "attack_type_distribution": {
+      "SQLI": 11363,
+      "OS_INJECTION": 1825,
+      "XSS": 6812
+    },
+    "payload_length_stats": {
+      "mean": 109.4016,
+      "median": 75.0,
+      "min": 4,
+      "max": 1965,
+      "p95": 272.0,
+      "p99": 835.0
+    },
+    "top_20_techniques": {
+      "Double URL Encode": 870,
+      "Triple URL Encode": 849,
+      "OS Command id": 469,
+      "SQLI Keyword (heuristic)": 467,
+      "XSS Keyword (heuristic)": 408,
+      "OS Command ls": 397,
+      "OS Command whoami": 368,
+      "OS Command ping": 351,
+      "XSS Script context escape": 337,
+      "Error-based UPDATE_XML": 237,
+      "SQLI - Unclassified (manual refine)": 159,
+      "XSS - Unclassified (manual refine)": 149,
+      "XSS Input onfocus": 149,
+      "XSS Iframe javascript scheme": 114,
+      "Boolean-based OR 1=1 (parentheses)": 112,
+      "Auth Bypass Comment": 111,
+      "Boolean-based OR 1=1": 110,
+      "Time-based AND SLEEP": 102,
+      "OS Command cat": 97,
+      "XSS Image onerror": 96
+    }
+  },
+  "phase2_final": {
+    "dataset_name": "Phase 2 Final (22k)",
+    "total_samples": 24000,
+    "unique_techniques": 532,
+    "attack_type_distribution": {
+      "XSS": 8893,
+      "SQLI": 13267,
+      "OS_INJECTION": 1840
+    },
+    "payload_length_stats": {
+      "mean": 108.45795833333334,
+      "median": 75.0,
+      "min": 4,
+      "max": 1965,
+      "p95": 264.95,
+      "p99": 800.98
+    },
+    "top_20_techniques": {
+      "XSS Keyword (heuristic)": 1186,
+      "Double URL Encode": 1075,
+      "Triple URL Encode": 1056,
+      "SQLI Keyword (heuristic)": 736,
+      "OS Command id": 469,
+      "OS Command ls": 397,
+      "OS Command whoami": 368,
+      "OS Command ping": 351,
+      "XSS Script context escape": 337,
+      "Error-based UPDATE_XML": 237,
+      "XSS - Unclassified (manual refine)": 201,
+      "SQLI - Unclassified (manual refine)": 198,
+      "XSS Input onfocus": 149,
+      "XSS Iframe javascript scheme": 114,
+      "Triple URL Encode XSS (heuristic)": 112,
+      "Boolean-based OR 1=1 (parentheses)": 112,
+      "Auth Bypass Comment": 111,
+      "Boolean-based OR 1=1": 110,
+      "Time-based AND SLEEP": 102,
+      "OS Command cat": 97
+    }
+  },
+  "composition": {
+    "phase2_observations_count": 20000,
+    "phase1_replay_count": 4000,
+    "replay_percentage": 16.666666666666664
+  },
+  "evolution": {
+    "phase1_techniques": 509,
+    "phase2_techniques": 532,
+    "new_techniques_added": 23,
+    "technique_growth": "23 new techniques (4.5% increase)"
+  },
+  "complexity": {
+    "phase1_avg_payload_length": 105.4046,
+    "phase2_avg_payload_length": 108.45795833333334,
+    "complexity_increase_percent": 2.896797989208569
+  }
+}

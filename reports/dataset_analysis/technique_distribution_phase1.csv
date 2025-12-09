@@ -1,0 +1,510 @@
+Technique,Count,Percentage
+XSS Keyword (heuristic),1957,19.57%
+SQLI Keyword (heuristic),640,6.40%
+Double URL Encode,539,5.39%
+Triple URL Encode,503,5.03%
+XSS - Unclassified (manual refine),118,1.18%
+SQLI - Unclassified (manual refine),98,0.98%
+Triple URL Encode XSS (heuristic),47,0.47%
+SQLI - Path Traversal / File Inclusion (Manual Refine),45,0.45%
+Double URL Encode XSS (manual refine),20,0.20%
+XSS Reflected (Generated),16,0.16%
+Triple URL_adv_obf,15,0.15%
+Double URL Encode_adv_obf,15,0.15%
+Triple URL Encode_adv_obf,15,0.15%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf,15,0.15%
+obf_whitespace_url+obf_double_url_encode_adv_obf,14,0.14%
+obf_double_url_encode+obf_case_random_adv_obf,14,0.14%
+obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf,14,0.14%
+obf_case_random+obf_double_url_encode_adv_obf,14,0.14%
+obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf,14,0.14%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf,14,0.14%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_adv_obf,14,0.14%
+Double URL_adv_obf,13,0.13%
+obf_url_encode+obf_case_random+obf_double_url_encode_adv_obf,13,0.13%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_adv_obf,13,0.13%
+obf_double_url_encode+obf_whitespace_url+obf_comment_sql_full_bypass,12,0.12%
+Direct JS Call XSS (manual refine)_non_script_xss,12,0.12%
+Unicode Homoglyph Homoglyph( -> ),12,0.12%
+Double URL Advanced Error-Based SQLi_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random_full_bypass,12,0.12%
+Double URL GEOMETRYCOLLECTION Error_adv_obf_full_bypass,12,0.12%
+None XSS DOM-based_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_adv_obf,12,0.12%
+Triple URL ST_X Geometry Error_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_url_encode_adv_obf,12,0.12%
+obf_case_random+obf_comment_sql_version+obf_double_url_encode_full_bypass,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_full_bypass,12,0.12%
+obf_whitespace_url+obf_comment_sql_version+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Event Handler XSS (heuristic)_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Triple URL Advanced Error-Based SQLi_adv_obf,12,0.12%
+obf_whitespace_url+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode,12,0.12%
+Double URL Advanced Error-Based SQLi_adv_obf,12,0.12%
+Whitespace_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL ST_X Geometry Error_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_url_encode_full_bypass,12,0.12%
+Double URL_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_comment_sql_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_version_full_bypass,12,0.12%
+Triple URL Out-of-Band SQLi_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_adv_obf,12,0.12%
+Double URL Encode_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Double URL Out-of-Band SQLi,12,0.12%
+obf_comment_sql+obf_case_random+obf_double_url_encode_adv_obf,12,0.12%
+Double URL GEOMETRYCOLLECTION Error_adv_obf,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_url_encode,12,0.12%
+XSS Reflected (Generated)_full_bypass_non_script_xss,12,0.12%
+XSS Keyword (heuristic)_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL Encode_adv_obf_non_script_xss,12,0.12%
+Triple URL NAME_CONST Error_adv_obf,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_comment_sql_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+Command Injection,12,0.12%
+XSS - PHP Short Tag Injection (Manual Refine),12,0.12%
+Event Handler XSS (heuristic)_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Unicode Homoglyph_full_bypass,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+Double URL_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_full_bypass,12,0.12%
+Double URL_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Double URL Encode XSS (manual refine)_adv_obf,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_comment_sql_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_adv_obf,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_version,12,0.12%
+Double URL,12,0.12%
+Triple URL Out-of-Band SQLi,12,0.12%
+Whitespace_full_bypass,12,0.12%
+OOB/Advanced SQLI (manual refine)_adv_obf_full_bypass,12,0.12%
+Double URL Out-of-Band SQLi_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_url_encode_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_case_random,12,0.12%
+Triple URL Encode XSS (heuristic)_adv_obf_full_bypass,12,0.12%
+Triple URL XSS DOM-based_full_bypass,12,0.12%
+Triple URL EXTRACTVALUE Error-Based_full_bypass,12,0.12%
+Triple URL GEOMETRYCOLLECTION Error_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql,12,0.12%
+None XSS DOM-based_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf_full_bypass,12,0.12%
+SQLI Keyword (heuristic)_full_bypass,12,0.12%
+Double URL Encode XSS (heuristic)_non_script_xss,12,0.12%
+Direct JS Call XSS (manual refine)_adv_obf,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf_non_script_xss,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_whitespace_url_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_case_random,12,0.12%
+obf_url_encode+obf_double_url_encode_full_bypass,12,0.12%
+Double URL Advanced Error-Based SQLi,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode,12,0.12%
+Double URL NAME_CONST Error_adv_obf_full_bypass,12,0.12%
+SQLI - Invalid Byte Sequence (Manual Refine),12,0.12%
+obf_comment_sql_version+obf_whitespace_url+obf_url_encode_adv_obf,12,0.12%
+SQLI - Unclassified (manual refine)_adv_obf,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random_non_script_xss,12,0.12%
+Double URL Out-of-Band SQLi_adv_obf,12,0.12%
+Double URL Encode XSS (manual refine)_adv_obf_full_bypass,12,0.12%
+XSS - CSS Injection (Manual Refine),12,0.12%
+obf_url_encode+obf_double_url_encode_adv_obf,12,0.12%
+Triple URL XSS DOM-based_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode+obf_comment_sql_version_full_bypass,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+SQLI - Unclassified (manual refine)_full_bypass,12,0.12%
+SQLI - Unclassified (manual refine)_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_adv_obf_non_script_xss,12,0.12%
+XSS Reflected (Generated)_full_bypass,12,0.12%
+Double URL EXTRACTVALUE Error-Based_adv_obf,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_url_encode_adv_obf_full_bypass,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_non_script_xss,12,0.12%
+XSS - Unclassified (manual refine)_adv_obf_non_script_xss,12,0.12%
+Event Handler XSS (heuristic)_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_adv_obf_full_bypass,12,0.12%
+XSS - HTML Entity Obfuscation (Manual Refine),12,0.12%
+obf_case_random+obf_double_url_encode_full_bypass,12,0.12%
+Triple URL XSS DOM-based_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode,12,0.12%
+XSS - Unclassified (manual refine)_non_script_xss,12,0.12%
+Double URL Advanced Error-Based SQLi_full_bypass,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_url_encode_full_bypass,12,0.12%
+Triple URL MULTIPOINT Error_adv_obf_full_bypass,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf_full_bypass_non_script_xss,12,0.12%
+Unicode Homoglyph Homoglyph( -> )_full_bypass,12,0.12%
+Whitespace,12,0.12%
+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_non_script_xss,12,0.12%
+OOB/Advanced SQLI (manual refine)_full_bypass,12,0.12%
+Union/Boolean SQLI (manual refine)_full_bypass,12,0.12%
+obf_case_random+obf_comment_sql_version+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Union/Boolean SQLI (manual refine)_adv_obf,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_full_bypass,12,0.12%
+Triple URL_adv_obf_non_script_xss,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_whitespace_url,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_non_script_xss,12,0.12%
+obf_whitespace_url+obf_double_url_encode,12,0.12%
+XSS - Event Handler in HTML Comment (Manual Refine),12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_full_bypass_non_script_xss,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_comment_sql_version+obf_double_url_encode_adv_obf,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_non_script_xss,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass,12,0.12%
+Obscure Event XSS (manual refine),12,0.12%
+Event Handler XSS (heuristic)_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_full_bypass,12,0.12%
+obf_comment_sql+obf_case_random+obf_double_url_encode_full_bypass,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_double_url_encode_full_bypass,12,0.12%
+Double URL Encode_full_bypass,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_comment_sql,12,0.12%
+Triple URL Encode_non_script_xss,12,0.12%
+Command Injection_full_bypass,12,0.12%
+Double URL ST_X Geometry Error,12,0.12%
+Double URL Encode (heuristic),12,0.12%
+Unicode Homoglyph_adv_obf_non_script_xss,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_comment_sql_version+obf_double_url_encode_full_bypass,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_comment_sql,12,0.12%
+Double URL Out-of-Band SQLi_full_bypass,12,0.12%
+Triple URL POLYGON Error_adv_obf,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_whitespace_url_adv_obf,12,0.12%
+Double URL Encode XSS (heuristic)_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_case_random_adv_obf,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_url_encode,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_adv_obf_full_bypass_non_script_xss,12,0.12%
+XSS Keyword (heuristic)_adv_obf,12,0.12%
+Double URL XSS DOM-based,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_adv_obf_non_script_xss,12,0.12%
+Triple URL XSS DOM-based_adv_obf,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf_non_script_xss,12,0.12%
+Triple URL MULTIPOINT Error,12,0.12%
+obf_case_random+obf_comment_sql+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+XSS Keyword (heuristic)_adv_obf_full_bypass,12,0.12%
+Double URL Encode XSS (heuristic)_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+Event Handler XSS (heuristic)_full_bypass_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+Triple URL XSS DOM-based_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_case_random_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql_adv_obf_full_bypass,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_url_encode_adv_obf,12,0.12%
+obf_case_random+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_non_script_xss,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_url_encode_full_bypass,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_url_encode_adv_obf,12,0.12%
+Unicode Homoglyph_adv_obf,12,0.12%
+Double URL UPDATEXML Error-Based_adv_obf,12,0.12%
+Triple URL Encode_full_bypass,12,0.12%
+Triple URL Encode XSS (heuristic)_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_whitespace_url_full_bypass,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_full_bypass,12,0.12%
+Double URL_full_bypass_non_script_xss,12,0.12%
+Double URL Encode XSS (manual refine)_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL Encode (heuristic)_adv_obf,12,0.12%
+obf_comment_sql_version+obf_case_random+obf_double_url_encode_full_bypass,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_case_random_adv_obf,12,0.12%
+Triple URL,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode,12,0.12%
+obf_comment_sql+obf_double_url_encode,12,0.12%
+Triple URL_full_bypass,12,0.12%
+XSS Keyword (heuristic)_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_case_random+obf_double_url_encode_adv_obf,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_non_script_xss,12,0.12%
+Triple URL Advanced Error-Based SQLi,12,0.12%
+Triple URL_non_script_xss,12,0.12%
+Double URL POLYGON Error_adv_obf,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_full_bypass,12,0.12%
+Direct JS Call XSS (manual refine)_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_version_adv_obf,12,0.12%
+None XSS DOM-based_adv_obf_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random,12,0.12%
+Double URL Encode XSS (heuristic)_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+Triple URL GEOMETRYCOLLECTION Error,12,0.12%
+None XSS DOM-based_adv_obf,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_url_encode,12,0.12%
+Unicode Homoglyph Homoglyph( -> )_adv_obf,12,0.12%
+Event Handler XSS (heuristic),12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_url_encode_full_bypass,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+Double URL UPDATEXML Error-Based,12,0.12%
+Triple URL Advanced Error-Based SQLi_adv_obf_full_bypass,12,0.12%
+Double URL ST_X Geometry Error_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql_version+obf_case_random,12,0.12%
+SQLI - Object Injection (Manual Refine),12,0.12%
+obf_comment_sql+obf_url_encode+obf_double_url_encode_adv_obf,12,0.12%
+Triple URL POLYGON Error_full_bypass,12,0.12%
+Whitespace_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_comment_sql+obf_double_url_encode_adv_obf,12,0.12%
+Double URL Encode XSS (heuristic)_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass,12,0.12%
+Direct JS Call XSS (manual refine)_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql+obf_case_random+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_comment_sql_version+obf_double_url_encode_full_bypass,12,0.12%
+Triple URL MULTILINESTRING Error_full_bypass,12,0.12%
+XSS - ActiveX/COM Object Injection (Manual Refine),12,0.12%
+Triple URL ST_X Geometry Error,12,0.12%
+Triple URL XSS DOM-based_full_bypass_non_script_xss,12,0.12%
+XSS - Unclassified (manual refine)_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql+obf_double_url_encode_adv_obf,12,0.12%
+obf_comment_sql_version+obf_comment_sql+obf_double_url_encode,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_full_bypass,12,0.12%
+Double URL Encode_adv_obf_full_bypass,12,0.12%
+XSS Reflected (Generated)_non_script_xss,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode,12,0.12%
+Whitespace_adv_obf_non_script_xss,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_double_url_encode_adv_obf,12,0.12%
+obf_whitespace_url+obf_double_url_encode_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_adv_obf,12,0.12%
+obf_whitespace_url+obf_url_encode,12,0.12%
+Triple URL_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_case_random,12,0.12%
+obf_whitespace_url+obf_url_encode_adv_obf_full_bypass,12,0.12%
+OOB/Advanced SQLI (manual refine)_adv_obf,12,0.12%
+Triple URL Encode (heuristic)_adv_obf_full_bypass,12,0.12%
+XSS - Image Tag No Quotes (Manual Refine),12,0.12%
+Triple URL NAME_CONST Error,12,0.12%
+Triple URL EXTRACTVALUE Error-Based,12,0.12%
+Whitespace_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_non_script_xss,12,0.12%
+Double URL POLYGON Error,12,0.12%
+Union/Boolean SQLI (manual refine),12,0.12%
+Triple URL NAME_CONST Error_full_bypass,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_case_random_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_non_script_xss,12,0.12%
+obf_case_random+obf_comment_sql_version+obf_double_url_encode,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_case_random_adv_obf,12,0.12%
+Triple URL GEOMETRYCOLLECTION Error_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_comment_sql_adv_obf_full_bypass,12,0.12%
+Double URL EXTRACTVALUE Error-Based,12,0.12%
+obf_double_url_encode+obf_comment_sql_version+obf_case_random_full_bypass,12,0.12%
+obf_comment_sql+obf_case_random+obf_double_url_encode,12,0.12%
+obf_double_url_encode+obf_case_random+obf_url_encode_adv_obf_non_script_xss,12,0.12%
+Triple URL UPDATEXML Error-Based_full_bypass,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+Double URL GEOMETRYCOLLECTION Error_full_bypass,12,0.12%
+Double URL Encode XSS (heuristic)_adv_obf,12,0.12%
+Double URL Encode XSS (manual refine)_full_bypass_non_script_xss,12,0.12%
+Triple URL UPDATEXML Error-Based,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass,12,0.12%
+Triple URL GEOMETRYCOLLECTION Error_adv_obf,12,0.12%
+obf_double_url_encode+obf_case_random_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_comment_sql,12,0.12%
+Double URL Encode (heuristic)_full_bypass,12,0.12%
+None XSS DOM-based_full_bypass,12,0.12%
+obf_whitespace_url+obf_comment_sql_version+obf_double_url_encode,12,0.12%
+Double URL MULTIPOINT Error_full_bypass,12,0.12%
+Event Handler XSS (heuristic)_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_adv_obf,12,0.12%
+Triple URL EXTRACTVALUE Error-Based_adv_obf,12,0.12%
+Double URL XSS DOM-based_adv_obf_non_script_xss,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_adv_obf_full_bypass_non_script_xss,12,0.12%
+XSS - Unicode/Nested Entity Obfuscation (Manual Refine),12,0.12%
+Triple URL XSS DOM-based_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_url_encode+obf_double_url_encode+obf_case_random_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_adv_obf,12,0.12%
+Direct JS Call XSS (manual refine)_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_comment_sql_adv_obf,12,0.12%
+Triple URL Encode_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_full_bypass,12,0.12%
+Double URL MULTILINESTRING Error,12,0.12%
+obf_comment_sql_version+obf_case_random+obf_double_url_encode,12,0.12%
+Unicode Homoglyph_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL Encode XSS (heuristic)_adv_obf_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode_adv_obf,12,0.12%
+Triple URL Advanced Error-Based SQLi_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode_full_bypass,12,0.12%
+Double URL POLYGON Error_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_adv_obf,12,0.12%
+Command Injection_adv_obf_full_bypass,12,0.12%
+obf_comment_sql_version+obf_comment_sql+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random,12,0.12%
+SQLI Keyword (heuristic)_adv_obf,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode,12,0.12%
+Command Injection_adv_obf,12,0.12%
+Whitespace_adv_obf,12,0.12%
+obf_case_random+obf_comment_sql+obf_double_url_encode_full_bypass,12,0.12%
+None XSS DOM-based_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_url_encode_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_url_encode+obf_double_url_encode,12,0.12%
+Triple URL POLYGON Error,12,0.12%
+Unicode Homoglyph Homoglyph( -> )_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_comment_sql_version,12,0.12%
+SQLI Keyword (heuristic)_adv_obf_full_bypass,12,0.12%
+Whitespace_full_bypass_non_script_xss,12,0.12%
+Triple URL POLYGON Error_adv_obf_full_bypass,12,0.12%
+Triple URL Encode (heuristic)_full_bypass,12,0.12%
+Union/Boolean SQLI (manual refine)_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_case_random_full_bypass,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Direct JS Call XSS (manual refine)_adv_obf_full_bypass,12,0.12%
+Double URL MULTIPOINT Error_adv_obf,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+Triple URL Encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+XSS - Unclassified (manual refine)_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_non_script_xss,12,0.12%
+Double URL NAME_CONST Error_full_bypass,12,0.12%
+Triple URL Encode XSS (heuristic)_adv_obf,12,0.12%
+obf_case_random+obf_comment_sql+obf_double_url_encode,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_non_script_xss,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode_adv_obf,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+Double URL Encode XSS (heuristic),12,0.12%
+XSS - Unclassified (manual refine)_full_bypass_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_adv_obf,12,0.12%
+Double URL XSS DOM-based_adv_obf,12,0.12%
+Double URL ST_X Geometry Error_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_full_bypass_non_script_xss,12,0.12%
+Double URL MULTILINESTRING Error_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_non_script_xss,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_comment_sql_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url_non_script_xss,12,0.12%
+Double URL Encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode_non_script_xss,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_version_adv_obf_full_bypass,12,0.12%
+Triple URL MULTILINESTRING Error,12,0.12%
+XSS - Unclassified (manual refine)_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql_full_bypass,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_case_random_adv_obf_full_bypass,12,0.12%
+Double URL XSS DOM-based_non_script_xss,12,0.12%
+obf_case_random+obf_comment_sql+obf_double_url_encode_adv_obf,12,0.12%
+obf_double_url_encode+obf_case_random+obf_whitespace_url,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_url_encode,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_adv_obf_full_bypass_non_script_xss,12,0.12%
+Double URL Encode_non_script_xss,12,0.12%
+Triple URL Out-of-Band SQLi_full_bypass,12,0.12%
+obf_comment_sql_version+obf_whitespace_url+obf_url_encode_adv_obf_full_bypass,12,0.12%
+Double URL UPDATEXML Error-Based_adv_obf_full_bypass,12,0.12%
+Unicode Homoglyph_adv_obf_full_bypass,12,0.12%
+Double URL Encode XSS (manual refine)_full_bypass,12,0.12%
+Double URL MULTILINESTRING Error_full_bypass,12,0.12%
+Triple URL Encode XSS (heuristic)_full_bypass_non_script_xss,12,0.12%
+Triple URL UPDATEXML Error-Based_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_double_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+Double URL XSS DOM-based_full_bypass,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random,12,0.12%
+Unicode Homoglyph,12,0.12%
+XSS - Data URI Injection (Manual Refine),12,0.12%
+Triple URL Encode XSS (heuristic)_adv_obf_full_bypass_non_script_xss,12,0.12%
+obf_case_random+obf_double_url_encode_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL NAME_CONST Error_adv_obf_full_bypass,12,0.12%
+Triple URL Encode (heuristic),12,0.12%
+obf_double_url_encode+obf_comment_sql_adv_obf,12,0.12%
+Triple URL XSS DOM-based,12,0.12%
+obf_case_random+obf_double_url_encode+obf_whitespace_url_full_bypass_non_script_xss,12,0.12%
+XSS Keyword (heuristic)_full_bypass,12,0.12%
+Triple URL ST_X Geometry Error_adv_obf,12,0.12%
+obf_whitespace_url+obf_double_url_encode_full_bypass,12,0.12%
+None XSS DOM-based,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+XSS Keyword (heuristic)_non_script_xss,12,0.12%
+obf_double_url_encode+obf_comment_sql_version+obf_case_random_adv_obf,12,0.12%
+Triple URL MULTILINESTRING Error_adv_obf,12,0.12%
+obf_case_random+obf_double_url_encode+obf_url_encode_full_bypass,12,0.12%
+obf_double_url_encode+obf_url_encode+obf_case_random_non_script_xss,12,0.12%
+Double URL EXTRACTVALUE Error-Based_full_bypass,12,0.12%
+obf_comment_sql_version+obf_comment_sql+obf_double_url_encode_full_bypass,12,0.12%
+Double URL NAME_CONST Error,12,0.12%
+Double URL Encode XSS (heuristic)_adv_obf_full_bypass_non_script_xss,12,0.12%
+Triple URL MULTIPOINT Error_adv_obf,12,0.12%
+obf_case_random+obf_whitespace_url+obf_double_url_encode_non_script_xss,12,0.12%
+SQLI - Null Byte Injection (Manual Refine),12,0.12%
+Double URL NAME_CONST Error_adv_obf,12,0.12%
+Double URL EXTRACTVALUE Error-Based_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_url_encode_adv_obf,12,0.12%
+Triple URL MULTILINESTRING Error_adv_obf_full_bypass,12,0.12%
+obf_comment_sql_version+obf_whitespace_url+obf_url_encode,12,0.12%
+obf_case_random+obf_double_url_encode+obf_comment_sql_version_adv_obf_full_bypass,12,0.12%
+XSS Keyword (heuristic)_adv_obf_non_script_xss,12,0.12%
+Unicode Homoglyph_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Double URL UPDATEXML Error-Based_full_bypass,12,0.12%
+Triple URL Out-of-Band SQLi_adv_obf,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_adv_obf_non_script_xss,12,0.12%
+Double URL MULTILINESTRING Error_adv_obf,12,0.12%
+obf_double_url_encode+obf_comment_sql_version+obf_case_random_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode,12,0.12%
+Double URL_adv_obf_non_script_xss,12,0.12%
+Triple URL_adv_obf_full_bypass_non_script_xss,12,0.12%
+Double URL POLYGON Error_full_bypass,12,0.12%
+obf_url_encode+obf_case_random+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+Double URL GEOMETRYCOLLECTION Error,12,0.12%
+Direct JS Call XSS (manual refine)_full_bypass,12,0.12%
+obf_comment_sql_version+obf_case_random+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+Double URL Encode_full_bypass_non_script_xss,12,0.12%
+Double URL XSS DOM-based_full_bypass_non_script_xss,12,0.12%
+Double URL Encode (heuristic)_adv_obf,12,0.12%
+obf_case_random+obf_comment_sql_version+obf_double_url_encode_adv_obf,12,0.12%
+obf_whitespace_url+obf_url_encode+obf_double_url_encode_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_comment_sql_adv_obf,12,0.12%
+Double URL Encode (heuristic)_adv_obf_full_bypass,12,0.12%
+obf_case_random+obf_double_url_encode+obf_comment_sql_version_adv_obf,12,0.12%
+Triple URL MULTIPOINT Error_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_case_random_adv_obf_full_bypass,12,0.12%
+Double URL XSS DOM-based_adv_obf_full_bypass_non_script_xss,12,0.12%
+Double URL MULTIPOINT Error,12,0.12%
+obf_double_url_encode+obf_whitespace_url+obf_comment_sql_adv_obf,12,0.12%
+Triple URL Encode_adv_obf_full_bypass,12,0.12%
+Unicode Homoglyph_full_bypass_non_script_xss,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_url_encode_full_bypass,12,0.12%
+obf_case_random+obf_url_encode+obf_double_url_encode_full_bypass,12,0.12%
+obf_comment_sql_version+obf_whitespace_url+obf_url_encode_full_bypass,12,0.12%
+Triple URL UPDATEXML Error-Based_adv_obf,12,0.12%
+None XSS DOM-based_full_bypass_non_script_xss,12,0.12%
+Double URL MULTIPOINT Error_adv_obf_full_bypass,12,0.12%
+Event Handler XSS (heuristic)_adv_obf,12,0.12%
+Direct JS Call XSS (manual refine),12,0.12%
+Double URL Encode XSS (manual refine)_non_script_xss,12,0.12%
+XSS - Unclassified (manual refine)_adv_obf,12,0.12%
+Double URL Encode XSS (manual refine)_adv_obf_non_script_xss,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_double_url_encode_adv_obf_full_bypass,12,0.12%
+obf_comment_sql+obf_url_encode+obf_double_url_encode_full_bypass,12,0.12%
+Double URL ST_X Geometry Error_adv_obf,12,0.12%
+obf_whitespace_url+obf_comment_sql+obf_double_url_encode,12,0.12%
+obf_whitespace_url+obf_case_random+obf_double_url_encode_adv_obf_non_script_xss,12,0.12%
+OOB/Advanced SQLI (manual refine),12,0.12%
+Triple URL EXTRACTVALUE Error-Based_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_case_random+obf_comment_sql,12,0.12%
+Double URL XSS DOM-based_adv_obf_full_bypass,12,0.12%
+Triple URL Encode XSS (heuristic)_full_bypass,12,0.12%
+obf_whitespace_url+obf_double_url_encode+obf_case_random_full_bypass_non_script_xss,12,0.12%
+obf_comment_sql_version+obf_double_url_encode+obf_case_random_adv_obf_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql_full_bypass,12,0.12%
+Double URL_full_bypass,12,0.12%
+obf_double_url_encode+obf_comment_sql+obf_url_encode_adv_obf_full_bypass,12,0.12%
+Triple URL_full_bypass_non_script_xss,12,0.12%

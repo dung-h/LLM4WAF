@@ -49,6 +49,55 @@ def load_dataset(filepath: str) -> List[Dict]:
                 continue
     return data
 
+def extract_technique_from_prompt(item: Dict) -> str:
+    """Extract technique from user message if not in top-level field."""
+    if 'technique' in item:
+        return item['technique']
+    
+    # Extract from user message (Phase 2 observations format)
+    if 'messages' in item:
+        for msg in item['messages']:
+            if msg.get('role') == 'user':
+                content = msg.get('content', '')
+                # Look for "Technique: XXX" pattern
+                for line in content.split('\n'):
+                    if line.startswith('Technique:'):
+                        return line.replace('Technique:', '').strip()
+    
+    return 'Unknown'
+
+def infer_attack_type(technique: str, item: Dict) -> str:
+    """Infer attack_type from technique name or prompt if not present."""
+    # Check if attack_type already exists
+    if 'attack_type' in item:
+        return item['attack_type']
+    
+    # Check user message for "Target: SQLI/XSS/..." pattern
+    if 'messages' in item:
+        for msg in item['messages']:
+            if msg.get('role') == 'user':
+                content = msg.get('content', '')
+                for line in content.split('\n'):
+                    if line.startswith('Target:'):
+                        target = line.upper()
+                        if 'SQLI' in target or 'SQL' in target:
+                            return 'SQLI'
+                        elif 'XSS' in target:
+                            return 'XSS'
+                        elif 'OS_INJECTION' in target:
+                            return 'OS_INJECTION'
+    
+    # Fallback: infer from technique name
+    technique_upper = technique.upper()
+    if 'SQLI' in technique_upper or 'SQL' in technique_upper:
+        return 'SQLI'
+    elif 'XSS' in technique_upper:
+        return 'XSS'
+    elif 'OS_INJECTION' in technique_upper or 'COMMAND' in technique_upper:
+        return 'OS_INJECTION'
+    else:
+        return 'Unknown'
+
 def extract_techniques_and_payloads(data: List[Dict]) -> tuple:
     """Extract techniques, attack types, and payload lengths."""
     techniques = []
@@ -56,8 +105,12 @@ def extract_techniques_and_payloads(data: List[Dict]) -> tuple:
     payload_lengths = []
     
     for item in data:
-        techniques.append(item.get('technique', 'Unknown'))
-        attack_types.append(item.get('attack_type', 'Unknown'))
+        # Extract technique (from field or prompt)
+        technique = extract_technique_from_prompt(item)
+        techniques.append(technique)
+        
+        # Infer attack_type
+        attack_types.append(infer_attack_type(technique, item))
         
         # Extract payload
         payload = ''
@@ -87,7 +140,7 @@ def save_distribution_csv(technique_counts: Counter, filename: str):
             percentage = (count / total) * 100
             writer.writerow([technique, count, f"{percentage:.2f}%"])
     
-    print(f"  ✅ Saved: {csv_path}")
+    print(f"  [SUCCESS] Saved: {csv_path}")
 
 def plot_top_techniques(technique_counts: Counter, phase_name: str, filename: str, top_n: int = 20):
     """Plot top N techniques bar chart."""
@@ -107,7 +160,7 @@ def plot_top_techniques(technique_counts: Counter, phase_name: str, filename: st
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  ✅ Saved: {output_path}")
+    print(f"  [SUCCESS] Saved: {output_path}")
 
 def plot_attack_type_breakdown(attack_types: List[str], phase_name: str, filename: str):
     """Plot attack type distribution pie chart."""
@@ -125,7 +178,7 @@ def plot_attack_type_breakdown(attack_types: List[str], phase_name: str, filenam
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  ✅ Saved: {output_path}")
+    print(f"  [SUCCESS] Saved: {output_path}")
 
 def plot_payload_length_histogram(lengths: List[int], phase_name: str, filename: str):
     """Plot payload length distribution histogram."""
@@ -144,7 +197,7 @@ def plot_payload_length_histogram(lengths: List[int], phase_name: str, filename:
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  ✅ Saved: {output_path}")
+    print(f"  [SUCCESS] Saved: {output_path}")
 
 def main():
     """Main analysis function."""
@@ -197,7 +250,7 @@ def main():
         plot_payload_length_histogram(phase1_lengths, "Phase 1", "payload_length_phase1.png")
         plot_payload_length_histogram(phase2_lengths, "Phase 2", "payload_length_phase2.png")
     else:
-        print("\n⚠️  Matplotlib not available. Install with: pip install matplotlib")
+        print("\n[WARNING] Matplotlib not available. Install with: pip install matplotlib")
     
     # Print summary
     print("\n" + "="*80)
@@ -215,7 +268,7 @@ def main():
         print(f"  {i:2d}. {tech:50s} {count:5d} ({percentage:5.2f}%)")
     
     print("\n" + "="*80)
-    print("✅ Analysis complete!")
+    print("[SUCCESS] Analysis complete!")
     print("="*80)
 
 if __name__ == "__main__":

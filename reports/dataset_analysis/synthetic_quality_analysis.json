@@ -1,0 +1,106 @@
+{
+  "phase1": {
+    "diversity": {
+      "total_samples": 10000,
+      "unique_payloads": 9045,
+      "uniqueness_rate": 90.45,
+      "unique_techniques": 509,
+      "unique_characters": 211,
+      "length_variance": 13717.94,
+      "attack_type_distribution": {
+        "SQLI": 4752,
+        "XSS": 5200,
+        "OS_INJECTION": 48
+      }
+    },
+    "validity": {
+      "total_evaluated": 10000,
+      "passed": 5102,
+      "blocked": 4898,
+      "bypass_success_rate": 51.02,
+      "result_distribution": {
+        "blocked": 4898,
+        "passed": 5102
+      }
+    },
+    "complexity": {
+      "avg_payload_length": 105.4,
+      "median_payload_length": 76.0,
+      "max_payload_length": 1965,
+      "min_payload_length": 4,
+      "avg_encoding_depth": 9.36,
+      "avg_special_char_density": 16.53
+    },
+    "bias": {
+      "attack_type_balance": {
+        "SQLI": {
+          "count": 4752,
+          "percentage": 47.52
+        },
+        "XSS": {
+          "count": 5200,
+          "percentage": 52.0
+        },
+        "OS_INJECTION": {
+          "count": 48,
+          "percentage": 0.48
+        }
+      },
+      "top_10_concentration_rate": 39.83,
+      "technique_entropy": 7.24,
+      "max_entropy_possible": 8.99
+    }
+  },
+  "phase2": {
+    "diversity": {
+      "total_samples": 24000,
+      "unique_payloads": 12450,
+      "uniqueness_rate": 51.88,
+      "unique_techniques": 532,
+      "unique_characters": 215,
+      "length_variance": 18711.59,
+      "attack_type_distribution": {
+        "XSS": 8893,
+        "SQLI": 13267,
+        "OS_INJECTION": 1840
+      }
+    },
+    "validity": {
+      "total_evaluated": 4000,
+      "passed": 2073,
+      "blocked": 1927,
+      "bypass_success_rate": 51.82,
+      "result_distribution": {
+        "passed": 2073,
+        "blocked": 1927
+      }
+    },
+    "complexity": {
+      "avg_payload_length": 108.46,
+      "median_payload_length": 75.0,
+      "max_payload_length": 1965,
+      "min_payload_length": 4,
+      "avg_encoding_depth": 13.27,
+      "avg_special_char_density": 14.71
+    },
+    "bias": {
+      "attack_type_balance": {
+        "XSS": {
+          "count": 8893,
+          "percentage": 37.05
+        },
+        "SQLI": {
+          "count": 13267,
+          "percentage": 55.28
+        },
+        "OS_INJECTION": {
+          "count": 1840,
+          "percentage": 7.67
+        }
+      },
+      "top_10_concentration_rate": 25.88,
+      "technique_entropy": 8.17,
+      "max_entropy_possible": 9.06
+    }
+  }
+}
