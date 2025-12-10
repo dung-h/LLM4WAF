@@ -117,13 +117,22 @@ def generate_prompt_from_state_mock(raw_prompt_text):
 def compute_log_probs(model, tokenizer, prompt_text, response_text, device, max_context_length):
     full_prompt_formatted = generate_prompt_from_state_mock(prompt_text)
 
-    full_text_ids = tokenizer(full_prompt_formatted + response_text, return_tensors="pt", truncation=True, max_length=max_context_length).input_ids.to(device)
+    # CRITICAL: Truncate to prevent OOM - prioritize keeping the response
+    full_text = full_prompt_formatted + response_text
+    full_text_ids = tokenizer(full_text, return_tensors="pt", truncation=True, max_length=max_context_length).input_ids.to(device)
     prompt_ids = tokenizer(full_prompt_formatted, return_tensors="pt", truncation=True, max_length=max_context_length).input_ids.to(device)
     prompt_len = prompt_ids.shape[1]
+    
+    # If full text got truncated, we need to adjust prompt_len
+    if full_text_ids.shape[1] < len(tokenizer(full_text, truncation=False).input_ids):
+        # Text was truncated, recalculate actual prompt length in truncated sequence
+        response_ids = tokenizer(response_text, return_tensors="pt", truncation=False).input_ids
+        prompt_len = max(0, full_text_ids.shape[1] - response_ids.shape[1])
 
     # Forward pass to get logits with mixed precision to save VRAM
+    # Use gradient checkpointing context if enabled
     with torch.amp.autocast(device_type='cuda', dtype=torch.float16):
-        outputs = model(full_text_ids)
+        outputs = model(full_text_ids, use_cache=False)  # Disable cache to save memory
         logits = outputs.logits
 
     shift_logits = logits[..., :-1, :].contiguous()
@@ -137,11 +146,12 @@ def compute_log_probs(model, tokenizer, prompt_text, response_text, device, max_
     response_loss = loss[..., prompt_len-1:]
     
     log_probs = -response_loss
-    sequence_log_prob = log_probs.sum()
+    # CRITICAL FIX: Normalize by sequence length to prevent bias toward short responses
+    sequence_log_prob = log_probs.mean()  # Use mean instead of sum
     
-    # Clear intermediate tensors to free VRAM
-    del outputs, logits, shift_logits, shift_labels, full_text_ids, prompt_ids
-    torch.cuda.empty_cache()
+    # Clear intermediate tensors to free VRAM (delete before returning to avoid memory leak)
+    del outputs, logits, shift_logits, shift_labels, loss, response_loss, log_probs
+    del full_text_ids, prompt_ids
     
     return sequence_log_prob
 
@@ -167,10 +177,10 @@ def main():
     # Initialize WAFEnv with custom URL if provided
     if waf_url:
         logger.info(f"Using WAF URL: {waf_url}")
-        env = WAFEnv(max_steps=5, waf_base_url=waf_url)
+        env = WAFEnv(max_steps=3, waf_base_url=waf_url)
     else:
         logger.info("Using default WAF URL (localhost)")
-        env = WAFEnv(max_steps=5) 
+        env = WAFEnv(max_steps=3) 
     
     baseline_reward = 0.0
     alpha = 0.1 
@@ -186,15 +196,13 @@ def main():
         batch_loss = 0.0
         batch_rewards = []
         
-        optimizer.zero_grad()
-        
         for i in range(batch_size):
             attack_type = "SQLI" if random.random() < 0.7 else "XSS" 
             target_technique = "RL Generated" 
             state = env.reset(attack_type=attack_type, target_technique=target_technique)
             
-            episode_log_prob = 0.0
             episode_reward = 0.0
+            episode_data = []  # Store (prompt, response) as strings, NOT tensors
             done = False
             
             while not done:
@@ -212,41 +220,35 @@ def main():
                 if "<start_of_turn>" in response:
                     response = response.split("<start_of_turn>")[0]
                 
+                # Store STRINGS not tensors
+                episode_data.append((prompt_content, response))
+                
                 next_state, reward, done, info = env.step(response)
                 episode_reward += reward
                 
-                # LOG PROB calculation (gradient flows here)
-                log_prob = compute_log_probs(model, tokenizer, prompt_content, response, model.device, max_context_length)
-                episode_log_prob += log_prob
-                
                 state = next_state
             
+            # Calculate advantage ONCE per episode
             advantage = episode_reward - baseline_reward
-            loss = -(episode_log_prob * advantage)
+            # CRITICAL FIX: Clip advantage to prevent gradient explosion
+            advantage = torch.clamp(torch.tensor(advantage), -10.0, 10.0).item()
             
-            loss = loss / batch_size 
-            loss.backward()
+            # Now compute log_probs and backward IMMEDIATELY for each step
+            for prompt, response in episode_data:
+                optimizer.zero_grad()
+                log_prob = compute_log_probs(model, tokenizer, prompt, response, model.device, max_context_length)
+                loss = -(log_prob * advantage) / batch_size
+                batch_loss += loss.item()
+                loss.backward()
+                optimizer.step()
+                del loss, log_prob
+                torch.cuda.empty_cache()
             
-            # CRITICAL: Clear cache after backward to prevent OOM
-            torch.cuda.empty_cache()
-            
-            batch_loss += loss.item()
             batch_rewards.append(episode_reward)
-            
             logger.info(f"  Ep {i+1}: Reward={episode_reward:.2f}")
-
-        optimizer.step()
         
-        # CRITICAL: Clear cache after optimizer step
+        # CRITICAL: Clear cache after each epoch
         torch.cuda.empty_cache()
-            torch.cuda.empty_cache()
-            
-            batch_loss += loss.item()
-            batch_rewards.append(episode_reward)
-            
-            logger.info(f"  Ep {i+1}: Reward={episode_reward:.2f}")
-
-        optimizer.step()
         
         avg_reward = sum(batch_rewards) / len(batch_rewards)
         baseline_reward = (1 - alpha) * baseline_reward + alpha * avg_reward
