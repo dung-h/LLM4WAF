@@ -64,3 +64,42 @@ logs/
 !README.md
 !login_page.html
 coraza
+
+# --- Extra ignores for thesis repo cleanup ---
+# Jupyter
+.ipynb_checkpoints/
+
+# Node (generated deps)
+waf/node_modules/
+
+# LaTeX build artifacts (generated)
+*.aux
+*.bcf
+*.blg
+*.bbl
+*.out
+*.toc
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.glo
+*.slo
+*.glo-abr
+*.ist
+*.acn
+*.acr
+*.alg
+
+# Optional modules / future work (NOTE: does not affect already-tracked files)
+blue/
+rag/
+writeup_pipeline/
+
+# RAG indexes / caches
+*.joblib
