@@ -120,3 +120,4 @@ data/processed/phase1_new*.jsonl
 # Ignore temp scripts if moved
 scripts/archive_debug/
 *.pdf
+reference.txt

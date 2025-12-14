@@ -110,11 +110,13 @@ Options:
 ## 📊 Kết quả chính
 
 **Training/Eval Summary:** `reports/training_eval_tables.md`
+
 - **ModSecurity PL1/PL4:** Qwen 3B RL 100% pass; Gemma 2B Phase2 ~75–100%, RL ~80–90%; Phi-3 Mini RL ~60%.
 - **Coraza:** Gemma 2B Phase2 ~97% pass; Qwen 3B RL ~95.5%; Phi-3 Mini RL ~62.5%.
 - CSV: `reports/eval_modsec_pass_rates.csv`, `reports/eval_coraza_pass_rates.csv`.
 
 **RL Validation Results:** `eval/rl_validation_modsec/`, `eval/rl_validation_coraza/`
+
 - Kết quả kiểm thử Phase 3 RL models trên ModSecurity và Coraza WAF
 - Bao gồm pass rates, payload samples, và detailed logs cho từng model checkpoint
 
