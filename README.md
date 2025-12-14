@@ -4,11 +4,19 @@
 
 Framework huấn luyện LLM (3 phase) để sinh payload SQLi/XSS né WAF (ModSecurity/Coraza) và kiểm thử trên DVWA. Báo cáo chi tiết: `demo1_report.pdf`.
 
+## � Liên kết dự án
+
+- **Github repo**: https://github.com/dung-h/LLM4WAF.git
+- **Slide và Video**: https://drive.google.com/drive/folders/1AmZK32UaClkzf7LQbuK4sT_j-8HYm1Qq
+- **Adapters (trained models)**: https://drive.google.com/drive/folders/1WBIh6O_NoPfmZg_hMWydStO3sNWf_o2Y?usp=sharing
+
 ## 👥 Nhóm & Cảm ơn
 
-- Lớp/Nhóm: TN01 – Đồ án CO3101. GVHD: TS. Nguyễn An Khương. Trợ giảng: Trần Lê Quốc Khánh (B.Eng.).
-- Thành viên: Hồ Anh Dũng, Nguyễn Đăng Hiên, Lê Tiến Đạt.
-- Cảm ơn: Đoàn Thế Anh, Nguyễn Ban Hữu Quang, Nguyễn Anh Kiệt hỗ trợ pipeline/môi trường.
+- **Lớp/Nhóm**: TN01 – Đồ án CO3101
+- **GVHD**: TS. Nguyễn An Khương
+- **Trợ giảng**: Trần Lê Quốc Khánh (B.Eng.)
+- **Thành viên**: Hồ Anh Dũng, Nguyễn Đăng Hiên, Lê Tiến Đạt
+- **Cảm ơn**: Đoàn Thế Anh, Nguyễn Ban Hữu Quang, Nguyễn Anh Kiệt hỗ trợ pipeline/môi trường
 
 ## ⚡ Quick Start
 
