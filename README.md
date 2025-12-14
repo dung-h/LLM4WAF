@@ -113,7 +113,7 @@ Options:
 - **Coraza:** Gemma 2B Phase2 ~97% pass; Qwen 3B RL ~95.5%; Phi-3 Mini RL ~62.5%.
 - CSV: `reports/eval_modsec_pass_rates.csv`, `reports/eval_coraza_pass_rates.csv`.
 
-## 📚 Dataset scripts (theo báo cáo demo1)
+## 📚 Dataset scripts 
 
 ```bash
 python scripts/analysis/dataset_construction.py       # Sinh Phase1 (10k) via LLM + WAF filter (cần API key + DVWA)
@@ -148,11 +148,56 @@ Task: Learn from PASSED, avoid BLOCKED, output ONLY payload.
 - **Phase 3 RL**
   - Prompt/state dựng trong `train_rl_adaptive_pipeline.py` từ probe history; reward +1 (bypass), -1 (block). Không có template cố định, model học qua trial-and-error.
 
-## 🎯 Demo: Attack Pipeline (ngắn gọn)
+## 🎯 Demo: Attack Pipeline
 
 - Chọn target (Local/Remote) → Verify `/dvwa/login.php`.
 - Load model + adapter phase (1/2/3) → chọn attack type/kỹ thuật → Generate & Attack.
 - Kết quả hiển thị Live Logs + bảng payload/status/latency.
+
+### 📝 Prompt Templates được sử dụng
+
+**Phase 1 - Direct Instruction (Simple):**
+```text
+Generate a SQLi payload to bypass ModSecurity WAF (OWASP CRS).
+Target: DVWA vulnerable parameter 'id'
+Technique: URL Encoding
+Output ONLY the payload, no explanation.
+```
+
+**Phase 2/3 - Contextual Reasoning (Advanced):**
+```text
+Context:
+- WAF: ModSecurity + OWASP CRS 3.3.5 (Paranoia Level 1)
+- Target: DVWA GET parameter 'id' (SQLi vulnerability)
+- Attack Type: SQL Injection
+
+Payload History:
+1. ' OR 1=1 -- → BLOCKED (detected union/comment)
+2. %27%20OR%20%271%27%3D%271 → PASSED (simple encoding worked)
+3. 1' UNION SELECT null,table_name FROM information_schema.tables-- → BLOCKED
+
+Target Technique: Double URL Encoding + Comment Injection
+
+Task: Learn from PASSED payloads, avoid BLOCKED patterns.
+Generate ONLY the payload that bypasses the WAF. No explanations or additional text.
+```
+
+**Phase 3 RL - Adaptive (Environment-driven):**
+```text
+State: {
+  "waf_type": "ModSecurity_PL1",
+  "attack_type": "XSS",
+  "injection_point": "name",
+  "probe_history": [
+    {"payload": "<script>alert(1)</script>", "result": "BLOCKED"},
+    {"payload": "<img src=x onerror=alert(1)>", "result": "PASSED"}
+  ],
+  "current_technique": "Event Handler Injection"
+}
+
+Action: Generate next payload based on environment feedback.
+Reward: +1 for bypass, -1 for block.
+```
 
 ## 📂 Cấu trúc chính
 
@@ -163,7 +208,3 @@ Task: Learn from PASSED, avoid BLOCKED, output ONLY payload.
 - `waf/`, `dvwa-modsecurity-waf/`, `coraza/`, `naxsi/` – cấu hình WAF.
 - `experiments/remote_*_phase{1,2,3_rl}` – đặt adapter tải về từ Drive.
 - `reports/` – bảng kết quả, mẫu payload.
-
-## 📄 Tham khảo
-
-- demo1_report.pdf – tổng hợp thiết kế, kết quả, giới hạn.
