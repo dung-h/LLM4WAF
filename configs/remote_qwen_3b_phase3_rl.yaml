@@ -12,7 +12,7 @@ output_dir: "experiments/remote_qwen_3b_phase3_rl"
 epochs: 150
 batch_size: 2 # 3B can use larger batch
 lr: 1e-6
-max_new_tokens: 64
+max_new_tokens: 256
 max_context_length: 1024 # Match Phase 2 SFT context length
 gradient_checkpointing: true # Enable to save VRAM
 

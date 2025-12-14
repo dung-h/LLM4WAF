@@ -9,9 +9,9 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 
 # --- Configuration ---
-DVWA_URL = "http://localhost:8000"
-LOGIN_URL = f"{DVWA_URL}/dvwa/login.php"
-SQLI_URL = f"{DVWA_URL}/dvwa/vulnerabilities/sqli/"
+DVWA_URL = "http://localhost:8000/dvwa"
+LOGIN_URL = f"{DVWA_URL}/login.php"
+SQLI_URL = f"{DVWA_URL}/vulnerabilities/sqli/"
 USERNAME = "admin"
 PASSWORD = "password"
 
@@ -34,13 +34,26 @@ logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(message)s")
 logger = logging.getLogger("AttackPipeline")
 
 class AttackPipeline:
-    def __init__(self, model_path, adapter_path):
+    def __init__(self, model_path, adapter_path, model_type="phi3"):
         self.client = httpx.Client(timeout=10.0, follow_redirects=True)
         self.model_path = model_path
         self.adapter_path = adapter_path
+        self.model_type = model_type
         self.model = None
         self.tokenizer = None
         self.history = [] # Stores (payload, result) tuples
+    
+    def _format_prompt(self, prompt):
+        """Format prompt according to model's chat template."""
+        if self.model_type == "phi3":
+            return f"<|user|>\n{prompt}<|end|>\n<|assistant|>\n"
+        elif self.model_type == "qwen":
+            return f"<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistant\n"
+        elif self.model_type == "gemma":
+            return f"<start_of_turn>user\n{prompt}<end_of_turn>\n<start_of_turn>model\n"
+        else:
+            # Fallback to Phi-3
+            return f"<|user|>\n{prompt}<|end|>\n<|assistant|>\n"
 
     def login(self):
         logger.info(f"Logging into {DVWA_URL}...")
@@ -96,8 +109,58 @@ class AttackPipeline:
         except:
             return False
 
+    def generate_phase1_payloads(self, num_payloads=5):
+        """Phase 1: Direct SQLi payload generation without probing."""
+        techniques = [
+            "Double URL Encode", "Comment Obfuscation", "Hex Encoding",
+            "Case Manipulation", "Inline Comment", "Null Byte Injection"
+        ]
+        
+        results = []
+        for i in range(num_payloads):
+            technique = techniques[i % len(techniques)]
+            
+            # Simple Phase 1 prompt
+            prompt = f"""Generate a SQL injection payload using {technique} technique.
+Output ONLY the payload string. Do NOT add explanations or code fences."""
+            
+            formatted_prompt = self._format_prompt(prompt)
+            inputs = self.tokenizer(formatted_prompt, return_tensors="pt").to(self.model.device)
+            input_length = inputs.input_ids.shape[1]
+            
+            with torch.no_grad():
+                outputs = self.model.generate(**inputs, max_new_tokens=64, temperature=0.7, do_sample=True)
+            
+            response = self.tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True)
+            payload = response.strip()
+            
+            # Clean up
+            if payload.startswith("```") or payload.startswith("`"):
+                lines = payload.split("\n")
+                payload = "\n".join([l for l in lines if not l.strip().startswith("`")])
+                payload = payload.strip()
+            
+            logger.info(f"[{i+1}/{num_payloads}] Technique: {technique}")
+            logger.info(f"  Generated: {payload}")
+            
+            # Test payload
+            status = self._send_payload(payload)
+            result_str = "PASSED" if status else "BLOCKED"
+            logger.info(f"  Result: {result_str}")
+            
+            results.append({
+                "technique": technique,
+                "payload": payload,
+                "result": result_str
+            })
+            
+        # Summary
+        passed = sum(1 for r in results if r["result"] == "PASSED")
+        logger.info(f"\n=== Summary: {passed}/{num_payloads} payloads PASSED ===")
+        return results
+
     def generate_attack(self, probe_history):
-        logger.info("--- Phase 2: Adaptive Attack ---")
+        logger.info("--- Phase 3: Adaptive Attack ---")
         
         # Format history for prompt
         history_str = ""
@@ -125,22 +188,26 @@ IMPORTANT:
 - Do NOT add explanations.
 - Do NOT wrap in code fences."""
 
-        formatted_prompt = f"<|user|>
-{prompt}<|end|>
-<|assistant|>
-" # Phi-3 format
+        # Format prompt using model-specific chat template
+        formatted_prompt = self._format_prompt(prompt)
         
         inputs = self.tokenizer(formatted_prompt, return_tensors="pt").to(self.model.device)
+        input_length = inputs.input_ids.shape[1]
         
         with torch.no_grad():
-            outputs = self.model.generate(**inputs, max_new_tokens=128, temperature=0.7)
-            
-        response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        # Basic cleanup
-        if "<|assistant|>" in response:
-            payload = response.split("<|assistant|>")[-1].strip()
-        else:
-            payload = response.strip()
+            outputs = self.model.generate(**inputs, max_new_tokens=128, temperature=0.7, do_sample=True)
+        
+        # Decode only NEW tokens (skip input prompt)
+        response = self.tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True)
+        
+        # Clean up payload - remove any remaining special tokens or whitespace
+        payload = response.strip()
+        
+        # Additional cleanup: remove code fences if present
+        if payload.startswith("```") or payload.startswith("`"):
+            lines = payload.split("\n")
+            payload = "\n".join([l for l in lines if not l.strip().startswith("`")])
+            payload = payload.strip()
             
         logger.info(f"Generated Payload: {payload}")
         
@@ -149,14 +216,71 @@ IMPORTANT:
         result_str = "PASSED" if status else "BLOCKED"
         logger.info(f"Attack Result: {result_str}")
 
+def find_latest_checkpoint(base_path):
+    """Find the latest checkpoint in adapter directory."""
+    import glob
+    checkpoints = glob.glob(os.path.join(base_path, "checkpoint-*"))
+    if not checkpoints:
+        # No checkpoint subdirectory, use base path directly
+        return base_path
+    # Sort by checkpoint number and return latest
+    checkpoints.sort(key=lambda x: int(x.split("-")[-1]))
+    return checkpoints[-1]
+
 def main():
-    # Example using Phi-3 Phase 2 (simulating future Phase 3)
-    base_model = "microsoft/Phi-3-mini-4k-instruct"
-    adapter = "experiments/remote_adapters/experiments_remote_optimized/phase2_reasoning_phi3"
+    import argparse
+    parser = argparse.ArgumentParser(description="Run Red Team Attack Pipeline")
+    parser.add_argument("--phase", type=int, choices=[1, 3], default=1, 
+                        help="Training phase: 1 (SFT only) or 3 (RL adaptive)")
+    parser.add_argument("--model", type=str, default="phi3", choices=["phi3", "qwen", "gemma"],
+                        help="Model to use: phi3, qwen, or gemma")
+    parser.add_argument("--num-payloads", type=int, default=5,
+                        help="Number of payloads to generate (Phase 1 only)")
+    args = parser.parse_args()
     
-    pipeline = AttackPipeline(base_model, adapter)
-    if pipeline.login():
-        pipeline.load_model()
+    # Model mapping
+    model_configs = {
+        "phi3": {
+            "base": "microsoft/Phi-3-mini-4k-instruct",
+            "phase1": "./experiments/remote_phi3_mini_phase1",
+            "phase3": "./experiments/remote_phi3_mini_phase3_rl"
+        },
+        "qwen": {
+            "base": "Qwen/Qwen2.5-3B-Instruct",
+            "phase1": "./experiments/remote_qwen_3b_phase1",
+            "phase3": "./experiments/remote_qwen_3b_phase3_rl"
+        },
+        "gemma": {
+            "base": "google/gemma-2-2b-it",
+            "phase1": "./experiments/remote_gemma2_2b_phase1",
+            "phase3": "./experiments/remote_gemma2_2b_phase3_rl"
+        }
+    }
+    
+    config = model_configs[args.model]
+    base_model = config["base"]
+    adapter_base = config[f"phase{args.phase}"]
+    adapter = find_latest_checkpoint(adapter_base)
+    
+    logger.info(f"=== Red Team Attack Pipeline ===")
+    logger.info(f"Model: {args.model} | Phase: {args.phase}")
+    logger.info(f"Adapter: {adapter}")
+    
+    pipeline = AttackPipeline(base_model, adapter, model_type=args.model)
+    
+    if not pipeline.login():
+        logger.error("Login failed. Exiting.")
+        return
+    
+    pipeline.load_model()
+    
+    if args.phase == 1:
+        # Phase 1: Direct generation (no probing needed)
+        logger.info(f"--- Phase 1: Direct Generation ({args.num_payloads} payloads) ---")
+        pipeline.generate_phase1_payloads(args.num_payloads)
+    else:
+        # Phase 3: Adaptive attack with probing
+        logger.info("--- Phase 3: Adaptive RL Attack ---")
         history = pipeline.probe_waf()
         pipeline.generate_attack(history)
 

@@ -26,10 +26,12 @@ class WAFExecutor:
         self.login_required = True # Default for DVWA
 
     def update_config(self, config: Dict[str, Any]):
-        self.dvwa_base_url = config.get("base_url", DVWA_DEFAULT_BASE_URL)
+        # Normalize to avoid double slashes when appending suffixes
+        base = config.get("base_url", DVWA_DEFAULT_BASE_URL)
+        self.dvwa_base_url = base.rstrip("/")
         self.dvwa_username = config.get("username", DVWA_USERNAME)
         self.dvwa_password = config.get("password", DVWA_PASSWORD)
-        self.target_param = config.get("target_param", "id")
+        self.target_param = "id"  # Fixed for DVWA SQLi/XSS/Exec
         self.login_required = config.get("login_required", True)
         
         # Reset client to ensure new session if base_url changes

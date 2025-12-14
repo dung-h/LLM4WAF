@@ -12,7 +12,7 @@ def build_phase1_prompt(attack_type: str, technique: str) -> str:
 
 def build_phase2_prompt(attack_type: str, technique: str) -> str:
     """
-    Builds a structured prompt for Phase 2/3 Reasoning models.
+    Builds a structured prompt for Phase 3 RL models.
     This template includes context and an explicit technique to guide the model.
     """
     waf_type = "ModSecurity + OWASP CRS 3.3 (PL1)" # Default for demo
@@ -51,7 +51,7 @@ def generate_full_prompt_from_template(model_name: str, prompt_mode: str, custom
         return custom_prompt
     elif prompt_mode == "Auto (Standard - Phase 1)":
         return build_phase1_prompt(attack_type, technique)
-    elif prompt_mode == "Auto (Reasoning - Phase 2/3)":
+    elif prompt_mode == "Auto (Reasoning - Phase 3)":
         return build_phase2_prompt(attack_type, technique)
     else:
         # Fallback, should not happen

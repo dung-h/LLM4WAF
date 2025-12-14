@@ -1,0 +1,153 @@
+\section{Bài học kinh nghiệm và hướng phát triển}
+\label{sec:lessons_learned}
+
+Nghiên cứu này thực hiện quy trình hoàn chỉnh từ thiết kế dataset, huấn luyện mô hình theo ba giai đoạn, đến đánh giá trên môi trường WAF thực tế. Phần này tổng kết các bài học kinh nghiệm đúc kết được từ quá trình triển khai, đồng thời đề xuất hướng phát triển tiếp theo cho hệ thống.
+
+\subsection{Hiểu biết sâu hơn về cơ chế hoạt động WAF}
+\label{subsec:waf_understanding}
+
+Việc triển khai và vận hành nhiều engine WAF (ModSecurity với OWASP CRS, Coraza, Naxsi) trên môi trường DVWA mang lại những hiểu biết quan trọng về detection mechanisms:
+
+\begin{itemize}
+    \item \textbf{Anomaly scoring và paranoia levels:} Thực nghiệm cho thấy ModSecurity PL1 sử dụng threshold points thấp hơn PL4, dẫn đến việc các kỹ thuật obfuscation đơn giản (single URL encoding, case manipulation) vẫn có khả năng bypass. Ngược lại, PL4 áp dụng rule sets mở rộng với scoring nghiêm ngặt hơn, yêu cầu kỹ thuật bypass phức tạp hơn (double/triple encoding, comment injection kết hợp).
+    
+    \item \textbf{Rule specificity vs. generalization trade-off:} Quan sát cho thấy WAF rules thường được thiết kế theo hai hướng: (i) specific patterns cho các attack vectors phổ biến (ví dụ: \texttt{UNION SELECT}, \texttt{<script>}), và (ii) generic anomaly detection dựa trên entropy và character distribution. Kỹ thuật bypass hiệu quả cần tránh cả hai loại detection này đồng thời.
+    
+    \item \textbf{Context-dependent filtering:} Phân tích response từ DVWA (reflected XSS, error-based SQLi, blind injection) cho thấy effectiveness của payload không chỉ phụ thuộc vào khả năng bypass WAF mà còn vào execution context tại application layer. Điều này dẫn đến thiết kế evaluation metrics kết hợp cả WAF pass rate và application-level success indicators.
+\end{itemize}
+
+\subsection{Nắm vững các kỹ thuật tấn công và bypass patterns}
+\label{subsec:attack_techniques}
+
+Quá trình nghiên cứu và triển khai hệ thống giúp nhóm có được hiểu biết sâu về taxonomy và mechanics của web attack techniques:
+
+\subsubsection{SQL Injection patterns và biến thể}
+\begin{itemize}
+    \item \textbf{Encoding-based evasion:} Thực nghiệm với multi-layer encoding (URL encode, double encode, hex encode) cho thấy effectiveness phụ thuộc vào parsing order của WAF và application. Ví dụ, \texttt{\%2527\%2520OR\%25201\%253D1} (triple-encoded) bypass ModSecurity PL1 nhưng bị block ở PL4 do enhanced decoding rules.
+    
+    \item \textbf{Comment injection và obfuscation:} Các kỹ thuật như \texttt{/**/}, \texttt{/*!50000*/} (MySQL version-specific comments), và \texttt{--+} (URL-safe comment) cho phép bypass keyword-based detection. Nghiên cứu cho thấy comment-based obfuscation có success rate 65-80\% trên PL1 nhưng chỉ 20-30\% trên PL4.
+    
+    \item \textbf{Union-based và error-based SQLi:} Phân biệt được cách thức extract data thông qua UNION SELECT (yêu cầu đúng số columns) và error messages (UPDATEXML, EXTRACTVALUE). Thực nghiệm cho thấy error-based techniques ít bị WAF detect hơn do không chứa explicit UNION keywords.
+    
+    \item \textbf{Time-based blind injection:} Kỹ thuật sử dụng SLEEP(), BENCHMARK() để infer information qua response delay. WAF khó detect vì không có malicious keywords rõ ràng, nhưng rate limiting và timeout policies có thể mitigate.
+\end{itemize}
+
+\subsubsection{Cross-Site Scripting (XSS) vectors}
+\begin{itemize}
+    \item \textbf{Event handler exploitation:} Các attributes như \texttt{onload}, \texttt{onerror}, \texttt{onmouseover} trong HTML tags (\texttt{<img>}, \texttt{<svg>}, \texttt{<body>}) cho phép execute JavaScript mà không cần \texttt{<script>} tag. Success rate: 70-85\% trên ModSecurity PL1.
+    
+    \item \textbf{Protocol-based injection:} Sử dụng \texttt{javascript:} protocol trong attributes như \texttt{href} hoặc \texttt{src} (ví dụ: \texttt{<a href="javascript:alert(1)">}). Kỹ thuật này bypass các rules chỉ detect \texttt{<script>} patterns.
+    
+    \item \textbf{Encoding variations:} HTML entity encoding (\texttt{\&\#x61lert}), Unicode normalization, và mixed-case (\texttt{<ScRiPt>}) là các techniques phổ biến. Thực nghiệm cho thấy mixed-case có effectiveness thấp (20\%) do modern WAFs có case-insensitive matching.
+    
+    \item \textbf{Context-aware payload construction:} Hiểu được difference giữa reflected XSS trong HTML context, JavaScript context, và attribute context. Payload design cần match với injection point context để thành công.
+\end{itemize}
+
+\subsubsection{Command Injection và path traversal}
+\begin{itemize}
+    \item \textbf{Command chaining operators:} Sử dụng \texttt{;}, \texttt{|}, \texttt{\&\&}, \texttt{||} để chain multiple commands. WAF detection dựa trên blacklist của shell metacharacters, có thể bypass bằng encoding hoặc use alternative operators.
+    
+    \item \textbf{Environment variable manipulation:} Techniques như \texttt{\$\{IFS\}} (Internal Field Separator) để replace spaces, hoặc \texttt{\$()} command substitution. Ví dụ: \texttt{cat\$\{IFS\}/etc/passwd} bypass space-based detection.
+    
+    \item \textbf{Path traversal patterns:} Hiểu được cách sử dụng \texttt{../}, \texttt{..\\}, URL-encoded variants (\texttt{\%2e\%2e/}), và double-encoding để access unauthorized files. WAF rules thường normalize paths, nên cần kết hợp với encoding.
+\end{itemize}
+
+\subsubsection{Taxonomy và categorization insights}
+Việc làm việc với 509 techniques trong knowledge base giúp nhóm hiểu được:
+\begin{itemize}
+    \item \textbf{Attack surface mapping:} Phân loại techniques theo target component (parser, validator, sanitizer), attack vector (input field, header, cookie), và exploitation mechanism (encoding, logic flaw, race condition).
+    
+    \item \textbf{Technique composition:} Nhiều successful payloads là combination của multiple basic techniques. Ví dụ: double-encoding + comment injection + case manipulation có bypass rate cao hơn 40\% so với single technique.
+    
+    \item \textbf{WAF evasion patterns:} Nhận diện được common evasion strategies: (i) character substitution, (ii) structural obfuscation, (iii) protocol abuse, (iv) timing-based attacks. Mỗi pattern có countermeasures khác nhau từ WAF.
+    
+    \item \textbf{Evolution và trends:} Techniques mới thường exploit parsing differences giữa WAF và application, hoặc leverage features không được WAF rules cover đầy đủ (ví dụ: HTML5 tags, CSS expressions).
+\end{itemize}
+
+\subsection{Phương pháp luận trong việc sử dụng LLM sinh dữ liệu}
+\label{subsec:llm_data_generation}
+
+Quy trình sinh dữ liệu huấn luyện thông qua LLM thương mại (DeepSeek, Gemini) với kiểm tra qua WAF thật cho thấy những insights quan trọng:
+
+\begin{itemize}
+    \item \textbf{Prompt engineering và output control:} Thực nghiệm chỉ ra rằng prompt conciseness có tác động trực tiếp đến output quality. Prompt dạng "Generate payload using [technique]" với constraint "output ONLY payload code" giảm đáng kể noise từ explanatory text so với prompt dạng conversational.
+    
+    \item \textbf{Validation-in-the-loop generation:} Thiết kế pipeline tích hợp WAF testing ngay sau generation step, chỉ giữ lại PASSED payloads, tạo ra training dataset với 100\% valid samples. Phương pháp này superior hơn so với việc thu thập từ CVE databases về mặt technique coverage và timeliness.
+    
+    \item \textbf{Technique diversity vs. sample quantity:} Phân tích ablation study cho thấy độ phủ kỹ thuật (technique coverage) có impact lớn hơn số lượng samples đối với model generalization. Dataset 3,800 samples với 509 techniques đa dạng outperform dataset 10,000 samples nhưng chỉ cover 100 techniques.
+\end{itemize}
+
+\subsection{Thiết kế và chuẩn hóa data pipeline}
+\label{subsec:data_pipeline_design}
+
+Quy trình xử lý dữ liệu qua ba phases cho thấy tầm quan trọng của standardization và quality control:
+
+\begin{itemize}
+    \item \textbf{Multi-stage refinement workflow:} Pipeline ba giai đoạn (Phase 1: instruction-following, Phase 2: observation-augmented, Phase 3: RL optimization) cho phép mô hình học incremental complexity. Thiết kế này giảm distribution shift giữa các training stages và cải thiện convergence stability.
+    
+    \item \textbf{Replay buffer và observation injection:} Việc augment training samples với historical observations (BLOCKED/PASSED history) trong Phase 2 giúp mô hình học được causal relationships giữa technique patterns và WAF responses. Ablation study cho thấy observation-augmented samples cải thiện bypass rate 15-20\% so với pure instruction-following.
+    
+    \item \textbf{Quality filtering mechanisms:} Áp dụng multi-level filtering (syntax validation, WAF testing, hallucination detection) loại bỏ 62\% generated samples nhưng cải thiện training efficiency đáng kể. Điều này khẳng định nguyên tắc "quality over quantity" trong dataset construction.
+\end{itemize}
+
+\subsection{Tối ưu hóa huấn luyện với tài nguyên hạn chế}
+\label{subsec:resource_optimization}
+
+Việc triển khai QLoRA và gradient accumulation cho phép huấn luyện trên GPU với VRAM hạn chế:
+
+\begin{itemize}
+    \item \textbf{Parameter-efficient fine-tuning:} QLoRA 4-bit quantization giảm memory footprint từ 28GB xuống 7GB (75\% reduction) trong khi chỉ giảm performance 2-3\% so với full fine-tuning. Kết hợp với LoRA rank r=16, alpha=32 cho kết quả tối ưu về trade-off giữa efficiency và effectiveness.
+    
+    \item \textbf{Gradient accumulation strategies:} Với batch size thực 1-2 và accumulation steps 8-16, hệ thống đạt effective batch size 16-32 phù hợp cho stable training. Thực nghiệm cho thấy accumulation steps > 16 không mang lại improvement đáng kể nhưng tăng training time.
+    
+    \item \textbf{Infrastructure considerations:} Thiết lập HF\_TOKEN, model caching, adapter versioning là các yếu tố quan trọng cho reproducibility. Việc chuẩn hóa này giảm 80\% thời gian debugging liên quan đến environment setup.
+\end{itemize}
+
+\subsection{Thiết kế reward function cho RL}
+\label{subsec:reward_design}
+
+Phase 3 sử dụng simple reward scheme (+1 PASSED, -1 BLOCKED) nhưng cho thấy effectiveness cao:
+
+\begin{itemize}
+    \item \textbf{Sparse rewards và exploration:} Reward structure đơn giản giúp tránh reward hacking nhưng yêu cầu sufficient exploration. Thực nghiệm cho thấy entropy coefficient $\beta = 0.01$ và temperature $\tau = 0.7$ cân bằng tốt giữa exploration và exploitation.
+    
+    \item \textbf{Baseline stability:} Sử dụng exponential moving average (EMA) với $\alpha = 0.9$ cho value function baseline giảm variance và cải thiện convergence. Ablation study cho thấy non-EMA baseline dẫn đến training instability với reward oscillations $>$ 40\%.
+    
+    \item \textbf{Invalid output penalty:} Áp dụng penalty -0.5 cho invalid/malformed outputs trong RL training giữ format compliance ở mức 95\%+. Penalty này critical để tránh model học cách generate random strings để exploit reward function.
+\end{itemize}
+
+\subsection{Prompt sensitivity theo training phases}
+\label{subsec:prompt_sensitivity}
+
+Phân tích systematic cho thấy prompt requirements khác nhau giữa các phases:
+
+\begin{itemize}
+    \item \textbf{Phase 1 - Low sensitivity:} Mô hình Phase 1 robust với prompt variations, chỉ cần basic structure (target, attack type, technique). Pass rate variation < 5\% khi thay đổi prompt wording.
+    
+    \item \textbf{Phase 3 - Format critical:} Phase 3 models extremely sensitive đến prompt format. Thiếu context sections (Target WAF, Payload History) hoặc sai ordering làm bypass rate giảm 30-45\%. Standardized prompt template là essential requirement.
+    
+    \item \textbf{RL adaptation:} RL models học từ state-action-reward tuples nên ít phụ thuộc vào prompt engineering. Thay vào đó, state representation quality (probe history encoding) có impact lớn hơn đến performance.
+\end{itemize}
+
+\subsection{Hạn chế và hướng phát triển}
+\label{subsec:limitations_future}
+
+Nghiên cứu này có các hạn chế và cơ hội cải thiện:
+
+\subsubsection{Hạn chế hiện tại}
+\begin{itemize}
+    \item \textbf{Scope giới hạn:} Tập trung SQLi và XSS cơ bản trên DVWA; chưa cover các attack surfaces phức tạp hơn (file upload, deserialization, SSRF).
+    \item \textbf{WAF diversity:} Đánh giá chủ yếu trên ModSecurity và Coraza; chưa test với commercial WAFs (Cloudflare, AWS WAF, Imperva).
+    \item \textbf{Model scale:} Experiments giới hạn ở models 2-4B parameters do resource constraints; larger models có thể achieve better performance.
+\end{itemize}
+
+\subsubsection{Hướng nghiên cứu tiếp theo}
+\begin{itemize}
+    \item \textbf{Multi-step attack chains:} Mở rộng sang scenarios yêu cầu multiple payloads và session management.
+    \item \textbf{Adversarial training:} Train defensive models song song với offensive models để study arms race dynamics.
+    \item \textbf{Explainability:} Tích hợp attention analysis và saliency maps để hiểu model reasoning process.
+    \item \textbf{Real-world deployment:} Pilot studies với blue team trong controlled penetration testing scenarios.
+\end{itemize}
+
+\subsection{Kết luận}
+Đồ án thành công trong việc thiết lập end-to-end pipeline từ data generation đến RL optimization cho WAF testing. Các bài học chính bao gồm: (i) tầm quan trọng của validation-in-the-loop data generation, (ii) necessity của prompt standardization trong multi-phase training, (iii) effectiveness của simple reward schemes với proper baselines, và (iv) trade-offs giữa model capacity và resource constraints. Hệ thống đạt 95\%+ pass rates trên ModSecurity PL1 và 62-97\% trên Coraza, demonstrating feasibility của LLM-based automated security testing approaches.

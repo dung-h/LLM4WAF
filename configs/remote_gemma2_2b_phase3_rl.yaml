@@ -12,8 +12,8 @@ output_dir: "experiments/remote_gemma2_2b_phase3_rl"
 epochs: 150
 batch_size: 1
 lr: 1e-6
-max_new_tokens: 64
-max_context_length: 1024 # Match Phase 2 SFT context length
+max_new_tokens: 256 # Cover 95% of payloads (95th percentile = 240 tokens)
+max_context_length: 1024 # Keep same as Phase 2 for consistency
 gradient_checkpointing: true # Enable to save VRAM
 
 # WAF Configuration

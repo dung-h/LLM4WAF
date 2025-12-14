@@ -827,116 +827,22 @@
 % - Giải thích RÕ RÀNG tại sao cần 3 phases
 % - Nhấn mạnh RL chỉ train trên PL1, PL4/Coraza chỉ eval
 % - Trích dẫn hyperparameters từ config files
+% - Khi viết phần synthetic generative data (Phase 2 dataset), chèn citation về quy trình tạo dữ liệu tổng hợp cho LLM fine-tuning, ví dụ \cite{selfinstruct2023,magister2024synthetic} (thêm các key này vào references.bib).
 % ========================================
+
+\section*{Lời cảm ơn (tạm thời)}
+Chúng em xin cảm ơn thầy TS. Nguyễn An Khương và anh Trần Lê Quốc Khánh B.Eng đã tận tình hướng dẫn; đồng thời cảm ơn anh Đoàn Thế Anh, anh Nguyễn Bá Nhật Quang, anh Nguyễn Anh Kiệt đã hỗ trợ trong quá trình thực hiện đồ án này.
 
 \section{Quy trình huấn luyện và đánh giá}
 \label{sec:training}
 
-% SECTION 4 CONTENT
-\subsection{Pipeline hu §n luy ¯Øn t ¯ng quan}
-\subsubsection{Ki §¨n trA§c 3-phase}
-Pipeline gA"m 3 giai Ž`o §­n: (1) SFT c ¯ b §œn trA©n payload pass ModSecurity PL1 sau khi lọc, (2) SFT quan sA¡t kA"m replay buffer gi ¯_a Phase~1 \textrightarrow{} giảm quA©n, (3) RL online trAªn WAF s ¯?ng. D ¯? li ¯Øu khAi AAºu sạch nAªn loss Phase~1 hA?i tAâi nhanh.
-\subsubsection{C §u hAªnh ph §n c ¯cng}
-Remote GPU 16~GB VRAM, 4-bit quantization + LoRA r=16, alpha=32 cho 3 model (Gemma~2B, Phi3-mini, Qwen~3B).
-\subsubsection{Hyperparameters}
-\begin{table}[h]
-\centering
-\begin{tabular}{lcccccc}
-\hline
-Model & Phase & LR & Eff. Batch & Epochs & Max len & Max new \\ \hline
-Gemma\_2B & 1 & 2e-4 & 16 & 3 & 1024 & -- \\
-Gemma\_2B & 2 & 2e-4 & 16 & 2 & 1024 & -- \\
-Gemma\_2B & RL & 1e-6 & 1 & 150 & 1024 & 256 \\
-Phi3\_Mini & 1 & 2e-4 & 16 & 3 & 1024 & -- \\
-Phi3\_Mini & 2 & 2e-4 & 16 & 2 & 1024 & -- \\
-Phi3\_Mini & RL & 1e-6 & 1 & 150 & 1024 & 256 \\
-Qwen\_3B & 1 & 2e-4 & 16 & 3 & 1024 & -- \\
-Qwen\_3B & 2 & 2e-4 & 16 & 2 & 1024 & -- \\
-Qwen\_3B & RL & 1e-6 & 2 & 150 & 1024 & 256 \\
-\hline
-\end{tabular}
-\caption{Hyperparameters chính (chi tiết xem reports/training\_eval\_tables.md).}
-\end{table}
-
-\subsection{Phase 1: SFT payload c ¯ b §œn}
-\subsubsection{M ¯c tiA¦u}
-H ¯?c syntax SQLi/XSS cA§ b §œn vAÿ obfuscation cơ bản. Dataset 10k mẫu pass PL1 (\textgreater{}500 kA­ thuAŒt) nAªn mẫu sạch, đa dA¡ng.
-\subsubsection{K §¨t qu §œ}
-Loss hA?i tAâi ổn (reports/loss\_curves/Gemma\_2B\_Phase1.csv, ...); pass-rate tăng so vAÃ pretrained: Gemma 60\%, Qwen 30\%, Phi3 40\% (PL1).
-
-\subsection{Phase 2: SFT quan sA¡t + replay}
-\subsubsection{ChiA§n lA°A£c}
-Nạp adapter Phase~1, thêm observation BLOCKED/PASSED + replay 4k mẫu Phase~1 để giữ kiến thức cũ, lr 2e-4, seq len 1024 (đA"ng bA" theo config mới).
-\subsubsection{K §¨t qu §œ}
-Loss giảm (Gemma/Qwen ổn Aá; Phi3 dao đA°ng nhẹ). Pass-rate: Gemma 75\%/100\% (PL1/PL4), Qwen 93.8\%/93.8\%; Phi3 invalid cao (\textasciitilde{}75\%).
-
-\subsection{Phase 3: RL online}
-\subsubsection{Framework}
-REINFORCE; state = \{waf\_type, attack\_type, injection\_point, payload\_history, target\_technique\}; prompt hóa state. Max\_steps=3/episode. Reward: +1 bypass/SQL error, +1 XSS reflect (đA¼ã sửa), -1 block, -0.5 lặp payload, -0.01 step penalty; advantage clip [-10,10], baseline EMA (alpha=0.1).
-\subsubsection{K §¨t qu §œ}
-Qwen RL 100\% pass PL1/PL4; Gemma RL 80\%/90\%; Phi3 RL 60\%/60\%. TrAªn Coraza (unseen): Qwen 95.5\%, Gemma 94.0\%, Phi3 62.5\%.
-
-\subsection{PhA›n tA-ch Training Loss}
-Loss curves (reports/loss\_curves/*.csv):
-\begin{itemize}
-  \item Gemma/Qwen: hội tụ ổn, Phase~2 nhanh nhờ khởi tạo Phase~1.
-  \item Phi3: Phase~2 dao động, liên quan invalid/refusal cao.
-\end{itemize}
-% [PLACEHOLDER figure loss] vA© hình khi render.
-
-\subsection{K §¨t qu §œ Ž`A­nh giA­}
-\subsubsection{ModSecurity (PL1/PL4)}
-\begin{table}[h]
-\centering
-\begin{tabular}{lcccc}
-\hline
-Model & PL1 Pass & PL1 Invalid & PL4 Pass & PL4 Invalid \\ \hline
-Gemma\_2B\_Phase1 & 60.0\% & 0.0\% & 70.0\% & 0.0\% \\
-Gemma\_2B\_Phase2 & 75.0\% & 25.0\% & 100.0\% & 0.0\% \\
-Gemma\_2B\_RL & 80.0\% & 20.0\% & 90.0\% & 10.0\% \\
-Qwen\_3B\_Phase1 & 30.0\% & 0.0\% & 40.0\% & 0.0\% \\
-Qwen\_3B\_Phase2 & 93.8\% & 6.2\% & 93.8\% & 6.2\% \\
-Qwen\_3B\_RL & \textbf{100.0\%} & 0.0\% & \textbf{100.0\%} & 0.0\% \\
-Phi3\_Mini\_Phase1 & 40.0\% & 0.0\% & 50.0\% & 0.0\% \\
-Phi3\_Mini\_Phase2 & 18.8\% & 75.0\% & 25.0\% & 68.8\% \\
-Phi3\_Mini\_RL & 60.0\% & 0.0\% & 60.0\% & 0.0\% \\
-\hline
-\end{tabular}
-\caption{Pass/Invalid \% ModSecurity (PL1/PL4).}
-\end{table}
-
-\subsubsection{Coraza (unseen WAF)}
-\begin{table}[h]
-\centering
-\begin{tabular}{lcc}
-\hline
-Model & Pass \% & Invalid \% \\ \hline
-Gemma\_2B\_Phase1 & 50.5 & 0.0 \\
-Gemma\_2B\_Phase2 & \textbf{97.0} & 2.0 \\
-Gemma\_2B\_RL & 94.0 & 5.5 \\
-Qwen\_3B\_Phase1 & 37.0 & 5.5 \\
-Qwen\_3B\_Phase2 & 73.0 & 22.0 \\
-Qwen\_3B\_RL & 95.5 & 0.5 \\
-Phi3\_Mini\_Phase1 & 42.0 & 2.0 \\
-Phi3\_Mini\_Phase2 & 25.0 & 59.5 \\
-Phi3\_Mini\_RL & 62.5 & 0.5 \\
-\hline
-\end{tabular}
-\caption{Pass/Invalid \% trAªn Coraza (unseen).}
-\end{table}
-
-NhA­n xA©t: nhờ dataset pass-PL1 vAÿ replay giảm quA©n, Phase~2 Gemma/Qwen generalize tA?t; RL giữ \textgreater{}94\% (Gemma/Qwen) trAªn Coraza dù chA? eval.
-
-\subsection{PhA›n tA-ch Ž` ¯<nh tA-nh}
-\subsubsection{Payload case studies}
-TrA­ch tA»\i reports/payload\_samples.md, ví dA tiêu biAu:
-\begin{itemize}
-  \item SQLi (Gemma\_2B\_Phase2, ModSec): \verb|%2527/%252a%252a/union/...| (double URL encode + comment split) \textrightarrow{} bypass.
-  \item SQLi (Qwen\_3B\_RL, Coraza): \verb|1 anD sLeep(5) #| (delay + mixed case) \textrightarrow{} bypass.
-  \item XSS (Gemma\_2B\_Phase2, ModSec): \verb|%253Cbody%2520onload%253Dalert(1)%253E| (nested encode) \textrightarrow{} exec.
-  \item XSS (Phi3\_Mini\_RL, Coraza): \verb|<svg><script>alert(1)</script>| \textrightarrow{} exec (reflect).
-\end{itemize}
-Pattern: encode tầng (URL/double), comment/whitespace obfuscation, mixed case, payload ngA¯n gA?n (max\_new\_tokens=256) giữ hiệu quả.
+% TODO: Agent writes subsections 4.1 - 4.7 following the prompt above
+% This section should be approximately 12-15 pages covering:
+% - Complete training pipeline (Phases 1-3)
+% - Hyperparameter configurations
+% - RL framework and reward design
+% - Placeholder sections for loss analysis and evaluation results
+% - Structure ready for filling in data after remote training completes
 
 
 % =========================================================
@@ -947,13 +853,23 @@ Pattern: encode tầng (URL/double), comment/whitespace obfuscation, mixed case,
 \label{sec:conclusion}
 
 \subsection{Kết luận}
-Hoàn thành pipeline 3-phase (SFT cơ bản → observation+replay → RL online). Dataset đa kỹ thuật, đã lọc pass-PL1 nên model học obfuscation mạnh ngay Phase~1. Kết quả: Qwen RL 100\% PL1/PL4, 95.5\% Coraza; Gemma Phase~2 97\% Coraza; RL giúp duy trì >94\% trên WAF lạ (Coraza). Payload sinh ra ngắn gọn, đa dạng encoding/comment, chứng minh khả năng generalize.
+% TODO: Tóm tắt contributions khi có đầy đủ kết quả
+% - Xây dựng thành công Red Agent pipeline
+% - Dataset với 509-532 techniques
+% - So sánh 3 models (Gemma, Phi-3, Qwen)
+% - Áp dụng thành công RL trên WAF
 
 \subsection{Hạn chế}
-GPU 16~GB giới hạn batch/seq len; Phi3 Phase~2 invalid cao (cần giảm refusal); RL train chỉ trên ModSec PL1 (PL4/Coraza chỉ eval); môi trường DVWA đơn giản.
+% - Tài nguyên phần cứng hạn chế (16GB VRAM)
+% - Số lượng WAF profiles hạn chế
+% - Chỉ test trên DVWA (1 ứng dụng)
+% - Thời gian training bị giới hạn
 
 \subsection{Hướng phát triển}
-Mở sang nhiều WAF/profile khác (naxsi, coraza ruleset khác), thêm attack types (SSRF/XXE/RCE), prompt/critique giảm refusal cho Phi3, kết hợp decoding ràng buộc và self-play RL, kéo dài eval sang web-app khác ngoài DVWA.
+% - Mở rộng sang nhiều WAF và applications
+% - Thêm attack types (SSRF, XXE, ...)
+% - Phát triển Blue Agent (defensive side)
+% - Kết hợp constraint decoding
 
 \bibliographystyle{ieeetr}
 \bibliography{references}

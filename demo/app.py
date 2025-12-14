@@ -20,24 +20,22 @@ AVAILABLE_MODELS = {
     "Phi-3 Mini": {
         "base_model": "microsoft/Phi-3-mini-4k-instruct",
         "phases": {
-            "Phase 1 SFT": "experiments/remote_adapters/experiments_remote_optimized/phase1_sft_phi3",
-            "Phase 2 Reasoning": "experiments/remote_adapters/experiments_remote_optimized/phase2_reasoning_phi3"
+            "Phase 1 SFT": "experiments/remote_phi3_mini_phase1",
+            "Phase 3 RL": "experiments/remote_phi3_mini_phase3_rl"
         }
     },
-    "Qwen 7B": {
-        "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "Qwen 3B": {
+        "base_model": "Qwen/Qwen2.5-3B-Instruct",
         "phases": {
-            "Phase 1 SFT": "experiments/remote_adapters/experiments_remote_optimized/phase1_sft_qwen",
-            "Phase 2 Reasoning": "experiments/remote_adapters/experiments_remote_optimized/phase2_reasoning_qwen"
+            "Phase 1 SFT": "experiments/remote_qwen_3b_phase1",
+            "Phase 3 RL": "experiments/remote_qwen_3b_phase3_rl"
         }
     },
     "Gemma 2 2B": {
         "base_model": "google/gemma-2-2b-it",
         "phases": {
-            "Phase 1 SFT": "experiments/gemma2_2b_v40_subsample_5k",
-            "Phase 2 Reasoning": "experiments/phase2_gemma2_2b_reasoning",
-            "Phase 3 Enhanced": "experiments/red_phase3_lightweight_enhanced_gemma/checkpoint-314",
-            "Phase 3 RL (NEW)": "experiments/gemma2_2b_phase3_rl/checkpoint-50"
+            "Phase 1 SFT": "experiments/remote_gemma2_2b_phase1",
+            "Phase 3 RL": "experiments/remote_gemma2_2b_phase3_rl"
         }
     }
 }
@@ -98,24 +96,33 @@ def update_prompt_ui(prompt_mode: str) -> gr.Textbox:
 
 def verify_target_waf(target_mode: str, remote_base_url: str, remote_username: str, remote_password: str, remote_target_param: str) -> str:
     """Verifies connection to the specified WAF target."""
-    config = {}
+    # Normalize user input
+    base_url = (remote_base_url or "").strip().rstrip("/")
+    username = (remote_username or "").strip()
+    password = (remote_password or "").strip()
+    target_param = (remote_target_param or "id").strip() or "id"
+
     if target_mode == "Local (DVWA Docker)":
+        # Allow overriding base_url/creds; fallback to defaults
+        base_url = base_url or "http://localhost:8000"
+        username = username or "admin"
+        password = password or "password"
         config = {
-            "base_url": "http://localhost:8000",
-            "username": "admin",
-            "password": "password",
-            "target_param": "id",
+            "base_url": base_url,
+            "username": username,
+            "password": password,
+            "target_param": target_param,
             "login_required": True
         }
     else: # Remote (Custom URL)
-        if not remote_base_url:
+        if not base_url:
             return "ERROR: Remote URL cannot be empty."
         config = {
-            "base_url": remote_base_url,
-            "username": remote_username,
-            "password": remote_password,
-            "target_param": remote_target_param,
-            "login_required": bool(remote_username and remote_password)
+            "base_url": base_url,
+            "username": username,
+            "password": password,
+            "target_param": target_param,
+            "login_required": bool(username and password)
         }
     
     waf_executor.update_config(config)
@@ -224,6 +231,40 @@ def generate_and_attack(
     log_messages.append("--- Attack Session Complete ---")
     return current_attack_results, "\n".join(log_messages)
 
+# --- Quick Self-Test Helper (non-UI) ---
+def quick_self_test(
+    target_url: str = "http://localhost:8000",
+    username: str = "admin",
+    password: str = "password",
+) -> Dict[str, Any]:
+    """
+    Lightweight sanity check (no model load):
+      - Verify adapter paths exist for all models/phases.
+      - Ping target_url via WAF executor verify flow.
+    Usage (manual):
+      >>> from demo.app import quick_self_test
+      >>> quick_self_test("http://localhost:8000", "admin", "password")
+    """
+    adapter_status = []
+    for model_name, cfg in AVAILABLE_MODELS.items():
+        for phase, path in cfg["phases"].items():
+            adapter_status.append({
+                "model": model_name,
+                "phase": phase,
+                "path": path,
+                "exists": os.path.exists(path)
+            })
+    # Verify target
+    waf_executor.update_config({
+        "base_url": target_url,
+        "username": username,
+        "password": password,
+        "target_param": "id",
+        "login_required": True
+    })
+    target_status = waf_executor.verify_target()
+    return {"adapters": adapter_status, "target_status": target_status}
+
 # --- Gradio UI Definition ---
 with gr.Blocks(title="LLM4WAF Red Teaming Dashboard") as demo:
     gr.Markdown("# LLM4WAF Red Teaming Dashboard")
@@ -239,37 +280,39 @@ with gr.Blocks(title="LLM4WAF Red Teaming Dashboard") as demo:
                     label="Target Mode"
                 )
                 
-                # Local DVWA Config (Fixed)
+                # Local DVWA Config (Editable defaults)
                 with gr.Column(visible=True) as local_dvwa_config:
-                    gr.Textbox("http://localhost:8000", label="DVWA Base URL (Fixed)", interactive=False)
-                    gr.Textbox("admin", label="Username (Fixed)", interactive=False)
-                    gr.Textbox("password", label="Password (Fixed)", interactive=False)
+                    local_base_url = gr.Textbox(value="http://localhost:8000", label="DVWA Base URL", interactive=True)
+                    local_username = gr.Textbox(value="admin", label="Username", interactive=True)
+                    local_password = gr.Textbox(value="password", label="Password", interactive=True)
                     local_verify_btn = gr.Button("Verify Local DVWA WAF")
                     local_waf_status = gr.Textbox(label="Local WAF Status", interactive=False)
 
                 # Remote Custom Config (Conditional visibility)
                 with gr.Column(visible=False) as remote_custom_config:
-                    remote_base_url = gr.Textbox(label="Remote Base URL", placeholder="e.g., http://example.com/myapp/")
+                    remote_base_url = gr.Textbox(label="Remote Base URL", placeholder="e.g., http://example.com/dvwa")
                     remote_username = gr.Textbox(label="Remote Username (Optional)", placeholder="e.g., admin")
                     remote_password = gr.Textbox(label="Remote Password (Optional)", type="password")
-                    remote_target_param = gr.Textbox(label="Target Parameter Name", value="id", placeholder="e.g., id, name, cmd")
                     remote_verify_btn = gr.Button("Verify Remote Target")
                     remote_waf_status = gr.Textbox(label="Remote WAF Status", interactive=False)
                 
                 target_mode.change(
-                    lambda mode: (gr.Column(visible=mode=="Local (DVWA Docker)"), gr.Column(visible=mode=="Remote (Custom URL)")),
+                    lambda mode: (
+                        gr.update(visible=mode == "Local (DVWA Docker)"),
+                        gr.update(visible=mode == "Remote (Custom URL)")
+                    ),
                     inputs=[target_mode],
                     outputs=[local_dvwa_config, remote_custom_config]
                 )
                 
                 local_verify_btn.click(
                     verify_target_waf, 
-                    inputs=[gr.State("Local (DVWA Docker)"), gr.State(""), gr.State(""), gr.State(""), gr.State("id")],
+                    inputs=[gr.State("Local (DVWA Docker)"), local_base_url, local_username, local_password, gr.State("id")],
                     outputs=[local_waf_status]
                 )
                 remote_verify_btn.click(
                     verify_target_waf, 
-                    inputs=[target_mode, remote_base_url, remote_username, remote_password, remote_target_param],
+                    inputs=[target_mode, remote_base_url, remote_username, remote_password, gr.State("id")],
                     outputs=[remote_waf_status]
                 )
 
@@ -283,7 +326,7 @@ with gr.Blocks(title="LLM4WAF Red Teaming Dashboard") as demo:
                 adapter_dropdown = gr.Dropdown(
                     choices=list(AVAILABLE_MODELS["Phi-3 Mini"]["phases"].keys()),
                     label="Training Phase (Adapter)",
-                    value="Phase 2 Reasoning"
+                    value="Phase 3 RL"
                 )
                 base_model_dropdown.change(
                     get_adapter_options, 
@@ -326,8 +369,8 @@ with gr.Blocks(title="LLM4WAF Red Teaming Dashboard") as demo:
             with gr.Group():
                 gr.Markdown("### 4. Prompt Strategy")
                 prompt_mode_radio = gr.Radio(
-                    choices=["Auto (Standard - Phase 1)", "Auto (Reasoning - Phase 2/3)", "Custom"],
-                    value="Auto (Reasoning - Phase 2/3)",
+                    choices=["Auto (Standard - Phase 1)", "Auto (Reasoning - Phase 3)", "Custom"],
+                    value="Auto (Reasoning - Phase 3)",
                     label="Prompt Mode"
                 )
                 custom_prompt_textbox = gr.Textbox(
@@ -371,7 +414,7 @@ with gr.Blocks(title="LLM4WAF Red Teaming Dashboard") as demo:
     attack_btn.click(
         generate_and_attack,
         inputs=[
-            base_model_dropdown, phase_name, attack_type_dropdown, technique_dropdown,
+            base_model_dropdown, adapter_dropdown, attack_type_dropdown, technique_dropdown,
             prompt_mode_radio, custom_prompt_textbox,
             temperature_slider, max_new_tokens_slider, loop_count_slider
         ],

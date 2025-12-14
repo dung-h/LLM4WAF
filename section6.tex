@@ -1,0 +1,55 @@
+\section{Kết quả học được}
+
+Trong quá trình thực hiện đồ án, chúng em đã tích lũy nhiều bài học thực tế về bảo mật ứng dụng web và vận dụng mô hình ngôn ngữ lớn (LLM) để kiểm thử WAF. Nội dung dưới đây trình bày chi tiết các kết quả học được theo từng khía cạnh.
+
+\subsection{Kiến thức về WAF và các kĩ thuật tấn công}
+\begin{itemize}
+    \item Dựng và vận hành ModSecurity (OWASP CRS) và Coraza trên DVWA giúp quan sát rõ cách rule phát hiện SQLi/XSS (anomaly scoring, PL1/PL4), tác động của cấu hình (threshold, phase xử lý), và hành vi khi thêm/giảm rule.
+    \item Thử nghiệm thực tế với các kỹ thuật bypass (double/triple URL encode, comment obfuscation, case-mixing, JS protocol, event handler, hex/URL encoding sâu) cho thấy sự khác biệt giữa lý thuyết và thực hành: một số kỹ thuật đơn giản vẫn hiệu quả ở PL1 nhưng bị siết ở PL4; một số kỹ thuật tưởng mạnh nhưng vẫn bị block vì rule đặc thù.
+    \item Làm việc với DVWA (tham số \texttt{id}, \texttt{name}) giúp phân biệt rõ giữa reflected XSS, error-based SQLi và blind/time-based; từ đó xác định phạm vi pipeline (tập trung SQLi/XSS cơ bản) và cách quan sát phản hồi ứng dụng để suy luận mức độ thành công.
+\end{itemize}
+
+\subsection{Sử dụng LLM để sinh payload có kiểm soát}
+\begin{itemize}
+    \item Học cách gọi API (DeepSeek/Gemini), kiểm soát nhiệt độ, giới hạn token, và ràng buộc “chỉ trả payload” để giảm nhiễu giải thích. Nhận ra prompt ngắn gọn, rõ ràng giúp mô hình ít chèn thêm văn bản.
+    \item Xây bộ sinh tự động kèm bộ lọc WAF thật: script Phase 1 mới sinh payload và lọc qua WAF, chỉ giữ \textit{passed}; tránh thói quen copy-paste payload tĩnh và giảm công lọc thủ công.
+    \item Chiến lược cân bằng kỹ thuật: số lượng mẫu không quan trọng bằng độ đa dạng kỹ thuật. Việc phân bổ theo các nhóm (URL encode, comment, union, event handler, v.v.) làm dữ liệu “giàu kỹ thuật” hơn và huấn luyện ổn định hơn.
+\end{itemize}
+
+\subsection{Quy trình tạo và lọc dữ liệu}
+\begin{itemize}
+    \item Vòng đời dữ liệu đa phase: sinh Phase 1 (instruction), bổ sung Phase 2 (context/history/reasoning), và RL với reward thật. Mỗi bước có tiêu chí lọc riêng (pass WAF, reasoning đầy đủ, không giải thích dư thừa).
+    \item Replay \& observation: thêm lịch sử BLOCKED/PASSED vào prompt giúp mô hình “học” từ thất bại; vai trò của replay buffer rõ ràng khi so sánh với prompt không có history.
+    \item Chất lượng quan trọng hơn số lượng: loại bỏ payload vô nghĩa/hallucination cải thiện đáng kể hiệu năng fine-tune; đây là bài học đối lập với trực giác “càng nhiều càng tốt”.
+\end{itemize}
+
+\subsection{Fine-tune và RL trên tài nguyên hạn chế}
+\begin{itemize}
+    \item Quen với QLoRA 4-bit, cấu hình batch nhỏ, gradient accumulation, giảm seq-length khi GPU hạn chế. Điều này giúp chạy được trên VRAM khiêm tốn mà vẫn giữ chất lượng chấp nhận được.
+    \item Thiết kế reward RL đơn giản (pass = +1, block = -1) nhưng cần baseline ổn định; việc quan sát log/metric (reward trung bình, đường học) quan trọng hơn chỉ nhìn loss.
+    \item Học cách chuẩn bị hạ tầng: HF\_TOKEN, cache model/adapter, giảm lỗi treo khi tải model; đây là phần “phi model” nhưng quyết định việc pipeline có chạy trơn tru hay không.
+\end{itemize}
+
+\subsection{Prompt engineering theo từng phase}
+\begin{itemize}
+    \item Phase 1: ít nhạy prompt, chỉ cần instruction ngắn (mục tiêu WAF, loại tấn công, kỹ thuật).
+    \item Phase 2: \textbf{rất nhạy} format; cần Context, Payload History, Target Technique, và yêu cầu output chỉ payload. Sai format làm tỷ lệ bypass giảm mạnh, là bài học lớn về chuẩn hóa prompt.
+    \item Phase 3 (RL): không có template cố định; state/prompt được dựng từ probe history, mô hình học qua reward. Bài học: RL tập trung vào “thử-sai” hơn là “prompt đẹp”.
+\end{itemize}
+
+\subsection{Thao tác với các công cụ hỗ trợ}
+\begin{itemize}
+    \item Vận hành Docker Compose đa WAF (ModSecurity/Coraza/Naxsi) cùng DVWA; quen với cấu hình reverse proxy, mount rule, healthcheck, log.
+    \item Viết script kiểm thử nhanh bằng \texttt{httpx}, thu thập kết quả vào CSV/bảng, và tạo báo cáo \LaTeX/Markdown. Học được cách đo đạc có hệ thống thay vì quan sát thủ công.
+    \item Tổ chức repo: tách rõ scripts chính và script tạm; đặt adapter ngoài repo; chuẩn bị dữ liệu/bảng kết quả trong \texttt{reports/} để tái lập thí nghiệm.
+\end{itemize}
+
+\subsection{Tư duy an toàn và trách nhiệm}
+\begin{itemize}
+    \item Giới hạn phạm vi “kiểm thử có ủy quyền”, ghi rõ mục đích nghiên cứu/phòng thủ trong tài liệu và code.
+    \item Lọc/ký duyệt đầu ra: pipeline có bước kiểm qua WAF thật để loại payload kém/độc hại không cần thiết; tránh phát tán payload thô.
+    \item Nhận thức rủi ro lạm dụng: nêu cảnh báo và khuyến nghị triển khai trong môi trường kiểm soát; coi đây là trách nhiệm đi kèm với việc ứng dụng LLM trong bảo mật.
+\end{itemize}
+
+\subsection{Tổng kết}
+Đồ án giúp nhóm kết nối rõ ràng giữa AI và an ninh mạng: hiểu cách WAF vận hành, cách LLM hỗ trợ kiểm thử, và yêu cầu nghiêm ngặt về dữ liệu, prompt, hạ tầng khi muốn chuyển từ demo sang kịch bản thực tế. Dù không xuất thân từ bảo mật, nhóm đã đi qua đủ các bước: sinh dữ liệu → lọc qua WAF → fine-tune/RL → kiểm thử lặp lại, và nhận ra thành công phụ thuộc đồng thời vào chất lượng dữ liệu, định dạng prompt, và độ tin cậy của môi trường triển khai.

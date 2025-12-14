@@ -14,7 +14,7 @@ num_train_epochs: 2        # GIỮ NGUYÊN 2 EPOCH
 per_device_train_batch_size: 1
 gradient_accumulation_steps: 16
 learning_rate: 2.0e-4
-max_seq_length: 1536
+max_seq_length: 1024
 
 load_in_4bit: true
 bnb_4bit_quant_type: "nf4"
