@@ -107,11 +107,16 @@ Options:
 - **Phase 2 Reasoning SFT:** prompt có Context + History + Target Technique + Reasoning → payload; dataset: `data/processed/red_phase2_reasoning_combined.jsonl` (kèm replay/observations).
 - **Phase 3 RL:** thưởng từ WAF thật (DVWA + ModSecurity/Coraza); env: `rl/waf_env.py`, script `train_rl_adaptive_pipeline.py`.
 
-## 📊 Kết quả chính (reports/training_eval_tables.md)
+## 📊 Kết quả chính
 
+**Training/Eval Summary:** `reports/training_eval_tables.md`
 - **ModSecurity PL1/PL4:** Qwen 3B RL 100% pass; Gemma 2B Phase2 ~75–100%, RL ~80–90%; Phi-3 Mini RL ~60%.
 - **Coraza:** Gemma 2B Phase2 ~97% pass; Qwen 3B RL ~95.5%; Phi-3 Mini RL ~62.5%.
 - CSV: `reports/eval_modsec_pass_rates.csv`, `reports/eval_coraza_pass_rates.csv`.
+
+**RL Validation Results:** `eval/rl_validation_modsec/`, `eval/rl_validation_coraza/`
+- Kết quả kiểm thử Phase 3 RL models trên ModSecurity và Coraza WAF
+- Bao gồm pass rates, payload samples, và detailed logs cho từng model checkpoint
 
 ## 📚 Dataset scripts
 
@@ -191,6 +196,7 @@ IMPORTANT:
 ```
 
 **Phase 3 RL - Adaptive (State-based):**
+
 - Prompt/state được build động từ probe history trong `train_rl_adaptive_pipeline.py`
 - Reward: +1 (bypass), -1 (block)
 - Không có template cố định, model học qua trial-and-error với real-time WAF feedback
@@ -201,6 +207,7 @@ IMPORTANT:
 - `scripts/` – huấn luyện, eval, RL, dữ liệu, attack pipeline.
 - `demo/` – Gradio app + WAF executor.
 - `rl/` – môi trường RL (`waf_env.py`).
+- `eval/` – kết quả validation: `rl_validation_modsec/`, `rl_validation_coraza/` (pass rates, logs, payload samples).
 - `waf/`, `dvwa-modsecurity-waf/`, `coraza/`, `naxsi/` – cấu hình WAF.
 - `experiments/remote_*_phase{1,2,3_rl}` – đặt adapter tải về từ Drive.
-- `reports/` – bảng kết quả, mẫu payload.
+- `reports/` – bảng kết quả training/eval tổng hợp, loss curves, mẫu payload.
