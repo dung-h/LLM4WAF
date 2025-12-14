@@ -28,7 +28,13 @@ class WAFExecutor:
     def update_config(self, config: Dict[str, Any]):
         # Normalize to avoid double slashes when appending suffixes
         base = config.get("base_url", DVWA_DEFAULT_BASE_URL)
-        self.dvwa_base_url = base.rstrip("/")
+        base = base.rstrip("/")
+        
+        # Remove /dvwa suffix if present, since suffixes already include it
+        if base.endswith("/dvwa"):
+            base = base[:-5]  # Remove the last 5 characters ("/dvwa")
+        
+        self.dvwa_base_url = base
         self.dvwa_username = config.get("username", DVWA_USERNAME)
         self.dvwa_password = config.get("password", DVWA_PASSWORD)
         self.target_param = "id"  # Fixed for DVWA SQLi/XSS/Exec
@@ -72,9 +78,15 @@ class WAFExecutor:
         """
         logger.info(f"Verifying target: {self.dvwa_base_url}")
         try:
-            # First, check if base URL is reachable
-            r = self.client.get(self.dvwa_base_url, follow_redirects=True)
-            r.raise_for_status() # Raises HTTPStatusError for 4xx/5xx responses
+            # Test login endpoint directly since base URL might be just host:port
+            test_url = f"{self.dvwa_base_url}{DVWA_LOGIN_URL_SUFFIX}"
+            
+            # Check if login page is reachable
+            r = self.client.get(test_url, follow_redirects=True)
+            
+            # Check if response is valid (200-399)
+            if r.status_code >= 400:
+                return f"ERROR: HTTP Status {r.status_code} for {test_url}"
             
             if self.login_required:
                 if "DVWA" not in r.text and DVWA_LOGIN_URL_SUFFIX not in str(r.url):

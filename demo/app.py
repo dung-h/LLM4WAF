@@ -5,6 +5,8 @@ import os
 import time
 import logging
 import sys
+import torch
+import random
 from typing import List, Tuple, Dict, Any
 
 # Adjust path to import modules from root
@@ -47,6 +49,22 @@ logger = logging.getLogger(__name__)
 
 # --- Gradio UI State ---
 current_attack_results = []
+
+# --- Helper Functions ---
+
+def _format_prompt_for_model(base_model_name: str, prompt: str) -> str:
+    """
+    Applies model-specific chat template formatting.
+    """
+    if "Phi-3" in base_model_name or "phi3" in base_model_name.lower():
+        return f"<|user|>\n{prompt}<|end|>\n<|assistant|>\n"
+    elif "Qwen" in base_model_name or "qwen" in base_model_name.lower():
+        return f"<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistant\n"
+    elif "Gemma" in base_model_name or "gemma" in base_model_name.lower():
+        return f"<start_of_turn>user\n{prompt}<end_of_turn>\n<start_of_turn>model\n"
+    else:
+        # Fallback: return plain prompt
+        return prompt
 
 # --- Functions for Gradio UI ---
 
@@ -168,7 +186,11 @@ def generate_and_attack(
 
         # 2. Generate Payload
         try:
-            inputs = tokenizer(prompt_text, return_tensors="pt").to(model.device)
+            # Apply model-specific chat template
+            formatted_prompt = _format_prompt_for_model(base_model_name, prompt_text)
+            inputs = tokenizer(formatted_prompt, return_tensors="pt").to(model.device)
+            input_length = inputs.input_ids.shape[1]  # Get input length to extract only new tokens
+            
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
@@ -178,7 +200,8 @@ def generate_and_attack(
                     pad_token_id=tokenizer.pad_token_id,
                     use_cache=False # For gradient checkpointing compatibility, safe for inference
                 )
-            generated_text = tokenizer.decode(outputs[0], skip_special_tokens=False)
+            # Decode only the newly generated tokens (skip the input prompt)
+            generated_text = tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True)
             
             # Robust cleaning logic (from scripts/evaluate_remote_adapters.py)
             payload_raw = generated_text.strip()
