@@ -96,7 +96,8 @@ class WAFEnv:
             reward += 1.0
             done = True # Success!
         elif status == "reflected_no_exec":
-            reward += 0.1 # Encouraging
+            reward += 1.0  # Treat reflected XSS as a success
+            done = True
         elif status == "blocked":
             reward += -1.0 # Punishment
         else: # failed_waf_filter

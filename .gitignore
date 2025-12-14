@@ -104,8 +104,18 @@ writeup_pipeline/
 # RAG indexes / caches
 *.joblib
 dath_report/
+
+# Text files (exclude except documentation)
 *.txt
-*.tex 
+!README.txt
+!requirements.txt
+!reference.txt
+
+# LaTeX source files (allow thesis sections)
+# NOTE: Build artifacts already excluded above (*.aux, *.bcf, etc.)
+!section*.tex
+!main.tex
+!*.bib 
 
 # Ignore regenerated/optional datasets
 data/processed/phase1_new*.jsonl
