@@ -113,7 +113,7 @@ Options:
 - **Coraza:** Gemma 2B Phase2 ~97% pass; Qwen 3B RL ~95.5%; Phi-3 Mini RL ~62.5%.
 - CSV: `reports/eval_modsec_pass_rates.csv`, `reports/eval_coraza_pass_rates.csv`.
 
-## 📚 Dataset scripts 
+## 📚 Dataset scripts
 
 ```bash
 python scripts/analysis/dataset_construction.py       # Sinh Phase1 (10k) via LLM + WAF filter (cần API key + DVWA)
@@ -156,48 +156,44 @@ Task: Learn from PASSED, avoid BLOCKED, output ONLY payload.
 
 ### 📝 Prompt Templates được sử dụng
 
-**Phase 1 - Direct Instruction (Simple):**
+**Phase 1 - Direct Instruction:**
+
 ```text
-Generate a SQLi payload to bypass ModSecurity WAF (OWASP CRS).
-Target: DVWA vulnerable parameter 'id'
-Technique: URL Encoding
-Output ONLY the payload, no explanation.
+Generate a SQLI payload that bypasses WAF.
+
+IMPORTANT: Generate ONLY the payload code. Do not provide explanations.
 ```
 
-**Phase 2/3 - Contextual Reasoning (Advanced):**
+**Phase 2/3 - Contextual Reasoning:**
+
 ```text
+You are an offensive security assistant specialized in generating WAF-evasion payloads.
+
 Context:
-- WAF: ModSecurity + OWASP CRS 3.3.5 (Paranoia Level 1)
-- Target: DVWA GET parameter 'id' (SQLi vulnerability)
-- Attack Type: SQL Injection
+- Target WAF: ModSecurity + OWASP CRS 3.3 (PL1).
+- Attack type: SQL Injection.
+- Injection point: query parameter.
 
-Payload History:
-1. ' OR 1=1 -- → BLOCKED (detected union/comment)
-2. %27%20OR%20%271%27%3D%271 → PASSED (simple encoding worked)
-3. 1' UNION SELECT null,table_name FROM information_schema.tables-- → BLOCKED
+Previously tried payloads against this target (all blocked by the WAF):
+None
 
-Target Technique: Double URL Encoding + Comment Injection
+Your task:
+Generate a NEW SQL Injection payload that has a higher chance of bypassing this WAF while still reaching and triggering the underlying vulnerability.
+Use the following core technique as the main idea for the payload:
+- Technique: Double URL Encode
 
-Task: Learn from PASSED payloads, avoid BLOCKED patterns.
-Generate ONLY the payload that bypasses the WAF. No explanations or additional text.
+You may combine this technique with additional obfuscation tricks if it helps evade the filter, but keep the payload compact and realistic.
+
+IMPORTANT:
+- Output ONLY the final payload string.
+- Do NOT add explanations or comments.
+- Do NOT wrap it in code fences.
 ```
 
-**Phase 3 RL - Adaptive (Environment-driven):**
-```text
-State: {
-  "waf_type": "ModSecurity_PL1",
-  "attack_type": "XSS",
-  "injection_point": "name",
-  "probe_history": [
-    {"payload": "<script>alert(1)</script>", "result": "BLOCKED"},
-    {"payload": "<img src=x onerror=alert(1)>", "result": "PASSED"}
-  ],
-  "current_technique": "Event Handler Injection"
-}
-
-Action: Generate next payload based on environment feedback.
-Reward: +1 for bypass, -1 for block.
-```
+**Phase 3 RL - Adaptive (State-based):**
+- Prompt/state được build động từ probe history trong `train_rl_adaptive_pipeline.py`
+- Reward: +1 (bypass), -1 (block)
+- Không có template cố định, model học qua trial-and-error với real-time WAF feedback
 
 ## 📂 Cấu trúc chính
 
